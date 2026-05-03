@@ -1,0 +1,42 @@
+{
+  "name": "nsq_local_finish_v1",
+  "created_at": "20260423_215448",
+  "root": "/data/data/com.termux/files/home/Braxon",
+  "out": "/data/data/com.termux/files/home/storage/shared/Download/nsq_local_finish_20260423_215448",
+  "canon_files": [
+    "docs/nsq/NSQ_CANONICAL_IDENTITY.md",
+    "docs/nsq/NSQ_PRIME_PATH_MULTIPLICATION.md"
+  ],
+  "tools": [
+    "tools/nsq_finish/nsq_formula_verify.py",
+    "tools/nsq_finish/nsq_model_reconstruct_scaffold.py",
+    "scripts/nsq_local_finish_check.sh"
+  ],
+  "heavy_model_policy": {
+    "download_weights": false,
+    "skip_safetensors": true,
+    "exact_identity_requires": [
+      "exact byte count",
+      "full-file sha256",
+      "full-file blake3 when available"
+    ],
+    "one_of_699_sampling_role": "prefilter and route proof only; not full arbitrary-byte reconstruction proof by itself"
+  },
+  "multiplication_canon": {
+    "law": "multiplication is prime-path vector introduction",
+    "base_prime": "identity",
+    "exponent": "realized path count",
+    "exponent_factorization": "path geometry",
+    "introduced_vector": "one per realized prime path",
+    "quantum_layer": "route state, phase, interference, entanglement, collapse, residue"
+  },
+  "group_canon": {
+    "orbit_width": 33,
+    "leader_bits": "one per group",
+    "seventeen_group_orbit_payload": 561,
+    "seventeen_group_total": 578,
+    "six_ninety_nine_payload_groups_needed": 22,
+    "six_ninety_nine_payload_logical_total": 721,
+    "six_ninety_nine_payload_padded_total": 748
+  }
+}

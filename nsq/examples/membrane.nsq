@@ -1,0 +1,4 @@
+# NSQ native membrane lane
+membrane cell :state wake :flux 31 :gate 2 :phase 1
+membrane membrane :state signal :flux 44 :gate 5 :phase 3
+membrane matrix :state sovereign :flux 58 :gate 7 :phase 4

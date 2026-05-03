@@ -1,0 +1,92 @@
+{
+  "model_name": "BRAXON",
+  "core_identity": "BRAXON_core_primary_model",
+  "binding_state": "hot_live_verified",
+  "tokenizer": {
+    "binding_state": "runtime_selected_donor_rooted_unified_overlay",
+    "source_inventory": [
+      "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json",
+      "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json",
+      "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json",
+      "assets/braxon_core/bootstrap/braxon_slice/qwen_qwen3_8b_tokenizer_json.delta",
+      "assets/braxon_core/bootstrap/braxon_slice/qwen_qwen3_8b_tokenizer_config_json.delta"
+    ],
+    "bridge_stamp": "nsq.runtime.native.tokenizer.bridge.v2",
+    "binding_mode": "semantic_feed_bridge_not_runtime_unified"
+  },
+  "parameters": {
+    "binding_state": "direct_source_materialization_required",
+    "source_config": "assets/braxon_core/source_ingest/braxon_transport/config.json",
+    "generation_config": "assets/braxon_core/source_ingest/braxon_transport/generation_config.json",
+    "hidden_size": 5120,
+    "hidden_layers": 64,
+    "attention_heads": 64,
+    "key_value_heads": 8,
+    "max_positions": 262144,
+    "rope_theta": 5000000.0,
+    "vocab_size": 151936,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "lineage_source": "/data/data/com.termux/files/home/Braxon/assets/braxon_core/lineage/parameter_lineage_registry.json"
+  },
+  "runtime_packaging": {
+    "source_ingest_directory": "assets/braxon_core/source_ingest/braxon_transport",
+    "nsq_rewrite_directory": "assets/braxon_core/weights/nsq",
+    "nsq_rewrite_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
+    "nsq_envelope_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
+    "artifact_extension": "nsqb",
+    "runtime_load_policy": "whole_core_only",
+    "launch_form": "hot_whole_core",
+    "zlm_binding_mode": "whole_core_session_surface",
+    "grid_26d_mode": "sealed_reference_structure",
+    "grid_26d_activation_mode": "semantic_score_alignment",
+    "supermodel_extension_mode": "sealed_reference_structure",
+    "supermodel_extension_activation_mode": "semantic_score_alignment",
+    "delta_extension_mode": "sealed_reference_structure",
+    "delta_extension_activation_mode": "semantic_score_alignment",
+    "whole_parameter_stamp": "nsq.runtime.native.model.parameter.whole.v1",
+    "parameter_projection_mode": "single_bit_factor_shim",
+    "env_parameter_copy_mode": "lazy_load",
+    "live_grid_loading": false,
+    "live_delta_loading": false,
+    "status_state_path": "state/braxon/braxon_nsq_pipeline.status",
+    "source_ingest_status": "direct_source_materialization_required",
+    "source_authority_lane": "assets/braxon_core/source_ingest/braxon_transport",
+    "source_authority_state": "direct_source_materialization_required",
+    "nsq_envelope_status": "updated",
+    "nsq_recode_status": "manifest_bundle_only",
+    "whole_core_runtime_status": "manifest_verified_not_hot_live",
+    "nsq_artifact_state": "manifest_bundle_only",
+    "runtime_authority_lane": "none_bound",
+    "runtime_authority_state": "unbound",
+    "runtime_authority_bound": false,
+    "rewrite_status": "manifest_bundle_only"
+  },
+  "primary_job_order": [
+    "nsq_documentation_additive_layer",
+    "wowas_canon_completion",
+    "wowas_final_prose_novel_generation",
+    "wowas_game_build_supervision",
+    "game_weights_ingress",
+    "realworld_representative_universe"
+  ],
+  "context": {
+    "aligned_window": 262144,
+    "reserve_window": 4096,
+    "usable_window": 258048,
+    "session_turn_budget": 15
+  },
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126
+  ],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance"
+}

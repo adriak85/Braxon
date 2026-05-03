@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "IO::Compress::Lzma",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/IO/Compress/Lzma.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/IO__Compress__Lzma.source",
+  "source_sha256": "61b7d0bac0b8b341ce475a24a9605d937b0dcbbc5f00af96211a81199cb112c6",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/IO__Compress__Lzma.translated.nsq",
+  "nsq_body_sha256": "17a56ab0eed71ed85c487fcecf037180682aab1c53c8fd4931ad11c618b8cf89",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

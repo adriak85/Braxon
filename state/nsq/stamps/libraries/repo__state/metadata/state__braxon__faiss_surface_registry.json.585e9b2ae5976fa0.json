@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__BRAXON__faiss_surface_registry.json.585e9b2ae5976fa0.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.255978+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__BRAXON__faiss_surface_registry.json.585e9b2ae5976fa0.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/faiss_surface_registry.json",
+  "source_bytes": 504,
+  "source_sha256": "585e9b2ae5976fa01f76b82896ecb6b90b943e3e71ea60762692d215e2ba31da",
+  "stamp_id": "nsq.asm.repo__state.state__BRAXON__faiss_surface_registry.json.585e9b2ae5976fa0"
+}

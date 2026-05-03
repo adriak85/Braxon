@@ -1,0 +1,5 @@
+report=/data/data/com.termux/files/home/Braxon/state/nsq/cpan/cpan_surface_attach_report_20260428_173229.txt
+modules=/data/data/com.termux/files/home/Braxon/state/nsq/cpan/cpan_module_manifest.tsv
+commands=/data/data/com.termux/files/home/Braxon/state/nsq/cpan/cpan_command_manifest.tsv
+stamps=/data/data/com.termux/files/home/Braxon/state/nsq/stamps/cpan_command_surface_stamps.jsonl
+wrappers=/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/bin

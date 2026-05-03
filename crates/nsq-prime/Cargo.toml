@@ -1,0 +1,22 @@
+[package]
+publish = false
+name = "nsq-prime"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Minimal presence checker for core NSQ pipeline surfaces."
+
+[lib]
+name = "nsq_prime"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nsq-prime"
+path = "src/main.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

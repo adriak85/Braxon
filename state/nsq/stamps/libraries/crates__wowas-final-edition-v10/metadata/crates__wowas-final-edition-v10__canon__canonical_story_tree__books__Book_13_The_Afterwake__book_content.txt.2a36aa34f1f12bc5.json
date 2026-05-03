@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_13_The_Afterwake__book_content.txt.2a36aa34f1f12bc5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.825239+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_13_The_Afterwake__book_content.txt.2a36aa34f1f12bc5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_13_The_Afterwake/book_content.txt",
+  "source_bytes": 13696,
+  "source_sha256": "2a36aa34f1f12bc593f5827aa65d25bf5c42a5e9c6f589b042c9c341687f4a34",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_13_The_Afterwake__book_content.txt.2a36aa34f1f12bc5"
+}

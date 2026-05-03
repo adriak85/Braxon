@@ -1,0 +1,299 @@
+{
+  "schema": "braxon.context.chain_root.v1",
+  "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+  "tag_namespace": "braxon.context",
+  "chain_root": "state/braxon/context_chain_root",
+  "default_wake_action": "wake_announce_non_runtime_adjustment",
+  "runtime_adjustment_lanes": [
+    {
+      "numeric_id": 1,
+      "numeric_id_base8": "1",
+      "semantic_id": "braxon.context.runtime_adjustment.runtime_sessions",
+      "path": "state/braxon/runtime_sessions.json",
+      "match_mode": "exact",
+      "relationship": "runtime session state may adjust during operation"
+    },
+    {
+      "numeric_id": 2,
+      "numeric_id_base8": "2",
+      "semantic_id": "braxon.context.runtime_adjustment.logs",
+      "path": "state/braxon/logs",
+      "match_mode": "prefix",
+      "relationship": "runtime logs may adjust during operation"
+    },
+    {
+      "numeric_id": 3,
+      "numeric_id_base8": "3",
+      "semantic_id": "braxon.context.runtime_adjustment.citadel699_bus",
+      "path": "state/braxon/bus",
+      "match_mode": "prefix",
+      "relationship": "Citadel699 bus state may adjust during operation"
+    },
+    {
+      "numeric_id": 4,
+      "numeric_id_base8": "4",
+      "semantic_id": "braxon.context.runtime_adjustment.ingest_status",
+      "path": "state/braxon/braxon_weight_ingest.status",
+      "match_mode": "exact",
+      "relationship": "ingest status may adjust during managed operation"
+    },
+    {
+      "numeric_id": 5,
+      "numeric_id_base8": "5",
+      "semantic_id": "braxon.context.runtime_adjustment.pipeline_status",
+      "path": "state/braxon/braxon_nsq_pipeline.status",
+      "match_mode": "exact",
+      "relationship": "pipeline status may adjust during managed operation"
+    },
+    {
+      "numeric_id": 6,
+      "numeric_id_base8": "6",
+      "semantic_id": "braxon.context.runtime_adjustment.ingest_control",
+      "path": "state/braxon/braxon_weight_ingest.control",
+      "match_mode": "exact",
+      "relationship": "ingest control may adjust during managed operation"
+    }
+  ],
+  "chain_records": [
+    {
+      "numeric_id": 1,
+      "numeric_id_base8": "1",
+      "semantic_id": "braxon.context.chain_root.root_workspace",
+      "pointer_id": "root_workspace",
+      "kind": "workspace_entrance",
+      "path": "Cargo.toml",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/root_workspace",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 2,
+      "numeric_id_base8": "2",
+      "semantic_id": "braxon.context.chain_root.private_license",
+      "pointer_id": "private_license",
+      "kind": "license",
+      "path": "LICENSE",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/private_license",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 3,
+      "numeric_id_base8": "3",
+      "semantic_id": "braxon.context.chain_root.braxon_core_crate",
+      "pointer_id": "braxon_core_crate",
+      "kind": "crate",
+      "path": "crates/braxon-core",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_core_crate",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 4,
+      "numeric_id_base8": "4",
+      "semantic_id": "braxon.context.chain_root.nsq_core_crate",
+      "pointer_id": "nsq_core_crate",
+      "kind": "crate",
+      "path": "crates/nsq-core",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/nsq_core_crate",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 5,
+      "numeric_id_base8": "5",
+      "semantic_id": "braxon.context.chain_root.nsq_runtime_crate",
+      "pointer_id": "nsq_runtime_crate",
+      "kind": "crate",
+      "path": "crates/nsq-runtime",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/nsq_runtime_crate",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 6,
+      "numeric_id_base8": "6",
+      "semantic_id": "braxon.context.chain_root.braxon_seating_verify",
+      "pointer_id": "braxon_seating_verify",
+      "kind": "script",
+      "path": "scripts/braxon_seating_verify.sh",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_seating_verify",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 7,
+      "numeric_id_base8": "7",
+      "semantic_id": "braxon.context.chain_root.braxon_weight_ingest_scripts",
+      "pointer_id": "braxon_weight_ingest_scripts",
+      "kind": "script_family",
+      "path": "scripts",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_weight_ingest_scripts",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 8,
+      "numeric_id_base8": "10",
+      "semantic_id": "braxon.context.chain_root.braxon_model_manifest",
+      "pointer_id": "braxon_model_manifest",
+      "kind": "model_manifest",
+      "path": "models/braxon/manifest.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_model_manifest",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 9,
+      "numeric_id_base8": "11",
+      "semantic_id": "braxon.context.chain_root.braxon_offline_registry",
+      "pointer_id": "braxon_offline_registry",
+      "kind": "state",
+      "path": "state/braxon/offline_model_registry.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_offline_registry",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 10,
+      "numeric_id_base8": "12",
+      "semantic_id": "braxon.context.chain_root.braxon_binding",
+      "pointer_id": "braxon_binding",
+      "kind": "state",
+      "path": "state/braxon/braxon_binding.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_binding",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 11,
+      "numeric_id_base8": "13",
+      "semantic_id": "braxon.context.chain_root.braxon_switch_position_state",
+      "pointer_id": "braxon_switch_position_state",
+      "kind": "state",
+      "path": "state/braxon/braxon_switch_position.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_switch_position_state",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 12,
+      "numeric_id_base8": "14",
+      "semantic_id": "braxon.context.chain_root.braxon_chain_root_db",
+      "pointer_id": "braxon_chain_root_db",
+      "kind": "chain_root_db",
+      "path": "state/braxon/context_chain_root/chain_wake_registry.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_chain_root_db",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 13,
+      "numeric_id_base8": "15",
+      "semantic_id": "braxon.context.chain_root.citadel699_state_bus",
+      "pointer_id": "citadel699_state_bus",
+      "kind": "citadel",
+      "path": "state/braxon/bus/citadel699",
+      "runtime_adjustable": true,
+      "chain_root": "state/braxon/context_chain_root/citadel699_state_bus",
+      "wake_action": "runtime_adjustment_lane_no_exit_wake",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 14,
+      "numeric_id_base8": "16",
+      "semantic_id": "braxon.context.chain_root.citadel699_config",
+      "pointer_id": "citadel699_config",
+      "kind": "citadel_config",
+      "path": "config/nsq/citadel699_wire_receptor.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/citadel699_config",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 15,
+      "numeric_id_base8": "17",
+      "semantic_id": "braxon.context.chain_root.council_of_six",
+      "pointer_id": "council_of_six",
+      "kind": "model_council",
+      "path": "config/nsq/braxon_six_model_stack.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/council_of_six",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 16,
+      "numeric_id_base8": "20",
+      "semantic_id": "braxon.context.chain_root.sensory_generation_roster",
+      "pointer_id": "sensory_generation_roster",
+      "kind": "model_roster",
+      "path": "config/nsq/braxon_sensory_generation_roster.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/sensory_generation_roster",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 17,
+      "numeric_id_base8": "21",
+      "semantic_id": "braxon.context.chain_root.indextts2_emotional_frequency_map",
+      "pointer_id": "indextts2_emotional_frequency_map",
+      "kind": "voice_mapping",
+      "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/indextts2_emotional_frequency_map",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 18,
+      "numeric_id_base8": "22",
+      "semantic_id": "braxon.context.chain_root.wowas_final_edition",
+      "pointer_id": "wowas_final_edition",
+      "kind": "story_system",
+      "path": "crates/wowas-final-edition-v10",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/wowas_final_edition",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 19,
+      "numeric_id_base8": "23",
+      "semantic_id": "braxon.context.chain_root.braxon_lever_sweet_spot_config",
+      "pointer_id": "braxon_lever_sweet_spot_config",
+      "kind": "nsq_measurement_config",
+      "path": "config/nsq/braxon_lever_sweet_spot.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_lever_sweet_spot_config",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    },
+    {
+      "numeric_id": 20,
+      "numeric_id_base8": "24",
+      "semantic_id": "braxon.context.chain_root.braxon_global_tag",
+      "pointer_id": "braxon_global_tag",
+      "kind": "global_tag",
+      "path": "BRAXON_GLOBAL_TAG.json",
+      "runtime_adjustable": false,
+      "chain_root": "state/braxon/context_chain_root/braxon_global_tag",
+      "wake_action": "wake_announce_non_runtime_adjustment",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+    }
+  ]
+}

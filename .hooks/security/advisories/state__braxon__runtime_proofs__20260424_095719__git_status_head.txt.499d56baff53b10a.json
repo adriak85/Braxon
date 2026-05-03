@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__runtime_proofs__20260424_095719__git_status_head.txt.499d56baff53b10a.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.268344+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__runtime_proofs__20260424_095719__git_status_head.txt.499d56baff53b10a.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/runtime_proofs/20260424_095719/git_status_head.txt",
+  "source_bytes": 5461,
+  "source_sha256": "499d56baff53b10a3d681c828d5a1b5faaa0f3479c33b39f56340bd7eb41f843",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__runtime_proofs__20260424_095719__git_status_head.txt.499d56baff53b10a"
+}

@@ -1,0 +1,1635 @@
+{
+  "best_scored_surface_by_work_rate": "nsq",
+  "BRAXON_live_claim": false,
+  "generated_at": "2026-04-24T20:05:43.604130+00:00",
+  "honesty": [
+    "This is a deterministic local benchmark harness.",
+    "It compares internal work units and local elapsed runtime.",
+    "It does not claim Braxon is live or complete.",
+    "ASM is treated as NSQ operating form, not NSQ source identity.",
+    "Binary remains downstream Braxon translation output.",
+    "Round 3 disables macro tracking and tracer collection to approximate production runtime."
+  ],
+  "kiwi_run": true,
+  "macro_history": [
+    {
+      "discovered_count": 300,
+      "new_promoted_count": 300,
+      "promoted_total_after_round": 300,
+      "round": 1,
+      "top_new": [
+        {
+          "digest": "6d45bf799d5e2c19",
+          "example_line": 1,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 468, \"path\": \"crates/Braxon-core/src/lib.rs\", \"term\": \"pointer_stub\", \"text\": \"    pub source_pointer_stub_files: usize,\"}",
+          "kind": "phrase",
+          "macro": "PHRASE_6aa09e140b48",
+          "phrase": "class harm_or_non_nsq_behavior",
+          "use_count": 3497
+        },
+        {
+          "digest": "d44b3aaa8e2c071b",
+          "example_line": 1,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 468, \"path\": \"crates/Braxon-core/src/lib.rs\", \"term\": \"pointer_stub\", \"text\": \"    pub source_pointer_stub_files: usize,\"}",
+          "kind": "phrase",
+          "macro": "PHRASE_2866aeabb204",
+          "phrase": "harm_or_non_nsq_behavior line",
+          "use_count": 3496
+        },
+        {
+          "digest": "b5c0df0c854e7c41",
+          "example_line": 1,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 468, \"path\": \"crates/Braxon-core/src/lib.rs\", \"term\": \"pointer_stub\", \"text\": \"    pub source_pointer_stub_files: usize,\"}",
+          "kind": "phrase",
+          "macro": "PHRASE_35f4782f2a35",
+          "phrase": "class harm_or_non_nsq_behavior line",
+          "use_count": 3496
+        },
+        {
+          "digest": "8589b4e1651b2c9e",
+          "example_line": 11,
+          "example_path": "state/braxon/security_audit_summary.json",
+          "example_text": "\"path\": \"state/braxon/rustsec-advisory-db\",",
+          "kind": "phrase",
+          "macro": "PHRASE_916410f51edf",
+          "phrase": "path state",
+          "use_count": 2688
+        },
+        {
+          "digest": "661b942653462097",
+          "example_line": 234,
+          "example_path": "crates/nsq-universal-fetch/src/main.rs",
+          "example_text": "root().join(\"state/nsq/source_repositories/local\").join(repo_id)",
+          "kind": "phrase",
+          "macro": "PHRASE_2ecac8eb29f3",
+          "phrase": "state nsq",
+          "use_count": 2441
+        },
+        {
+          "digest": "49f758f679c00266",
+          "example_line": 226,
+          "example_path": "state/nsq/quarantine/misleading_universal_downloader_20260424_124144/state/nsq/universal_downloader/dialect_discovery.json",
+          "example_text": "\"path\": \"state/nsq/nsq_asm_stamp_full_language_manifest.json\"",
+          "kind": "phrase",
+          "macro": "PHRASE_447bfecf2ad3",
+          "phrase": "path state nsq",
+          "use_count": 2340
+        },
+        {
+          "digest": "94d5950310f803b1",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_7c7351fcd68c",
+          "phrase": "nsq asm_macro_builder",
+          "use_count": 2039
+        },
+        {
+          "digest": "371f8a508d31ba56",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_21f436cb953b",
+          "phrase": "state nsq asm_macro_builder",
+          "use_count": 2035
+        },
+        {
+          "digest": "1950f41dd37ecaf0",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_fd0df6c2e163",
+          "phrase": "path state nsq asm_macro_builder",
+          "use_count": 2028
+        },
+        {
+          "digest": "3d3a976fa7b11e53",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_60ce03acfbc2",
+          "phrase": "jsonl term",
+          "use_count": 2026
+        },
+        {
+          "digest": "b5952eb2192e9cea",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_6b448a648ece",
+          "phrase": "text class",
+          "use_count": 2026
+        },
+        {
+          "digest": "8069c716ca13de9d",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_e58d08f4dd87",
+          "phrase": "text class harm_or_non_nsq_behavior",
+          "use_count": 2015
+        },
+        {
+          "digest": "3ed1034cb046c584",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_2abb10ca43a1",
+          "phrase": "text class harm_or_non_nsq_behavior line",
+          "use_count": 2015
+        },
+        {
+          "digest": "0759a5eaf304a63c",
+          "example_line": 6,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::daisy_may_great_dane\tDaisy May\t1\tChoices Make World\tB01\t\t\tintroduced\tcore\tparty_core\tnone\tunconditional anchor\tdiamond_world\tnone\tactive\tstable\tMack confirms prophecy. 40Hz established. | Xethr",
+          "kind": "phrase",
+          "macro": "PHRASE_3f1e840522d7",
+          "phrase": "daisy may",
+          "use_count": 1624
+        },
+        {
+          "digest": "6de28361aa1f5865",
+          "example_line": 141,
+          "example_path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_dialogue_and_play_insertion_patch_v10.md",
+          "example_text": "- post-revival and rebirth dialogue that proves changed people are still themselves",
+          "kind": "phrase",
+          "macro": "PHRASE_37cfe39d9b67",
+          "phrase": "and rebirth",
+          "use_count": 1526
+        },
+        {
+          "digest": "401deab5d3c05a0c",
+          "example_line": 425,
+          "example_path": "crates/nsq-runtime/src/BRAXON_runtime.rs",
+          "example_text": "audit.willow_stone_grounding_ready = unified_tokenizer_text.contains(\"Indalwin Willowjayce\")",
+          "kind": "phrase",
+          "macro": "PHRASE_bd6d65c07ca9",
+          "phrase": "indalwin willowjayce",
+          "use_count": 1503
+        },
+        {
+          "digest": "51b63b96b8e92c81",
+          "example_line": 17,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 10, \"path\": \"crates/nsq-runtime/src/BRAXON_runtime.rs\", \"term\": \"pointer stubs\", \"text\": \"//! contains Git LFS pointer stubs instead of the actual tensor pay",
+          "kind": "phrase",
+          "macro": "PHRASE_b54bcd8892ea",
+          "phrase": "line path",
+          "use_count": 1494
+        },
+        {
+          "digest": "69a9608682b5a208",
+          "example_line": 15,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce)\t1\tChoices Make World\tB01\tB01_C001\tB01_R0153\tintroduced\tcore\tparty_core\tnone\tprotagonist / sonomancer / world-maker\tdiamond_world\tnone\tactive\t",
+          "kind": "phrase",
+          "macro": "PHRASE_1c0bd11871db",
+          "phrase": "pip indalwin",
+          "use_count": 1487
+        },
+        {
+          "digest": "41f8fa9ca413739c",
+          "example_line": 15,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce)\t1\tChoices Make World\tB01\tB01_C001\tB01_R0153\tintroduced\tcore\tparty_core\tnone\tprotagonist / sonomancer / world-maker\tdiamond_world\tnone\tactive\t",
+          "kind": "phrase",
+          "macro": "PHRASE_25ca51353c4f",
+          "phrase": "pip indalwin willowjayce",
+          "use_count": 1487
+        },
+        {
+          "digest": "05005a833e60d3bc",
+          "example_line": 17,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 10, \"path\": \"crates/nsq-runtime/src/BRAXON_runtime.rs\", \"term\": \"pointer stubs\", \"text\": \"//! contains Git LFS pointer stubs instead of the actual tensor pay",
+          "kind": "phrase",
+          "macro": "PHRASE_57ba7f7ecced",
+          "phrase": "harm_or_non_nsq_behavior line path",
+          "use_count": 1461
+        },
+        {
+          "digest": "2327db0e3cee800b",
+          "example_line": 17,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 10, \"path\": \"crates/nsq-runtime/src/BRAXON_runtime.rs\", \"term\": \"pointer stubs\", \"text\": \"//! contains Git LFS pointer stubs instead of the actual tensor pay",
+          "kind": "phrase",
+          "macro": "PHRASE_2bca9109b06b",
+          "phrase": "class harm_or_non_nsq_behavior line path",
+          "use_count": 1461
+        },
+        {
+          "digest": "7a986035e085fac4",
+          "example_line": 1113,
+          "example_path": "crates/nsq-runtime/src/BRAXON_runtime.rs",
+          "example_text": "if head_text.contains(\"version https://git-lfs.github.com/spec/v1\")",
+          "kind": "phrase",
+          "macro": "PHRASE_7950713f209f",
+          "phrase": "github com",
+          "use_count": 1455
+        },
+        {
+          "digest": "a09e339bc734496c",
+          "example_line": 4,
+          "example_path": "state/braxon/rustsec-advisory-db/CONTRIBUTING.md",
+          "example_text": "[this](https://github.com/RustSec/advisory-db) repository containing the new advisory:",
+          "kind": "phrase",
+          "macro": "PHRASE_870a21ecf4a0",
+          "phrase": "https github",
+          "use_count": 1442
+        },
+        {
+          "digest": "d3067ea9052adc82",
+          "example_line": 4,
+          "example_path": "state/braxon/rustsec-advisory-db/CONTRIBUTING.md",
+          "example_text": "[this](https://github.com/RustSec/advisory-db) repository containing the new advisory:",
+          "kind": "phrase",
+          "macro": "PHRASE_1d1676f8f8d4",
+          "phrase": "https github com",
+          "use_count": 1442
+        },
+        {
+          "digest": "057b162e85949efb",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_1f5220a91055",
+          "phrase": "asm_macro_builder harm_report_round1",
+          "use_count": 1328
+        },
+        {
+          "digest": "23a7a84f96475e45",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_8cc5e5c7f549",
+          "phrase": "harm_report_round1 jsonl",
+          "use_count": 1328
+        },
+        {
+          "digest": "3075b94c5c53f606",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_1f2b046b3c82",
+          "phrase": "nsq asm_macro_builder harm_report_round1",
+          "use_count": 1328
+        },
+        {
+          "digest": "aa816508de90164a",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_3e1eb07cfad8",
+          "phrase": "asm_macro_builder harm_report_round1 jsonl",
+          "use_count": 1328
+        },
+        {
+          "digest": "cb6b757e021ee23f",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_a94ad84ffe34",
+          "phrase": "state nsq asm_macro_builder harm_report_round1",
+          "use_count": 1328
+        },
+        {
+          "digest": "69af1895578157f4",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_6a84c5f3180d",
+          "phrase": "nsq asm_macro_builder harm_report_round1 jsonl",
+          "use_count": 1328
+        },
+        {
+          "digest": "6423655a7f030ed4",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_9d9c355b1467",
+          "phrase": "state nsq asm_macro_builder harm_report_round1 jsonl",
+          "use_count": 1328
+        },
+        {
+          "digest": "e6fda5df405e3659",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_b73914a4cc3e",
+          "phrase": "harm_report_round1 jsonl term",
+          "use_count": 1327
+        },
+        {
+          "digest": "44b4343146653ed5",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_f8cb262c7556",
+          "phrase": "asm_macro_builder harm_report_round1 jsonl term",
+          "use_count": 1327
+        },
+        {
+          "digest": "f075f4b82b888af2",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_5470082ce59d",
+          "phrase": "path state nsq asm_macro_builder harm_report_round1",
+          "use_count": 1327
+        },
+        {
+          "digest": "b07f428f820d7c09",
+          "example_line": 108,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 1, \"path\": \"state/nsq/asm_macro_builder/harm_report_round1.jsonl\", \"term\": \"pointer_stub\", \"text\": \"{\\\"class\\\": \\\"harm_or_non_nsq_behavior\\\", \\\"line\\\": 46",
+          "kind": "phrase",
+          "macro": "PHRASE_94c5bbe3c308",
+          "phrase": "nsq asm_macro_builder harm_report_round1 jsonl term",
+          "use_count": 1327
+        },
+        {
+          "digest": "c3cff232e41d6e2f",
+          "example_line": 301,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::daisy_may_great_dane\tDaisy May\t24\tBorn To Die\tB24\tB24_S084\tB24_R0640\tcompanion_presence\tcore\tparty_core\tnone\tunconditional anchor\tlate_world_thresholds\tlate_world_reconstitution\textreme\tstable\t",
+          "kind": "phrase",
+          "macro": "PHRASE_d0fce92c2297",
+          "phrase": "and rylos",
+          "use_count": 1287
+        },
+        {
+          "digest": "7886ecd89ed43025",
+          "example_line": 18,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::rylos_vayne_johnson\tRylos (Rylos Vayne Johnson)\t1\tChoices Make World\tB01\tB01_C018\tB01_R0153\tintroduced\tcore\topposition\tnone\tprimary antagonist / accountability arc / Xeth love interest\tdiamond_",
+          "kind": "phrase",
+          "macro": "PHRASE_efd232f4106d",
+          "phrase": "rylos vayne",
+          "use_count": 1278
+        },
+        {
+          "digest": "e5d155b1aef58c4d",
+          "example_line": 18,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::rylos_vayne_johnson\tRylos (Rylos Vayne Johnson)\t1\tChoices Make World\tB01\tB01_C018\tB01_R0153\tintroduced\tcore\topposition\tnone\tprimary antagonist / accountability arc / Xeth love interest\tdiamond_",
+          "kind": "phrase",
+          "macro": "PHRASE_8315c24d8651",
+          "phrase": "vayne johnson",
+          "use_count": 1278
+        },
+        {
+          "digest": "88c1e0c37317d1ae",
+          "example_line": 18,
+          "example_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_v2.tsv",
+          "example_text": "wowas::rylos_vayne_johnson\tRylos (Rylos Vayne Johnson)\t1\tChoices Make World\tB01\tB01_C018\tB01_R0153\tintroduced\tcore\topposition\tnone\tprimary antagonist / accountability arc / Xeth love interest\tdiamond_",
+          "kind": "phrase",
+          "macro": "PHRASE_401534b2db52",
+          "phrase": "rylos vayne johnson",
+          "use_count": 1278
+        },
+        {
+          "digest": "77997b968e5a09f1",
+          "example_line": 78,
+          "example_path": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+          "example_text": "{\"class\": \"harm_or_non_nsq_behavior\", \"line\": 15, \"path\": \"state/braxon/offline_model_registry.json\", \"term\": \"pointer_stub\", \"text\": \"      \\\"source_ingest_status\\\": \\\"catalog_complete_pointer_stubs_onl",
+          "kind": "phrase",
+          "macro": "PHRASE_1c447228e639",
+          "phrase": "line path state",
+          "use_count": 1260
+        }
+      ],
+      "tracer_collection_enabled": true,
+      "tracking_enabled": true
+    },
+    {
+      "discovered_count": 300,
+      "new_promoted_count": 0,
+      "promoted_total_after_round": 300,
+      "round": 2,
+      "top_new": [],
+      "tracer_collection_enabled": true,
+      "tracking_enabled": true
+    }
+  ],
+  "macro_promotion_rule": "promote if used more than 3 times during discovery rounds",
+  "promoted_macro_count": 300,
+  "records_loaded": 65536,
+  "round_1_tracking_enabled": true,
+  "round_2_tracking_enabled": true,
+  "round_3_production_like": true,
+  "round_3_tracer_collection_enabled": false,
+  "round_3_tracking_enabled": false,
+  "round_results": [
+    {
+      "macro_table_size": 18,
+      "production_like": false,
+      "role": "instrumented_macro_discovery",
+      "round": 1,
+      "scored": false,
+      "surface_results": [
+        {
+          "digest_mix": "604944a54a6b4500",
+          "elapsed_seconds": 8.834833,
+          "guard_checks": 0,
+          "lineage_checks": 2072,
+          "macro_hits_total": 2072,
+          "macro_use_top": [
+            [
+              "AUTHORITY_CHECK",
+              628
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              452
+            ],
+            [
+              "C8_PACK",
+              316
+            ],
+            [
+              "MORAL_GUARD",
+              298
+            ],
+            [
+              "SOURCE_HASH",
+              157
+            ],
+            [
+              "LINEAGE_STAMP",
+              76
+            ],
+            [
+              "ASM_RECODE_OP",
+              58
+            ],
+            [
+              "NSQ_PASS",
+              19
+            ],
+            [
+              "BINARY_BOUNDARY",
+              16
+            ],
+            [
+              "BEST_DECISION",
+              10
+            ],
+            [
+              "READ_EVERYTHING",
+              9
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              7
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              5
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              5
+            ],
+            [
+              "ROUND_TRIP",
+              5
+            ],
+            [
+              "METADATA_IMPACT",
+              4
+            ],
+            [
+              "BEST_BEING",
+              4
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              3
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 65536,
+          "records_available": 65536,
+          "records_per_second": 7417.91,
+          "records_processed": 65536,
+          "role": "instrumented_discovery",
+          "round": 1,
+          "surface": "asm",
+          "timed_out": false,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 18,
+          "work_units": 8766968,
+          "work_units_per_second": 992318.457
+        },
+        {
+          "digest_mix": "d1ede426d98cd50b",
+          "elapsed_seconds": 5.326383,
+          "guard_checks": 0,
+          "lineage_checks": 0,
+          "macro_hits_total": 2072,
+          "macro_use_top": [
+            [
+              "AUTHORITY_CHECK",
+              628
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              452
+            ],
+            [
+              "C8_PACK",
+              316
+            ],
+            [
+              "MORAL_GUARD",
+              298
+            ],
+            [
+              "SOURCE_HASH",
+              157
+            ],
+            [
+              "LINEAGE_STAMP",
+              76
+            ],
+            [
+              "ASM_RECODE_OP",
+              58
+            ],
+            [
+              "NSQ_PASS",
+              19
+            ],
+            [
+              "BINARY_BOUNDARY",
+              16
+            ],
+            [
+              "BEST_DECISION",
+              10
+            ],
+            [
+              "READ_EVERYTHING",
+              9
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              7
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              5
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              5
+            ],
+            [
+              "ROUND_TRIP",
+              5
+            ],
+            [
+              "METADATA_IMPACT",
+              4
+            ],
+            [
+              "BEST_BEING",
+              4
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              3
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 0,
+          "records_available": 65536,
+          "records_per_second": 12304.034,
+          "records_processed": 65536,
+          "role": "instrumented_discovery",
+          "round": 1,
+          "surface": "c",
+          "timed_out": false,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 18,
+          "work_units": 9899237,
+          "work_units_per_second": 1858528.895
+        },
+        {
+          "digest_mix": "aa00e900136e2c95",
+          "elapsed_seconds": 6.735361,
+          "guard_checks": 72,
+          "lineage_checks": 2072,
+          "macro_hits_total": 2072,
+          "macro_use_top": [
+            [
+              "AUTHORITY_CHECK",
+              628
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              452
+            ],
+            [
+              "C8_PACK",
+              316
+            ],
+            [
+              "MORAL_GUARD",
+              298
+            ],
+            [
+              "SOURCE_HASH",
+              157
+            ],
+            [
+              "LINEAGE_STAMP",
+              76
+            ],
+            [
+              "ASM_RECODE_OP",
+              58
+            ],
+            [
+              "NSQ_PASS",
+              19
+            ],
+            [
+              "BINARY_BOUNDARY",
+              16
+            ],
+            [
+              "BEST_DECISION",
+              10
+            ],
+            [
+              "READ_EVERYTHING",
+              9
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              7
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              5
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              5
+            ],
+            [
+              "ROUND_TRIP",
+              5
+            ],
+            [
+              "METADATA_IMPACT",
+              4
+            ],
+            [
+              "BEST_BEING",
+              4
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              3
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 65536,
+          "records_available": 65536,
+          "records_per_second": 9730.139,
+          "records_processed": 65536,
+          "role": "instrumented_discovery",
+          "round": 1,
+          "surface": "c8_asm",
+          "timed_out": false,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 18,
+          "work_units": 7676541,
+          "work_units_per_second": 1139737.154
+        },
+        {
+          "digest_mix": "65b97350d290f6bf",
+          "elapsed_seconds": 10.039426,
+          "guard_checks": 64000,
+          "lineage_checks": 66029,
+          "macro_hits_total": 2029,
+          "macro_use_top": [
+            [
+              "AUTHORITY_CHECK",
+              615
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              452
+            ],
+            [
+              "C8_PACK",
+              316
+            ],
+            [
+              "MORAL_GUARD",
+              268
+            ],
+            [
+              "SOURCE_HASH",
+              157
+            ],
+            [
+              "LINEAGE_STAMP",
+              76
+            ],
+            [
+              "ASM_RECODE_OP",
+              58
+            ],
+            [
+              "NSQ_PASS",
+              19
+            ],
+            [
+              "BINARY_BOUNDARY",
+              16
+            ],
+            [
+              "BEST_DECISION",
+              10
+            ],
+            [
+              "READ_EVERYTHING",
+              9
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              7
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              5
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              5
+            ],
+            [
+              "ROUND_TRIP",
+              5
+            ],
+            [
+              "METADATA_IMPACT",
+              4
+            ],
+            [
+              "BEST_BEING",
+              4
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              3
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 64000,
+          "records_available": 65536,
+          "records_per_second": 6374.866,
+          "records_processed": 64000,
+          "role": "instrumented_discovery",
+          "round": 1,
+          "surface": "nsq",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 18,
+          "work_units": 10631379,
+          "work_units_per_second": 1058962.825
+        }
+      ],
+      "timeout_seconds_per_surface": 10.0,
+      "tracer_collection_enabled": true,
+      "tracking_enabled": true
+    },
+    {
+      "macro_table_size": 317,
+      "production_like": false,
+      "role": "instrumented_macro_discovery",
+      "round": 2,
+      "scored": false,
+      "surface_results": [
+        {
+          "digest_mix": "e855b22e76da9f10",
+          "elapsed_seconds": 10.024058,
+          "guard_checks": 0,
+          "lineage_checks": 2684,
+          "macro_hits_total": 2684,
+          "macro_use_top": [
+            [
+              "PHRASE_7950713f209f",
+              416
+            ],
+            [
+              "PHRASE_870a21ecf4a0",
+              408
+            ],
+            [
+              "PHRASE_1d1676f8f8d4",
+              408
+            ],
+            [
+              "PHRASE_43a846f2e369",
+              261
+            ],
+            [
+              "PHRASE_f6303b61a3b6",
+              233
+            ],
+            [
+              "PHRASE_31836130ecfc",
+              233
+            ],
+            [
+              "C8_PACK",
+              208
+            ],
+            [
+              "MORAL_GUARD",
+              121
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              97
+            ],
+            [
+              "SOURCE_HASH",
+              80
+            ],
+            [
+              "ASM_RECODE_OP",
+              43
+            ],
+            [
+              "PHRASE_916410f51edf",
+              28
+            ],
+            [
+              "PHRASE_e6b4f9ba6934",
+              27
+            ],
+            [
+              "PHRASE_2ecac8eb29f3",
+              26
+            ],
+            [
+              "LINEAGE_STAMP",
+              17
+            ],
+            [
+              "BINARY_BOUNDARY",
+              15
+            ],
+            [
+              "PHRASE_6fa2c9ea02d6",
+              13
+            ],
+            [
+              "NSQ_PASS",
+              11
+            ],
+            [
+              "READ_EVERYTHING",
+              7
+            ],
+            [
+              "BEST_DECISION",
+              7
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              6
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              4
+            ],
+            [
+              "BEST_BEING",
+              3
+            ],
+            [
+              "ROUND_TRIP",
+              3
+            ],
+            [
+              "PHRASE_bd6d65c07ca9",
+              2
+            ],
+            [
+              "METADATA_IMPACT",
+              2
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              2
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              2
+            ],
+            [
+              "PHRASE_e7cee1f3c1a5",
+              1
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 28160,
+          "records_available": 65536,
+          "records_per_second": 2809.241,
+          "records_processed": 28160,
+          "role": "instrumented_discovery",
+          "round": 2,
+          "surface": "asm",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 29,
+          "work_units": 2070202,
+          "work_units_per_second": 206523.337
+        },
+        {
+          "digest_mix": "58bdc9e40fb7665d",
+          "elapsed_seconds": 10.009228,
+          "guard_checks": 0,
+          "lineage_checks": 0,
+          "macro_hits_total": 4074,
+          "macro_use_top": [
+            [
+              "PHRASE_7950713f209f",
+              680
+            ],
+            [
+              "PHRASE_870a21ecf4a0",
+              672
+            ],
+            [
+              "PHRASE_1d1676f8f8d4",
+              672
+            ],
+            [
+              "PHRASE_43a846f2e369",
+              465
+            ],
+            [
+              "PHRASE_f6303b61a3b6",
+              397
+            ],
+            [
+              "PHRASE_31836130ecfc",
+              397
+            ],
+            [
+              "C8_PACK",
+              222
+            ],
+            [
+              "MORAL_GUARD",
+              139
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              125
+            ],
+            [
+              "SOURCE_HASH",
+              80
+            ],
+            [
+              "ASM_RECODE_OP",
+              43
+            ],
+            [
+              "PHRASE_916410f51edf",
+              28
+            ],
+            [
+              "PHRASE_e6b4f9ba6934",
+              27
+            ],
+            [
+              "PHRASE_2ecac8eb29f3",
+              26
+            ],
+            [
+              "PHRASE_6fa2c9ea02d6",
+              18
+            ],
+            [
+              "LINEAGE_STAMP",
+              17
+            ],
+            [
+              "BINARY_BOUNDARY",
+              15
+            ],
+            [
+              "NSQ_PASS",
+              11
+            ],
+            [
+              "READ_EVERYTHING",
+              7
+            ],
+            [
+              "BEST_DECISION",
+              7
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              6
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              4
+            ],
+            [
+              "BEST_BEING",
+              3
+            ],
+            [
+              "ROUND_TRIP",
+              3
+            ],
+            [
+              "PHRASE_bd6d65c07ca9",
+              2
+            ],
+            [
+              "METADATA_IMPACT",
+              2
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              2
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              2
+            ],
+            [
+              "PHRASE_e7cee1f3c1a5",
+              1
+            ],
+            [
+              "PHRASE_890056b9e456",
+              1
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 0,
+          "records_available": 65536,
+          "records_per_second": 3299.355,
+          "records_processed": 33024,
+          "role": "instrumented_discovery",
+          "round": 2,
+          "surface": "c",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 30,
+          "work_units": 2835491,
+          "work_units_per_second": 283287.684
+        },
+        {
+          "digest_mix": "429ceafa11c266bc",
+          "elapsed_seconds": 10.08689,
+          "guard_checks": 1028,
+          "lineage_checks": 2940,
+          "macro_hits_total": 2940,
+          "macro_use_top": [
+            [
+              "PHRASE_7950713f209f",
+              463
+            ],
+            [
+              "PHRASE_870a21ecf4a0",
+              455
+            ],
+            [
+              "PHRASE_1d1676f8f8d4",
+              455
+            ],
+            [
+              "PHRASE_43a846f2e369",
+              292
+            ],
+            [
+              "PHRASE_f6303b61a3b6",
+              264
+            ],
+            [
+              "PHRASE_31836130ecfc",
+              264
+            ],
+            [
+              "C8_PACK",
+              210
+            ],
+            [
+              "MORAL_GUARD",
+              121
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              115
+            ],
+            [
+              "SOURCE_HASH",
+              80
+            ],
+            [
+              "ASM_RECODE_OP",
+              43
+            ],
+            [
+              "PHRASE_916410f51edf",
+              28
+            ],
+            [
+              "PHRASE_e6b4f9ba6934",
+              27
+            ],
+            [
+              "PHRASE_2ecac8eb29f3",
+              26
+            ],
+            [
+              "LINEAGE_STAMP",
+              17
+            ],
+            [
+              "PHRASE_6fa2c9ea02d6",
+              15
+            ],
+            [
+              "BINARY_BOUNDARY",
+              15
+            ],
+            [
+              "NSQ_PASS",
+              11
+            ],
+            [
+              "READ_EVERYTHING",
+              7
+            ],
+            [
+              "BEST_DECISION",
+              7
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              6
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              4
+            ],
+            [
+              "BEST_BEING",
+              3
+            ],
+            [
+              "ROUND_TRIP",
+              3
+            ],
+            [
+              "PHRASE_bd6d65c07ca9",
+              2
+            ],
+            [
+              "METADATA_IMPACT",
+              2
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              2
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              2
+            ],
+            [
+              "PHRASE_e7cee1f3c1a5",
+              1
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 28928,
+          "records_available": 65536,
+          "records_per_second": 2867.881,
+          "records_processed": 28928,
+          "role": "instrumented_discovery",
+          "round": 2,
+          "surface": "c8_asm",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 29,
+          "work_units": 2192008,
+          "work_units_per_second": 217312.576
+        },
+        {
+          "digest_mix": "270386b27c842a3d",
+          "elapsed_seconds": 10.089559,
+          "guard_checks": 28416,
+          "lineage_checks": 31186,
+          "macro_hits_total": 2770,
+          "macro_use_top": [
+            [
+              "PHRASE_7950713f209f",
+              434
+            ],
+            [
+              "PHRASE_870a21ecf4a0",
+              426
+            ],
+            [
+              "PHRASE_1d1676f8f8d4",
+              426
+            ],
+            [
+              "PHRASE_43a846f2e369",
+              271
+            ],
+            [
+              "PHRASE_f6303b61a3b6",
+              243
+            ],
+            [
+              "PHRASE_31836130ecfc",
+              243
+            ],
+            [
+              "C8_PACK",
+              209
+            ],
+            [
+              "MORAL_GUARD",
+              121
+            ],
+            [
+              "CHECK_SURROUNDINGS",
+              97
+            ],
+            [
+              "SOURCE_HASH",
+              80
+            ],
+            [
+              "ASM_RECODE_OP",
+              43
+            ],
+            [
+              "PHRASE_916410f51edf",
+              28
+            ],
+            [
+              "PHRASE_e6b4f9ba6934",
+              27
+            ],
+            [
+              "PHRASE_2ecac8eb29f3",
+              26
+            ],
+            [
+              "LINEAGE_STAMP",
+              17
+            ],
+            [
+              "BINARY_BOUNDARY",
+              15
+            ],
+            [
+              "PHRASE_6fa2c9ea02d6",
+              14
+            ],
+            [
+              "NSQ_PASS",
+              11
+            ],
+            [
+              "READ_EVERYTHING",
+              7
+            ],
+            [
+              "BEST_DECISION",
+              7
+            ],
+            [
+              "UNDERSTAND_ACTION",
+              6
+            ],
+            [
+              "IDENTIFY_ALL_PERCEIVABLE",
+              4
+            ],
+            [
+              "BEST_BEING",
+              3
+            ],
+            [
+              "ROUND_TRIP",
+              3
+            ],
+            [
+              "PHRASE_bd6d65c07ca9",
+              2
+            ],
+            [
+              "METADATA_IMPACT",
+              2
+            ],
+            [
+              "REVERSE_DEPENDENCY",
+              2
+            ],
+            [
+              "GENERATED_NOT_SOURCE",
+              2
+            ],
+            [
+              "PHRASE_e7cee1f3c1a5",
+              1
+            ]
+          ],
+          "production_like": false,
+          "recode_checks": 28416,
+          "records_available": 65536,
+          "records_per_second": 2816.377,
+          "records_processed": 28416,
+          "role": "instrumented_discovery",
+          "round": 2,
+          "surface": "nsq",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": true,
+          "tracking_enabled": true,
+          "unique_macros_used": 29,
+          "work_units": 3329442,
+          "work_units_per_second": 329988.853
+        }
+      ],
+      "timeout_seconds_per_surface": 10.0,
+      "tracer_collection_enabled": true,
+      "tracking_enabled": true
+    },
+    {
+      "macro_table_size": 317,
+      "production_like": true,
+      "role": "production_like_scored_run",
+      "round": 3,
+      "scored": true,
+      "surface_results": [
+        {
+          "digest_mix": "1859a51180b67df5",
+          "elapsed_seconds": 10.02194,
+          "guard_checks": 0,
+          "lineage_checks": 3560,
+          "macro_hits_total": null,
+          "macro_use_top": [],
+          "production_like": true,
+          "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+          "recode_checks": 31232,
+          "records_available": 65536,
+          "records_per_second": 3116.363,
+          "records_processed": 31232,
+          "role": "production_like_scored_run",
+          "round": 3,
+          "surface": "asm",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": false,
+          "tracking_enabled": false,
+          "unique_macros_used": null,
+          "work_units": 2360774,
+          "work_units_per_second": 235560.575
+        },
+        {
+          "digest_mix": "fd90dcd85a01c8ac",
+          "elapsed_seconds": 10.031803,
+          "guard_checks": 0,
+          "lineage_checks": 0,
+          "macro_hits_total": null,
+          "macro_use_top": [],
+          "production_like": true,
+          "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+          "recode_checks": 0,
+          "records_available": 65536,
+          "records_per_second": 3394.006,
+          "records_processed": 34048,
+          "role": "production_like_scored_run",
+          "round": 3,
+          "surface": "c",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": false,
+          "tracking_enabled": false,
+          "unique_macros_used": null,
+          "work_units": 2962663,
+          "work_units_per_second": 295327.069
+        },
+        {
+          "digest_mix": "567c071be422c84b",
+          "elapsed_seconds": 10.055604,
+          "guard_checks": 1258,
+          "lineage_checks": 3470,
+          "macro_hits_total": null,
+          "macro_use_top": [],
+          "production_like": true,
+          "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+          "recode_checks": 30464,
+          "records_available": 65536,
+          "records_per_second": 3029.554,
+          "records_processed": 30464,
+          "role": "production_like_scored_run",
+          "round": 3,
+          "surface": "c8_asm",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": false,
+          "tracking_enabled": false,
+          "unique_macros_used": null,
+          "work_units": 2326766,
+          "work_units_per_second": 231389.972
+        },
+        {
+          "digest_mix": "f5682b807c94bd27",
+          "elapsed_seconds": 10.047499,
+          "guard_checks": 34816,
+          "lineage_checks": 39438,
+          "macro_hits_total": null,
+          "macro_use_top": [],
+          "production_like": true,
+          "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+          "recode_checks": 34816,
+          "records_available": 65536,
+          "records_per_second": 3465.141,
+          "records_processed": 34816,
+          "role": "production_like_scored_run",
+          "round": 3,
+          "surface": "nsq",
+          "timed_out": true,
+          "timeout_seconds": 10.0,
+          "tracer_collection_enabled": false,
+          "tracking_enabled": false,
+          "unique_macros_used": null,
+          "work_units": 4263871,
+          "work_units_per_second": 424371.385
+        }
+      ],
+      "timeout_seconds_per_surface": 10.0,
+      "tracer_collection_enabled": false,
+      "tracking_enabled": false
+    }
+  ],
+  "rounds": 3,
+  "schema": "nsq.asm_c_c8_macro_benchmark.report.v2",
+  "scored_ranked_by_work_units_per_second": [
+    {
+      "digest_mix": "f5682b807c94bd27",
+      "elapsed_seconds": 10.047499,
+      "guard_checks": 34816,
+      "lineage_checks": 39438,
+      "macro_hits_total": null,
+      "macro_use_top": [],
+      "production_like": true,
+      "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+      "recode_checks": 34816,
+      "records_available": 65536,
+      "records_per_second": 3465.141,
+      "records_processed": 34816,
+      "role": "production_like_scored_run",
+      "round": 3,
+      "surface": "nsq",
+      "timed_out": true,
+      "timeout_seconds": 10.0,
+      "tracer_collection_enabled": false,
+      "tracking_enabled": false,
+      "unique_macros_used": null,
+      "work_units": 4263871,
+      "work_units_per_second": 424371.385
+    },
+    {
+      "digest_mix": "fd90dcd85a01c8ac",
+      "elapsed_seconds": 10.031803,
+      "guard_checks": 0,
+      "lineage_checks": 0,
+      "macro_hits_total": null,
+      "macro_use_top": [],
+      "production_like": true,
+      "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+      "recode_checks": 0,
+      "records_available": 65536,
+      "records_per_second": 3394.006,
+      "records_processed": 34048,
+      "role": "production_like_scored_run",
+      "round": 3,
+      "surface": "c",
+      "timed_out": true,
+      "timeout_seconds": 10.0,
+      "tracer_collection_enabled": false,
+      "tracking_enabled": false,
+      "unique_macros_used": null,
+      "work_units": 2962663,
+      "work_units_per_second": 295327.069
+    },
+    {
+      "digest_mix": "1859a51180b67df5",
+      "elapsed_seconds": 10.02194,
+      "guard_checks": 0,
+      "lineage_checks": 3560,
+      "macro_hits_total": null,
+      "macro_use_top": [],
+      "production_like": true,
+      "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+      "recode_checks": 31232,
+      "records_available": 65536,
+      "records_per_second": 3116.363,
+      "records_processed": 31232,
+      "role": "production_like_scored_run",
+      "round": 3,
+      "surface": "asm",
+      "timed_out": true,
+      "timeout_seconds": 10.0,
+      "tracer_collection_enabled": false,
+      "tracking_enabled": false,
+      "unique_macros_used": null,
+      "work_units": 2360774,
+      "work_units_per_second": 235560.575
+    },
+    {
+      "digest_mix": "567c071be422c84b",
+      "elapsed_seconds": 10.055604,
+      "guard_checks": 1258,
+      "lineage_checks": 3470,
+      "macro_hits_total": null,
+      "macro_use_top": [],
+      "production_like": true,
+      "production_note": "Macro tracking and tracer collection disabled for scored production-like runtime.",
+      "recode_checks": 30464,
+      "records_available": 65536,
+      "records_per_second": 3029.554,
+      "records_processed": 30464,
+      "role": "production_like_scored_run",
+      "round": 3,
+      "surface": "c8_asm",
+      "timed_out": true,
+      "timeout_seconds": 10.0,
+      "tracer_collection_enabled": false,
+      "tracking_enabled": false,
+      "unique_macros_used": null,
+      "work_units": 2326766,
+      "work_units_per_second": 231389.972
+    }
+  ],
+  "scored_round": 3,
+  "seed_macro_count": 18,
+  "simulation_only": true,
+  "surfaces": [
+    "asm",
+    "c",
+    "c8_asm",
+    "nsq"
+  ],
+  "timeout_seconds_per_surface": 10.0
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__01_repo_cut_plan.md.32465d13e1e77789.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.260098+00:00",
+  "harm_hit_count": 0,
+  "library": "specs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__01_repo_cut_plan.md.32465d13e1e77789.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/nsq/01_repo_cut_plan.md",
+  "source_bytes": 828,
+  "source_sha256": "32465d13e1e77789accc659108949fea687be4ff3b281a9ba6c70bb018f8761d",
+  "stamp_id": "nsq.asm.specs__nsq.specs__nsq__01_repo_cut_plan.md.32465d13e1e77789"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Carp::Assert",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Carp/Assert.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Carp__Assert.source",
+  "source_sha256": "b259a0e9d31dcb8a948989bbd85e8bcc4091800700039648b54c775074d7611f",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Carp__Assert.translated.nsq",
+  "nsq_body_sha256": "69e408cde865b1702b2f9102cd1f807a51f5cad701186b4dcd77b45e09d761cc",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

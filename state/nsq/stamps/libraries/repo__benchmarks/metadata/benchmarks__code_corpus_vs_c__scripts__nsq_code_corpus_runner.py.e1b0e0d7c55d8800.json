@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__code_corpus_vs_c__scripts__nsq_code_corpus_runner.py.e1b0e0d7c55d8800.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.951076+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__code_corpus_vs_c__scripts__nsq_code_corpus_runner.py.e1b0e0d7c55d8800.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/code_corpus_vs_c/scripts/nsq_code_corpus_runner.py",
+  "source_bytes": 2613,
+  "source_sha256": "e1b0e0d7c55d8800203847488ef570f7102127f0730a82c4bf9fdf7a3d17209d",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__code_corpus_vs_c__scripts__nsq_code_corpus_runner.py.e1b0e0d7c55d8800"
+}

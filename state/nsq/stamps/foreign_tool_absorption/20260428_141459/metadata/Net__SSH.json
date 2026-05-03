@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Net::SSH",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Net/SSH.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Net__SSH.source",
+  "source_sha256": "b72652770e5f31f032f21b5b9b14bf2ea97e0f41c4151b6a885793b32cfdef1f",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Net__SSH.translated.nsq",
+  "nsq_body_sha256": "a885449aabe216fd50f11a2c4e59e034196466cd85d4d238ea2f7700de0cf261",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

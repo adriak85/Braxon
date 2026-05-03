@@ -1,0 +1,22 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+. "$(cd "$(dirname "$0")/.." && pwd)/env/BRAXON_env.sh"
+
+echo "== BRAXON ROOT STATUS =="
+echo "root  : $BRAXON_HOME"
+echo "target : $CARGO_TARGET_DIR"
+echo
+
+for p in \
+  "$BRAXON_HOME/Cargo.toml" \
+  "$BRAXON_CANONICAL_CONFIG" \
+  "$BRAXON_CANONICAL_HOOKS" \
+  "$BRAXON_CANONICAL_DIALECTS" \
+  "$BRAXON_AI_OPERATOR_BRIEF"
+do
+  if [ -e "$p" ]; then
+    echo "ok  $p"
+  else
+    echo "miss $p"
+  fi
+done

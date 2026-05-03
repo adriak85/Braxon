@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "WWW::RobotRules",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/WWW/RobotRules.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/WWW__RobotRules.source",
+  "source_sha256": "8e683e5e306438debb2eb77ba68e3004ae9eee43d085b8045a4ab3a5d1233236",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/WWW__RobotRules.translated.nsq",
+  "nsq_body_sha256": "72c59ac0c1c3b5ffbde71290b5ef73703e1f99e3854d777e2dada66d371541b3",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

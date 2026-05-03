@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Devel::GlobalDestruction",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Devel/GlobalDestruction.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Devel__GlobalDestruction.source",
+  "source_sha256": "dca6a057b8ea1793aad3243788b1da24967ab74022607b241a6a749a759b394b",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Devel__GlobalDestruction.translated.nsq",
+  "nsq_body_sha256": "e5231dfb005299691e4ea0787fad5d24c1bb27b8ad117d43406e2a30e58d128c",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,14 @@
+# installer source in canonical NSQ
+
+triple capsule.dev -> emits -> installer.shell :layer 1 :plane 1 :anchor 600 :weight 100 :flags 1
+triple installer.shell -> targets -> local.workspace :layer 1 :plane 1 :anchor 610 :weight 100 :flags 1
+triple installer.shell -> ensures -> env.contract :layer 1 :plane 1 :anchor 620 :weight 100 :flags 1
+triple installer.shell -> ensures -> command.surface :layer 1 :plane 1 :anchor 630 :weight 100 :flags 1
+triple installer.shell -> ensures -> hook.matrix :layer 1 :plane 1 :anchor 640 :weight 100 :flags 1
+triple installer.shell -> ensures -> dialect.matrix :layer 1 :plane 1 :anchor 650 :weight 100 :flags 1
+triple installer.shell -> ensures -> proof.runner :layer 1 :plane 1 :anchor 660 :weight 100 :flags 1
+triple installer.shell -> ensures -> container.lane :layer 1 :plane 1 :anchor 670 :weight 100 :flags 1
+triple installer.shell -> uses -> bootstrap.host_substrate :layer 1 :plane 1 :anchor 680 :weight 70 :flags 1
+triple installer.shell -> is_not -> canonical_truth_surface :layer 1 :plane 1 :anchor 690 :weight 100 :flags 1
+
+membrane installer.shell :state projected :flux 7 :gate 1 :phase 1

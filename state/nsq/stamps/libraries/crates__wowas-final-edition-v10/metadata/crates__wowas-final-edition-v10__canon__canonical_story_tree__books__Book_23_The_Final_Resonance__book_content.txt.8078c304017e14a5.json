@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_23_The_Final_Resonance__book_content.txt.8078c304017e14a5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.863048+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_23_The_Final_Resonance__book_content.txt.8078c304017e14a5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_23_The_Final_Resonance/book_content.txt",
+  "source_bytes": 26948,
+  "source_sha256": "8078c304017e14a58326a8dce04461398adba7ccb2bc83cb3b1f4a1f236ff352",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_23_The_Final_Resonance__book_content.txt.8078c304017e14a5"
+}

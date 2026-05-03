@@ -1,0 +1,25 @@
+NSQ_TASK bare_tasker_acceptance
+NSQ_TASK_VERSION 1
+NSQ_TASK_NONCE NSQ_BARE_TASKER_ACCEPTANCE_V1
+
+NSQ_COURT_ROUTE {
+  primary_component = compositor
+  lint_component = linter
+  court_is_agents = false
+  route = nsq_task_to_nsqasm_aarch64
+}
+
+NSQ_BARE_TASK {
+  input_a = 8
+  input_b = 13
+  operation = add
+  expected_result = 21
+
+  required_outputs {
+    host_elf_smoke = true
+    bare_flat_image = true
+    c_runner_used = false
+    elf_is_bare_metal = false
+    raw_image_is_bare_metal_form = true
+  }
+}

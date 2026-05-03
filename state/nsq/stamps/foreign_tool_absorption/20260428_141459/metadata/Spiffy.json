@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Spiffy",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Spiffy.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Spiffy.source",
+  "source_sha256": "b8ac87cd8f63ce0ae5fbca9f999137ad19ebfbcd6434792a6a6ae1b594c90942",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Spiffy.translated.nsq",
+  "nsq_body_sha256": "64e18b133f03b9d4d435039d9c17810fbf2eacdb1ecd3c2610ce66a9d7fd3d0d",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

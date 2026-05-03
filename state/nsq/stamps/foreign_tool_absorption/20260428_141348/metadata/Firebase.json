@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Firebase",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Firebase.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Firebase.source",
+  "source_sha256": "a1e9567435665cd7aafb9083cbb4809984d14f23594778fd3563e75f09b29664",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Firebase.translated.nsq",
+  "nsq_body_sha256": "81edabbab10ebc06948ffd4bd5316ff9da55a042b774cd7e1f5194ebff4ba6ce",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

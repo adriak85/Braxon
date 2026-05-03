@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__code_corpus_vs_c__c_src__c_code_corpus_bench.c.8bd15d1e2d299f8f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.983187+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__code_corpus_vs_c__c_src__c_code_corpus_bench.c.8bd15d1e2d299f8f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/code_corpus_vs_c/c_src/c_code_corpus_bench.c",
+  "source_bytes": 2463,
+  "source_sha256": "8bd15d1e2d299f8f1cfb506c60cea1cb047d5f1490c906f89dc0fa74abaa3c1b",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__code_corpus_vs_c__c_src__c_code_corpus_bench.c.8bd15d1e2d299f8f"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Text::Table::TickitWidget",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Text/Table/TickitWidget.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Text__Table__TickitWidget.source",
+  "source_sha256": "91293f2a3b4c48daf065ae1a12033777aaa2fe63efab7377595c5cfe6be6d7d0",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Text__Table__TickitWidget.translated.nsq",
+  "nsq_body_sha256": "f456faceab0ba9b7ef9ea8fd533503347f51dbb47a8826e074960054b69dd843",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

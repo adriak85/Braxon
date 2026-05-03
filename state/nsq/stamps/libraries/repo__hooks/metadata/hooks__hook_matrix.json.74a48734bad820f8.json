@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__hooks/asm/macros/hooks__hook_matrix.json.74a48734bad820f8.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.193897+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__hooks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__hooks/metadata/hooks__hook_matrix.json.74a48734bad820f8.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "hooks/hook_matrix.json",
+  "source_bytes": 754,
+  "source_sha256": "74a48734bad820f87522e10c0b9ff7b137190b0094a11546e50c4409bf2187a1",
+  "stamp_id": "nsq.asm.repo__hooks.hooks__hook_matrix.json.74a48734bad820f8"
+}

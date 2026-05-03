@@ -1,0 +1,20 @@
+(seal
+  (family build_compile)
+  (family package_dependency)
+  (family runtime_launch_env)
+  (family platform_target_abi)
+  (family render_asset_shader_scene)
+
+  (native-flag enable :family build_compile)
+  (native-flag target :family platform_target_abi)
+  (native-flag verify :family test_verify_replay)
+  (native-flag mirror :family package_dependency)
+  (native-flag cache :family package_dependency)
+  (native-flag materialize :family projection_translation_export)
+
+  (projection rust "--release" -> (native-flag profile :family build_compile))
+  (projection rust "--target"  -> (native-flag target  :family platform_target_abi))
+  (projection python "-m"      -> (native-flag materialize :family runtime_launch_env))
+  (projection cargo "--offline" -> (native-flag mirror :family package_dependency))
+  (projection adb "install"    -> (native-flag materialize :family android_device))
+)

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Mock::Config",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Mock/Config.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Mock__Config.source",
+  "source_sha256": "79f1692edf6be1447923f6579b7cc907f70a8b2a34841d6330bc7c832c199408",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Mock__Config.translated.nsq",
+  "nsq_body_sha256": "c2c0bc985869b4580160aaedc157663f28b788b06713a7b7dfd06e986f3d1c3b",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

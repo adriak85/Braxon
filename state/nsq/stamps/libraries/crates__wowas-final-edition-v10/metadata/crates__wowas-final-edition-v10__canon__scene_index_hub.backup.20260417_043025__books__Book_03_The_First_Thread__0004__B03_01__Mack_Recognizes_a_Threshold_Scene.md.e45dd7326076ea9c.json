@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0004__B03_01__Mack_Recognizes_a_Threshold_Scene.md.e45dd7326076ea9c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.699483+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0004__B03_01__Mack_Recognizes_a_Threshold_Scene.md.e45dd7326076ea9c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0004__B03_01__Mack_Recognizes_a_Threshold_Scene.md",
+  "source_bytes": 198,
+  "source_sha256": "e45dd7326076ea9ca285fb8a9921418289f7c58c5c1c1448595896dd043f9b14",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0004__B03_01__Mack_Recognizes_a_Threshold_Scene.md.e45dd7326076ea9c"
+}

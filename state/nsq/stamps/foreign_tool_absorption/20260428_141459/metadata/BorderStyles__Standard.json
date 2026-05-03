@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "BorderStyles::Standard",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/BorderStyles/Standard.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/BorderStyles__Standard.source",
+  "source_sha256": "922422a772b62e3c3dfd47693ebec326d6aa13b8c5894aee8cb5a2fb98f70485",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/BorderStyles__Standard.translated.nsq",
+  "nsq_body_sha256": "584f39740779e4e963bb697c8e93110261a964a2269e9b6f45181e74dea2f967",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

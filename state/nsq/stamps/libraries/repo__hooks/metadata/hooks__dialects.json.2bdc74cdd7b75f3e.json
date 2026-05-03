@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__hooks/asm/macros/hooks__dialects.json.2bdc74cdd7b75f3e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.192416+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__hooks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__hooks/metadata/hooks__dialects.json.2bdc74cdd7b75f3e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "hooks/dialects.json",
+  "source_bytes": 940,
+  "source_sha256": "2bdc74cdd7b75f3e4761c8d03258980fcbef88954879234062daa0e1f00f9180",
+  "stamp_id": "nsq.asm.repo__hooks.hooks__dialects.json.2bdc74cdd7b75f3e"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__BRAXON__rustsec-advisory-db__CODE_OF_CONDUCT.md.b42af123adb64051.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.273743+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__BRAXON__rustsec-advisory-db__CODE_OF_CONDUCT.md.b42af123adb64051.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/CODE_OF_CONDUCT.md",
+  "source_bytes": 452,
+  "source_sha256": "b42af123adb64051c44bcae4261f41a4baa46b70c95589f5d0b12740cd1ed60d",
+  "stamp_id": "nsq.asm.repo__state.state__BRAXON__rustsec-advisory-db__CODE_OF_CONDUCT.md.b42af123adb64051"
+}

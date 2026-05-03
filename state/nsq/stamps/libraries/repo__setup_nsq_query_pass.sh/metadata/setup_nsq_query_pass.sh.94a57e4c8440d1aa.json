@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__setup_nsq_query_pass.sh/asm/macros/setup_nsq_query_pass.sh.94a57e4c8440d1aa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.199273+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__setup_nsq_query_pass.sh",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__setup_nsq_query_pass.sh/metadata/setup_nsq_query_pass.sh.94a57e4c8440d1aa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "setup_nsq_query_pass.sh",
+  "source_bytes": 60485,
+  "source_sha256": "94a57e4c8440d1aaca812533d38ef61683b40d56910c13341a41daed27baff04",
+  "stamp_id": "nsq.asm.repo__setup_nsq_query_pass.sh.setup_nsq_query_pass.sh.94a57e4c8440d1aa"
+}

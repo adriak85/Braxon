@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_06_The_Refusal_And_The_Wound__placed__B06_004A__The_Book_He_Was_Too_Afraid_To_Read.md.0d6bcff166ca4153.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.780728+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_06_The_Refusal_And_The_Wound__placed__B06_004A__The_Book_He_Was_Too_Afraid_To_Read.md.0d6bcff166ca4153.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_06_The_Refusal_And_The_Wound/placed/B06_004A__The_Book_He_Was_Too_Afraid_To_Read.md",
+  "source_bytes": 408,
+  "source_sha256": "0d6bcff166ca41537e355e68bd3d34ab73426f1cfdef5f1c1c6517ee8c76c5e9",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_06_The_Refusal_And_The_Wound__placed__B06_004A__The_Book_He_Was_Too_Afraid_To_Read.md.0d6bcff166ca4153"
+}

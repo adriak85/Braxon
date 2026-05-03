@@ -1,0 +1,21 @@
+{
+  "best_scored_surface_by_work_rate": "nsq",
+  "BRAXON_live_claim": false,
+  "generated_at": "20260424_150252",
+  "kiwi_run": true,
+  "promoted_macro_count": 300,
+  "records_loaded": 65536,
+  "report_json": "state/nsq/asm_c_c8_macro_benchmark/current_report.json",
+  "report_txt": "state/nsq/asm_c_c8_macro_benchmark/current_report.txt",
+  "round_1_tracking_enabled": true,
+  "round_2_tracking_enabled": true,
+  "round_3_production_like": true,
+  "round_3_tracer_collection_enabled": false,
+  "round_3_tracking_enabled": false,
+  "rounds": 3,
+  "schema": "nsq.asm_c_c8_macro_benchmark.current.v2",
+  "scored_round": 3,
+  "seed_macro_count": 18,
+  "simulation_only": true,
+  "timeout_seconds_per_surface": 10.0
+}

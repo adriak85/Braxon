@@ -1,0 +1,5 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+ROOT="${BRAXON_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+exec python3 "$ROOT/tools/nsq_perpetual_runtime/nsq_court_perpetual_runtime_proof.py" "$ROOT" "$STAMP"

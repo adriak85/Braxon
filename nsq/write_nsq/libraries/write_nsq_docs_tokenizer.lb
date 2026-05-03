@@ -1,0 +1,15 @@
+id: nsq.write.nsq.docs.tokenizer.lib.v3
+type: library
+version: 3
+authority: Braxon
+role: write_nsq_docs_tokenizer_contract
+
+contracts:
+  - build_authoring_registry
+  - build_projection_registry
+  - build_doc_emit_registry
+  - build_tokenizer_emit_registry
+  - bind_multiport_package_db
+  - emit_docs
+  - emit_tokenizer_surfaces
+  - prove_sync

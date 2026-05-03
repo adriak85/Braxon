@@ -1,0 +1,12 @@
+(seal
+  (author nsq_native)
+  (emit human_readable_reference)
+  (emit machine_readable_schema)
+  (emit tokenizer_mapping_tables)
+  (bias mytho_wowas)
+  (normalize qwen_to_nsq)
+  (package-db multiport minimum 8)
+  (route tokenizer_doc_emit port5)
+  (route proof port6)
+  (route authority_commit port7)
+)

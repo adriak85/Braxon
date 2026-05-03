@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/Braxon/tools/nsq_bare_tasker/bare_tasker_host_elf_aarch64.S:35:8: error: expected string
+.ascii 'NSQ_BARE_TASKER_BEGIN\nsource_language=NSQ\nroute=nsq_court_compositor\ncompiled_surface=NSQASM_AARCH64\nhost_artifact=ELF\nelf_is_bare_metal=false\nbare_artifact=flat_bin\nraw_image_is_bare_metal_form=true\nc_runner_used=false\nnonce=NSQ_BARE_TASKER_ACCEPTANCE_V1\nresult=21\nsemantic_result_verified=true\nok=true\nNSQ_BARE_TASKER_END\n'
+       ^

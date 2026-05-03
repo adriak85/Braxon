@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "created_unix": 1775689619.3240275,
+  "repo": "/data/data/com.termux/files/home/Braxon",
+  "included_core": [
+    "crates/",
+    "specs/",
+    "config/",
+    "benchmarks/",
+    "Cargo.toml",
+    "Cargo.lock",
+    ".gitignore"
+  ],
+  "excluded_bulk": [
+    "target/",
+    ".backup/",
+    "runtime/",
+    "artifacts/nsq_native_truth/",
+    "tmp/nsq_family_proof/*.nsqb"
+  ]
+}

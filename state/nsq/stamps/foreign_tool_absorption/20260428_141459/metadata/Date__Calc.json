@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Date::Calc",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Date/Calc.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Date__Calc.source",
+  "source_sha256": "e4c0463b07d8324d0686132d679611cbc3010ed77d911631af416d433b1affdb",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Date__Calc.translated.nsq",
+  "nsq_body_sha256": "53a76ad2a0fa157dd3650258c2756a24bc7661ab08bc93f71e2268f72d0b81a0",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

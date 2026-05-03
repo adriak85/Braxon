@@ -1,0 +1,48 @@
+{
+  "headline_scope": "current_production_state",
+  "active_state_scope": "active_materialization_now",
+  "future_scope": "future_capability_and_reserved_platform",
+  "readiness_denominator": "current_real_now_surfaces",
+  "core_runtime_ready": false,
+  "nsq_core_ready": true,
+  "workspace_green": false,
+  "model_ingest_status": "direct_source_materialization_required",
+  "nsq_recode_status": "manifest_bundle_only",
+  "whole_core_runtime_status": "manifest_verified_not_hot_live",
+  "graphics_operator_status": "reserved_future",
+  "future_platform_gap_count": 42,
+  "future_capability_items_covered": 5,
+  "future_capability_items_total": 47,
+  "knowledge_graph_config_ready": true,
+  "vector_imprint_config_ready": true,
+  "exact_stub_count": 0,
+  "wowas_correlation_asset_count": 0,
+  "wowas_placeholder_asset_count": 0,
+  "wowas_missing_book_directory_count": 0,
+  "faiss_surface_count": 7,
+  "solid_now": [
+    "workspace_green=false",
+    "nsq_core_ready=true",
+    "core_runtime_ready=false",
+    "canonical_switch_shape_ok=true",
+    "native_runtime_authority_ok=true"
+  ],
+  "partial_active_now": [
+    "model_ingest_status=direct_source_materialization_required",
+    "nsq_envelope_status=updated",
+    "nsq_recode_status=manifest_bundle_only",
+    "whole_core_runtime_status=manifest_verified_not_hot_live",
+    "source_blake3_status=verified",
+    "ingest_control_mode=blocked",
+    "ingest_control_reason=source_state_direct_source_materialization_required",
+    "knowledge_graph_config_ready=true",
+    "vector_imprint_config_ready=true",
+    "exact_stub_count=0"
+  ],
+  "future_reserved": [
+    "graphics_operator_status=reserved_future",
+    "future_platform_gap_count=42",
+    "full_platform_runtime_ready=false",
+    "wowas_placeholder_asset_count=0"
+  ]
+}

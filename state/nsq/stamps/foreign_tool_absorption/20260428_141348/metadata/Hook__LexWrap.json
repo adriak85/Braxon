@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Hook::LexWrap",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Hook/LexWrap.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Hook__LexWrap.source",
+  "source_sha256": "524e6b239e1ec61d3c5a80df34899d42a2e2dbb1727a0d20a01f27760913c485",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Hook__LexWrap.translated.nsq",
+  "nsq_body_sha256": "d1d7bbdacbe62b3164f85726c869c97cce7d480ca3254c701083ab6a27094456",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

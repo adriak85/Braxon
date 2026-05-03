@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__BRAXON_NSQ_AUDIT_TODO.md.e57c9cbe067f644f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.225186+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__BRAXON_NSQ_AUDIT_TODO.md.e57c9cbe067f644f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/BRAXON_NSQ_AUDIT_TODO.md",
+  "source_bytes": 1785,
+  "source_sha256": "e57c9cbe067f644fa49bcc06905dda4544f03fcc7b5d89ed4047ff2ef909aa05",
+  "stamp_id": "nsq.asm.repo__docs.docs__BRAXON_NSQ_AUDIT_TODO.md.e57c9cbe067f644f"
+}

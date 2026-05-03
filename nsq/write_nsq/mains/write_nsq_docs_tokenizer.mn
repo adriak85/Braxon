@@ -1,0 +1,9 @@
+id: nsq.write.nsq.docs.tokenizer.main.v3
+type: main
+version: 3
+authority: Braxon
+role: write_nsq_docs_tokenizer_entry
+
+mission:
+  Make NSQ author NSQ, emit synchronized docs, and generate tokenizer-facing surfaces
+  without external package calls.

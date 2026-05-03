@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_ASM_STAMP_SYSTEM.md.75865565aac7b4ca.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.247168+00:00",
+  "harm_hit_count": 0,
+  "library": "docs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_ASM_STAMP_SYSTEM.md.75865565aac7b4ca.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/nsq/NSQ_ASM_STAMP_SYSTEM.md",
+  "source_bytes": 3291,
+  "source_sha256": "75865565aac7b4caa5dca8b526781df5c003165b58fa97285cc05d216c7c084a",
+  "stamp_id": "nsq.asm.docs__nsq.docs__nsq__NSQ_ASM_STAMP_SYSTEM.md.75865565aac7b4ca"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_04_Crocodile_Smile__B04_007__Safety_Felt_Impossible_At_First.md.3115a60f3d29dbbc.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.700684+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_04_Crocodile_Smile__B04_007__Safety_Felt_Impossible_At_First.md.3115a60f3d29dbbc.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_04_Crocodile_Smile/B04_007__Safety_Felt_Impossible_At_First.md",
+  "source_bytes": 540,
+  "source_sha256": "3115a60f3d29dbbc74f4be8eaaee6ba6c97b9cfbfa9a179ed33d2a6a757d2c14",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_04_Crocodile_Smile__B04_007__Safety_Felt_Impossible_At_First.md.3115a60f3d29dbbc"
+}

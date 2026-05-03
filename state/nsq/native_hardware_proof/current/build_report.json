@@ -1,0 +1,10 @@
+{
+  "schema": "nsq.native_hardware_proof.build_report.v1",
+  "generated_at": "20260424_153053",
+  "cc": "clang",
+  "c_plain_runtime_built": true,
+  "c8_asm_runtime_built": true,
+  "asm_runtime_built": true,
+  "BRAXON_live_claim": false,
+  "bare_metal_claim": false
+}

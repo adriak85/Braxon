@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Perinci::Sub::PropertyUtil",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Perinci/Sub/PropertyUtil.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Perinci__Sub__PropertyUtil.source",
+  "source_sha256": "f63313a0d379c3cb830ce8b0c06f4048225f9ca743731eca1969c31ab109b6cb",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Perinci__Sub__PropertyUtil.translated.nsq",
+  "nsq_body_sha256": "c12b07990a672f8c9e8657bfc7747652e2d06ffbb8868c569bd5ab8729ce2af3",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

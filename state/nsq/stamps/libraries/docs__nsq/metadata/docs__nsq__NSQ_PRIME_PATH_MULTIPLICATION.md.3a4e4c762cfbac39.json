@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_PRIME_PATH_MULTIPLICATION.md.3a4e4c762cfbac39.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.241279+00:00",
+  "harm_hit_count": 0,
+  "library": "docs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_PRIME_PATH_MULTIPLICATION.md.3a4e4c762cfbac39.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/nsq/NSQ_PRIME_PATH_MULTIPLICATION.md",
+  "source_bytes": 7593,
+  "source_sha256": "3a4e4c762cfbac391751eacc90c2c48b61ad8a9efc9928eeb0ac87bbb9a3acbf",
+  "stamp_id": "nsq.asm.docs__nsq.docs__nsq__NSQ_PRIME_PATH_MULTIPLICATION.md.3a4e4c762cfbac39"
+}

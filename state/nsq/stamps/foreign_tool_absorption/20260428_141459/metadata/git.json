@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "git",
+  "source_path": "/data/data/com.termux/files/usr/bin/git",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/git.source",
+  "source_sha256": "b32c25294a370ae0b13aae0072fb867ae0f9ab40980bcef4d3c325bf96d55f11",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/git.translated.nsq",
+  "nsq_body_sha256": "e695b95e0a561dbcd822703e8bf0a6f83a6495bf8d1454b5e1ca6b3cf6fdc0a5",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

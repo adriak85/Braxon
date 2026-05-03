@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Color::RGB::Util",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Color/RGB/Util.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Color__RGB__Util.source",
+  "source_sha256": "24a74c4a388fd7b9cb6de59fdb636f5b0fc7251cdcc219b3a71f185cedee460c",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Color__RGB__Util.translated.nsq",
+  "nsq_body_sha256": "cd94a776cf95ae5e07b1e5ac1943d50f7d3434aeddec3a9444a444a48ad23471",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "File::Rsync",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/File/Rsync.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/File__Rsync.source",
+  "source_sha256": "de0ca0f8b6f073eeecd5679d396d1dc94b3842f7357030d24838f28d1e807b40",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/File__Rsync.translated.nsq",
+  "nsq_body_sha256": "1d5277b025a00d43067ce74e1145bb414f6c57f631c61059221420a82fc754c6",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

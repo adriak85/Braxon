@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__BRAXON__rustsec-advisory-db__LICENSE.txt.b342fe896e158b8c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.280769+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__BRAXON__rustsec-advisory-db__LICENSE.txt.b342fe896e158b8c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/LICENSE.txt",
+  "source_bytes": 1299,
+  "source_sha256": "b342fe896e158b8c5a83e707446113f3a149fa0104d834afa78cd2a48eaf1906",
+  "stamp_id": "nsq.asm.repo__state.state__BRAXON__rustsec-advisory-db__LICENSE.txt.b342fe896e158b8c"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0045__B01_21__Rylos_Vaynie_Johnson_Becomes_Part_of_the_Reading.md.2fa1df68e35b0ad0.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.031160+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0045__B01_21__Rylos_Vaynie_Johnson_Becomes_Part_of_the_Reading.md.2fa1df68e35b0ad0.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0045__B01_21__Rylos_Vaynie_Johnson_Becomes_Part_of_the_Reading.md",
+  "source_bytes": 246,
+  "source_sha256": "2fa1df68e35b0ad0ac9904b0459d122d31edd5539e007266cae7575560ae6355",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0045__B01_21__Rylos_Vaynie_Johnson_Becomes_Part_of_the_Reading.md.2fa1df68e35b0ad0"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_MODEL_INSTALLATION_CONTRACT.md.83ea27b088d528d5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.245459+00:00",
+  "harm_hit_count": 0,
+  "library": "docs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_MODEL_INSTALLATION_CONTRACT.md.83ea27b088d528d5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md",
+  "source_bytes": 2353,
+  "source_sha256": "83ea27b088d528d5e4582a0af6ee881aeee6b5001bbca10f1a90d191651a99c4",
+  "stamp_id": "nsq.asm.docs__nsq.docs__nsq__NSQ_MODEL_INSTALLATION_CONTRACT.md.83ea27b088d528d5"
+}

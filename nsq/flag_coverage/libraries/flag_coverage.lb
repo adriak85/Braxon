@@ -1,0 +1,16 @@
+id: nsq.flag.coverage.lib.v1
+type: library
+version: 1
+authority: Braxon
+role: flag_coverage_contract
+
+contracts:
+  - capture_flags
+  - classify_meanings
+  - normalize_native_flags
+  - assign_projection_spellings
+  - build_stamp_bundles
+  - build_cached_resolution_plans
+  - connect_local_package_db
+  - emit_translation_seeds
+  - prove_roundtrip_coverage

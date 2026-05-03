@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__assets/asm/macros/assets__BRAXON_core__tokenizer__braxon_supermodel_tokenizer.json.f622e62498bb5710.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.100889+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__assets",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__assets/metadata/assets__BRAXON_core__tokenizer__braxon_supermodel_tokenizer.json.f622e62498bb5710.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json",
+  "source_bytes": 10230,
+  "source_sha256": "f622e62498bb57100890eb34c685e9b0a830b0bcaacdfd0c874568975f723772",
+  "stamp_id": "nsq.asm.repo__assets.assets__BRAXON_core__tokenizer__braxon_supermodel_tokenizer.json.f622e62498bb5710"
+}

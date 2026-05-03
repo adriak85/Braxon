@@ -1,0 +1,20 @@
+{
+  "architecture_root": true,
+  "authority": "NSQ_COURT",
+  "install_help": [
+    "pip install -U huggingface_hub",
+    "pkg install git git-lfs aria2",
+    "git lfs install"
+  ],
+  "ok": true,
+  "perpetual_runtime_ready": true,
+  "schema": "Braxon.model_downloader.doctor.v2",
+  "tools": {
+    "aria2c": true,
+    "git": true,
+    "git_lfs": true,
+    "hf": false,
+    "huggingface_cli": false,
+    "python3": true
+  }
+}

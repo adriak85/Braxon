@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__pqcrypto-kyber__RUSTSEC-2024-0381.md.85a7c81272be9b53.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.661635+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__pqcrypto-kyber__RUSTSEC-2024-0381.md.85a7c81272be9b53.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/pqcrypto-kyber/RUSTSEC-2024-0381.md",
+  "source_bytes": 773,
+  "source_sha256": "85a7c81272be9b53245ddf835fa3c48316c07574b992bb76ef41912d9223d609",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__pqcrypto-kyber__RUSTSEC-2024-0381.md.85a7c81272be9b53"
+}

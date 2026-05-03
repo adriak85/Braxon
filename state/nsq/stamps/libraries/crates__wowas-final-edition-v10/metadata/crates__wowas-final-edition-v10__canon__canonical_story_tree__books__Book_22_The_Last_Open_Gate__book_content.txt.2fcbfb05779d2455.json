@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_22_The_Last_Open_Gate__book_content.txt.2fcbfb05779d2455.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.858723+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_22_The_Last_Open_Gate__book_content.txt.2fcbfb05779d2455.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_22_The_Last_Open_Gate/book_content.txt",
+  "source_bytes": 26431,
+  "source_sha256": "2fcbfb05779d24555a2ff57e76e5d4f4a59aa1edeca1497f8f5929409c460d86",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_22_The_Last_Open_Gate__book_content.txt.2fcbfb05779d2455"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__BRAXON__rustsec-advisory-db__.github__dependabot.yml.8a1a10828f96f0f0.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.288329+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__BRAXON__rustsec-advisory-db__.github__dependabot.yml.8a1a10828f96f0f0.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/.github/dependabot.yml",
+  "source_bytes": 186,
+  "source_sha256": "8a1a10828f96f0f09ec8e756bc61cd038e6194db535738ea9034bff6494b7525",
+  "stamp_id": "nsq.asm.repo__state.state__BRAXON__rustsec-advisory-db__.github__dependabot.yml.8a1a10828f96f0f0"
+}

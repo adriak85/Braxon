@@ -1,0 +1,13 @@
+# active repo / crate core set to include now
+
+triple repo.Braxon -> includes -> lib.nsq_source :layer 1 :plane 1 :anchor 1400 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_compile :layer 1 :plane 1 :anchor 1410 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_inspect :layer 1 :plane 1 :anchor 1420 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_pack :layer 1 :plane 1 :anchor 1430 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_compose :layer 1 :plane 1 :anchor 1440 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_prime :layer 1 :plane 1 :anchor 1450 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.hook_matrix :layer 1 :plane 1 :anchor 1460 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.dialect_matrix :layer 1 :plane 1 :anchor 1470 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.install_lane :layer 1 :plane 1 :anchor 1480 :weight 90 :flags 1
+
+membrane repo.Braxon :state active :flux 9 :gate 1 :phase 1

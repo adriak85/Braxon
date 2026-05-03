@@ -1,0 +1,35 @@
+NSQ_BRAXON_MODEL_DOWNLOADER_APP {
+  authority = NSQ_COURT
+  architecture_root = true
+  king = compositor
+  queen = linter
+  court_is_agents = false
+
+  route = BRAXON_model_downloader
+  route_owner = NSQ_COURT
+  duplicate_task_systems_allowed = false
+
+  target = braxon_transport
+  repo_id = huihui-ai/Huihui-Qwen3-VL-32B-Instruct-abliterated
+  local_dir = assets/braxon_core/source_ingest/braxon_transport
+
+  required_minimum {
+    config_json = true
+    tokenizer_json = true
+    model_index = true
+    safetensors_payloads = materialized
+    lfs_pointer_stubs = forbidden
+  }
+
+  post_download {
+    nsq_recode_required_after_download = true
+    payload_verified_is_not_nsq_recode = true
+    whole_core_runtime_claim_blocked_until_recode = true
+  }
+
+  rebuild_pattern_policy {
+    shard_pattern_reconstruction = true
+    citadel699_pattern_audit = true
+    transfer_enough_sections_to_rebuild_on_site = true
+  }
+}

@@ -1,0 +1,7 @@
+# nsq-compose library declaration
+
+triple lib.nsq_compose -> consumes -> repo_surface_inputs :layer 1 :plane 1 :anchor 1200 :weight 80 :flags 1
+triple lib.nsq_compose -> emits -> composed_repo_surface :layer 1 :plane 1 :anchor 1210 :weight 80 :flags 1
+triple lib.nsq_compose -> emits -> nsq_dev_bundle :layer 1 :plane 1 :anchor 1220 :weight 80 :flags 1
+
+membrane lib.nsq_compose :state required :flux 3 :gate 1 :phase 1

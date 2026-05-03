@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__BRAXON__BRAXON_TRUTHFUL_OPERABILITY_GATE.md.591451835328199a.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.251390+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__BRAXON__BRAXON_TRUTHFUL_OPERABILITY_GATE.md.591451835328199a.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/Braxon/BRAXON_TRUTHFUL_OPERABILITY_GATE.md",
+  "source_bytes": 702,
+  "source_sha256": "591451835328199a2a52310b8456877217c11988112687bcc771dcda00f7ccc1",
+  "stamp_id": "nsq.asm.repo__docs.docs__BRAXON__BRAXON_TRUTHFUL_OPERABILITY_GATE.md.591451835328199a"
+}

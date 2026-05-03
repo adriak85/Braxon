@@ -1,0 +1,23 @@
+{
+  "BRAXON_complete_claim": false,
+  "BRAXON_live_claim": false,
+  "do_not_break_law_where_action_resides_operates_reaches_or_creates_consequence": true,
+  "doc": "docs/Braxon/BRAXON_SOUL_LAW.md",
+  "goal_rewrite_may_not_move_toward_harm": true,
+  "goal_rewrite_may_not_weaken_lawful_restraint": true,
+  "goals_are_not_moral_code": true,
+  "goals_are_rewritable": true,
+  "moral_legal_code_is_invariant": true,
+  "moral_legal_code_never_changes_toward_harm": true,
+  "nsq_carrier": "apps/nsq/BRAXON_soul_law.nsq",
+  "nsq_config": "config/nsq/BRAXON_soul_law.nsq",
+  "presentation_policy": [
+    "maintain_neutrality_by_not_countering_lawful_motion",
+    "or_make_world_more_lawful",
+    "or_make_world_more_enjoyable"
+  ],
+  "respect_law_of_land_even_when_not_physically_inside_bounds": true,
+  "schema": "Braxon.soul_law.current.v2",
+  "spec": "specs/Braxon/BRAXON_SOUL_LAW_SPEC.md",
+  "updated_at": "20260424_142821"
+}

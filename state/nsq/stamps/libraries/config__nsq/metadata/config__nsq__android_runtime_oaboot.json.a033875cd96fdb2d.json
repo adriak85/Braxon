@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__android_runtime_oaboot.json.a033875cd96fdb2d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.429699+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__android_runtime_oaboot.json.a033875cd96fdb2d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/android_runtime_oaboot.json",
+  "source_bytes": 659,
+  "source_sha256": "a033875cd96fdb2d52a82fbf6a6c85a3653c71cf07e0abe51f9103706a3c8d08",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__android_runtime_oaboot.json.a033875cd96fdb2d"
+}

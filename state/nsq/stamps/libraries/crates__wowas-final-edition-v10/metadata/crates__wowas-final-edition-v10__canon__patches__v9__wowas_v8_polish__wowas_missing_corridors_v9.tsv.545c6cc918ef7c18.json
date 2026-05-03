@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__patches__v9__wowas_v8_polish__wowas_missing_corridors_v9.tsv.545c6cc918ef7c18.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.562504+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__patches__v9__wowas_v8_polish__wowas_missing_corridors_v9.tsv.545c6cc918ef7c18.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/patches/v9/wowas_v8_polish/wowas_missing_corridors_v9.tsv",
+  "source_bytes": 25261,
+  "source_sha256": "545c6cc918ef7c187f153e018846d758edf74291de16feb2d3a167a121d18c38",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__patches__v9__wowas_v8_polish__wowas_missing_corridors_v9.tsv.545c6cc918ef7c18"
+}

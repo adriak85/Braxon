@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__stamps__expanded__stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt.5e3afa464f296d59.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.362745+00:00",
+  "harm_hit_count": 0,
+  "library": "state__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__stamps__expanded__stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt.5e3afa464f296d59.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/nsq/stamps/expanded/stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt",
+  "source_bytes": 458,
+  "source_sha256": "5e3afa464f296d59a8b023a1938c0e39a99ac5f0f2102d50083a30a056949623",
+  "stamp_id": "nsq.asm.state__nsq.state__nsq__stamps__expanded__stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt.5e3afa464f296d59"
+}

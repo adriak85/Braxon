@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__PHASE_TWO_ZERO_TEST_TEXTS.md.bf14cdfedff7e266.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.227167+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__PHASE_TWO_ZERO_TEST_TEXTS.md.bf14cdfedff7e266.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/PHASE_TWO_ZERO_TEST_TEXTS.md",
+  "source_bytes": 2479,
+  "source_sha256": "bf14cdfedff7e2662939f4642b1857109d53cdb4a69055b130f71d33aa3a6b1d",
+  "stamp_id": "nsq.asm.repo__docs.docs__PHASE_TWO_ZERO_TEST_TEXTS.md.bf14cdfedff7e266"
+}

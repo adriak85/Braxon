@@ -1,0 +1,8 @@
+round_id	created_at	module	status	reason	next_action
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	Test::Pod::Coverage	failed	missing dependency Pod::Coverage	cpan Pod::Coverage Test::Pod::Coverage
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	XML::ED	built_but_tests_failed	POD syntax test failed: '=over without closing =back'; module also emitted undefined import warning but core tests mostly ran	do not pin as clean unless forced intentionally
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	XML::XS	not_found	CPAN could not expand namespace; XML::xs same issue	skip unless exact module name is found
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	DBD::mysql	configure_failed	libmariadb.so not found at link check	install/fix mariadb client library path before retry
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	DB::Ent	test_failed	requires DBD::mysql; available drivers are CSV DBM ExampleP File Gofer Mem Proxy SQLite Sponge	retry only after DBD::mysql works, or use SQLite path instead
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	implied	not_found	CPAN could not expand namespace	skip unless exact module name is found
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	impied	typo_not_found	voice/text typo of implied; CPAN could not expand namespace	skip

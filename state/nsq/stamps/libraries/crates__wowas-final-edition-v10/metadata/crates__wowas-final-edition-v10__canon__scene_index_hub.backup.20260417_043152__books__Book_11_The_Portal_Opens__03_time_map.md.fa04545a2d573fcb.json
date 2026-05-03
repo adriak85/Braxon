@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_11_The_Portal_Opens__03_time_map.md.fa04545a2d573fcb.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.881585+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_11_The_Portal_Opens__03_time_map.md.fa04545a2d573fcb.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_11_The_Portal_Opens/03_time_map.md",
+  "source_bytes": 931,
+  "source_sha256": "fa04545a2d573fcb6e8533962ad1018ec92551c508a030efb639d6864961d67d",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_11_The_Portal_Opens__03_time_map.md.fa04545a2d573fcb"
+}

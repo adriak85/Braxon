@@ -1,0 +1,29 @@
+NSQ_CONFIG asm_macro_builder
+
+local_repo_policy {
+  if_source_path_is_inside_repo = use_direct_native_repo_path
+  no_external_shim_required_for_local_repo = true
+}
+
+external_repo_policy {
+  if_source_path_is_external = use_nsq_recode_carrier
+  raw_source_behavior_not_authoritative = true
+  parser_debug_flattening_rejected = true
+}
+
+benchmark_policy {
+  run_count = 2
+  warmup_round = 1
+  scored_round = 2
+}
+
+macro_policy {
+  output_root = state/nsq/stamps/libraries
+  save_asm = true
+  save_metadata = true
+  save_translation_index = true
+  first_indexes = [
+    alphabet,
+    unicode_range
+  ]
+}

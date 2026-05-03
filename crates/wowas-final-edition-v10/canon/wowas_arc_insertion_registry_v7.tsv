@@ -1,0 +1,11 @@
+arc_code	arc_title	active_figures	locked_function	arc_class
+ARC_XR_01	Xeth and Rylos collide while searching for Pip	Xeth / Rylos	They find each other while independently searching for Pip during his decades-long captivity.	bridge-sequence
+ARC_XR_02	Beautiful civilization fails in their hands	Xeth / Rylos / Sahir	A pristine wealthy civilization collapses because beauty and wealth are not backed by self-protection.	civilization-test
+ARC_XR_03	Defensive civilization becomes the stronger world	Xeth / Rylos / Sahir	A poorer but protective loving civilization survives and strengthens with their help.	civilization-test
+ARC_DA_01	Pip and Rolzen investigate the war before choosing a side	Pip / Rolzen	They observe the demon-angel war before intervening, then side with demons against extermination.	moral-adjudication
+ARC_DA_02	Kade Prismglaer enters after demon victory	Pip / Rolzen / Kade	Purple demon telecaster joins and begins acting as support narrator, lens-caster, trust-builder.	support-introduction
+ARC_DA_03	Lian Marso'Fen is broken silent by Pip's emotional force	Pip / Lian / Tavi	Her repression-breaking power rebounds against Pip, leaving her silent until later joining.	battle-consequence
+ARC_QS_01	Xeth teaches quantum state	Xeth / Pip	Quantum-state learning belongs under Xethrolund's teaching lane.	magic-law
+ARC_DG_01	Pip opens the Dragon Gate	Pip	Dragon Gates are threshold systems Pip must open.	threshold-law
+ARC_DG_02	Rylos opens the Dragon Gate	Rylos	Dragon Gates also require Rylos; they are not solo-Pip structures.	threshold-law
+ARC_LOSS_01	A non-core party member is lost later	non-core party member	Death slot explicitly excludes Kade, Sahir, Lian, and Tavi.	protected-exclusion

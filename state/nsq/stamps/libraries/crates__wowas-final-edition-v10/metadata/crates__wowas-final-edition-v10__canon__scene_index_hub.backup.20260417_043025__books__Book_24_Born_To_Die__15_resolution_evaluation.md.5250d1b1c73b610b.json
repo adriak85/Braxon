@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_24_Born_To_Die__15_resolution_evaluation.md.5250d1b1c73b610b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.604130+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_24_Born_To_Die__15_resolution_evaluation.md.5250d1b1c73b610b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_24_Born_To_Die/15_resolution_evaluation.md",
+  "source_bytes": 870,
+  "source_sha256": "5250d1b1c73b610bbecb65b189b202b2d71360d8877cfe990236decdc79442aa",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_24_Born_To_Die__15_resolution_evaluation.md.5250d1b1c73b610b"
+}

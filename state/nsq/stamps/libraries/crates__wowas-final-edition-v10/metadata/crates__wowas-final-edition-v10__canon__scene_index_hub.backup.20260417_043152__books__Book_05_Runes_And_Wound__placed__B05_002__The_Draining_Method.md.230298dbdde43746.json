@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_05_Runes_And_Wound__placed__B05_002__The_Draining_Method.md.230298dbdde43746.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.746206+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_05_Runes_And_Wound__placed__B05_002__The_Draining_Method.md.230298dbdde43746.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_05_Runes_And_Wound/placed/B05_002__The_Draining_Method.md",
+  "source_bytes": 338,
+  "source_sha256": "230298dbdde4374679b9e3691ee14430a95259766f93dda5a75df54028df5e4f",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_05_Runes_And_Wound__placed__B05_002__The_Draining_Method.md.230298dbdde43746"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "JSON::MaybeXS",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/JSON/MaybeXS.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/JSON__MaybeXS.source",
+  "source_sha256": "128faa0508590aa5e525f457672b459c7547981e9f9675924fe80e5074fed7b5",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/JSON__MaybeXS.translated.nsq",
+  "nsq_body_sha256": "c8b3fbfa3e00ec0f8d0e0f49dbdfcf88f67625bbda45b5a482142b52b9c643a2",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

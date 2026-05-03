@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Unicode::UTF8",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Unicode/UTF8.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Unicode__UTF8.source",
+  "source_sha256": "c8bf359259e84dd0fb461369cd1d722f7e4de9103d2567a40ec68d5d3548e0c0",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Unicode__UTF8.translated.nsq",
+  "nsq_body_sha256": "ff56057932ad062b929adbc1b9987eb712c271d8f5a1cd748ff11fa2e31e6880",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

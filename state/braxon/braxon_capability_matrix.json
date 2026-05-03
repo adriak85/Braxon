@@ -1,0 +1,97 @@
+{
+  "windowing": {
+    "required": [
+      "winit",
+      "raw-window-handle"
+    ],
+    "present": false
+  },
+  "ui_shell": {
+    "required": [
+      "egui",
+      "epaint",
+      "eframe"
+    ],
+    "present": false
+  },
+  "gpu_flagship": {
+    "required": [
+      "ash",
+      "naga"
+    ],
+    "present": false
+  },
+  "gpu_compat": {
+    "required": [
+      "wgpu"
+    ],
+    "present": false
+  },
+  "android_zero_copy": {
+    "required": [
+      "ndk or hardware-buffer"
+    ],
+    "present": false
+  },
+  "android_media": {
+    "required": [
+      "ndk(media)"
+    ],
+    "present": false
+  },
+  "audio_io": {
+    "required": [
+      "oboe"
+    ],
+    "present": false
+  },
+  "audio_decode": {
+    "required": [
+      "symphonia or kira"
+    ],
+    "present": false
+  },
+  "cpan_toolbelt": {
+    "schema": "Braxon.cpan.capability_map.v1",
+    "authority": "NSQ_COURT",
+    "role": "native_nsq_substrate_spine_structure_source",
+    "canonical_internal_truth": "nsq_is_the_only_runtime",
+    "live_probe": {
+      "sq": "0.0.6",
+      "alien_build": "2.84",
+      "alien_base": "2.84"
+    },
+    "high_value_modules": [
+      "SQ",
+      "Alien::Build",
+      "Alien::Base",
+      "PPI",
+      "Perl::Tidy",
+      "Parse::RecDescent",
+      "Parser::MGC",
+      "Regexp::Grammars",
+      "Data::MessagePack",
+      "Cpanel::JSON::XS",
+      "DBI",
+      "DBD::SQLite",
+      "Text::Xslate",
+      "FFI::Platypus",
+      "Plack",
+      "Tickit"
+    ],
+    "best_fit": [
+      "repo_audit_structure",
+      "grammar_shape_discovery_for_native_nsq",
+      "native_dependency_structure",
+      "compact_state_shape",
+      "operator_surface_shape"
+    ],
+    "guardrails": {
+      "perl_is_not_parallel_runtime": true,
+      "cpan_metadata_is_not_runtime_incorporation": true,
+      "useful_structure_must_be_built_into_native_nsq_spine": true,
+      "nsq_is_only_runtime": true
+    },
+    "detail": "specs/repo/PERL_CPAN_CAPABILITY_MAP.md"
+  }
+}

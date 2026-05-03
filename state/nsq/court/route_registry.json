@@ -1,0 +1,54 @@
+{
+  "architecture_root": true,
+  "authority": "NSQ_COURT",
+  "c_reference_runner_acceptance": false,
+  "c_reference_runner_storage": false,
+  "court_is_agents": false,
+  "duplicate_task_systems_allowed": false,
+  "generated_at": "20260424_194654",
+  "king": "compositor",
+  "queen": "linter",
+  "routes": {
+    "bare_tasker": {
+      "direct_runner_allowed": false,
+      "executor_allowed_only_as_court_route": true,
+      "owned_by": "NSQ_COURT",
+      "route_kind": "flat_bare_form_emission"
+    },
+    "BRAXON_model_downloader": {
+      "direct_runner_allowed": false,
+      "executor_allowed_only_as_court_route": true,
+      "owned_by": "NSQ_COURT",
+      "requires_lfs_pointer_absence": true,
+      "requires_nsq_recode_after_download": true,
+      "requires_payload_materialization": true,
+      "requires_perpetual_runtime_proof": true,
+      "route_kind": "model_download_and_materialization"
+    },
+    "perpetual_runtime": {
+      "c_reference_runner_allowed_for_acceptance": false,
+      "c_reference_runner_storage": false,
+      "direct_runner_allowed": false,
+      "executor_allowed_only_as_court_route": true,
+      "owned_by": "NSQ_COURT",
+      "required_proofs": [
+        "nsqasm_tick_executed",
+        "watchdog_restart_test_passed",
+        "crash_resume_test_passed",
+        "journal_replay_test_passed",
+        "resource_ceiling_enforced",
+        "manual_stop_works"
+      ],
+      "route_kind": "nsqasm_perpetual_runtime_proof"
+    },
+    "semantic_benchmark": {
+      "c_reference_runner_allowed_for_acceptance": false,
+      "c_reference_runner_storage": false,
+      "direct_runner_allowed": false,
+      "executor_allowed_only_as_court_route": true,
+      "owned_by": "NSQ_COURT",
+      "route_kind": "nsq_to_nsqasm_acceptance"
+    }
+  },
+  "schema": "nsq.court.route_registry.v4"
+}

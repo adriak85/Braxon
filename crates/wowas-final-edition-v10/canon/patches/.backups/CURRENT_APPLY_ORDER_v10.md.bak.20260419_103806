@@ -1,0 +1,25 @@
+# Current Apply Order — v8 / v9 / v10
+
+1. Base bundle: `wowas_final_edition_braxon_ready_v8.zip`
+2. Polish bundle: `wowas_v9_polish_patch.tar.gz`
+3. Update 10 bundle: this directory / tarball
+
+## Runtime rule
+Braxon should treat later-numbered bundles as newer authority. Do not overwrite the base files destructively unless you explicitly decide to collapse the layers into a merged monolith later.
+
+## v10 prose / tone authority patch
+- Apply `patches/PROSE_AND_TONE_GUIDE.json` as the active manuscript-generation prose law.
+- Register supporting note: `patches/v10/wowas_prose_and_tone_patch_v10.md`
+- This guide governs POV, Pip cognition/perception, dialogue/play insertion, chapter expansion, relationship truth distinctions, and anti-catchphrase safeguards.
+- When older notes conflict at the prose/voice/manuscript layer, prefer this guide unless a later addendum explicitly overrides it.
+
+## v10 dialogue / play insertion authority patch
+- Apply `patches/v10/wowas_dialogue_and_play_insertion_patch_v10.md` during canon-to-manuscript expansion.
+- Treat dossier notes, side notes, relationship notes, and support-cast notes as potential manuscript-bearing dialogue and play scenes.
+- Use with `patches/PROSE_AND_TONE_GUIDE.json`.
+- Prefer lived dialogue, play, comfort, curiosity, and aftermath over connective summary whenever chapter authority permits.
+
+## v10 book dialogue seed registry patch
+- Apply `patches/v10/wowas_book_dialogue_seed_registry_v10.md` during canon-to-manuscript expansion.
+- Use this registry as the first lookup surface when a beat resolves only into scaffold language, repeated "tone and structure lock," or reconstruction filler.
+- Prefer the strongest matching dialogue/play insertion target before adding connective summary.

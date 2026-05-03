@@ -1,0 +1,13 @@
+(seal
+  (mode native_nsq_authoring)
+  (mode human_doc_emit)
+  (mode machine_doc_emit)
+  (mode tokenizer_emit)
+
+  (bias wowas_mytho heavy_semantic_base)
+  (bridge qwen_to_nsq normalization_first)
+
+  (emit human_reference_bundle)
+  (emit machine_schema_bundle)
+  (emit nsq_tokenizer_seed_rows)
+)

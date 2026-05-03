@@ -1,0 +1,17 @@
+id: nsq.runtime.native.language.platform.lib.v3
+type: library
+version: 3
+authority: Braxon
+role: runtime_native_language_platform_contract
+
+contracts:
+  - verify_domains
+  - assign_runtime_domains
+  - assign_selector_roots
+  - map_projections
+  - bind_local_package_repo
+  - enable_multiport_package_db
+  - build_cached_resolution_plans
+  - sync_docs
+  - emit_tokenizer_mappings
+  - admit_runtime_domains

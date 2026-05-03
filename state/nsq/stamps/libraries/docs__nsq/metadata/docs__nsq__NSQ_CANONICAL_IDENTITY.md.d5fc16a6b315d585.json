@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_CANONICAL_IDENTITY.md.d5fc16a6b315d585.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.239549+00:00",
+  "harm_hit_count": 0,
+  "library": "docs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_CANONICAL_IDENTITY.md.d5fc16a6b315d585.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/nsq/NSQ_CANONICAL_IDENTITY.md",
+  "source_bytes": 2730,
+  "source_sha256": "d5fc16a6b315d585842c440be4b6cbe424c7c49a70de9603354e3ec9fc3e65cc",
+  "stamp_id": "nsq.asm.docs__nsq.docs__nsq__NSQ_CANONICAL_IDENTITY.md.d5fc16a6b315d585"
+}

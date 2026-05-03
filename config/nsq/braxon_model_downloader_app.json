@@ -1,0 +1,32 @@
+{
+  "schema": "Braxon.model_downloader.app.v2",
+  "generated_at": "20260424_194654",
+  "authority": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "route": "BRAXON_model_downloader",
+  "repo_id": "huihui-ai/Huihui-Qwen3-VL-32B-Instruct-abliterated",
+  "local_dir": "assets/braxon_core/source_ingest/braxon_transport",
+  "required_minimum": [
+    "config.json",
+    "tokenizer.json",
+    "model.safetensors.index.json"
+  ],
+  "include_patterns": [
+    "config.json",
+    "generation_config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "special_tokens_map.json",
+    "chat_template.jinja",
+    "model.safetensors.index.json",
+    "model-*.safetensors"
+  ],
+  "reject_lfs_pointer_stubs": true,
+  "nsq_recode_required_after_download": true,
+  "payload_verified_is_not_nsq_recode": true,
+  "whole_core_runtime_claim_blocked_until_recode": true,
+  "citadel699_pattern_audit": true
+}

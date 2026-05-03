@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Plack",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Plack.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Plack.source",
+  "source_sha256": "2661bc87b2153205ef161a6b8e975b92596cf49b0673e972e5c731f84ee14085",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Plack.translated.nsq",
+  "nsq_body_sha256": "2092454c0c8144bd502c2a0f1f97a0e2ea174e0f8f23f0e2d4ab4a407109d185",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

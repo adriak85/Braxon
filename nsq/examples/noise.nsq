@@ -1,0 +1,4 @@
+# NSQ native noise lane
+noise wake :macro wake:self :a 4 :b 9 :pos 120 :amp 44
+noise delta :macro delta:route:align :a 8 :b 2 :pos 180 :amp 39
+noise signal :macro noise:signal:field :a 3 :b 12 :pos 260 :amp 55

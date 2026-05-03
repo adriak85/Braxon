@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Net::Subnet",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Net/Subnet.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Net__Subnet.source",
+  "source_sha256": "ea0c547ba050d2cb1e5ee371895dc9ea0cd57d2586fd838c34ea7443957ca8e9",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Net__Subnet.translated.nsq",
+  "nsq_body_sha256": "8feebde3b2d815abd1a90b811f2015426854c654e972393ec13909071ce959bf",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

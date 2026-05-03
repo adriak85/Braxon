@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_07_The_Rift_Widens__book_content.txt.507b499cca75dc0e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.808139+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_07_The_Rift_Widens__book_content.txt.507b499cca75dc0e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_07_The_Rift_Widens/book_content.txt",
+  "source_bytes": 14411,
+  "source_sha256": "507b499cca75dc0e5c2b4f62f80cb774ca9a1863d3430c9b4af2ba0fe5e9ef76",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_07_The_Rift_Widens__book_content.txt.507b499cca75dc0e"
+}

@@ -1,0 +1,15 @@
+NSQ_TRANSLATED_TOOL_BODY v14
+SOURCE_KIND cpan_source
+SOURCE_NAME Mo
+SOURCE_SHA256 c32f951689400b6c2f2f45800b1b43e5d53d3e5360259bfa9fa4c0cde598e829
+RUNTIME_AUTHORITY nsq_substrate
+FOREIGN_RUNTIME_ALLOWED false
+NO_PARALLEL_RUNTIME true
+NO_SILENT_FOREIGN_EXECUTION true
+STAMP_SYSTEM_ACTIVE true
+BODY_BEGIN
+NSQ_SOURCE_LINE 00000001 "package Mo;"
+NSQ_SOURCE_LINE 00000002 "$Mo::VERSION = '0.40';"
+NSQ_SOURCE_LINE 00000003 "$VERSION='0.40';"
+NSQ_SOURCE_LINE 00000004 "no warnings;my$M=__PACKAGE__.'::';*{$M.Object::new}=sub{my$c=shift;my$s=bless{@_},$c;my%n=%{$c.'::'.':E'};map{$s->{$_}=$n{$_}->()if!exists$s->{$_}}keys%n;$s};*{$M.import}=sub{import warnings;$^H|=1538;my($P,%e,%o)=caller.'::';shift;eval\"no Mo::$_\",&{$M.$_.::e}($P,\\%e,\\%o,\\@_)for@_;return if$e{M};%e=(extends,sub{eval\"no $_[0]()\";@{$P.ISA}=$_[0]},has,sub{my$n=shift;my$m=sub{$#_?$_[0]{$n}=$_[1]:$_[0]{$n}};@_=(default,@_)if!($#_%2);$m=$o{$_}->($m,$n,@_)for sort keys%o;*{$P.$n}=$m},%e,);*{$P.$_}=$e{$_}for keys%e;@{$P.ISA}=$M.Object};"
+BODY_END

@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+PID="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid"
+
+if [ -s "$PID" ] && kill -0 "$(cat "$PID")" 2>/dev/null; then
+  kill "$(cat "$PID")"
+  rm -f "$PID"
+  echo "Braxon SSHD stopped"
+else
+  echo "Braxon SSHD not running by pidfile"
+fi

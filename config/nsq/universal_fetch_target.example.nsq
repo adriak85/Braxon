@@ -1,0 +1,11 @@
+NSQ_TARGET runtime_injected_target
+nsq_wire_units_required = true
+raw_body_transfer = forbidden
+source_manifest_uri = "REPLACE_WITH_NSQ_WIRE_MANIFEST_URI"
+unit_uri_template = "REPLACE_WITH_NSQ_WIRE_UNIT_URI_TEMPLATE"
+integrity_witness = "REPLACE_WITH_EXPECTED_WITNESS"
+startup_flags = [
+  nsq.identity,
+  nsq.compile_proof,
+  nsq.plan_only
+]

@@ -1,0 +1,9 @@
+term	class	action	replacement_or_rule
+Chrono decay	drift_derivative	exclude_from_active_canon	Do not import as active scene, magic, plot, creature, or book logic.
+Chrono Coral	drift_derivative	exclude_from_active_canon	Drop from active scene index unless later manually rewritten without chrono framing.
+Chrono Chasm	drift_derivative	exclude_from_active_canon	Drop from active scene index unless later manually rewritten without chrono framing.
+Heart Chronometer	drift_derivative	exclude_from_active_canon	Drop from active scene index unless later manually rewritten without chrono framing.
+Aortic Labyrinth	drift_derivative	exclude_from_active_canon	Do not import as active scene, magic, plot, creature, or book logic.
+Boojay	deprecated_branch	replace_name	Rylos Vayne Johnson unless explicitly marked legacy/history.
+old hidden Book 1 prose	unfinished_prose	reference_only	Do not promote to finished manuscript prose.
+rape elk	failed_creature_class	rehash	Reject crude exploitative shock naming; rework horror into aesthetic creature logic.

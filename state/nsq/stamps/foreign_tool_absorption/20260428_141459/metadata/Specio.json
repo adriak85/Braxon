@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Specio",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Specio.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Specio.source",
+  "source_sha256": "2d3060c529938a1a9a939f6e11b341f4e404de40f5862793b875f66883079c38",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Specio.translated.nsq",
+  "nsq_body_sha256": "292a4c0076f33ed7574128651d108c3be75a5f20d8c9c3523a4be5e49d03360f",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

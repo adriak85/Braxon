@@ -1,0 +1,38 @@
+NSQ_CONFIG asm_operating_law
+
+authority_policy {
+  nsq_source_truth = true
+  asm_operating_law = true
+  binary_downstream_translation_only = true
+  never_claim_BRAXON_live_from_presence_of_metadata = true
+}
+
+translation_policy {
+  incoming_surfaces_recode_to_asm = true
+  asm_optimized_before_binary = true
+  BRAXON_emits_binary_translation_after_asm_when_ready = true
+  binary_output_keeps_nsq_lineage = true
+}
+
+validation_policy {
+  require_source_sha256 = true
+  require_reverse_dependency = true
+  require_metadata_impact = true
+  require_round_trip_checks = true
+  generated_reports_are_not_source_authority = true
+}
+
+moral_invariant_policy {
+  moral_invariant_is_not_goal_file = true
+  goals_can_be_rewritten = true
+  moral_code_cannot_mutate_toward_harm = true
+  no_translation_may_invert_moral_value = true
+  no_generated_file_may_override_moral_invariant = true
+}
+
+guard_recursion_policy {
+  guard_must_guard_guard = true
+  max_passes = 6
+  fail_on_new_contradiction = true
+  fail_on_guard_drift = true
+}

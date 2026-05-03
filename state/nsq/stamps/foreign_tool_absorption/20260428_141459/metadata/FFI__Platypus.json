@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "FFI::Platypus",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/FFI/Platypus.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/FFI__Platypus.source",
+  "source_sha256": "3a333b46edbf769eb85ca0ebc16a8c7f738126c762a8c502af8ffe40b4b6a6aa",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/FFI__Platypus.translated.nsq",
+  "nsq_body_sha256": "b8e329e208c59da9d6a38a9a9be39893dfe831eaaf805e5b74ca32e05de176fe",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,196 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# BRAXON_restore_and_read_citadel.sh
+# 1. Removes the config.json that broke rope theta
+# 2. Removes the 0MB symlinks that pollute the transport
+# 3. Reads the actual citadel699 state to understand what's needed
+# Run from: ~/Braxon
+
+set -euo pipefail
+
+ROOT="$HOME/Braxon"
+TRANSPORT="$ROOT/assets/braxon_core/source_ingest/braxon_transport"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+LOG="$HOME/storage/shared/Download/BRAXON_restore_citadel_$STAMP.log"
+
+mkdir -p "$(dirname "$LOG")"
+: > "$LOG"
+
+say() { printf '%s\n' "$*" | tee -a "$LOG"; }
+ok()  { say "  ✓ $*"; }
+bad() { say "  ✗ $*"; }
+section() { say ""; say "=========================================================="; say "$1"; say "=========================================================="; }
+
+cd "$ROOT"
+
+section "BRAXON RESTORE + CITADEL READ — $STAMP"
+
+# ============================================================================
+# STEP 1: Remove the bad config.json we wrote (caused missing rope theta)
+# ============================================================================
+
+section "1. Remove bad transport config.json"
+
+if [ -f "$TRANSPORT/config.json" ]; then
+    # Check if it's our bad one (has council_role key we added)
+    if grep -q "council_role" "$TRANSPORT/config.json" 2>/dev/null; then
+        rm "$TRANSPORT/config.json"
+        ok "Removed bad config.json (had council_role = our overwrite)"
+    else
+        say "  config.json exists but not ours — leaving it"
+    fi
+else
+    say "  No config.json in transport"
+fi
+
+# ============================================================================
+# STEP 2: Remove 0MB symlinks (they are placeholders, not real weights)
+# ============================================================================
+
+section "2. Remove 0MB symlinks from transport"
+
+REMOVED=0
+for link in "$TRANSPORT"/model-*.safetensors; do
+    [ -L "$link" ] || continue
+    TARGET="$(readlink "$link")"
+    if [ ! -f "$TARGET" ] || [ "$(wc -c < "$TARGET" 2>/dev/null || echo 0)" -eq 0 ]; then
+        rm "$link"
+        bad "Removed dead/empty symlink: $(basename "$link") -> $TARGET"
+        REMOVED=$((REMOVED + 1))
+    else
+        ok "Real shard kept: $(basename "$link") ($(wc -c < "$TARGET" | tr -d ' ') bytes)"
+    fi
+done
+
+say "  Removed $REMOVED empty symlinks"
+
+# ============================================================================
+# STEP 3: Show what's actually in transport now
+# ============================================================================
+
+section "3. Transport directory after cleanup"
+
+ls -lah "$TRANSPORT/" | tee -a "$LOG"
+
+# ============================================================================
+# STEP 4: Read the actual citadel699 state
+# ============================================================================
+
+section "4. Citadel699 state files"
+
+say "--- state/nsq/citadel699/current/ ---"
+ls -la "$ROOT/state/nsq/citadel699/current/" 2>/dev/null | tee -a "$LOG" || \
+    bad "state/nsq/citadel699/current/ not found"
+
+say ""
+say "--- request_capsule.json ---"
+cat "$ROOT/state/nsq/citadel699/current/request_capsule.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "request_capsule.json not found"
+
+say ""
+say "--- council_six.rebuild.nsq ---"
+cat "$ROOT/state/nsq/citadel699/current/council_six.rebuild.nsq" 2>/dev/null | tee -a "$LOG" || \
+    bad "council_six.rebuild.nsq not found"
+
+say ""
+say "--- materialization.json ---"
+cat "$ROOT/state/nsq/citadel699/current/materialization.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "materialization.json not found"
+
+say ""
+say "--- target_models.json ---"
+cat "$ROOT/state/nsq/citadel699/current/target_models.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "target_models.json not found"
+
+say ""
+say "--- proofs/citadel699_current_rebuild.json ---"
+cat "$ROOT/state/nsq/proofs/citadel699_current_rebuild.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "proof not found"
+
+# ============================================================================
+# STEP 5: Read what the bus executor expects
+# ============================================================================
+
+section "5. Bus executor state"
+
+say "--- state/braxon/bus/ contents ---"
+find "$ROOT/state/braxon/bus/" -type f 2>/dev/null | sort | while read f; do
+    say ""
+    say "  FILE: ${f#$ROOT/}"
+    cat "$f" 2>/dev/null | head -60 | tee -a "$LOG" || true
+done
+
+# ============================================================================
+# STEP 6: Read the donor/binding config that had rope theta
+# ============================================================================
+
+section "6. Donor config / rope theta source"
+
+say "--- assets/braxon_core/source_ingest/braxon_transport/ (original files) ---"
+for f in "$TRANSPORT"/*.json "$TRANSPORT"/*.md; do
+    [ -f "$f" ] || continue
+    say ""
+    say "  FILE: $(basename "$f")"
+    cat "$f" | tee -a "$LOG" || true
+done
+
+say ""
+say "--- config/nsq/ relevant configs ---"
+for f in \
+    "$ROOT/config/nsq/nu128_install_oversight.json" \
+    "$ROOT/config/nsq/donor_config.json" \
+    "$ROOT/assets/braxon_core/source_ingest/braxon_transport/donor_config.json"
+do
+    if [ -f "$f" ]; then
+        say ""
+        say "  FILE: ${f#$ROOT/}"
+        cat "$f" | tee -a "$LOG"
+    fi
+done
+
+say ""
+say "--- BRAXON_DONOR_CONFIG_RELATIVE_PATH (from main.rs constant) ---"
+cat "$ROOT/assets/braxon_core/source_ingest/braxon_transport/config.json" 2>/dev/null | tee -a "$LOG" || \
+    say "  transport config.json absent (good — we removed our bad one)"
+
+# ============================================================================
+# STEP 7: Check model downloader current state
+# ============================================================================
+
+section "7. Model downloader current state"
+
+say "--- state/braxon/model_downloader/current/ ---"
+ls -la "$ROOT/state/braxon/model_downloader/current/" 2>/dev/null | tee -a "$LOG" || true
+
+for f in "$ROOT/state/braxon/model_downloader/current/"*.json; do
+    [ -f "$f" ] || continue
+    say ""
+    say "  FILE: $(basename "$f")"
+    cat "$f" | tee -a "$LOG"
+done
+
+# ============================================================================
+# STEP 8: Run status surfaces after restore
+# ============================================================================
+
+section "8. Status after restore"
+
+say "cargo run -- runtime capabilities Braxon:"
+cargo run -j 6 --release -- runtime capabilities Braxon 2>&1 | tee -a "$LOG" || true
+
+say ""
+say "Braxon-ingest status:"
+cargo run -j 6 --release -p Braxon-ingest 2>&1 | tee -a "$LOG" || true
+
+say ""
+say "cargo run (full status):"
+cargo run -j 6 --release 2>&1 | grep -E "runtime_error|runtime_authority|source_ingest|target_lineage|required_shards|source_present|active_source_family|finish_step" | tee -a "$LOG" || true
+
+section "SUMMARY"
+say "LOG=$LOG"
+say ""
+say "Key things to check in this log:"
+say "  - Does 'missing donor rope theta' error still appear?"
+say "  - What is in request_capsule.json? (this is what Citadel699 needs)"
+say "  - What is active_source_family after cleanup?"
+say "  - What do the .Braxon bus files expect from the executor?"
+say "DONE"

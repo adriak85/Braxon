@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__repo_reality_vs_c__results__c__c_repo_reality_repeat_3.json.729eda028295968d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.073215+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__repo_reality_vs_c__results__c__c_repo_reality_repeat_3.json.729eda028295968d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/repo_reality_vs_c/results/c/c_repo_reality_repeat_3.json",
+  "source_bytes": 5987,
+  "source_sha256": "729eda028295968d7996c6063e87fddcdf073c0e52f5b554b592a92d216f3ea6",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__repo_reality_vs_c__results__c__c_repo_reality_repeat_3.json.729eda028295968d"
+}

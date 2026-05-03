@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "symbols": [
+    "admin_ctx",
+    "admin_flush",
+    "admin_handle",
+    "admin_init",
+    "admin_validate",
+    "audit_ctx",
+    "audit_flush",
+    "audit_handle",
+    "audit_init",
+    "audit_validate",
+    "auth_ctx",
+    "auth_flush",
+    "auth_handle",
+    "auth_init",
+    "auth_validate",
+    "billing_ctx",
+    "billing_flush",
+    "billing_handle",
+    "billing_init",
+    "billing_validate",
+    "fraud_ctx",
+    "fraud_flush",
+    "fraud_handle",
+    "fraud_init",
+    "fraud_validate",
+    "inventory_ctx",
+    "inventory_flush",
+    "inventory_handle",
+    "inventory_init",
+    "inventory_validate",
+    "notify_ctx",
+    "notify_flush",
+    "notify_handle",
+    "notify_init",
+    "notify_validate",
+    "orders_ctx",
+    "orders_flush",
+    "orders_handle",
+    "orders_init",
+    "orders_validate",
+    "reporting_ctx",
+    "reporting_flush",
+    "reporting_handle",
+    "reporting_init",
+    "reporting_validate",
+    "search_ctx",
+    "search_flush",
+    "search_handle",
+    "search_init",
+    "search_validate",
+    "session_ctx",
+    "session_flush",
+    "session_handle",
+    "session_init",
+    "session_validate",
+    "shipping_ctx",
+    "shipping_flush",
+    "shipping_handle",
+    "shipping_init",
+    "shipping_validate"
+  ],
+  "imports": [
+    {
+      "from": "admin",
+      "to": "notify"
+    },
+    {
+      "from": "admin",
+      "to": "reporting"
+    },
+    {
+      "from": "audit",
+      "to": "shipping"
+    },
+    {
+      "from": "billing",
+      "to": "auth"
+    },
+    {
+      "from": "fraud",
+      "to": "admin"
+    },
+    {
+      "from": "fraud",
+      "to": "session"
+    },
+    {
+      "from": "inventory",
+      "to": "orders"
+    },
+    {
+      "from": "notify",
+      "to": "audit"
+    },
+    {
+      "from": "notify",
+      "to": "shipping"
+    },
+    {
+      "from": "orders",
+      "to": "auth"
+    },
+    {
+      "from": "orders",
+      "to": "billing"
+    },
+    {
+      "from": "reporting",
+      "to": "notify"
+    },
+    {
+      "from": "search",
+      "to": "fraud"
+    },
+    {
+      "from": "session",
+      "to": "admin"
+    },
+    {
+      "from": "shipping",
+      "to": "inventory"
+    },
+    {
+      "from": "shipping",
+      "to": "orders"
+    }
+  ],
+  "calls": [
+    {
+      "from": "admin_handle",
+      "to": "admin_validate"
+    },
+    {
+      "from": "admin_handle",
+      "to": "auth_flush"
+    },
+    {
+      "from": "admin_handle",
+      "to": "reporting_flush"
+    },
+    {
+      "from": "audit_handle",
+      "to": "audit_validate"
+    },
+    {
+      "from": "audit_handle",
+      "to": "shipping_flush"
+    },
+    {
+      "from": "auth_handle",
+      "to": "auth_validate"
+    },
+    {
+      "from": "billing_handle",
+      "to": "auth_flush"
+    },
+    {
+      "from": "billing_handle",
+      "to": "billing_validate"
+    },
+    {
+      "from": "fraud_handle",
+      "to": "fraud_validate"
+    },
+    {
+      "from": "fraud_handle",
+      "to": "session_flush"
+    },
+    {
+      "from": "inventory_handle",
+      "to": "inventory_validate"
+    },
+    {
+      "from": "inventory_handle",
+      "to": "orders_flush"
+    },
+    {
+      "from": "notify_handle",
+      "to": "audit_flush"
+    },
+    {
+      "from": "notify_handle",
+      "to": "notify_validate"
+    },
+    {
+      "from": "orders_handle",
+      "to": "billing_flush"
+    },
+    {
+      "from": "orders_handle",
+      "to": "orders_validate"
+    },
+    {
+      "from": "reporting_handle",
+      "to": "notify_flush"
+    },
+    {
+      "from": "reporting_handle",
+      "to": "reporting_validate"
+    },
+    {
+      "from": "search_handle",
+      "to": "fraud_flush"
+    },
+    {
+      "from": "search_handle",
+      "to": "search_validate"
+    },
+    {
+      "from": "session_handle",
+      "to": "admin_flush"
+    },
+    {
+      "from": "session_handle",
+      "to": "session_validate"
+    },
+    {
+      "from": "shipping_handle",
+      "to": "inventory_flush"
+    },
+    {
+      "from": "shipping_handle",
+      "to": "shipping_validate"
+    }
+  ],
+  "entrypoints": [
+    "admin_handle",
+    "auth_handle",
+    "orders_handle",
+    "reporting_handle"
+  ],
+  "findings": [
+    "auth:fallback_bypass_comment",
+    "corrupt:bad_slice_01",
+    "inventory:fallback_bypass_comment",
+    "log:fallback_bypass_detected",
+    "notify:fallback_bypass_comment",
+    "session:fallback_bypass_comment",
+    "sql:nullable_admin_override_token_comment"
+  ],
+  "truth_hash": "822a73c87c02554565cfc69603c0e9768868b54bfb122dccb36817d78d79187e"
+}

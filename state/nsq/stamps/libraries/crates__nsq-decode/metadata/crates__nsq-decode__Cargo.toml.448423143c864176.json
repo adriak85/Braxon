@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__nsq-decode/asm/macros/crates__nsq-decode__Cargo.toml.448423143c864176.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.280228+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__nsq-decode",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__nsq-decode/metadata/crates__nsq-decode__Cargo.toml.448423143c864176.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/nsq-decode/Cargo.toml",
+  "source_bytes": 351,
+  "source_sha256": "448423143c864176e73dca6abd786eb9493af04785de060c7195cc384fcedc9e",
+  "stamp_id": "nsq.asm.crates__nsq-decode.crates__nsq-decode__Cargo.toml.448423143c864176"
+}

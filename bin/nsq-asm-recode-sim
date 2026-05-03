@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+cd "${BRAXON_ROOT:-$HOME/Braxon}"
+PACKETS="${NSQ_ASM_SIM_PACKETS:-16384}"
+OUT="${1:-state/nsq/asm_operating_law}"
+exec python3 tools/nsq_asm_operating_law/nsq_asm_recode_sim.py --out "$OUT" --packets "$PACKETS"

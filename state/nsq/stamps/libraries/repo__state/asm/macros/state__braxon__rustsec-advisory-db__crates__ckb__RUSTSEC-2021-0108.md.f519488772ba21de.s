@@ -1,0 +1,14 @@
+.section .note.nsq.asm_macros,"a"
+.global nsq_asm_repo__state_state__BRAXON__rustsec_advisory_db__crates__ckb__RUSTSEC_2021_0108_md_f519488772ba21de
+nsq_asm_repo__state_state__BRAXON__rustsec_advisory_db__crates__ckb__RUSTSEC_2021_0108_md_f519488772ba21de:
+    .ascii "NSQ_ASM_MACRO_STAMP\\n"
+    .ascii "stamp_id=nsq.asm.repo__state.state__BRAXON__rustsec-advisory-db__crates__ckb__RUSTSEC-2021-0108.md.f519488772ba21de\\n"
+    .ascii "library=repo__state\\n"
+    .ascii "source=state/braxon/rustsec-advisory-db/crates/ckb/RUSTSEC-2021-0108.md\\n"
+    .ascii "source_sha256=f519488772ba21def89f5daea402a956ad81c8e792ff0d56a9d02aeed01d61f2\\n"
+    .ascii "source_bytes=1050\\n"
+    .ascii "nsq_lowest_base_language=true\\n"
+    .ascii "lever_is_one_switch=true\\n"
+    .ascii "lever_is_one_eighth_of_nsq_bit=true\\n"
+    .ascii "hertz_positions_lever=true\\n"
+    .ascii "other_surfaces_translation_inputs_only=true\\n"

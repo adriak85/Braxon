@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "document": "world_zone_and_settlement_master_map",
+  "date": "2026-03-26",
+  "authority": "derived_from_frozen_canon",
+  "canon_basis": [
+    "crates/wowas-engine/canon/data/scene_atlas.json",
+    "crates/wowas-engine/canon/data/timeline_scope.json",
+    "crates/wowas-engine/canon/data/calendrical_timeline_spec.json",
+    "crates/wowas-engine/canon/data/mutation_society_framework.json",
+    "crates/wowas-engine/canon/sources/WORLD_STATE.json"
+  ],
+  "world_overview": {
+    "pre_collapse_population": 10000,
+    "post_collapse_population": 5000,
+    "population_loss_cause": "unspecified in corpus — authorial decision; referred to as 'the collapse event'",
+    "territory_extent": "the known survivor territory — not the full pre-collapse world; the collapse contracted the viable range",
+    "terrain_change": "the collapse physically altered the landscape in several zones — Seth's cartographic records document what changed vs what was known before",
+    "magic_system_interaction": "sonomantic resonance affects terrain perception — areas of high harmonic resonance have qualities that non-sonomantic travelers may not fully perceive"
+  },
+  "zones": [
+    {
+      "zone_id": "zone::heartland",
+      "zone_name": "The Heartland",
+      "zone_type": "primary_settlement_cluster",
+      "terrain": "broad valley with river access, moderate elevation, defensible natural borders to north and east",
+      "collapse_change": "minor — the Heartland was the most stable zone during the collapse; it is why survivors concentrated here",
+      "population": 2200,
+      "faction_presence": {
+        "The Resonance": {
+          "population_estimate": 600,
+          "primary_settlement": "The Archive District",
+          "secondary_presence": "healing centers throughout"
+        },
+        "The Meridian": {
+          "population_estimate": 300,
+          "primary_settlement": "The Neutral Quarter",
+          "secondary_presence": "healing stations at zone borders"
+        },
+        "The Iron Accord": {
+          "population_estimate": 700,
+          "primary_settlement": "The Accord Hall",
+          "secondary_presence": "field camps on zone perimeter"
+        },
+        "Unaffiliated": {
+          "population_estimate": 350,
+          "primary_settlement": "The Gap Districts — informal settlement clusters between faction areas",
+          "note": "highest concentration of unaffiliated in any zone"
+        },
+        "The Ash-Born": {
+          "population_estimate": 150,
+          "note": "minimal presence — disputed territory; Ash-Born consider the Heartland too open, not defensible enough"
+        },
+        "The Severed": {
+          "population_estimate": 100,
+          "note": "scattered presence; The Severed have no formal Heartland settlement"
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::archive_district",
+          "name": "The Archive District",
+          "type": "institutional",
+          "description": "The Resonance's primary facility — the physical archive, healing centers, Wrenath's archive space, Davan's research quarters, Calevyn's secondary archive work. Multi-building complex centered on a pre-collapse administrative structure that survived the collapse intact. The best-preserved pre-collapse construction in the survivor territory.",
+          "beat_relevance": [
+            "Pip's first visit to Wrenath",
+            "archive threat scene",
+            "second archive initiation",
+            "world-birth documentation center"
+          ],
+          "scene_atlas_ref": "loc_restricted_section (adjacent to archive district in canon)"
+        },
+        {
+          "location_id": "loc::neutral_quarter",
+          "name": "The Neutral Quarter",
+          "type": "institutional",
+          "description": "The Meridian's primary facility — formally neutral space where all factions can receive healing without political obligation. Sorra's primary workspace. Ceth's ceremony ground. Feritha's intake facility. The physical architecture is deliberately open — no walls that can be fortified, which is the point.",
+          "beat_relevance": [
+            "Pip receives healing from Sorra",
+            "world-birth stabilization protocol operation",
+            "ethical framework presentation",
+            "first Pip-Ceth ceremony collaboration"
+          ]
+        },
+        {
+          "location_id": "loc::accord_hall",
+          "name": "The Accord Hall",
+          "type": "administrative",
+          "description": "The Iron Accord's primary governance and coordination facility. Reval's command base. Torven's advisory space. Keth's dispute resolution offices. Pethran's logistics hub. Multiple meeting chambers and a large communal space used for faction-wide assemblies. Attached to Elven's food production infrastructure.",
+          "beat_relevance": [
+            "Corveth-Reval friction scene",
+            "Pip as inadvertent mediator",
+            "world-birth organizational response",
+            "Keth's dispute volume crisis"
+          ]
+        },
+        {
+          "location_id": "loc::gap_districts",
+          "name": "The Gap Districts",
+          "type": "informal_settlement",
+          "description": "The unstructured residential space between formal faction areas. Where unaffiliated survivors live by necessity. Where cross-faction informal exchanges happen. Where Parn does his construction work. Where Mirra observes from. Where Aeven does cross-faction labor. Social texture of the Heartland is most visible here.",
+          "beat_relevance": [
+            "Mirra's observation position",
+            "Aeven's cross-faction labor context",
+            "Pip moving between factions"
+          ]
+        },
+        {
+          "location_id": "loc::oasis_library",
+          "name": "The Oasis Library",
+          "type": "canonical_locked",
+          "description": "Locked canon location from scene_atlas.json — where Pip consults Xethrolund via diary, finds the psychology text, and the tragic misunderstanding occurs. Adjacent to the Archive District. Quieter, older wing. The physical space where the diary contact happens most clearly.",
+          "beat_relevance": [
+            "LOCKED: beat_oasis_consult",
+            "LOCKED: beat_tragic_misunderstanding",
+            "Pip seeks understanding; Xethrolund's inadvertent rejection"
+          ],
+          "canon_locked": true
+        },
+        {
+          "location_id": "loc::restricted_section",
+          "name": "The Restricted Section",
+          "type": "canonical_locked",
+          "description": "Locked canon location from scene_atlas.json — where Pip discovers the ancient diary/blank book. Part of the Archive District's older holdings.",
+          "beat_relevance": [
+            "LOCKED: pip:diary_discovery",
+            "LOCKED: pip:first_xeth_contact"
+          ],
+          "canon_locked": true
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::ashfields",
+      "zone_name": "The Ashfields",
+      "zone_type": "primary_settlement_cluster",
+      "terrain": "elevated plateau with natural defensive perimeter on three sides; sparse vegetation; formerly forested, now open from collapse-event burns; rich mineral substrate that supports agriculture once cleared",
+      "collapse_change": "significant — the forest that previously covered the plateau burned during the collapse event; the terrain is functionally new, which is why the Ash-Born claimed it — it has no pre-collapse owners",
+      "population": 1500,
+      "faction_presence": {
+        "The Ash-Born": {
+          "population_estimate": 1200,
+          "primary_settlement": "The Forge Plateau",
+          "secondary_presence": "perimeter watch stations, resource extraction sites"
+        },
+        "The Iron Accord": {
+          "population_estimate": 200,
+          "note": "presence disputed; Iron Accord has supply route agreements that require access; this is the source of Corveth-Reval friction"
+        },
+        "Unaffiliated": {
+          "population_estimate": 100,
+          "note": "primarily labor-for-access arrangements"
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::forge_plateau",
+          "name": "The Forge Plateau",
+          "type": "primary_faction_settlement",
+          "description": "The Ash-Born's main settlement. Organized around defensibility — overlapping watch lines, clear perimeter, controlled access points. Halveth's advisory space occupies a central building. Corveth's command structure operates from a larger facility adjacent. Selkara's field command based at the perimeter edge. Beln's maintenance shop is attached to the central facility and is the most visited space by ordinary settlement members. Ivera's informal network operates throughout. Ysolde's storytelling happens in the communal gathering space. Neth holds his oldest-elder position in the quietest corner of the oldest building.",
+          "beat_relevance": [
+            "Corveth-Pip first hostile encounter",
+            "Halveth's advisory role visible",
+            "Triage disclosure scene — Ash-Born internal",
+            "Thorn Ash'Koral's return scene",
+            "Ysolde's story revision",
+            "Neth's origin delivery"
+          ]
+        },
+        {
+          "location_id": "loc::ashfield_perimeter",
+          "name": "The Ashfield Perimeter",
+          "type": "contested_border",
+          "description": "The zone of friction between Ash-Born territory and Iron Accord supply routes. Kyrveth's scouting range. Rovel's operational territory. The physical site of the Corveth-Reval authority dispute. Where the Iron Accord's supply access and the Ash-Born's territorial control most visibly conflict.",
+          "beat_relevance": [
+            "Corveth-Reval friction",
+            "Kyrveth's double-carrier scouting",
+            "Supply route incident that implicates Pethran"
+          ]
+        },
+        {
+          "location_id": "loc::glass_palace",
+          "name": "The Glass Palace",
+          "type": "canonical_locked",
+          "description": "The atmospheric anchor Pip is tasked with building during the Glass Forge arc. Located in the Ashfields zone — the elevated terrain is why the Gale-Cant storms affect this zone most severely. The Glass Palace construction site is Pip's primary work location during Book 1's Glass Forge arc.",
+          "beat_relevance": [
+            "LOCKED: glass_forge_directive_diamond_sky",
+            "LOCKED: glass_forge_first_surge",
+            "LOCKED: glass_forge_spire_of_mirrors",
+            "LOCKED: glass_forge_cockatrice_siege",
+            "LOCKED: glass_forge_secret_extraction"
+          ],
+          "canon_locked": true
+        },
+        {
+          "location_id": "loc::ashfield_careth_space",
+          "name": "Careth's Recovery Space",
+          "type": "specialist_facility",
+          "description": "Not formally recognized by Ash-Born command. A set of rooms in a secondary building that Careth has converted for her recovery practice. She operates here by permission of the settlement members who use her services rather than by formal authorization. Halveth has technically never acknowledged it exists.",
+          "beat_relevance": [
+            "Careth's intro scene",
+            "Post-disclosure emotional fallout — Ash-Born",
+            "Where Corveth eventually goes after Thorn's return"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::still_water_basin",
+      "zone_name": "The Still Water Basin",
+      "zone_type": "secondary_settlement_cluster",
+      "terrain": "lowland basin with river network; rich agricultural capacity; some flooding risk from collapse-altered drainage patterns",
+      "collapse_change": "moderate — river routing changed; some pre-collapse settlements flooded; current settlements are built above the new flood lines",
+      "population": 600,
+      "faction_presence": {
+        "The Resonance": {
+          "population_estimate": 200,
+          "note": "secondary Resonance presence; knowledge outpost"
+        },
+        "The Meridian": {
+          "population_estimate": 100,
+          "note": "healing station"
+        },
+        "The Iron Accord": {
+          "population_estimate": 200,
+          "note": "agricultural production base — Elven's primary operations are here"
+        },
+        "Unaffiliated": {
+          "population_estimate": 100
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::basin_agricultural",
+          "name": "The Basin Agricultural Complex",
+          "type": "production",
+          "description": "Elven's primary food production infrastructure. The post-collapse agricultural innovations she developed are most fully implemented here. Cross-faction labor arrangements mean workers from multiple factions are present. The basin's rich soil is the primary reason this zone is cross-faction rather than Ash-Born or Iron Accord exclusive.",
+          "beat_relevance": [
+            "Elven's intro scene",
+            "Cross-faction labor context for Aeven",
+            "World-birth food security challenge"
+          ]
+        },
+        {
+          "location_id": "loc::basin_knowledge_outpost",
+          "name": "The Basin Knowledge Outpost",
+          "type": "institutional_secondary",
+          "description": "Resonance secondary facility — smaller than the Archive District. A relay point for information between the Heartland and the outer zones. Calevyn maintains a secondary archive presence here. Verath On'Rylder's relay network has a node here.",
+          "beat_relevance": [
+            "Calevyn's relay network use",
+            "World-birth documentation relay"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::ironmarsh",
+      "zone_name": "The Ironmarsh",
+      "zone_type": "secondary_settlement_cluster",
+      "terrain": "marshy lowland transitioning to firm ground; rich in mineral deposits; unpleasant to traverse without route knowledge; natural barrier properties",
+      "collapse_change": "significant — the marsh expanded during the collapse event; what was firm ground is now marsh; the expansion created natural barriers that several settlements use as protection",
+      "population": 400,
+      "faction_presence": {
+        "The Iron Accord": {
+          "population_estimate": 300,
+          "primary_settlement": "The Firm Ground Settlement",
+          "note": "The marsh expansion is what the Iron Accord built their eastern settlements around; they know the routes"
+        },
+        "Unaffiliated": {
+          "population_estimate": 100
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::firm_ground",
+          "name": "The Firm Ground Settlement",
+          "type": "secondary_settlement",
+          "description": "Iron Accord eastern settlement. Built on the elevated ground that survived the marsh expansion. Daevyn's primary medical operation area — the marsh creates unique injury patterns. Kyrel and Aenwyn's home settlement before the main narrative begins. Pethran's supply routes include a critical marsh crossing here.",
+          "beat_relevance": [
+            "Kyrel and Aenwyn's origin context",
+            "Pethran's supply route crossing",
+            "Daevyn's field medicine context"
+          ]
+        },
+        {
+          "location_id": "loc::marsh_routes",
+          "name": "The Marsh Routes",
+          "type": "transit",
+          "description": "The known safe routes through the Ironmarsh. Known to Iron Accord navigators and Unbound nomads. Unknown to most Ash-Born, which is a tactical weakness they are aware of. Seth's map includes the current routes; they change seasonally and Seth updates them.",
+          "beat_relevance": [
+            "Seth's cartography — seasonal update",
+            "Pethran's logistical vulnerability"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::thornridge",
+      "zone_name": "The Thornridge",
+      "zone_type": "disputed_contested_zone",
+      "terrain": "ridge system running east-west; good visibility; strategically valuable; harsh weather; difficult agriculture",
+      "collapse_change": "minor terrain change; significant political change — pre-collapse settlements on the ridge were abandoned and ownership is now contested",
+      "population": 150,
+      "faction_presence": {
+        "The Ash-Born": {
+          "population_estimate": 80,
+          "note": "watch stations; strategic positioning"
+        },
+        "The Severed": {
+          "population_estimate": 50,
+          "note": "Verath's operational base for cross-faction intelligence"
+        },
+        "Unbound": {
+          "population_estimate": 20,
+          "note": "transit presence; Thael's route passes through"
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::thornridge_watch",
+          "name": "The Thornridge Watch Stations",
+          "type": "strategic",
+          "description": "Ash-Born watch stations with line-of-sight to multiple zones. Rovel's operational territory. Kyrveth's scouting range extends through here. The elevation makes these the first locations to have visibility of movements across the wider survivor territory.",
+          "beat_relevance": [
+            "Kyrveth's scouting operation",
+            "Rovel's operational context"
+          ]
+        },
+        {
+          "location_id": "loc::severed_ridge_base",
+          "name": "The Ridge Base",
+          "type": "faction_operational",
+          "description": "Verath's cross-faction intelligence operation center. Higher security than her Heartland presence. Where Lorne manages the operational details. Boreth writes ideology here. Thren's initial Severed assignment was this location before his growing discomfort.",
+          "beat_relevance": [
+            "Verath's control agenda development",
+            "Boreth's ideological writing",
+            "Thren's growing discomfort",
+            "Lorne's defection decision"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::deepwood_remnant",
+      "zone_name": "The Deepwood Remnant",
+      "zone_type": "liminal_zone",
+      "terrain": "surviving forest fragment from before the collapse; the only significant pre-collapse forest that wasn't burned or cleared; unusual resonance properties due to age and density",
+      "collapse_change": "protected — the Deepwood Remnant survived the collapse intact for reasons that are not fully understood; some attribute it to pre-collapse sonomantic protection; this is not confirmed",
+      "population": 50,
+      "faction_presence": {
+        "The Unbound": {
+          "population_estimate": 30,
+          "note": "Drevyn's primary camping ground; the Unbound use it as a rest point"
+        },
+        "Unaffiliated": {
+          "population_estimate": 20,
+          "note": "people who live outside the settlement system by choice or necessity"
+        }
+      },
+      "sonomantic_note": "The Deepwood Remnant has unusual harmonic resonance properties. Pip perceives it differently from normal terrain. Davan has theories about why. This is one of the locations where Pip's sonomancy and the physical world interface most visibly.",
+      "key_locations": [
+        {
+          "location_id": "loc::deepwood_clearing",
+          "name": "The Deepwood Clearing",
+          "type": "resonance_site",
+          "description": "A natural clearing at the center of the Deepwood Remnant with measurably different acoustic properties — sound behaves unusually here in ways that pre-date Pip and that Davan's theory partially explains. Ceth has used this space for ceremonies when the Neutral Quarter was unavailable. It is one of three locations where Pip's sonomancy operates differently than elsewhere.",
+          "beat_relevance": [
+            "Pip-Ceth ceremony location (alternative)",
+            "Davan's field research",
+            "Ithren's practitioner history connection — earlier practitioners used this space"
+          ]
+        },
+        {
+          "location_id": "loc::brenath_refuge",
+          "name": "Brenath's Refuge",
+          "type": "personal",
+          "description": "Not a formal location — the specific margin of the Deepwood Remnant where Brenath has been living his between-states existence. Small, functional, quiet. This is where Pip's sonomancy leads him to find Brenath.",
+          "beat_relevance": [
+            "Pip finds Brenath",
+            "The quiet conversation that doesn't solve anything and doesn't need to"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::saltflat_crossing",
+      "zone_name": "The Saltflat Crossing",
+      "zone_type": "transit_zone",
+      "terrain": "salt flat expanse — flat, navigable but exposed, dramatic temperature variation between day and night, minimal cover",
+      "collapse_change": "significant — previously a more varied landscape; the collapse event left exposed salt flat where there were previously settlements; the flat condition is new",
+      "population": 30,
+      "faction_presence": {
+        "The Unbound": {
+          "population_estimate": 20,
+          "note": "the Unbound know the crossing routes; settlements do not"
+        },
+        "Unaffiliated": {
+          "population_estimate": 10,
+          "note": "travelers between zones"
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::saltflat_waypoint",
+          "name": "The Waypoint",
+          "type": "transit",
+          "description": "A shelter structure maintained by the Unbound at the midpoint of the Saltflat Crossing. The only reliable rest point between the Thornridge zone and the outer territories. Thael and Drevyn both maintain it. The Unbound consider it communal infrastructure. Seth's map marks it.",
+          "beat_relevance": [
+            "Thael's route",
+            "Drevyn's nomadic territory",
+            "Transit context for outer-zone characters arriving mid-sequence"
+          ]
+        }
+      ]
+    },
+    {
+      "zone_id": "zone::outer_territories",
+      "zone_name": "The Outer Territories",
+      "zone_type": "wilderness_nomadic_zone",
+      "terrain": "varied — the territory beyond the established settlement zones; includes remnants of pre-collapse settlements, collapsed infrastructure, altered terrain; navigable by the Unbound, largely unknown to settled factions",
+      "collapse_change": "most severe — the outer territories sustained the heaviest collapse-event damage; what exists there now is different from any pre-collapse record",
+      "population": 70,
+      "faction_presence": {
+        "The Unbound": {
+          "population_estimate": 60,
+          "note": "primary Unbound population range; multiple small nomadic groups"
+        },
+        "Unaffiliated": {
+          "population_estimate": 10,
+          "note": "extreme outliers"
+        }
+      },
+      "key_locations": [
+        {
+          "location_id": "loc::outer_return_sites",
+          "name": "The Return Sites",
+          "type": "world_birth_critical",
+          "description": "Locations in the Outer Territories where returned individuals begin appearing during the world-birth sequence. The sequence is not spatially confined to the Heartland — returns occur across the entire survivor territory and beyond. The Outer Territory returns are the most geographically isolated and therefore the most dangerous — people arriving in damaged terrain without reception infrastructure. Drevyn's knowledge of these sites is operationally critical.",
+          "beat_relevance": [
+            "Drevyn's world-birth location knowledge",
+            "Naela's nomadic medical response",
+            "Pethran's reception logistics — outer-territory problem"
+          ]
+        }
+      ]
+    }
+  ],
+  "zone_connection_map": {
+    "description": "How zones connect — physical routes, political relationships, and information flow",
+    "physical_routes": [
+      {
+        "route_id": "route::heartland_ashfields",
+        "from": "zone::heartland",
+        "to": "zone::ashfields",
+        "type": "contested_primary",
+        "description": "The main route between the Heartland and the Ashfields. Politically contested — Ash-Born consider it their approach; Iron Accord consider it their supply line. This is the physical site of the Corveth-Reval friction.",
+        "key_characters": [
+          "wowas::kyrveth_ashkoral_stonehayne",
+          "wowas::pethran_onrylder_thorngrace"
+        ]
+      },
+      {
+        "route_id": "route::heartland_stillwater",
+        "from": "zone::heartland",
+        "to": "zone::still_water_basin",
+        "type": "cooperative_primary",
+        "description": "The agricultural supply route — cooperative because both factions benefit from it. Pethran's most important maintained route.",
+        "key_characters": [
+          "wowas::pethran_onrylder_thorngrace",
+          "wowas::renath_marso_thorngrace"
+        ]
+      },
+      {
+        "route_id": "route::heartland_ironmarsh",
+        "from": "zone::heartland",
+        "to": "zone::ironmarsh",
+        "type": "iron_accord_primary",
+        "description": "Iron Accord maintained route through the marsh. The knowledge of safe crossings is Iron Accord institutional knowledge.",
+        "key_characters": [
+          "wowas::pethran_onrylder_thorngrace",
+          "wowas::seth_velthane_ironsong"
+        ]
+      },
+      {
+        "route_id": "route::unbound_primary",
+        "from": "zone::outer_territories",
+        "to": "zone::deepwood_remnant",
+        "type": "unbound_nomadic",
+        "description": "The Unbound's primary nomadic circuit — outer territories through the saltflat crossing, through the deepwood remnant, to occasional settlement contact. Thael's route. Drevyn's extended version.",
+        "key_characters": [
+          "wowas::thael_unbound_ironsong",
+          "wowas::drevyn_unbound_marso",
+          "wowas::naela_unbound_velthane"
+        ]
+      },
+      {
+        "route_id": "route::severed_intelligence",
+        "from": "zone::thornridge",
+        "to": "zone::heartland",
+        "type": "severed_covert",
+        "description": "Verath's covert information route. Caera uses a version of this route for her cross-faction work. Nirath's liaison work passes through here.",
+        "key_characters": [
+          "wowas::verath_severed_darkcurrent",
+          "wowas::caera_velthane_ashcinder",
+          "wowas::nirath_velthane_ashcinder"
+        ]
+      }
+    ],
+    "information_flow_network": {
+      "verath_onrylder_relay": "Covers Heartland, Still Water Basin, Ironmarsh — all Iron Accord zones with extensions to Resonance and Meridian",
+      "caera_diplomatic_routes": "All zones including contested and covert; the only person with full coverage",
+      "wrenath_archive_network": "Heartland primary; relay nodes in all zones via Calevyn and Nirath",
+      "unbound_nomadic_knowledge": "Outer Territories, Deepwood, Saltflat, Thornridge — the zones settled factions cannot fully cover"
+    }
+  },
+  "settlement_population_tables": {
+    "description": "Approximate named-role population density by zone for census reference",
+    "heartland": {
+      "total": 2200,
+      "named_characters_present": [
+        "wowas::wrenath_velthane_stillwater",
+        "wowas::calevyn_velthane_ironsong",
+        "wowas::davan_velthane_darkcurrent",
+        "wowas::loreth_velthane_darkcurrent",
+        "wowas::seth_velthane_ironsong",
+        "wowas::ithren_velthane_ashcinder",
+        "wowas::tavan_velthane_stonehayne",
+        "wowas::nirath_velthane_ashcinder",
+        "wowas::feritha_velthane_stonehayne",
+        "wowas::sorra_marso_thorngrace",
+        "wowas::aldren_marso_ironsong",
+        "wowas::ceth_marso_willowjayce",
+        "wowas::caevyn_marso_willowjayce",
+        "wowas::rethna_marso_ironsong",
+        "wowas::peleth_marso_darkcurrent",
+        "wowas::vethran_marso_ashcinder",
+        "wowas::renath_marso_thorngrace",
+        "wowas::oswyn_marso_stonehayne",
+        "wowas::reval_onrylder_thorngrace",
+        "wowas::selwyn_onrylder_darkcurrent",
+        "wowas::daevyn_onrylder_ironsong",
+        "wowas::pethran_onrylder_thorngrace",
+        "wowas::keth_onrylder_stonehayne",
+        "wowas::torven_onrylder_willowjayce",
+        "wowas::calla_onrylder_willowjayce",
+        "wowas::verath_onrylder_ashcinder",
+        "wowas::caera_velthane_ashcinder",
+        "wowas::mirra_unaffiliated_velthane",
+        "wowas::seln_velthane_willowjayce",
+        "wowas::soleth_velthane_willowjayce",
+        "wowas::thaleth_willowjayce_ironsong",
+        "wowas::meveth_willowjayce_stonehayne",
+        "wowas::parn_onrylder_ironsong",
+        "wowas::aeven_ashkoral_thorngrace",
+        "wowas::brenath_unaffiliated_ashkoral (margin)"
+      ],
+      "unnamed_role_distribution": {
+        "resonance_workers": 250,
+        "meridian_practitioners": 120,
+        "iron_accord_field_and_admin": 400,
+        "unaffiliated_laborers": 200,
+        "ash_born_presence": 80,
+        "severed_scattered": 60,
+        "children_mixed": 200,
+        "elders_mixed": 180,
+        "general_population": 710
+      }
+    },
+    "ashfields": {
+      "total": 1500,
+      "named_characters_present": [
+        "wowas::halveth_ashkoral_darkcurrent",
+        "wowas::corveth_ashkoral_darkcurrent",
+        "wowas::selkara_ashkoral_willowjayce",
+        "wowas::maeren_ashkoral_ironsong",
+        "wowas::rovel_ashkoral_ironsong",
+        "wowas::beln_ashkoral_darkcurrent",
+        "wowas::kyrveth_ashkoral_stonehayne",
+        "wowas::dravan_ashkoral_ashcinder",
+        "wowas::kaeven_ashkoral_thorngrace",
+        "wowas::ivera_ashkoral_ashcinder",
+        "wowas::ysolde_ashkoral_willowjayce",
+        "wowas::neth_ashkoral_darkcurrent",
+        "wowas::thera_ashkoral_stonehayne",
+        "wowas::careth_ashkoral_willowjayce",
+        "wowas::aleth_ashkoral_ironsong"
+      ],
+      "unnamed_role_distribution": {
+        "ash_born_command_structure": 80,
+        "ash_born_field_operatives": 350,
+        "ash_born_specialists": 150,
+        "ash_born_general_population": 500,
+        "ash_born_elders": 80,
+        "ash_born_youth": 200,
+        "iron_accord_supply_presence": 80,
+        "unaffiliated_labor": 40
+      }
+    },
+    "still_water_basin": {
+      "total": 600,
+      "named_characters_present": [
+        "wowas::elven_onrylder_stonehayne"
+      ],
+      "unnamed_role_distribution": {
+        "resonance_outpost": 60,
+        "meridian_station": 40,
+        "iron_accord_agricultural": 160,
+        "agricultural_laborers_cross_faction": 200,
+        "unaffiliated": 100,
+        "children": 40
+      }
+    },
+    "ironmarsh": {
+      "total": 400,
+      "named_characters_present": [
+        "wowas::kyrel_onrylder_ironsong",
+        "wowas::aenwyn_onrylder_darkcurrent",
+        "wowas::daevyn_onrylder_ironsong (origin)"
+      ],
+      "unnamed_role_distribution": {
+        "iron_accord_settlers": 250,
+        "iron_accord_navigators": 50,
+        "unaffiliated": 80,
+        "children": 20
+      }
+    },
+    "thornridge": {
+      "total": 150,
+      "named_characters_present": [
+        "wowas::verath_severed_darkcurrent",
+        "wowas::lorne_severed_ashcinder",
+        "wowas::boreth_severed_ironsong",
+        "wowas::thren_ashkoral_ashcinder"
+      ],
+      "unnamed_role_distribution": {
+        "ash_born_watch": 70,
+        "severed_operatives": 40,
+        "unbound_transit": 15,
+        "unaffiliated": 25
+      }
+    },
+    "deepwood_remnant": {
+      "total": 50,
+      "named_characters_present": [
+        "wowas::brenath_unaffiliated_ashkoral",
+        "wowas::drevyn_unbound_marso (transit)"
+      ],
+      "unnamed_role_distribution": {
+        "unbound_rest_population": 25,
+        "unaffiliated_forest_dwellers": 15,
+        "transient_travelers": 10
+      }
+    },
+    "outer_territories": {
+      "total": 70,
+      "named_characters_present": [
+        "wowas::thael_unbound_ironsong",
+        "wowas::naela_unbound_velthane",
+        "wowas::drevyn_unbound_marso"
+      ],
+      "unnamed_role_distribution": {
+        "unbound_nomadic_groups": 55,
+        "extreme_unaffiliated": 15
+      }
+    }
+  }
+}

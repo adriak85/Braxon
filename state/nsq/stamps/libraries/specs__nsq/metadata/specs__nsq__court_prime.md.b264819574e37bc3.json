@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__court_prime.md.b264819574e37bc3.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.266242+00:00",
+  "harm_hit_count": 0,
+  "library": "specs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__court_prime.md.b264819574e37bc3.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/nsq/court_prime.md",
+  "source_bytes": 1163,
+  "source_sha256": "b264819574e37bc389c5b96741cda52728bc9830d44e31ff282b24b523b5615b",
+  "stamp_id": "nsq.asm.specs__nsq.specs__nsq__court_prime.md.b264819574e37bc3"
+}

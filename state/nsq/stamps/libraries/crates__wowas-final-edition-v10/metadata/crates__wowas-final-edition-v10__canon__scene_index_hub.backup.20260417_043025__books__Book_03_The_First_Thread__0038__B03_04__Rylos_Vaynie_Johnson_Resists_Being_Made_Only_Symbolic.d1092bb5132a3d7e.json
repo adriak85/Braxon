@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0038__B03_04__Rylos_Vaynie_Johnson_Resists_Being_Made_Only_Symbolic.d1092bb5132a3d7e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.767149+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0038__B03_04__Rylos_Vaynie_Johnson_Resists_Being_Made_Only_Symbolic.d1092bb5132a3d7e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0038__B03_04__Rylos_Vaynie_Johnson_Resists_Being_Made_Only_Symbolic.md",
+  "source_bytes": 223,
+  "source_sha256": "d1092bb5132a3d7e3607e3fde26b9eee4842e61f050fd0d13856a096f04a7a92",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0038__B03_04__Rylos_Vaynie_Johnson_Resists_Being_Made_Only_Symbolic.d1092bb5132a3d7e"
+}

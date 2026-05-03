@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Devel::LexAlias",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Devel/LexAlias.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Devel__LexAlias.source",
+  "source_sha256": "527319529c07c0d363b17ed02fbc66e27f7c1d109985a77328b5fb2e70c95192",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Devel__LexAlias.translated.nsq",
+  "nsq_body_sha256": "b58655b75a7b4e9b80223a48ec4292eac7fb8f470f6a61a1653301a2c88c8f85",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

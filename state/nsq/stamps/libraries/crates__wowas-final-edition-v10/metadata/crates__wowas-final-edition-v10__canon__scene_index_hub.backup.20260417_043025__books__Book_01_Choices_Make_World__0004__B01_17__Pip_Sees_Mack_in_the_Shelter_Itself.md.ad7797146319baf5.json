@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0004__B01_17__Pip_Sees_Mack_in_the_Shelter_Itself.md.ad7797146319baf5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.939762+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0004__B01_17__Pip_Sees_Mack_in_the_Shelter_Itself.md.ad7797146319baf5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0004__B01_17__Pip_Sees_Mack_in_the_Shelter_Itself.md",
+  "source_bytes": 237,
+  "source_sha256": "ad7797146319baf5199203e6e54585a19a41b062c12448d1d7d2e77c290a629a",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0004__B01_17__Pip_Sees_Mack_in_the_Shelter_Itself.md.ad7797146319baf5"
+}

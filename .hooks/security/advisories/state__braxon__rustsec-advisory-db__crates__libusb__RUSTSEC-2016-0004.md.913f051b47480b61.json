@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__libusb__RUSTSEC-2016-0004.md.913f051b47480b61.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.067264+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__libusb__RUSTSEC-2016-0004.md.913f051b47480b61.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/libusb/RUSTSEC-2016-0004.md",
+  "source_bytes": 438,
+  "source_sha256": "913f051b47480b612e8a6a5323b57e6181c53a8e91e9e412aad7109b5804034f",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__libusb__RUSTSEC-2016-0004.md.913f051b47480b61"
+}

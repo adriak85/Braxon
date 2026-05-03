@@ -1,0 +1,24 @@
+NSQ_APP nsq_ubiquity_acceptance
+NSQ_APP_VERSION 1
+
+NSQ_UBIQUITY_ACCEPTANCE {
+  nsq_is_globally_accepted_authority_surface = true
+  nsq_must_be_available_to_repo_surfaces = true
+  nsq_is_source_truth_for_nsq_files = true
+  nsqasm_is_authorized_operating_bridge = true
+
+  rust = supported_recode_surface_not_nsq_authority
+  c = supported_recode_surface_not_nsq_authority
+  asm = operating_surface_not_nsq_source_truth
+  python = support_tool_surface_not_nsq_authority
+  shell = support_tool_surface_not_nsq_authority
+  markdown = documentation_surface_not_nsq_authority
+  json = state_surface_not_nsq_authority
+
+  all_surfaces_must_preserve {
+    nsq_source_truth = true
+    moral_invariant = true
+    metadata_lineage = true
+    binary_downstream_boundary = true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Net::FreeDB2",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Net/FreeDB2.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Net__FreeDB2.source",
+  "source_sha256": "0efebc01c3d91b77c4e078711f2da1cd328cd895901e4d7abb203b8b1b56eb7b",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Net__FreeDB2.translated.nsq",
+  "nsq_body_sha256": "bf5645979f4d40f45a9fd4a7af6b45de3d2a04b56c07a7eed108ddeb4969cd35",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

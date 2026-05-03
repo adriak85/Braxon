@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0021__B01_19__Mack_Sees_What_the_Road_Did.md.403ab6f68e9579c9.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.985456+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0021__B01_19__Mack_Sees_What_the_Road_Did.md.403ab6f68e9579c9.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0021__B01_19__Mack_Sees_What_the_Road_Did.md",
+  "source_bytes": 232,
+  "source_sha256": "403ab6f68e9579c9f12fe999664d3e97c498fc0816758afb3c4689887f8309bd",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0021__B01_19__Mack_Sees_What_the_Road_Did.md.403ab6f68e9579c9"
+}

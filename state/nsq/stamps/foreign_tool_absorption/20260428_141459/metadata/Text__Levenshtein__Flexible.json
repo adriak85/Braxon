@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Text::Levenshtein::Flexible",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Text/Levenshtein/Flexible.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Text__Levenshtein__Flexible.source",
+  "source_sha256": "73c173a0663d1609a958997cfcdcdcd462689eb3585d3a893d6f110e6fb37864",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Text__Levenshtein__Flexible.translated.nsq",
+  "nsq_body_sha256": "bd153d02b278db3fa39b565c6f4b76d4ddfdd0854b1c4aa84a048ed00efca291",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

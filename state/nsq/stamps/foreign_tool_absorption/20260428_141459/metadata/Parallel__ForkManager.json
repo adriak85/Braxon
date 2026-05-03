@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Parallel::ForkManager",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Parallel/ForkManager.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Parallel__ForkManager.source",
+  "source_sha256": "5258529bcf2caa52f3a015dd6a118519ac69796717faf34700cd49f37992a2a1",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Parallel__ForkManager.translated.nsq",
+  "nsq_body_sha256": "1219da38b22a9020fb97e011b68d0857854b3d4d9ff25a37d827f2578d774ed7",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,18 @@
+=== BRAXON EMBEDDED SSH SURFACE ===
+created_at=2026-04-28T23:00:03Z
+root=/data/data/com.termux/files/home/Braxon
+prefix=/data/data/com.termux/files/usr
+sshd=/data/data/com.termux/files/usr/bin/sshd
+ssh=/data/data/com.termux/files/usr/bin/ssh
+config=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd_config
+pid=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid
+log=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.log
+bin=/data/data/com.termux/files/home/Braxon/tools/nsq/server/bin
+activate=/data/data/com.termux/files/home/Braxon/tools/nsq/server/activate_embedded_server_surface.sh
+stamp_jsonl=/data/data/com.termux/files/home/Braxon/state/nsq/stamps/embedded_server_surface_stamps.jsonl
+
+Commands:
+source "/data/data/com.termux/files/home/Braxon/tools/nsq/server/activate_embedded_server_surface.sh"
+Braxon-sshd-start
+Braxon-sshd-status
+Braxon-sshd-stop

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Package::DeprecationManager",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Package/DeprecationManager.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Package__DeprecationManager.source",
+  "source_sha256": "5c39176bc09e76e8396668c48d7c3e768523b570019117e1bf4595cca7435b77",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Package__DeprecationManager.translated.nsq",
+  "nsq_body_sha256": "c94f1ebe0003a00f7b5a4346caef038ed486655db1c65c6beaecbe5e789ec03e",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Compress::Raw::Bzip2",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Compress/Raw/Bzip2.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Compress__Raw__Bzip2.source",
+  "source_sha256": "b70267702b0f39671cc8da6c7b2d81d85c291a43287d5b4da659537ce66fea36",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Compress__Raw__Bzip2.translated.nsq",
+  "nsq_body_sha256": "7860b811aa5b3f3aff5ce86d7fd7d210064a5c11af1fbfcc1b5adf5501246f67",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

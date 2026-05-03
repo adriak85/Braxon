@@ -1,0 +1,13 @@
+{
+  "schema": "Braxon.foreign_tool_absorption.proof.v14",
+  "generated_at": "20260428_141459",
+  "ok": true,
+  "stamp_count": 523,
+  "nsq_is_only_runtime": true,
+  "foreign_sources_absorbed_into_nsq_stamp_bodies": true,
+  "foreign_runtime_execution_forbidden": true,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "registry": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/foreign_tool_substrate_stamp_registry.jsonl",
+  "manifest": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/capture_manifest.tsv"
+}

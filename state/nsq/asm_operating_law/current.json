@@ -1,0 +1,19 @@
+{
+  "schema": "nsq.asm_operating_law.current.v3",
+  "generated_at": "20260424_144803",
+  "status": "installed_not_live_completion",
+  "BRAXON_live_claim": false,
+  "BRAXON_complete_claim": false,
+  "nsq_source_truth": true,
+  "asm_operating_law_for_nsq": true,
+  "asm_is_not_nsq_source_identity": true,
+  "asm_is_not_higher_authority_than_nsq": true,
+  "binary_translation_downstream_only": true,
+  "binary_translation_is_not_nsq_source_truth": true,
+  "moral_invariant_preservation_required": true,
+  "guard_loop_required": true,
+  "carrier": "apps/nsq/asm_operating_law.nsq",
+  "config": "config/nsq/asm_operating_law.nsq",
+  "doc": "docs/nsq/NSQ_ASM_OPERATING_LAW.md",
+  "spec": "specs/nsq/NSQ_ASM_OPERATING_LAW_SPEC.md"
+}

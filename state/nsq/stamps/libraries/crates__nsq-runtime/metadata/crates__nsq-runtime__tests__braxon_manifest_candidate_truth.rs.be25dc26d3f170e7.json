@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__nsq-runtime/asm/macros/crates__nsq-runtime__tests__BRAXON_manifest_candidate_truth.rs.be25dc26d3f170e7.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.424848+00:00",
+  "harm_hit_count": 20,
+  "library": "crates__nsq-runtime",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__nsq-runtime/metadata/crates__nsq-runtime__tests__BRAXON_manifest_candidate_truth.rs.be25dc26d3f170e7.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/nsq-runtime/tests/braxon_manifest_candidate_truth.rs",
+  "source_bytes": 12793,
+  "source_sha256": "be25dc26d3f170e7991238cac213db97abdc6d6aa75052e04872db2d0736c64c",
+  "stamp_id": "nsq.asm.crates__nsq-runtime.crates__nsq-runtime__tests__BRAXON_manifest_candidate_truth.rs.be25dc26d3f170e7"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Tie::Handle::Offset",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Tie/Handle/Offset.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Tie__Handle__Offset.source",
+  "source_sha256": "7f2e2a2552fdaa4b1fd2b7b55666c8d0a410eccb4a0b3df8880ac59937763d55",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Tie__Handle__Offset.translated.nsq",
+  "nsq_body_sha256": "e006791976839d4e1f09ccadda50cc938b222796b70c6ccf55a89da660b19b1c",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

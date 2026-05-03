@@ -1,0 +1,35 @@
+MODEL_TRANSFER_NSQ_ONLY_GATE {
+  authority = NSQ_COURT
+  architecture_root = true
+
+  active_transfer_method = citadel699_nsq_request_return_rebuild
+
+  normal_command = request
+  forbidden_normal_command = fetch
+
+  raw_huggingface_payload_fetch_allowed = false
+  raw_gguf_transfer_allowed = false
+  raw_safetensors_transfer_allowed = false
+  git_lfs_pointer_allowed = false
+  pointer_setup_allowed = false
+
+  request_command_behavior {
+    make_citadel699_request_capsule = true
+    no_network_fetch = true
+    no_huggingface_call = true
+    no_raw_payload = true
+    no_lfs_pointer = true
+  }
+
+  fetch_command_behavior {
+    blocked = true
+    explain_redirect = true
+    no_fallback_to_raw_payload = true
+  }
+
+  truth_boundary {
+    huggingface_payload_download_is_not_custom_nsq_transfer = true
+    fetch_word_is_disallowed_for_normal_model_transfer = true
+    whole_model_runtime_claim_blocked_until_local_rebuild_verify = true
+  }
+}

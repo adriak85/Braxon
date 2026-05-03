@@ -1,0 +1,9 @@
+ending_code	required_state	forbidden_state	outcome	hint_logic
+blood_cello_good_remake	play=true; song=love; support=full; age=young_enough; quantum=yes; flux=yes	none	Neith remakes the world.	The world answers because Pip stayed true, supported, and structurally whole.
+blood_cello_no_song	play=false	n/a	The world continues as it is.	Nihilist refusal. No new world.
+blood_cello_lonely_love	play=true; song=love; support=alone; age=young_enough	support=full	Neith cries, asks where everyone is, and everything goes black.	Love without community is insufficient.
+blood_cello_false_victory	play=true; battle_state=won; (quantum=no OR flux=no)	both powers present	Battle can look won, but Neith still kills Pip and no one survives.	Missing one foundational power.
+blood_cello_undead_failure	play=true; undead_magic_used=yes	undead_magic_used=no	Those meant to be resurrected return undead and tear Pip apart.	Violation of life/death law.
+blood_cello_old_man_mockery	play=true; song=mockery; age=old; support=none	age=young_enough	Neith turns Pip into a string marionette and plays him like a cello.	He spent his life-force wrong and turned music into cruelty.
+blood_cello_mockery_world	play=true; song=mockery; age=young_or_mid; support=none	song=love	Neith plays with him and creates a disgusting world.	Sadist route.
+blood_cello_stalled_collapse	play=true; song=love; alignment_off_path=yes	alignment_true=yes	Neith walks away; Pip dies; the new world collapses for lack of right energy.	He did not stay true enough to the path.

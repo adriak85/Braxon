@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Nodejs::Util",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Nodejs/Util.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Nodejs__Util.source",
+  "source_sha256": "0e275024e19c7734102e7828698beefa1ed110f5b608514f960b8fbcf2c1807d",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Nodejs__Util.translated.nsq",
+  "nsq_body_sha256": "003fbf8d6cdfe406f0e22c8f3413b11a57480af0df91876b3cb46d5575757fd1",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

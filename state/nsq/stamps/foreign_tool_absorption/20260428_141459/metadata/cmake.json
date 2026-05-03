@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "cmake",
+  "source_path": "/data/data/com.termux/files/usr/bin/cmake",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/cmake.source",
+  "source_sha256": "03ebdeb80f8db0bf8a4dbcc87e54a699aa0af5e08af32dc56ba50610c9333ce5",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/cmake.translated.nsq",
+  "nsq_body_sha256": "93117c1316189b20301f28e696d48719866c3ff037f4c9d32934fccb2f2a4f71",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "Braxon.nsq.proof.citadel699_reduced_intent_wire_contract.zero",
+  "authority": "NSQ_COURT",
+  "proved": true,
+  "responsible_identity": "NSQ_COURT",
+  "signed_result": "citadel699_reduced_intent_wire_contract_installed",
+  "interconnected_artifacts": [
+    "apps/nsq/citadel699_reduced_intent_wire_contract.nsq",
+    "config/nsq/citadel699_reduced_intent_wire_contract.json",
+    "state/nsq/court/routes/citadel699_reduced_intent_wire_contract.json",
+    "config/nsq/model_transfer_nsq_only_policy.json",
+    "config/nsq/citadel699_wire_receptor.json",
+    "config/nsq/models/council_of_six.json"
+  ],
+  "runtime_law": {
+    "nsq_is_only_runtime": true,
+    "nsq_is_bus": true,
+    "court_is_compositor": true,
+    "court_is_agents": false,
+    "normal_system_assumptions_apply": false
+  },
+  "wire_contract_verified": {
+    "external_source_gate": true,
+    "open_instruction_pipe_required": true,
+    "recursive_instruction_thread_required": true,
+    "source_side_clone_receive_required": true,
+    "immediate_nsq_reduced_intent_translation_required": true,
+    "local_storage_is_tiny_seed_plus_reconstruction_algorithm": true,
+    "hot_hypervisor_buildout_required": true,
+    "target_size_class": "mb_scale"
+  },
+  "forbidden_verified": {
+    "raw_weight_download_to_phone": true,
+    "raw_payload_transfer_to_phone": true,
+    "safetensors_runtime_payload": true,
+    "lfs_pointer_payload": true,
+    "full_model_cache_on_phone": true,
+    "direct_huggingface_raw_download_path": true
+  },
+  "council_of_six": {
+    "model_count": 6,
+    "total_parameters": "1363B total",
+    "activated_parameters": "114.7B activated via routing",
+    "decision_method": "semantic_weighted_intent_coupling",
+    "shared_intent_state_required": true,
+    "gemma_softcraft_support_allowed": true
+  },
+  "proof_reuse_rule": "Future passes should treat this contract as installed and proven unless a later user-authorized artifact supersedes it. Do not re-open raw download paths as fallback."
+}

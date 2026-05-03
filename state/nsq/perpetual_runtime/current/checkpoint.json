@@ -1,0 +1,13 @@
+{
+  "architecture_root": true,
+  "authority": "NSQ_COURT",
+  "c_runner_used": false,
+  "court_is_agents": false,
+  "generated_at": "20260424_194656",
+  "king": "compositor",
+  "last_seq": 2,
+  "queen": "linter",
+  "restored_from_seq": 1,
+  "route": "perpetual_runtime",
+  "schema": "nsq.perpetual_runtime.checkpoint.v6"
+}

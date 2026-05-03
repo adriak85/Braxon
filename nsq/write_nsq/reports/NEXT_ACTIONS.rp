@@ -1,0 +1,7 @@
+Next actions for write_nsq/docs/tokenizer batch v3
+
+1. bind nsq-runtime and nsq-proof to the new registries
+2. use port 5 for tokenizer/doc emit tasks
+3. use port 6 for verify/replay/proof
+4. keep port 7 as sole truth mutator
+5. drive NSQ-native authoring before foreign projection

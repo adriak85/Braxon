@@ -1,0 +1,46 @@
+{
+  "bare_metal_claim_allowed": false,
+  "bare_metal_proven": false,
+  "cpuinfo_head": {
+    "cmd": [
+      "sh",
+      "-lc",
+      "cat /proc/cpuinfo | head -120"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "processor\t: 0\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 1\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 2\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 3\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 4\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 5\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x2\nCPU part\t: 0xd05\nCPU revision\t: 0\n\nprocessor\t: 6\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x4\nCPU part\t: 0xd0b\nCPU revision\t: 0\n\nprocessor\t: 7\nBogoMIPS\t: 26.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x4\nCPU part\t: 0xd0b\nCPU revision\t: 0\n\n"
+  },
+  "driver_or_mount_probe_present": true,
+  "generated_at": "2026-04-27T00:47:25.836636+00:00",
+  "honesty": "Termux userspace can prepare and probe native operation, but this report does not prove bare-metal NSQ until a native runner and driver/mount proof pass.",
+  "machine": "aarch64",
+  "mounts_head": {
+    "cmd": [
+      "sh",
+      "-lc",
+      "cat /proc/mounts | head -80"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ",extent_cache,mode=adaptive,active_logs=6,reserve_root=134217,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,checkpoint_merge,fsync_mode=nobarrier,discard_unit=block,memory=normal 0 0\n/dev/block/vold/public:179,1 /mnt/media_rw/FBFF-FA43 exfat rw,dirsync,nosuid,nodev,noexec,noatime,gid=1023,fmask=0007,dmask=0007,allow_utime=0020,iocharset=utf8,errors=remount-ro 0 0\n/dev/fuse /mnt/user/0/FBFF-FA43 fuse rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other 0 0\n/dev/block/vold/public:179,1 /mnt/pass_through/0/FBFF-FA43 exfat rw,dirsync,nosuid,nodev,noexec,noatime,gid=1023,fmask=0007,dmask=0007,allow_utime=0020,iocharset=utf8,errors=remount-ro 0 0\n/dev/block/sdc18 /metadata f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,alloc_mode=reuse,checkpoint_merge,fsync_mode=posix,discard_unit=block,memory=normal 0 0\n/dev/block/dm-13 /system_ext erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0\n/dev/block/dm-14 /vendor erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0\n/dev/block/dm-15 /product erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0\n/dev/block/dm-16 /vendor_dlkm erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0\n/dev/block/dm-17 /system_dlkm erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0\ntmpfs /apex tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=1857624k,nr_inodes=464406,mode=755 0 0\n/dev/block/loop15 /apex/com.android.apex.cts.shim@1 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-51 /apex/com.android.media@361680120 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-54 /apex/com.android.uwb@361681480 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-39 /apex/com.android.adbd@361680240 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-51 /apex/com.android.media ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-54 /apex/com.android.uwb ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop19 /apex/com.motorola.modules.factorycustomization@1 ext4 ro,dirsync,seclabel,nodev,noexec,noatime 0 0\n/dev/block/loop16 /apex/com.android.profiling@360499999 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-50 /apex/com.android.os.statsd@361420820 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-39 /apex/com.android.adbd ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/dm-50 /apex/com.android.os.statsd ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop15 /apex/com.android.apex.cts.shim ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop16 /apex/com.android.profiling ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop19 /apex/com.motorola.modules.factorycustomization ext4 ro,dirsync,seclabel,nodev,noexec,noatime 0 0\n/dev/block/loop17 /apex/com.android.vndk.v34@1 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop12 /apex/com.android.vndk.v33@1 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop12 /apex/com.android.vndk.v33 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop27 /apex/com.android.adservices@360738140 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop17 /apex/com.android.vndk.v34 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop27 /apex/com.android.adservices ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop21 /apex/com.android.runtime@1 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop28 /apex/com.android.devicelock@1 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop21 /apex/com.android.runtime ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop22 /apex/com.android.nfcservices@360499999 ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop28 /apex/com.android.devicelock ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n/dev/block/loop22 /apex/com.android.nfcservices ext4 ro,dirsync,seclabel,nodev,noatime 0 0\n"
+  },
+  "native_runner_candidates_present": [
+    "bin/nsq-native",
+    "bin/nsqasm"
+  ],
+  "native_runner_present": true,
+  "platform": "Android-16-aarch64-64bit-ELF",
+  "schema": "nsq.native_hardware_probe.v1",
+  "shim_required_or_currently_likely": true,
+  "termux_layer_detected": true,
+  "uname": {
+    "cmd": [
+      "uname",
+      "-a"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "Linux localhost 5.15.180-android13-8-00021-g46a5565a0982-ab13743836 #1 SMP PREEMPT Mon Jul 7 16:28:30 UTC 2025 aarch64 Android\n"
+  }
+}

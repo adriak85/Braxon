@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Regexp::IPv4",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Regexp/IPv4.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Regexp__IPv4.source",
+  "source_sha256": "ff2824d437bed71ba073eeb948c844831c7f852b3a5b92235cc5103200db0ed9",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Regexp__IPv4.translated.nsq",
+  "nsq_body_sha256": "ea659a74fb25a40693196a41c29adc4cb96f68fe88cadb596cde79f565f6725b",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

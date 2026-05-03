@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__wowas_monster_species_registry_v8.tsv.f454c4cbb9bcc4ce.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.494784+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__wowas_monster_species_registry_v8.tsv.f454c4cbb9bcc4ce.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/wowas_monster_species_registry_v8.tsv",
+  "source_bytes": 406172,
+  "source_sha256": "f454c4cbb9bcc4ce1edab5718da0d21b583e6b3196ac7e400cff4c02b3f71973",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__wowas_monster_species_registry_v8.tsv.f454c4cbb9bcc4ce"
+}

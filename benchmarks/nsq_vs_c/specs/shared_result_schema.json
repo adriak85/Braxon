@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "required_fields": [
+    "system",
+    "family",
+    "scale",
+    "parse_ms",
+    "build_ms",
+    "decode_ms",
+    "artifact_bytes",
+    "decoded_bytes",
+    "decoded_records",
+    "replay_hash",
+    "deterministic_repeat_match",
+    "semantic_coverage",
+    "failure_mode"
+  ]
+}

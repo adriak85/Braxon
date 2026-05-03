@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "pass": "full_population_batch_10",
+  "date": "2026-03-26",
+  "system": "plot_b_cross_thread",
+  "zone_basis": "wowas_world_zone_map.json",
+  "zones_covered": ["Heartland Gap Districts", "Still Water Basin", "Ironmarsh"],
+
+  "characters": [
+    {
+      "canonical_id": "wowas::theven_gap_unaffiliated",
+      "canonical_name": "Theven On'Rylder Willow-Jayce",
+      "pronunciation_hint": "THEV-en",
+      "role_class": "Gap District informal community organizer",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "Unaffiliated",
+      "family_or_branch": "On'Rylder lineage — gap branch",
+      "social_stratum": "lower-mid",
+      "zone": "zone::heartland / loc::gap_districts",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Has become, without intending to, the de facto community anchor for the Gap Districts. He did not run for anything, was not appointed, and does not consider himself a leader. He is simply the person people go to when they do not know where to go. He knows every unaffiliated person in the Heartland Gap Districts by name and knows approximately what each of them needs. He and Ivera Ash'Koral have an informal information-sharing arrangement that they have never named.",
+      "motivations": "Nobody in the gap should fall through the gap.",
+      "emotional_or_thematic_profile": "Quiet competence that emerges from caring about specific people rather than abstract principles. He is effective because he is paying attention to individuals.",
+      "plot_b_thread": {
+        "thread_id": "theven::gap_community",
+        "open_state": "Operating. Connecting people. No formal structure.",
+        "pip_encounter": "Pip moves through the Gap Districts and Theven is the person who can tell him who to find for anything — not because he seeks this role but because everyone already knows he knows.",
+        "world_birth": "The Gap Districts receive returned individuals who have no faction to return to. Theven organizes their informal reception alongside Parn's construction of additional space. The gap community becomes one of the first cross-factional reception zones."
+      },
+      "cross_thread_updates": {
+        "updates_ivera_thread": "Their informal information exchange means any movement in the Gap Districts reaches Ivera's Ash-Born network and vice versa.",
+        "updates_mirra_thread": "Mirra's unaffiliated observation position is partly made possible by Theven's informal safety net — she can observe because she is not in immediate survival crisis.",
+        "updates_parn_thread": "Theven and Parn are the Gap Districts' two functional anchors — one social, one physical.",
+        "updates_world_birth_thread": "He organizes the Gap Districts as informal reception space for returnees without faction affiliation."
+      },
+      "beat_hooks": {
+        "intro": "Pip needs to find someone in the Gap Districts; Theven knows immediately who and where",
+        "world_birth": "The gap community as reception zone; his coordination with Parn"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::reth_gap_craftworker",
+      "canonical_name": "Reth Ash'Koral Willow-Jayce",
+      "pronunciation_hint": "RETH",
+      "role_class": "Gap District craftworker / material specialist",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "Unaffiliated",
+      "family_or_branch": "Ash'Koral lineage — gap branch (chose unaffiliated)",
+      "social_stratum": "lower-mid",
+      "zone": "zone::heartland / loc::gap_districts",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Ash'Koral by lineage but chose the Gap Districts over the Ashfields. Not in rebellion — in pragmatism. The Ash-Born's resource allocation didn't reach her skillset; the Gap Districts did. She makes and repairs material goods — tools, clothing, containers. Her workshop is one of the Gap Districts' primary production facilities. She supplies all factions without discrimination and charges fairly.",
+      "motivations": "Make useful things. Be paid fairly for them. Repeat.",
+      "emotional_or_thematic_profile": "Uncomplicated productivity with a dry wit that she deploys rarely and to great effect.",
+      "plot_b_thread": {
+        "thread_id": "reth::material_production",
+        "disclosure_beat": "When triage history becomes public, she is the person the Gap Districts turn to for the practical question: what do we actually need right now versus what are we upset about. Her answer is useful.",
+        "world_birth": "She produces the physical materials needed for the reception spaces that Parn builds — the practical manufacturing that makes the infrastructure possible."
+      },
+      "cross_thread_updates": {
+        "updates_parn_thread": "She supplies Parn's construction materials for reception spaces.",
+        "updates_faction_ash_born": "Her departure from the Ashfields was a minor loss of craft capacity. During the triage disclosure, her unaffiliated status means she can say things about the Ash-Born that members cannot."
+      },
+      "beat_hooks": {
+        "intro": "Pip needs something repaired; she fixes it in three minutes and observes something about the repair that reveals her situational intelligence",
+        "world_birth": "Material supply for reception spaces"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::lyren_gap_teacher",
+      "canonical_name": "Lyren Vel'Thane Dark-Current",
+      "pronunciation_hint": "LY-ren",
+      "role_class": "Gap District / Soleth's second classroom",
+      "narrative_tier": "familial_cast",
+      "faction_or_affiliation": "Unaffiliated",
+      "family_or_branch": "Vel'Thane lineage — gap educator branch",
+      "social_stratum": "lower-mid",
+      "zone": "zone::heartland / loc::gap_districts",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Runs an informal second classroom in the Gap Districts for children whose families cannot reach Soleth's formal cross-faction classroom. Not a rival to Soleth — a complement. They coordinate. Lyren's classroom is less structured and more practical; Soleth's is more formal. Between them they reach almost every child in the Heartland.",
+      "motivations": "Children should not fall through the gap.",
+      "plot_b_thread": {
+        "world_birth_beat": "Renva's return and the age-gap problem — Lyren's informal classroom is one of the spaces where returned children can be present without the formal pressure of Soleth's curriculum. They work in parallel."
+      },
+      "cross_thread_updates": {
+        "updates_soleth_thread": "Their coordination means the returned-child curriculum Soleth develops gets Lyren's informal complement.",
+        "updates_seln_thread": "Seln assists in both classrooms during the world-birth sequence."
+      },
+      "beat_hooks": {
+        "intro": "Referenced by Soleth as her gap-district partner",
+        "world_birth": "Informal returned-child reception"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::pelven_basin_agri",
+      "canonical_name": "Pelven On'Rylder Stone-Hayne",
+      "pronunciation_hint": "PEL-ven",
+      "role_class": "Still Water Basin agricultural supervisor",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Iron Accord",
+      "family_or_branch": "On'Rylder lineage — basin agricultural branch",
+      "social_stratum": "mid",
+      "zone": "zone::still_water_basin / loc::basin_agricultural",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Supervises the day-to-day operation of the basin agricultural complex under Elven's innovation framework. Where Elven invents and optimizes, Pelven implements and manages the workforce. He knows every worker in the basin by name, knows who can do what under what conditions, and knows exactly how much food the complex produces against what the survivor population needs. He carries the surplus/deficit calculation in his head at all times.",
+      "motivations": "The numbers must balance. There is no margin for error when people are eating at the edge of capacity.",
+      "emotional_or_thematic_profile": "The weight of knowing the margin. He is not anxious — he is precise. The precision is how he manages the weight.",
+      "plot_b_thread": {
+        "thread_id": "pelven::margin_management",
+        "world_birth_beat": "He receives Renath's call after Elven does and must immediately recalculate the surplus/deficit margin for the expanded population. His response: a silence of four seconds during which he recalculates, then 'We can do it. It will be tight for six weeks. You will need to tell me exactly how many.' He is the precision tool the world-birth sequence relies on."
+      },
+      "cross_thread_updates": {
+        "updates_elven_thread": "He implements everything she innovates.",
+        "updates_renath_thread": "His calculation feeds her resource renegotiation.",
+        "updates_world_birth_thread": "The margin calculation for the extended population — the most important number during the sequence."
+      },
+      "beat_hooks": {
+        "intro": "Pip visits the basin complex; Pelven explains the margin in terms that make the stakes concrete",
+        "world_birth": "The four-second silence; the recalculation; the answer"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::caeln_basin_outpost",
+      "canonical_name": "Caeln Vel'Thane Iron-Song",
+      "pronunciation_hint": "KAYL-n",
+      "role_class": "Still Water Basin knowledge outpost keeper",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Resonance",
+      "family_or_branch": "Vel'Thane lineage — outpost branch",
+      "social_stratum": "mid",
+      "zone": "zone::still_water_basin / loc::basin_knowledge_outpost",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Maintains the basin knowledge outpost as the Resonance's presence in the agricultural zone. His primary function is information relay — what happens in the basin that the Heartland archive should know about, and what the Heartland archive knows that the basin should have access to. He is also the person who has the most comprehensive cross-faction observation record in this zone, because the basin's cooperative nature means all factions move through it without the political tension that exists elsewhere.",
+      "motivations": "Keep the information flowing. The basin is cooperative; he protects that by ensuring nobody feels information is being withheld.",
+      "emotional_or_thematic_profile": "Transparent reliability. He is the person everyone trusts because he does not keep secrets for any faction's benefit.",
+      "plot_b_thread": {
+        "thread_id": "caeln::outpost_relay",
+        "world_birth_beat": "His outpost becomes a secondary documentation node for the world-birth sequence — Calevyn's relay system runs through him. The basin returns are documented here first before reaching the main archive."
+      },
+      "cross_thread_updates": {
+        "updates_calevyn_thread": "He is Calevyn's outpost node — information from the basin enters the second archive through him.",
+        "updates_verath_onrylder_thread": "His outpost is a node in the Iron Accord relay network."
+      },
+      "beat_hooks": {
+        "intro": "Referenced in context of the basin knowledge outpost; his transparency about cross-faction movement is noted",
+        "world_birth": "Basin documentation; outpost as secondary archive node"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::morn_ironmarsh_navigator",
+      "canonical_name": "Morn On'Rylder Thorn-Grace",
+      "pronunciation_hint": "MORN",
+      "role_class": "Ironmarsh navigator / marsh-route keeper",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Iron Accord",
+      "family_or_branch": "On'Rylder lineage — navigation branch",
+      "social_stratum": "mid",
+      "zone": "zone::ironmarsh / loc::marsh_routes",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Maintains the Ironmarsh navigation knowledge. Knows the safe routes and keeps them updated as the marsh changes seasonally. Works with Seth on the map updates for marsh routes specifically. Has trained a small team of navigators who can guide the crossing safely. The knowledge of safe marsh routes is the Iron Accord's primary strategic advantage in the Ironmarsh zone — Morn's role is to maintain that advantage without letting it become a weapon.",
+      "motivations": "The routes must be safe and must remain known to those who need them. She has no interest in using the knowledge as leverage.",
+      "emotional_or_thematic_profile": "Technical competence with a principled refusal to weaponize skill. Her navigation knowledge could be used to control access; she deliberately does not use it that way.",
+      "plot_b_thread": {
+        "thread_id": "morn::route_keeper",
+        "world_birth_beat": "Some returned individuals appear in the Ironmarsh — drawn back to where they last were, which for some people was the marsh during the collapse event. Getting to them requires navigation. Morn leads the retrieval effort, which is one of the physically most challenging aspects of the sequence."
+      },
+      "cross_thread_updates": {
+        "updates_seth_thread": "Her marsh-specific knowledge feeds his seasonal map updates.",
+        "updates_pethran_thread": "Her route keeping is operationally critical for Pethran's marsh-zone supply lines.",
+        "updates_world_birth_thread": "Marsh retrieval — she leads it."
+      },
+      "beat_hooks": {
+        "intro": "Pip needs to cross the marsh; she guides him; her navigation knowledge reveals the collapse's physical history",
+        "world_birth": "Marsh retrieval of returned individuals — technically demanding, emotionally precise"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::bael_ironmarsh_elder",
+      "canonical_name": "Bael On'Rylder Ash-Cinder",
+      "pronunciation_hint": "BAIL",
+      "role_class": "Ironmarsh elder / pre-collapse settlement memory",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Iron Accord",
+      "family_or_branch": "On'Rylder lineage — marsh elder",
+      "social_stratum": "high (elder)",
+      "zone": "zone::ironmarsh / loc::firm_ground",
+      "timeline_position": "Pre-collapse / Collapse-event / Post-collapse-stable",
+      "short_origin_background": "Remembers the marsh before the collapse expanded it. Carries the knowledge of what was where — which submerged locations were settlements, which elevated routes were paths, which trees are landmarks now that everything around them changed. His memory of the pre-collapse marsh is the human complement to Seth's cartographic record. He has been telling the same detailed account of the marsh's transformation for years to anyone who will listen.",
+      "motivations": "What was there should not be entirely forgotten. The marsh has a history even if the history is underwater.",
+      "emotional_or_thematic_profile": "The specific grief of a geographically intimate person watching their known landscape permanently altered. He is not broken by it — he is its keeper.",
+      "plot_b_thread": {
+        "thread_id": "bael::submerged_memory",
+        "world_birth_beat": "Among the Ironmarsh returns are people who were in the pre-collapse marsh settlements when they collapsed. Some of them come back to a landscape they recognize as fundamentally altered. Bael is the only person who can tell them what happened to the places they knew."
+      },
+      "cross_thread_updates": {
+        "updates_seth_thread": "Bael's oral memory of pre-collapse marsh geography is one of Seth's cartographic sources.",
+        "updates_world_birth_thread": "He tells returned individuals what happened to the places they knew. This is its own kind of grief-work for both parties."
+      },
+      "beat_hooks": {
+        "intro": "Pip meets him during a marsh crossing; his knowledge of what is under the water is unexpectedly detailed",
+        "world_birth": "Telling the returned what happened to their places"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::cevyn_ironmarsh_youth",
+      "canonical_name": "Cevyn On'Rylder Willow-Jayce",
+      "pronunciation_hint": "SEV-in",
+      "role_class": "Ironmarsh youth / marsh-born generation",
+      "narrative_tier": "familial_cast",
+      "faction_or_affiliation": "The Iron Accord",
+      "family_or_branch": "On'Rylder lineage — marsh-born youth",
+      "social_stratum": "lower-mid",
+      "zone": "zone::ironmarsh / loc::firm_ground",
+      "timeline_position": "Born post-collapse or very young / Book1-active",
+      "short_origin_background": "Born in the Ironmarsh after the collapse, which means the marsh is her entire landscape reference. She does not experience the altered terrain as loss because she has no pre-collapse comparison. She is a marsh-born first-generation survivor in the same way Seln is a Gap District first-generation — neither has the weight of comparison. She is already training to be one of Morn's navigators.",
+      "motivations": "Know the marsh completely. Navigate perfectly.",
+      "emotional_or_thematic_profile": "The specific confidence of someone who grew up with their entire environment as curriculum. She knows the marsh in a way Bael knew the pre-collapse marsh — intimately, structurally.",
+      "plot_b_thread": {
+        "world_birth_beat": "She guides the world-birth retrieval teams into the marsh alongside Morn — the combination of Morn's experience and Cevyn's fresh-landscape knowledge turns out to be more effective than either alone."
+      },
+      "cross_thread_updates": {
+        "updates_morn_thread": "She and Morn work together on the marsh retrieval.",
+        "updates_world_birth_thread": "The marsh retrieval combination: Morn's experience + Cevyn's fresh-landscape knowledge."
+      },
+      "beat_hooks": {
+        "intro": "Referenced as Morn's trainee; the first time Pip sees her navigate, the competence is visible",
+        "world_birth": "Marsh retrieval alongside Morn"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    }
+  ]
+}

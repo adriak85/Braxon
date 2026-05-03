@@ -1,0 +1,27 @@
+NSQ_CONFIG bare_metal_lawful_core
+
+proof_policy {
+  require_native_machine_core = true
+  require_lawful_nsq_boot_task = true
+  require_driver_or_mount_boundary = true
+  require_moral_guard = true
+  require_metadata_snapshot = true
+  allow_false_green = false
+}
+
+runtime_policy {
+  scored_runtime_must_be_nsq_or_nsqasm_native = true
+  python_may_orchestrate_only = true
+  c_may_build_comparison_only = true
+  rust_may_not_host_final_nsq_runtime = true
+  production_tracking = false
+  production_macro_discovery = false
+  production_tracers = false
+}
+
+claim_policy {
+  bare_metal_claim_default = false
+  bare_metal_claim_allowed_only_after_probe = true
+  native_machine_core_is_progress_not_final_bare_metal = true
+  shim_is_progress_not_final_bare_metal = true
+}

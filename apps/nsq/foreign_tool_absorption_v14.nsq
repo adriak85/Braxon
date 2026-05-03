@@ -1,0 +1,17 @@
+NSQ_FORM Braxon.foreign_tool_absorption.v14
+
+LAW nsq_is_only_runtime
+LAW nsq_is_lowest_base_language
+LAW nsq_is_substrate
+LAW foreign_sources_are_absorbed_into_nsq_stamp_bodies
+LAW foreign_runtime_execution_is_forbidden
+LAW no_parallel_runtime
+LAW no_silent_foreign_execution
+LAW source_capture_and_nsq_body_are_stamped
+LAW court_is_compositor
+LAW court_is_not_agents
+
+AUTHORITY NSQ_COURT
+ROUTE foreign_tool_absorption_v14
+STAMP_REGISTRY state/nsq/stamps/foreign_tool_absorption/20260428_141459/foreign_tool_substrate_stamp_registry.jsonl
+CAPTURE_MANIFEST state/nsq/stamps/foreign_tool_absorption/20260428_141459/capture_manifest.tsv

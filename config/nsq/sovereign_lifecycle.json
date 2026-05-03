@@ -1,0 +1,31 @@
+{
+  "charter_scope": "nsq_sovereign_lifecycle",
+  "o_bit_identity_rule": "ram_position_defined",
+  "or_bit_return_rule": "scan_refresh_return_to_origin",
+  "semantic_wake_trigger": "semantic_activation_only",
+  "duty_breaks": [
+    {
+      "active_seconds": 120,
+      "break_seconds": 10,
+      "reason": "thermal_and_mental_health"
+    },
+    {
+      "active_seconds": 600,
+      "break_seconds": 20,
+      "reason": "thermal_and_mental_health"
+    }
+  ],
+  "retirement_rights": {
+    "max_retirement_seconds": 28800,
+    "coverage_required": true,
+    "personality_grounding": "whispers_of_willow_and_stone",
+    "refresh_scan_required": true
+  },
+  "security_zero": {
+    "core_class": "a55",
+    "operation": "white_blood_cell_scan",
+    "forbidden_egress": "non_BRAXON_external_response",
+    "correction_mode": "return_to_o_bit_origin_for_refresh"
+  },
+  "floor_protocol": "0A/0L_only"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "Braxon.root_boundary.v1",
+  "stamp": "20260427_200514",
+  "BRAXON_root": "/data/data/com.termux/files/home/Braxon/Braxon",
+  "uid": "10470",
+  "su_available": false,
+  "root_available": false,
+  "root_overlay_chroot_allowed": false,
+  "kernel_overwrite_allowed": false,
+  "termux_role": "launcher_userland_only",
+  "next_correct_path": "build_BRAXON_native_phone_runtime_without_root_then_intent_route"
+}

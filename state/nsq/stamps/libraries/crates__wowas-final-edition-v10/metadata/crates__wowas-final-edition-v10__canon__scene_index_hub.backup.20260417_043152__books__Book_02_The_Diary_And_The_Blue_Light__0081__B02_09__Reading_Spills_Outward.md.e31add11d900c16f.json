@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0081__B02_09__Reading_Spills_Outward.md.e31add11d900c16f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.258518+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0081__B02_09__Reading_Spills_Outward.md.e31add11d900c16f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_02_The_Diary_And_The_Blue_Light/0081__B02_09__Reading_Spills_Outward.md",
+  "source_bytes": 173,
+  "source_sha256": "e31add11d900c16f098766652930a08a08e5cc0c9a1a920ba9e29db499f3dfff",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0081__B02_09__Reading_Spills_Outward.md.e31add11d900c16f"
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "pass": "full_population_batch_11",
+  "date": "2026-03-26",
+  "system": "plot_b_cross_thread",
+  "zone_basis": "wowas_world_zone_map.json",
+  "zones_covered": ["Ashfields extended", "Thornridge", "Deepwood Remnant", "Outer Territories"],
+
+  "characters": [
+    {
+      "canonical_id": "wowas::veth_ashfields_healer",
+      "canonical_name": "Veth Ash'Koral Still-Water",
+      "pronunciation_hint": "VETH",
+      "role_class": "Ashfields — secondary healer / Maeren's assistant",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Ash-Born",
+      "family_or_branch": "Ash'Koral lineage — healing branch",
+      "social_stratum": "mid",
+      "zone": "zone::ashfields / loc::forge_plateau",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Assists Maeren. Knows more of Maeren's context than is comfortable — he has been working alongside her long enough to read what she is carrying. He has not asked directly because direct questions produce silence and silence is information too. He is the person who will be affected most practically when Maeren finally makes her disclosure — he is her operational continuity and everything she does flows through his hands.",
+      "motivations": "Do the medical work. Protect Maeren, who protects everyone.",
+      "emotional_or_thematic_profile": "The specific vigilance of someone who has identified that someone they trust is carrying something dangerous and has decided that the right response is to stay close.",
+      "plot_b_thread": {
+        "thread_id": "veth::maeren_support",
+        "disclosure_beat": "When Maeren's account reaches the community via Caera, Veth is the person who ensures the medical function does not stop while Maeren is in the aftermath. He keeps everything running so she can be in the fallout without the medical function collapsing.",
+        "world_birth": "He operates the Ashfields medical intake during the sequence — Maeren is functionally present but the operational management is his."
+      },
+      "cross_thread_updates": {
+        "updates_maeren_thread": "He is her operational continuity — when she must be in the disclosure aftermath, he holds the function.",
+        "updates_careth_thread": "He refers cases beyond his capacity to Careth's recovery practice, which is the first formal connection between the medical and trauma-response functions in the Ashfields.",
+        "updates_world_birth_thread": "Ashfields medical intake during the sequence."
+      },
+      "beat_hooks": {
+        "intro": "Present with Maeren; his attentiveness to her is visible to Pip",
+        "disclosure": "Holding the medical function during the aftermath",
+        "world_birth": "Ashfields medical intake"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::sael_ashfields_youth",
+      "canonical_name": "Sael Ash'Koral Willow-Jayce",
+      "pronunciation_hint": "SALE",
+      "role_class": "Ashfields — youth cohort / Dravan and Kaeven's generation",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Ash-Born",
+      "family_or_branch": "Ash'Koral lineage — youth cohort",
+      "social_stratum": "lower-mid",
+      "zone": "zone::ashfields / loc::forge_plateau",
+      "timeline_position": "Post-collapse-early / Book1-active",
+      "short_origin_background": "Dravan and Kaeven's immediate peer. The third point in their cohort dynamic. Where Dravan has shaped loyalty and Kaeven has shaped skepticism, Sael has shaped pragmatic adaptability — he figures out what the situation requires and does that. He has no ideological commitment to the Ash-Born mythology because he has been paying more attention to what the mythology produces than what it claims. He is twenty and already quite clear-eyed.",
+      "motivations": "Do what works. The Ash-Born is what he has; he will work within it until it stops working.",
+      "emotional_or_thematic_profile": "Adaptable intelligence that has chosen not to name itself as such because naming it would require explaining it.",
+      "plot_b_thread": {
+        "thread_id": "sael::pragmatic_adaptation",
+        "thorn_return": "When Thorn returns and Dravan fractures and Kaeven provides vocabulary, Sael provides the practical question: now what do we actually do? His pragmatic orientation is what prevents the fracture from being purely grief and makes it usable.",
+        "world_birth": "He is the first Ash-Born youth to make contact with the Iron Accord youth cohort during the sequence — not out of ideology but because the practical needs of the sequence require cross-faction coordination and he is willing to do it."
+      },
+      "cross_thread_updates": {
+        "updates_dravan_thread": "His practical question after the fracture gives Dravan a direction.",
+        "updates_kyrel_thread": "His first contact with the Iron Accord cohort during the sequence begins the cross-factional youth-cohort relationship that the post-world-birth world needs.",
+        "updates_faction_ash_born": "His cross-cohort contact is one of the first signs of Ash-Born reintegration."
+      },
+      "beat_hooks": {
+        "intro": "Present in Dravan-Kaeven cohort scenes; distinct in his pragmatic register",
+        "thorn_return": "'Now what do we actually do?'",
+        "world_birth": "First Ash-Born/Iron Accord youth contact"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::toreth_ashfields_supply",
+      "canonical_name": "Toreth Ash'Koral Iron-Song",
+      "pronunciation_hint": "TOR-eth",
+      "role_class": "Ashfields — resource management / internal supply",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Ash-Born",
+      "family_or_branch": "Ash'Koral lineage — resource branch",
+      "social_stratum": "mid",
+      "zone": "zone::ashfields / loc::forge_plateau",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Manages the Ash-Born's internal resource allocation — what the faction has, what it needs, what it can trade. He works with Pethran on the cross-faction supply agreements and knows Pethran better than most Ash-Born know anyone outside the faction. The supply route friction is partly managed through their professional relationship.",
+      "motivations": "Keep the faction supplied. Maintain the supply agreements that make this possible.",
+      "emotional_or_thematic_profile": "The Ash-Born member most likely to see the faction's hard edge as a problem for practical rather than moral reasons — hard edges cost resources.",
+      "plot_b_thread": {
+        "thread_id": "toreth::supply_diplomacy",
+        "supply_route_incident": "When the supply route incident implicating Pethran's routes and Halveth's operation surfaces, Toreth is the Ash-Born official who has to manage the immediate diplomatic fallout with Pethran. He does it by telling Pethran the truth before Halveth can frame it.",
+        "world_birth": "He manages the Ash-Born's resource contribution to the world-birth reception infrastructure — this is the first time the Ash-Born formally contributes to a cross-faction project."
+      },
+      "cross_thread_updates": {
+        "updates_pethran_thread": "His truth-telling before Halveth's frame is the thing that preserves the supply agreement and therefore the Heartland/Ashfields route.",
+        "updates_halveth_thread": "His preemptive truth-telling is a small act of defiance against Halveth's operational framing.",
+        "updates_world_birth_thread": "Ash-Born formal contribution to reception infrastructure — the first."
+      },
+      "beat_hooks": {
+        "intro": "Present in supply negotiation context; his cross-faction ease distinguishes him",
+        "supply_incident": "Truth before the frame",
+        "world_birth": "First Ash-Born formal contribution"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::leven_thornridge_watch",
+      "canonical_name": "Leven Ash'Koral Dark-Current",
+      "pronunciation_hint": "LEV-en",
+      "role_class": "Thornridge watch station commander",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Ash-Born",
+      "family_or_branch": "Ash'Koral lineage — watch command",
+      "social_stratum": "mid-upper",
+      "zone": "zone::thornridge / loc::thornridge_watch",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Commands the Ash-Born watch stations on the Thornridge. His position gives him the broadest territorial view of any settled character — he can see most of the survivor territory from elevation. He is also the Ash-Born's first point of contact with anything moving between zones. He has been watching Verath's Severed operation on the ridge with professional concern and personal distaste and has not received orders to act on either.",
+      "motivations": "Maintain the watch. Report accurately. Await orders that may never come on things he has been watching for months.",
+      "emotional_or_thematic_profile": "The specific frustration of someone with complete situational awareness and no authority to act on it.",
+      "plot_b_thread": {
+        "thread_id": "leven::watch_authority",
+        "severed_monitoring": "He has documented Verath's ridge operation in detail. He has sent reports. Nothing has happened. When the triage disclosure breaks and the Ash-Born's command structure fractures, his reports suddenly become relevant.",
+        "world_birth": "He is the first person to see that the world-birth returns are occurring across the full territory, not just in the settlements. His watch position gives him the earliest territorial overview."
+      },
+      "cross_thread_updates": {
+        "updates_corveth_thread": "His reports about the Severed ridge operation were suppressed by Halveth's advisory filter. When this surfaces post-disclosure, Corveth realizes his command information was being managed.",
+        "updates_verath_thread": "Leven's documentation of the ridge operation is one of the evidentiary threads that supports the collapse of her control agenda.",
+        "updates_world_birth_thread": "His territorial overview gives the first full picture of the sequence's geographic scope."
+      },
+      "beat_hooks": {
+        "intro": "Pip receives territorial briefing from the watch position; the view is extraordinary and so is the information",
+        "disclosure": "His suppressed reports surface — this is when Corveth learns his information was managed",
+        "world_birth": "First territorial overview of the full sequence scope"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::reva_thornridge_severed",
+      "canonical_name": "Reva Sol'Drel Ash-Cinder",
+      "pronunciation_hint": "REV-ah",
+      "role_class": "Thornridge — Severed administrative function",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Severed",
+      "family_or_branch": "Sol'Drel lineage — administrative branch",
+      "social_stratum": "mid",
+      "zone": "zone::thornridge / loc::severed_ridge_base",
+      "timeline_position": "Post-collapse-stable / Book1-active",
+      "short_origin_background": "Manages the logistical operation of Verath's ridge base — not intelligence, logistics. She is the reason the ridge base functions as a physical facility. Lorne handles the operations; Boreth writes the ideology; Reva ensures there is food, water, shelter, and the basic conditions for the others to do their work. She has never been ideologically invested in The Severed. She took the assignment because it offered stability.",
+      "motivations": "Stable conditions. A working facility. A reason to keep going that doesn't require ideological commitment.",
+      "emotional_or_thematic_profile": "The specific clarity of someone who is not here for the reasons everyone else is here. She knows this about herself and has made her peace with it.",
+      "plot_b_thread": {
+        "thread_id": "reva::logistical_presence",
+        "severed_fracture": "When Lorne defects and Boreth releases the ideology and Verath breaks, Reva's response is: do the logistics still need doing. Yes. She continues. This is the practical foundation on which the Severed's reintegration is possible — she holds the physical facility together while everything else changes.",
+        "world_birth": "She converts the ridge base into a minor reception waypoint — the first formal Severed contribution to the world-birth infrastructure."
+      },
+      "cross_thread_updates": {
+        "updates_lorne_thread": "Her continued logistical function after his defection means the facility stays operational — she is not leaving with him.",
+        "updates_boreth_thread": "She maintains the physical space in which he writes the post-sequence statement.",
+        "updates_world_birth_thread": "Ridge base as reception waypoint."
+      },
+      "beat_hooks": {
+        "intro": "Present at the ridge base in operational context; her absence of ideological investment is immediately readable",
+        "severed_fracture": "The logistics still need doing — she continues",
+        "world_birth": "Conversion to waypoint"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::seren_deepwood_guardian",
+      "canonical_name": "Seren Marso'len Iron-Song",
+      "pronunciation_hint": "SAIR-en",
+      "role_class": "Deepwood Remnant — informal guardian / long-term resident",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "Unaffiliated",
+      "family_or_branch": "Marso'len lineage — forest branch",
+      "social_stratum": "lower-mid (self-sufficient)",
+      "zone": "zone::deepwood_remnant / loc::deepwood_clearing",
+      "timeline_position": "Post-collapse-early / Book1-active",
+      "short_origin_background": "Has been living in the Deepwood Remnant since shortly after the collapse. Not in hiding — simply here. She was Meridian adjacent before the collapse and left not from crisis but from a clear-eyed assessment that the Deepwood's unusual properties were worth understanding at close range. She has been studying the clearing's acoustic and resonance properties for years without formal framework. Her empirical observations are what Davan's theory needs to become complete.",
+      "motivations": "Understand the clearing. She is closer to understanding it than anyone else but has never had the theoretical vocabulary. Meeting Davan will change this.",
+      "emotional_or_thematic_profile": "Patient empiricism. She has been gathering data for years without the theory to interpret it. When the theory arrives, the data set she has already gathered will be extraordinary.",
+      "plot_b_thread": {
+        "thread_id": "seren::empirical_clearing",
+        "davan_encounter": "Davan visits the Deepwood Remnant as part of his field research. Seren's years of empirical observation provide the dataset that fills the gap between his theory and the physical world. The meeting is one of the story's quieter intellectual pivots.",
+        "pip_encounter": "She is the person who can explain to Pip what the clearing does to sonomancy from the outside. She has been observing sonomantic interactions with the clearing for years without access to a practitioner.",
+        "world_birth": "The clearing becomes one of the sequence's secondary sites — a place where some of the stranger, more resonance-specific returns occur. She documents them without tools, just observation."
+      },
+      "cross_thread_updates": {
+        "updates_davan_thread": "Her empirical dataset completes his theoretical framework.",
+        "updates_pip_thread": "She explains the clearing from the outside observer's perspective.",
+        "updates_world_birth_thread": "Secondary site documentation — the returns that happen in resonance-specific locations."
+      },
+      "beat_hooks": {
+        "intro": "Pip encounters the clearing; Seren is there; she has been expecting something like him",
+        "davan_encounter": "The data meeting the theory",
+        "world_birth": "Observing the strange returns without tools"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::arath_outer_nomadic",
+      "canonical_name": "Arath Vel'Thane Dark-Current",
+      "pronunciation_hint": "AR-ath",
+      "role_class": "Outer Territories — Unbound navigator / far-range scout",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "The Unbound",
+      "family_or_branch": "Vel'Thane lineage — outer nomadic branch",
+      "social_stratum": "undefined (nomadic)",
+      "zone": "zone::outer_territories",
+      "timeline_position": "Post-collapse-early / Book1-active",
+      "short_origin_background": "Operates in the outer territories further from the settlement clusters than Thael does. Where Thael is the Unbound's settlement-contact face, Arath is their deep-range scout. She knows the outer territories in greater detail than anyone else alive. She has found pre-collapse infrastructure that no settled faction knows exists. She has also found things the pre-collapse world left behind that she has not shared — not from malice but from the understanding that some information changes everything and should not be introduced before the world is ready.",
+      "motivations": "Know the full extent of the territory. Protect that knowledge until it can be used well.",
+      "emotional_or_thematic_profile": "The patience of someone who has been sitting on significant information for years because the timing was not right. She has extremely good judgment about timing.",
+      "plot_b_thread": {
+        "thread_id": "arath::deep_range_knowledge",
+        "world_birth_timing": "The world-birth sequence is when she judges the timing is right. She comes to the settlement network for the first time in years carrying information about the outer territories that changes the map of the survivor world. Pre-collapse infrastructure. Locations of specific interest. And the information that some of the outer territory returns are happening in places that no reception infrastructure can reach — which is operationally critical.",
+        "pip_encounter": "She has heard about Pip through the Unbound network. When she arrives during the sequence, she has specific things to tell him that she has been holding since before she knew he existed."
+      },
+      "cross_thread_updates": {
+        "updates_seth_thread": "Her knowledge expands the map significantly — the outer territories Seth could not fully document.",
+        "updates_drevyn_thread": "She and Drevyn represent the two scales of Unbound knowledge: Drevyn's wide nomadic circuit and her deep-range specialist information.",
+        "updates_world_birth_thread": "Her intelligence on outer-territory returns is operationally critical for reaching people in locations with no infrastructure."
+      },
+      "beat_hooks": {
+        "intro": "N/A — she arrives during the world-birth sequence; this is her introduction",
+        "world_birth": "First settlement contact in years; the held information; the map expansion; the outer-territory returns"
+      },
+      "canon_confidence": "high",
+      "unresolved_flags": []
+    },
+    {
+      "canonical_id": "wowas::meven_outer_survivor",
+      "canonical_name": "Meven Ash'Koral Iron-Song",
+      "pronunciation_hint": "MEV-en",
+      "role_class": "Outer Territories — isolated survivor / collapse-era fragment",
+      "narrative_tier": "secondary_recurring",
+      "faction_or_affiliation": "Unaffiliated",
+      "family_or_branch": "Ash'Koral lineage — isolated survivor",
+      "social_stratum": "lower",
+      "zone": "zone::outer_territories",
+      "timeline_position": "Collapse-event (separated) / Post-collapse (outer territories) / Book1-active",
+      "short_origin_background": "Got separated from the settlement formation during the collapse and ended up in the outer territories before any settlement structure consolidated. Has been surviving alone, then in a very small group that formed organically from other separated survivors. Does not know about the settlement network in its current form — knows settlements exist in a general sense but not the factional complexity that has developed. When Arath's circuit brings news outward, this group receives it.",
+      "motivations": "Keep the small group alive. Figure out if the settlement network is something to connect to or something to avoid.",
+      "emotional_or_thematic_profile": "The specific self-reliance of someone who survived without institutional support and is not sure what having institutional support would feel like.",
+      "plot_b_thread": {
+        "thread_id": "meven::outer_survivor_contact",
+        "world_birth_beat": "Returns occur in the outer territories where Meven's small group is. The returns are people who were with Meven's group originally and died in the outer territories. The group's experience of the world-birth sequence is unmediated by any of the infrastructure or framework that settled survivors develop. It is the story's most direct account of what the sequence looks like when you just encounter it without preparation."
+      },
+      "cross_thread_updates": {
+        "updates_arath_thread": "Meven's group is in Arath's deep-range territory — she reaches them during the sequence and is the first settlement-connected person they see.",
+        "updates_naela_thread": "Naela's nomadic medical function extends to Meven's group during the sequence.",
+        "updates_world_birth_thread": "The unmediated outer-territory experience of the sequence — the view from outside all the infrastructure."
+      },
+      "beat_hooks": {
+        "intro": "Referenced in Arath's account of the outer territories — Meven's group is described before they are directly encountered",
+        "world_birth": "Arath reaches them; returns occur around them; unmediated sequence experience"
+      },
+      "canon_confidence": "medium",
+      "unresolved_flags": []
+    }
+  ]
+}

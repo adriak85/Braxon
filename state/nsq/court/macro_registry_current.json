@@ -1,0 +1,37 @@
+{
+  "bare_metal_claim_allowed": false,
+  "components_equipped": [
+    "compositor",
+    "linter",
+    "lexor",
+    "lexer",
+    "parser",
+    "picker",
+    "optimizer",
+    "router",
+    "scheduler",
+    "inspector"
+  ],
+  "court_identity_rule": "king_and_queen_are_canonical_court_slots_not_duplicate_agents",
+  "court_is_agents": false,
+  "generated_at": "20260424_153608",
+  "king": "compositor",
+  "lawful_nsq_semantic_runtime_executed": false,
+  "macro_tracking_allowed_rounds": [
+    1,
+    2
+  ],
+  "macro_tracking_forbidden_rounds": [
+    3
+  ],
+  "macro_tracking_runtime_default": false,
+  "native_nsq_runner": "bin/nsq-native",
+  "native_nsq_runner_is_elf": true,
+  "native_nsq_runner_is_script": false,
+  "native_nsqasm_elf_probe_executed": true,
+  "production_macro_discovery": false,
+  "production_runtime_tracers": false,
+  "promote_macro_if_used_more_than": 3,
+  "queen": "linter",
+  "schema": "nsq.court.macro_registry.current.v3"
+}

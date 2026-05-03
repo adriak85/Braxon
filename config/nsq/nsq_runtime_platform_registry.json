@@ -1,0 +1,59 @@
+{
+  "schema": "nsq.runtime.platform.registry.v2",
+  "canonical_rule": "runtime platform is built into NSQ runtime sight; missing platform tools fail closed",
+  "primary_platform": "android_termux_aarch64",
+  "platforms": [
+    {
+      "id": "android_termux_aarch64",
+      "family": "android",
+      "host_shell": "termux",
+      "target_triple": "aarch64-linux-android",
+      "native_entrance": "root_workspace_binary",
+      "root_binary": "Braxon",
+      "graphics_api": "vulkan",
+      "storage_default": "$HOME/storage/shared/Download",
+      "repo_root": "$HOME/Braxon",
+      "package_name": "com.Braxon.root",
+      "safe_jobs": 2,
+      "required_tools": [
+        "git",
+        "python3",
+        "cargo",
+        "rustc"
+      ],
+      "android_packaging_tools": [
+        "cargo-ndk",
+        "cargo-apk",
+        "sdkmanager",
+        "apksigner"
+      ],
+      "runtime_surfaces": [
+        "adb",
+        "fastboot",
+        "jni",
+        "ndk",
+        "sdk",
+        "jdk",
+        "agdk",
+        "vulkan",
+        "wgpu",
+        "bevy"
+      ],
+      "fail_closed": true
+    },
+    {
+      "id": "linux_native",
+      "family": "linux",
+      "target_triple": "native",
+      "native_entrance": "root_workspace_binary",
+      "root_binary": "Braxon",
+      "required_tools": [
+        "git",
+        "python3",
+        "cargo",
+        "rustc"
+      ],
+      "fail_closed": true
+    }
+  ]
+}

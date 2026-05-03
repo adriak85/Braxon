@@ -1,0 +1,15 @@
+id: nsq.write.nsq.standard.v2
+type: manifest
+version: 2
+authority: Braxon
+role: nsq_write_nsq_standard
+
+purpose:
+  Move toward NSQ authoring NSQ directly, with synchronized human/machine docs and tokenizer-aware output.
+
+hard_laws:
+  - NSQ-native authored surfaces come first.
+  - Human-readable docs and machine-readable docs emit from one structured truth source.
+  - WoWaS/Mytho semantic content biases the tokenizer-facing authoring base.
+  - Qwen inputs normalize into NSQ-native authoring forms first.
+  - Foreign syntax may be emitted as projection, never as authoring truth.

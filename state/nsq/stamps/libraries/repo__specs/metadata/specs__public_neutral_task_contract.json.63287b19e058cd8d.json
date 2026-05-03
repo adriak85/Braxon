@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__specs/asm/macros/specs__public_neutral_task_contract.json.63287b19e058cd8d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.253452+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__specs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__specs/metadata/specs__public_neutral_task_contract.json.63287b19e058cd8d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/public_neutral_task_contract.json",
+  "source_bytes": 793,
+  "source_sha256": "63287b19e058cd8da004ac4ac1c4ff29e481ca8a30c323ff90ee019b1388f2ec",
+  "stamp_id": "nsq.asm.repo__specs.specs__public_neutral_task_contract.json.63287b19e058cd8d"
+}

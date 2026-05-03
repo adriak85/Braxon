@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0049__B02_05__The_Diary_Reads_Back_At_Them.md.a73f04bb469a1914.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.511848+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0049__B02_05__The_Diary_Reads_Back_At_Them.md.a73f04bb469a1914.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0049__B02_05__The_Diary_Reads_Back_At_Them.md",
+  "source_bytes": 192,
+  "source_sha256": "a73f04bb469a191457cb1dd3618a6a7e6e6b0322e707a5c5de3153d125a6f96c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0049__B02_05__The_Diary_Reads_Back_At_Them.md.a73f04bb469a1914"
+}

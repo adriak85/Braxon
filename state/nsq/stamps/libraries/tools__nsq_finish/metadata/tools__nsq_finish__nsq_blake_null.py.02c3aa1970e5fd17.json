@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/tools__nsq_finish/asm/macros/tools__nsq_finish__nsq_blake_null.py.02c3aa1970e5fd17.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.295042+00:00",
+  "harm_hit_count": 0,
+  "library": "tools__nsq_finish",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/tools__nsq_finish/metadata/tools__nsq_finish__nsq_blake_null.py.02c3aa1970e5fd17.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "tools/nsq_finish/nsq_blake_null.py",
+  "source_bytes": 2162,
+  "source_sha256": "02c3aa1970e5fd170116876969379d8df94059bb952023c5379a106539abfd98",
+  "stamp_id": "nsq.asm.tools__nsq_finish.tools__nsq_finish__nsq_blake_null.py.02c3aa1970e5fd17"
+}

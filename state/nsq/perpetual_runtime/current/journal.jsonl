@@ -1,0 +1,4 @@
+{"event": "tick", "generated_at": "20260424_194656", "ok": true, "seq": 1}
+{"event": "crash_detected", "ok": true, "returncode": 7, "seq": 2}
+{"event": "watchdog_restart", "ok": true, "seq": 2}
+{"blocked_start": true, "event": "manual_stop", "ok": true}

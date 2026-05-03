@@ -1,0 +1,24 @@
+{
+  "architecture_root": true,
+  "authority": "NSQ_COURT",
+  "c_reference_runner_allowed_for_acceptance": false,
+  "c_reference_runner_storage": false,
+  "court_is_agents": false,
+  "direct_runner_allowed": false,
+  "executor_allowed_only_as_court_route": true,
+  "generated_at": "20260424_194654",
+  "king": "compositor",
+  "owned_by": "NSQ_COURT",
+  "queen": "linter",
+  "required_proofs": [
+    "nsqasm_tick_executed",
+    "watchdog_restart_test_passed",
+    "crash_resume_test_passed",
+    "journal_replay_test_passed",
+    "resource_ceiling_enforced",
+    "manual_stop_works"
+  ],
+  "route": "perpetual_runtime",
+  "route_kind": "nsqasm_perpetual_runtime_proof",
+  "schema": "nsq.court.route.v4"
+}

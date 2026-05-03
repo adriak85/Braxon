@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Exception::Class",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Exception/Class.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Exception__Class.source",
+  "source_sha256": "90b160f97abb4774f8d6ee58882b6856a08276071bb0751f72fa372844d7ef28",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Exception__Class.translated.nsq",
+  "nsq_body_sha256": "922c61d2e5d41b280c3638a05382da5e69db1e32507c2749a743c91213e5867c",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

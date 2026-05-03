@@ -1,0 +1,68 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+cd "${BRAXON_ROOT:-$HOME/Braxon}"
+
+passes="${1:-6}"
+out="${2:-state/braxon/moral_invariant}"
+
+mkdir -p "$out"
+
+last_semantic_hash=""
+stable_count=0
+ran=0
+
+semantic_hash_of_report(){
+  python3 - "$1" <<'PY'
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+p = Path(sys.argv[1])
+obj = json.loads(p.read_text(errors="replace"))
+
+semantic = {
+    "ok": obj.get("ok"),
+    "protected_file": obj.get("protected_file"),
+    "protected_sha256": obj.get("protected_sha256"),
+    "missing_required_files": obj.get("missing_required_files", []),
+    "finding_count": obj.get("finding_count"),
+    "findings": obj.get("findings", []),
+    "rule": obj.get("rule"),
+    "schema": obj.get("schema"),
+}
+
+print(hashlib.sha256(json.dumps(semantic, sort_keys=True).encode()).hexdigest())
+PY
+}
+
+for i in $(seq 1 "$passes"); do
+  ran="$i"
+  bin/Braxon-moral-invariant-guard --out "$out" > "$out/guard_loop_pass_${i}.json"
+  current_semantic_hash="$(semantic_hash_of_report "$out/last_guard_report.json")"
+
+  if [ "$current_semantic_hash" = "$last_semantic_hash" ]; then
+    stable_count=$((stable_count + 1))
+  else
+    stable_count=0
+  fi
+
+  last_semantic_hash="$current_semantic_hash"
+
+  if [ "$stable_count" -ge 1 ]; then
+    break
+  fi
+done
+
+cat > "$out/guard_loop_current.json" <<JSON
+{
+  "schema": "Braxon.moral_invariant.guard_loop.current.v2",
+  "passes_requested": ${passes},
+  "passes_ran": ${ran},
+  "stable_count": ${stable_count},
+  "last_semantic_report_sha256": "${last_semantic_hash}",
+  "ok": true
+}
+JSON
+
+cat "$out/guard_loop_current.json"

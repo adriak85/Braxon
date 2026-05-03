@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__patches__v10__wowas_anti_placeholder_expansion_patch_v10.md.b268bfb139b9e8e9.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.598356+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__patches__v10__wowas_anti_placeholder_expansion_patch_v10.md.b268bfb139b9e8e9.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_anti_placeholder_expansion_patch_v10.md",
+  "source_bytes": 6754,
+  "source_sha256": "b268bfb139b9e8e99a1e08ab55445a0d28a6a1c493ad8bec08a15b345966cf97",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__patches__v10__wowas_anti_placeholder_expansion_patch_v10.md.b268bfb139b9e8e9"
+}

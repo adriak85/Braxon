@@ -1,0 +1,21 @@
+# composed NSQ surface
+
+# source: /data/data/com.termux/files/home/Braxon/nsq/examples/noise.nsq
+noise wake :macro wake:self :a 4 :b 9 :pos 120 :amp 44
+noise delta :macro delta:route:align :a 8 :b 2 :pos 180 :amp 39
+noise signal :macro noise:signal:field :a 3 :b 12 :pos 260 :amp 55
+
+# source: /data/data/com.termux/files/home/Braxon/nsq/examples/structured.nsq
+triple wake -> semantic:address -> self :layer 2 :plane 4 :anchor 100 :weight 11 :flags 1
+triple delta -> delta:route:align -> graph :layer 3 :plane 6 :anchor 180 :weight 25 :flags 0
+triple membrane -> cell:membrane:matrix -> state :layer 1 :plane 9 :anchor 260 :weight 30 :flags 2
+
+# source: /data/data/com.termux/files/home/Braxon/nsq/examples/membrane.nsq
+membrane cell :state wake :flux 31 :gate 2 :phase 1
+membrane membrane :state signal :flux 44 :gate 5 :phase 3
+membrane matrix :state sovereign :flux 58 :gate 7 :phase 4
+
+# source: /data/data/com.termux/files/home/Braxon/nsq/examples/calibration.nsq
+calibrate semantic:address :basis wake :gain 4 :window 16 :phase 2
+calibrate delta:route:align :basis graph :gain 9 :window 24 :phase 1
+calibrate membrane :basis state :gain 7 :window 12 :phase 3

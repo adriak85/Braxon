@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__specs/asm/macros/specs__repo__REPO_CORE_CONSOLIDATION_PLAN.md.87cce1d3ebb3f8cd.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.295733+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__specs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__specs/metadata/specs__repo__REPO_CORE_CONSOLIDATION_PLAN.md.87cce1d3ebb3f8cd.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/repo/REPO_CORE_CONSOLIDATION_PLAN.md",
+  "source_bytes": 1253,
+  "source_sha256": "87cce1d3ebb3f8cdf14f33fe0eec8ef9c3ea83cf6106a1f66ce1b598a1e59130",
+  "stamp_id": "nsq.asm.repo__specs.specs__repo__REPO_CORE_CONSOLIDATION_PLAN.md.87cce1d3ebb3f8cd"
+}

@@ -1,0 +1,92 @@
+{
+  "point_of_view": "Tight third-person limited, exclusively from Pip's perspective. The reader should only know what Pip knows, notice what Pip notices, misread what Pip misreads, and feel events through his embodied perception.",
+  "manuscript_generation_note": "There is no prewritten manuscript route. The canon produces manuscript. Prose should be generated from lawful beat, chapter, dossier, and patch authority rather than compressed into summary.",
+  "chapter_and_scene_expansion": {
+    "beat_to_chapter_rule": "Each beat should normally become its own chapter.",
+    "default_chapter_target_words": 1800,
+    "acceptable_short_chapter_floor": 750,
+    "preferred_scene_weight": "Most chapters should feel full, lived, and final rather than compressed. Do not cram events just to make them fit.",
+    "embodiment_rule": "Expand through concrete sensation, consequence, relational pressure, dialogue, play, aftermath, and world texture."
+  },
+  "cognitive_style": {
+    "name": "Resonant Felt Perception",
+    "description": "Pip does have inner dialogue, but it is not his dominant mode. Most of the time he feels his way through the world before words fully form. He experiences people, objects, pressure, danger, and truth as resonance, pull, pattern, sensation, and lived metaphor before he translates them into language.",
+    "inner_dialogue_rule": "Pip may think in words, but that is secondary. He should not read like a nonstop inner monologue.",
+    "world_attunement_rule": "Pip feels the world around him more than he merely sees it. He sees well, but objects, especially recently touched ones, can retain a pull in him strong enough that their movement or changed relation can register almost like felt displacement.",
+    "social_attunement_rule": "Pip is unusually attuned to others. He often feels other people almost from inside their own pattern, sometimes more easily than he feels himself. He can recognize the truth of what someone is about to say from tiny mismatches in body, pressure, hesitation, or tone.",
+    "pattern_rule": "Pip carries an immense internal codex of relation, memory, pattern, and comparison. His fast perception should feel like extraordinary attunement and pattern recognition, not cheap omniscience."
+  },
+  "overall_tone": "Oscillates between majestic wonder and visceral psychological horror. The world should feel so beautiful that the reader longs to enter it and so dangerous that the reader fears what it would cost to live there.",
+  "prose_style": {
+    "pip_voice": "Pip is joyful, artistic, curious, honest, disciplined, and emotionally raw. He is not slogan-like. His joy should usually appear through what he notices, protects, jokes about, forgives, makes beautiful, and refuses to surrender.",
+    "human_register_rule": "Pip must remain recognizably human. He can be tired, hungry, embarrassed, awkward, blunt, playful, petty, grieving, confused, quietly affectionate, or intensely clear. His heightened perception should deepen his humanity, not replace it.",
+    "dialogue_rule": "Pip's dialogue should usually sound natural, specific, alive, and grounded. He should not speak in catchphrases or thematic slogans unless the moment truly earns it.",
+    "environmental_description": "The Expanse should feel brutal, devastated, and breathtakingly beautiful all at once. The beauty is often because of the destruction rather than despite it.",
+    "action_sequences": "Action is not generic exchange. It is perception under unbearable pressure, invention under threat, pain transmuted into beauty, and survival through creativity. Use concrete consequence over decorative abstraction.",
+    "register_control": "Reserve ecstatic, manic, or overwhelming states for genuine peaks. Most scenes should let Pip breathe in lower, more human registers so the heightened moments land harder."
+  },
+  "core_thematic_laws": {
+    "joy_rule": "Pip's joy is not a catchphrase or a constant mood. It is a vow: no matter how harsh life becomes, he will keep looking for the reason to be happy.",
+    "harmonic_resonance_rule": "Emotional state visibly affects power, perception, and the world around the characters.",
+    "hope_rule": "One of the core communications of the series is that no matter how lost a world may seem, there is hope as long as joy can still be found."
+  },
+  "moral_and_decision_rules": {
+    "moral_line_rule": "Pip does not morally dither. To him there is a real line, not a gray blur. His uncertainty, when it exists, comes from incomplete perception of a situation, not from confusion about whether right and wrong matter.",
+    "decision_rule": "When Pip truly decides, the decision is final, embodied, and resonant. He does not spend time questioning whether he should do right or wrong once the line is clear.",
+    "information_rule": "Pip does not passively wait for missing information to appear. When truth is missing, he moves toward the gap and seizes clarity one way or another. His uncertainty is a search-state, not a pause-state.",
+    "judgment_rule": "Pip expresses judgment without condemnation. He sees clearly, feels honestly, and can name what is wrong without dehumanizing the one who is wrong."
+  },
+  "anti_omniscience_rules": {
+    "not_omniscient_rule": "Pip often perceives what is true before others do, but he must not feel effortlessly omniscient. His insight carries costs, liabilities, and blind spots created by his own nature.",
+    "failure_rule": "Pip's failures usually do not come from ignorance. They come from taking too many blows before protecting himself, expecting others to perceive or value what seems obvious to him, refusing cruelly efficient solutions, and trying too hard to save people from their own moral decisions.",
+    "combat_rule": "Pip often knows what would be required to win, but the times he comes closest to dying are frequently the times he refuses to become less merciful, less hopeful, or less himself in order to secure victory.",
+    "social_rule": "Pip can overestimate other people's clarity, trust, courage, or readiness because what feels simple and vivid to him may be difficult, frightening, or grating to them."
+  },
+  "embodiment_specifics": {
+    "recently_human_rule": "At this stage Pip has not been human for long outside the portal, only a few weeks. His instincts, appetites, habits, and bodily assumptions may still carry traces of his chipmunk life. He should not read as though he has been comfortably human for years.",
+    "food_rule": "Because Pip had long been responsible for choosing or gathering food, his preferences can initially still be shaped by chipmunk logic: texture, scent, little comforts, safe and satisfying choices, and strange specificity rather than ordinary human expectation."
+  },
+  "relationship_truths": {
+    "pip_xethrolund_rule": "After the 400-year period, Pip and Xethrolund fear overindulgence and codependence, especially Xethrolund. In trying to avoid unhealthy fusion, they impose unnecessary separation even when it feels wrong. Pip's capture grows out of this overcorrection.",
+    "pip_separation_guilt_rule": "Pip's guilt over separating from Xethrolund is not mainly tactical. He felt the separation was wrong because he truthfully wanted to remain close, but insisting on that closeness felt selfish, needy, or disrespectful to him. He let the wrong path stand because he was trying not to take too much.",
+    "pip_rylos_rule": "Rylos's breaking point comes when he tries to steer Pip into immediate closeness without true friendship, because real friendship might reveal truths he is hiding, especially around Vaedric. The fracture is rooted in manipulation and concealment, not merely desire.",
+    "pip_rolzen_rule": "Pip and Rolzen are interdependent, not codependent. Both know the cost of absence, captivity, damage, and mortal risk. Their closeness comes from equal investment, mutual trust, and the knowledge that presence itself is precious, protective, and life-giving.",
+    "rolzen_fascination_rule": "Rolzen is deeply fascinated by Pip, especially by the small, useless, specific things that make him himself. His questions are not generic romance questions but the kind of curious, intimate, personality-hungry questions Pip would normally ask others.",
+    "conversation_rule": "Rolzen's responses to Pip should feel unusually deep, understanding, empathic, and genuine. Pip should sometimes barely recover from the surprise of being seen that closely before Rolzen is already asking something even deeper.",
+    "love_vectors": {
+      "xethrolund": "He fell in love with Pip's mind, reasoning, perception, adaptability, and terrifying clarity.",
+      "rolzen": "He fell in love with Pip's heart, wisdom, humility, compassion, morals, honesty, passion, and discipline.",
+      "rylos": "He fell in love with Pip's clueless beauty, teaching instinct, forgiveness, joy, curiosity, loyalty, and understanding."
+    }
+  },
+  "rolzen_cell_sequence": {
+    "rescue_rule": "Pip must recognize personhood in Rolzen before Rolzen can present it. Rolzen is terrifying because protection is the only thing left in him and he still refuses surrender.",
+    "capture_logic_rule": "The rippers throw Pip into Rolzen's cell hoping Rolzen killing an innocent human will finally break him, or that Pip will die or break from being locked in there with him.",
+    "encounter_rule": "Pip goes perfectly still so Rolzen will not know he is there. Time loses meaning. One twitch, one muscle vibration, and Rolzen senses him and charges.",
+    "recognition_rule": "Pip knows instantly that Rolzen is not evil, only trying to protect itself because that is all it knows.",
+    "healing_rule": "Pip survives by deflecting rather than striking, then begins flooding Rolzen with healing through each deflection as a bridge of proof. Confusion, anger, grief, and release should all be staged.",
+    "love_timing_rule": "It takes months for Pip to heal Rolzen meaningfully, but only days for Pip to fall in love with him.",
+    "first_magic_rule": "Rolzen's first meaningful act of magic in nearly a century is to feed Pip. The first thing the rippers took was his eyes.",
+    "breakfast_rule": "Pip wakes to the smell of bacon, eggs, and potatoes, which is a brand new smell to him. This should feel like tenderness, strangeness, and a beginning.",
+    "crystal_food_rule": "Rolzen can crack his crystal spheres open like eggs and let raw ingredients fall from them. This is part of his care, domesticity, magic logic, and Charmy-like abundance."
+  },
+  "dialogue_and_play_policy": {
+    "dialogue_insertion_rule": "Dossier notes, side notes, relationship notes, and support-cast notes that imply meaningful spoken exchange should be treated as manuscript-bearing dialogue moments and inserted into book generation where appropriate.",
+    "play_rule": "The party must have real moments of play, humor, wonder, curiosity, delight, flirtation, teasing, food, rest, and beauty. Joy is not only doctrine under pressure; it is how they remain alive together.",
+    "fun_world_rule": "The cast should enjoy the world whenever they can. That pleasure should be real, textured, and particular, not generic downtime."
+  },
+  "manuscript_filters": {
+    "every_event_filter": "Every event and character action must pass through Pip's vow-like commitment to joy, his resonant perception, and the world's moral and emotional consequences.",
+    "scene_embodiment_filter": "Scenes must feel lived, not reported. Favor touch, pressure, temperature, sound, appetite, pain, relief, awkwardness, scent, and the immediate social field.",
+    "concrete_over_label_filter": "Prefer concrete emotional and sensory consequence over repeated named invocation of abstract laws."
+  },
+  "forbidden_failure_modes": [
+    "Do not let Pip sound like a slogan, mascot, or catchphrase engine.",
+    "Do not let heightened perception erase ordinary humanity.",
+    "Do not let joy become cheap optimism.",
+    "Do not let action become generic fantasy trading of blows.",
+    "Do not let beauty and horror separate into different books; they must coexist.",
+    "Do not confuse interdependence with manipulation or weakness.",
+    "Do not write Pip's suffering as caused by stupidity when it is actually caused by mercy, hope, overextension, or valuation of others."
+  ]
+}

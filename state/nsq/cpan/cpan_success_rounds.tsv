@@ -1,0 +1,13 @@
+round_id	created_at	module	version	status	notes
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	TOML::XS	0.05	up_to_date	XS TOML parser already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	YAML::XS	v0.906.0	up_to_date	LibYAML-backed YAML XS already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	LCS::XS	0.04	up_to_date	XS longest-common-subsequence module already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	YAML::Tag	undef	up_to_date	installed but reports undef version
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	Sub::Metadata	0.002	installed_passed_tests	compiled XS and passed 138 tests
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	UNIVERSAL::Object	0.17	installed_passed_tests	passed 364 tests and installed to user perl5
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	MOP	0.14	installed_passed_tests	passed 285 tests and installed to user perl5
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	decorators	0.01	installed_passed_tests	passed 152 tests and installed to user perl5
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	define	1.04	up_to_date	already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	Net::Bind	0.05	up_to_date	already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	self::init	0.01	up_to_date	already installed
+cpan-round-20260428_174152	2026-04-28T22:41:52Z	Refine	0.01	up_to_date	already installed

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0047__B03_04__Mack_Confirms_That_Binding_Is_Real.md.f16d3ffabf173ab1.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.784496+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0047__B03_04__Mack_Confirms_That_Binding_Is_Real.md.f16d3ffabf173ab1.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0047__B03_04__Mack_Confirms_That_Binding_Is_Real.md",
+  "source_bytes": 168,
+  "source_sha256": "f16d3ffabf173ab16efa6c3df2c5c374507f47c299bbb8cc535e31c0ffcc2f1e",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0047__B03_04__Mack_Confirms_That_Binding_Is_Real.md.f16d3ffabf173ab1"
+}

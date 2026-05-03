@@ -1,0 +1,160 @@
+NSQ_APP universal_fetch
+NSQ_APP_VERSION 2
+
+NSQ_CANONICAL_IDENTITY {
+  NSQ is the lowest base language.
+  NSQ is the substrate.
+  NSQ is the machine.
+  NSQ is the floor, not a layer.
+  NSQ is read as NSQ.
+  NSQ is executed as NSQ.
+
+  Binary is not the underlying truth while NSQ is active.
+  Binary is inactive while NSQ authority is active.
+
+  A lever is not a machine.
+  A lever is one switch.
+  A lever is one eighth of an NSQ bit.
+  An NSQ bit and a binary bit use the same number of compositor pulses.
+  An NSQ postcount is not the same voltage as a binary bit.
+  Hertz frequency is adjusted to position the lever.
+  A multi-position lever resolves from one switch position, not from hidden binary sub-switches.
+
+  A stamp is not a bit.
+  A stamp is not a byte.
+  A stamp is not a scalar.
+  A stamp is a hot-swappable macro representation built from NSQ machine reality.
+
+  Interpretation order:
+    1. first lever selects dialect
+    2. leading anchor sets charge
+    3. body index chooses slot
+}
+
+NSQ_UNIVERSAL_FETCH_AUTHORITY {
+  app_purpose = universal_runtime_injected_fetch
+  target_compiled_in = false
+  source_compiled_in = false
+  acquisition_started_by_compile = false
+  raw_body_transfer = forbidden
+  nsq_wire_units_required = true
+  startup_flags_activate_frames = true
+  inactive_frames_do_not_execute = true
+  all_frames_internal_to_nsq = true
+}
+
+NSQ_REPOSITORY_LOCALITY_RULE {
+  source_repository_must_be_local_before_recode = true
+  if_source_is_inside_repo_use_in_place = true
+  if_source_is_outside_repo_localize_first = true
+  localized_repository_root = state/nsq/source_repositories/local
+  native_recode_root = state/nsq/source_repositories/native
+  shim_is_only_for_external_source_localization = true
+  repo_already_inside_BRAXON_does_not_use_shim = true
+}
+
+NSQ_SINGLE_FILE_MULTI_FRAME_RULE {
+  one_config_carrier_can_hold_many_translated_surfaces = true
+  separate_files_for_toml_xml_rs_c_py_are_not_required = true
+  all_framed_surfaces_translate_to_nsq = true
+  framed_surfaces_activate_only_when_startup_flagged = true
+}
+
+NSQ_DIALECT_COMPATIBILITY {
+  universal_extension_names = true
+  dialects_can_be_interwoven_in_same_document = true
+  dialect_activation_is_startup_flagged = true
+  inactive_dialects_do_not_execute = true
+
+  known_frames = [
+    nsq.frame.toml,
+    nsq.frame.xml,
+    nsq.frame.rs,
+    nsq.frame.c,
+    nsq.frame.py,
+    nsq.frame.lua,
+    nsq.frame.lisp,
+    nsq.frame.java,
+    nsq.frame.kotlin,
+    nsq.frame.shell,
+    nsq.frame.yaml,
+    nsq.frame.markdown,
+    nsq.frame.text,
+    nsq.frame.sqlite,
+    nsq.frame.cargo,
+    nsq.frame.gradle,
+    nsq.frame.cmake,
+    nsq.frame.make
+  ]
+}
+
+NSQ_STARTUP_FLAGS {
+  default = [
+    nsq.identity,
+    nsq.compile_proof,
+    nsq.plan_only
+  ]
+
+  optional = [
+    nsq.frame.toml,
+    nsq.frame.xml,
+    nsq.frame.rs,
+    nsq.frame.c,
+    nsq.frame.py,
+    nsq.frame.lua,
+    nsq.frame.lisp,
+    nsq.frame.java,
+    nsq.frame.kotlin,
+    nsq.frame.shell,
+    nsq.frame.yaml,
+    nsq.frame.markdown,
+    nsq.frame.text,
+    nsq.frame.sqlite,
+    nsq.frame.cargo,
+    nsq.frame.gradle,
+    nsq.frame.cmake,
+    nsq.frame.make,
+    nsq.repo.localize,
+    nsq.repo.recode,
+    nsq.fetch.probe,
+    nsq.fetch.acquire
+  ]
+}
+
+NSQ_FRAME toml { translated_surface = true activation_flag = nsq.frame.toml }
+NSQ_FRAME xml { translated_surface = true activation_flag = nsq.frame.xml }
+NSQ_FRAME rs { translated_surface = true activation_flag = nsq.frame.rs }
+NSQ_FRAME c { translated_surface = true activation_flag = nsq.frame.c }
+NSQ_FRAME py { translated_surface = true activation_flag = nsq.frame.py }
+NSQ_FRAME lua { translated_surface = true activation_flag = nsq.frame.lua }
+NSQ_FRAME lisp { translated_surface = true activation_flag = nsq.frame.lisp }
+NSQ_FRAME java { translated_surface = true activation_flag = nsq.frame.java }
+NSQ_FRAME kotlin { translated_surface = true activation_flag = nsq.frame.kotlin }
+NSQ_FRAME shell { translated_surface = true activation_flag = nsq.frame.shell }
+NSQ_FRAME yaml { translated_surface = true activation_flag = nsq.frame.yaml }
+NSQ_FRAME markdown { translated_surface = true activation_flag = nsq.frame.markdown }
+NSQ_FRAME text { translated_surface = true activation_flag = nsq.frame.text }
+NSQ_FRAME sqlite { translated_surface = true activation_flag = nsq.frame.sqlite }
+NSQ_FRAME cargo { translated_surface = true activation_flag = nsq.frame.cargo }
+NSQ_FRAME gradle { translated_surface = true activation_flag = nsq.frame.gradle }
+NSQ_FRAME cmake { translated_surface = true activation_flag = nsq.frame.cmake }
+NSQ_FRAME make { translated_surface = true activation_flag = nsq.frame.make }
+
+NSQ_TARGET_RULE {
+  target_file_is_runtime_input = true
+  target_file_extension = .nsq
+  target_must_declare = [
+    NSQ_TARGET,
+    nsq_wire_units_required,
+    source_manifest_uri,
+    unit_uri_template,
+    integrity_witness
+  ]
+}
+
+NSQ_BUILD_RULE {
+  compiler_carrier = crates/nsq-universal-fetch
+  source_carrier = apps/nsq/universal_fetch.nsq
+  generated_authority = state/nsq/universal_fetch/compiled_authority.nsq
+  proof_required = true
+}

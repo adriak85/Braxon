@@ -1,0 +1,3 @@
+policy=marco_polo_sync
+call=marco
+task=rebuild_verify

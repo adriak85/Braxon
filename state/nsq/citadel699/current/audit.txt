@@ -1,0 +1,97 @@
+== Citadel 699 audit ==
+citadel_hit_count=943
+beyond_699_hit_count=2113183
+
+== top numbers beyond 699 ==
+2026	12666
+2020	4099
+2021	3951
+2025	3721
+2024	3255
+2023	2924
+2022	2477
+2019	1139
+2018	762
+1000	379
+2017	322
+1024	315
+9000	252
+2016	248
+9083	244
+9006	243
+9014	243
+9022	243
+9030	242
+9038	242
+9046	242
+9054	242
+9062	242
+9070	242
+9078	242
+9086	242
+9001	242
+9002	242
+9003	242
+9004	242
+9005	242
+9007	242
+9008	242
+9009	242
+9010	242
+9011	242
+9012	242
+9013	242
+9015	242
+9016	242
+
+== top files ==
+302602	state/nsq/citadel699/current/direct_hits.txt
+150969	assets/braxon_core/source_ingest/braxon_transport/tokenizer.json
+150943	assets/braxon_core/source_ingest/braxon_transport/vocab.json
+117200	tmp/nsq_hard_bench_20260419_004055/corpus/pathological.nsq
+117200	tmp/nsq_hard_bench_20260419_002228/corpus/pathological.nsq
+117200	tmp/nsq_hard_bench_20260419_000331/corpus/pathological.nsq
+77900	tmp/nsq_hard_bench_20260419_004055/corpus/large.nsq
+77900	tmp/nsq_hard_bench_20260419_002228/corpus/large.nsq
+77900	tmp/nsq_hard_bench_20260419_000331/corpus/large.nsq
+62250	tmp/nsq_hardened_suite_20260419_004056/corpus/dense.nsq
+62250	tmp/nsq_hardened_suite_20260419_002229/corpus/dense.nsq
+62250	tmp/nsq_hardened_suite_20260419_000340/corpus/dense.nsq
+45898	tmp/nsq_hardened_suite_20260419_004056/corpus/membrane_dense.nsq
+45898	tmp/nsq_hardened_suite_20260419_002229/corpus/membrane_dense.nsq
+45898	tmp/nsq_hardened_suite_20260419_000340/corpus/membrane_dense.nsq
+32068	benchmarks/info_vs_c/results/c/noise_stress.txt
+32068	benchmarks/info_vs_c/results/c/triple_stress.txt
+32068	benchmarks/info_vs_c/results/c/membrane_stress.txt
+32068	benchmarks/info_vs_c/results/c/mixed_stress.txt
+32060	tmp/nsq_hardened_suite_20260419_004056/corpus/pathological.nsq
+32060	tmp/nsq_hardened_suite_20260419_002229/corpus/pathological.nsq
+32060	tmp/nsq_hardened_suite_20260419_000340/corpus/pathological.nsq
+24333	tmp/nsq_hardened_suite_20260419_004056/corpus/mixed.nsq
+24333	tmp/nsq_hardened_suite_20260419_002229/corpus/mixed.nsq
+24333	tmp/nsq_hardened_suite_20260419_000340/corpus/mixed.nsq
+17900	tmp/nsq_hard_bench_20260419_004055/corpus/medium.nsq
+17900	tmp/nsq_hard_bench_20260419_002228/corpus/medium.nsq
+17900	tmp/nsq_hard_bench_20260419_000331/corpus/medium.nsq
+15684	benchmarks/info_vs_c/results/c/noise_large.txt
+15684	benchmarks/info_vs_c/results/c/triple_large.txt
+15684	benchmarks/info_vs_c/results/c/membrane_large.txt
+15684	benchmarks/info_vs_c/results/c/mixed_large.txt
+13900	tmp/nsq_hardened_suite_20260419_004056/corpus/chain.nsq
+13900	tmp/nsq_hardened_suite_20260419_002229/corpus/chain.nsq
+13900	tmp/nsq_hardened_suite_20260419_000340/corpus/chain.nsq
+12086	state/nsq/stamps/registry/asm_macro_registry_round1.jsonl
+12055	state/nsq/stamps/registry/asm_macro_registry_round2.jsonl
+7492	benchmarks/info_vs_c/results/c/noise_medium.txt
+7492	benchmarks/info_vs_c/results/c/triple_medium.txt
+7492	benchmarks/info_vs_c/results/c/membrane_medium.txt
+
+== detected pattern counters ==
+asm=34898
+citadel=525
+lever=80
+music_audio=96
+rebuild=71
+slot=388
+stamp=34985
+unicode=11

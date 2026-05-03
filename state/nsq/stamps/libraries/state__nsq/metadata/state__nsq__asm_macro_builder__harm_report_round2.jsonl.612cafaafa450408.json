@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__harm_report_round2.jsonl.612cafaafa450408.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.274559+00:00",
+  "harm_hit_count": 699,
+  "library": "state__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__harm_report_round2.jsonl.612cafaafa450408.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/nsq/asm_macro_builder/harm_report_round2.jsonl",
+  "source_bytes": 183234,
+  "source_sha256": "612cafaafa450408d056754c45716c5a6bd7e31d400cfde589834b93869b26f7",
+  "stamp_id": "nsq.asm.state__nsq.state__nsq__asm_macro_builder__harm_report_round2.jsonl.612cafaafa450408"
+}

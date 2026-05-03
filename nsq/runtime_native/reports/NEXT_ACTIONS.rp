@@ -1,0 +1,8 @@
+Next actions for runtime-native batch v3
+
+1. verify every required domain is represented in runtime_domain_registry
+2. bind active runtime/proof/court code to graded_selector_registry
+3. bind package resolution to local_package_repo_registry
+4. use 8-minimum multiport package-db with one authority commit path
+5. emit both human and machine docs from one structured source
+6. emit tokenizer bridges for mytho_wowas_bias and qwen_to_nsq

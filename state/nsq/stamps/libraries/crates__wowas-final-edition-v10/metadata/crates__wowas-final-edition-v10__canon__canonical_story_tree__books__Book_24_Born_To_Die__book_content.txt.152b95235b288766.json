@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_24_Born_To_Die__book_content.txt.152b95235b288766.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.867983+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_24_Born_To_Die__book_content.txt.152b95235b288766.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_24_Born_To_Die/book_content.txt",
+  "source_bytes": 26982,
+  "source_sha256": "152b95235b28876612aa2e71b8f9906b341c631cb2ff05fd51f35e23026dc60a",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_24_Born_To_Die__book_content.txt.152b95235b288766"
+}

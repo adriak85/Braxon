@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0068__B03_06__Pip_Learns_to_Hold_Both.md.e77876cc7fd8c84c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.493779+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0068__B03_06__Pip_Learns_to_Hold_Both.md.e77876cc7fd8c84c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_03_The_First_Thread/0068__B03_06__Pip_Learns_to_Hold_Both.md",
+  "source_bytes": 136,
+  "source_sha256": "e77876cc7fd8c84cbe46d3d36a5d9db5dc91523cb987ab20f836786551e7c193",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0068__B03_06__Pip_Learns_to_Hold_Both.md.e77876cc7fd8c84c"
+}

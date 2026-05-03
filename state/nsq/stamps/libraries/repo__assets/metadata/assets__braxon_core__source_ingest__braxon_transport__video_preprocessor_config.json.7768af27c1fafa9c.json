@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__assets/asm/macros/assets__BRAXON_core__source_ingest__braxon_transport__video_preprocessor_config.json.7768af27c1fafa9c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.185738+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__assets",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__assets/metadata/assets__BRAXON_core__source_ingest__braxon_transport__video_preprocessor_config.json.7768af27c1fafa9c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "assets/braxon_core/source_ingest/braxon_transport/video_preprocessor_config.json",
+  "source_bytes": 385,
+  "source_sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+  "stamp_id": "nsq.asm.repo__assets.assets__BRAXON_core__source_ingest__braxon_transport__video_preprocessor_config.json.7768af27c1fafa9c"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_23_The_Final_Resonance__08_named_support_cast_assignment.md.2471fb94387ff6fa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.128254+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_23_The_Final_Resonance__08_named_support_cast_assignment.md.2471fb94387ff6fa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_23_The_Final_Resonance/08_named_support_cast_assignment.md",
+  "source_bytes": 813,
+  "source_sha256": "2471fb94387ff6fae2e19b2971d2740ce5ab7938e662f1a37767159c07669110",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_23_The_Final_Resonance__08_named_support_cast_assignment.md.2471fb94387ff6fa"
+}

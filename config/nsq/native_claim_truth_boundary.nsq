@@ -1,0 +1,14 @@
+NSQ_CONFIG native_claim_truth_boundary
+
+truth_boundary_policy {
+  native_elf_probe_is_valid_progress = true
+  native_elf_probe_is_not_full_semantic_runtime = true
+  keep_bare_metal_claim_blocked_until_driver_boundary = true
+  keep_BRAXON_live_claim_false = true
+}
+
+production_policy {
+  round_3_tracking = false
+  round_3_macro_discovery = false
+  round_3_tracers = false
+}

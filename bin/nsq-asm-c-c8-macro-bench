@@ -1,0 +1,10 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+cd "${BRAXON_ROOT:-$HOME/Braxon}"
+OUT="${1:-state/nsq/asm_c_c8_macro_benchmark}"
+RECORDS="${NSQ_ASM_C8_RECORDS:-65536}"
+TIMEOUT="${NSQ_SURFACE_TIMEOUT_SECONDS:-10}"
+exec python3 tools/nsq_asm_operating_law/nsq_asm_c_c8_macro_bench.py \
+  --out "$OUT" \
+  --records "$RECORDS" \
+  --timeout-seconds "$TIMEOUT"

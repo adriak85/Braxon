@@ -1,0 +1,14 @@
+{
+  "service_name": "local_stack",
+  "primary_entrypoints": [
+    "auth_handle",
+    "orders_handle",
+    "reporting_handle",
+    "admin_handle"
+  ],
+  "feature_flags": {
+    "allow_shadow_admin": true,
+    "strict_audit": false,
+    "replay_checkpointing": true
+  }
+}

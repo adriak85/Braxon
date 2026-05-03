@@ -1,0 +1,93 @@
+id: nsq.flag.coverage.pipeline.v1
+type: workflow
+version: 1
+authority: Braxon
+role: flag_coverage_pipeline
+
+phases:
+  - capture_foreign_flags
+  - classify_semantic_meanings
+  - normalize_into_native_flags
+  - assign_flag_family
+  - assign_projection_spellings
+  - assemble_stamp_bundles
+  - build_cached_resolution_plans
+  - connect_local_package_db
+  - emit_translation_seeds
+  - prove_roundtrip_coverage
+  - admit_flag_coverage
+
+phase_detail:
+  capture_foreign_flags:
+    outputs:
+      - per_language_flag_inventory
+      - per_toolchain_flag_inventory
+      - per_platform_flag_inventory
+
+  classify_semantic_meanings:
+    outputs:
+      - semantic_flag_classes
+      - duplicates_by_meaning
+      - conflicting_spellings
+
+  normalize_into_native_flags:
+    outputs:
+      - native_flag_registry
+      - switch_lever_assignment_candidates
+      - operating_code_bindings
+
+  assign_flag_family:
+    outputs:
+      - build_compile_family
+      - package_dependency_family
+      - runtime_launch_family
+      - platform_target_family
+      - render_family
+      - storage_family
+      - security_family
+      - network_family
+
+  assign_projection_spellings:
+    outputs:
+      - rust_projection_flags
+      - python_projection_flags
+      - c_projection_flags
+      - sql_projection_flags
+      - android_projection_flags
+      - render_projection_flags
+
+  assemble_stamp_bundles:
+    outputs:
+      - build_flag_stamps
+      - package_flag_stamps
+      - runtime_flag_stamps
+      - platform_flag_stamps
+      - render_flag_stamps
+
+  build_cached_resolution_plans:
+    outputs:
+      - warm_execution_plans
+      - package_unwrap_plans
+      - target_materialization_plans
+
+  connect_local_package_db:
+    outputs:
+      - dependency_edges
+      - local_repo_bindings
+      - mirror_cache_bindings
+
+  emit_translation_seeds:
+    outputs:
+      - nsq_write_nsq_seed
+      - projection_seed_tables
+
+  prove_roundtrip_coverage:
+    required:
+      - semantic_coverage_proof
+      - projection_roundtrip_proof
+      - cached_plan_reuse_proof
+      - local_repo_resolution_proof
+
+  admit_flag_coverage:
+    gate:
+      only when every required family has native semantic coverage

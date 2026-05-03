@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "PERLANCAR::Module::List",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/PERLANCAR/Module/List.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/PERLANCAR__Module__List.source",
+  "source_sha256": "079bcc01e0a312cfea37ad1c6bb59b796550fe73d561496ba161a5ec4623e588",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/PERLANCAR__Module__List.translated.nsq",
+  "nsq_body_sha256": "ee1d2a66ee5150002422919aaafea8d7cd89376c6e0434108b6e345b5dd28d01",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_25_Death_Is_Rebirth__08_named_support_cast_assignment.md.5ccab9840ff304e7.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.633330+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_25_Death_Is_Rebirth__08_named_support_cast_assignment.md.5ccab9840ff304e7.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_25_Death_Is_Rebirth/08_named_support_cast_assignment.md",
+  "source_bytes": 822,
+  "source_sha256": "5ccab9840ff304e77fa5a83f0c532dd28f4562348f1c5dc0daf6bc351651d153",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_25_Death_Is_Rebirth__08_named_support_cast_assignment.md.5ccab9840ff304e7"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__compu-brotli-sys__RUSTSEC-2021-0132.md.6e644a44a846e3c0.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.647487+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__compu-brotli-sys__RUSTSEC-2021-0132.md.6e644a44a846e3c0.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/compu-brotli-sys/RUSTSEC-2021-0132.md",
+  "source_bytes": 799,
+  "source_sha256": "6e644a44a846e3c06375eaa9eb347f1f3fff446a2d5a66f0eec20aad5c231e07",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__compu-brotli-sys__RUSTSEC-2021-0132.md.6e644a44a846e3c0"
+}

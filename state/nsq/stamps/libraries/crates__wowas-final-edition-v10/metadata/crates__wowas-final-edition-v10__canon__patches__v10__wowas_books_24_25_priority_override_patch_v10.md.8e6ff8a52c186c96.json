@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__patches__v10__wowas_books_24_25_priority_override_patch_v10.md.8e6ff8a52c186c96.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.600818+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__patches__v10__wowas_books_24_25_priority_override_patch_v10.md.8e6ff8a52c186c96.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_books_24_25_priority_override_patch_v10.md",
+  "source_bytes": 6780,
+  "source_sha256": "8e6ff8a52c186c96646368c0aec58fb9dc2aaa2814fde80774490041a072d095",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__patches__v10__wowas_books_24_25_priority_override_patch_v10.md.8e6ff8a52c186c96"
+}

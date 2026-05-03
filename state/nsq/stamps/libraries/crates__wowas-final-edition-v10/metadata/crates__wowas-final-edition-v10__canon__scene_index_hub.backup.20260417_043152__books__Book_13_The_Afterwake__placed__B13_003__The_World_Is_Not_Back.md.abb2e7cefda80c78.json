@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.928472+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_13_The_Afterwake/placed/B13_003__The_World_Is_Not_Back.md",
+  "source_bytes": 404,
+  "source_sha256": "abb2e7cefda80c786b1e81e4e1bc08ed5c335006e69f60ad5205d43cd83d58e8",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78"
+}

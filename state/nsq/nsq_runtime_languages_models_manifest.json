@@ -1,0 +1,25 @@
+{
+  "name": "nsq_runtime_languages_models_v2",
+  "created_at": "20260423_220103",
+  "installed_files": [
+    "docs/nsq/NSQ_RUNTIME_LANGUAGE_SURFACES.md",
+    "docs/nsq/NSQ_BLAKE_NULL_DIGEST.md",
+    "docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md",
+    "config/nsq/nsq_runtime_language_registry.json",
+    "config/nsq/nsq_runtime_platform_registry.json",
+    "config/nsq/nsq_model_install_targets.json",
+    "tools/nsq_finish/nsq_language_runtime_audit.py",
+    "tools/nsq_finish/nsq_blake_null.py",
+    "tools/nsq_finish/nsq_model_install_audit.py",
+    "scripts/nsq_runtime_languages_models_check.sh"
+  ],
+  "canon": {
+    "languages_built_into_runtime": true,
+    "runtime_platform_built_in": true,
+    "foreign_spellings_projection_only": true,
+    "dialect_missing_fails_closed": true,
+    "blake3_raw_identity_retained": true,
+    "blake_null_semantic_digest_added": true,
+    "model_installation_verified_by_manifest_hash_and_semantic_digest": true
+  }
+}

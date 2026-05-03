@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_15_Suffocating_In_Silence__04_scene_spine.md.62c9cb4bb3b3e314.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.962691+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_15_Suffocating_In_Silence__04_scene_spine.md.62c9cb4bb3b3e314.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_15_Suffocating_In_Silence/04_scene_spine.md",
+  "source_bytes": 38,
+  "source_sha256": "62c9cb4bb3b3e314176229c6e4c4298be91ee4858e43e7dcc7318a1f935e2d4b",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_15_Suffocating_In_Silence__04_scene_spine.md.62c9cb4bb3b3e314"
+}

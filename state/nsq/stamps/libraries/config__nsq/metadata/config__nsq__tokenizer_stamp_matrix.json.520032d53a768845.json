@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__tokenizer_stamp_matrix.json.520032d53a768845.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.433409+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__tokenizer_stamp_matrix.json.520032d53a768845.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/tokenizer_stamp_matrix.json",
+  "source_bytes": 549,
+  "source_sha256": "520032d53a768845d00abae4db62e8335eb71cf8e3531bf02e06f31b117d4e32",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__tokenizer_stamp_matrix.json.520032d53a768845"
+}

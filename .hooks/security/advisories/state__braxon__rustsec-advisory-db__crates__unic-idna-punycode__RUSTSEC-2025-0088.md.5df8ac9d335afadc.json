@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__unic-idna-punycode__RUSTSEC-2025-0088.md.5df8ac9d335afadc.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.028615+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__unic-idna-punycode__RUSTSEC-2025-0088.md.5df8ac9d335afadc.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/unic-idna-punycode/RUSTSEC-2025-0088.md",
+  "source_bytes": 436,
+  "source_sha256": "5df8ac9d335afadc309680f3109f6c7c487171186bdd5c1baba6cd3e1e17e212",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__unic-idna-punycode__RUSTSEC-2025-0088.md.5df8ac9d335afadc"
+}

@@ -1,0 +1,10 @@
+BRAXON_MUSIC_SYNTH_OK
+runtime_kind=native_c_plus_aarch64_asm_seed_fold
+output=/data/data/com.termux/files/home/Braxon/state/braxon/music_app/current/preview.wav
+sample_rate=22050
+seconds=9
+seed=10354538286681088817
+tracking=false
+macro_discovery=false
+tracers=false
+bare_metal_claim=false

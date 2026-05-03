@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "SQL::QueryMaker",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/SQL/QueryMaker.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/SQL__QueryMaker.source",
+  "source_sha256": "316389b9d2aa7f5199d80178175b8f57831e5b1e29ae259e59242276bbe12598",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/SQL__QueryMaker.translated.nsq",
+  "nsq_body_sha256": "62f94720330bb818bf52e322f12d021581239a063c310f9bc2b8cb49fef80070",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

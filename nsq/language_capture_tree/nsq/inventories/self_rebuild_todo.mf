@@ -1,0 +1,22 @@
+id: nsq.self.rebuild.todo.v1
+type: manifest
+version: 1
+authority: Braxon
+role: self_rebuild_todo
+
+required:
+  - native_source_lane_proof
+  - ir_package
+  - pack_package
+  - decode_package
+  - proof_package
+  - build_graph_inventory
+  - sexpr_build_stamp_inventory
+  - tool_inventory
+  - local_mirror_inventory
+  - install_bootstrap
+  - offline_build_proof
+  - offline_test_proof
+  - rust_boundary_inventory
+  - platform_projection_rules
+  - admission_proof

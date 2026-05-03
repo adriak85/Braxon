@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_09_The_Diamond_Breaks__placed__B09_003__Forced_Soul_Restoration.md.1232279485fc071b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.847762+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_09_The_Diamond_Breaks__placed__B09_003__Forced_Soul_Restoration.md.1232279485fc071b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_09_The_Diamond_Breaks/placed/B09_003__Forced_Soul_Restoration.md",
+  "source_bytes": 514,
+  "source_sha256": "1232279485fc071b96762ffc3bf4689c241a4f214a2ffa8ab74183df94413c74",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_09_The_Diamond_Breaks__placed__B09_003__Forced_Soul_Restoration.md.1232279485fc071b"
+}

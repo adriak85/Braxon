@@ -1,0 +1,21 @@
+{
+  "name": "nsq_asm_stamp_full_language_v3",
+  "created_at": "20260423_220335",
+  "installed_files": [
+    "config/nsq/nsq_runtime_language_registry.json",
+    "config/nsq/nsq_asm_stamp_cipher_registry.json",
+    "docs/nsq/NSQ_ASM_STAMP_SYSTEM.md",
+    "docs/nsq/NSQ_FULL_LANGUAGE_STACK.md",
+    "tools/nsq_finish/nsq_stamp.py",
+    "scripts/nsq_asm_stamp_full_language_check.sh"
+  ],
+  "canon": {
+    "asm_builtin": true,
+    "asm_is_not_byte_truth": true,
+    "stamp_required_for_reusable_code": true,
+    "cipher_allowed_for_compact_asm_intent": true,
+    "cipher_must_expand_and_validate": true,
+    "full_language_stack_declared": true,
+    "dialect_missing_fails_closed": true
+  }
+}

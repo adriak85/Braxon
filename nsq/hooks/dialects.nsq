@@ -1,0 +1,24 @@
+# canonical dialect law in NSQ
+
+triple dialect.canonical -> lowers_to -> canonical :layer 1 :plane 1 :anchor 400 :weight 100 :flags 1
+triple dialect.sexpr -> lowers_to -> canonical :layer 1 :plane 1 :anchor 410 :weight 100 :flags 1
+triple dialect.lua_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 420 :weight 100 :flags 1
+triple dialect.python_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 430 :weight 100 :flags 1
+triple dialect.python3_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 435 :weight 100 :flags 1
+
+triple dialect.canonical -> requires -> internal_only :layer 1 :plane 1 :anchor 440 :weight 100 :flags 1
+triple dialect.sexpr -> requires -> internal_only :layer 1 :plane 1 :anchor 450 :weight 100 :flags 1
+triple dialect.lua_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 460 :weight 100 :flags 1
+triple dialect.python_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 470 :weight 100 :flags 1
+triple dialect.python3_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 475 :weight 100 :flags 1
+
+triple dialect.sexpr -> forbids -> scheme_runtime_requirement :layer 1 :plane 1 :anchor 480 :weight 100 :flags 1
+triple dialect.lua_shape -> forbids -> lua_runtime_requirement :layer 1 :plane 1 :anchor 490 :weight 100 :flags 1
+triple dialect.python_shape -> forbids -> python_runtime_requirement :layer 1 :plane 1 :anchor 500 :weight 100 :flags 1
+triple dialect.python3_shape -> forbids -> python3_runtime_requirement :layer 1 :plane 1 :anchor 505 :weight 100 :flags 1
+
+membrane dialect.canonical :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.sexpr :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.lua_shape :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.python_shape :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.python3_shape :state accepted :flux 1 :gate 1 :phase 1

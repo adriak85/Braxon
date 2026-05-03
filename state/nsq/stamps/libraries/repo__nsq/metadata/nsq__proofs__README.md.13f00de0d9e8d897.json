@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__nsq/asm/macros/nsq__proofs__README.md.13f00de0d9e8d897.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.326308+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__nsq/metadata/nsq__proofs__README.md.13f00de0d9e8d897.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "nsq/proofs/README.md",
+  "source_bytes": 109,
+  "source_sha256": "13f00de0d9e8d8976c054e6fe2e93ec97e9ad76ce44aac334591aa3703e30775",
+  "stamp_id": "nsq.asm.repo__nsq.nsq__proofs__README.md.13f00de0d9e8d897"
+}

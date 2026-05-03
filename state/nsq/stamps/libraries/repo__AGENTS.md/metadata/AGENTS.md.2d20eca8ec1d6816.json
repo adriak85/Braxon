@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__AGENTS.md/asm/macros/AGENTS.md.2d20eca8ec1d6816.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.206231+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__AGENTS.md",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__AGENTS.md/metadata/AGENTS.md.2d20eca8ec1d6816.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "AGENTS.md",
+  "source_bytes": 10797,
+  "source_sha256": "2d20eca8ec1d6816e1e4d915146adb7f0d8b99f7c8197470b4fecb832a8eaf68",
+  "stamp_id": "nsq.asm.repo__AGENTS.md.AGENTS.md.2d20eca8ec1d6816"
+}

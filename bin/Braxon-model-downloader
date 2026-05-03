@@ -1,0 +1,38 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="${BRAXON_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+
+cmd="${1:-}"
+case "$cmd" in
+  request)
+    shift || true
+    exec "$ROOT/bin/Braxon-model-request" "${1:-all}"
+    ;;
+
+  fetch|download|raw-fetch|raw-download)
+    model="${2:-all}"
+    cat <<MSG
+BLOCKED_BY_NSQ_ONLY_MODEL_TRANSFER_GATE
+command=$cmd
+model=$model
+
+Normal model transfer is NOT fetch/download.
+Normal model transfer is:
+
+  bin/Braxon-model-request $model
+
+That creates a Citadel699 NSQ-only request capsule.
+It does not download raw GGUF.
+It does not download raw safetensors.
+It does not create Git LFS pointers.
+It does not claim runtime readiness.
+
+MSG
+    exit 64
+    ;;
+
+  *)
+    exec python3 "$ROOT/tools/BRAXON_model_downloader/BRAXON_model_downloader.py" "$@"
+    ;;
+esac

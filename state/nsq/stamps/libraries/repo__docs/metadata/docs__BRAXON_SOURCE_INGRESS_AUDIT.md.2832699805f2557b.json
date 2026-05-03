@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__BRAXON_SOURCE_INGRESS_AUDIT.md.2832699805f2557b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.228934+00:00",
+  "harm_hit_count": 1,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__BRAXON_SOURCE_INGRESS_AUDIT.md.2832699805f2557b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/BRAXON_SOURCE_INGRESS_AUDIT.md",
+  "source_bytes": 3165,
+  "source_sha256": "2832699805f2557b74039aa7af37bfe2df7d30fd381d84e2559bfd84ae67f565",
+  "stamp_id": "nsq.asm.repo__docs.docs__BRAXON_SOURCE_INGRESS_AUDIT.md.2832699805f2557b"
+}

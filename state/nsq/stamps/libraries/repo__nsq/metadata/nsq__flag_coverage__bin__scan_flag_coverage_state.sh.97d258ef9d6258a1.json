@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__nsq/asm/macros/nsq__flag_coverage__bin__scan_flag_coverage_state.sh.97d258ef9d6258a1.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.371365+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__nsq/metadata/nsq__flag_coverage__bin__scan_flag_coverage_state.sh.97d258ef9d6258a1.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "nsq/flag_coverage/bin/scan_flag_coverage_state.sh",
+  "source_bytes": 2310,
+  "source_sha256": "97d258ef9d6258a1c6d69bf9cf2ae21b8d55bdf7244c182fbbbc348d144348d1",
+  "stamp_id": "nsq.asm.repo__nsq.nsq__flag_coverage__bin__scan_flag_coverage_state.sh.97d258ef9d6258a1"
+}

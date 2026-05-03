@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Hash::MultiValue",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Hash/MultiValue.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Hash__MultiValue.source",
+  "source_sha256": "bdd11fb8b7915a40a555304ce1b35c559ec796d42e41d916a2a360776f81f91f",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Hash__MultiValue.translated.nsq",
+  "nsq_body_sha256": "1c271e4b8f5355937827e769aa4b8a5a00add29dc267714bb79812f0d4ffa38b",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

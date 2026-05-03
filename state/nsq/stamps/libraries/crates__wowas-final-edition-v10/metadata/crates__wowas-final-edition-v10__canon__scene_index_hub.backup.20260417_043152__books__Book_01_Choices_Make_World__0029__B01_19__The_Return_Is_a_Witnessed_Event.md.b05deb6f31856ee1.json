@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0029__B01_19__The_Return_Is_a_Witnessed_Event.md.b05deb6f31856ee1.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.740858+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0029__B01_19__The_Return_Is_a_Witnessed_Event.md.b05deb6f31856ee1.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_01_Choices_Make_World/0029__B01_19__The_Return_Is_a_Witnessed_Event.md",
+  "source_bytes": 225,
+  "source_sha256": "b05deb6f31856ee1085867a367741e2eb38d23fc03b7c571f3ed5cad93fb2230",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0029__B01_19__The_Return_Is_a_Witnessed_Event.md.b05deb6f31856ee1"
+}

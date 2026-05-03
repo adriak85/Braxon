@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+ROOT="${BRAXON_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+exec python3 "$ROOT/tools/BRAXON_music_app/BRAXON_music_app.py" "$@"

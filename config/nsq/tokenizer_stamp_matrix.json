@@ -1,0 +1,26 @@
+{
+  "scope": "nsq_sovereign_tokenizer_matrix",
+  "matrix_state": "declared_charter",
+  "negative_stamp_space": {
+    "band": "-1000..-1126",
+    "cluster_family": "willow_stone_semantic_grounding",
+    "examples": [
+      "space",
+      "new line",
+      "Indalwin Willowjayce",
+      "Stone",
+      "Willow"
+    ]
+  },
+  "positive_stamp_space": {
+    "band": "+1000..+1126",
+    "cluster_family": "coding_and_court_operator_tools",
+    "examples": [
+      "compiler",
+      "router",
+      "scheduler",
+      "inspector",
+      "proof"
+    ]
+  }
+}

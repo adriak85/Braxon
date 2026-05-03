@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__nsq-calibrate/asm/macros/crates__nsq-calibrate__README.md.dee19a0874c0d9cb.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.316572+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__nsq-calibrate",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__nsq-calibrate/metadata/crates__nsq-calibrate__README.md.dee19a0874c0d9cb.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/nsq-calibrate/README.md",
+  "source_bytes": 860,
+  "source_sha256": "dee19a0874c0d9cbd03934af7e959c0107135af40157e8848dd5a52c4e2effa2",
+  "stamp_id": "nsq.asm.crates__nsq-calibrate.crates__nsq-calibrate__README.md.dee19a0874c0d9cb"
+}

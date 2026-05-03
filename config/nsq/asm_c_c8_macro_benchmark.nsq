@@ -1,0 +1,48 @@
+NSQ_CONFIG asm_c_c8_macro_benchmark
+
+benchmark_policy {
+  rounds = 3
+  scored_round = 3
+  kiwi_run = true
+  default_record_limit = 65536
+  source_scope = nsq_first_then_repo_support
+  per_surface_timeout_seconds = 10
+}
+
+surface_policy {
+  asm = operating_form_surface
+  c = plain_comparison_surface
+  c8_asm = compressed_c8_macro_surface_with_asm_operating_intent
+  nsq = authority_surface_with_lineage_and_guard_checks
+}
+
+macro_policy {
+  seed_best_known_macros = true
+  discover_new_macros_rounds = 1, 2
+  promote_if_used_more_than = 3
+  apply_promoted_macros_to_next_round = true
+  score_only_round = 3
+}
+
+instrumentation_policy {
+  round_1_macro_tracking = true
+  round_2_macro_tracking = true
+  round_3_macro_tracking = false
+  round_1_tracers = true
+  round_2_tracers = true
+  round_3_tracers = false
+  round_3_production_like = true
+}
+
+timeout_policy {
+  timeout_all_surfaces = true
+  timeout_seconds_per_surface = 10
+  timeout_result_is_partial_but_valid = true
+}
+
+honesty_policy {
+  deterministic_benchmark_not_live_BRAXON_claim = true
+  elapsed_time_is_local_phone_runtime = true
+  work_units_are_comparable_internal_units = true
+  binary_translation_is_downstream_only = true
+}

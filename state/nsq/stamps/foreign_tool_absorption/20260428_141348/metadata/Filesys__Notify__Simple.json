@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Filesys::Notify::Simple",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Filesys/Notify/Simple.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Filesys__Notify__Simple.source",
+  "source_sha256": "34da2122b182e2b791104e3735ed4fc166bdf092387e6187e8f930e5e47b8f48",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Filesys__Notify__Simple.translated.nsq",
+  "nsq_body_sha256": "2904f86b01a489af10f16f3c84db33cba2c2be787738eefdcd84e7c75374a55b",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "nsq.court.route.v3",
+  "route": "semantic_benchmark",
+  "owned_by": "NSQ_COURT",
+  "king": "compositor",
+  "queen": "linter",
+  "executor_allowed_only_as_court_route": true,
+  "acceptance_runner": "nsqasm_aarch64_no_libc",
+  "c_reference_runner_allowed_for_acceptance": false,
+  "c_reference_runner_storage": false
+}

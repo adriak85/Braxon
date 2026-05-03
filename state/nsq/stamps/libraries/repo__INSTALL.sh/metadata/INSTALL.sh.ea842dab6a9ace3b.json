@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__INSTALL.sh/asm/macros/INSTALL.sh.ea842dab6a9ace3b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.194323+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__INSTALL.sh",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__INSTALL.sh/metadata/INSTALL.sh.ea842dab6a9ace3b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "INSTALL.sh",
+  "source_bytes": 1358,
+  "source_sha256": "ea842dab6a9ace3b5591cef1837a3d88589238395a97839d76648e3bddd84556",
+  "stamp_id": "nsq.asm.repo__INSTALL.sh.INSTALL.sh.ea842dab6a9ace3b"
+}

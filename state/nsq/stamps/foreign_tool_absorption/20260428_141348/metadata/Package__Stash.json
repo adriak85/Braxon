@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Package::Stash",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Package/Stash.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Package__Stash.source",
+  "source_sha256": "7f9f734eb392162c91b0c89c42de4facc1c853a3e6e38e1d2f1da57d7aee1c62",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Package__Stash.translated.nsq",
+  "nsq_body_sha256": "9f71bc7fa5688d203a0e5b48f49717180e7fe7dd4da558f1770431913409b842",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Package::Stash::XS",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Package/Stash/XS.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Package__Stash__XS.source",
+  "source_sha256": "f9722dec3bf5239231a15993fddace436c4d6ffd417d0c8b106fbdda04d7ea96",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Package__Stash__XS.translated.nsq",
+  "nsq_body_sha256": "3c1224715a1c4f375101d83bba7ef9c42a5a1685022412c3c4a2f7c5278d4190",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

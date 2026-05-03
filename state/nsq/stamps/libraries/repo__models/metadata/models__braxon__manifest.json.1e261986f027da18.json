@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__models/asm/macros/models__BRAXON__manifest.json.1e261986f027da18.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.284292+00:00",
+  "harm_hit_count": 5,
+  "library": "repo__models",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__models/metadata/models__BRAXON__manifest.json.1e261986f027da18.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "models/braxon/manifest.json",
+  "source_bytes": 3667,
+  "source_sha256": "1e261986f027da189452b6175bc7000631a462258e2920b2a4ed7f42ece8fa6b",
+  "stamp_id": "nsq.asm.repo__models.models__BRAXON__manifest.json.1e261986f027da18"
+}

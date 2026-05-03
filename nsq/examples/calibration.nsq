@@ -1,0 +1,4 @@
+# NSQ calibration lane
+calibrate semantic:address :basis wake :gain 4 :window 16 :phase 2
+calibrate delta:route:align :basis graph :gain 9 :window 24 :phase 1
+calibrate membrane :basis state :gain 7 :window 12 :phase 3

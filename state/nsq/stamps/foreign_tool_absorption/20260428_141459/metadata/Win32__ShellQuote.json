@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Win32::ShellQuote",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Win32/ShellQuote.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Win32__ShellQuote.source",
+  "source_sha256": "5c78acf599faf7359739d1438d5d96bfad2496a82468a41e727f836370a2a829",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Win32__ShellQuote.translated.nsq",
+  "nsq_body_sha256": "4962f7a6bf171b6b6475f2abc0473a8fde61dabe7cb6c7735a9a9c67832cee72",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

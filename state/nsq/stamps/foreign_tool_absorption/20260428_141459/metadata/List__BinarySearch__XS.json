@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "List::BinarySearch::XS",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/List/BinarySearch/XS.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/List__BinarySearch__XS.source",
+  "source_sha256": "8c205aa9e619c7ad4bafcce98b3ce7a73632a9a2ed1e7882d6fcb5648d6be18a",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/List__BinarySearch__XS.translated.nsq",
+  "nsq_body_sha256": "5b72603d13d6862d5c5c769c09cc18651e90f1f5b73b68e98f76090224c70c4d",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

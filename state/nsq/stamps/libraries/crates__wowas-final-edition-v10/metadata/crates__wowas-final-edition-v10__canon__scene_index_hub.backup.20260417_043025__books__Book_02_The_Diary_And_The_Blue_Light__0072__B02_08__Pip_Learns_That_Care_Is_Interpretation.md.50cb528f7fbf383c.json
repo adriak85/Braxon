@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0072__B02_08__Pip_Learns_That_Care_Is_Interpretation.md.50cb528f7fbf383c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.608492+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0072__B02_08__Pip_Learns_That_Care_Is_Interpretation.md.50cb528f7fbf383c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0072__B02_08__Pip_Learns_That_Care_Is_Interpretation.md",
+  "source_bytes": 227,
+  "source_sha256": "50cb528f7fbf383ca3485c5c6393ae975db1f01f6cf1c60dc7c100eaabfeeec6",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0072__B02_08__Pip_Learns_That_Care_Is_Interpretation.md.50cb528f7fbf383c"
+}

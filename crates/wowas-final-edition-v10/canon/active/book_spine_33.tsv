@@ -1,0 +1,34 @@
+book_num	volume_num	book_code	active_title	legacy_source	function	arc_band	status
+1	1	B01	Choices Make World	Choices Make World	origin; Mack prophecy; 40Hz; Xeth first contact; Dervish correction	origin_diamond_world	active_v14
+2	1	B02	The Diary and the Blue Light	The Diary and the Blue Light	Daisy May and Majiskii entrusted; blue-light thread; early Rylos pressure quarantined against Boojay naming	origin_diamond_world	active_v14
+3	1	B03	The First Thread	The First Thread	Xeth reveal; true-name recognition; first deep thread logic	origin_diamond_world	active_v14
+4	1	B04	Crocodile Smile	Crocodile Smile	cockatrice flight; Rylos branch pressure; pocket sanctuary seed	origin_diamond_world	active_v14
+5	1	B05	Runes and Wound	Runes and Wound	Glass Forge opens here; idealization begins; control economy begins	forge_wound	active_v14
+6	1	B06	The Refusal and the Wound	The Refusal and the Wound	Xeth refusal/misread; Solvaenkyr threshold; revelation chord	forge_wound	active_v14
+7	1	B07	The Rift Widens	The Rift Widens	rift expansion; relationship pressure; world fracture broadens	forge_wound	active_v14
+8	1	B08	The Trap Tightens	The Trap Tightens	trap pressure; late concealment; betrayal must not telegraph too early	forge_wound	active_v14
+9	1	B09	The Diamond Breaks	The Diamond Breaks	Diamond Break; Rylos betrayal close to break; Pip transition path begins	diamond_break	active_v14
+10	1	B10	Mack Falls	Mack Falls	Mack sacrifice/fall branch; bone-rock/tree-zombie cost logic	diamond_break	active_v14
+11	1	B11	The Portal Opens	The Portal Opens	portal route opens; setup for Xethrolund war/stasis	diamond_break	active_v14
+12	2	B12	Stasis	Stasis	400-year Pip/Xethrolund portal war/stasis; glyph/code magic pressure	portal_stasis	active_v14
+13	2	B13	The Afterwake	The Afterwake	post-stasis afterwake; reorientation shock begins	portal_stasis	active_v14
+14	2	B14	The Long Reorientation	The Long Reorientation	long-scale return; overcorrection and fear of codependence	portal_stasis	active_v14
+15	2	B15	Suffocating in Silence	Suffocating In Silence	silence pressure; hidden sonomancy discipline; private practice logic	post_stasis_world	active_v14
+16	2	B16	The Deepening World	The Deepening World	world systems deepen; atlas and faction pressure expands	post_stasis_world	active_v14
+17	2	B17	Black Heart Scar	Black Heart Scar	black-heart scar arc; damage visible without early Rylos darkness drift	post_stasis_world	active_v14
+18	2	B18	Strange Gravity	Strange Gravity	gravity/relational distortion; Rolzen route preparation	post_stasis_world	active_v14
+19	2	B19	The Cracking Core	The Cracking Core	core cracking; pre-endgame systemic fracture	post_stasis_world	active_v14
+20	2	B20	The Beforemath	The Beforemath	beforemath staging; triad pressure and consequence inventory	pre_endgame	active_v14
+21	2	B21	The Final Descent	The Final Descent	descent into terminal crisis; hard casualty curve begins	pre_endgame	active_v14
+22	2	B22	The Last Open Gate	The Last Open Gate	last open gate; final passage and access logic	pre_endgame	active_v14
+23	3	B23	The Final Resonance	The Final Resonance	final resonance pressure; sonomancy remains rare before Blood Cello scale	endgame_resonance	active_v14
+24	3	B24	Born to Die	Born To Die	mass death pressure; joy against despair; wrong mutations worsen crisis	endgame_resonance	active_v14
+25	3	B25	Death Is Rebirth	Death Is Rebirth	Blood Cello transformation; Dervish/Mack/Neith return; rebirth world begins	endgame_resonance	active_v14
+26	3	B26	The Held Fragment	inserted_capacity	fallout from rebirth; held-fragment quest hooks; accountability figures begin	rebirth_aftermath	active_insert
+27	3	B27	The Four-Dad Impossible	inserted_capacity	post-Blood-Cello bond-gestation aftermath; healer confirmation; serious metaphysical consequence	rebirth_aftermath	active_insert
+28	3	B28	The New Ground Sings	inserted_capacity	Mack planet-making and condensed dark-matter ground; resurrected populations stabilize	rebirth_aftermath	active_insert
+29	3	B29	Neith Returns Changed	inserted_capacity	Neith transformation and accountability; villains as change figures without erasure	rebirth_aftermath	active_insert
+30	3	B30	The Creature Census	inserted_capacity	5,000-creature integration and ecology pressure across the remade world	new_world_expansion	active_insert
+31	3	B31	The Two-Million Lives	inserted_capacity	ancillary population/game-world realism; atlas lives and background economies	new_world_expansion	active_insert
+32	3	B32	The Last Accounting	inserted_capacity	90% mortality accounting; memorial compensation; moral consequence closure	new_world_expansion	active_insert
+33	3	B33	Willow and Stone	inserted_capacity	final integrated world-state; joy as vow; no unreconciled deprecated branch left active	final_integration	active_insert

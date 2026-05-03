@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__config/asm/macros/config__kingdom__court_canonical.json.197bf092a6ec7175.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.461666+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__config",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__config/metadata/config__kingdom__court_canonical.json.197bf092a6ec7175.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/kingdom/court_canonical.json",
+  "source_bytes": 18645,
+  "source_sha256": "197bf092a6ec7175f1fb4827486fb5fa89f6d308a22f8e549ac66c257cca99f6",
+  "stamp_id": "nsq.asm.repo__config.config__kingdom__court_canonical.json.197bf092a6ec7175"
+}

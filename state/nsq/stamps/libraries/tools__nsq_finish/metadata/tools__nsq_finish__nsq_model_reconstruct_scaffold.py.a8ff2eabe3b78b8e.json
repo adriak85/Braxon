@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/tools__nsq_finish/asm/macros/tools__nsq_finish__nsq_model_reconstruct_scaffold.py.a8ff2eabe3b78b8e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.291107+00:00",
+  "harm_hit_count": 0,
+  "library": "tools__nsq_finish",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/tools__nsq_finish/metadata/tools__nsq_finish__nsq_model_reconstruct_scaffold.py.a8ff2eabe3b78b8e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "tools/nsq_finish/nsq_model_reconstruct_scaffold.py",
+  "source_bytes": 3391,
+  "source_sha256": "a8ff2eabe3b78b8e2115153e06d5ebf2502dc99e4b90aba1df7c839e3ff8af8e",
+  "stamp_id": "nsq.asm.tools__nsq_finish.tools__nsq_finish__nsq_model_reconstruct_scaffold.py.a8ff2eabe3b78b8e"
+}

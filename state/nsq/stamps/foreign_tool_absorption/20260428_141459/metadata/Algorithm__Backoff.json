@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Algorithm::Backoff",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Algorithm/Backoff.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Algorithm__Backoff.source",
+  "source_sha256": "ac435b111380fe4d65fad7a59915b2078b42c0066577069c0ef9f42ce836f417",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Algorithm__Backoff.translated.nsq",
+  "nsq_body_sha256": "a6e2cf106ea22cc3c8e3436a68cc932cc62d1acd686de9ff6b3410f9c5937f30",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

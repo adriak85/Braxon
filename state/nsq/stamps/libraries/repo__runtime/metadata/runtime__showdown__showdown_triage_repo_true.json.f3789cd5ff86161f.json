@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__runtime/asm/macros/runtime__showdown__showdown_triage_repo_true.json.f3789cd5ff86161f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.506897+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__runtime",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__runtime/metadata/runtime__showdown__showdown_triage_repo_true.json.f3789cd5ff86161f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "runtime/showdown/showdown_triage_repo_true.json",
+  "source_bytes": 1295,
+  "source_sha256": "f3789cd5ff86161f715833cbaebe3a447a9badb079f25e0c7e0e0d1652d82041",
+  "stamp_id": "nsq.asm.repo__runtime.runtime__showdown__showdown_triage_repo_true.json.f3789cd5ff86161f"
+}

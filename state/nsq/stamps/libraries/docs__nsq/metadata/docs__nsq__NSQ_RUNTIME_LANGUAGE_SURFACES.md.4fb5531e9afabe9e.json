@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_RUNTIME_LANGUAGE_SURFACES.md.4fb5531e9afabe9e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.242809+00:00",
+  "harm_hit_count": 0,
+  "library": "docs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_RUNTIME_LANGUAGE_SURFACES.md.4fb5531e9afabe9e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/nsq/NSQ_RUNTIME_LANGUAGE_SURFACES.md",
+  "source_bytes": 4270,
+  "source_sha256": "4fb5531e9afabe9e60e434e46c378ee698e6bc33845b53d98664945db96dd78e",
+  "stamp_id": "nsq.asm.docs__nsq.docs__nsq__NSQ_RUNTIME_LANGUAGE_SURFACES.md.4fb5531e9afabe9e"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Log::Dispatch::FileRotate",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Log/Dispatch/FileRotate.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Log__Dispatch__FileRotate.source",
+  "source_sha256": "29efa351157e24b199727ca6879896fc2ac56db45057a0228ad1c636b6798109",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Log__Dispatch__FileRotate.translated.nsq",
+  "nsq_body_sha256": "18c908750b08e973a64449c108c7c2c37b82525e3422b73c8bf09f4ff0a9cce6",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

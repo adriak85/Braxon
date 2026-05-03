@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0115__B01_29__Rylos_Vaynie_Johnson_Tests_Whether_He_Is_Really_Inc.bbb428382e23cb51.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.130421+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0115__B01_29__Rylos_Vaynie_Johnson_Tests_Whether_He_Is_Really_Inc.bbb428382e23cb51.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0115__B01_29__Rylos_Vaynie_Johnson_Tests_Whether_He_Is_Really_Included.md",
+  "source_bytes": 270,
+  "source_sha256": "bbb428382e23cb51b6776130c9e145458a52b4a7f045cb7089e0b6e044b70e7c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0115__B01_29__Rylos_Vaynie_Johnson_Tests_Whether_He_Is_Really_Inc.bbb428382e23cb51"
+}

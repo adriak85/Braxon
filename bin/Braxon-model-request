@@ -1,0 +1,23 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="${BRAXON_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+MODEL="${1:-all}"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+OUT="${2:-$HOME/storage/shared/Download/citadel699_nsq_request_${MODEL}_${STAMP}}"
+
+cd "$ROOT"
+
+if [ ! -x "$ROOT/bin/nsq-citadel699" ]; then
+  echo "ERROR: missing bin/nsq-citadel699. Citadel699 must exist before request capsules can be made."
+  exit 1
+fi
+
+echo "NSQ_ONLY_MODEL_TRANSFER: request capsule only"
+echo "model=$MODEL"
+echo "out=$OUT"
+echo "no_huggingface_fetch=true"
+echo "no_raw_payload=true"
+echo "no_lfs_pointer=true"
+
+exec "$ROOT/bin/nsq-citadel699" make-request --model "$MODEL" --out-dir "$OUT"

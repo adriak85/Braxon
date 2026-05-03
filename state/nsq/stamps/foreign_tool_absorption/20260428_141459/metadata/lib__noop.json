@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "lib::noop",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/lib/noop.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/lib__noop.source",
+  "source_sha256": "d1a7db9c81da6c681709e06e4186c15b3ec95d3179305a8ade3fcc497c518da4",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/lib__noop.translated.nsq",
+  "nsq_body_sha256": "7f10160dfe47fe1b70a7976748f4e483e7e23d5c4e66b41506881e34d67f4bf2",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

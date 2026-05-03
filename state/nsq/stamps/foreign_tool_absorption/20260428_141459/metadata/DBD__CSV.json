@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "DBD::CSV",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/DBD/CSV.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/DBD__CSV.source",
+  "source_sha256": "af5c895c691cdbc140284728a049ccea314a083e15fac9f4e6f4f3251976ad24",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/DBD__CSV.translated.nsq",
+  "nsq_body_sha256": "1261942de30abf69e2d34e653ffc75cd10486d3a988b86ffb1afd8a987ad3516",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

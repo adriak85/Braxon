@@ -1,0 +1,74 @@
+NSQ_APP global_metadata_law
+NSQ_APP_VERSION 1
+
+NSQ_CANONICAL_IDENTITY {
+  NSQ is the lowest base language.
+  NSQ is the substrate.
+  NSQ is the machine.
+  NSQ is read as NSQ.
+  NSQ is executed as NSQ.
+
+  A lever is one switch.
+  A lever is one eighth of an NSQ bit.
+  Hertz frequency is adjusted to position the lever.
+
+  A stamp is not a bit.
+  A stamp is not a byte.
+  A stamp is not a scalar.
+  A stamp is a hot-swappable macro representation built from NSQ machine reality.
+}
+
+NSQ_GLOBAL_METADATA_LAW {
+  every_tracked_object_has_identity_metadata = true
+  every_generated_object_has_source_lineage = true
+  every_dependency_has_reverse_dependency = true
+  every_alteration_creates_impact_event = true
+  altered_source_marks_dependents_stale = true
+  altered_metadata_marks_routed_outputs_stale = true
+  proof_green_requires_current_source_hashes = true
+  generated_reports_are_not_source_authority_by_default = true
+  generated_noise_is_excluded_from_scored_harm_counts = true
+  metadata_tracks_effects_without_becoming_payload = true
+}
+
+NSQ_OBJECT_CLASSES {
+  source_authority = tracked_direct_source
+  nsq_carrier = active_nsq_authority_carrier
+  law_spec = human_readable_law_surface
+  support_tool = implementation_support_surface
+  generated_index = generated_tracking_surface
+  proof_report = generated_verification_surface
+  quarantine = non_authoritative_retained_record
+}
+
+NSQ_IMPACT_RULE {
+  if_object_hash_changes = emit_impact_event
+  if_dependency_hash_changes = mark_parent_stale
+  if_nsq_carrier_changes = rerun_nsq_doctor_and_stamp_refresh
+  if_law_spec_changes = rerun_law_impact_report
+  if_support_tool_changes = rerun_tool_proof
+  if_generated_index_changes = do_not_count_as_source_change_unless_promoted
+}
+
+NSQ_LINEAGE_RULE {
+  generated_object_must_record_source_path = true
+  generated_object_must_record_source_sha256 = true
+  generated_object_must_record_generation_tool = true
+  generated_object_must_record_generation_round = true
+  generated_object_must_record_authority_role = true
+}
+
+NSQ_REPAIR_RULE {
+  stale_items_are_not_deleted_automatically = true
+  stale_items_are_marked_and_reported = true
+  refresh_requires_explicit_rebuild_or_recode = true
+  metadata_cleaning_preserves_positive_tracking_identity = true
+}
+
+NSQ_ASM_OPERATING_METADATA_LAW {
+  asm_operating_form_requires_source_lineage = true
+  asm_operating_form_requires_reverse_dependency_tracking = true
+  BRAXON_binary_translation_requires_nsq_and_asm_lineage = true
+  binary_translation_is_generated_output_not_source_authority = true
+  moral_invariant_preservation_required = true
+}

@@ -1,0 +1,38 @@
+law_id	scope	status	priority	canonical_law	apply_note
+LAW001	global	active	P0	Do not trust manifests/control files as proof of application.	Read actual file contents; manifests and control docs are clues only.
+LAW002	global	active	P0	No extra versioning remains final canon.	Patch/version files are source material until absorbed, then redundant review/patch carriers should be removed or quarantined.
+LAW003	global	active	P0	Pip is adult, about 25, not fifteen.	Correct teen/15 branches or quarantine them as deprecated.
+LAW004	global	active	P0	Book 01 is Choices Make World.	The Fifteenth Birthday is a chapter/scene marker, not Book 01 title.
+LAW005	global	active	P0	Rolzen is Rolzen, not Rosen, and Rolzen is distinct from Rylos Vayne Johnson.	Never merge Rolzen/Rylos functions.
+LAW006	Mack	active	P0	Mack never uses human language.	Use root pressure, temperature, 40Hz/42Hz resonance, terrain, rooted motion, geology, and protective pressure.
+LAW007	Daisy May	active	P0	Daisy May never speaks and is never sacrificed.	Her power is wordless animal/family truth.
+LAW008	Majiskii	active	P0	Majiskii remains wordless animal/family truth.	She can carry impossible calm/power without speech.
+LAW009	Xethrolund	active	P0	Xethrolund's magic is glyph-based and compiled, like deterministic code/NSQ instruction.	Replace loose spellcasting wording with written glyph/instruction/execution language.
+LAW010	Rylos/Boojay	active	P0	Boojay/Rylos is accountability, not redemption.	Love may remain real; accountability is not cancelled.
+LAW011	Rylos/Boojay	active	P0	Rylos/Boojay betrayal timing stays late.	No signs of darkness until only a few chapters before the Diamond Break; no early villain flattening.
+LAW012	Glass Forge	active	P0	Glass Forge / Glass Palace starts in Book 05.	Do not move this arc to Book 01.
+LAW013	Portal/Stasis	active	P0	Portal time is exactly 400 years.	Rolzen is captured about 50 years before Pip returns from portal/stasis.
+LAW014	Book 15	active	P0	Quantum field is learned from Xethrolund in the Silence.	Glide is unavailable in Silence and regains meaningful use in Lucent/Ursula surface-state after rewind.
+LAW015	Book 17	active	P0	Flux field is learned from Rolzen and is opposite quantum field.	Rolzen prison-break/Flux discovery must carry Pip's 'that's what it looks like' response.
+LAW016	Book 17	active	P0	After prison-break clearance, Pip first hugs and loves on Daisy May and Majiskii, smiles big, then becomes unusually talkative asking Rolzen how it worked.	This immediately follows escape safety, before abstraction.
+LAW017	Book 17	active	P0	Rolzen's first line to Majiskii is: 'So you must be Majiskii!'	Rolzen blushes from surprise; Pip briefly forgot where he was.
+LAW018	Book 17	active	P0	Dogs choose only the correct prison route.	Hesitation, exploring, looting, or attempts to save the wrong way cost lives.
+LAW019	Book 17	active	P0	Rolzen was a gymnast daredevil performer; his partner wraith-aged; he protected New York by luring zombie Mack away until overwhelmed and taken.	Backstory must inform his feral rescue state and protective momentum.
+LAW020	Book 18	active	P0	Oregon coast / stones / cave dream / Idaho brochure / Onondaga route is active Book 18 canon.	Absorbed from v6 patch into active scene index.
+LAW021	Book 19	active	P0	Onondaga geode shell, three-day siege, gemstone emergence, zombie Mack attack, southbound pursuit, and Rylos shadow-glass/lemon-sun sequence are active Book 19 canon.	Absorbed from v6 patch into active scene index.
+LAW022	Book 24	active	P0	Pip pulls Rylos back from wrongful shadow-threshold draw and the Cockatrice-ripper runs Rylos through in that instant.	Payoff must be personal, not generic monster strike.
+LAW023	Book 25	active	P0	Blood Cello judgment matrix is active endgame law.	No-song, love+support, lonely blackout, mockery corruption, marionette-cello, undead punishment, and false-victory failure remain possible judgment branches.
+LAW024	Book 25	active	P0	Blood Cello last sentence has no adjectives: subject, verb, object. The note sustains.	Do not embellish the final sentence.
+LAW025	Pip dialogue	active	P0	Pip dialogue pressure-state law: short/practical in danger; clipped/quiet when hurt; suddenly specific/talkative in breakthrough moments.	Apply across all dialogue revisions.
+LAW026	Encounter placement	active	P0	Every satellite character needs at least one meaningful encounter; active core characters need at least three memorable events per book.	Use profile scores and scene function; no random permutation.
+LAW027	Dark transient encounter	active	P0	If an encounter matches a dark-aligned transient character, it becomes a plot-thread obligation.	Do not treat it as disposable background.
+LAW028	Wildlife/desert	active	P0	Wildlife and desert encounter layers must remain individually usable or flaggable.	Do not weld them into an inseparable combined system.
+LAW029	Source inspiration	active	P0	Non-WoWaS inspiration characters belong in hidden noncanonical source-inspiration lattice material.	Track what must be reimagined and what system reimagines it; do not import franchise material as canon.
+LAW030	Workflow	active	P0	Condense the crate into one canonical system before release.	No versions of versions of update patches as final surface.
+LAW031	Projection	active	P0	The genuine factor is whole-crate and content-driven.	Do not use one manifest, control file, README, registry, authority label, or compressed word count to estimate final size. Read book carriers, scene headings, scene hubs, active files, generated characters/creatures, patches, diagnostics, lattices, orbit files, ecology files, and all other WoWaS surfaces.
+LAW032	Projection	active	P0	The 33-book spine is the primary canonical order, not necessarily the final physical packaging.	If full prose expansion makes a canonical book too large, split it into reader-facing volumes while preserving the canonical order.
+LAW033	Projection	active	P0	5.585M words is only the low visible-spine floor.	Do not present it as the final genuine factor. The full-discovery ceiling under consideration is 94M finished prose words pending full file-by-file readout.
+LAW034	Transmedia	active	P0	WoWaS is a printed-books plus game/CYOA/MUD canon system.	Projection and value must account for printed multi-volume books, video game adaptation, choose-your-own-adventure branch layer, and persistent MUD/text-world implementation from the same canon.
+LAW035	Value	active	P0	Do not undervalue the canon as unfinished notes.	Treat the canon as completed creative/intellectual architecture; remaining work is implementation, condensation, prose expansion, and production packaging.
+LAW036	Production	active	P0	Game, CYOA, and MUD outputs must not fork canon destructively.	Prime canon remains the authority; branches are tracked as playable/adaptive paths, failure variants, or exploratory alternate routes without replacing the main canon.
+LAW037	Cleanup	active	P0	Deletion only follows absorption.	Do not delete a source/update/patch/version file merely because it is redundant-looking; delete or quarantine only after its content is represented in active canonical surfaces or final book carriers.

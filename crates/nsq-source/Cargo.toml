@@ -1,0 +1,23 @@
+[package]
+publish = false
+name = "nsq-source"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Canonical source ingress, sanitization, and prime representation surface."
+
+[lib]
+name = "nsq_source"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nsq-source"
+path = "src/main.rs"
+
+[dependencies]
+nsq-core = { path = "../nsq-core" }
+serde.workspace = true
+serde_json.workspace = true

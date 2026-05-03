@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+cd "${BRAXON_ROOT:-$HOME/Braxon}"
+exec python3 tools/nsq_native_hardware_proof/native_hardware_probe.py "$@"

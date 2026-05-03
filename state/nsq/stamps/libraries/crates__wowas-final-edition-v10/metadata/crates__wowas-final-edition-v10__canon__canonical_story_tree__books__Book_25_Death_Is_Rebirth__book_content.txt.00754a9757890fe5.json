@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_25_Death_Is_Rebirth__book_content.txt.00754a9757890fe5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.872239+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_25_Death_Is_Rebirth__book_content.txt.00754a9757890fe5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_25_Death_Is_Rebirth/book_content.txt",
+  "source_bytes": 27475,
+  "source_sha256": "00754a9757890fe571644401c9bb60535f4eab81fa658512b934ba217a3a4acc",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_25_Death_Is_Rebirth__book_content.txt.00754a9757890fe5"
+}

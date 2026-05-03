@@ -1,0 +1,20 @@
+{
+  "beyond_699_hit_count": 2113183,
+  "citadel_audit": "state/nsq/citadel699/current/audit.json",
+  "citadel_hit_count": 943,
+  "claims": {
+    "asm_seed_fold": true,
+    "bare_metal": false,
+    "full_music_generation": false,
+    "native_preview_synth": true,
+    "perpetual_runtime": false
+  },
+  "config": "config/nsq/BRAXON_music_app.json",
+  "config_present": true,
+  "ok": true,
+  "schema": "Braxon.music_app.doctor.v1",
+  "seed_pack": "state/nsq/site_rebuild/current/beyond_699_seed_pack.jsonl",
+  "seed_pack_present": true,
+  "synth": "bin/Braxon-music-synth",
+  "synth_present": true
+}

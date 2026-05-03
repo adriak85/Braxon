@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0062__B03_06__Mack_Names_Mercy_as_Architectural_Force.md.ce3266d70fb932f3.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.532684+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0062__B03_06__Mack_Names_Mercy_as_Architectural_Force.md.ce3266d70fb932f3.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_03_The_First_Thread/0062__B03_06__Mack_Names_Mercy_as_Architectural_Force.md",
+  "source_bytes": 162,
+  "source_sha256": "ce3266d70fb932f31c728ac9f4d3f78385b62910fc6ad14b2847300118ef7e1a",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0062__B03_06__Mack_Names_Mercy_as_Architectural_Force.md.ce3266d70fb932f3"
+}

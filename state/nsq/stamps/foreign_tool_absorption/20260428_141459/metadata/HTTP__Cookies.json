@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "HTTP::Cookies",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/HTTP/Cookies.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/HTTP__Cookies.source",
+  "source_sha256": "8ec156c1eb6fe05c430c7611dd37641f63fcef010a2cee532a184dad2a46cf18",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/HTTP__Cookies.translated.nsq",
+  "nsq_body_sha256": "b35d0541de49a4f94c9c9c50839b54e3bec51b3ebd39f0742157424e268b39d2",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

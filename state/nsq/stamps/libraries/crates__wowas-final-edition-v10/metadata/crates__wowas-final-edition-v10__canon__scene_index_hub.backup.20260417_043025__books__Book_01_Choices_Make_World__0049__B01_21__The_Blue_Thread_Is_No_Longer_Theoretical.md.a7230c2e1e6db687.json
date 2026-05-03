@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0049__B01_21__The_Blue_Thread_Is_No_Longer_Theoretical.md.a7230c2e1e6db687.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.038533+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0049__B01_21__The_Blue_Thread_Is_No_Longer_Theoretical.md.a7230c2e1e6db687.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0049__B01_21__The_Blue_Thread_Is_No_Longer_Theoretical.md",
+  "source_bytes": 200,
+  "source_sha256": "a7230c2e1e6db687114110009482447eac64d70632e15adeb3a861855ee293a9",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0049__B01_21__The_Blue_Thread_Is_No_Longer_Theoretical.md.a7230c2e1e6db687"
+}

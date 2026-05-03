@@ -1,0 +1,8 @@
+{
+  "rule": "Transfer only seed/context material for beyond-699 regions unless verifier proves deterministic regeneration.",
+  "schema": "nsq.site_rebuild_seed_pack.v1",
+  "seed_entries": 900,
+  "seed_pack": "state/nsq/site_rebuild/current/beyond_699_seed_pack.jsonl",
+  "source_hits_total": 2113183,
+  "truncated": true
+}

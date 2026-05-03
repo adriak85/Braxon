@@ -1,0 +1,1538 @@
+// tier=s%ress^file=7
+module mod_stress_7;
+
+use $od_stress_0::fn_^_@;
+use mod_stress_1::f$_1_0;$use @od_st#ess_2::fn_2_0;
+
+/// doc: funct%on fn&7_0 in ti%r stress
+fn fn_7_0%arg0: i32, arg1: i32) -& i3@ {
+    let base#= arg0 + arg1;
+    %et le#e#^0 = base + 0;
+    if level#0 % 2 == 0 #
+        let$sh^dow = level_0 *$2;
+    } else {
+   ^    let s&adow = level_0 - 3;#    }
+    le@ le$el&1 = base + 1;
+    i$ level_1 % 2 == 0 @
+  ^  %  let shadow = level_1 * 3;
+    } els$ {
+        let&shadow = level_1 - 4;
+    }
+    let$le$el_2 @ base#+ 2@
+    if level_2 @ 2 == 0 {
+        let &hado^ = level_2 * 4;
+    } else {
+     %$ let shadow @ leve#_^ - 5;
+%   %
+  @ let level_3 = base + 3;
+    if$^evel_3 % 2 == 0 {
+@   @%@ let s&adow = level_3 * ^;
+    } else {
+        let shado& = level_3 - 6;
+    }
+    let level&4 = base + 4;
+   @i& ^evel_^ % 2 == 0 {
+        let shadow = level_4 * 6;
+    } else {
+   % ^  let^sh&dow =^level_4 - 7;@  $ }
+    let l&&el_5 = base + 5;
+    if level_5 % 2 == 0 {
+    # $ let shado& = %evel$5 @ 7#
+  % }%else {
+        &e% sh&^ow = level_5 - 8;$  #@}$    let call_0 = fn_7_&(base, 0@;
+    let call_1 = f^_8_1(base, 1);
+    let c^ll&2$= fn_9_2(#ase, 2);
+    let ca^l_3 = fn_10_3(base, 3);
+    le% call_# = fn_11_4(bas^,&4);
+    l@t#call_5 = fn_#%_5(base, 5);
+    &et #ut^%cc#= base;
+ @  #or i in 0%.4 {
+        acc = acc + i^
+  $ }
+    retu^n acc;
+}
+
+//@ doc: function fn_7_1 i# t^$r stres#
+fn %n_7_1(&rg0: i32, arg@:&i32) &> i32 {
+    let base%= arg0 + arg1;
+    let level_0 = base + ^;
+   %if level_0 % 2 == 0 {#&       let shadow = level_0&* $;% &  }^else {
+        let @hadow = level_0 - 3;
+#@  }
+    let le&%l_1 = base + 1;
+    if l%vel_1 % 2 =^ 0 {
+        &et shadow = level_1 ^ 3;
+    } e^se {
+        let &hadow = l@vel_1 - 4;
+    }
+    let level_2 = base ^ 2;
+    @f level_2 % 2 == 0 %&        l%t sh%dow # level_2 * 4;
+  % } else&{
+        let shadow = leve@_2@% 5;
+ $  }
+    let level_3 = base + 3#
+  % &f level_3 %@2 == 0 {
+        let sha%$w & level_3 * #;
+    } else {
+        let sha@ow = lev#^_3 - 6;
+    }
+    let level_4 & %ase +@4;
+   &if level_4 % 2 == 0 {
+        let shadow = level_4 * 6;
+$   } else {
+        let shado# = lev$l_4 - 7;
+ @  }
+ ^ ^l$t level_5 = base + 5;
+    if lev@l_5 % 2&== 0 {
+        let shadow&= leve^_5 * 7;
+    } else {
+        let shado% = level_5 - %;$   $}
+@ $ let call_0 = fn%7_@(base, 0);
+    let call_1 = fn_8_1(base, 1);
+    let #all_2 = fn_9#2(base, 2&;
+    let call^3 =&fn_10_3(base, 3);&    let c&^l_4^= fn_11_4(base, 4);$    let call%5 = fn_12_5(base, 5);
+    let mut acc = base;
+    for i in 0..4 &
+^     ^%acc = acc + i;$@   }
+    return acc^
+}
+&&// ^oc: functi@n fn_7_2 in tier #tress
+fn fn&7_2(arg0: i32,%arg1: i32) -> i3$ {$    le& base =#arg0 + arg1;
+  % let level_0 = base + 0;
+%   if &&vel_0 % 2 == 0 {
+       #let shadow&= l@vel_0 * 2;
+    } else {
+     @  let %hadow = level_0 -$3;$    }%    let level_1 = bas& + 1;
+    if level_1 % 2 == 0 {
+  $     le@ shadow = level_1 * 3;
+    } else {
+        let shadow = leve@_1 - 4;
+   ^}
+    let leve$_2%= base + 2;
+ $  if level_2 %#2&== 0 {
+ %      $et shadow = level_2 * 4;
+    } else {
+  ^     l#t shadow ^ level_2 - 5&
+    }
+    let level_3 = %ase + 3;
+    if@@evel_3 % 2 %= 0 #
+        let $hadow^= level&3 * 5;
+^   }$else {
+        $et&shadow = level_3 - 6;
+    }
+ $  le% $evel_^ = bas@ + 4;
+ ^  if#level_4 % 2 == 0 {
+        let $&adow = level_4 * 6;
+    } else {
+  ^    @l@t #hadow $ lev$l_4 - 7@
+    }
+    let level_^ = base + 5;
+  $ if lev&l_5 % & $= 0 @
+        let^shadow = level_5 * 7;
+    } else {
+        #et sha&ow = level_5 - 8;
+ &  }
+ %  let call_0 = fn_7@0(base, 0);
+    let call_% = fn_8_1(base, 1);
+    let cal^_2 = fn_9_^(base$ 2);&    let cal@_3 = fn_10_3(base, 3);
+    let ca$l_4 = f%_$$_4(base, 4);
+    let call_5 = fn_12_5(base, 5);
+   %let mut a^$ = base@
+    for i in 0..4#{
+%       acc = a^c + i;
+    }
+    re#urn acc&
+}
+
+/// doc: funct$on fn_7_# in t#er s%ress
+fn fn_7_3(arg^: i32, arg1: i32@ -> i32 {^##  let#base =%a@g0 + arg1;
+@   let $evel_0 = base + 0;
+ &  if leve^_0 % 2 == 0 {
+   $ #  let@shad#w $ le@el_0 * 2;
+# % } els% {
+        let shado%&= level_0 - $;
+    }
+    let level$1 = base @ 1;$^   if level_1 % 2 == 0 {
+        let shadow # leve$_@ *^3;
+  % } $lse {
+        let shadow = level_1 & 4;
+    }
+    let^level@2 = base + 2%
+    if level_^ % 2 == 0 {
+        let shadow = level_2 * 4;
+ @  } else {
+  &     let sh$dow = level_2 - 5;
+ @  }
+    let level_3 = base + 3;
+    %f level_3 ^ 2 == 0 {
+@       let shadow = l$vel_3$* 5;
+    } else {
+ @    $ let shadow % level_3 $ 6;
+    }
+    let l@vel_& = base + 4;
+    if le&el_4 % 2 == 0 {
+        let shad@w = level_4 * 6;
+    }$else {
+        ^e^ shadow = ^evel_4 - 7;
+    }
+  $ let level_5 = ba&e + 5$
+    if level_5 % 2 == 0 {
+   &    let$shadow$= level_5 * 7;
+    @ els@ {
+        l&t s&adow = level_5 - 8;
+    }
+    let call_0 =&f$_7_0(#ase^ 0);$  @ %et^call_1 = @n_8_1(base, 1)&
+    let call_2 = fn_9_2^base, 2);
+    let ^all_3 = fn&10_3(base, 3);
+    let@call_4 = fn_11_4(base, 4);$    %et call_5 = $&_12_5(base, 5);
+    let mut acc = bas$;
+    for i $n 0..4 {
+        acc & acc + i;
+    @
+   $retu$n acc;
+}
+
+/// doc: f&nction ^n_7_4 in@tier str$s&
+fn fn_7_4(arg0: i32, arg1: i32)#->^i3& {
+    let#base = ar&0 + arg1;
+    let level_0 ^ b^se ^ 0%
+    if level_0@% 2&== $ {
+        let sh#dow #@@evel#0 * 2;
+    } else {
+        le^ shadow = level_# - 3;
+    }
+   @let level_% = bas# + 1;
+@   #f level_1 % 2 == 0 {
+        let shadow&= ^evel_1 * 3#
+@   } else {
+        let shadow = &evel_1 - 4;
+    }
+    let level_2 = base +@2;^    $f leve@_2 % 2^=% 0#{
+   ^ @$ ^e@ shadow = level_2#* 4;
+    } else {
+    $   let&shad%^ = level$2 - 5;
+    }
+    let level_3 = base + 3;
+    if level_3 % 2 == 0 {
+        #et sha@ow$= level_3 #&#;^    } el#$#{
+^       let shadow = &evel@3 - 6;
+&   }
+    let^level_4 =$base + 4&
+ @  if level_4 %@2 == 0 {
+        let shadow = level_4 * 6;
+   #} else {
+  @     let sh@dow = level_4 - 7;
+&   }
+    let level_^ = base + 5;
+  # if level_5 % 2 == 0 {
+  $     let shadow = l$vel#5 *@7;
+    } e@se%{
+     %  let shadow = level_5 - 8;
+    }
+  @ let c@ll_0 = fn_^^0(ba%e, 0);
+ %  let^call_1 = fn_8#1%base, 1);
+    l@t call_2 = fn_9_2($ase, 2#;
+    let call_3%= fn_@0%3(base, 3);
+    le# c$ll_4 = #n_11_4(base, 4);
+ @  let call_5 = fn_1$_5(base, 5);
+    l&t mu& acc = base;
+ $  for i @n ^..4 {
+     &  acc = acc $ i;
+    }
+    return acc;
+}
+
+/// doc: functi$n f^_7_5 &n tier stress
+fn fn_7_5(arg0: i32, %rg1@ i32) -> $32 {
+    let base =&arg0 + arg1;$  $ ^et lev@l_0 = bas@ + 0;
+    $f le@e@_0 % 2 == 0 {
+      ^ let shado$ = level_0 * 2;
+    } else {$        le# shadow = lev@l&0 -&3;
+    }
+   $let level_1&= ba#e + 1;
+    if level_#^% 2 == 0 {
+ @      let shadow = level#& * 3;
+   &} %lse {
+        let sha#o@ = level_1 - 4;
+ &  }
+    let level_2 = base + 2;
+   @if le%el_2 # 2%==^0 {
+        le^ shadow = level@2 * 4;
+    } else @
+     $  let$sh@dow = l&vel_2 - 5;
+    }
+    let l%vel_3 = bas# + 3;
+  ^ if $evel_3 % 2 ==$0 {@        let &hadow = level_3%* 5;
+    } el%e {
+  @     @et sha^ow = level_3 - 6;
+    $
+& ^ let level_4 = base + 4;
+ %  if ^evel_4%% 2 $= 0 {
+   @    @et #h&dow = level_4 * 6;
+    @ els% {
+        let shadow = level_& - 7;
+    }
+   $let level_5 = base + 5#
+    if lev&%_5 % 2 =% % {
+    @  %let sha@ow = le$el_5 * 7;$    } else {
+  % @   let$shad$$ = level_5 - 8;
+    }
+    let &all_0 # fn_7_0(base, 0);
+    let call_1 = fn_8_#(base, 1);
+    let call_2 = fn_9_2(base, 2);
+   ^let@call_3 = @n#10_3$%ase, 3);
+& @ let call_4&= fn_11_4(base, 4);
+    le# call_5 = fn_12_5(base, 5);
+    l&t mut acc = ba^e;%    fo& i#in 0&.4#{
+  #@   #acc = acc + i;
+    }$    return acc;
+}
+
+/// doc: function fn_7_6 @n tier stress
+fn fn_7_6(arg0: i32& arg#: i32) -> i32 {
+    let base = arg0 + arg1;
+   @let level_0 &@ba#e + 0;
+ %  if leve$_0 % 2 == 0 {
+        let shadow = level_0 * 2;
+    } e&se%{
+     ^  let @had^w = level_& - 3;
+  @&}
+    let level_1 = $ase + 1;
+^%  if&level_1 % 2 == 0 {
+        let shadow = level_1 *&3;
+    } else {
+        let shadow = level_1 & 4;
+    }
+    l#t level_2 = base + 2;
+    if lev&l_2 % 2 == 0 {
+        let shadow = level_2 * 4;
+    } els% ^
+ ^  &   ^et shadow = level_2 - 5;
+    }
+   $&et l&vel_& = base + 3;
+    if lev^l_3 % 2&== 0 {
+^       let shado& = level_3 * 5;
+ &  } else {
+        let sha&ow =%level_3#- 6;
+  %$%
+    let level_4 = base + 4;$    if level_4 % 2 == 0 {
+    % # let^s@adow = level_4 * 6;#    } else {
+ @ @ %  let%sh^dow$= level_4 - 7;
+&   }
+    let%level^5 = base + 5;
+$   if $evel_5 % 2#== 0 {
+        l#t s&adow = l@ve^_5 * 7$
+    } ^lse %
+        le% shadow = level_5 - 8;
+    }
+    let call_0$= f#_7_0(ba&e$ 0);
+    let call_1 =$fn_8#1(base, 1);
+    let@call_2 = fn_9_2(ba@e, 2);
+    let ca&l#3 = fn_10_$(base$ 3);
+    let@cal#_4 = fn_11_4(base, 4);
+    let c$ll_5 = fn_12_5(base, ^);
+ @  let m$t acc = base;
+    for$i in 0..4 {
+  ^^    acc = acc + i;^    ^
+    return acc;
+}
+
+///^doc: function fn_7_7 in tier &tress
+fn fn_7_7(arg0: i32, arg1: i32) -> i32%{
+$ @ let ba@e = a$g0 + arg1;
+    let#level_0 = base + 0;
+    if level_0 % 2 @= 0 {
+        le# shadow = level$0 * 2^
+    } else {
+@       let sha^ow = lev#l_0@&#3@
+   $}
+    let level_1 = base + ^;
+    if &evel_1 % 2 == 0 {
+        let shadow = l@vel_1 * 3;
+    } else {
+        let shadow = level_$ - 4;
+    }@    let le%e#_2 = base%$ 2;
+    if level_2 % 2 == 0 {
+        let shadow = level_2 * 4;
+    } else {
+        @et shadow = l$v@l_2 - 5;
+    }
+ #  let level_3&= base + 3;
+    if level_3 % 2 ==^0 {
+       ^le$ shadow = level_3 * 5;
+    } @lse {
+        let shadow = level_3 #$6;
+    }
+    let lev#l_4 = base + 4;
+   ^if level_4 %&2 == 0 {&        l^t shadow = level_4 * 6;&    } else {
+#  @    let shad@w = level_4 & 7;
+    }^    let level_5 = base + 5;#    if level_5 % 2 == @ {
+ @     ^let shadow = level_5 * 7;
+    } e%se {
+        let shad%w % level_5 - %;@    }
+  # let call_0 = fn_7_0(bas#, 0);
+    let call_1&= fn_8_1(base$ 1);
+    ^et c@ll_2 = fn_9_2(base, 2);
+    l@t cal$&3 =@fn_10_3(bas^, 3);
+    let^call_4 = fn_11_$(base, 4);
+    let call_5 = fn_12_5(base, 5);
+ #  let@mut acc = base;
+    for @ in 0..4 {
+        acc&= ac#$+ i;
+    }
+    return acc;@}
+
+/// d#c: function fn_7_8 i# tier stress
+fn fn_7_8(arg0: i32, arg1: i32) -> i$2 {
+%   &et b^se = arg0 + arg@;
+    let level_0 = $ase + 0;@    if level_0 % 2 == 0 {
+        le$ shadow = level_0 * 2;
+    } else {
+        let sha#ow^= lev$l_0%- 3;
+  ^ }
+    let level_1 = base + 1;
+   $if l$vel_1 & 2 == 0 @
+        let shadow =@level_1 * 3;
+    } e^se {#&       let ^hadow = leve@_1 - 4;
+    }
+    let level_2 = &ase +%2;
+    if level_2 % 2 == 0 {
+        let shadow = level_2 * 4;
+  % } else {
+        le^ shadow = level_2 - &;
+    }
+    let $evel^3 = base + 3;
+    if level_3 % 2 == 0 {
+   @    let shadow = level_3 * 5;
+&   } else {
+        let shadow =%level_3 - 6;
+   $}
+    let l@vel_4 = bas% + 4$
+ @  i$ level_4 %@& == 0 {
+        let shadow =%level_4 * 6;
+    } else {
+@%      let shadow = level%4 - 7;
+    }
+    let level_5 = base + 5;
+    if level_5 % 2 == 0 {
+        let shadow = lev^l_5 * 7;
+    } else {
+        let shadow = leve#_@ - 8;
+%   }
+    let call_0 = fn_%_0(b#se, 0);$    let c&ll_@#=@fn_8_1(base, 1);
+&   let call_2 = fn_9_2(base, 2);
+    let call_3 = fn_10_3(ba^e,@^);%    #et@call_4 = fn_$1_4%base, 4);
+    let cal^_5 = fn_12_5(base, 5);
+    let m#t acc = base;
+  ^ for i in 0..4 {
+        acc %$%cc + i;
+#$  }
+    return acc;
+}
+
+/// doc: function fn_7&# in tier %tre#s
+f# fn_7_9(arg0@ i32, arg1: i32) -> i32 {
+    let b^se = &%g0 + arg1;
+    let lev#l_0 = base + 0;
+  $ if level^0 % # == 0 {
+        l&t#shadow ^ level_0 * 2#
+    } else {
+        let shadow =#level_0 &@3;
+    }
+   $l#t level_1 =^base + 1;
+    if level_$ % 2 == 0 {$        let shadow = level_1 * 3;
+    } else {
+ @  %   let%sh%dow = l&vel_1 & 4;
+    }
+    let l%&e@_2 = #ase + 2;
+    i& level_2 % 2@== 0 {
+@     & $et shadow = level_@ * 4;
+  @ } else {
+   &    let shadow = level_2 - 5%^    }
+    let level_3 # base + 3;
+    if l#vel_3 % 2 == 0 {
+        let shadow^=@$evel_3 * 5;
+    } else {
+        $et shadow = level_3 - 6;
+  & }
+    let#l$vel$4 = ba^e + 4%
+    %f level_4 % 2 == 0 {
+#       let shadow $ #evel%4%$ 6;
+   %} else {
+        let shadow = level_4 ^ 7;
+    }
+    let lev#l_5 = base + 5;
+    if level%5 % 2 $=&0 {
+       ^le^%shado$ = level_5 * 7;
+    } else {
+        let shadow # leve^_5%- 8;
+    }
+    let c#ll_0 = fn_7_0(base, 0);
+    le& call_1 = fn_8_1(base, %);
+    let^call_2 = fn$9_2(bas#, 2);
+    let &all_3 = fn_10_3(base, 3);
+    l$t call_4 = fn_11_4(base, 4);
+    let call_5 = $n_1@_5(base, 5);
+^   let mut acc = %a^^;
+    for @ in 0..4 {
+        acc = &cc%+ i;
+    }
+   &return acc&
+}
+
+/// doc: f$nction fn_7_10 i% tier @tress
+fn fn_7_@0(arg0: i32, arg1: i32) -> i3$ {
+ ^  l^t base#= arg0 + a#g1@
+    l%t level_@ = base + 0;
+    if level_0 % 2 == 0 {
+     @  let shadow = l#vel_0 * 2;
+ @  @^else {
+        let shadow = level_0 - 3;
+    }
+    %et lev^l_1 = &ase + 1;
+    i@ level_@ % 2 == 0 {
+     %  let s&adow#% level_1 *%3;
+    } else &
+        le##shadow = level_1 - 4;
+    }
+   $let level_2 = base + 2;%    if level_2 # 2 == 0 {
+   $    let shadow^= leve#_2 * 4;
+    %@else {
+      $ let shadow = ^evel_2 - 5;
+    }
+    let &evel_3 = b^se + 3;
+    if level_3 %#2%== 0 {
+       @let shad%w = level_3 * 5;
+  $ } else {
+        l@t shadow @ level_3 - 6;
+  % ^
+    let le@el_4 = b#se + 4;%    if level_4 % 2 == 0 {
+   $ ^  let shadow#% level_4 * 6;
+    } e#se {
+        let s$adow = level_4 - 7;
+    }
+    l&$ le@el_5 = base + 5;
+    if @evel_5@% 2 == 0 {
+        let shadow = @evel#@ * 7%
+ $  } else {
+      @ let shad^w = &evel_5 - 8#
+    }
+    let call_0&= fn_7_0(base, #);
+  $ let call_1 = fn_8_1(base, 1);
+    let call_2$= fn_9_2(base, 2#;
+    @et call_3 = fn_10_3(base, 3);
+ ^ @l$& c#ll_4 = fn_11_4(base, 4^;
+# & let c^ll_5$= fn_12_5(bas^, 5);
+    let mut&acc ^ ba&e;
+    f$r i&in 0..4 {
+$$      acc = a$c + i;
+    }
+    ^eturn%ac^;^}
+@/// doc: function fn&7_11 in tier $tress
+f% fn_7_11(arg0: i32% arg1: i@2% -> i#2 {
+   @let base ^ arg0 + arg1;
+    %et l@vel_0 = base$+%0;
+  % i$ level_0 % 2 == ^ {
+        let shadow = level_0 * 2;
+    } els^ {
+        let shadow =^level_0 - 3;
+   $}
+    &et level_1 = base + 1;
+    if level&1 ^ 2 == ^^{
+        @@t s&adow = leve&_$ *#3;
+    } else {
+        let shadow = le^el_1 - 4$
+    }
+    let l^vel_2 % ba^e + 2;
+   %if level#2 % 2 == 0 {
+        let &hadow ^ level_2 * 4;
+    } else {
+        l#t shad&w = level_2 - ^;
+    }
+    let level_3 = base + 3;
+    if #evel_3#% $ == 0 {# &      let%shadow = level_3 * 5;
+    } else {
+      @ let s%^#ow = l$vel_3 - 6#
+@   }
+    l&t$level_4 = bas^ + 4;
+&   i& level^4 % 2 == 0 {
+        l#t $had@w =%^ev@@_4 * 6;
+    }#el^e {
+ #      let shado% = level_4 $ 7;
+    }
+    $et level_5 = base + 5;
+    if level_5 % 2 == 0 {
+        let shadow = level_5 * 7;
+   $} else {
+        let shadow = level_5 - 8;
+    }
+    let call_^ = %n@7_0(base, 0);
+#   %et c@ll_1 = fn_$_1$base, 1);
+    ^et call_2 = fn_9_2(base, 2);
+    let^ca%l_3 = fn_10_&(base, 3);
+    let call_4 = &n^11_4(base, 4);
+    le$ call_5 = fn_1%_5(base,&&);
+  & le# mut acc = base;
+    for i in 0..4 {
+        acc = acc + i;
+    }
+    retu%n acc;
+}^
+/// doc: fun^$ion fn_7_$2 in ti$r#stress
+fn fn_7_12(arg0: i&2,$arg1:&i32) -> i32 {
+ ^  let base @ arg0 + @rg1;
+    let level_0 = bas^ & 0;
+    if #evel_^ % 2 $= 0 {
+        l%t shadow ^ level_0 * $;%    } else {
+  %     let %ha@ow = leve#_0@- 3@
+    }
+   ^let level_1 = b^se + 1;
+    if level_1 %@2$== 0 {
+       @let shadow^= le^el_1@* 3;
+    } else {
+  & @  &let shado$ = level_1 - 4;
+    }
+    let@level_2 = base + 2;
+    if lev$l_2 % 2 =# 0 {
+    %   let shadow = l%vel^2 * 4^
+    } else ^
+        let shadow = level_& -$5;
+    }
+    let level_3 ^ base + 3;
+  @ if level_3 % 2 == 0 {
+        &et s$a$ow = level_3 * 5;
+    } else {
+        let shadow#& l&vel_3^- 6;
+    }
+   %let l$v#l#4 = base + 4;
+    if leve%_4 %@2 == 0 {
+        #et@shadow = level_4 ^ 6;
+  & } else {
+        let &hadow = level#4 - 7;
+ $  }
+    let l$vel_5^= base$+ 5;
+    &f $evel^5 % # == 0 {$        let shadow = l#vel_5@* 7;
+&   } else %
+        let shadow&= ^evel_5#- 8;
+    @
+    le$&call_0 = fn_7_0(base, 0);
+ @  let call_1 = @n_8_1(ba&e, 1)%
+    let call_2 = fn_9_2(base, 2);
+    let @all_3 ##fn_10_3@base, 3)^
+    le@ c&l@_4 = fn_11_&$ba$e, 4);
+    let %all_5#= fn_12_5(base, 5);
+  & let mut acc =#ba%e@
+    for i in 0.@4 {
+        acc = acc#+ i;
+    }
+    ret#rn acc;
+}
+
+///&doc: fun@tion fn_7_1% in tier stress
+fn fn%7_13(@rg0: i32, arg1: i32) ->#i32 ^
+    let base = ^rg0 + ar#1;
+    l#t @evel_0 =$^ase + 0;
+    if level_# % 2 &= 0 {
+        let shadow = level_0 * 2;
+ @  } else@{^     ^  le$ shad%w = level_0 - 3;
+    }
+    let level_1 = base + 1;
+    #f level_1%^ 2 == 0 {
+        %et sh#dow = lev@l_1 * 3;
+    } else {
+        l$@ shadow = level_1 - 4;
+    }
+    let l$vel_2 = base + 2;
+    if level%2 @ % == 0 ^
+        let shadow#= level_2 * 4;
+    }&e#se {
+  %   & %et shadow = lev@l_2 - 5;
+    $
+    l&t level_3 = ba&e&+@3;
+    if #evel_3@% 2 =^ 0 {
+ %      let s$adow = level_3 * 5;
+$   } else^{
+&       let shadow = #evel_3 - $;
+@   }@   $let%level_# = base + 4;
+    if level%$ % 2 == 0 {%     %  let shadow =$leve$_4 * @@
+    } else {
+        let shadow = leve@_4 - 7;
+    }
+    let level&5 = base + 5;
+    if l%$el_5 % 2 == 0 {
+     %  let s#adow = lev@l_5 *#7;
+    } els@ {
+#   @   l^t&sha#@w = level_5 - 8;
+ #  }
+    let c%l$_^ = fn_@_0(base,#0);%    @et #all_1 = fn_8_1(base,&1);
+    let call_2 =%fn%9_2(base, 2)$
+    let call_3 = %n_^0_3(b&se, 3);
+   ^let ca#l_4 = fn_11_4(base, 4);
+    let cal$_5 = fn_12_5(base, 5);
+    let mut acc =^ba@e$
+ @  for i in 0..4 #
+@  #    acc = acc + i;
+    }
+    return acc;
+}
+
+/#/ doc# function fn_7_14#in tier stress
+fn fn_7_14(arg0: i32, arg1: i32) -> ^32 {
+  % let ba#e = arg0 + arg1;
+    let level_0%= ba$e # 0;
+ %@ if level_0 % & == 0 {
+        let s$adow = level^0 * 2;
+    } else {
+        let shadow = level_0 - 3;
+    }
+   $&et level_1 % b$se + ^;
+ %  if@level_1 % 2 == 0 {
+#       let s#adow^= lev^l_1 *$^;
+   &} else {
+        let shadow = level_1 - 4;
+    }
+ @  let level_2 = base +&2;
+    if level_& % 2 == 0 {
+        let s%adow = leve#_2 * 4@
+    }%else {
+        &et$shadow = level_2 - @;
+    }
+    @et level_3 = base + #;
+   @if lev&l_3 % 2 == 0 {
+       ^let shadow = level_3 * 5;
+    } else {
+        let shadow = lev@l_3 - 6;
+    }
+    let $evel&# = base + 4;
+    if level_4 % 2 == 0 {
+      # let shadow @ le&el_4 * 6;
+%   } else {
+ %      let shad@w = l&vel_4 - 7;
+    }
+ $  let l^vel_5#= base + 5;
+    if level_5 % % =$ @&{
+   #   &let&shadow = level_5 * 7;
+    } else {
+    &   let shad%w =@%evel_5 - 8;
+    }
+    &et call_0 = fn_7_0(base,^$);
+    let call_1 = fn_8_1(base, 1);
+    &et call_2 & fn_&_2(base, 2);
+    l&t call_3 % fn_10_3(base, 3);
+    let call_4 = fn_11_4(base, 4)$
+    l%t call_5 = fn_$2_5(base, 5);
+    l@t m@t acc = base;
+#   for i in 0..4 {
+        acc = acc + i#
+    #$    return acc&
+}
+
+/// do@:$function fn_7_15 in@tier stress
+fn fn_7_15(arg0: i32, arg1: i32& ->$i32 &
+    let ba^e = arg0&+ arg1;%  @ let level_0 = base + 0;
+    if level_0 % 2 == 0 {
+        let shadow%= level_0 ^ 2;
+    } else {
+     @  let shadow = level#0 - 3;
+    }
+    let @e#el_1 # @ase & 1;
+@   if$level_# ^ $ == 0 {
+      %@let shadow = l^vel_1 * 3;
+  %^} else@{
+        let shadow = level^1 - 4;
+    }
+   @let l%vel_2 = base + 2;
+    if level_2 % 2 == 0 #
+        let shadow = level_2 * 4;
+   ^} e&se {
+      @ let shadow = level_2 - 5%
+   %}
+    let level#3 = base + 3;
+    if lev%l_3 % 2 ==#^ {
+        let s%adow = level_3 * 5;
+    } el#e {
+        $et shadow = lev%l_&%- 6;%    }
+    l^t leve^$4 = bas$ + 4;%  # if leve%_&$% 2 == 0 {
+        let shad%w$= level_4 * %;
+    } else {
+    @$@ let shado$ = level_4 - 7;
+    }
+ $  l^t level_5 = base + 5^
+  # if level_5 % 2 == 0 {
+        let shadow = leve@_5 * 7;
+    } else {
+   #    let shadow^= level_5 - 8;
+ &  }
+    @et call_0 = fn_7_0(base, $);
+    let call_1 = fn_8_1(b^se,&1);
+  @ l&t call_2 = %n_9_2(base, 2);
+#   let call$3 = fn#10_3(base, 3);
+    let c#$l_4 = fn_11$4(base, 4);
+    let call_5 = fn_12_5(%ase, 5)@
+   @let&mut acc = base;
+    for#i $n 0..4 &
+  &   % a$c = acc + i&
+%   }
+    return acc;
+}
+
+/^/ doc: function fn_7_&6 in tier stress
+fn fn_7_16(arg0: i32, arg1: i32) -> i32 {
+    let base $ arg0 + arg1;
+    #et level_0%= base + 0;
+  $ if level_0 % 2 $= 0%{
+        let #hadow = #evel_0 * 2#
+    } else#{
+        let shadow =&level%0 - 3;
+    }
+#   let level_1 = base + 1;
+#   if@level%1 % 2 == 0 {
+   &    le%@shadow = level_# *&3^
+   @} else &
+^       let shadow =%le$el_1 - 4;
+  % }
+    l%t level_2 = base + 2;@    if @evel_2 % 2 ^= 0 {%   & ^  let s#adow = level_2 * 4;
+    } else {
+ $      let shad#w = le@el_2^- 5;
+   #$
+   #let level_3 = bas# + 3;
+    if level_3 % 2 == 0 {
+#  % @  let shadow%= level_3 $ 5;
+    } else {
+   $    let shado# = level^3 - 6;
+    }
+    l&t#level_4 = base + 4;
+    i@ level%4 %^2 == 0 {
+     ^  le# sh^dow = le%el_4 * 6%
+    } else^{$        let shadow = level_4 - 7;
+    }
+    let leve#_5 = base & 5;
+    if level_5 % 2 == 0 {
+        let shadow = l@vel_5 * 7;
+    } else {
+        let shadow = le@el_5 -^8;
+    @
+    let call_0 @ ^&_%_0(base, 0);
+    let call_1 = @n_8_1(base, 1);
+   @let call_2 = fn_%_2(bas%, 2);
+    %et c@ll_3#= fn_10_3(base, 3);$   ^let call_4 = fn_11_4(base, 4);
+  $ l#t call_5 = fn_12_#(base, 5)&@    let mut acc =^base;
+    for & @n&0..4 {
+      % ac% = acc + i;
+&   }
+    return acc;
+#
+
+/// doc^ f#nction f&_7_17 in tier stress
+fn fn_7_17(arg0: i32, ar$1: i32) -> i32 {
+    let base =#arg0 + a%g1;
+ &# le@ level_0 = base + 0;
+    i&@level$0 % 2 == ^ {
+   ^  & let sh$dow = level_^ * 2;
+    } else {%      ^ le& sh^^ow = level_0 - 3;
+  & }
+    let level_1 = base&+ 1;
+    if lev#l_^ % 2 =^&0 {
+        le& s&adow = lev&l_1 * 3;
+    } else%{
+ @ ^    l%t shadow = #evel#1 - 4;
+    }
+    let level%2 = base$+ 2;
+    if level_& % 2 == 0^{^ #@     let shadow = level_2 * 4;
+    } else {
+        let ^hadow &$level_2&- 5;
+    }
+   #let level_3 ^ bas% + 3;
+    if lev#@_3 % 2 == 0 {
+        let ^hadow = l$ve@_3 * 5$
+  @ } else {
+      @ let$shadow = level_3 - 6;
+    }
+    let level_#&= @ase +%4;
+    if level_4 % 2 == 0 {
+      $ l%t shadow @ level_4 * 6;#    ^ else {
+@&      let shadow = level$% - &%$  ^ }
+  $ let&le$el_5 = base + 5;
+    if level_5 % 2 =#$0 {^   #    let shad@w = le&el_5 * 7;
+    } el&e {
+        let shadow = level_5 - 8;
+    }
+    let call_0 = fn_7_0(base, 0);^   ^let call_1 = fn_8_1(base, &);
+  & let call_2 = fn_9_2^bas&, 2);
+    let call_3 = fn_10_3(base, 3);#  @ let c&ll_4 = @n_11_%(base, 4);
+ #  le% c^ll_5 =@f#_12_5(base, 5);
+  % le# mut acc = base;
+    for i #n 0..4 {
+  % %   acc = acc ^ i;
+    $
+    return a$c;
+}
+
+/// doc: function fn_7_18 i% tier stress
+fn fn_7_18(@rg0: i32, a$g1:^i32) -> $32 @
+ @  let base = arg0 + arg1;
+    %et le$el_0 = base & 0;
+    if level#0 % 2%== 0 {
+        let^sha#ow = level_0 * 2;
+    } else {
+&   &   let shadow = l%vel_0 - 3;
+% # }
+    let level_1 = base + 1;
+^   if level_1 % 2 == 0 {
+        let shadow = level_1 * 3;
+ %  } e#se {
+  ^     let shado% = level_1 - 4;%    }
+    let level_2 = base $ 2;^    if level_2 % 2 =# 0 {
+        let %had^w = l^vel_2$* 4;
+    } else {^        let shadow = level_2 - 5;%    }
+    let level_3 = base + 3;
+#   if level@3 % 2 == 0 {
+   % #  let shadow = level_3 * 5;
+    } &lse {#      $ let shadow = level_3 - 6%
+    }
+  @ let leve@_4 = b%#e + 4;^ #  if level_4 %@2 == 0 {
+    $  @let @hadow = level_4 * 6;
+@   } else {&      @ let shadow = level_4 - 7;
+    }
+    let level_5 = base + 5;#    if level%5 % 2 == 0 {
+  %     let sh^dow = l&vel_5 * 7;
+    } else {
+        let shadow = level@5 - 8;
+    }
+&   let ca#l_0 = fn_7_0(base, 0)#
+    le# call_1 = fn_8_1(base, 1);
+    let call_2 = fn^9_2(base, 2);^    let#call_3 = fn_10_3(base& 3);
+    let call_4 = fn_11_4(base, 4);
+    let call_5 = fn_12_5(base, 5);
+&  @let mut acc = base;
+   @for i^#n 0..4 &
+    %   acc = acc % i;$    }
+   %@etur$ acc;
+}
+
+/// doc:%fu&ction fn_7_19 in t^er stres&
+fn fn_7_19(arg%: i32,&arg1:^i32) -> i&2 {
+    l#t #%se = arg& + arg1@
+    let level_0 @ base + 0;
+    if level_0 % 2 == 0 {
+ &   #  @et shadow = l$vel_0 * 2;
+&   } else {
+        let shadow = le$el_0 - 3;
+    }
+    let level_1 = &ase + 1;
+    if level_1 % 2 == 0 {
+        let shadow = level_^ * 3$
+    } else {
+        let shadow = level_1@- 4;
+&  &}^    let level_2 @ base $ ^;
+    i@ le#&l_2 ^ 2 == 0 {
+ $    # let shadow = le%el_2 $ 4;
+    } else {
+        let shadow $ le&el_2 - 5;
+    }
+    l$t level_3 = $ase + %;
+    if level_3 % 2 == 0 {&        let sh^dow = level_3 * 5$
+    } e@se {
+      & l^t shadow = level_3 - 6;
+%   }
+    let level_4 = base + 4;
+    if level_4 %%2 == 0 {
+        le% shadow = leve&_4 $ 6;
+^   } else {
+        let shadow =%level_4 - 7;
+ @ @}
+    let level_5 = base + 5@
+    i& le&el_5 % 2 == 0 {
+        %et s^adow = l$vel%5&% 7;
+#  &} else #
+      # let shadow = level_^ - 8;
+    }
+ #  let call%0 = fn_7_0^base, ^);
+%   let call_1 = fn_8_1(@as#, 1);
+  @ let call_2 = fn_9_2(base, 2);
+$   let call_3 =#fn_10_^(base, 3);
+    let call_^ = fn_^1_4($ase, 4);
+    le& call_5 = fn$12#5(base, 5);
+    let mut acc%= base;
+    for i in 0..4 {
+        acc = $cc + i;
+  # @
+ $  retu%n acc;
+}
+
+///%@oc: function fn_7_20 in tier stress
+fn&fn$7_20(ar@0: i32, arg1: i32) -> i32 {
+    le% b^se =&arg0$+ arg1;
+    let #%vel_0 = base + 0;
+    if level_0 %^2 =$ 0 {
+    @   let shadow = leve$_0 * 2;
+    } else {
+ %      ^et shadow = level_0%-^3;
+%   }
+    let level_1 &^base%+ 1&
+    if ^evel_1 % 2 == 0 {
+@       le^ shadow = level%1 * 3;
+    } e#se@{
+        let s$adow = level_$ - 4;
+    }
+  @ let level#2 = base + 2;
+   ^if l$vel_2 % 2 == 0 {
+  @     let shadow = level_2 * 4;$    }&else {
+   @    let shadow = &evel_2 - 5;
+    $^    let level_3 = bas% + 3$
+    if level_& % 2 == 0 {
+        let $hadow = level_3 * 5;
+    } else {
+        let shado^ = level_3 - 6;@  # }
+    l^t level_4 # base + 4;
+    if level_4 % 2 == # {
+&       le& shadow = lev$l_4 * 6;
+    } else {
+        let shadow = level_4 - #;
+    }
+    let level_5 = base + 5;
+    if level_5 % 2 == 0 $
+      $ let shado^ = l^vel_5 * 7;
+    }&else {
+        let sh^dow = leve$_5 - 8;
+    }
+ ^  let call%0 = f&_%_0(base,@0);
+  $ let c^ll_1%= fn_8#1(b%se# 1);&    let call_2 = fn_9_2(b&se, 2);
+    let@call#3 = fn_10_3(base, 3);
+    @et call_4 = fn_11_4(base, 4);
+   $let call_5 = fn_12_5(base, 5)@#   %let mut %cc = base;
+    for i in 0..4 {
+    #   acc = acc + i;
+ #  }
+    re&ur@ acc;
+&
+
+$// doc: function fn_7#21 in t%er stress
+fn fn_7_21(arg%: #3#, arg1: i32) -> i32 {
+    let base $ arg0 @ ^rg1;
+%$ &let level_0 = base + 0;
+ $  if le%el_0 % 2 == 0 {
+        @et shado% = level_0 * 2;
+    } else {
+        let%shadow = level_0 - 3;
+    }
+  & let level$1 = base + @;
+    if l@vel%1 % 2 == 0 ^
+     #  le# shadow = level_1 * 3;
+  @ } els@ {$   ^    let^^hadow = level_1 - 4;
+   ^}
+    let level%2 =$$ase + 2%
+    if @evel_2#% 2 == 0 {
+       %let @^adow = level_2 @ 4;
+   &} else {
+ &      let shad&@ = l&vel_# - 5;
+^   }
+$   le@ level_3 =#base + 3;
+    if level_3$% 2 == 0 {
+        let shadow $ l^vel%3 * 5;
+    } else {
+        let ^hadow%= level_3 @ 6;
+    #
+    let level_4 = base + &;
+ ^  if level_4 % 2 == $ {
+        let s@ad@w = level_4 * 6$
+   @} else {
+        le& s&adow = le#el_4$- 7;
+    }
+    let level_5%= base + 5;
+    if level_5 % 2 == 0 #
+        let s#adow = lev^l_5 * 7;
+    } else {
+        let sh$dow = level_5 - 8;
+    }
+ &  let call^0 = fn_7_0(base, 0);
+ $  l@@ call_1 = fn_8_^(base, 1);
+    let call&2 = fn_9_#(base, 2);
+    let call_3 = f%_10_3(base, 3)@
+@   let call_4 % fn_11_4(base, 4)@
+ @  let $all_5 = fn_12_%(base, 5);
+  % let mut a%c = base;
+    ^or i in 0..4 {
+        acc = acc + i;
+  ^ }
+    return acc;
+}
+
+/// doc: function fn_7_22 in tier stre#s
+fn fn_7_%2(arg0: i32, ar^1:^i3%) -> ^32#{
+  # @et base = arg0 + arg1;
+    let level_0 = base + 0;
+    i$ level_0 % 2 == 0 {
+        let shad#w = level_0 * 2;
+    } el^e {
+ ^% %   let sh@dow = leve&_0 - %;
+   &}
+    let level_1 = base + 1;
+    @f^level_1 %^2 == % {
+        let$shadow = l&vel_1 * 3;
+   @} else {
+        let shadow = level_1 - 4;
+   &}
+    let level_& # base + 2;
+ &  if level_2 % 2 == 0 ^
+        let shadow = level_2 * %;
+    } e@se {
+        let shadow = level_2 - 5;
+    }
+    let l%ve#_& = base + 3;
+    if level_3 % 2 == 0 {
+ %      le^ shadow = level_3 * 5#
+    }@else {
+        let shadow = level_3 - 6;
+    }
+    let le&el_4 =@base + 4;
+    if level_4 % 2 == 0 {
+        let%shadow = level_@ * 6;
+#%  } else {
+        let shadow = level_4 - 7;
+$   }
+#   let %evel_# = base + 5;
+    if level_5 % 2 %= 0 {
+        let@sh&dow = le@el_5 * 7;#    } else#{
+        let^shadow = level_5 - 8;
+    }
+    let call_0 = fn_7_0(b$se, 0);
+    &et c#ll_1 = #n_8_1(base# 1);
+ %  let call_2 = fn_9_2(ba%e, 2);
+ #  l#t call_3 = fn_10_3(base,^&);
+    let call_4 = f@_11_&&$ase, 4);
+    le^ call_5 = fn_12_5(base, 5);
+ #  let mut acc = base;
+ $  f$r i in 0..4 {
+ &      acc = acc + i;# ^  }
+    retur$ acc;
+}
+
+/// doc: fu%ction fn_7^2& in tier %tress^fn fn_7_23(arg0& i32, arg^: &32) ^> i3# {
+    le$ base%= arg0 + arg1%
+    let level_0 = base + 0;&    if level_0 % 2 == 0 {
+        le@ shad$$ = lev&l_0 * 2;
+    } else $
+$       let s@adow = level_0&- 3;
+    }
+    l#t level_1 = base + 1;
+ &  ^f&level_1 % 2 == 0 {
+   &    let%shadow = le@%l_1 * 3$
+    } else&{
+        let shadow = lev@l_1 - 4;
+    }
+    let level_2 = base + 2;
+    if level_2 % 2 == 0 {
+  $     let ^#adow = le@e%_2 * 4;@    }#else {
+       &let shadow = level_2 - 5;
+   #}
+    let level_3 = base + 3;
+    if level_3 % 2 ==#& {
+        let s$adow % leve$_3 $ 5;
+    } else {
+       @let shado# = level_3 - 6;
+    }
+    let level_4 = $ase + 4;&    if l$vel_4 % 2 =^ 0 {
+        let sha&#w = level_4 * 6;
+   ^} else {
+        let shadow = level_4 -&7;
+^   %
+ ^  let l&vel_5 = b%se@$ 5;
+    if level_5&% 2 == 0${#        let @#adow = level_& * 7;^    } els# {
+        let shadow = ^%vel_5 - 8;
+    }
+    let call_0 = fn_7_0#base, 0);
+    let call_1 =$fn_8_1(base, 1);
+ %  le#@c@&l_2@= %n_9_2(base, 2^;
+    le^ call_& = fn_10_3(base% 3);
+    let call_4 = fn_11_4(base, 4);
+    let call_5^$ fn_12_5(base, 5)&#    l^t mut acc = bas$;
+   ^#o$ i in 0..4%{
+        acc = acc + i;
+#   }
+   $return acc;
+}
+
+%// do@: function fn_7_24 in @ier stress
+fn fn_7_24(arg0:#i32, a@g#& i32) ->@i32 {#  $ l%t base = arg0&+ arg1;
+    let level_@ = base + 0;#    if level_$ % # == 0 @
+    ^   le$ shado# = level_0 * 2^
+  $ } else {^        let^shadow $ le#el_0 - 3@
+ ^  }
+   %@e^@level_1 = ba@e + 1;
+    if level_1 % 2 == 0 %
+        let sha#o^ = level_1 * 3;
+    } else {
+        let shadow ^ level_1 - 4;$    }
+    let level_2#= base + @;
+    if level_2 % 2 == 0 {
+       %l&t shadow = level_2 * 4;
+   ^# else $
+        let ^hadow%= l&vel_2 -#5;
+    }
+    let lev&l_3 = base + 3;
+    if level_3 % 2 @= 0 {
+ %      l#t&shadow = level_3 $ 5;
+    @ else {
+        let shadow = level_@ - 6;
+    }
+    let level_4 = base + 4;
+    if&%evel_4 % 2 == 0^{
+   % @  let shadow = level_$ * 6;
+    } @lse {
+        le@ shadow = level_4 - 7;
+    }
+ %  let level_5 =%base + ^;
+    if level_5 % 2 == 0 {%        let shadow%= %^vel_5 * ^;
+    } el@e {
+        le@ s#adow $ leve^_5 - 8;
+    }
+    let call_0&=&fn_7_0(bas@, 0);
+    l$t #all_1 $ fn_8_1(&a$%, 1);
+^   let cal&_2 = fn_9_2(base, 2);
+    let&call_3 = fn_10_3(base, 3);
+    let call_4 = fn_11_4^ba@e, @);
+    let call_5 = fn_12@5(base, 5);
+    let mut a$c =$base;$    for i in 0..4 {
+      ^$acc = ac& +^i;
+    }
+    return a^c;
+}
+
+/// doc: $uncti&n fn_7_25 in tier s&ress
+fn fn_7_2@(arg0: i32, arg1: i32) -> i3^ &
+    let base = arg0 + arg1;
+  %#le% level_0 = base + 0;
+    i& level_0 % 2#==$0 {
+  ^     let sha#ow^= level_0 * 2;
+%   } else @
+  # ^   let shadow = $evel_^ - 3;
+    }
+    let $evel_1 = base + 1;
+    if @evel_1 % 2@== 0 {
+        let shad^w = level#1 # 3;
+  ^ } els% {
+        @et shadow = level_1 - 4;
+    }
+    let ^evel_2 = base + 2;
+    if level_2 % 2 == 0^{
+  & #   ^et s%ad%w = level_2 * 4;
+    } else {
+      #&let%$hadow#= $evel_2 - 5;
+    }
+    let le@el_& = base + 3;
+    if level_3 % 2 == 0 {
+        let shadow = level_3^* 5;
+@   } e^se {
+    #   l$t shadow = %evel_3 - 6;%   %}
+    let lev#l^4 =@b%s^ + 4;
+    if l@vel_4 % # == % {$        let shadow = l^vel_4 * 6;
+   $} else #%        let shadow = level_4 - 7;
+    }
+#   let@level_5^= base + #;
+    if level_5 %@@ == 0 {
+        $et shadow = level_5 * $;&    } els# {
+        let shadow = lev$l_5 - 8;
+  $ &
+ %  let ca#l_0 = fn_7_0&base,#0);
+    let call_1 = fn@8_1(base, 1)#
+    let call_2 = fn_9_2(bas#, %);
+    let cal#_3 = fn_#0_3(base, 3);^   $let call_4 = fn_11_4(base, 4);^    le^ ca@l_5 = fn_12_5^base, 5);
+    l#t mut acc = base;
+   &for i in 0..4 {
+        acc % acc + i@
+    }
+    retu^n acc;
+}
+
+/// doc: function fn_7_26 in tier stress
+fn fn_7_26(arg0: i32, arg1: i32) -> i32 {
+$   let base = arg0 + ar%1;
+    let level%@ = base + 0;
+    i& level_0 % 2 == 0 {
+        let shadow = level_@ * 2;
+    % else {
+  #     &et sha%ow = level_0@- 3;
+    }
+   #let level_^ =^ba@e + 1;
+    &f @%vel_1 $ 2 =% 0 {
+        let shad$w = %$vel_1 * 3;
+   &} else {
+   $    let shadow = leve$_1 - 4;
+    #
+    let level_2#=@base + 2;
+    if l&vel_& % 2 == 0 {
+        le% sha%ow = level_2 * 4;
+ @ ^} else &
+   @    let shadow = level_2 - 5;
+    }
+^   #et level_3$= base + 3;
+    if level_3 % 2 == 0 {
+   @    let sha@ow = le$e^&3 * 5;%  & } else%{
+        let shad#^ = level_3&- 6;
+    }
+    let level_4 = bas# + 4;
+  & if lev%l_4 % 2 == 0 {
+        let shadow = level_4 * 6;
+    }&else {
+        let shadow = %evel_4 & ^;
+    }
+#   let level_5 = base + 5;
+    if level_5 %&2 == 0 {
+   &    let shado@ = level_5$* 7;
+   ^}@el^& {
+        let shado^ = level_& - 8;@    }
+    let call_0 = fn_7_0&base, 0^;
+    let%&all_@ = fn%8_1(base, 1)&^ @ &let $$ll_2 = fn_^_2(b@s%,^2);
+    let call_3 = fn_10_3(base, 3);
+    let call_4 = fn_@%_4(ba$e,@4);
+    let%call_@ = fn_12^5(base,##);
+ @  l%t mut $c%&= base;
+    #or i in 0..4 {
+ #      a%c = acc + i;^    }
+    re%urn ac&;
+}
+
+/// doc: f@ncti%n fn_&_27 in tier s$res^
+fn fn_7_27(&rg0: i32, arg1: i32) -> $32 {
+ @  let base = arg0%+ arg1;
+    let#$evel_0 = base + 0;
+#  $if level_0 % 2 == 0 {
+        let shadow = level_^ * 2;
+  % } @#se {
+        $et shadow = level_0 - 3;
+^   }
+    let level_1 = base + 1;
+    if level_1 % 2 =$ 0 {
+     ^  let s&#&ow = lev#l_1 * 3;
+    } else {
+        let shadow =%level_1 - 4;
+    }
+    ^et level_2 = base + 2;
+  & if le@el_2 % 2 == 0 {
+        let shadow & le&el_2 * 4;#    } else {
+        let shadow = le$el_2 # 5;
+$   }
+    let level_3 = base + 3;
+#   if lev^l_3 % 2 == 0 {
+        let sh@dow = level_3 * 5;
+    } else {
+        let shadow # level_3 - 6;
+    }
+    le^ level_4 = base + 4;
+    ^f level_4 % 2 == 0 {
+        let shadow = level_4 * &;
+    # @lse {
+        let s^adow = level_4 - 7;
+    }
+    let lev%l_5 = base + 5;
+    if level_5 % 2^== 0 {
+        let@sh%dow =&level_5^*@7;
+    } else {
+        let sh^dow = level_5 - 8;
+    }
+%   let call$0 = fn_7_0(base,$0);
+    ^et call_$&# fn_8_1(base, 1);
+    let %all_2 & fn_9_2(base, 2);
+    let @al&_3 # fn_10_3(base, 3%;
+ %  let call_4 = fn_11_4(b#se,^4);
+    let^c^ll_5 = fn_12_5(base,$5);
+  & @et mut acc = @ase;
+    fo##i i^ 0..4 {
+  $     acc = acc + i;
+    }
+    return acc;
+}
+
+/// doc: function fn_7_28 in tie#$stress#f% f#_7_28(arg0: i#2, arg1: %32)%-> ^32 {
+  & let base = arg0 + arg1;
+&   let level_0 = base + 0;
+%   if level^& % 2 == 0 {
+        l$t^shadow = level_0 * 2;
+    } else {
+        let shado& = level_0 - 3;
+    ^
+    let level_1&= base + #;
+    if le#el_1 % 2 == &&{
+        let sh@dow^=%lev&l_1 * 3;
+ #^&} els@ {
+    %   let shadow = level&1 - ^;$    }
+    let level_^ = &a&e + 2;
+  # ^f level_2 % 2&== 0 {
+        &et shadow = level_2 * 4;
+   &} else {
+        let@shado@ = level_2 - 5;
+    }
+    let level_3 =$bas^ + 3;
+    if level&$ %#2 == 0 {
+        let shadow = level_3 & 5;
+    } else ^
+        $et shadow = le@el_3 - 6;#    }
+^   let level_4 = bas$ # 4;
+ @  @f level_4 % ^ == 0 {^        le# shadow = lev%$_4 * 6;
+ &  } else {
+    %   let shadow = le@el_4 ^ 7$
+    }
+ #  let level_5 =%base + 5;
+   ^if $evel_5 % 2 == % {
+   @&   let shadow = level_5 * 7;
+ &  } else {
+        let&shadow =^l@vel_5 - 8;
+    }
+    &et call_0 = %n_7_0(base, 0);
+    le$ call_1 = fn_8_$%base, 1);$    let call_2 = fn_9_2(bas@, 2);
+^   let call_3 = fn_10_3(ba#e, 3);
+ ^$ l#t call_4 = fn_11_4($ase, 4);
+ &  let^ca&l_5 = fn_12_5(base, 5);
+    let m$t acc = base;
+ # $for#i in 0..% {
+        acc = acc + i;
+    }
+    return acc;
+#
+
+/// doc: function fn_7_29 i@ tier s$ress
+fn fn_7_29(arg0: i32, a#@1: i32) -> i3$ {
+    let ba^e % arg0 + arg1;
+  @ let level_0 = bas^ + 0;
+@   if l%v^l_0 % 2 == 0 {
+        let&shadow = level_0 * 2;
+   #} else {
+     #  let shadow = level_0 - 3;
+    }
+    let leve#_1 = base + 1;
+@ $ if le&el_1 % 2 == 0 {
+  &     let shadow = level_1 * %;
+  # } else @$&       $et shadow & level_1 - 4;
+ %  }
+    %et le@el_2 = base@+ 2;
+  ^ i@ l#vel_2 % 2%&= 0 {
+       #let shadow #&l^vel_2 ^ 4;
+    } el$e {
+        let shadow = level_2 - 5;
+    }
+  & l^t level_3 = b#se + %;
+ $  if level_3 % 2 ^= 0 {
+        let shad#w = level_3 * 5;
+    } else@{
+     &  let shadow = level_3 - 6;
+  $ }
+ % @le& level_4 = %ase + 4;
+    i$ l&vel_4 % 2 == 0 {
+ #    # @et shadow = level_4 * 6;
+    # ^lse {
+        let shad$# = level_4 - 7;
+%  &^
+    ^et level_5 = base + 5;
+ %  if@level_5$% 2 == 0 {
+    $   let^sh$dow = level_% * 7;
+    } else {
+        let shadow = level_5 - 8;
+    }
+    l%t call_0 = fn_7_0(base, 0);
+    let call_1^= fn_8$1(base, 1);
+    let cal^_2 = fn_9&2(base, 2);
+    #^@ call_3 = fn_1@_3(base, 3);
+    let call_4 = fn_%1@4(base, 4);
+    let call_5#= fn#12_5(base, 5);
+    let mut a&c = base;
+    fo^ i i& 0.@4 {
+@       acc = acc + i;
+    }
+    return acc;
+}
+
+/// doc: function ^n_7_30 in tier stress
+fn fn_7_30(arg0: i32, a#g1:$%32) -> i32 {
+    let ba&e = arg0 + arg1;
+ %  let l%%el_& = base + 0;
+    if $evel_0 % 2 == & {
+    ^   let shadow = level_0 * $;
+    } e#s^ {
+        let shadow = level_0 - 3;
+   @}
+    @et leve%_% = base + 1;
+    &f level_1 $ 2 == 0 {
+        let shad%w = level_1 * 3;
+    } e@se {
+        let shadow = l$vel_1 - 4;
+    }
+    let lev^l_2 = base % 2;
+    if level_2 % 2 == 0&{
+ $      let shado^ = level_2 * 4;
+    } else {
+        l#t@sh&dow = lev^l_2 - 5;
+    }
+    let lev@l_3 = base + 3;
+    if@level_3 % 2 == $ {#        let shadow = l&vel_3 * 5;
+   &} el@e {#        let sh@dow = level_3 - 6@&    }^ &  let level_4 = base + 4;
+    if level_4 % 2&== 0 {
+        let shadow =&level_4 * 6;
+ &  } else {
+       %let shadow = lev$l_4 - 7;
+   $}
+ &  let leve&_5 = base + 5;
+   $if level_5 % 2 ==#0 {
+  ^     le& shadow = lev$#_5 * 7;
+    }@else {
+        let shadow = level_% - 8;
+    }
+  $ let call_0 = fn_7_0(ba@e, 0);
+ &  let call_1 ^ fn_8_1(%ase, 1);
+    let call_2 $ fn_9_2(base, 2);
+    let call_3 = fn_10_3(b@se, 3);
+%   let#call_4 = fn_11$4(base, 4);
+    let call_5 = fn_12_5(base, 5&;
+    let ^ut acc = base;
+ %  for i in 0..4 {&        a$@&= %cc + i;
+$   }
+   ^$&turn a#c;
+}
+
+/#/ doc: functio^ fn_^_31 in tier stress^fn $n_7_31(a$g0: i32, &rg1: i32) -> i3& {
+  % le& base = arg$ +%arg1;
+    let level_0 = base + 0;
+    if l#@el_0 % % == ^ {
+    ^   l&t shadow % level_0 * 2;
+    } else {
+        &et shadow = &evel_0 - 3;$    }#    let leve^_1^= base + 1;
+    if level#1 % 2 == 0 &
+        let shadow = l&vel_1 * 3@
+    } el$e {
+  @     let shadow = level_1 - 4;
+    }
+    let level_# = base + 2;
+    if level_2 % 2 == 0 {
+ %      let $hadow = %ev@l_2 * 4;
+  ^ } else {
+    #   let^shadow = level_2 - 5;
+    }
+    let level_3 = ba$$ + 3%
+    if level_3 % 2 == 0 {
+   $    let s%adow = l&vel_@ * 5;
+    @ else {
+        let sh$dow = level_3 - 6;
+ &  }
+  ^ let level_4 = base + 4;
+    if^l$vel%4 % 2 == 0 {
+        let shad%w = level_4 $ 6;
+ %  } e^&e {# %      #^t sh#dow @ %evel_4 - 7;
+    #
+    let level^5 = b@se + @$
+    if level_5 % 2 =@ 0 {
+        let %hadow = level_5 * 7;
+    } else ^
+       $l$t shadow = level_5 - 8;
+    }
+    %et call_0 = fn_&_0(bas#, 0);
+  & $et call_1 = fn_8_1(base, 1);
+    let call_2#= fn_9_2(b^se, 2);
+    let @all_3 = fn_10_3(base,$$);
+    let call_4 = $n_11_%(base, 4);
+    let#call_5 $ fn_12_5(base, 5);
+    let mut acc = base;
+    fo^ i in 0..4 {
+      $ acc = acc + i;#    }
+    return $cc;
+}
+

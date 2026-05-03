@@ -1,0 +1,63 @@
+NSQ_APP asm_c_c8_macro_benchmark
+NSQ_APP_VERSION 2
+
+NSQ_BENCHMARK_LAW {
+  benchmark_name = asm_vs_c_vs_c8_asm_vs_nsq
+  kiwi_run = true
+  rounds = 3
+  scored_round = 3
+
+  compared_surface_01 = asm_operating_form
+  compared_surface_02 = c_plain_surface
+  compared_surface_03 = c8_with_asm_macro_surface
+  compared_surface_04 = nsq_authority_surface
+
+  round_01_role = macro_discovery
+  round_02_role = macro_refinement
+  round_03_role = production_like_scored_run
+
+  round_01_macro_tracking_enabled = true
+  round_02_macro_tracking_enabled = true
+  round_03_macro_tracking_enabled = false
+
+  round_01_tracer_collection_enabled = true
+  round_02_tracer_collection_enabled = true
+  round_03_tracer_collection_enabled = false
+
+  round_03_must_not_insert_runtime_tracers = true
+  round_03_must_not_collect_macro_use_counts = true
+  round_03_must_not_run_discovery_instrumentation = true
+  round_03_must_operate_like_production_release = true
+
+  per_surface_timeout_seconds = 10
+  timeout_applies_to_all_surfaces = true
+
+  initial_macro_seed_required = true
+  macro_candidate_search_required_in_rounds_1_and_2 = true
+  macro_use_tracking_required_in_rounds_1_and_2 = true
+  promote_macro_when_used_more_than_three_times = true
+
+  scored_round_must_use_promoted_macros = true
+  scored_round_must_preserve_lineage = true
+  scored_round_must_preserve_moral_invariant = true
+  scored_round_must_not_claim_BRAXON_live_completion = true
+}
+
+NSQ_MACRO_PROMOTION_RULE {
+  source_rounds = 1, 2
+  use_threshold_exclusive = 3
+  if_macro_use_count_gt_3 = promote_for_next_round
+  promoted_macro_requires_name = true
+  promoted_macro_requires_digest = true
+  promoted_macro_requires_surface_count = true
+  promoted_macro_requires_source_example = true
+}
+
+NSQ_PRODUCTION_SCORE_RULE {
+  scored_round = 3
+  macro_tracking_enabled = false
+  tracer_collection_enabled = false
+  timeout_seconds_per_surface = 10
+  discovery_disabled = true
+  runtime_instrumentation_disabled = true
+}

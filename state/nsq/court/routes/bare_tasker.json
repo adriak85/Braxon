@@ -1,0 +1,10 @@
+{
+  "schema": "nsq.court.route.v3",
+  "route": "bare_tasker",
+  "owned_by": "NSQ_COURT",
+  "king": "compositor",
+  "queen": "linter",
+  "executor_allowed_only_as_court_route": true,
+  "host_smoke_artifact": "ELF",
+  "bare_form_artifact": "flat_binary"
+}

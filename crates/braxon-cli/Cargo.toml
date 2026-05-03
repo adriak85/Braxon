@@ -1,0 +1,14 @@
+[package]
+publish = false
+name = "Braxon-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Small Braxon identity CLI surface backed by Braxon-core."
+
+[dependencies]
+clap.workspace = true
+BRAXON_core = { package = "Braxon-core", path = "../braxon-core" }

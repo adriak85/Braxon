@@ -1,0 +1,16 @@
+id: nsq.write.nsq.pipeline.v2
+type: workflow
+version: 2
+authority: Braxon
+role: nsq_write_nsq_pipeline
+
+phases:
+  - build_authoring_registry
+  - define_doc_emit_registry
+  - define_tokenizer_emit_registry
+  - define_wowas_mytho_authoring_bias
+  - define_qwen_to_nsq_authoring_normalization
+  - emit_native_authoring_examples
+  - emit_human_machine_docs
+  - emit_tokenizer_rows
+  - prove_authoring_sync

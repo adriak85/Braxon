@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "MailTools",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/MailTools.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/MailTools.source",
+  "source_sha256": "168e6f17f11da7f249904a03422f43c9db0b05970d4c2f604816b43d56176c41",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/MailTools.translated.nsq",
+  "nsq_body_sha256": "7fc52761c14053dd5525ac40ea68d8a6d9e35e427ae4106d2f662a129e47679f",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

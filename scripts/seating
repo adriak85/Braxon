@@ -1,0 +1,37 @@
+use crate::{Charge, Dialect, NSQLever, NSQSlot};
+
+pub struct NsqSeater;
+
+impl NsqSeater {
+    /// Seat a raw input string by converting to NSQ and appending the 
+    /// necessary "Negative Switch" return signal to prevent terminal hanging.
+    pub fn seat_input(input: &str) -> Vec<NSQSlot> {
+        let mut slots = Vec::new();
+        
+        // 1. Convert input to Alphabetic Dialect slots
+        for c in input.chars() {
+            let position = (c as u16) % 1126 + 1;
+            let charge = if c.is_uppercase() { Charge::Positive } else { Charge::Negative };
+            
+            slots.push(NSQSlot {
+                dialect: Dialect::Alphabetic,
+                body: vec![NSQLever::new(charge, position).unwrap()],
+            });
+        }
+
+        // 2. Append the "Seating Signal" (Negative Switch Return)
+        // This acts as the automated "Ctrl+D" / Flush signal for the substrate.
+        slots.push(NSQSlot {
+            dialect: Dialect::Control,
+            body: vec![NSQLever::new(Charge::Negative, 1126).unwrap()], // Terminal Flush Anchor
+        });
+
+        slots
+    }
+
+    /// Verify the alignment of the seated payload against the 1.3T Council expectations.
+    pub fn verify_alignment(payload: &[NSQSlot]) -> bool {
+        // Ensure the payload ends with a Control dialect flush signal
+        payload.last().map(|s| s.dialect == Dialect::Control).unwrap_or(false)
+    }
+}

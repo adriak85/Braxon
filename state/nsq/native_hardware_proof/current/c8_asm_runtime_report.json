@@ -1,0 +1,14 @@
+{
+  "schema": "nsq.c8_asm_runtime.report.v1",
+  "surface": "c8_asm",
+  "runtime_language": "c_with_inline_asm_step",
+  "separate_runtime": true,
+  "parameter_range_total": 6900000000000,
+  "parameter_windows_opened": 318543,
+  "tasks_completed": 20876099584,
+  "bit_operations": 167008796672,
+  "unwound_before_crash": false,
+  "elapsed_seconds": 9.850363,
+  "digest_mix": "0000000000000000",
+  "bare_metal_claim": false
+}

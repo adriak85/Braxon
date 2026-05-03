@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/tools__nsq_finish/asm/macros/tools__nsq_finish__nsq_formula_verify.py.b2c6c7a4614c71d7.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.288965+00:00",
+  "harm_hit_count": 0,
+  "library": "tools__nsq_finish",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/tools__nsq_finish/metadata/tools__nsq_finish__nsq_formula_verify.py.b2c6c7a4614c71d7.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "tools/nsq_finish/nsq_formula_verify.py",
+  "source_bytes": 6363,
+  "source_sha256": "b2c6c7a4614c71d72bc696f1e03af324e4798412217a5c935ee46568b83c0b5d",
+  "stamp_id": "nsq.asm.tools__nsq_finish.tools__nsq_finish__nsq_formula_verify.py.b2c6c7a4614c71d7"
+}

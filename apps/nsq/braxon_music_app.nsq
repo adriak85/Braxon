@@ -1,0 +1,42 @@
+NSQ_APP BRAXON_music_app
+NSQ_APP_VERSION 1
+
+NSQ_MUSIC_APP {
+  purpose = deterministic_music_app_core
+  identity = BRAXON_music_app
+  local_rebuild = true
+  transfer_strategy = seed_enough_of_each_section_rebuild_rest_on_site
+  citadel_699_boundary_review_required = true
+  beyond_699_pattern_scan_required = true
+
+  safety {
+    tracking = false
+    macro_discovery = false
+    tracers = false
+    copyright_source_extraction = false
+    donor_model_claim = false
+    bare_metal_claim = false
+  }
+
+  features {
+    asm_seed_fold = true
+    native_preview_synth = true
+    deterministic_section_manifest = true
+    site_rebuild_seed_pack = true
+    lyric_timing_lane = true
+    stem_manifest_lane = true
+    offline_first = true
+    resumable_asset_plan = true
+    no_cloud_dependency = true
+    no_background_upload = true
+  }
+
+  sections {
+    intro = seed_rebuildable
+    verse = seed_rebuildable
+    pre_chorus = seed_rebuildable
+    chorus = seed_rebuildable
+    bridge = seed_rebuildable
+    outro = seed_rebuildable
+  }
+}

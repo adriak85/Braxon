@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "perl",
+  "source_path": "/data/data/com.termux/files/usr/bin/perl",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/perl.source",
+  "source_sha256": "86bbccdb8c3f5dcffe9f145ae5c8825a06a7eb98a6aab11ee8388fa005671707",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/perl.translated.nsq",
+  "nsq_body_sha256": "ceb6f4b454b28571407f2c5beb5c8836cffda6a91e694f1f1022e31c97f1d07d",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

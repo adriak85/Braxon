@@ -1,0 +1,21 @@
+id: nsq.flag.coverage.main.v1
+type: main
+version: 1
+authority: Braxon
+role: flag_coverage_entry
+
+mission:
+  Give NSQ native semantic coverage for every meaningful flag surface exposed by the
+  languages, toolchains, platforms, package managers, renderers, and services already
+  incorporated into the spine/runtime.
+
+program_order:
+  - capture foreign flags
+  - classify meanings
+  - normalize native flags
+  - assign projection spellings
+  - assemble stamps
+  - cache reusable plans
+  - bind to local package db
+  - emit translation seeds
+  - prove coverage

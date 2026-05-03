@@ -1,0 +1,34 @@
+NSQ_COURT_WHOLE_ARCHITECTURE {
+  authority = NSQ_COURT
+  architecture_root = true
+  duplicate_task_systems_allowed = false
+  direct_acceptance_runner_allowed = false
+
+  identity_policy {
+    king = compositor
+    queen = linter
+    court_is_agents = false
+    court_names_are_registry_owned = true
+    king_queen_terms_are_canonical = true
+    generic_reroute_terms_blocked = true
+  }
+
+  route_policy {
+    downloader_route = court_owned
+    semantic_benchmark_route = court_owned
+    bare_tasker_route = court_owned
+    model_download_route = court_owned
+    nsq_to_asm_route = court_owned
+    c_reference_runner_acceptance = forbidden
+    c_reference_runner_storage = forbidden
+  }
+
+  acceptance_path {
+    source = NSQ
+    route = NSQ_COURT
+    compile_surface = NSQASM_AARCH64
+    host_smoke_artifact = ELF
+    bare_form_artifact = flat_binary
+    c_runner_used = false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__tree-sitter-pkl__RUSTSEC-2025-0156.md.33b0e5f09a0548af.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.226521+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__tree-sitter-pkl__RUSTSEC-2025-0156.md.33b0e5f09a0548af.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/tree-sitter-pkl/RUSTSEC-2025-0156.md",
+  "source_bytes": 484,
+  "source_sha256": "33b0e5f09a0548afd936eed4523d5acab110c15272d01f6481d6e7c1b5168d96",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__tree-sitter-pkl__RUSTSEC-2025-0156.md.33b0e5f09a0548af"
+}

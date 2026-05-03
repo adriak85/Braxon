@@ -1,0 +1,57 @@
+NSQ_APP native_hardware_proof_law
+NSQ_APP_VERSION 1
+
+NSQ_NATIVE_HARDWARE_PROOF_LAW {
+  nsq_is_intended_to_operate_on_metal = true
+  nsq_bare_metal_claim_requires_hardware_proof = true
+  nsq_must_not_claim_bare_metal_before_probe_pass = true
+
+  nsq_source_truth = true
+  nsq_is_not_rust_emulation = true
+  nsq_is_not_c_emulation = true
+  nsq_is_not_python_emulation = true
+  nsq_is_not_binary_running_nsq = true
+
+  nsqasm_is_base_operating_bridge = true
+  asm_is_operating_law_for_nsq = true
+  binary_translation_is_downstream_BRAXON_output = true
+  binary_translation_is_not_nsq_source_truth = true
+
+  worst_case_shim_allowed_for_driver_bootstrap = true
+  shim_is_not_bare_metal_proof = true
+  driver_mount_required_for_hardware_proof = true
+
+  proof_required_files {
+    hardware_probe_report = state/nsq/native_hardware_proof/current/hardware_probe_report.json
+    native_runner_report = state/nsq/native_hardware_proof/current/native_runner_report.json
+    production_round_report = state/nsq/native_hardware_proof/current/production_round_report.json
+    metadata_snapshot = state/nsq/metadata_law/current/summary.json
+  }
+
+  proof_green_requires {
+    native_runner_present = true
+    native_runner_not_python = true
+    native_runner_not_rust_wrapper = true
+    native_runner_not_c_wrapper_for_final_nsq = true
+    production_round_tracking_disabled = true
+    production_round_macro_discovery_disabled = true
+    production_round_tracers_disabled = true
+    metadata_current = true
+    moral_guard_green = true
+  }
+}
+
+NSQ_TASK_LAW {
+  benchmark_focus = task_completion_and_parameter_address_operation
+  secondary_focus = bit_base_counts
+
+  same_task_all_surfaces = rewrite_BRAXON_to_nsq_then_restore_original_for_setup
+  final_nsq_mode = leave_nsq_absorbed_state_available_for_second_native_run
+
+  round_01_role = nsq_rewrite_self_and_collect_macro_candidates
+  round_02_role = practice_task_and_acquire_macros
+  round_03_role = production_like_scored_run_no_tracking
+
+  timeout_seconds_per_surface = 10
+  timeout_unwinds_before_crash_when_possible = true
+}

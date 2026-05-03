@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0055__B02_06__The_Diary_Waits_Even_When_Closed.md.b0a0b45e8b63b803.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.590473+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0055__B02_06__The_Diary_Waits_Even_When_Closed.md.b0a0b45e8b63b803.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0055__B02_06__The_Diary_Waits_Even_When_Closed.md",
+  "source_bytes": 177,
+  "source_sha256": "b0a0b45e8b63b803297426d0d57c75cd11b9f0874015864f1ad2ae402b3db7e6",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0055__B02_06__The_Diary_Waits_Even_When_Closed.md.b0a0b45e8b63b803"
+}

@@ -1,0 +1,19 @@
+{
+  "app": "BRAXON_music_app",
+  "created_at_unix": 1777076177,
+  "doctor_ok": true,
+  "features": {
+    "asm_seed_fold": true,
+    "citadel_699_review": true,
+    "full_generation_claim": false,
+    "native_preview_synth": true,
+    "offline_first": true,
+    "perpetual_runtime_claim": false,
+    "site_rebuild_seed_pack": true
+  },
+  "preview_manifest": "state/braxon/music_app/current/preview_manifest.json",
+  "preview_ok": true,
+  "preview_wav": "state/braxon/music_app/current/preview.wav",
+  "schema": "Braxon.music_app.current_manifest.v1",
+  "site_rebuild_plan": "state/braxon/music_app/current/site_rebuild_plan.json"
+}

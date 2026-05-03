@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "FFI::Platypus::Type::Enum",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/FFI/Platypus/Type/Enum.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/FFI__Platypus__Type__Enum.source",
+  "source_sha256": "a2d9fb5fad847e1ebec4faf2b999ed34b3b4e652aeb87d7995df442a2f392c84",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/FFI__Platypus__Type__Enum.translated.nsq",
+  "nsq_body_sha256": "ab1ffeb139265bdf4e5f255f0da35c23a9ae60b62a2bbf4d3409b7add119eda5",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

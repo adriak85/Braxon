@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__libp2p-deflate__RUSTSEC-2020-0123.md.5b768eb6d8b68250.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.048796+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__libp2p-deflate__RUSTSEC-2020-0123.md.5b768eb6d8b68250.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/libp2p-deflate/RUSTSEC-2020-0123.md",
+  "source_bytes": 994,
+  "source_sha256": "5b768eb6d8b68250df74164ce84e660ae69869f6a0a4f221fdd4cd6f1aca3823",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__libp2p-deflate__RUSTSEC-2020-0123.md.5b768eb6d8b68250"
+}

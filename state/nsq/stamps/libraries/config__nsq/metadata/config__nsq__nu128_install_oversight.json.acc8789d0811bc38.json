@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__nu128_install_oversight.json.acc8789d0811bc38.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.430863+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__nu128_install_oversight.json.acc8789d0811bc38.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/nu128_install_oversight.json",
+  "source_bytes": 902,
+  "source_sha256": "acc8789d0811bc38827a1a701927950ff616a3fba795e35729f999de2ca10352",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__nu128_install_oversight.json.acc8789d0811bc38"
+}

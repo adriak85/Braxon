@@ -1,0 +1,20 @@
+== NSQ Court ASM semantic runtime benchmark v6 ==
+authority=NSQ_COURT
+architecture_root=true
+king=compositor
+queen=linter
+court_is_agents=false
+acceptance_runner=nsqasm_aarch64_no_libc
+nsq_task_file_semantically_executed=True
+semantic_result_verified=True
+nsq_runtime_elapsed_measured=True
+elapsed_seconds=0.021775
+c_runner_used=false
+c_runner_allowed_for_acceptance=false
+c_reference_runner_storage=false
+perpetual_runtime_allowed=false
+rewrite_all_BRAXON_to_nsq_allowed=True
+BRAXON_live_claim=false
+bare_metal_claim_allowed=false
+
+truth=NSQ Court is architecture root. Semantic acceptance uses NSQ -> NSQ Court king/queen route -> NSQASM/AArch64. C runner is removed and not stored.

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Sim",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Sim.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Sim.source",
+  "source_sha256": "eac4dfe7fb14e5d07fd55c3a60e03805186eff3481b8ce21a53f06635380cb58",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Sim.translated.nsq",
+  "nsq_body_sha256": "56d5732aa14638ba1c4e458c0ec5859223c18d568d519370581b79622dd498d5",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

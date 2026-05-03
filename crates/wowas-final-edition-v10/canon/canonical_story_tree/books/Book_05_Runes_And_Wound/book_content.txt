@@ -1,0 +1,305 @@
+# Book_05_Runes_And_Wound
+
+# Book_05_Runes_And_Wound
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 5 — Kindness ≠ Mercy
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_05_The_Hunger_Behind_Kindness
+
+- B05_001 — Void Fold Week
+- B05_001A — The Anchor Of False Resonance
+- B05_002 — The Draining Method
+- B05_003 — The Glass Forge Begins
+- B05_004 — The First Surge
+- B05_005 — First Gaslighting
+- B05_006 — Calculated Distancing Begins
+- B05_006A — The Idealization Stage
+- B05_006B — The First Disappearance
+- B05_006C — A Solitary Solstice
+- B05_006D — A Puzzle Of Behavior
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_05_The_Hunger_Behind_Kindness
+
+## B05_001 — Void Fold Week
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_001A — The Anchor Of False Resonance
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_002 — The Draining Method
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_003 — The Glass Forge Begins
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_004 — The First Surge
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_005 — First Gaslighting
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_006 — Calculated Distancing Begins
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_006A — The Idealization Stage
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_006B — The First Disappearance
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_006C — A Solitary Solstice
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B05_006D — A Puzzle Of Behavior
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# Runes And Wound Scene Spine
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 5 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: Runes and Wound
+
+## B05.01 — The Wound That Does Not Stay Physical
+target_scenes: 12
+
+S001 Book-Five-Opens-with-Wound-Reclassified — Pain is no longer merely bodily; it is symbolic, relational, and historical.
+S002 Pip-Sees-That-Healing-Has-Not-Simplified-Anything — Recovery has only revealed deeper layers.
+S003 Rylos-Feels-the-Old-Hurt-Under-the-New-Safety — Sanctuary does not erase the deeper wound.
+S004 Mack-Names-the-Difference-Between-Closure-and-Sealing — Important distinction enters the book.
+S005 The-House-Holds-a-More-Sober-Light — Tone deepens immediately.
+S006 The-Runic-Or-Equivalent-Layer-Begins-to-Show — The book's new title force enters the field.
+S007 Pip-Feels-Drawn-to-Marks-Patterns-or-Signs-He-Does-Not-Yet-Fully-Read — Curiosity and dread rise.
+S008 Rylos-Understands-That-Some-Scars-Are-Maps — His insight matters again.
+S009 Mack-Recognizes-That-Interpretation-Will-Now-Need-More-Disclipline — The next phase is more exacting.
+S010 Home-Becomes-a-Place-of-Decoding-as-Well-as-Recovery — Sanctuary role expands again.
+S011 The-Wound-and-the-Sign-System-Start-Rhyming — Book logic locks.
+S012 The-Beat-Ends-with-Wound-Upgraded-to-Text — Pain itself has become legible.
+
+## B05.02 — Runes in the House
+target_scenes: 12
+
+S013 Marks-Patterns-or-Lines-Appear-in-Context — The house, diary, memory, or body yields the first clearer runic layer.
+S014 Pip-Feels-the-Temptation-to-Read-Too-Fast — Pattern hunger rises.
+S015 Mack-Warns-Against-Eager-Misreading — A guardian lesson in interpretive humility.
+S016 Rylos-Reads-Texture-Before-System — His instinctive method complements Pip's yearning.
+S017 The-Runes-Are-Not-Decorative — They prove load-bearing.
+S018 The-House-Responds-to-Them-As-Though-They-Belong — Sanctuary deepens as meaning site.
+S019 Pip-Starts-Learning-That-Signs-Have-Cost — Knowledge is not neutral.
+S020 Rylos-Sees-One-Particularly-Painful-Connection-Before-Pip-Does — Character and plot interlock.
+S021 Mack-Confirms-That-Some-Things-Were-Hidden-For-Timing-Not-Control — Trust tension managed.
+S022 A-Small-Decoding-Success-Changes-the-Atmosphere — Progress scene.
+S023 A-Small-Misread-or-Near-Misread-Proves-the-Danger — Stakes stay real.
+S024 The-Beat-Ends-with-Runes-Established-as-Active-Law — Book 5 now has its core instrument.
+
+## B05.03 — The Scar as Archive
+target_scenes: 12
+
+S025 Rylos-Wound-Is-Seen-as-Holding-History — The injury becomes archival, not only traumatic.
+S026 Pip-Fears-Turning-Him-into-Evidence — Moral tension sharpens.
+S027 Mack-Teaches-the-Difference-Between-Witnessing-and-Using — Essential ethical line.
+S028 Rylos-Chooses-What-Is-Readable — Agency over his own hurt matters.
+S029 The-House-Holds-a-Scene-of-Consent-and-Meaning — Sanctuary remains moral center.
+S030 A-Specific-Pattern-on-Body-or-Memory-Links-to-the-Runic-Layer — Concrete connection.
+S031 Pip-Understands-That-Hurt-Can-Contain-Truth-Without-Justifying-Harm — Major maturation.
+S032 Rylos-Shows-Both-Courage-and-Limit — He is brave but not infinitely available.
+S033 Mack-Protects-the-Line-When-Needed — Guardian edge.
+S034 The-Archive-Is-Painful-Because-It-Is-Personal — Not just lore.
+S035 The-Reading-Changes-Their-Future-Questions — Plot motion shifts.
+S036 The-Beat-Ends-with-Scar-and-Rune-Braided — Book law strengthens.
+
+## B05.04 — What the Marks Demand
+target_scenes: 12
+
+S037 The-Runic-System-Demands-Method — Random intuition is no longer enough.
+S038 Pip-Tries-to-Rise-to-It — He becomes more disciplined without becoming cold.
+S039 Rylos-Contributes-Through-Pattern-Recognition-From-Lived-Damage — His history remains useful and costly.
+S040 Mack-Begins-Building-a-Working-Interpretive-Frame — Practical structure enters.
+S041 The-House-Becomes-Laboratory-Without-Stopping-Being-Home — Key series texture.
+S042 A-First-Clear-Imperative-or-Warning-Emerges — The signs begin speaking more directly.
+S043 Pip-Hates-How-Much-Cost-Attaches-to-Understanding — Growth under strain.
+S044 Rylos-Hates-How-Familiar-that-Feels — Character resonance deepens.
+S045 Mack-Keeps-Them-From-Turning-Meaning-Into-Madness — Vital center.
+S046 The-Runes-Point-Beyond-the-House — External plot opens.
+S047 The-Wound-Points-Beyond-the-Boy — Scale rises.
+S048 The-Beat-Ends-with-Interpretation-Turned-Into-Obligation — Knowing now requires response.
+
+## B05.05 — The Road of Signs
+target_scenes: 12
+
+S049 Meaning-Pulls-Them-Back-Toward-Motion — The house can no longer contain the whole book.
+S050 Pip-Feels-the-Cost-of-Leaving-Knowing-More — Home has become more precious before departure.
+S051 Rylos-Fears-What-the-World-Will-Do-to-Visible-Wounds-and-Visible-Signs-Together — Vulnerability doubles.
+S052 Mack-Prepares-Them-for-a-More-Exacting-Road — Strategy deepens.
+S053 The-Runic-Layer-Begins-Reappearing-Outside — The world becomes textually dangerous.
+S054 Pip-Learns-to-Read-Terrain-Differently — Spatial interpretation evolves.
+S055 Rylos-Sees-Which-Signs-Are-Real-and-Which-Are-Bait — His discernment remains essential.
+S056 The-Pair-Bond-Becomes-a-Decoding-Method — Love continues turning into cognition.
+S057 The-Road-Is-No-Longer-Only-Travel-It-Is-Interpretation-Under-Risk — Important reclassification.
+S058 Mack-Keeps-Motion-From-Becoming-Haste — Guardian balance.
+S059 A-First-Field-Success-Proves-the-New-Method — Momentum scene.
+S060 The-Beat-Ends-with-the-World-Reading-Back — Textual reciprocity intensifies.
+
+## B05.06 — Pain Has a Grammar
+target_scenes: 12
+
+S061 Pip-Begins-Seeing-Recurring-Forms-in-Wound-and-Event — Pattern theory deepens.
+S062 Rylos-Knows-the-Grammar-Through-Survival-Not-Abstraction — His lived knowledge grounds the concept.
+S063 Mack-Insists-That-Understanding-Does-Not-Mean-Romanticizing-Hurt — Ethical check.
+S064 The-House-or-Road-Yields-Another-Repeating-Sign — Confirmation scene.
+S065 Pip-Feels-Both-Brilliant-and-Horrified — Learning here is not cleanly empowering.
+S066 Rylos-Proves-That-Naming-Hurt-Can-Reduce-Its-Power-Slightly — Small victory.
+S067 The-Runes-Start-Revealing-Sequence-Not-Only-Symbol — Plot intelligence grows.
+S068 Mack-Helps-Them-Turn-Recognition-Into-Action — Practicality remains central.
+S069 The-Bond-Holds-Through-Heavy-Interpretive-Strain — Relationship proof.
+S070 Pain-Becomes-Translatable-Without-Becoming-Okay — Major thematic refinement.
+S071 The-World-Grows-More-Legible-and-More-Terrible-Together — Tone lock.
+S072 The-Beat-Ends-with-Grammar-Established — Book 5 secures a new way of seeing.
+
+## B05.07 — What Must Be Carried Forward
+target_scenes: 12
+
+S073 Not-Everything-Can-Be-Healed-Before-Motion-Resumes — Hard truth scene.
+S074 Pip-Learns-the-Difference-Between-Tending-and-Erasing — Growth continues.
+S075 Rylos-Chooses-Which-Hurts-He-Will-Carry-Consciously — Agency under pain.
+S076 Mack-Frames-Carrying-as-Discipline-Not-Defeat — Guardian teaching.
+S077 The-Runic-System-Points-to-A-Future-Cost — Stakes rise.
+S078 The-House-Feels-More-Like-Origin-Because-It-Cannot-Be-End — Sanctuary tension returns.
+S079 The-Pair-Bond-Is-Now-Built-to-Travel-With-Wound-Not-Only-After-It — Important evolution.
+S080 A-Small-Scene-of-Mutual-Care-Locks-the-Lesson — Embodied truth.
+S081 Pip-Understands-That-Protection-May-Mean-Bearing-What-Cannot-Yet-Be-Resolved — Warden deepening.
+S082 Rylos-Understands-He-Is-Not-Only-Burden-In-That-Carrying — Healing note.
+S083 Mack-Confirms-They-Are-Ready-Enough-Not-Complete — Honest readiness.
+S084 The-Beat-Ends-with-Carrying-As-Forward-Law — Book 5 tightens into motion.
+
+## B05.08 — The First Hard Decoding
+target_scenes: 12
+
+S085 A-Major-Sign-Cluster-Finally-Needs-Full-Interpretation — Stakes sharpen.
+S086 Pip-Takes-the-Lead-More-Capably-Than-Before — Growth measurable.
+S087 Rylos-Catches-the-Part-He-Would-Have-Missed — Partnership remains essential.
+S088 Mack-Holds-the-Frame-Under-Pressure — Stability maintained.
+S089 The-Decoding-Hurts-Because-It-Is-True — Revelation cost lands.
+S090 One-Reading-Option-Would-Be-Easier-and-Wronger — Moral/intellectual trial.
+S091 Pip-Chooses-the-Harder-Truer-Reading — Character advancement.
+S092 Rylos-Backs-Him-Even-Though-It-Costs-Him-Too — Bond deepening.
+S093 The-Sign-Changes-What-the-Next-Route-Must-Be — Practical plot shift.
+S094 Home-Shrinks-Behind-Them-Emotionally-Even-Before-They-Leave — Departure pressure.
+S095 The-Runic-Layer-Is-No-Longer-Mysterious-Only-It-Is-Directive — Important turn.
+S096 The-Beat-Ends-with-Truth-Converted-Into-Route — Book 5 becomes more kinetic.
+
+## B05.09 — The House Holds Them One More Time
+target_scenes: 12
+
+S097 Sanctuary-Gathers-Them-Before-the-Next-Phase — Home gives one more deep holding scene.
+S098 Pip-Feels-How-Much-He-Has-Changed-Since-Book-One — Reflection under tenderness.
+S099 Rylos-Feels-How-Much-He-Now-Belongs-and-How-Dangerous-That-Is — Love sharpens fear.
+S100 Mack-Blends-Blessing-Warning-and-Preparation — Guardian center.
+S101 A-Final-Household-Conversation-Locks-Moral-Orientation — Essential tone stabilization.
+S102 The-Runes-Are-No-Longer-Outside-Daily-Life — Text and home are fully braided.
+S103 The-Wound-Is-No-Longer-Only-Private — Shared but not exploited.
+S104 The-Pair-Bond-Is-Explicitly-Trusted-with-More-Than-Before — Social and structural promotion.
+S105 Home-Is-Recast-as-What-Makes-the-Road-Worth-Taking — Emotional law.
+S106 The-World-Waits-Just-Beyond-the-Threshold — External pull sharpens.
+S107 The-House-Does-Not-Try-to-Keep-Them-Small — Sanctuary matures with them.
+S108 The-Beat-Ends-with-Departure-Pressure-Consecrated — Book 5 prepares its forward surge.
+
+## B05.10 — Book Five Locks Its First Deep Cipher
+target_scenes: 12
+
+S109 The-Wound-the-Rune-the-House-the-Road-and-the-Pair-Finally-Align — Book structure becomes clear.
+S110 Pip-Is-Now-Less-Innocent-More-Exact-and-Still-Merciful — Important maturation lock.
+S111 Rylos-Is-Proven-As-Witness-Decoder-and-Beloved-Not-Only-Survivor — Structural lock.
+S112 Mack-Stands-at-the-Center-as-Guardian-of-True-Reading — Role refinement.
+S113 Sanctuary-Proves-It-Can-Hold-Pain-Without-Lying-About-It — Home deepens.
+S114 The-World-Is-Recast-as-Inscribed-and-Wounded — Tone and system lock.
+S115 The-Pair-Bond-Is-Proven-Useful-Against-Opacity-Itself — Relational cognition hardens.
+S116 Book-Five-Finds-Its-Own-True-Motion — Distinct volume identity achieved.
+S117 The-Next-Phase-Is-Loaded-With-Greater-Cost-and-Greater-Decoding — Forward pressure.
+S118 Pain-Is-Now-Text-But-Not-Mere-Text — Ethical safeguard remains.
+S119 Deep-Cipher-Becomes-the-Book's-Emotional-and-Structural-Law — Tone lock.
+S120 The-Beat-Ends-with-Book-Five-Properly-Underway — First major weave secured.
+

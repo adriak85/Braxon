@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__MEDIA_STACK_TOPLINE_TARGETS.md.f022c8e906d6cbcf.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.230550+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__MEDIA_STACK_TOPLINE_TARGETS.md.f022c8e906d6cbcf.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/MEDIA_STACK_TOPLINE_TARGETS.md",
+  "source_bytes": 1674,
+  "source_sha256": "f022c8e906d6cbcf84a276e40225cddfe2907ecd3167dd0a1b82c017f38de2ba",
+  "stamp_id": "nsq.asm.repo__docs.docs__MEDIA_STACK_TOPLINE_TARGETS.md.f022c8e906d6cbcf"
+}

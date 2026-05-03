@@ -1,0 +1,477 @@
+{
+  " ": {
+    "intent_key": "269567295143777780",
+    "cluster": "delta_cluster_51.Braxon",
+    "state": 2
+  },
+  "!": {
+    "intent_key": "287166183980260170",
+    "cluster": "delta_cluster_49.Braxon",
+    "state": 0
+  },
+  "\"": {
+    "intent_key": "45016875714013944",
+    "cluster": "delta_cluster_43.Braxon",
+    "state": 0
+  },
+  "#": {
+    "intent_key": "96961500955220552",
+    "cluster": "delta_cluster_45.Braxon",
+    "state": 2
+  },
+  "$": {
+    "intent_key": "185991171337252936",
+    "cluster": "delta_cluster_11.Braxon",
+    "state": 1
+  },
+  "%": {
+    "intent_key": "52191112174634165",
+    "cluster": "delta_cluster_06.Braxon",
+    "state": 2
+  },
+  "&": {
+    "intent_key": "122451825113488472",
+    "cluster": "delta_cluster_15.Braxon",
+    "state": 2
+  },
+  "'": {
+    "intent_key": "97433637216154847",
+    "cluster": "delta_cluster_36.Braxon",
+    "state": 2
+  },
+  "(": {
+    "intent_key": "267563254712635653",
+    "cluster": "delta_cluster_34.Braxon",
+    "state": 0
+  },
+  ")": {
+    "intent_key": "202737267851911635",
+    "cluster": "delta_cluster_40.Braxon",
+    "state": 0
+  },
+  "*": {
+    "intent_key": "167643608555503651",
+    "cluster": "delta_cluster_50.Braxon",
+    "state": 1
+  },
+  "+": {
+    "intent_key": "263358190334637939",
+    "cluster": "delta_cluster_22.Braxon",
+    "state": 0
+  },
+  ",": {
+    "intent_key": "192975572162039403",
+    "cluster": "delta_cluster_22.Braxon",
+    "state": 0
+  },
+  "-": {
+    "intent_key": "116123684128038062",
+    "cluster": "delta_cluster_45.Braxon",
+    "state": 2
+  },
+  ".": {
+    "intent_key": "369180623457793101",
+    "cluster": "delta_cluster_40.Braxon",
+    "state": 0
+  },
+  "/": {
+    "intent_key": "364249630040949244",
+    "cluster": "delta_cluster_47.Braxon",
+    "state": 1
+  },
+  "0": {
+    "intent_key": "30647073354318462",
+    "cluster": "delta_cluster_49.Braxon",
+    "state": 0
+  },
+  "1": {
+    "intent_key": "33941116206294014",
+    "cluster": "delta_cluster_39.Braxon",
+    "state": 2
+  },
+  "2": {
+    "intent_key": "147614410446778245",
+    "cluster": "delta_cluster_22.Braxon",
+    "state": 0
+  },
+  "3": {
+    "intent_key": "17985350618306069",
+    "cluster": "delta_cluster_24.Braxon",
+    "state": 2
+  },
+  "4": {
+    "intent_key": "188820620626250183",
+    "cluster": "delta_cluster_42.Braxon",
+    "state": 2
+  },
+  "5": {
+    "intent_key": "385140159732668391",
+    "cluster": "delta_cluster_46.Braxon",
+    "state": 0
+  },
+  "6": {
+    "intent_key": "26706897221922921",
+    "cluster": "delta_cluster_22.Braxon",
+    "state": 0
+  },
+  "7": {
+    "intent_key": "180843186665363887",
+    "cluster": "delta_cluster_20.Braxon",
+    "state": 1
+  },
+  "8": {
+    "intent_key": "200519438805277337",
+    "cluster": "delta_cluster_12.Braxon",
+    "state": 2
+  },
+  "9": {
+    "intent_key": "260104041540439496",
+    "cluster": "delta_cluster_45.Braxon",
+    "state": 2
+  },
+  ":": {
+    "intent_key": "118708889521839077",
+    "cluster": "delta_cluster_48.Braxon",
+    "state": 2
+  },
+  ";": {
+    "intent_key": "279942786528580752",
+    "cluster": "delta_cluster_07.Braxon",
+    "state": 0
+  },
+  "<": {
+    "intent_key": "90885616679685394",
+    "cluster": "delta_cluster_29.Braxon",
+    "state": 1
+  },
+  "=": {
+    "intent_key": "51538651837411972",
+    "cluster": "delta_cluster_05.Braxon",
+    "state": 1
+  },
+  ">": {
+    "intent_key": "322054516794860618",
+    "cluster": "delta_cluster_33.Braxon",
+    "state": 2
+  },
+  "?": {
+    "intent_key": "284542941838990735",
+    "cluster": "delta_cluster_38.Braxon",
+    "state": 1
+  },
+  "@": {
+    "intent_key": "328572832202469254",
+    "cluster": "delta_cluster_39.Braxon",
+    "state": 2
+  },
+  "A": {
+    "intent_key": "215612596370612591",
+    "cluster": "delta_cluster_54.Braxon",
+    "state": 2
+  },
+  "B": {
+    "intent_key": "277667778409853358",
+    "cluster": "delta_cluster_49.Braxon",
+    "state": 0
+  },
+  "C": {
+    "intent_key": "245743024662327127",
+    "cluster": "delta_cluster_50.Braxon",
+    "state": 1
+  },
+  "D": {
+    "intent_key": "248296120308411020",
+    "cluster": "delta_cluster_27.Braxon",
+    "state": 2
+  },
+  "E": {
+    "intent_key": "36492572004734323",
+    "cluster": "delta_cluster_02.Braxon",
+    "state": 1
+  },
+  "F": {
+    "intent_key": "382178276431439794",
+    "cluster": "delta_cluster_17.Braxon",
+    "state": 1
+  },
+  "G": {
+    "intent_key": "96565132803420986",
+    "cluster": "delta_cluster_33.Braxon",
+    "state": 2
+  },
+  "H": {
+    "intent_key": "162844692669271372",
+    "cluster": "delta_cluster_41.Braxon",
+    "state": 1
+  },
+  "I": {
+    "intent_key": "107383671290295560",
+    "cluster": "delta_cluster_39.Braxon",
+    "state": 2
+  },
+  "J": {
+    "intent_key": "161122751748841677",
+    "cluster": "delta_cluster_34.Braxon",
+    "state": 0
+  },
+  "K": {
+    "intent_key": "100874099953487872",
+    "cluster": "delta_cluster_11.Braxon",
+    "state": 1
+  },
+  "L": {
+    "intent_key": "308282293485165848",
+    "cluster": "delta_cluster_33.Braxon",
+    "state": 2
+  },
+  "M": {
+    "intent_key": "278062576126507428",
+    "cluster": "delta_cluster_07.Braxon",
+    "state": 0
+  },
+  "N": {
+    "intent_key": "389283617969958160",
+    "cluster": "delta_cluster_29.Braxon",
+    "state": 1
+  },
+  "O": {
+    "intent_key": "257924198468903984",
+    "cluster": "delta_cluster_09.Braxon",
+    "state": 2
+  },
+  "P": {
+    "intent_key": "77228645280665508",
+    "cluster": "delta_cluster_01.Braxon",
+    "state": 0
+  },
+  "Q": {
+    "intent_key": "177262204056410992",
+    "cluster": "delta_cluster_23.Braxon",
+    "state": 1
+  },
+  "R": {
+    "intent_key": "310891977523330681",
+    "cluster": "delta_cluster_14.Braxon",
+    "state": 1
+  },
+  "S": {
+    "intent_key": "270773757572281678",
+    "cluster": "delta_cluster_11.Braxon",
+    "state": 1
+  },
+  "T": {
+    "intent_key": "142348803940248384",
+    "cluster": "delta_cluster_31.Braxon",
+    "state": 0
+  },
+  "U": {
+    "intent_key": "277967602823925685",
+    "cluster": "delta_cluster_14.Braxon",
+    "state": 1
+  },
+  "V": {
+    "intent_key": "13836643916420308",
+    "cluster": "delta_cluster_05.Braxon",
+    "state": 1
+  },
+  "W": {
+    "intent_key": "84972369905458171",
+    "cluster": "delta_cluster_44.Braxon",
+    "state": 1
+  },
+  "X": {
+    "intent_key": "197958897352193569",
+    "cluster": "delta_cluster_08.Braxon",
+    "state": 1
+  },
+  "Y": {
+    "intent_key": "66634704479059459",
+    "cluster": "delta_cluster_26.Braxon",
+    "state": 1
+  },
+  "Z": {
+    "intent_key": "181598307210968351",
+    "cluster": "delta_cluster_24.Braxon",
+    "state": 2
+  },
+  "[": {
+    "intent_key": "165855952015931272",
+    "cluster": "delta_cluster_05.Braxon",
+    "state": 1
+  },
+  "\\": {
+    "intent_key": "66937162542441719",
+    "cluster": "delta_cluster_06.Braxon",
+    "state": 2
+  },
+  "]": {
+    "intent_key": "183518189366325447",
+    "cluster": "delta_cluster_04.Braxon",
+    "state": 0
+  },
+  "^": {
+    "intent_key": "6367287853851961",
+    "cluster": "delta_cluster_32.Braxon",
+    "state": 1
+  },
+  "_": {
+    "intent_key": "363262966094694545",
+    "cluster": "delta_cluster_36.Braxon",
+    "state": 2
+  },
+  "`": {
+    "intent_key": "36079991011229545",
+    "cluster": "delta_cluster_02.Braxon",
+    "state": 1
+  },
+  "a": {
+    "intent_key": "150535943783013778",
+    "cluster": "delta_cluster_17.Braxon",
+    "state": 1
+  },
+  "b": {
+    "intent_key": "8448519358670900",
+    "cluster": "delta_cluster_15.Braxon",
+    "state": 2
+  },
+  "c": {
+    "intent_key": "137886822759447405",
+    "cluster": "delta_cluster_28.Braxon",
+    "state": 0
+  },
+  "d": {
+    "intent_key": "243676595573940453",
+    "cluster": "delta_cluster_52.Braxon",
+    "state": 0
+  },
+  "e": {
+    "intent_key": "67212232750998727",
+    "cluster": "delta_cluster_44.Braxon",
+    "state": 1
+  },
+  "f": {
+    "intent_key": "283495039932846145",
+    "cluster": "delta_cluster_14.Braxon",
+    "state": 1
+  },
+  "g": {
+    "intent_key": "1137012982997243",
+    "cluster": "delta_cluster_24.Braxon",
+    "state": 2
+  },
+  "h": {
+    "intent_key": "379534633998229529",
+    "cluster": "delta_cluster_36.Braxon",
+    "state": 2
+  },
+  "i": {
+    "intent_key": "3227895882659268",
+    "cluster": "delta_cluster_19.Braxon",
+    "state": 0
+  },
+  "j": {
+    "intent_key": "250027244967932303",
+    "cluster": "delta_cluster_24.Braxon",
+    "state": 2
+  },
+  "k": {
+    "intent_key": "223288021619821926",
+    "cluster": "delta_cluster_37.Braxon",
+    "state": 0
+  },
+  "l": {
+    "intent_key": "236265546063760795",
+    "cluster": "delta_cluster_20.Braxon",
+    "state": 1
+  },
+  "m": {
+    "intent_key": "209501467578255203",
+    "cluster": "delta_cluster_54.Braxon",
+    "state": 2
+  },
+  "n": {
+    "intent_key": "388153658673315635",
+    "cluster": "delta_cluster_42.Braxon",
+    "state": 2
+  },
+  "o": {
+    "intent_key": "62313093824109808",
+    "cluster": "delta_cluster_23.Braxon",
+    "state": 1
+  },
+  "p": {
+    "intent_key": "89091289917389758",
+    "cluster": "delta_cluster_23.Braxon",
+    "state": 1
+  },
+  "q": {
+    "intent_key": "10904710193927964",
+    "cluster": "delta_cluster_37.Braxon",
+    "state": 0
+  },
+  "r": {
+    "intent_key": "135182437076876457",
+    "cluster": "delta_cluster_04.Braxon",
+    "state": 0
+  },
+  "s": {
+    "intent_key": "382606561181651817",
+    "cluster": "delta_cluster_40.Braxon",
+    "state": 0
+  },
+  "t": {
+    "intent_key": "179653922932717197",
+    "cluster": "delta_cluster_10.Braxon",
+    "state": 0
+  },
+  "u": {
+    "intent_key": "64404588709656148",
+    "cluster": "delta_cluster_05.Braxon",
+    "state": 1
+  },
+  "v": {
+    "intent_key": "27535764280269013",
+    "cluster": "delta_cluster_26.Braxon",
+    "state": 1
+  },
+  "w": {
+    "intent_key": "299127365708251590",
+    "cluster": "delta_cluster_19.Braxon",
+    "state": 0
+  },
+  "x": {
+    "intent_key": "178015714152524802",
+    "cluster": "delta_cluster_37.Braxon",
+    "state": 0
+  },
+  "y": {
+    "intent_key": "294896158346687810",
+    "cluster": "delta_cluster_33.Braxon",
+    "state": 2
+  },
+  "z": {
+    "intent_key": "160306003531541504",
+    "cluster": "delta_cluster_21.Braxon",
+    "state": 2
+  },
+  "{": {
+    "intent_key": "286050512804360692",
+    "cluster": "delta_cluster_05.Braxon",
+    "state": 1
+  },
+  "|": {
+    "intent_key": "25098974319461192",
+    "cluster": "delta_cluster_45.Braxon",
+    "state": 2
+  },
+  "}": {
+    "intent_key": "174048362600409023",
+    "cluster": "delta_cluster_24.Braxon",
+    "state": 2
+  },
+  "~": {
+    "intent_key": "49628241085088804",
+    "cluster": "delta_cluster_33.Braxon",
+    "state": 2
+  }
+}

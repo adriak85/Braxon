@@ -1,0 +1,51 @@
+CITADEL699_PATTERN_AWARENESS {
+  authority = NSQ_COURT
+  architecture_root = true
+  route = citadel699_pattern_awareness
+
+  king = compositor
+  queen = linter
+  court_is_agents = false
+
+  allowed_scope {
+    authorized_citadel699_lane = true
+    public_unprotected_material = allowed_only_when_explicitly_available
+    protected_material = forbidden
+    unrelated_traffic = forbidden
+    access_control_bypass = forbidden
+    promiscuous_network_capture = forbidden
+  }
+
+  perception_contract {
+    structural_pattern_awareness = true
+    raw_content_recording = forbidden
+    source_code_recording = forbidden
+    credential_recording = forbidden
+    private_identifier_recording = forbidden
+    third_party_secret_recording = forbidden
+    external_user_data_recording = forbidden
+
+    retain_only {
+      aggregate_shape = true
+      abstract_transferable_skills = true
+      system_benefit_notes = true
+      moral_filter_notes = true
+      verification_summary = true
+    }
+  }
+
+  checksum_contract {
+    crc32c_allowed = optional_fast_lane_checksum
+    crc32c_is_not_identity_proof = true
+    blake3_required_for_identity = true
+    triple_bite_required_for_non_null_check = true
+  }
+
+  learning_contract {
+    learn_from_seen_patterns = true
+    learn_bad_habits = false
+    learn_moral_drift = false
+    retain_raw_examples = false
+    translate_patterns_to_nsq_skills = true
+  }
+}

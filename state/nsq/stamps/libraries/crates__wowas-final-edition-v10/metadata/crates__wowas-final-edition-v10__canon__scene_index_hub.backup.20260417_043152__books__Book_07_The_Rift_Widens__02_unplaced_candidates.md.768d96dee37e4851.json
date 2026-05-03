@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_07_The_Rift_Widens__02_unplaced_candidates.md.768d96dee37e4851.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.789291+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_07_The_Rift_Widens__02_unplaced_candidates.md.768d96dee37e4851.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_07_The_Rift_Widens/02_unplaced_candidates.md",
+  "source_bytes": 1485,
+  "source_sha256": "768d96dee37e485138df880cd91c8861baed61de8da4531a46a8e775b69354ea",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_07_The_Rift_Widens__02_unplaced_candidates.md.768d96dee37e4851"
+}

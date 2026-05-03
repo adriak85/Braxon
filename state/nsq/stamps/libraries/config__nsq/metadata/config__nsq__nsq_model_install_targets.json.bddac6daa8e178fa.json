@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__nsq_model_install_targets.json.bddac6daa8e178fa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.445392+00:00",
+  "harm_hit_count": 1,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__nsq_model_install_targets.json.bddac6daa8e178fa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/nsq_model_install_targets.json",
+  "source_bytes": 1310,
+  "source_sha256": "bddac6daa8e178fa6c8de8cb5b5bb9a1112ac31f327d062a946ae7eb109b6111",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__nsq_model_install_targets.json.bddac6daa8e178fa"
+}

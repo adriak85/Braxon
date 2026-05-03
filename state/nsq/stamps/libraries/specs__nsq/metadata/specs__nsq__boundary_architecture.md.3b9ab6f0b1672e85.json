@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__boundary_architecture.md.3b9ab6f0b1672e85.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.275856+00:00",
+  "harm_hit_count": 0,
+  "library": "specs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__boundary_architecture.md.3b9ab6f0b1672e85.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/nsq/boundary_architecture.md",
+  "source_bytes": 1538,
+  "source_sha256": "3b9ab6f0b1672e85bf727b3672dd53f29b8e10f6ad83fa762d123125958da779",
+  "stamp_id": "nsq.asm.specs__nsq.specs__nsq__boundary_architecture.md.3b9ab6f0b1672e85"
+}

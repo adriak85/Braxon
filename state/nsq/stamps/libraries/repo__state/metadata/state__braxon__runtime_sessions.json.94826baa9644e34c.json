@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__BRAXON__runtime_sessions.json.94826baa9644e34c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.250166+00:00",
+  "harm_hit_count": 16,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__BRAXON__runtime_sessions.json.94826baa9644e34c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/runtime_sessions.json",
+  "source_bytes": 16773,
+  "source_sha256": "94826baa9644e34c05915bd6347abccf33c64db87a30d793865c494b8841db06",
+  "stamp_id": "nsq.asm.repo__state.state__BRAXON__runtime_sessions.json.94826baa9644e34c"
+}

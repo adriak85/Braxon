@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_05_Runes_And_Wound__placed__B05_006D__A_Puzzle_Of_Behavior.md.bd03b44a7e1155db.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.099247+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_05_Runes_And_Wound__placed__B05_006D__A_Puzzle_Of_Behavior.md.bd03b44a7e1155db.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_05_Runes_And_Wound/placed/B05_006D__A_Puzzle_Of_Behavior.md",
+  "source_bytes": 368,
+  "source_sha256": "bd03b44a7e1155dbca52946cff1f24e44beac8c33a09151a9a3790ae13aa9bb8",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_05_Runes_And_Wound__placed__B05_006D__A_Puzzle_Of_Behavior.md.bd03b44a7e1155db"
+}

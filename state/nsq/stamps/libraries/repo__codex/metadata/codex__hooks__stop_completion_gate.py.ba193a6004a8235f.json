@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__codex/asm/macros/codex__hooks__stop_completion_gate.py.ba193a6004a8235f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.223209+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__codex",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__codex/metadata/codex__hooks__stop_completion_gate.py.ba193a6004a8235f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": ".codex/hooks/stop_completion_gate.py",
+  "source_bytes": 3092,
+  "source_sha256": "ba193a6004a8235f8ab638c829ad3042ed43875558a747c0d608c8af5190c56b",
+  "stamp_id": "nsq.asm.repo__codex.codex__hooks__stop_completion_gate.py.ba193a6004a8235f"
+}

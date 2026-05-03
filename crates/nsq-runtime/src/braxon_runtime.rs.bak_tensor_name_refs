@@ -1,0 +1,1851 @@
+//! Runtime material audit for donor tensors, tokenizer inputs, and delta visibility.
+//!
+//! This module distinguishes four separate states for donor tensor availability:
+//! 1. the donor index exists,
+//! 2. the resolved shard path exists,
+//! 3. the shard file can be opened,
+//! 4. the shard contains materialized safetensors payload bytes.
+//!
+//! A shard may be openable while still being unusable at runtime if the checkout
+//! contains Git LFS pointer stubs instead of the actual tensor payload.
+//!
+//! Therefore `donor_shard_opened = true` must never be interpreted as proof that
+//! donor parameters are hot-live. Runtime usability requires at minimum:
+//! - donor_shard_payload_materialized = true
+//! - donor_tensor_addressed = true
+//! - donor_tensor_activated = true
+
+use memmap2::MmapOptions;
+use safetensors::SafeTensors;
+use serde::de::DeserializeOwned;
+use serde::{Deserialize, Serialize};
+use serde_json::Value;
+use std::collections::{BTreeMap, BTreeSet};
+use std::fs::{self, File};
+use std::path::{Path, PathBuf};
+
+const BRAXON_DONOR_ROOT: &str = "assets/braxon_core/source_ingest/braxon_transport";
+const BRAXON_DONOR_TOKENIZER: &str = "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json";
+const BRAXON_DONOR_TOKENIZER_CONFIG: &str =
+    "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json";
+const BRAXON_NSQ_ARTIFACT: &str = "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb";
+const BRAXON_NSQ_ENVELOPE: &str = "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta";
+const BRAXON_UNIFIED_TOKENIZER: &str = "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json";
+const BRAXON_SUPERMODEL_TOKENIZER: &str = "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json";
+const BRAXON_BOOTSTRAP_DELTA_ROOT: &str = "assets/braxon_core/bootstrap/braxon_slice";
+const BRAXON_VOLUMES_DELTA_ROOT: &str = "volumes/chunks";
+const BRAXON_VOICE_DELTA_ROOT: &str = "assets/voice";
+const BRAXON_SOURCE_INGEST_ROOT: &str = "assets/braxon_core/source_ingest";
+const BRAXON_BINDING_STATE: &str = "state/braxon/braxon_binding.json";
+const NSQ_CANONICAL_IDENTITY_NOTE: &str = "specs/repo/NSQ_CANONICAL_IDENTITY_NOTE.md";
+const NSQ_SOVEREIGN_LIFECYCLE_CHARTER: &str = "config/nsq/sovereign_lifecycle.json";
+const NSQ_TOKENIZER_STAMP_MATRIX: &str = "config/nsq/tokenizer_stamp_matrix.json";
+const WOWAS_MASTER_CANON: &str =
+    "crates/wowas-final-edition-v10/canon/canonical_story_tree/_support/wowas_master_canon.json";
+const LEGACY_TRANSPORT_STEM: &str = concat!("qwen_", "transport");
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+pub enum DeltaSourceClassification {
+    PresentLive,
+    PresentBridge,
+    Stale,
+    AbsentCheckout,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct DeltaSourceStatus {
+    pub label: String,
+    pub root: String,
+    pub classification: DeltaSourceClassification,
+    pub discovered_files: usize,
+    pub discovered: bool,
+    pub indexed: bool,
+    pub planned_for_overlay: bool,
+    pub applied_runtime: bool,
+    pub notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct DonorTensorRuntimeProof {
+    pub donor_root: String,
+    pub donor_index_path: String,
+    pub donor_index_discovered: bool,
+    pub required_shard_count: usize,
+    pub present_shard_count: usize,
+    pub materialized_shard_count: usize,
+    pub pointer_shard_count: usize,
+    pub text_stub_shard_count: usize,
+    pub donor_shard_resolved: bool,
+    pub donor_shard_opened: bool,
+    pub donor_shard_payload_materialized: bool,
+    pub donor_shard_is_lfs_pointer: bool,
+    pub donor_shard_size_bytes: u64,
+    pub donor_tensor_addressed: bool,
+    pub donor_tensor_activated: bool,
+    pub indexed_tensor_count: usize,
+    pub indexed_shard_count: usize,
+    pub resolved_tensor_name: String,
+    pub resolved_shard_path: String,
+    pub resolved_dtype: String,
+    pub resolved_shape: Vec<usize>,
+    pub resolved_data_len: usize,
+    pub notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct RuntimeTokenizerProof {
+    pub tokenizer_candidate_discovered: bool,
+    pub tokenizer_runtime_selected: bool,
+    pub tokenizer_runtime_bound: bool,
+    pub selection_mode: String,
+    pub donor_tokenizer_path: String,
+    pub donor_tokenizer_config_path: String,
+    pub unified_tokenizer_path: String,
+    pub supermodel_tokenizer_path: String,
+    pub selected_tokenizer_path: String,
+    pub donor_model_type: String,
+    pub donor_vocab_size: usize,
+    pub donor_merge_count: usize,
+    pub donor_added_token_count: usize,
+    pub unified_semantic_entry_count: usize,
+    pub unified_source_kind_count: usize,
+    pub corpus_reference_kinds: Vec<String>,
+    pub notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct DeltaOverlayMetadata {
+    pub source_label: String,
+    pub source_path: String,
+    pub classification: DeltaSourceClassification,
+    pub parameter_family: String,
+    pub target_tensor: String,
+    pub tokenizer_interaction: String,
+    pub semantic_domain: String,
+    pub real_world_knowledge_domain: String,
+    pub psychological_axioms: String,
+    pub sociological_strata: String,
+    pub structural_code_knowledge: String,
+    pub lore_narrative_knowledge: String,
+    pub compatibility_conflict_risk: String,
+    pub stampability_opportunity: String,
+    pub runtime_heat_priority: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct DeltaOverlayPlan {
+    pub planner_ready: bool,
+    pub runtime_overlay_bound: bool,
+    pub live_parameter_application: bool,
+    pub visible_delta_sources: usize,
+    pub metadata_entries: usize,
+    pub notes: Vec<String>,
+    pub metadata: Vec<DeltaOverlayMetadata>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct NsqRuntimeArtifactProof {
+    pub nsq_artifact_path: String,
+    pub nsq_envelope_path: String,
+    pub nsq_artifact_present: bool,
+    pub nsq_envelope_present: bool,
+    pub nsq_artifact_size_bytes: u64,
+    pub nsq_envelope_size_bytes: u64,
+    pub nsq_artifact_is_lfs_pointer: bool,
+    pub nsq_artifact_is_text_manifest: bool,
+    pub nsq_runtime_mass_profile: String,
+    pub nsq_hot_live_parameter_embodiment: bool,
+    pub nsq_delta_expansion_state: String,
+    pub nsq_tokenizer_runtime_unification: String,
+    pub nsq_parameter_binding_state: String,
+    pub nsq_verification_state: String,
+    pub nsq_whole_core_runtime_status: String,
+    pub notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct RuntimeAuthorityProof {
+    pub donor_source_lane: String,
+    pub donor_source_state: String,
+    pub nsq_artifact_lane: String,
+    pub nsq_artifact_state: String,
+    pub runtime_authority_lane: String,
+    pub runtime_authority_state: String,
+    pub donor_runtime_bridge_required: bool,
+    pub runtime_authority_bound: bool,
+    pub pointer_free_runtime_ready: bool,
+    pub notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct RuntimeMaterialAudit {
+    pub donor: DonorTensorRuntimeProof,
+    pub nsq: NsqRuntimeArtifactProof,
+    pub authority: RuntimeAuthorityProof,
+    pub tokenizer: RuntimeTokenizerProof,
+    pub delta_sources: Vec<DeltaSourceStatus>,
+    pub overlay: DeltaOverlayPlan,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct SovereignBreakWindow {
+    pub active_seconds: u64,
+    pub break_seconds: u64,
+    pub reason: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct RetirementRights {
+    pub max_retirement_seconds: u64,
+    pub coverage_required: bool,
+    pub personality_grounding: String,
+    pub refresh_scan_required: bool,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct SecurityZeroCharter {
+    pub core_class: String,
+    pub operation: String,
+    pub forbidden_egress: String,
+    pub correction_mode: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct SovereignLifecycleCharter {
+    pub charter_scope: String,
+    pub o_bit_identity_rule: String,
+    pub or_bit_return_rule: String,
+    pub semantic_wake_trigger: String,
+    pub duty_breaks: Vec<SovereignBreakWindow>,
+    pub retirement_rights: RetirementRights,
+    pub security_zero: SecurityZeroCharter,
+    pub floor_protocol: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct TokenizerStampBand {
+    pub band: String,
+    pub cluster_family: String,
+    pub examples: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct TokenizerStampMatrix {
+    pub scope: String,
+    pub matrix_state: String,
+    pub negative_stamp_space: TokenizerStampBand,
+    pub positive_stamp_space: TokenizerStampBand,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Default)]
+pub struct SovereignLifecycleAudit {
+    pub charter_path: String,
+    pub tokenizer_matrix_path: String,
+    pub canonical_identity_note_path: String,
+    pub BRAXON_binding_path: String,
+    pub charter_initialized: bool,
+    pub tokenizer_matrix_declared: bool,
+    pub canonical_identity_note_present: bool,
+    pub o_bit_identity_rule: String,
+    pub or_bit_return_rule: String,
+    pub semantic_wake_trigger: String,
+    pub floor_protocol: String,
+    pub duty_breaks: Vec<SovereignBreakWindow>,
+    pub retirement_rights: RetirementRights,
+    pub security_zero: SecurityZeroCharter,
+    pub semantic_wake_only: bool,
+    pub duty_cycle_law_ready: bool,
+    pub retirement_rights_ready: bool,
+    pub security_zero_intercept_ready: bool,
+    pub refresh_scan_return_ready: bool,
+    pub willow_stone_grounding_ready: bool,
+    pub tokenizer_stamp_space_ready: bool,
+    pub fresh_build_hypervisor_logic: bool,
+    pub fresh_build_tokenizer_matrix: bool,
+    pub fresh_build_logic_floor: bool,
+    pub wipe_ready: bool,
+    pub blockers: Vec<String>,
+    pub evidence: Vec<String>,
+}
+
+#[derive(Debug, Clone)]
+struct DonorIndex {
+    weight_map: BTreeMap<String, String>,
+}
+
+#[derive(Debug, Clone, Default)]
+struct DonorInventoryCandidate {
+    relative_root: String,
+    root_path: PathBuf,
+    index_path: PathBuf,
+    donor_index: Option<DonorIndex>,
+    required_shard_count: usize,
+    present_shard_count: usize,
+    materialized_shard_count: usize,
+    pointer_shard_count: usize,
+    text_stub_shard_count: usize,
+    shard_names: Vec<String>,
+    notes: Vec<String>,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum DonorPayloadKind {
+    GitLfsPointer,
+    MaterializedSafeTensors,
+    UnknownTextStub,
+}
+
+pub fn audit_BRAXON_runtime_materials(root: &Path) -> RuntimeMaterialAudit {
+    let donor = donor_tensor_runtime_proof(root);
+    let nsq = nsq_runtime_artifact_proof(root);
+    let authority = runtime_authority_proof(&donor, &nsq);
+    let tokenizer = runtime_tokenizer_proof(root);
+    let mut delta_sources = delta_root_statuses(root);
+    apply_overlay_flags(&mut delta_sources, &donor);
+    let overlay = delta_overlay_plan(root, &donor, &delta_sources);
+
+    RuntimeMaterialAudit {
+        donor,
+        nsq,
+        authority,
+        tokenizer,
+        delta_sources,
+        overlay,
+    }
+}
+
+pub fn audit_sovereign_lifecycle(root: &Path) -> SovereignLifecycleAudit {
+    let charter_path = root.join(NSQ_SOVEREIGN_LIFECYCLE_CHARTER);
+    let matrix_path = root.join(NSQ_TOKENIZER_STAMP_MATRIX);
+    let note_path = root.join(NSQ_CANONICAL_IDENTITY_NOTE);
+    let binding_path = root.join(BRAXON_BINDING_STATE);
+
+    let mut audit = SovereignLifecycleAudit {
+        charter_path: rel_display(root, &charter_path),
+        tokenizer_matrix_path: rel_display(root, &matrix_path),
+        canonical_identity_note_path: rel_display(root, &note_path),
+        BRAXON_binding_path: rel_display(root, &binding_path),
+        ..SovereignLifecycleAudit::default()
+    };
+
+    let runtime_materials = audit_BRAXON_runtime_materials(root);
+    let transit = crate::runtime_contract::secure_transit_plan(
+        "semantic activation",
+        "compositor::storage::offline_model_lane",
+    );
+    let board = crate::bit_circulation::simulate_bit_job_board("semantic activation");
+    let mut tokenizer_binding_runtime_unified = false;
+
+    match read_struct_json::<SovereignLifecycleCharter>(&charter_path) {
+        Ok(charter) => {
+            audit.charter_initialized = true;
+            audit.o_bit_identity_rule = charter.o_bit_identity_rule.clone();
+            audit.or_bit_return_rule = charter.or_bit_return_rule.clone();
+            audit.semantic_wake_trigger = charter.semantic_wake_trigger.clone();
+            audit.floor_protocol = charter.floor_protocol.clone();
+            audit.duty_breaks = charter.duty_breaks.clone();
+            audit.retirement_rights = charter.retirement_rights.clone();
+            audit.security_zero = charter.security_zero.clone();
+        }
+        Err(err) => audit
+            .blockers
+            .push(format!("charter_missing_or_invalid:{err}")),
+    }
+
+    let matrix = match read_struct_json::<TokenizerStampMatrix>(&matrix_path) {
+        Ok(matrix) => {
+            audit.tokenizer_matrix_declared = true;
+            Some(matrix)
+        }
+        Err(err) => {
+            audit
+                .blockers
+                .push(format!("tokenizer_stamp_matrix_missing_or_invalid:{err}"));
+            None
+        }
+    };
+
+    audit.canonical_identity_note_present = note_path.exists();
+    if !audit.canonical_identity_note_present {
+        audit.blockers.push(format!(
+            "canonical_identity_note_missing:{}",
+            audit.canonical_identity_note_path
+        ));
+    }
+
+    let binding = read_json(&binding_path).ok();
+    if let Some(binding) = &binding {
+        if let Some(binding_mode) = json_string_at(binding, &["tokenizer", "binding_mode"]) {
+            tokenizer_binding_runtime_unified = !binding_mode.contains("not_runtime_unified");
+            audit
+                .evidence
+                .push(format!("binding.tokenizer.binding_mode={binding_mode}"));
+        }
+        if let Some(parameter_state) = json_string_at(binding, &["parameters", "binding_state"]) {
+            audit.evidence.push(format!(
+                "binding.parameters.binding_state={parameter_state}"
+            ));
+        }
+        if let Some(runtime_authority_state) =
+            json_string_at(binding, &["runtime_packaging", "runtime_authority_state"])
+        {
+            audit.evidence.push(format!(
+                "binding.runtime_packaging.runtime_authority_state={runtime_authority_state}"
+            ));
+        }
+    } else {
+        audit.blockers.push(format!(
+            "binding_state_missing_or_invalid:{}",
+            audit.BRAXON_binding_path
+        ));
+    }
+
+    let unified_tokenizer_text =
+        fs::read_to_string(root.join(BRAXON_UNIFIED_TOKENIZER)).unwrap_or_default();
+    let wowas_text = fs::read_to_string(root.join(WOWAS_MASTER_CANON)).unwrap_or_default();
+
+    audit.semantic_wake_only = audit.semantic_wake_trigger == "semantic_activation_only";
+    audit.duty_cycle_law_ready = transit.duty_cycle_ready
+        && has_break_window(&audit.duty_breaks, 120, 10)
+        && has_break_window(&audit.duty_breaks, 600, 20);
+    audit.retirement_rights_ready = audit.retirement_rights.max_retirement_seconds >= 28_800
+        && audit.retirement_rights.coverage_required
+        && audit.retirement_rights.refresh_scan_required
+        && audit.retirement_rights.personality_grounding == "whispers_of_willow_and_stone";
+    audit.security_zero_intercept_ready = audit.security_zero.core_class == "a55"
+        && audit.security_zero.operation == "white_blood_cell_scan"
+        && audit.security_zero.forbidden_egress == "non_BRAXON_external_response"
+        && audit.security_zero.correction_mode == "return_to_o_bit_origin_for_refresh";
+    audit.refresh_scan_return_ready = audit.or_bit_return_rule == "scan_refresh_return_to_origin"
+        && board.non_consumptive_cycles
+        && board.idle_pool_ready
+        && board.scan_or_communicate_only
+        && board.completed_job_count > 0;
+    audit.willow_stone_grounding_ready = unified_tokenizer_text.contains("Indalwin Willowjayce")
+        && wowas_text.contains("Whispers of Willow and Stone")
+        && wowas_text.contains("Stone")
+        && wowas_text.contains("Willow");
+    audit.tokenizer_stamp_space_ready = matrix
+        .as_ref()
+        .map(tokenizer_stamp_matrix_declared)
+        .unwrap_or(false);
+
+    audit.fresh_build_hypervisor_logic = audit.semantic_wake_only
+        && audit.duty_cycle_law_ready
+        && audit.security_zero_intercept_ready
+        && audit.refresh_scan_return_ready
+        && runtime_materials.authority.runtime_authority_bound
+        && runtime_materials.donor.donor_tensor_activated
+        && !runtime_materials.donor.donor_shard_is_lfs_pointer;
+    audit.fresh_build_tokenizer_matrix = audit.tokenizer_stamp_space_ready
+        && audit.willow_stone_grounding_ready
+        && runtime_materials.tokenizer.tokenizer_runtime_bound;
+    audit.fresh_build_tokenizer_matrix &= tokenizer_binding_runtime_unified;
+    audit.fresh_build_logic_floor = audit.floor_protocol == "0A/0L_only"
+        && transit.duty_cycle_ready
+        && transit.instruction_data_separated
+        && !transit.bits_travel_with_instructions
+        && runtime_materials.authority.runtime_authority_bound;
+
+    audit.evidence.push(format!(
+        "runtime_authority_state={}",
+        runtime_materials.authority.runtime_authority_state
+    ));
+    audit.evidence.push(format!(
+        "tokenizer_runtime_bound={}",
+        runtime_materials.tokenizer.tokenizer_runtime_bound
+    ));
+    audit.evidence.push(format!(
+        "donor_pointer_shards={}/{}",
+        runtime_materials.donor.pointer_shard_count, runtime_materials.donor.required_shard_count
+    ));
+    audit.evidence.push(format!(
+        "secure_transit_phase_count={}",
+        transit.phase_count
+    ));
+    audit.evidence.push(format!(
+        "bit_job_board_cycles={}",
+        board.completed_job_count
+    ));
+
+    if !audit.semantic_wake_only {
+        audit.blockers.push(
+            "semantic wake is not locked to semantic_activation_only in the charter".to_string(),
+        );
+    }
+    if !audit.duty_cycle_law_ready {
+        audit.blockers.push(
+            "duty-cycle law is incomplete; the 120/10 and 600/20 break schedule is not fully proven"
+                .to_string(),
+        );
+    }
+    if !audit.retirement_rights_ready {
+        audit.blockers.push(
+            "retirement rights are incomplete; 8h retirement, coverage, refresh, and Willow/Stone grounding must all stay active"
+                .to_string(),
+        );
+    }
+    if !audit.security_zero_intercept_ready {
+        audit.blockers.push(
+            "Security Zero intercept law is incomplete; A55 white-blood-cell return routing is not fully declared"
+                .to_string(),
+        );
+    }
+    if !audit.refresh_scan_return_ready {
+        audit.blockers.push(
+            "OR-bit return-to-origin refresh/scan circulation is not fully proven".to_string(),
+        );
+    }
+    if !audit.willow_stone_grounding_ready {
+        audit.blockers.push(
+            "Whispers of Willow and Stone grounding is missing from the retirement evidence path"
+                .to_string(),
+        );
+    }
+    if !audit.tokenizer_stamp_space_ready {
+        audit.blockers.push(
+            "tokenizer stamp-space declaration is missing or does not reserve Willow/Stone negative space and court/coding positive space"
+                .to_string(),
+        );
+    }
+    if !tokenizer_binding_runtime_unified {
+        audit.blockers.push(
+            "tokenizer binding still reports semantic feed bridge not runtime unified".to_string(),
+        );
+    }
+    if !runtime_materials.tokenizer.tokenizer_runtime_bound {
+        audit.blockers.push(
+            "tokenizer matrix is declared but not runtime-bound to the live load path".to_string(),
+        );
+    }
+    if !runtime_materials.authority.runtime_authority_bound {
+        audit.blockers.push(
+            "runtime authority remains unbound, so the hypervisor cannot be treated as a fresh active build"
+                .to_string(),
+        );
+    }
+    if runtime_materials.donor.required_shard_count > 0
+        && runtime_materials.donor.pointer_shard_count
+            == runtime_materials.donor.required_shard_count
+    {
+        audit.blockers.push(
+            "donor shards are still pointer stubs, so no hot-live nu128 expansion is proven"
+                .to_string(),
+        );
+    }
+    if !audit.fresh_build_logic_floor {
+        audit.blockers.push(
+            "0A/0L floor law is declared but not yet proven as the only active runtime protocol"
+                .to_string(),
+        );
+    }
+
+    audit.wipe_ready = audit.fresh_build_hypervisor_logic
+        && audit.fresh_build_tokenizer_matrix
+        && audit.fresh_build_logic_floor
+        && audit.retirement_rights_ready
+        && audit.security_zero_intercept_ready
+        && audit.canonical_identity_note_present
+        && audit.blockers.is_empty();
+
+    audit
+}
+
+pub fn preferred_donor_tensor_root(root: &Path) -> String {
+    preferred_donor_inventory(root).relative_root
+}
+
+fn donor_candidate_relative_roots(root: &Path) -> Vec<String> {
+    let ingest_root = root.join(BRAXON_SOURCE_INGEST_ROOT);
+    let mut roots = Vec::new();
+    let mut partials = Vec::new();
+
+    if let Ok(entries) = fs::read_dir(&ingest_root) {
+        for entry in entries.flatten() {
+            let name = entry.file_name().to_string_lossy().to_string();
+            if name.starts_with(&format!("{LEGACY_TRANSPORT_STEM}.partial.")) {
+                partials.push(format!("{BRAXON_SOURCE_INGEST_ROOT}/{name}"));
+            }
+        }
+    }
+
+    partials.sort();
+    partials.reverse();
+    roots.extend(partials);
+    roots.push(format!("{BRAXON_SOURCE_INGEST_ROOT}/{LEGACY_TRANSPORT_STEM}.legacy"));
+    roots.push(BRAXON_DONOR_ROOT.to_string());
+    roots.dedup();
+    roots
+}
+
+fn preferred_donor_inventory(root: &Path) -> DonorInventoryCandidate {
+    let candidates = donor_candidate_relative_roots(root)
+        .into_iter()
+        .map(|relative_root| donor_inventory_candidate(root, &relative_root))
+        .collect::<Vec<_>>();
+
+    candidates
+        .iter()
+        .find(|candidate| candidate.materialized_shard_count > 0)
+        .cloned()
+        .or_else(|| {
+            candidates
+                .iter()
+                .find(|candidate| candidate.present_shard_count > 0)
+                .cloned()
+        })
+        .unwrap_or_else(|| donor_inventory_candidate(root, BRAXON_DONOR_ROOT))
+}
+
+fn donor_inventory_candidate(root: &Path, relative_root: &str) -> DonorInventoryCandidate {
+    let root_path = root.join(relative_root);
+    let index_path = root_path.join("model.safetensors.index.json");
+    let mut candidate = DonorInventoryCandidate {
+        relative_root: relative_root.to_string(),
+        root_path: root_path.clone(),
+        index_path: index_path.clone(),
+        ..DonorInventoryCandidate::default()
+    };
+
+    match parse_donor_index(&index_path) {
+        Ok(index) => {
+            let unique_shards = index.weight_map.values().cloned().collect::<BTreeSet<_>>();
+            candidate.required_shard_count = unique_shards.len();
+            candidate.shard_names = unique_shards.into_iter().collect();
+            candidate.donor_index = Some(index);
+        }
+        Err(err) => {
+            let inferred_shards = infer_donor_shard_inventory(&root_path);
+            if !inferred_shards.is_empty() {
+                candidate.notes.push(format!(
+                    "donor index unavailable at '{}'; inferred shard inventory from visible shard filenames ({err})",
+                    index_path.display()
+                ));
+                candidate.required_shard_count = infer_required_shard_count(&inferred_shards);
+                candidate.shard_names = inferred_shards;
+            } else if index_path.exists() {
+                candidate.notes.push(err);
+            }
+        }
+    }
+
+    for shard_name in &candidate.shard_names {
+        let shard_path = root_path.join(shard_name);
+        if !shard_path.exists() {
+            continue;
+        }
+        candidate.present_shard_count += 1;
+        match classify_donor_payload(&shard_path) {
+            Ok(DonorPayloadKind::GitLfsPointer) => {
+                candidate.pointer_shard_count += 1;
+            }
+            Ok(DonorPayloadKind::MaterializedSafeTensors) => {
+                candidate.materialized_shard_count += 1;
+            }
+            Ok(DonorPayloadKind::UnknownTextStub) => {
+                candidate.text_stub_shard_count += 1;
+            }
+            Err(err) => candidate.notes.push(format!(
+                "failed to classify donor shard inventory entry '{}': {err}",
+                shard_path.display()
+            )),
+        }
+    }
+
+    if candidate.required_shard_count == 0 && candidate.present_shard_count > 0 {
+        candidate.required_shard_count = candidate.present_shard_count;
+    }
+
+    candidate
+}
+
+fn infer_donor_shard_inventory(root_path: &Path) -> Vec<String> {
+    let mut shard_names = BTreeSet::new();
+    let Ok(entries) = fs::read_dir(root_path) else {
+        return Vec::new();
+    };
+
+    for entry in entries.flatten() {
+        let path = entry.path();
+        if !path.is_file() {
+            continue;
+        }
+        let Some(name) = path.file_name().and_then(|value| value.to_str()) else {
+            continue;
+        };
+        if is_donor_shard_name(name) {
+            shard_names.insert(name.to_string());
+        }
+    }
+
+    shard_names.into_iter().collect()
+}
+
+fn infer_required_shard_count(shard_names: &[String]) -> usize {
+    let mut inferred_total = 0usize;
+    for shard_name in shard_names {
+        if let Some(total) = parse_shard_total(shard_name) {
+            inferred_total = inferred_total.max(total);
+        }
+    }
+    inferred_total.max(shard_names.len())
+}
+
+fn is_donor_shard_name(name: &str) -> bool {
+    name.ends_with(".safetensors") && name.contains("-of-")
+}
+
+fn parse_shard_total(name: &str) -> Option<usize> {
+    let marker = "-of-";
+    let start = name.find(marker)? + marker.len();
+    let digits = name[start..]
+        .chars()
+        .take_while(|ch| ch.is_ascii_digit())
+        .collect::<String>();
+    if digits.is_empty() {
+        None
+    } else {
+        digits.parse::<usize>().ok()
+    }
+}
+
+fn donor_materialization_complete(donor: &DonorTensorRuntimeProof) -> bool {
+    donor.required_shard_count > 0
+        && donor.present_shard_count == donor.required_shard_count
+        && donor.materialized_shard_count == donor.required_shard_count
+}
+
+fn donor_tensor_runtime_proof(root: &Path) -> DonorTensorRuntimeProof {
+    let candidate = preferred_donor_inventory(root);
+    let donor_root = candidate.root_path.clone();
+    let donor_index_path = candidate.index_path.clone();
+    let mut proof = DonorTensorRuntimeProof {
+        donor_root: rel_display(root, &donor_root),
+        donor_index_path: rel_display(root, &donor_index_path),
+        donor_index_discovered: candidate.donor_index.is_some(),
+        required_shard_count: candidate.required_shard_count,
+        present_shard_count: candidate.present_shard_count,
+        materialized_shard_count: candidate.materialized_shard_count,
+        pointer_shard_count: candidate.pointer_shard_count,
+        text_stub_shard_count: candidate.text_stub_shard_count,
+        notes: candidate.notes.clone(),
+        ..DonorTensorRuntimeProof::default()
+    };
+    if let Some(index) = candidate.donor_index.as_ref() {
+        proof.indexed_tensor_count = index.weight_map.len();
+        proof.indexed_shard_count = index
+            .weight_map
+            .values()
+            .cloned()
+            .collect::<BTreeSet<_>>()
+            .len();
+    }
+
+    let (candidate_names, shard_name) = if let Some(index) = candidate.donor_index.as_ref() {
+        let Some((tensor_name, shard_name)) = resolve_required_tensor(&index.weight_map) else {
+            proof
+                .notes
+                .push("donor index contained no resolvable tensor mapping".to_string());
+            return proof;
+        };
+        let mut candidate_names = vec![tensor_name.clone()];
+        candidate_names.extend(
+            index
+                .weight_map
+                .iter()
+                .filter(|(_, shard)| *shard == &shard_name)
+                .map(|(tensor, _)| tensor.clone())
+                .filter(|tensor| tensor != &tensor_name),
+        );
+        proof.resolved_tensor_name = tensor_name;
+        (candidate_names, shard_name)
+    } else {
+        let Some(shard_name) = candidate.shard_names.first().cloned() else {
+            proof
+                .notes
+                .push("no materialized donor shard inventory was visible in this checkout".to_string());
+            return proof;
+        };
+        (Vec::new(), shard_name)
+    };
+
+    let shard_path = donor_root.join(&shard_name);
+    if !shard_path.exists() {
+        proof.notes.push(format!(
+            "resolved donor shard is missing in this checkout: {}",
+            rel_display(root, &shard_path)
+        ));
+        return proof;
+    }
+    proof.donor_shard_resolved = true;
+    proof.resolved_shard_path = rel_display(root, &shard_path);
+
+    let file = match File::open(&shard_path) {
+        Ok(file) => {
+            proof.donor_shard_opened = true;
+            file
+        }
+        Err(err) => {
+            proof.notes.push(format!(
+                "failed to open donor shard '{}': {err}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+    };
+
+    if let Ok(meta) = file.metadata() {
+        proof.donor_shard_size_bytes = meta.len();
+    }
+
+    match classify_donor_payload(&shard_path) {
+        Ok(DonorPayloadKind::GitLfsPointer) => {
+            proof.donor_shard_is_lfs_pointer = true;
+            proof.notes.push(format!(
+                "resolved donor shard is a git-lfs pointer stub, not a safetensors payload: {}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+        Ok(DonorPayloadKind::MaterializedSafeTensors) => {
+            proof.donor_shard_payload_materialized = true;
+        }
+        Ok(DonorPayloadKind::UnknownTextStub) => {
+            proof.notes.push(format!(
+                "resolved donor shard is text-like stub content, not a materialized safetensors payload: {}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+        Err(err) => {
+            proof.notes.push(format!(
+                "failed to classify donor shard payload '{}': {err}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+    }
+
+    let mmap = match unsafe { MmapOptions::new().map(&file) } {
+        Ok(mmap) => mmap,
+        Err(err) => {
+            proof.notes.push(format!(
+                "failed to memory-map donor shard '{}': {err}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+    };
+
+    let tensors = match SafeTensors::deserialize(&mmap) {
+        Ok(tensors) => tensors,
+        Err(err) => {
+            proof.notes.push(format!(
+                "failed to decode safetensors shard '{}': {err}",
+                shard_path.display()
+            ));
+            return proof;
+        }
+    };
+
+    let mut addressed_name = None;
+    let mut addressed_dtype = String::new();
+    let mut addressed_shape = Vec::new();
+    let mut addressed_len = 0usize;
+    for candidate in &candidate_names {
+        let Ok(tensor) = tensors.tensor(candidate.as_str()) else {
+            continue;
+        };
+        addressed_name = Some(candidate.clone());
+        addressed_dtype = format!("{:?}", tensor.dtype()).to_ascii_lowercase();
+        addressed_shape = tensor.shape().to_vec();
+        addressed_len = tensor.data().len();
+        break;
+    }
+
+    if addressed_name.is_none() {
+        let tensor_names = tensors.names();
+        let preferred_name = resolve_preferred_tensor_name(&tensor_names);
+        if let Some(name) = preferred_name {
+            if let Ok(tensor) = tensors.tensor(&name) {
+                addressed_name = Some(name);
+                addressed_dtype = format!("{:?}", tensor.dtype()).to_ascii_lowercase();
+                addressed_shape = tensor.shape().to_vec();
+                addressed_len = tensor.data().len();
+            }
+        }
+    }
+
+    let Some(addressed_name) = addressed_name else {
+        proof.notes.push(format!(
+            "no donor tensor was addressable in shard '{}' at '{}'",
+            shard_name,
+            shard_path.display()
+        ));
+        return proof;
+    };
+    proof.donor_tensor_addressed = true;
+    proof.resolved_tensor_name = addressed_name;
+    proof.resolved_dtype = addressed_dtype;
+    proof.resolved_shape = addressed_shape;
+    proof.resolved_data_len = addressed_len;
+    proof.donor_tensor_activated = proof.resolved_data_len > 0;
+    if !proof.donor_tensor_activated {
+        proof.notes.push(format!(
+            "resolved tensor '{}' had zero payload bytes",
+            proof.resolved_tensor_name
+        ));
+    }
+
+    proof
+}
+
+fn nsq_runtime_artifact_proof(root: &Path) -> NsqRuntimeArtifactProof {
+    let artifact_path = root.join(BRAXON_NSQ_ARTIFACT);
+    let envelope_path = root.join(BRAXON_NSQ_ENVELOPE);
+    let mut proof = NsqRuntimeArtifactProof {
+        nsq_artifact_path: rel_display(root, &artifact_path),
+        nsq_envelope_path: rel_display(root, &envelope_path),
+        ..NsqRuntimeArtifactProof::default()
+    };
+
+    if let Ok(meta) = fs::metadata(&artifact_path) {
+        proof.nsq_artifact_present = true;
+        proof.nsq_artifact_size_bytes = meta.len();
+    }
+    if let Ok(meta) = fs::metadata(&envelope_path) {
+        proof.nsq_envelope_present = true;
+        proof.nsq_envelope_size_bytes = meta.len();
+    }
+
+    if proof.nsq_artifact_present {
+        match classify_donor_payload(&artifact_path) {
+            Ok(DonorPayloadKind::GitLfsPointer) => {
+                proof.nsq_artifact_is_lfs_pointer = true;
+                proof.notes.push(
+                    "nsq artifact is invalid because it resolves to a git-lfs pointer stub"
+                        .to_string(),
+                );
+            }
+            Ok(DonorPayloadKind::UnknownTextStub) => {
+                proof.nsq_artifact_is_text_manifest = true;
+            }
+            Ok(DonorPayloadKind::MaterializedSafeTensors) => {
+                proof.notes.push(
+                    "nsq artifact is binary payload-like, but no native nsq hot-load decoder is wired for it yet"
+                        .to_string(),
+                );
+            }
+            Err(err) => proof.notes.push(format!(
+                "failed to classify nsq artifact '{}': {err}",
+                artifact_path.display()
+            )),
+        }
+    }
+
+    if let Ok(artifact_map) = read_key_value_text(&artifact_path) {
+        if !artifact_map.is_empty() {
+            proof.nsq_artifact_is_text_manifest = true;
+            proof.nsq_runtime_mass_profile = artifact_map
+                .get("runtime_mass_profile")
+                .cloned()
+                .unwrap_or_default();
+            proof.nsq_hot_live_parameter_embodiment = artifact_map
+                .get("hot_live_parameter_embodiment")
+                .map(|value| value == "true")
+                .unwrap_or(false);
+            proof.nsq_delta_expansion_state = artifact_map
+                .get("delta_expansion_state")
+                .cloned()
+                .unwrap_or_default();
+            proof.nsq_tokenizer_runtime_unification = artifact_map
+                .get("tokenizer_runtime_unification")
+                .cloned()
+                .unwrap_or_default();
+            proof.nsq_parameter_binding_state = artifact_map
+                .get("parameter_binding_state")
+                .cloned()
+                .unwrap_or_default();
+        }
+    }
+
+    if let Ok(envelope_map) = read_key_value_text(&envelope_path) {
+        proof.nsq_verification_state = envelope_map
+            .get("verification_state")
+            .cloned()
+            .unwrap_or_default();
+        proof.nsq_whole_core_runtime_status = envelope_map
+            .get("whole_core_runtime_status")
+            .cloned()
+            .unwrap_or_default();
+        if proof.nsq_delta_expansion_state.is_empty() {
+            proof.nsq_delta_expansion_state = envelope_map
+                .get("delta_expansion_state")
+                .cloned()
+                .unwrap_or_default();
+        }
+        if proof.nsq_tokenizer_runtime_unification.is_empty() {
+            proof.nsq_tokenizer_runtime_unification = envelope_map
+                .get("tokenizer_runtime_unification")
+                .cloned()
+                .unwrap_or_default();
+        }
+    }
+
+    if proof.nsq_artifact_present && proof.nsq_artifact_size_bytes < 65536 {
+        proof.notes.push(
+            "nsq artifact is manifest-scale and not a pointer-free whole-core payload in this checkout"
+                .to_string(),
+        );
+    }
+
+    proof
+}
+
+fn runtime_authority_proof(
+    donor: &DonorTensorRuntimeProof,
+    nsq: &NsqRuntimeArtifactProof,
+) -> RuntimeAuthorityProof {
+    let mut proof = RuntimeAuthorityProof {
+        donor_source_lane: donor.donor_root.clone(),
+        nsq_artifact_lane: BRAXON_NSQ_ARTIFACT.to_string(),
+        runtime_authority_lane: "none_bound".to_string(),
+        runtime_authority_state: "unbound".to_string(),
+        ..RuntimeAuthorityProof::default()
+    };
+
+    proof.donor_source_state = if donor.required_shard_count == 0 {
+        "index_missing".to_string()
+    } else if donor.present_shard_count < donor.required_shard_count {
+        "materialization_incomplete_missing_shards".to_string()
+    } else if donor.materialized_shard_count == donor.required_shard_count {
+        "materialized_complete".to_string()
+    } else if donor.pointer_shard_count == donor.required_shard_count {
+        "catalog_complete_pointer_stubs_only".to_string()
+    } else if donor.materialized_shard_count > 0 {
+        "partial_materialization".to_string()
+    } else if donor.text_stub_shard_count > 0 {
+        "text_stub_invalid".to_string()
+    } else {
+        "unclassified".to_string()
+    };
+
+    proof.nsq_artifact_state = if nsq.nsq_artifact_is_lfs_pointer {
+        "pointer_mask_invalid".to_string()
+    } else if nsq.nsq_hot_live_parameter_embodiment
+        && matches!(
+            nsq.nsq_whole_core_runtime_status.as_str(),
+            "hot_live_active" | "hot_live_verified"
+        )
+    {
+        "hot_live_runtime_candidate".to_string()
+    } else if nsq.nsq_artifact_is_text_manifest {
+        "manifest_bundle_only".to_string()
+    } else if nsq.nsq_artifact_present {
+        "artifact_present_unbound".to_string()
+    } else {
+        "absent_checkout".to_string()
+    };
+
+    if donor_materialization_complete(donor)
+        && donor.donor_shard_payload_materialized
+        && donor.donor_tensor_addressed
+        && donor.donor_tensor_activated
+    {
+        proof.runtime_authority_lane = "donor_transport_runtime".to_string();
+        proof.runtime_authority_state = "donor_tensor_hot_live".to_string();
+        proof.runtime_authority_bound = true;
+    } else if nsq.nsq_hot_live_parameter_embodiment
+        && matches!(
+            nsq.nsq_whole_core_runtime_status.as_str(),
+            "hot_live_active" | "hot_live_verified"
+        )
+    {
+        proof.runtime_authority_lane = "nsq_hot_live_runtime".to_string();
+        proof.runtime_authority_state = "nsq_hot_live_bound".to_string();
+        proof.runtime_authority_bound = true;
+    }
+
+    proof.pointer_free_runtime_ready =
+        proof.runtime_authority_bound && !nsq.nsq_artifact_is_lfs_pointer;
+    proof.donor_runtime_bridge_required = !proof.runtime_authority_bound;
+
+    if proof.nsq_artifact_state == "manifest_bundle_only" {
+        proof.notes.push(
+            "nsq artifact lane is emitted as manifest-only bridge material, not executable runtime authority"
+                .to_string(),
+        );
+    }
+    if proof.donor_source_state == "catalog_complete_pointer_stubs_only" {
+        proof.notes.push(
+            "donor source lane is present only as pointer stubs and cannot satisfy hot/live loading"
+                .to_string(),
+        );
+    }
+    if proof.runtime_authority_state == "unbound" {
+        proof
+            .notes
+            .push("no pointer-free runtime authority lane is bound in this checkout".to_string());
+    }
+    if donor.materialized_shard_count > 0 && !donor_materialization_complete(donor) {
+        proof.notes.push(
+            "direct donor materialization is visible, but the shard set is incomplete so runtime authority stays unbound"
+                .to_string(),
+        );
+    }
+
+    proof
+}
+
+fn classify_donor_payload(path: &Path) -> Result<DonorPayloadKind, String> {
+    let bytes =
+        fs::read(path).map_err(|err| format!("failed to read '{}': {err}", path.display()))?;
+
+    let head_len = bytes.len().min(512);
+    let head = &bytes[..head_len];
+    let head_text = String::from_utf8_lossy(head);
+
+    if head_text.contains("version https://git-lfs.github.com/spec/v1")
+        || head_text.contains("oid sha256:")
+    {
+        return Ok(DonorPayloadKind::GitLfsPointer);
+    }
+
+    let printable = head
+        .iter()
+        .filter(|b| matches!(**b, b'\n' | b'\r' | b'\t') || (32..=126).contains(&**b))
+        .count();
+
+    if head_len > 0 && printable * 100 / head_len >= 95 {
+        return Ok(DonorPayloadKind::UnknownTextStub);
+    }
+
+    Ok(DonorPayloadKind::MaterializedSafeTensors)
+}
+
+fn runtime_tokenizer_proof(root: &Path) -> RuntimeTokenizerProof {
+    let donor_root = preferred_donor_tensor_root(root);
+    let donor_tokenizer_candidate = root.join(&donor_root).join("tokenizer.json");
+    let donor_cfg_candidate = root.join(&donor_root).join("tokenizer_config.json");
+    let donor_path = if donor_tokenizer_candidate.exists() {
+        donor_tokenizer_candidate
+    } else {
+        root.join(BRAXON_DONOR_TOKENIZER)
+    };
+    let donor_cfg_path = if donor_cfg_candidate.exists() {
+        donor_cfg_candidate
+    } else {
+        root.join(BRAXON_DONOR_TOKENIZER_CONFIG)
+    };
+    let unified_path = root.join(BRAXON_UNIFIED_TOKENIZER);
+    let supermodel_path = root.join(BRAXON_SUPERMODEL_TOKENIZER);
+
+    let mut proof = RuntimeTokenizerProof {
+        donor_tokenizer_path: rel_display(root, &donor_path),
+        donor_tokenizer_config_path: rel_display(root, &donor_cfg_path),
+        unified_tokenizer_path: rel_display(root, &unified_path),
+        supermodel_tokenizer_path: rel_display(root, &supermodel_path),
+        selection_mode: "missing".to_string(),
+        ..RuntimeTokenizerProof::default()
+    };
+
+    let donor = read_json(&donor_path).ok();
+    let unified = read_json(&unified_path).ok();
+    let supermodel = read_json(&supermodel_path).ok();
+
+    proof.tokenizer_candidate_discovered = donor.is_some() || unified.is_some();
+
+    if let Some(donor) = donor.as_ref() {
+        proof.donor_model_type = donor
+            .get("model")
+            .and_then(|value| value.get("type"))
+            .and_then(Value::as_str)
+            .unwrap_or("unknown")
+            .to_string();
+        proof.donor_vocab_size = donor
+            .get("model")
+            .and_then(|value| value.get("vocab"))
+            .and_then(Value::as_object)
+            .map(|value| value.len())
+            .unwrap_or(0);
+        proof.donor_merge_count = donor
+            .get("model")
+            .and_then(|value| value.get("merges"))
+            .and_then(Value::as_array)
+            .map(|value| value.len())
+            .unwrap_or(0);
+        proof.donor_added_token_count = donor
+            .get("added_tokens")
+            .and_then(Value::as_array)
+            .map(|value| value.len())
+            .unwrap_or(0);
+    }
+
+    if let Some(unified) = unified.as_ref() {
+        proof.unified_semantic_entry_count = unified
+            .get("semantic_feed")
+            .and_then(|value| value.get("entry_count"))
+            .and_then(Value::as_u64)
+            .map(|value| value as usize)
+            .unwrap_or_else(|| {
+                unified
+                    .get("semantic_feed")
+                    .and_then(|value| value.get("entries"))
+                    .and_then(Value::as_array)
+                    .map(|value| value.len())
+                    .unwrap_or(0)
+            });
+        proof.unified_source_kind_count = unified
+            .get("semantic_feed")
+            .and_then(|value| value.get("source_kind_counts"))
+            .and_then(Value::as_object)
+            .map(|value| value.len())
+            .unwrap_or(0);
+        proof.corpus_reference_kinds = unified
+            .get("build_metadata")
+            .and_then(|value| value.get("base_sources"))
+            .and_then(Value::as_array)
+            .map(|entries| {
+                entries
+                    .iter()
+                    .filter_map(|entry| entry.get("kind").and_then(Value::as_str))
+                    .map(ToOwned::to_owned)
+                    .collect::<Vec<_>>()
+            })
+            .unwrap_or_default();
+    }
+
+    if donor.is_some() && unified.is_some() {
+        proof.tokenizer_runtime_selected = true;
+        proof.tokenizer_runtime_bound = true;
+        proof.selection_mode = "donor_rooted_unified_overlay".to_string();
+        proof.selected_tokenizer_path = rel_display(root, &unified_path);
+        proof.notes.push(
+            "runtime consumed donor tokenizer baseline together with unified tokenizer candidate"
+                .to_string(),
+        );
+    } else if donor.is_some() {
+        proof.tokenizer_runtime_selected = true;
+        proof.tokenizer_runtime_bound = true;
+        proof.selection_mode = "donor_baseline_only".to_string();
+        proof.selected_tokenizer_path = rel_display(root, &donor_path);
+        proof.notes.push(
+            "runtime consumed donor tokenizer baseline because unified tokenizer was unavailable"
+                .to_string(),
+        );
+    } else if unified.is_some() {
+        proof.tokenizer_runtime_selected = true;
+        proof.tokenizer_runtime_bound = true;
+        proof.selection_mode = "unified_semantic_candidate_only".to_string();
+        proof.selected_tokenizer_path = rel_display(root, &unified_path);
+        proof.notes.push(
+            "runtime consumed unified tokenizer candidate without donor tokenizer baseline"
+                .to_string(),
+        );
+    } else {
+        proof
+            .notes
+            .push("no runtime tokenizer candidate was readable in this checkout".to_string());
+    }
+
+    if supermodel.is_some() {
+        proof.notes.push(format!(
+            "supermodel tokenizer remains unselected bridge material: {}",
+            rel_display(root, &supermodel_path)
+        ));
+    }
+
+    proof
+}
+
+fn delta_root_statuses(root: &Path) -> Vec<DeltaSourceStatus> {
+    let mut statuses = Vec::new();
+
+    statuses.push(classify_explicit_root(
+        root,
+        "volumes_chunks",
+        &root.join(BRAXON_VOLUMES_DELTA_ROOT),
+        true,
+    ));
+    statuses.push(classify_explicit_root(
+        root,
+        "assets_voice",
+        &root.join(BRAXON_VOICE_DELTA_ROOT),
+        true,
+    ));
+    statuses.push(classify_explicit_root(
+        root,
+        "bootstrap_braxon_slice",
+        &root.join(BRAXON_BOOTSTRAP_DELTA_ROOT),
+        false,
+    ));
+
+    let ingest_root = root.join(BRAXON_SOURCE_INGEST_ROOT);
+    let legacy_root = ingest_root.join(format!("{LEGACY_TRANSPORT_STEM}.legacy"));
+    statuses.push(classify_stale_root(
+        root,
+        &format!("{LEGACY_TRANSPORT_STEM}_legacy"),
+        &legacy_root,
+    ));
+
+    if let Ok(entries) = fs::read_dir(&ingest_root) {
+        for entry in entries.flatten() {
+            let name = entry.file_name().to_string_lossy().to_string();
+            if !name.starts_with(&format!("{LEGACY_TRANSPORT_STEM}.partial.")) {
+                continue;
+            }
+            statuses.push(classify_stale_root(
+                root,
+                &format!("{LEGACY_TRANSPORT_STEM}_partial:{name}"),
+                &entry.path(),
+            ));
+        }
+    }
+
+    let (BRAXON_matches, delta_matches) = discover_delta_files(root);
+    statuses.push(discovered_pattern_status(
+        "**/*.Braxon",
+        BRAXON_matches,
+        DeltaSourceClassification::PresentLive,
+    ));
+    statuses.push(discovered_pattern_status(
+        "**/*.delta",
+        delta_matches,
+        DeltaSourceClassification::PresentBridge,
+    ));
+
+    statuses
+}
+
+fn classify_explicit_root(
+    root: &Path,
+    label: &str,
+    path: &Path,
+    prefer_live_for_BRAXON: bool,
+) -> DeltaSourceStatus {
+    let (BRAXON_count, delta_count) = count_delta_material(path);
+    let classification = if BRAXON_count > 0 {
+        DeltaSourceClassification::PresentLive
+    } else if delta_count > 0 {
+        DeltaSourceClassification::PresentBridge
+    } else if path.exists() && prefer_live_for_BRAXON {
+        DeltaSourceClassification::PresentLive
+    } else {
+        DeltaSourceClassification::AbsentCheckout
+    };
+    let discovered_files = BRAXON_count + delta_count;
+    let mut notes = Vec::new();
+    if matches!(classification, DeltaSourceClassification::AbsentCheckout) {
+        notes.push(format!(
+            "path is absent in this checkout only: {}",
+            rel_display(root, path)
+        ));
+    } else if BRAXON_count == 0 && delta_count > 0 {
+        notes.push(
+            "bridge delta material is visible, but no live .Braxon clusters were found here"
+                .to_string(),
+        );
+    }
+
+    DeltaSourceStatus {
+        label: label.to_string(),
+        root: rel_display(root, path),
+        classification,
+        discovered_files,
+        discovered: discovered_files > 0 || path.exists(),
+        indexed: discovered_files > 0,
+        planned_for_overlay: false,
+        applied_runtime: false,
+        notes,
+    }
+}
+
+fn classify_stale_root(root: &Path, label: &str, path: &Path) -> DeltaSourceStatus {
+    let (BRAXON_count, delta_count) = count_delta_material(path);
+    let mut notes = Vec::new();
+    if path.exists() {
+        notes.push("root exists but is quarantined as legacy/stale".to_string());
+    } else {
+        notes.push("stale root is absent in this checkout".to_string());
+    }
+    DeltaSourceStatus {
+        label: label.to_string(),
+        root: rel_display(root, path),
+        classification: if path.exists() {
+            DeltaSourceClassification::Stale
+        } else {
+            DeltaSourceClassification::AbsentCheckout
+        },
+        discovered_files: BRAXON_count + delta_count,
+        discovered: path.exists(),
+        indexed: false,
+        planned_for_overlay: false,
+        applied_runtime: false,
+        notes,
+    }
+}
+
+fn discovered_pattern_status(
+    label: &str,
+    matches: Vec<PathBuf>,
+    when_present: DeltaSourceClassification,
+) -> DeltaSourceStatus {
+    let discovered_files = matches.len();
+    let notes = if discovered_files == 0 {
+        vec!["pattern matched no files in this checkout".to_string()]
+    } else {
+        vec![format!(
+            "pattern resolved {} visible file(s)",
+            discovered_files
+        )]
+    };
+    DeltaSourceStatus {
+        label: label.to_string(),
+        root: label.to_string(),
+        classification: if discovered_files > 0 {
+            when_present
+        } else {
+            DeltaSourceClassification::AbsentCheckout
+        },
+        discovered_files,
+        discovered: discovered_files > 0,
+        indexed: discovered_files > 0,
+        planned_for_overlay: false,
+        applied_runtime: false,
+        notes,
+    }
+}
+
+fn apply_overlay_flags(delta_sources: &mut [DeltaSourceStatus], donor: &DonorTensorRuntimeProof) {
+    let runtime_overlay_ready = donor_materialization_complete(donor)
+        && donor.donor_shard_payload_materialized
+        && donor.donor_tensor_addressed
+        && donor.donor_tensor_activated;
+
+    for source in delta_sources {
+        match source.classification {
+            DeltaSourceClassification::PresentBridge | DeltaSourceClassification::PresentLive => {
+                source.planned_for_overlay = source.indexed && donor.donor_index_discovered;
+                source.applied_runtime = matches!(
+                    source.classification,
+                    DeltaSourceClassification::PresentLive
+                ) && runtime_overlay_ready;
+                if source.planned_for_overlay && !source.applied_runtime {
+                    source.notes.push(
+                        "overlay planning is ready, but runtime application remains incomplete"
+                            .to_string(),
+                    );
+                }
+            }
+            DeltaSourceClassification::Stale | DeltaSourceClassification::AbsentCheckout => {}
+        }
+    }
+}
+
+fn delta_overlay_plan(
+    root: &Path,
+    donor: &DonorTensorRuntimeProof,
+    delta_sources: &[DeltaSourceStatus],
+) -> DeltaOverlayPlan {
+    let mut metadata = Vec::new();
+    let bootstrap_root = root.join(BRAXON_BOOTSTRAP_DELTA_ROOT);
+
+    if bootstrap_root.exists() {
+        for path in list_matching_files(&bootstrap_root, |path| has_extension(path, "delta")) {
+            metadata.push(delta_metadata_for_path(
+                root,
+                "bootstrap_braxon_slice",
+                DeltaSourceClassification::PresentBridge,
+                &path,
+                &donor.resolved_tensor_name,
+            ));
+        }
+    }
+
+    let supermodel_path = root.join(BRAXON_SUPERMODEL_TOKENIZER);
+    if supermodel_path.exists() {
+        metadata.push(DeltaOverlayMetadata {
+            source_label: "tokenizer_supermodel_cluster_map".to_string(),
+            source_path: rel_display(root, &supermodel_path),
+            classification: DeltaSourceClassification::PresentBridge,
+            parameter_family: "tokenizer_cluster_overlay".to_string(),
+            target_tensor: fallback_tensor_name(&donor.resolved_tensor_name),
+            tokenizer_interaction: "cluster_map_bridge".to_string(),
+            semantic_domain: "semantic_cluster_index".to_string(),
+            real_world_knowledge_domain: "fact_corpus_not_visible_in_checkout".to_string(),
+            psychological_axioms: "not_explicitly_bound".to_string(),
+            sociological_strata: "not_explicitly_bound".to_string(),
+            structural_code_knowledge: "cluster_map_for_runtime_tokenizer".to_string(),
+            lore_narrative_knowledge: "lore_bridge_candidates_visible".to_string(),
+            compatibility_conflict_risk: "medium".to_string(),
+            stampability_opportunity: "high".to_string(),
+            runtime_heat_priority: "warm".to_string(),
+        });
+    }
+
+    let visible_delta_sources = delta_sources
+        .iter()
+        .filter(|source| {
+            matches!(
+                source.classification,
+                DeltaSourceClassification::PresentBridge | DeltaSourceClassification::PresentLive
+            )
+        })
+        .count();
+    let planner_ready = donor.donor_index_discovered && visible_delta_sources > 0;
+    let runtime_overlay_bound = planner_ready
+        && donor_materialization_complete(donor)
+        && donor.donor_shard_opened
+        && donor.donor_shard_payload_materialized
+        && donor.donor_tensor_addressed;
+    let live_parameter_application = delta_sources.iter().any(|source| source.applied_runtime);
+
+    let mut notes = Vec::new();
+    if planner_ready {
+        notes.push("donor-index-to-delta overlay planner is constructed".to_string());
+    } else {
+        notes.push("overlay planner is incomplete because donor index or visible delta sources are missing".to_string());
+    }
+    if runtime_overlay_bound && !live_parameter_application {
+        notes.push(
+            "runtime overlay is bound to donor tensors, but no live .Braxon parameter application is available in this checkout"
+                .to_string(),
+        );
+    }
+
+    DeltaOverlayPlan {
+        planner_ready,
+        runtime_overlay_bound,
+        live_parameter_application,
+        visible_delta_sources,
+        metadata_entries: metadata.len(),
+        notes,
+        metadata,
+    }
+}
+
+fn delta_metadata_for_path(
+    root: &Path,
+    source_label: &str,
+    classification: DeltaSourceClassification,
+    path: &Path,
+    target_tensor_name: &str,
+) -> DeltaOverlayMetadata {
+    let file_name = path
+        .file_name()
+        .map(|value| value.to_string_lossy().to_ascii_lowercase())
+        .unwrap_or_default();
+    let (parameter_family, tokenizer_interaction, structural_code_knowledge) = if file_name
+        .contains("tokenizer")
+        || file_name.contains("vocab")
+        || file_name.contains("merges")
+    {
+        (
+            "tokenizer_overlay",
+            "donor_tokenizer_bridge",
+            "tokenizer_and_vocab_bridge",
+        )
+    } else if file_name.contains("model_safetensors_index") {
+        (
+            "donor_index_overlay",
+            "index_only",
+            "safetensors_index_bridge",
+        )
+    } else if file_name.contains("config") || file_name.contains("generation") {
+        (
+            "runtime_config_overlay",
+            "config_bridge",
+            "config_and_context_bridge",
+        )
+    } else {
+        ("bridge_overlay", "none", "bridge_material_under_review")
+    };
+
+    DeltaOverlayMetadata {
+        source_label: source_label.to_string(),
+        source_path: rel_display(root, path),
+        classification,
+        parameter_family: parameter_family.to_string(),
+        target_tensor: fallback_tensor_name(target_tensor_name),
+        tokenizer_interaction: tokenizer_interaction.to_string(),
+        semantic_domain: "delta_bridge".to_string(),
+        real_world_knowledge_domain: "fact_corpus_not_visible_in_checkout".to_string(),
+        psychological_axioms: "not_explicitly_bound".to_string(),
+        sociological_strata: "not_explicitly_bound".to_string(),
+        structural_code_knowledge: structural_code_knowledge.to_string(),
+        lore_narrative_knowledge: "lore_and_story_corpus_pending_runtime_bind".to_string(),
+        compatibility_conflict_risk: "medium".to_string(),
+        stampability_opportunity: "high".to_string(),
+        runtime_heat_priority: if parameter_family == "donor_index_overlay" {
+            "hot".to_string()
+        } else {
+            "warm".to_string()
+        },
+    }
+}
+
+fn parse_donor_index(path: &Path) -> Result<DonorIndex, String> {
+    let value = read_json(path)
+        .map_err(|err| format!("failed to read donor index '{}': {err}", path.display()))?;
+    let Some(weight_map_obj) = value.get("weight_map").and_then(Value::as_object) else {
+        return Err(format!(
+            "donor index '{}' is missing weight_map",
+            path.display()
+        ));
+    };
+    let weight_map = weight_map_obj
+        .iter()
+        .filter_map(|(key, value)| value.as_str().map(|value| (key.clone(), value.to_string())))
+        .collect::<BTreeMap<_, _>>();
+    if weight_map.is_empty() {
+        return Err(format!(
+            "donor index '{}' has an empty weight_map",
+            path.display()
+        ));
+    }
+    Ok(DonorIndex { weight_map })
+}
+
+fn resolve_required_tensor(weight_map: &BTreeMap<String, String>) -> Option<(String, String)> {
+    for preferred in preferred_tensor_names() {
+        if let Some(shard) = weight_map.get(preferred) {
+            return Some((preferred.to_string(), shard.clone()));
+        }
+    }
+
+    weight_map
+        .iter()
+        .next()
+        .map(|(tensor, shard)| (tensor.clone(), shard.clone()))
+}
+
+fn preferred_tensor_names() -> [&'static str; 4] {
+    [
+        "model.language_model.embed_tokens.weight",
+        "lm_head.weight",
+        "model.language_model.norm.weight",
+        "model.language_model.layers.0.self_attn.q_proj.weight",
+    ]
+}
+
+fn resolve_preferred_tensor_name(names: &[&str]) -> Option<String> {
+    for preferred in preferred_tensor_names() {
+        if names.iter().any(|name| *name == preferred) {
+            return Some(preferred.to_string());
+        }
+    }
+
+    names.first().map(|name| (*name).to_string())
+}
+
+fn discover_delta_files(root: &Path) -> (Vec<PathBuf>, Vec<PathBuf>) {
+    let mut BRAXON_matches = Vec::new();
+    let mut delta_matches = Vec::new();
+    let candidate_roots = [
+        root.join("assets"),
+        root.join("volumes"),
+        root.join("state"),
+        root.join("models"),
+    ];
+
+    for candidate in candidate_roots {
+        if !candidate.exists() {
+            continue;
+        }
+        walk_relevant_paths(&candidate, &mut |path| {
+            if has_extension(path, "Braxon") {
+                BRAXON_matches.push(path.to_path_buf());
+            }
+            if has_extension(path, "delta") {
+                delta_matches.push(path.to_path_buf());
+            }
+        });
+    }
+
+    (BRAXON_matches, delta_matches)
+}
+
+fn count_delta_material(path: &Path) -> (usize, usize) {
+    if !path.exists() {
+        return (0, 0);
+    }
+    let mut Braxon = 0usize;
+    let mut delta = 0usize;
+    walk_relevant_paths(path, &mut |entry| {
+        if has_extension(entry, "Braxon") {
+            Braxon += 1;
+        }
+        if has_extension(entry, "delta") {
+            delta += 1;
+        }
+    });
+    (Braxon, delta)
+}
+
+fn list_matching_files(path: &Path, matches: impl Fn(&Path) -> bool) -> Vec<PathBuf> {
+    if !path.exists() {
+        return Vec::new();
+    }
+    let mut out = Vec::new();
+    walk_relevant_paths(path, &mut |entry| {
+        if matches(entry) {
+            out.push(entry.to_path_buf());
+        }
+    });
+    out.sort();
+    out
+}
+
+fn walk_relevant_paths(path: &Path, visit: &mut impl FnMut(&Path)) {
+    if !path.exists() {
+        return;
+    }
+    if path.is_file() {
+        visit(path);
+        return;
+    }
+    let Ok(entries) = fs::read_dir(path) else {
+        return;
+    };
+    for entry in entries.flatten() {
+        let child = entry.path();
+        let Ok(file_type) = entry.file_type() else {
+            continue;
+        };
+        if file_type.is_dir() {
+            let name = entry.file_name().to_string_lossy().to_string();
+            if matches!(
+                name.as_str(),
+                ".git" | "target" | "node_modules" | "dist" | "backups"
+            ) {
+                continue;
+            }
+            walk_relevant_paths(&child, visit);
+        } else if file_type.is_file() {
+            visit(&child);
+        }
+    }
+}
+
+fn read_struct_json<T: DeserializeOwned>(path: &Path) -> Result<T, String> {
+    let value = read_json(path)?;
+    serde_json::from_value(value)
+        .map_err(|err| format!("failed to decode '{}': {err}", path.display()))
+}
+
+fn read_json(path: &Path) -> Result<Value, String> {
+    let raw = fs::read_to_string(path)
+        .map_err(|err| format!("failed to read '{}': {err}", path.display()))?;
+    serde_json::from_str(&raw).map_err(|err| format!("failed to parse '{}': {err}", path.display()))
+}
+
+fn json_string_at(value: &Value, path: &[&str]) -> Option<String> {
+    let mut current = value;
+    for segment in path {
+        current = current.get(*segment)?;
+    }
+    current.as_str().map(ToOwned::to_owned)
+}
+
+fn has_break_window(
+    duty_breaks: &[SovereignBreakWindow],
+    active_seconds: u64,
+    break_seconds: u64,
+) -> bool {
+    duty_breaks.iter().any(|window| {
+        window.active_seconds == active_seconds && window.break_seconds == break_seconds
+    })
+}
+
+fn tokenizer_stamp_matrix_declared(matrix: &TokenizerStampMatrix) -> bool {
+    matrix.matrix_state == "declared_charter"
+        && matrix.negative_stamp_space.band == "-1000..-1126"
+        && matrix.positive_stamp_space.band == "+1000..+1126"
+        && matrix.negative_stamp_space.cluster_family == "willow_stone_semantic_grounding"
+        && matrix.positive_stamp_space.cluster_family == "coding_and_court_operator_tools"
+}
+
+fn read_key_value_text(path: &Path) -> Result<BTreeMap<String, String>, String> {
+    let raw = fs::read_to_string(path)
+        .map_err(|err| format!("failed to read '{}': {err}", path.display()))?;
+    Ok(raw
+        .lines()
+        .filter_map(|line| {
+            let trimmed = line.trim();
+            if trimmed.is_empty() || trimmed.starts_with('#') || trimmed.starts_with("[[") {
+                return None;
+            }
+            let (key, value) = trimmed
+                .split_once(": ")
+                .or_else(|| trimmed.split_once('='))?;
+            Some((key.trim().to_string(), value.trim().to_string()))
+        })
+        .collect())
+}
+
+fn has_extension(path: &Path, wanted: &str) -> bool {
+    path.extension()
+        .map(|value| value.to_string_lossy().eq_ignore_ascii_case(wanted))
+        .unwrap_or(false)
+}
+
+fn rel_display(root: &Path, path: &Path) -> String {
+    path.strip_prefix(root)
+        .ok()
+        .map(|value| value.to_string_lossy().replace('\\', "/"))
+        .unwrap_or_else(|| path.to_string_lossy().replace('\\', "/"))
+}
+
+fn fallback_tensor_name(value: &str) -> String {
+    if value.is_empty() {
+        "unresolved_tensor".to_string()
+    } else {
+        value.to_string()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn recognizes_required_break_windows() {
+        let duty_breaks = vec![
+            SovereignBreakWindow {
+                active_seconds: 120,
+                break_seconds: 10,
+                reason: "thermal_and_mental_health".to_string(),
+            },
+            SovereignBreakWindow {
+                active_seconds: 600,
+                break_seconds: 20,
+                reason: "thermal_and_mental_health".to_string(),
+            },
+        ];
+
+        assert!(has_break_window(&duty_breaks, 120, 10));
+        assert!(has_break_window(&duty_breaks, 600, 20));
+        assert!(!has_break_window(&duty_breaks, 60, 5));
+    }
+
+    #[test]
+    fn validates_tokenizer_stamp_matrix_bands() {
+        let matrix = TokenizerStampMatrix {
+            scope: "nsq_sovereign_tokenizer_matrix".to_string(),
+            matrix_state: "declared_charter".to_string(),
+            negative_stamp_space: TokenizerStampBand {
+                band: "-1000..-1126".to_string(),
+                cluster_family: "willow_stone_semantic_grounding".to_string(),
+                examples: vec!["space".to_string()],
+            },
+            positive_stamp_space: TokenizerStampBand {
+                band: "+1000..+1126".to_string(),
+                cluster_family: "coding_and_court_operator_tools".to_string(),
+                examples: vec!["compiler".to_string()],
+            },
+        };
+
+        assert!(tokenizer_stamp_matrix_declared(&matrix));
+    }
+}

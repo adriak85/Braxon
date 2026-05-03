@@ -1,0 +1,13 @@
+{
+  "canon": "Exact identity is full byte_count plus full sha256 plus full blake3 where available. Sparse one-of-699 sampling is a route/sanity prefilter, not a proof by itself.",
+  "files": [
+    {
+      "path": "assets/braxon_core/model_config/config.json",
+      "byte_count": null,
+      "sha256": null,
+      "blake3": null,
+      "source": "git/source target only",
+      "role": "small config target"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "braxon.meta.offline_context.v1",
+  "generated_at": "2026-05-02",
+  "identity": "Braxon",
+  "canonical_semantics": "base8_switch_topology",
+  "private_license": true,
+  "offline_context_api": "crates/braxon-core/src/context_manifest.rs",
+  "semantic_pointers": [
+    {
+      "id": "root_workspace",
+      "kind": "workspace_entrance",
+      "path": "Cargo.toml",
+      "required": true,
+      "relationship": "root command center and workspace package graph",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "braxon_global_tag",
+      "kind": "global_tag",
+      "path": "BRAXON_GLOBAL_TAG.json",
+      "required": true,
+      "relationship": "root Braxon global NSQ character/stamp scoring tag with Nu16 carrier language and produced-character base measure",
+      "route": ["policer", "router", "optimizer", "inspector"]
+    },
+    {
+      "id": "private_license",
+      "kind": "license",
+      "path": "LICENSE",
+      "required": true,
+      "relationship": "private proprietary license metadata",
+      "route": ["policer", "inspector"]
+    },
+    {
+      "id": "braxon_core_crate",
+      "kind": "crate",
+      "path": "crates/braxon-core",
+      "required": true,
+      "relationship": "Braxon identity, council, offline context, WoWaS, and model registry API",
+      "route": ["policer", "lexer", "parser", "router", "inspector"]
+    },
+    {
+      "id": "nsq_core_crate",
+      "kind": "crate",
+      "path": "crates/nsq-core",
+      "required": true,
+      "relationship": "canonical base-8 switch topology and lever measurement semantics",
+      "route": ["policer", "lexer", "parser", "optimizer", "inspector"]
+    },
+    {
+      "id": "nsq_runtime_crate",
+      "kind": "crate",
+      "path": "crates/nsq-runtime",
+      "required": true,
+      "relationship": "native NSQ runtime hosting, offline inference, and persistent session surfaces",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "braxon_seating_verify",
+      "kind": "script",
+      "path": "scripts/braxon_seating_verify.sh",
+      "required": true,
+      "relationship": "primary switch-position seating and zero-miss measurement entry",
+      "route": ["policer", "router", "inspector"]
+    },
+    {
+      "id": "braxon_weight_ingest_scripts",
+      "kind": "script_family",
+      "path": "scripts",
+      "required": true,
+      "relationship": "Braxon ingest, status, install, recode, and verification command surfaces",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "braxon_model_manifest",
+      "kind": "model_manifest",
+      "path": "models/braxon/manifest.json",
+      "required": true,
+      "relationship": "offline model identity and runtime packaging metadata",
+      "route": ["policer", "router", "inspector"]
+    },
+    {
+      "id": "braxon_offline_registry",
+      "kind": "state",
+      "path": "state/braxon/offline_model_registry.json",
+      "required": true,
+      "relationship": "offline model assets and runtime authority state",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "braxon_binding",
+      "kind": "state",
+      "path": "state/braxon/braxon_binding.json",
+      "required": true,
+      "relationship": "hot-live binding and tokenizer/parameter context",
+      "route": ["policer", "router", "inspector"]
+    },
+    {
+      "id": "braxon_switch_position_state",
+      "kind": "state",
+      "path": "state/braxon/braxon_switch_position.json",
+      "required": true,
+      "relationship": "resolved NSQ switch position, zero-miss frontier, and sound-return measurement witness",
+      "route": ["policer", "optimizer", "inspector"]
+    },
+    {
+      "id": "braxon_lever_sweet_spot_config",
+      "kind": "nsq_measurement_config",
+      "path": "config/nsq/braxon_lever_sweet_spot.json",
+      "required": true,
+      "relationship": "global lever spacing and resolved-information-processed sweet spot with boundary byte-equivalent measurement selected from applied-hertz, return-average, sound-resonance, anchor-similarity diagnostics, and correction probes",
+      "route": ["policer", "optimizer", "scheduler", "inspector"]
+    },
+    {
+      "id": "braxon_chain_root_db",
+      "kind": "chain_root_db",
+      "path": "state/braxon/context_chain_root/chain_wake_registry.json",
+      "required": true,
+      "relationship": "centralized mechanical wake database for chain-root records and non-runtime adjustment exit announcements",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "citadel699_state_bus",
+      "kind": "citadel",
+      "path": "state/braxon/bus/citadel699",
+      "required": true,
+      "relationship": "Citadel699 council and environment bus surfaces",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "citadel699_config",
+      "kind": "citadel_config",
+      "path": "config/nsq/citadel699_wire_receptor.json",
+      "required": true,
+      "relationship": "Citadel699 wire receptor and request-return context",
+      "route": ["policer", "lexer", "parser", "router", "inspector"]
+    },
+    {
+      "id": "council_of_six",
+      "kind": "model_council",
+      "path": "config/nsq/braxon_six_model_stack.json",
+      "required": true,
+      "relationship": "six brain-region model identities and balanced thought pressure",
+      "route": ["policer", "router", "scheduler", "inspector"]
+    },
+    {
+      "id": "sensory_generation_roster",
+      "kind": "model_roster",
+      "path": "config/nsq/braxon_sensory_generation_roster.json",
+      "required": true,
+      "relationship": "FLUX image cortex, Wan video cortex, IndexTTS2 voice body, and Hunyuan3D world body with graphics footprint allowance 50",
+      "route": ["policer", "router", "scheduler", "compositor", "inspector"]
+    },
+    {
+      "id": "indextts2_emotional_frequency_map",
+      "kind": "voice_mapping",
+      "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+      "required": true,
+      "relationship": "NSQ-to-IndexTTS2 emotional frequency mapping for valence, arousal, breath, tremor, timbre, cadence, and emphasis",
+      "route": ["policer", "router", "nsq_voice_route", "scheduler", "inspector"]
+    },
+    {
+      "id": "wowas_final_edition",
+      "kind": "story_system",
+      "path": "crates/wowas-final-edition-v10",
+      "required": true,
+      "relationship": "Whispers of Willow and Stone canon, scene, and character generation system",
+      "route": ["policer", "lexer", "parser", "router", "inspector"]
+    }
+  ],
+  "known_left_out": [
+    {
+      "path": ".git",
+      "reason": "repository internals are not semantic runtime context"
+    },
+    {
+      "path": "target",
+      "reason": "build output is regenerated from source and is not canonical context"
+    }
+  ],
+  "left_out_policy": {
+    "must_call_out_omissions": true,
+    "missing_required_pointer_action": "report_missing_context_pointer",
+    "missing_optional_pointer_action": "report_optional_context_gap",
+    "citadel_surfaces_must_be_named": true
+  },
+  "wake_triggers": {
+    "enabled_by_env": "BRAXON_CONTEXT_WAKE",
+    "changed_files_env": "BRAXON_CHANGED_FILES",
+    "exit_changed_files_env": "BRAXON_EXIT_CHANGED_FILES",
+    "default_mode": "off",
+    "overhead_policy": "do_not_scan_when_env_is_absent",
+    "surface_match_mode": "prefix_or_exact_path",
+    "suggest_linked_changes_for_each_changed_surface": true,
+    "pipe_and_chain_identification": true,
+    "mechanical_watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+    "tag_namespace": "braxon.context",
+    "chain_root": "state/braxon/context_chain_root",
+    "centralized_chain_db": "state/braxon/context_chain_root/chain_wake_registry.json",
+    "non_runtime_adjustment_wake_action": "wake_announce_non_runtime_adjustment"
+  }
+}

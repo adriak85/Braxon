@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__runtime_native__active_wiring_map.json.11a4dd109bcb693e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.451175+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__runtime_native__active_wiring_map.json.11a4dd109bcb693e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/runtime_native/active_wiring_map.json",
+  "source_bytes": 2938,
+  "source_sha256": "11a4dd109bcb693e62a724fc4401954094e4f811e5a3a57a8b0a94d910cb75b7",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__runtime_native__active_wiring_map.json.11a4dd109bcb693e"
+}

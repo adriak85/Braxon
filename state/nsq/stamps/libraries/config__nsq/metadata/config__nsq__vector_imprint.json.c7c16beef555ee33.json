@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__vector_imprint.json.c7c16beef555ee33.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.421267+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__vector_imprint.json.c7c16beef555ee33.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/vector_imprint.json",
+  "source_bytes": 396,
+  "source_sha256": "c7c16beef555ee339b4ba1acb60f72b1fea57f39c3d4a5ce18aa96287fcf40ea",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__vector_imprint.json.c7c16beef555ee33"
+}

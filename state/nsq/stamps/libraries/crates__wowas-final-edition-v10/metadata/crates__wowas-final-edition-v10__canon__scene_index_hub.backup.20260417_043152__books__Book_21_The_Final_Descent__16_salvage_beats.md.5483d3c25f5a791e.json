@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_21_The_Final_Descent__16_salvage_beats.md.5483d3c25f5a791e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.088887+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_21_The_Final_Descent__16_salvage_beats.md.5483d3c25f5a791e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_21_The_Final_Descent/16_salvage_beats.md",
+  "source_bytes": 1030,
+  "source_sha256": "5483d3c25f5a791ef4ab10130e16478681f4f4e85515d53feacfe419ef1afe35",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_21_The_Final_Descent__16_salvage_beats.md.5483d3c25f5a791e"
+}

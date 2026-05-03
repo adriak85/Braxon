@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0029__B03_03__The_Thread_Changes_How_Rooms_and_Objects_Read.md.1d84dc6b8d4cb902.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.748605+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0029__B03_03__The_Thread_Changes_How_Rooms_and_Objects_Read.md.1d84dc6b8d4cb902.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0029__B03_03__The_Thread_Changes_How_Rooms_and_Objects_Read.md",
+  "source_bytes": 193,
+  "source_sha256": "1d84dc6b8d4cb9023881d9f06b11768c024490dc836d33df4e1061b1c143eb1c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0029__B03_03__The_Thread_Changes_How_Rooms_and_Objects_Read.md.1d84dc6b8d4cb902"
+}

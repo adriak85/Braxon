@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.926633+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_13_The_Afterwake/placed/B13_002__A_New_Baseline_With_Xethrolund.md",
+  "source_bytes": 322,
+  "source_sha256": "749cfa363b73902fa44cf1db7438bcbf795620bc1dca79bdb0b6f949fe61c231",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f"
+}

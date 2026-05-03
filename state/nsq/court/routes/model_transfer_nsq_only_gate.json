@@ -1,0 +1,18 @@
+{
+  "schema": "nsq.court.route.v2",
+  "generated_at": "20260424_213016",
+  "route": "model_transfer_nsq_only_gate",
+  "owned_by": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "normal_command": "request",
+  "forbidden_normal_command": "fetch",
+  "raw_huggingface_payload_fetch_allowed": false,
+  "raw_payload_transfer_allowed": false,
+  "git_lfs_pointer_allowed": false,
+  "pointer_setup_allowed": false,
+  "citadel699_request_required": true,
+  "truth": "Model transfer defaults to Citadel699 NSQ-only request/return/rebuild. Normal fetch/download wording is blocked because it drifts toward raw Hugging Face payload transfer or Git LFS pointer state."
+}

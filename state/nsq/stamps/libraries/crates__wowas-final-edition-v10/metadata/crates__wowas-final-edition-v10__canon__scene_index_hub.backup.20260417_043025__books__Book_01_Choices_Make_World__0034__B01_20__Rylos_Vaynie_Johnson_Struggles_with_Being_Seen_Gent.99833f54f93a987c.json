@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0034__B01_20__Rylos_Vaynie_Johnson_Struggles_with_Being_Seen_Gent.99833f54f93a987c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.010592+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0034__B01_20__Rylos_Vaynie_Johnson_Struggles_with_Being_Seen_Gent.99833f54f93a987c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0034__B01_20__Rylos_Vaynie_Johnson_Struggles_with_Being_Seen_Gently.md",
+  "source_bytes": 240,
+  "source_sha256": "99833f54f93a987c22f70a82b056e1f6c5cecaf3089995a7e767b57759e09958",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0034__B01_20__Rylos_Vaynie_Johnson_Struggles_with_Being_Seen_Gent.99833f54f93a987c"
+}

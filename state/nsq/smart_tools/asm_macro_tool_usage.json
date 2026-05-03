@@ -1,0 +1,20 @@
+{
+  "asm_first": true,
+  "benchmarks": {
+    "round_1": "warmup_discovery_not_scored",
+    "round_2": "truth_scored",
+    "rounds": 2
+  },
+  "daemon_required": false,
+  "external_source_policy": "recode_carrier_before_stamp_save",
+  "first_saved_indexes": [
+    "alphabet",
+    "unicode_range_index"
+  ],
+  "generated_at": "2026-04-24T18:09:37.181068+00:00",
+  "local_repo_source_policy": "direct_native_repo_path_no_shim",
+  "other_languages": "translation_and_recode_inputs_only",
+  "raw_body_transfer": "forbidden",
+  "schema": "nsq.smart_tool_usage.asm_macro_first.v1",
+  "stamp_directory_rule": "state/nsq/stamps/libraries/<matching_library>/asm/macros"
+}

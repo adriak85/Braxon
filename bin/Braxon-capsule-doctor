@@ -1,0 +1,14 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+. "$(cd "$(dirname "$0")/.." && pwd)/env/BRAXON_env.sh"
+
+echo "== BRAXON DEV CAPSULE DOCTOR =="
+
+command -v cargo >/dev/null 2>&1 && echo "cargo: ok" || echo "cargo: missing"
+command -v rustc >/dev/null 2>&1 && echo "rustc: ok" || echo "rustc: missing"
+command -v rg >/dev/null 2>&1 && echo "rg: ok" || echo "rg: missing"
+command -v tar >/dev/null 2>&1 && echo "tar: ok" || echo "tar: missing"
+
+[ -f "$BRAXON_HOME/Cargo.toml" ] && echo "workspace: ok" || echo "workspace: missing"
+[ -f "$BRAXON_HOME/crates/nsq-compile/src/main.rs" ] && echo "nsq-compile: ok" || echo "nsq-compile: missing"
+[ -f "$BRAXON_HOME/crates/nsq-native-bench/src/main.rs" ] && echo "nsq-native-bench: ok" || echo "nsq-native-bench: missing"

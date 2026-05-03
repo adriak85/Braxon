@@ -1,0 +1,10 @@
+id: nsq.runtime.native.language.platform.main.v3
+type: main
+version: 3
+authority: Braxon
+role: runtime_native_language_platform_entry
+
+mission:
+  Make the named language and platform surfaces native runtime domains inside NSQ,
+  with local offline package resolution, synchronized docs, tokenizer bridges,
+  and multiport package-db concurrency.

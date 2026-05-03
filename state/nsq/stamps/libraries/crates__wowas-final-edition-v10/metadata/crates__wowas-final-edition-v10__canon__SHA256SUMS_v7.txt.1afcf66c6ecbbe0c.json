@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__SHA256SUMS_v7.txt.1afcf66c6ecbbe0c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.484519+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__SHA256SUMS_v7.txt.1afcf66c6ecbbe0c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/SHA256SUMS_v7.txt",
+  "source_bytes": 1577,
+  "source_sha256": "1afcf66c6ecbbe0c179019b0f0376cf53aac80f74d58e42ec4b077318d1e658c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__SHA256SUMS_v7.txt.1afcf66c6ecbbe0c"
+}

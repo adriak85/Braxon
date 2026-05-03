@@ -1,0 +1,10 @@
+# nsq-source library declaration
+
+triple lib.nsq_source -> owns -> dialect_detection :layer 1 :plane 1 :anchor 800 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> sexpr_lowering :layer 1 :plane 1 :anchor 810 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> lua_shape_lowering :layer 1 :plane 1 :anchor 820 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> python_shape_lowering :layer 1 :plane 1 :anchor 830 :weight 80 :flags 1
+triple lib.nsq_source -> outputs -> canonical_projection :layer 1 :plane 1 :anchor 840 :weight 80 :flags 1
+triple lib.nsq_source -> forbids -> foreign_runtime_requirement :layer 1 :plane 1 :anchor 850 :weight 100 :flags 1
+
+membrane lib.nsq_source :state required :flux 5 :gate 1 :phase 1

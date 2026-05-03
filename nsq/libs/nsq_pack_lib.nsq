@@ -1,0 +1,9 @@
+# nsq-pack library declaration
+
+triple lib.nsq_pack -> consumes -> nsqb_artifact :layer 1 :plane 1 :anchor 1100 :weight 80 :flags 1
+triple lib.nsq_pack -> consumes -> compile_manifest :layer 1 :plane 1 :anchor 1110 :weight 80 :flags 1
+triple lib.nsq_pack -> consumes -> inspect_report :layer 1 :plane 1 :anchor 1120 :weight 80 :flags 1
+triple lib.nsq_pack -> emits -> pack_manifest :layer 1 :plane 1 :anchor 1130 :weight 80 :flags 1
+triple lib.nsq_pack -> emits -> sealed_pack :layer 1 :plane 1 :anchor 1140 :weight 80 :flags 1
+
+membrane lib.nsq_pack :state required :flux 5 :gate 1 :phase 1

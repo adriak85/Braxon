@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "File::Copy::Recursive::Reduced",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/File/Copy/Recursive/Reduced.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/File__Copy__Recursive__Reduced.source",
+  "source_sha256": "8b512c61f2507675151e475aeb395e3e459c89bf61274857f984461ff9e5c647",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/File__Copy__Recursive__Reduced.translated.nsq",
+  "nsq_body_sha256": "80ce420b3f8f241cbb03fec66b799e86e3ca306e96a042471585b5213288c9e3",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

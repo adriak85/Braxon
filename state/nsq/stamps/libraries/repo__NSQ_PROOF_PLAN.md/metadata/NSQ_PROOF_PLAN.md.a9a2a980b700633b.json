@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__NSQ_PROOF_PLAN.md/asm/macros/NSQ_PROOF_PLAN.md.a9a2a980b700633b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.191611+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__NSQ_PROOF_PLAN.md",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__NSQ_PROOF_PLAN.md/metadata/NSQ_PROOF_PLAN.md.a9a2a980b700633b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "NSQ_PROOF_PLAN.md",
+  "source_bytes": 2988,
+  "source_sha256": "a9a2a980b700633b147871cc4bcc2ab5afe9b980585f3a0589ba171942ae4ded",
+  "stamp_id": "nsq.asm.repo__NSQ_PROOF_PLAN.md.NSQ_PROOF_PLAN.md.a9a2a980b700633b"
+}

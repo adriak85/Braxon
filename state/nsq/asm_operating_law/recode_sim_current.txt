@@ -1,0 +1,17 @@
+== NSQ ASM recode simulation ==
+simulation_only=True
+BRAXON_live_claim=False
+packets_per_surface=16384
+total_third_pass_units=131072
+third_pass_units_per_second=60116.09
+elapsed_seconds=2.180315
+final_mix=00b2935467a31286
+
+rust: third_pass_packets=16384 third_pass_packets_per_second=59779.174 elapsed=0.274075
+c: third_pass_packets=16384 third_pass_packets_per_second=59901.887 elapsed=0.273514
+python: third_pass_packets=16384 third_pass_packets_per_second=59944.522 elapsed=0.273319
+shell: third_pass_packets=16384 third_pass_packets_per_second=60166.96 elapsed=0.272309
+json: third_pass_packets=16384 third_pass_packets_per_second=60278.526 elapsed=0.271805
+toml: third_pass_packets=16384 third_pass_packets_per_second=60405.321 elapsed=0.271234
+markdown: third_pass_packets=16384 third_pass_packets_per_second=60094.711 elapsed=0.272636
+nsq: third_pass_packets=16384 third_pass_packets_per_second=60453.978 elapsed=0.271016

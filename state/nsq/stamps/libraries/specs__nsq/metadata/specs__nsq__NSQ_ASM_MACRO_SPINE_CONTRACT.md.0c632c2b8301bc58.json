@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__NSQ_ASM_MACRO_SPINE_CONTRACT.md.0c632c2b8301bc58.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.285611+00:00",
+  "harm_hit_count": 0,
+  "library": "specs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__NSQ_ASM_MACRO_SPINE_CONTRACT.md.0c632c2b8301bc58.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/nsq/NSQ_ASM_MACRO_SPINE_CONTRACT.md",
+  "source_bytes": 971,
+  "source_sha256": "0c632c2b8301bc58a8dfabd24c6f861c3c851c76d5b3cb4b74dd8af35ce537b7",
+  "stamp_id": "nsq.asm.specs__nsq.specs__nsq__NSQ_ASM_MACRO_SPINE_CONTRACT.md.0c632c2b8301bc58"
+}

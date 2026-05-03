@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__crossbeam-deque__RUSTSEC-2021-0093.md.ce34cf39906435b5.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.766103+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__crossbeam-deque__RUSTSEC-2021-0093.md.ce34cf39906435b5.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/crossbeam-deque/RUSTSEC-2021-0093.md",
+  "source_bytes": 925,
+  "source_sha256": "ce34cf39906435b510dcacedbe1158196d5acf4ecf068ccfa01006b69b92490d",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__crossbeam-deque__RUSTSEC-2021-0093.md.ce34cf39906435b5"
+}

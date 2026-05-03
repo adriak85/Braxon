@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "MRO::Compat",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/MRO/Compat.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/MRO__Compat.source",
+  "source_sha256": "7874d5ef71c4d8d2188cebe1bee580f7e54c95269f3f5f12491c55b18c282861",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/MRO__Compat.translated.nsq",
+  "nsq_body_sha256": "5237622925cf1c6ebf4b77f9f67f6b7fb6458ad40e2cc612534bd884ac885822",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

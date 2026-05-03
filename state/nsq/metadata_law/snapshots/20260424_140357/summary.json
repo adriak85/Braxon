@@ -1,0 +1,41 @@
+{
+  "by_authority_role": {
+    "generated_index": 13,
+    "law_spec": 27,
+    "nsq_carrier": 3,
+    "nsq_config": 3,
+    "nsq_crate_source": 124,
+    "source_authority": 3217,
+    "support_tool": 9
+  },
+  "by_surface": {
+    "asm": 1,
+    "c": 17,
+    "c_header": 12,
+    "json": 168,
+    "jsonl": 1,
+    "markdown": 2894,
+    "nsq": 34,
+    "python": 25,
+    "rust": 78,
+    "shell": 12,
+    "sql": 1,
+    "text": 61,
+    "toml": 42,
+    "tsv": 44,
+    "yaml": 6
+  },
+  "dependency_edges": "state/nsq/metadata_law/snapshots/20260424_140357/dependency_edges.jsonl",
+  "dependency_edges_count": 2542,
+  "elapsed_seconds": 2.719,
+  "generated_at": "2026-04-24T19:03:59.884003+00:00",
+  "generated_noise_excluded": true,
+  "inventory": "state/nsq/metadata_law/snapshots/20260424_140357/inventory.jsonl",
+  "reverse_dependency_edges": "state/nsq/metadata_law/snapshots/20260424_140357/reverse_dependency_edges.jsonl",
+  "reverse_dependency_roots": 2102,
+  "schema": "nsq.global_metadata_snapshot.v1",
+  "snapshot": "20260424_140357",
+  "source_bytes_total": 13939468,
+  "source_mib_total": 13.294,
+  "tracked_files": 3396
+}

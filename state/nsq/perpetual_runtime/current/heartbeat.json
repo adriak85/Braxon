@@ -1,0 +1,9 @@
+{
+  "alive": true,
+  "authority": "NSQ_COURT",
+  "c_runner_used": false,
+  "generated_at_unix": 1777078018,
+  "last_seq": 2,
+  "route": "perpetual_runtime",
+  "schema": "nsq.perpetual_runtime.heartbeat.v6"
+}

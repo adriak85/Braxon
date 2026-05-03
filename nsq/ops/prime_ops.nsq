@@ -1,0 +1,29 @@
+# prime operations spine
+
+triple ops.install -> enters -> spine.prime :layer 1 :plane 1 :anchor 1000 :weight 100 :flags 1
+triple ops.repo_export -> enters -> spine.prime :layer 1 :plane 1 :anchor 1010 :weight 100 :flags 1
+triple ops.pack -> enters -> spine.prime :layer 1 :plane 1 :anchor 1020 :weight 100 :flags 1
+triple ops.container -> enters -> spine.prime :layer 1 :plane 1 :anchor 1030 :weight 100 :flags 1
+
+triple ops.install -> emits -> prime.dispatch.install :layer 1 :plane 1 :anchor 1100 :weight 90 :flags 1
+triple ops.repo_export -> emits -> prime.dispatch.repo_export :layer 1 :plane 1 :anchor 1110 :weight 90 :flags 1
+triple ops.pack -> emits -> prime.dispatch.pack :layer 1 :plane 1 :anchor 1120 :weight 90 :flags 1
+triple ops.container -> emits -> prime.dispatch.container :layer 1 :plane 1 :anchor 1130 :weight 90 :flags 1
+
+triple prime.dispatch.install -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1200 :weight 80 :flags 1
+triple prime.dispatch.repo_export -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1210 :weight 80 :flags 1
+triple prime.dispatch.pack -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1220 :weight 80 :flags 1
+triple prime.dispatch.container -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1230 :weight 80 :flags 1
+
+triple prime.dispatch.install -> requires -> env.contract :layer 1 :plane 1 :anchor 1300 :weight 80 :flags 1
+triple prime.dispatch.install -> requires -> hook.matrix :layer 1 :plane 1 :anchor 1310 :weight 80 :flags 1
+triple prime.dispatch.install -> requires -> dialect.matrix :layer 1 :plane 1 :anchor 1320 :weight 80 :flags 1
+
+triple prime.dispatch.repo_export -> emits -> repo_surface.nsq :layer 1 :plane 1 :anchor 1400 :weight 80 :flags 1
+triple prime.dispatch.pack -> emits -> source_doc.tar.gz :layer 1 :plane 1 :anchor 1410 :weight 80 :flags 1
+triple prime.dispatch.container -> emits -> container.recipe :layer 1 :plane 1 :anchor 1420 :weight 80 :flags 1
+
+membrane ops.install :state active :flux 1 :gate 1 :phase 1
+membrane ops.repo_export :state active :flux 1 :gate 1 :phase 1
+membrane ops.pack :state active :flux 1 :gate 1 :phase 1
+membrane ops.container :state active :flux 1 :gate 1 :phase 1

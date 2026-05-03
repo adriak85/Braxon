@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Filesys::Cap",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Filesys/Cap.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Filesys__Cap.source",
+  "source_sha256": "f3ab1fc2b0596c1f59d4ebf920deee5f0fb82bf235409e03e87f43f4a8c386bf",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Filesys__Cap.translated.nsq",
+  "nsq_body_sha256": "adf6b1f4d8ccc96b397a5fd1ffc00ca8a10c7f4dee1fa988f0caa5d3aed7d16f",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

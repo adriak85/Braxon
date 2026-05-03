@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "CGI",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/CGI.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/CGI.source",
+  "source_sha256": "1aeaa78d4827fd86aca1b0d770df779800f9486029897ce0cdb2f798b207b060",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/CGI.translated.nsq",
+  "nsq_body_sha256": "56e5a3b518ea8908a159d7e0282bf22d55958d511284303d30bc6c0567317d14",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

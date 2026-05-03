@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__BRAXON-cli/asm/macros/crates__BRAXON-cli__src__main.rs.e640df14f2cc28cb.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.235616+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__BRAXON-cli",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__BRAXON-cli/metadata/crates__BRAXON-cli__src__main.rs.e640df14f2cc28cb.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/Braxon-cli/src/main.rs",
+  "source_bytes": 492,
+  "source_sha256": "e640df14f2cc28cb0b588b8cac2060185a8b26bb7938c1f5323e3ba994f72083",
+  "stamp_id": "nsq.asm.crates__BRAXON-cli.crates__BRAXON-cli__src__main.rs.e640df14f2cc28cb"
+}

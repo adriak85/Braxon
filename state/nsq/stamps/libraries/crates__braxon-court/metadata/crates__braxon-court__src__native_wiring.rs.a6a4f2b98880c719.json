@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__BRAXON-court/asm/macros/crates__BRAXON-court__src__native_wiring.rs.a6a4f2b98880c719.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.327618+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__BRAXON-court",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__BRAXON-court/metadata/crates__BRAXON-court__src__native_wiring.rs.a6a4f2b98880c719.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/Braxon-court/src/native_wiring.rs",
+  "source_bytes": 868,
+  "source_sha256": "a6a4f2b98880c719718d768da1efa750780f2fa74c2db70c1f2160be2255896e",
+  "stamp_id": "nsq.asm.crates__BRAXON-court.crates__BRAXON-court__src__native_wiring.rs.a6a4f2b98880c719"
+}

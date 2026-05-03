@@ -1,0 +1,10 @@
+{
+  "asm": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/asm/alphabet_unicode_index.s",
+  "entries": 166,
+  "full_unicode_policy": "range_seed_plus_on_demand_expansion",
+  "generated_at": "2026-04-24T18:09:37.185079+00:00",
+  "index": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/index/alphabet_unicode_index.jsonl",
+  "library": "nsq__alphabet_unicode_index",
+  "nsq_index": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/index/alphabet_unicode_index.nsq",
+  "schema": "nsq.asm.alphabet_unicode_index.v1"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Math::Base::Convert",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Math/Base/Convert.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Math__Base__Convert.source",
+  "source_sha256": "0ded75f6a6084b2dd74ff7a4c402f991d84947d469e3314dff69bd493f841a33",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Math__Base__Convert.translated.nsq",
+  "nsq_body_sha256": "790b23af12fdc159e80a40453df75f2e782fcca67f37cd75afa5b90eff7a1bff",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

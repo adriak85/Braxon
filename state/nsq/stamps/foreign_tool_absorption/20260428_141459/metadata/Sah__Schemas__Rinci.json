@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Sah::Schemas::Rinci",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Sah/Schemas/Rinci.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Sah__Schemas__Rinci.source",
+  "source_sha256": "1d1271427d447812496183af0e8e59e5fbe08fce4484703f4a214f06ef5f745f",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Sah__Schemas__Rinci.translated.nsq",
+  "nsq_body_sha256": "8a0984ef73dafc1c3dbb5c0d176e2fa1d9f8eee1ccce4b177b9c582c91f2432e",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

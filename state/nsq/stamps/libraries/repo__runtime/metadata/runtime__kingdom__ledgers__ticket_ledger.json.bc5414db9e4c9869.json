@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__runtime/asm/macros/runtime__kingdom__ledgers__ticket_ledger.json.bc5414db9e4c9869.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.485464+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__runtime",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__runtime/metadata/runtime__kingdom__ledgers__ticket_ledger.json.bc5414db9e4c9869.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "runtime/kingdom/ledgers/ticket_ledger.json",
+  "source_bytes": 32,
+  "source_sha256": "bc5414db9e4c9869336d330ce6a1dccdd0f381d6576271cb5a3a703613b6aeba",
+  "stamp_id": "nsq.asm.repo__runtime.runtime__kingdom__ledgers__ticket_ledger.json.bc5414db9e4c9869"
+}

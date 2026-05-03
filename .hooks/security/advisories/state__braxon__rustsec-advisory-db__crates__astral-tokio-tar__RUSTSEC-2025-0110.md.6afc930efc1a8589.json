@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__astral-tokio-tar__RUSTSEC-2025-0110.md.6afc930efc1a8589.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.427073+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__astral-tokio-tar__RUSTSEC-2025-0110.md.6afc930efc1a8589.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/astral-tokio-tar/RUSTSEC-2025-0110.md",
+  "source_bytes": 1119,
+  "source_sha256": "6afc930efc1a8589bad22247abc48ca19d274bbcd7d67539f2a49c304ec0f079",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__astral-tokio-tar__RUSTSEC-2025-0110.md.6afc930efc1a8589"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "nsq.court.route.v2",
+  "generated_at": "20260424_211405",
+  "route": "citadel699_wire_receptor",
+  "owned_by": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "executor_allowed_only_as_court_route": true,
+
+  "reusable_citadel": true,
+  "max_return_bundle_bytes": 1073741824,
+  "transfer_form": "nsq_only",
+  "raw_payload_transfer_allowed": false,
+  "lfs_pointer_allowed": false,
+  "bit_recycling_required": true,
+
+  "learned_skills_breakdown_required": true,
+  "learned_skills_must_be_abstract_only": true,
+  "raw_source_code_retention_allowed": false,
+  "credentials_retention_allowed": false,
+  "private_identifier_retention_allowed": false,
+  "system_benefit_map_required": true,
+
+  "truth": "Citadel699 may request/verify/import NSQ-only rebuild bundles. It must not accept raw GGUF/safetensors payload transfer as the wire artifact. Returned bundles must include an abstract learned-skills breakdown and a benefit map for every configured Braxon/NSQ target system without retaining raw external code, credentials, identifiers, or payload bytes."
+}

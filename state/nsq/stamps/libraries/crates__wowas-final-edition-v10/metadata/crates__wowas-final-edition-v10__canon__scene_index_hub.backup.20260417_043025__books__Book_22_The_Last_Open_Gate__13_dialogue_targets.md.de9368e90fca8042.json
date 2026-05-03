@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_22_The_Last_Open_Gate__13_dialogue_targets.md.de9368e90fca8042.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.526121+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_22_The_Last_Open_Gate__13_dialogue_targets.md.de9368e90fca8042.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_22_The_Last_Open_Gate/13_dialogue_targets.md",
+  "source_bytes": 869,
+  "source_sha256": "de9368e90fca80428d6ba54bb166ed1619f8b363629ef0f236da2bc4f7a5b3b4",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_22_The_Last_Open_Gate__13_dialogue_targets.md.de9368e90fca8042"
+}

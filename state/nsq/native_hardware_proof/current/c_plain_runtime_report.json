@@ -1,0 +1,14 @@
+{
+  "schema": "nsq.c_plain_runtime.report.v1",
+  "surface": "c_plain",
+  "runtime_language": "c",
+  "separate_runtime": true,
+  "parameter_range_total": 6900000000000,
+  "parameter_windows_opened": 59999,
+  "tasks_completed": 3932160000,
+  "bit_operations": 31457280000,
+  "unwound_before_crash": false,
+  "elapsed_seconds": 9.851388,
+  "digest_mix": "73ee221a75c0497a",
+  "bare_metal_claim": false
+}

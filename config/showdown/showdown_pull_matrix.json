@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "pull_rule": "only pull what improves boots/routes/speaks/remembers/guards/recovers",
+  "rings": {
+    "ring0_kernel": [
+      "boot",
+      "restore",
+      "schedule",
+      "dispatch",
+      "persist",
+      "recover",
+      "shutdown"
+    ],
+    "ring1_authority": [
+      "composer",
+      "linter",
+      "bard",
+      "keeper",
+      "ticketmaster",
+      "archon_gates",
+      "guard",
+      "detective",
+      "sees_all",
+      "seer",
+      "oracle",
+      "crier"
+    ],
+    "ring2_workers": [
+      "hounds",
+      "disposable_agents",
+      "pages",
+      "recoverable_pages",
+      "speech_workers",
+      "proof_workers",
+      "builder_workers",
+      "analysis_workers"
+    ]
+  },
+  "sources": [
+    {
+      "name": "BRAXON_runtime/kernel",
+      "category": "kernel primitives",
+      "decision": "KEEP",
+      "proof_targets": ["boots", "routes", "remembers", "recovers"],
+      "notes": "primary kernel line"
+    },
+    {
+      "name": "legacy/crates/Braxon-kernel",
+      "category": "legacy kernel behaviors",
+      "decision": "ADAPT",
+      "proof_targets": ["boots", "routes", "recovers"],
+      "notes": "salvage behavior, do not preserve duplicate authority"
+    },
+    {
+      "name": "legacy/android-hal",
+      "category": "device adapter",
+      "decision": "ADAPT",
+      "proof_targets": ["boots", "speaks"],
+      "notes": "move into adapter tier"
+    },
+    {
+      "name": "legacy/jni-portal",
+      "category": "bridge",
+      "decision": "ADAPT",
+      "proof_targets": ["routes", "speaks"],
+      "notes": "preserve if it improves ingress"
+    },
+    {
+      "name": "BRAXON_runtime/services/BRAXON_daemon",
+      "category": "daemon boot path",
+      "decision": "KEEP",
+      "proof_targets": ["boots", "recovers"],
+      "notes": "preferred daemon/init line"
+    },
+    {
+      "name": "BRAXON_cpu",
+      "category": "capability reporting",
+      "decision": "KEEP",
+      "proof_targets": ["boots"],
+      "notes": "runtime capability statement"
+    },
+    {
+      "name": "BRAXON_gpu_detect",
+      "category": "capability reporting",
+      "decision": "KEEP",
+      "proof_targets": ["boots", "speaks"],
+      "notes": "attach to showdown capability report"
+    },
+    {
+      "name": "BRAXON_api",
+      "category": "ingress",
+      "decision": "KEEP",
+      "proof_targets": ["routes"],
+      "notes": "canonical programmatic ingress"
+    },
+    {
+      "name": "BRAXON_cli",
+      "category": "operator ingress",
+      "decision": "KEEP",
+      "proof_targets": ["routes"],
+      "notes": "canonical operator ingress"
+    },
+    {
+      "name": "BRAXON_dialog_engine",
+      "category": "speech/dialog",
+      "decision": "KEEP",
+      "proof_targets": ["speaks"],
+      "notes": "showdown-critical"
+    },
+    {
+      "name": "BRAXON_speech_input",
+      "category": "speech/dialog",
+      "decision": "KEEP",
+      "proof_targets": ["speaks"],
+      "notes": "showdown-critical"
+    },
+    {
+      "name": "BRAXON_knowledge_core",
+      "category": "memory spine",
+      "decision": "ADAPT",
+      "proof_targets": ["remembers"],
+      "notes": "preserve durable knowledge behavior"
+    },
+    {
+      "name": "BRAXON_library",
+      "category": "memory spine",
+      "decision": "ADAPT",
+      "proof_targets": ["remembers"],
+      "notes": "attach under canonical kernel"
+    },
+    {
+      "name": "BRAXON_vector_index",
+      "category": "memory spine",
+      "decision": "ADAPT",
+      "proof_targets": ["remembers"],
+      "notes": "use only if local-runtime justified"
+    },
+    {
+      "name": "BRAXON_security",
+      "category": "guard rail",
+      "decision": "KEEP",
+      "proof_targets": ["guards"],
+      "notes": "map to Guard/Keymaster/Locksmith/Ticketmaster"
+    },
+    {
+      "name": "BRAXON_telemetry",
+      "category": "observability",
+      "decision": "ADAPT",
+      "proof_targets": ["guards", "recovers"],
+      "notes": "map to Crier/SEES ALL/Detective"
+    },
+    {
+      "name": "autonomous/android BRAXON_kernel.py",
+      "category": "behavioral template",
+      "decision": "ADAPT",
+      "proof_targets": ["boots", "routes"],
+      "notes": "mine local command routing/boot ideas only"
+    }
+  ]
+}

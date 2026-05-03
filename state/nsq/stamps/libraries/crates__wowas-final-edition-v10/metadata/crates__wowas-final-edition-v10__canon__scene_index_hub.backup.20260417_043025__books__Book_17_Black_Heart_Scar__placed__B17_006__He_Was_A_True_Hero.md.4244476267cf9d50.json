@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_17_Black_Heart_Scar__placed__B17_006__He_Was_A_True_Hero.md.4244476267cf9d50.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.375262+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_17_Black_Heart_Scar__placed__B17_006__He_Was_A_True_Hero.md.4244476267cf9d50.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_17_Black_Heart_Scar/placed/B17_006__He_Was_A_True_Hero.md",
+  "source_bytes": 510,
+  "source_sha256": "4244476267cf9d5014e79c0de0454dba08ce4524ebab69b7c6b352d15fb2d055",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_17_Black_Heart_Scar__placed__B17_006__He_Was_A_True_Hero.md.4244476267cf9d50"
+}

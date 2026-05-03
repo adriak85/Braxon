@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_18_Strange_Gravity__placed__B18_003__They_Fight_First.md.8c5d4293d4caee93.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.018403+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_18_Strange_Gravity__placed__B18_003__They_Fight_First.md.8c5d4293d4caee93.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_18_Strange_Gravity/placed/B18_003__They_Fight_First.md",
+  "source_bytes": 334,
+  "source_sha256": "8c5d4293d4caee93cffd042fa734d9fa56d508fee29adb4f27f65cd448e21fb2",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_18_Strange_Gravity__placed__B18_003__They_Fight_First.md.8c5d4293d4caee93"
+}

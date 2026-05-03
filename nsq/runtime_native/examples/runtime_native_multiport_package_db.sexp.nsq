@@ -1,0 +1,13 @@
+(seal
+  (package-db local_repo :offline true :packed tightly_packed_nsq)
+  (multiport minimum 8)
+  (port 0 :role query_index_read)
+  (port 1 :role unpack_packed_package)
+  (port 2 :role link_materialize_dependency_graph)
+  (port 3 :role cache_and_warm_plan_reuse)
+  (port 4 :role projection_translation)
+  (port 5 :role tokenizer_and_doc_emit)
+  (port 6 :role verify_replay_proof)
+  (port 7 :role authority_commit_registry_mutation)
+  (policy many_readers_materializers_one_authority_writer)
+)

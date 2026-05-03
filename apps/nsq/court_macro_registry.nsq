@@ -1,0 +1,61 @@
+NSQ_APP court_macro_registry
+NSQ_APP_VERSION 1
+
+NSQ_COURT_COMPONENTS {
+  court_is_not_agents = true
+  king = compositor
+  queen = linter
+  court_is_agents = false
+  lexor = lexor
+  lexer = lexer
+  parser = parser
+  picker = picker
+  optimizer = optimizer
+  router = router
+  scheduler = scheduler
+  inspector = inspector
+}
+
+NSQ_COURT_MACRO_EQUIPMENT {
+  macro_tracking_flagged = true
+  macro_tracking_runtime_default = false
+  macro_tracking_allowed_rounds = 1, 2
+  macro_tracking_forbidden_scored_round = 3
+
+  promote_macro_if_used_more_than_three_times = true
+  promoted_macros_must_be_equipped_to_court = true
+
+  king_king_compositor_receives {
+    SOURCE_HASH = true
+    LINEAGE_STAMP = true
+    ASM_RECODE_OP = true
+    NSQ_PASS = true
+    BINARY_BOUNDARY = true
+  }
+
+  queen_queen_linter_receives {
+    MORAL_GUARD = true
+    GENERATED_NOT_SOURCE = true
+    ROUND_3_NO_TRACKERS = true
+    NO_BARE_METAL_CLAIM_WITHOUT_PROOF = true
+  }
+
+  lexor_receives {
+    C8_PACK = true
+    IDENTIFY_ALL_PERCEIVABLE = true
+    READ_EVERYTHING = true
+  }
+
+  picker_receives {
+    BEST_DECISION = true
+    CHECK_SURROUNDINGS = true
+    UNDERSTAND_ACTION = true
+  }
+
+  inspector_receives {
+    METADATA_IMPACT = true
+    REVERSE_DEPENDENCY = true
+    ROUND_TRIP = true
+    WRAPPER_OVERHEAD_DETECTION = true
+  }
+}

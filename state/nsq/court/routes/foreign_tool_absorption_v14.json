@@ -1,0 +1,13 @@
+{
+  "schema": "nsq.court.route.v14",
+  "generated_at": "20260428_141459",
+  "route": "foreign_tool_absorption_v14",
+  "authority": "NSQ_COURT",
+  "court_is_compositor": true,
+  "court_is_agents": false,
+  "nsq_is_only_runtime": true,
+  "registry": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/foreign_tool_substrate_stamp_registry.jsonl",
+  "foreign_runtime_execution_forbidden": true,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false
+}

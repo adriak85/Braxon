@@ -1,0 +1,22 @@
+{
+  "schema": "nsq.court.route.v1",
+  "generated_at": "20260424_212145",
+  "route": "citadel699_pattern_awareness",
+  "owned_by": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "executor_allowed_only_as_court_route": true,
+  "authorized_citadel699_lane": true,
+  "public_unprotected_material_allowed_only_when_explicitly_available": true,
+  "protected_material_allowed": false,
+  "unrelated_traffic_allowed": false,
+  "promiscuous_network_capture_allowed": false,
+  "access_control_bypass_allowed": false,
+  "raw_content_recording_allowed": false,
+  "crc32c_allowed_as_fast_lane_checksum": true,
+  "crc32c_is_identity_proof": false,
+  "blake3_required_for_identity": true,
+  "truth": "Citadel699 may be aware of structural patterns in its own authorized lane and explicitly available unprotected material. It must not observe protected material, unrelated traffic, or bypass access controls. It retains only aggregate shapes and abstract transferable skills."
+}

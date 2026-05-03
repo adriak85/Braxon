@@ -1,0 +1,6 @@
+fn ??? broken @@
+#include "auth.h"
+int broken_path(auth_ctx* ctx) {
+    if (ctx->state > 0) {
+        return auth_handle(ctx, 99);
+%%CORRUPT%%

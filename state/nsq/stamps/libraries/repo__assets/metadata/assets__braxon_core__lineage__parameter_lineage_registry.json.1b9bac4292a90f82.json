@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__assets/asm/macros/assets__BRAXON_core__lineage__parameter_lineage_registry.json.1b9bac4292a90f82.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.150262+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__assets",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__assets/metadata/assets__BRAXON_core__lineage__parameter_lineage_registry.json.1b9bac4292a90f82.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "assets/braxon_core/lineage/parameter_lineage_registry.json",
+  "source_bytes": 4027,
+  "source_sha256": "1b9bac4292a90f821d8858efbeffab61b510faa1ff3c775bee96424166b5c1d7",
+  "stamp_id": "nsq.asm.repo__assets.assets__BRAXON_core__lineage__parameter_lineage_registry.json.1b9bac4292a90f82"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_18_Strange_Gravity__16_salvage_beats.md.0c2b67563bca5851.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.390036+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_18_Strange_Gravity__16_salvage_beats.md.0c2b67563bca5851.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_18_Strange_Gravity/16_salvage_beats.md",
+  "source_bytes": 1114,
+  "source_sha256": "0c2b67563bca5851946b4e3768b74cb4cff9e9a30b658ce008dc4935caebd66e",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_18_Strange_Gravity__16_salvage_beats.md.0c2b67563bca5851"
+}

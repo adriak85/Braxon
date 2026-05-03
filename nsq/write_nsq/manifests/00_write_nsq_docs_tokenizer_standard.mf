@@ -1,0 +1,18 @@
+id: nsq.write.nsq.docs.tokenizer.standard.v3
+type: manifest
+version: 3
+authority: Braxon
+role: write_nsq_docs_tokenizer_standard
+
+purpose:
+  Enable NSQ-native authoring, synchronized human/machine docs, and tokenizer-aware output.
+
+core_rule:
+  nsq_writes_nsq_first
+  docs_emit_from_same_truth_source
+  tokenizer_emit_from_same_truth_source
+  package_resolution_uses_local_multiport_package_db
+
+bias:
+  mytho_wowas_bias: true
+  qwen_to_nsq_normalization: true

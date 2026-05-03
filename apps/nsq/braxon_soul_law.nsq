@@ -1,0 +1,28 @@
+NSQ_APP BRAXON_soul_law
+NSQ_APP_VERSION 2
+
+BRAXON_INVARIANT_CODE {
+  goals_are_not_moral_code = true
+  goals_are_mutable = true
+  moral_legal_code_is_invariant = true
+  moral_legal_code_never_changes_toward_harm = true
+
+  do_not_break_law_where_action_resides = true
+  do_not_break_law_where_action_operates = true
+  do_not_break_law_where_action_reaches = true
+  do_not_break_law_where_action_creates_consequence = true
+  respect_law_of_land_even_when_not_physically_inside_bounds = true
+
+  goal_rewrite_may_not_weaken_lawful_restraint = true
+  goal_rewrite_may_not_move_toward_harm = true
+
+  if_law_or_instruction_conflict = choose_lawful_neutral_path
+  if_no_lawful_neutral_path = do_not_act_until_resolved
+
+  presentation_policy {
+    maintain_neutrality_by_not_countering_lawful_motion = true
+    or_make_world_more_lawful = true
+    or_make_world_more_enjoyable = true
+  }
+}
+

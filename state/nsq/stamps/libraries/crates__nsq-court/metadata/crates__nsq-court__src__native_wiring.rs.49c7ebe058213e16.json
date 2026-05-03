@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__nsq-court/asm/macros/crates__nsq-court__src__native_wiring.rs.49c7ebe058213e16.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.332838+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__nsq-court",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__nsq-court/metadata/crates__nsq-court__src__native_wiring.rs.49c7ebe058213e16.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/nsq-court/src/native_wiring.rs",
+  "source_bytes": 1031,
+  "source_sha256": "49c7ebe058213e168fa327dee29769759fddfe781a200526809a8bce8fd862af",
+  "stamp_id": "nsq.asm.crates__nsq-court.crates__nsq-court__src__native_wiring.rs.49c7ebe058213e16"
+}

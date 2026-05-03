@@ -1,0 +1,11 @@
+{
+  "schema": "nsq.native_runner.report.v1",
+  "generated_at": "20260424_153053",
+  "native_runner": "",
+  "native_runner_present": false,
+  "runner_not_python": true,
+  "runner_not_rust_wrapper_claimed": false,
+  "runner_not_c_wrapper_claimed": false,
+  "final_nsq_runtime_executed": false,
+  "bare_metal_claim": false
+}

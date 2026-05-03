@@ -1,0 +1,9 @@
+# nsq-prime library declaration
+
+triple lib.nsq_prime -> verifies -> nsq_source_present :layer 1 :plane 1 :anchor 1300 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_compile_present :layer 1 :plane 1 :anchor 1310 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_pack_present :layer 1 :plane 1 :anchor 1320 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_inspect_present :layer 1 :plane 1 :anchor 1330 :weight 80 :flags 1
+triple lib.nsq_prime -> emits -> prime_report :layer 1 :plane 1 :anchor 1340 :weight 80 :flags 1
+
+membrane lib.nsq_prime :state required :flux 4 :gate 1 :phase 1

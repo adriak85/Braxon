@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0044__B02_05__Mack_Refuses_to_Flatten_Him_into_Symbol.m.9e36162062e3473b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.245439+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0044__B02_05__Mack_Refuses_to_Flatten_Him_into_Symbol.m.9e36162062e3473b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_02_The_Diary_And_The_Blue_Light/0044__B02_05__Mack_Refuses_to_Flatten_Him_into_Symbol.md",
+  "source_bytes": 206,
+  "source_sha256": "9e36162062e3473b821cc9d9bdbb01a5987234c1c471ae1ee2cf21654bbe1c1f",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0044__B02_05__Mack_Refuses_to_Flatten_Him_into_Symbol.m.9e36162062e3473b"
+}

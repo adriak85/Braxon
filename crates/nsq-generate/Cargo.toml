@@ -1,0 +1,10 @@
+[package]
+publish = false
+name = "nsq-generate"
+version = "0.2.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Synthetic NSQ corpus generator for scale and density testing."

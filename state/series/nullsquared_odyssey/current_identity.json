@@ -1,0 +1,11 @@
+{
+  "schema": "Braxon.series_identity.current.v1",
+  "series_display_title": "⁰ Odyssey",
+  "series_spoken_title": "Odyssey",
+  "silent_prefix": "⁰",
+  "silent_prefix_meaning": "nullsquared",
+  "machine_series_id": "nullsquared_odyssey",
+  "arc_01_display_title": "Whispers of Willow and Stone",
+  "arc_01_machine_id": "wowas",
+  "title_page": "docs/series/NULLSQUARED_ODYSSEY_TITLE_PAGE.md"
+}

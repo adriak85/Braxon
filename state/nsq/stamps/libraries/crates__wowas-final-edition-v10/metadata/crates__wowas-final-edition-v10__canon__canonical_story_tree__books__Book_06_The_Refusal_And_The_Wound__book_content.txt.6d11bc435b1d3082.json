@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_06_The_Refusal_And_The_Wound__book_content.txt.6d11bc435b1d3082.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.804919+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_06_The_Refusal_And_The_Wound__book_content.txt.6d11bc435b1d3082.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_06_The_Refusal_And_The_Wound/book_content.txt",
+  "source_bytes": 14552,
+  "source_sha256": "6d11bc435b1d3082fbe63dcdd90457394f706c98c4c5462b1e635b1ac62a2c5e",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_06_The_Refusal_And_The_Wound__book_content.txt.6d11bc435b1d3082"
+}

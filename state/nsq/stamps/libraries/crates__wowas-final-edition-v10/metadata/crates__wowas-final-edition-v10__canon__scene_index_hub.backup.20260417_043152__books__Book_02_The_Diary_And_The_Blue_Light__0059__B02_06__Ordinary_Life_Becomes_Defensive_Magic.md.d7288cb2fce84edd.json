@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0059__B02_06__Ordinary_Life_Becomes_Defensive_Magic.md.d7288cb2fce84edd.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.269725+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0059__B02_06__Ordinary_Life_Becomes_Defensive_Magic.md.d7288cb2fce84edd.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_02_The_Diary_And_The_Blue_Light/0059__B02_06__Ordinary_Life_Becomes_Defensive_Magic.md",
+  "source_bytes": 190,
+  "source_sha256": "d7288cb2fce84edd6031fdb608f28a147780fb559599653dbf32984ac4875048",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0059__B02_06__Ordinary_Life_Becomes_Defensive_Magic.md.d7288cb2fce84edd"
+}

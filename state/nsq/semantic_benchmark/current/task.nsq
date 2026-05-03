@@ -1,0 +1,12 @@
+NSQ_TASK semantic_runtime_benchmark
+NSQ_TASK_VERSION 1
+NSQ_TASK_NONCE NSQ_SEMANTIC_BENCHMARK_20260424_190345
+
+NSQ_SEMANTIC_BENCHMARK {
+  input_a = 8
+  input_b = 13
+  operation = add
+  expected_result = 21
+  required_output_nonce = NSQ_SEMANTIC_BENCHMARK_20260424_190345
+  required_output_result = 21
+}

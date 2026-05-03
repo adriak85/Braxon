@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__BRAXON-court/asm/macros/crates__BRAXON-court__src__main.rs.22c66dbc3e5d4655.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.326368+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__BRAXON-court",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__BRAXON-court/metadata/crates__BRAXON-court__src__main.rs.22c66dbc3e5d4655.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/Braxon-court/src/main.rs",
+  "source_bytes": 2358,
+  "source_sha256": "22c66dbc3e5d4655b1c0c011b9ab76fd22f488c3c515787a37b4412a603934f3",
+  "stamp_id": "nsq.asm.crates__BRAXON-court.crates__BRAXON-court__src__main.rs.22c66dbc3e5d4655"
+}

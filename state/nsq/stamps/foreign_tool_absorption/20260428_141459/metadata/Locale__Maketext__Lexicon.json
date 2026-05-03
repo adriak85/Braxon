@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Locale::Maketext::Lexicon",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Locale/Maketext/Lexicon.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Locale__Maketext__Lexicon.source",
+  "source_sha256": "906997c71c794d93450850cf2e06882356f52e628f815f5f6ab9701ee794d22c",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Locale__Maketext__Lexicon.translated.nsq",
+  "nsq_body_sha256": "5655c53ed91d262dc8154e7fea71e6584f23272bc6d017203aaa7f211af332f4",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

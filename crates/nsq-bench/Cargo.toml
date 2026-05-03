@@ -1,0 +1,14 @@
+[package]
+publish = false
+name = "nsq-bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Lightweight parity and prime benchmark surface for NSQ text."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

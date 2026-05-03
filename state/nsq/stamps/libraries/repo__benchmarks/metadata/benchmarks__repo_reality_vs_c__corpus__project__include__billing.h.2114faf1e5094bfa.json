@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__repo_reality_vs_c__corpus__project__include__billing.h.2114faf1e5094bfa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.999841+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__repo_reality_vs_c__corpus__project__include__billing.h.2114faf1e5094bfa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/repo_reality_vs_c/corpus/project/include/billing.h",
+  "source_bytes": 256,
+  "source_sha256": "2114faf1e5094bfa7c6d554eb80b83883b8123a6fdc7df73bcce58a86e7a783d",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__repo_reality_vs_c__corpus__project__include__billing.h.2114faf1e5094bfa"
+}

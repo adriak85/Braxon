@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="${BRAXON_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+cd "$ROOT"
+
+exec cargo run --quiet -- init "$@"

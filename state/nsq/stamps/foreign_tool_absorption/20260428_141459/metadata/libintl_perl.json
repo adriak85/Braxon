@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "libintl-perl",
+  "source_path": "missing",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/libintl_perl.source",
+  "source_sha256": "missing",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/libintl_perl.translated.nsq",
+  "nsq_body_sha256": "de345f8cc54fe30f5badfa5faeee6974646740869b75daf03c00bc901b189814",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "missing_source"
+}

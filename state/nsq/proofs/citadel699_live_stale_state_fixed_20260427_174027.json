@@ -1,0 +1,13 @@
+{
+  "schema": "Braxon.nsq.citadel699.live_stale_state_fixed.v1",
+  "authority": "NSQ_COURT",
+  "stamp": "20260427_174027",
+  "root": "/data/data/com.termux/files/home/Braxon/Braxon",
+  "backup": "state/braxon/backups/fix_citadel699_live_stale_state_20260427_174027",
+  "citadel699_proven": true,
+  "citadel699_proof_level": "local_nsq_request_return_rebuild_manifest_ready",
+  "citadel699_rebuild_proof": "state/nsq/proofs/citadel699_current_rebuild.json",
+  "cargo_check_status": 0,
+  "nextest_status": 100,
+  "whole_core_runtime_claim_blocked_until_rebuild_verify": true
+}

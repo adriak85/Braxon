@@ -1,0 +1,48 @@
+{
+  "schema": "Braxon.global_tag.v1",
+  "identity": "Braxon",
+  "tag": "BRAXON_GLOBAL_NSQ_CHARACTER_STAMP_SCORE_V1",
+  "canonical_semantics": "base8_switch_topology",
+  "nu_count_carrier": "Nu16",
+  "forbidden_flattening": ["u8", "u16", "u32", "u64", "byte_native_truth", "bit_passthrough"],
+  "nsq_bit_unit": {
+    "zero_inclusive_lever_states": 2254,
+    "levers_per_bit_unit": 4,
+    "states_per_bit_unit": 25811642826256
+  },
+  "honest_score": {
+    "base_measure": "produced_characters",
+    "boundary_byte_role": "comparison_only",
+    "minimum_symbols_per_boundary_byte": 3,
+    "dense_symbols_per_boundary_byte": 12,
+    "framework_stamp_payloads_allowed": true,
+    "stamp_vs_noise_rule": "sound_confirmed_corrected_zero_miss_units_count_as_stamp_information; failed_or_missed_units_count_as_noise_and_are_rejected",
+    "selection_basis": "resolved_nsq_information_processed",
+    "selection_rule": "minimal spacing that preserves zero failed or missed through the largest resolved NSQ information processed",
+    "measurement_methods": [
+      "applied_hertz",
+      "return_to_off",
+      "return_to_on",
+      "float_aware_return_average",
+      "sound_resonance",
+      "near_anchor_similarity_diagnostic",
+      "corrected_hertz"
+    ],
+    "byte_measurement_scope": "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8"
+  },
+  "current_global_sweet_spot": {
+    "spacing_units": 2,
+    "information_processed": 1126,
+    "selected_stable_upper_position": 1126,
+    "selected_hertz_spacing": 0.001777778,
+    "zero_failed_or_missed": true,
+    "boundary_bytes_equivalent": 6271,
+    "produced_characters_floor": 18813,
+    "produced_characters_dense": 75252,
+    "stamp_information_accepted": 1126,
+    "framework_stamp_payloads_accepted": 1126,
+    "noise_information_rejected": 0,
+    "selected_nsq_states_per_bit_unit": 25811642826256,
+    "selected_nsq_state_log10": 15101.704418342235
+  }
+}

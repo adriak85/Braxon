@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_20_The_Beforemath__11_scene_insertion_targets.md.98a7466ef4292bfb.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.053388+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_20_The_Beforemath__11_scene_insertion_targets.md.98a7466ef4292bfb.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_20_The_Beforemath/11_scene_insertion_targets.md",
+  "source_bytes": 602,
+  "source_sha256": "98a7466ef4292bfb1134d7e82af70a45ff962b752632ec86eb68b8a8bfc3f08d",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_20_The_Beforemath__11_scene_insertion_targets.md.98a7466ef4292bfb"
+}

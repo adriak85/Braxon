@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0085__B01_25__Pip_Refuses_the_Math_of_Abandonment.md.84afd0c557361802.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.165822+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0085__B01_25__Pip_Refuses_the_Math_of_Abandonment.md.84afd0c557361802.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0085__B01_25__Pip_Refuses_the_Math_of_Abandonment.md",
+  "source_bytes": 226,
+  "source_sha256": "84afd0c5573618024b8e159ee23a6f34dc0b30de9218a9e3bbde7dcbe7c1dfbf",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0085__B01_25__Pip_Refuses_the_Math_of_Abandonment.md.84afd0c557361802"
+}

@@ -1,0 +1,281 @@
+{
+  "architecture": "nu336",
+  "generated_by": "nsq-compress scaffold",
+  "root": "config/nsq",
+  "stamp_records": [
+    {
+      "stamp_id": "stamp:c72d08c363a31313aff1b0e7fa7c55f0bfb00dae54eee449e607cf2d7fb7e717",
+      "source_path": "config/nsq/android_runtime_oaboot.json",
+      "bytes": 659,
+      "blake3": "c72d08c363a31313aff1b0e7fa7c55f0bfb00dae54eee449e607cf2d7fb7e717",
+      "sha256": "a033875cd96fdb2d52a82fbf6a6c85a3653c71cf07e0abe51f9103706a3c8d08",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:a033875cd96fdb2d52a82fbf6a6c85a3653c71cf07e0abe51f9103706a3c8d08"
+    },
+    {
+      "stamp_id": "stamp:f571bfb74db51e92d7e4f94a200b7c452ebd68832cc4c42cda1428b3838f02c5",
+      "source_path": "config/nsq/benchmark_gate.json",
+      "bytes": 676,
+      "blake3": "f571bfb74db51e92d7e4f94a200b7c452ebd68832cc4c42cda1428b3838f02c5",
+      "sha256": "06a59e40ff226e08ab0b9c8fe7ff1841bd78586f6a9579f49aea7dd11f6287b5",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:06a59e40ff226e08ab0b9c8fe7ff1841bd78586f6a9579f49aea7dd11f6287b5"
+    },
+    {
+      "stamp_id": "stamp:22f5e73c77bb4dd8003daed070c13e9039717ece221531abe423309ad9f4d58e",
+      "source_path": "config/nsq/boundary_surfaces.json",
+      "bytes": 1581,
+      "blake3": "22f5e73c77bb4dd8003daed070c13e9039717ece221531abe423309ad9f4d58e",
+      "sha256": "15408466c90da8321a27b73959854496629d3aa8d70184e9d80ed923e7b7bf38",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:15408466c90da8321a27b73959854496629d3aa8d70184e9d80ed923e7b7bf38"
+    },
+    {
+      "stamp_id": "stamp:0ab28c98bed93243ae3988feda1a647d92a9663564c581c20e0a3ecaabc7af90",
+      "source_path": "config/nsq/court_seed.json",
+      "bytes": 4723,
+      "blake3": "0ab28c98bed93243ae3988feda1a647d92a9663564c581c20e0a3ecaabc7af90",
+      "sha256": "9b4b0e9492f9c0ae076a9c66eaaf23847d9d40abdf294d62fe08e8aa16ecf736",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:9b4b0e9492f9c0ae076a9c66eaaf23847d9d40abdf294d62fe08e8aa16ecf736"
+    },
+    {
+      "stamp_id": "stamp:3ec9aa0f70dc679242bf1e715548667a1c7c9668e3fbccfc9d7aa0e6a8835a0a",
+      "source_path": "config/nsq/knowledge_graph.json",
+      "bytes": 443,
+      "blake3": "3ec9aa0f70dc679242bf1e715548667a1c7c9668e3fbccfc9d7aa0e6a8835a0a",
+      "sha256": "298e82a57330b9626a5a42a54ef507c24a8d898f58576891ecea7122857d9c92",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:298e82a57330b9626a5a42a54ef507c24a8d898f58576891ecea7122857d9c92"
+    },
+    {
+      "stamp_id": "stamp:24e01309331a0f4362933a73f6f4aa2a043d6aaae7a5b7fab83ecbe602508309",
+      "source_path": "config/nsq/language_master_seed.json",
+      "bytes": 1262,
+      "blake3": "24e01309331a0f4362933a73f6f4aa2a043d6aaae7a5b7fab83ecbe602508309",
+      "sha256": "9265840e87dffd2ab35b3cf2528c7918246aae6d666b0bb280364b6fe81f2f70",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:9265840e87dffd2ab35b3cf2528c7918246aae6d666b0bb280364b6fe81f2f70"
+    },
+    {
+      "stamp_id": "stamp:ae9aecd64854d598428eabd375569ed61c7c4d50e93ab13ea18e2340695f02f8",
+      "source_path": "config/nsq/nu128_install_oversight.json",
+      "bytes": 902,
+      "blake3": "ae9aecd64854d598428eabd375569ed61c7c4d50e93ab13ea18e2340695f02f8",
+      "sha256": "acc8789d0811bc38827a1a701927950ff616a3fba795e35729f999de2ca10352",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:acc8789d0811bc38827a1a701927950ff616a3fba795e35729f999de2ca10352"
+    },
+    {
+      "stamp_id": "stamp:0fdafa04d6a1d42379dbb19026928ce3e746ba6dd62070698955af7360940cb6",
+      "source_path": "config/nsq/offline_package_db_seed.json",
+      "bytes": 701,
+      "blake3": "0fdafa04d6a1d42379dbb19026928ce3e746ba6dd62070698955af7360940cb6",
+      "sha256": "6c620e8aa6ce884e7f4a87e32dc0eff1366d2ab23efa475f821f1b93c35de5be",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:6c620e8aa6ce884e7f4a87e32dc0eff1366d2ab23efa475f821f1b93c35de5be"
+    },
+    {
+      "stamp_id": "stamp:9be1960a8f8e44af1f81c5c500271d6ef1be15fd21f41d3fcbacfb157e7ad076",
+      "source_path": "config/nsq/runtime_native/active_wiring_map.json",
+      "bytes": 2938,
+      "blake3": "9be1960a8f8e44af1f81c5c500271d6ef1be15fd21f41d3fcbacfb157e7ad076",
+      "sha256": "11a4dd109bcb693e62a724fc4401954094e4f811e5a3a57a8b0a94d910cb75b7",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:11a4dd109bcb693e62a724fc4401954094e4f811e5a3a57a8b0a94d910cb75b7"
+    },
+    {
+      "stamp_id": "stamp:5812529823dfd5e71bd9984ac504ffd941be9d39fa1de24a60269ff943e62fcb",
+      "source_path": "config/nsq/runtime_native/minimum_integration_matrix.json",
+      "bytes": 651,
+      "blake3": "5812529823dfd5e71bd9984ac504ffd941be9d39fa1de24a60269ff943e62fcb",
+      "sha256": "64d0ac1d212e9dc153dbb0a16a3eaabbca6e60afe56a52f3cc129785b5dbafb0",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:64d0ac1d212e9dc153dbb0a16a3eaabbca6e60afe56a52f3cc129785b5dbafb0"
+    },
+    {
+      "stamp_id": "stamp:90b0ee0dcae24d976da8cfbaa1fc64a7c9ef6305d93b54dceb43e549318e40b4",
+      "source_path": "config/nsq/runtime_native/package_db/multiport_package_db.json",
+      "bytes": 763,
+      "blake3": "90b0ee0dcae24d976da8cfbaa1fc64a7c9ef6305d93b54dceb43e549318e40b4",
+      "sha256": "5362af4e50eb04f32e785a2f6446439ab31c2e3c65caa80fe87b3b487cf710c8",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:5362af4e50eb04f32e785a2f6446439ab31c2e3c65caa80fe87b3b487cf710c8"
+    },
+    {
+      "stamp_id": "stamp:d047eda56d1eb95fe83f2062f048e02d10518625dc5277e31def31cb16f92c71",
+      "source_path": "config/nsq/runtime_watcher.json",
+      "bytes": 754,
+      "blake3": "d047eda56d1eb95fe83f2062f048e02d10518625dc5277e31def31cb16f92c71",
+      "sha256": "705f4d04c1f818732ce1b73cc73673bf214dacb9762e0f93c2de9867d02b35fb",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:705f4d04c1f818732ce1b73cc73673bf214dacb9762e0f93c2de9867d02b35fb"
+    },
+    {
+      "stamp_id": "stamp:032b77c563242950d285fe1e4bf3d86922d1aba141b4bac7c7d215f1bcf028f9",
+      "source_path": "config/nsq/sovereign_lifecycle.json",
+      "bytes": 892,
+      "blake3": "032b77c563242950d285fe1e4bf3d86922d1aba141b4bac7c7d215f1bcf028f9",
+      "sha256": "938c2c4dfd206ef7ef4a9940896dda6502a014fd043e6ceac7bc646fa2367457",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:938c2c4dfd206ef7ef4a9940896dda6502a014fd043e6ceac7bc646fa2367457"
+    },
+    {
+      "stamp_id": "stamp:d16abfd1bbff6f7b324197350ac43fb671e582b5984444b6e50c66662e0e7901",
+      "source_path": "config/nsq/stack_surface_registry.json",
+      "bytes": 5694,
+      "blake3": "d16abfd1bbff6f7b324197350ac43fb671e582b5984444b6e50c66662e0e7901",
+      "sha256": "9e261b7d72bca4af775e82ed532f3af8ba9cf7a0308fb70ea6b5884572966533",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:9e261b7d72bca4af775e82ed532f3af8ba9cf7a0308fb70ea6b5884572966533"
+    },
+    {
+      "stamp_id": "stamp:0bc10b6642dfe584cebb0b13545b39c512ac8d9a93b32c8b4eb4270997e9a672",
+      "source_path": "config/nsq/storage_architecture.json",
+      "bytes": 821,
+      "blake3": "0bc10b6642dfe584cebb0b13545b39c512ac8d9a93b32c8b4eb4270997e9a672",
+      "sha256": "a177bf82a6d5d1fe27a2000e472b07f5efc6db0c09447c3bf145eb90f3b91d83",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:a177bf82a6d5d1fe27a2000e472b07f5efc6db0c09447c3bf145eb90f3b91d83"
+    },
+    {
+      "stamp_id": "stamp:d2fffdae1edc74619977d475ed1ec766343f2a67c6ddf0a841d3088bc1838484",
+      "source_path": "config/nsq/tokenizer_stamp_matrix.json",
+      "bytes": 549,
+      "blake3": "d2fffdae1edc74619977d475ed1ec766343f2a67c6ddf0a841d3088bc1838484",
+      "sha256": "520032d53a768845d00abae4db62e8335eb71cf8e3531bf02e06f31b117d4e32",
+      "topology_class": "tokenizer_surface",
+      "integrity_witness": "sha256:520032d53a768845d00abae4db62e8335eb71cf8e3531bf02e06f31b117d4e32"
+    },
+    {
+      "stamp_id": "stamp:db61c180679e79050aecd063a5c733aad0c737ce4c644450a853622f99ae97a5",
+      "source_path": "config/nsq/vector_imprint.json",
+      "bytes": 396,
+      "blake3": "db61c180679e79050aecd063a5c733aad0c737ce4c644450a853622f99ae97a5",
+      "sha256": "c7c16beef555ee339b4ba1acb60f72b1fea57f39c3d4a5ce18aa96287fcf40ea",
+      "topology_class": "json_surface",
+      "integrity_witness": "sha256:c7c16beef555ee339b4ba1acb60f72b1fea57f39c3d4a5ce18aa96287fcf40ea"
+    }
+  ],
+  "section_encodings": [
+    {
+      "source_path": "config/nsq/android_runtime_oaboot.json",
+      "stamp_reference": "stamp:c72d08c363a31313aff1b0e7fa7c55f0bfb00dae54eee449e607cf2d7fb7e717",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:a033875cd96fdb2d52a82fbf6a6c85a3653c71cf07e0abe51f9103706a3c8d08"
+    },
+    {
+      "source_path": "config/nsq/benchmark_gate.json",
+      "stamp_reference": "stamp:f571bfb74db51e92d7e4f94a200b7c452ebd68832cc4c42cda1428b3838f02c5",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:06a59e40ff226e08ab0b9c8fe7ff1841bd78586f6a9579f49aea7dd11f6287b5"
+    },
+    {
+      "source_path": "config/nsq/boundary_surfaces.json",
+      "stamp_reference": "stamp:22f5e73c77bb4dd8003daed070c13e9039717ece221531abe423309ad9f4d58e",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:15408466c90da8321a27b73959854496629d3aa8d70184e9d80ed923e7b7bf38"
+    },
+    {
+      "source_path": "config/nsq/court_seed.json",
+      "stamp_reference": "stamp:0ab28c98bed93243ae3988feda1a647d92a9663564c581c20e0a3ecaabc7af90",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:9b4b0e9492f9c0ae076a9c66eaaf23847d9d40abdf294d62fe08e8aa16ecf736"
+    },
+    {
+      "source_path": "config/nsq/knowledge_graph.json",
+      "stamp_reference": "stamp:3ec9aa0f70dc679242bf1e715548667a1c7c9668e3fbccfc9d7aa0e6a8835a0a",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:298e82a57330b9626a5a42a54ef507c24a8d898f58576891ecea7122857d9c92"
+    },
+    {
+      "source_path": "config/nsq/language_master_seed.json",
+      "stamp_reference": "stamp:24e01309331a0f4362933a73f6f4aa2a043d6aaae7a5b7fab83ecbe602508309",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:9265840e87dffd2ab35b3cf2528c7918246aae6d666b0bb280364b6fe81f2f70"
+    },
+    {
+      "source_path": "config/nsq/nu128_install_oversight.json",
+      "stamp_reference": "stamp:ae9aecd64854d598428eabd375569ed61c7c4d50e93ab13ea18e2340695f02f8",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:acc8789d0811bc38827a1a701927950ff616a3fba795e35729f999de2ca10352"
+    },
+    {
+      "source_path": "config/nsq/offline_package_db_seed.json",
+      "stamp_reference": "stamp:0fdafa04d6a1d42379dbb19026928ce3e746ba6dd62070698955af7360940cb6",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:6c620e8aa6ce884e7f4a87e32dc0eff1366d2ab23efa475f821f1b93c35de5be"
+    },
+    {
+      "source_path": "config/nsq/runtime_native/active_wiring_map.json",
+      "stamp_reference": "stamp:9be1960a8f8e44af1f81c5c500271d6ef1be15fd21f41d3fcbacfb157e7ad076",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:11a4dd109bcb693e62a724fc4401954094e4f811e5a3a57a8b0a94d910cb75b7"
+    },
+    {
+      "source_path": "config/nsq/runtime_native/minimum_integration_matrix.json",
+      "stamp_reference": "stamp:5812529823dfd5e71bd9984ac504ffd941be9d39fa1de24a60269ff943e62fcb",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:64d0ac1d212e9dc153dbb0a16a3eaabbca6e60afe56a52f3cc129785b5dbafb0"
+    },
+    {
+      "source_path": "config/nsq/runtime_native/package_db/multiport_package_db.json",
+      "stamp_reference": "stamp:90b0ee0dcae24d976da8cfbaa1fc64a7c9ef6305d93b54dceb43e549318e40b4",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:5362af4e50eb04f32e785a2f6446439ab31c2e3c65caa80fe87b3b487cf710c8"
+    },
+    {
+      "source_path": "config/nsq/runtime_watcher.json",
+      "stamp_reference": "stamp:d047eda56d1eb95fe83f2062f048e02d10518625dc5277e31def31cb16f92c71",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:705f4d04c1f818732ce1b73cc73673bf214dacb9762e0f93c2de9867d02b35fb"
+    },
+    {
+      "source_path": "config/nsq/sovereign_lifecycle.json",
+      "stamp_reference": "stamp:032b77c563242950d285fe1e4bf3d86922d1aba141b4bac7c7d215f1bcf028f9",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:938c2c4dfd206ef7ef4a9940896dda6502a014fd043e6ceac7bc646fa2367457"
+    },
+    {
+      "source_path": "config/nsq/stack_surface_registry.json",
+      "stamp_reference": "stamp:d16abfd1bbff6f7b324197350ac43fb671e582b5984444b6e50c66662e0e7901",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:9e261b7d72bca4af775e82ed532f3af8ba9cf7a0308fb70ea6b5884572966533"
+    },
+    {
+      "source_path": "config/nsq/storage_architecture.json",
+      "stamp_reference": "stamp:0bc10b6642dfe584cebb0b13545b39c512ac8d9a93b32c8b4eb4270997e9a672",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:a177bf82a6d5d1fe27a2000e472b07f5efc6db0c09447c3bf145eb90f3b91d83"
+    },
+    {
+      "source_path": "config/nsq/tokenizer_stamp_matrix.json",
+      "stamp_reference": "stamp:d2fffdae1edc74619977d475ed1ec766343f2a67c6ddf0a841d3088bc1838484",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:520032d53a768845d00abae4db62e8335eb71cf8e3531bf02e06f31b117d4e32"
+    },
+    {
+      "source_path": "config/nsq/vector_imprint.json",
+      "stamp_reference": "stamp:db61c180679e79050aecd063a5c733aad0c737ce4c644450a853622f99ae97a5",
+      "local_delta": "delta:pending_exact_repeat_and_transform_law",
+      "exception_mask": "mask:pending",
+      "integrity_witness": "sha256:c7c16beef555ee339b4ba1acb60f72b1fea57f39c3d4a5ce18aa96287fcf40ea"
+    }
+  ]
+}

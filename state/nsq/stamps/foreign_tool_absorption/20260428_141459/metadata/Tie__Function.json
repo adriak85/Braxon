@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Tie::Function",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Tie/Function.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Tie__Function.source",
+  "source_sha256": "1aa42152151181361885c3b4f660871e9d0d2e7f4669e710611129a2c57068c5",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Tie__Function.translated.nsq",
+  "nsq_body_sha256": "ae6eee6b45a21ee4e65c703a3f82487027af9c1346ef5e9432bd68d145dca8df",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

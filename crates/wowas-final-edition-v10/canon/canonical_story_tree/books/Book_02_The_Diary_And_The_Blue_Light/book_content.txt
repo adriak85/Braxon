@@ -1,0 +1,1738 @@
+# Book_02_The_Diary_And_The_Blue_Light
+
+# Book_02_The_Diary_And_The_Blue_Light
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 2 — Blue Light = Answer
+
+## Working local time span
+days to several weeks
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_02_The_Diary_And_The_Blue_Light
+
+- B02_000 — Vault Of Whispers
+- B02_001 — The Rift Escalates
+- B02_001A — The Wounded Rabbit In The Market
+- B02_001B — The Healing That Does Not Hold
+- B02_001C — The First Sign Of Trouble At The Market
+- B02_002 — The Betrayal Executes
+- B02_003 — The Diamond Break Window
+- B02_004 — Mack Sacrifice
+- B02_005 — Xethrolund Portal Arrival
+- B02_006 — Stasis
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+## merged from generated candidates
+
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/final_audit/wowas_knowledge_split.txt
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/src/lib.rs:18:pub use crate::model::{Canon, CharacterDossier, Codex, PlotBeats, Timeline, WorldState};
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/codex_nodes.json:53:      "summary": "Pip and Xethrolund experience 400 years in-portal after escaping cursed Mack. The experience is described as a short span of perceived time due to hyper-awareness from the perfection of their union (explicitly not time dilation). Any 336-year figure is treated as draft variance unless canonized.",
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/hard_rake/wowas_knowledge_crossref.txt
+  candidate: crates/wowas-engine/src/lib.rs:18:pub use crate::model::{Canon, CharacterDossier, Codex, PlotBeats, Timeline, WorldState};
+  candidate: crates/wowas-engine/canon/data/codex_nodes.json:53:      "summary": "Pip and Xethrolund experience 400 years in-portal after escaping cursed Mack. The experience is described as a short span of perceived time due to hyper-awareness from the perfection of their union (explicitly not time dilation). Any 336-year figure is treated as draft variance unless canonized.",
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/wowas_beats_install/README.txt
+  candidate: - raw_beats_master.py: consolidated beat codex in single-line Python dict format
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:1://! Knowledge vault — manages the compressed book + reference library
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:12:    pub dewey_class: u16,
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:13:    pub axiom_tag:   u16,
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:18:/// The full knowledge vault
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:19:pub struct KnowledgeVault {
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:24:impl KnowledgeVault {
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:40:        self.books.iter().filter(move |b| b.dewey_class == class)
+  candidate: /data/data/com.termux/files/home/Braxon/crates/knowledge/src/vault.rs:44:        self.books.iter().filter(move |b| b.axiom_tag == tag)
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/hard_rake/knowledge_files.txt
+  candidate: crates/knowledge/src/vault.rs
+  candidate: crates/knowledge/src/vault.rs:1://! Knowledge vault — manages the compressed book + reference library
+  candidate: crates/knowledge/src/vault.rs:8:pub struct BookRecord {
+  candidate: crates/knowledge/src/vault.rs:12:    pub dewey_class: u16,
+  candidate: crates/knowledge/src/vault.rs:13:    pub axiom_tag:   u16,
+  candidate: crates/knowledge/src/vault.rs:18:/// The full knowledge vault
+  candidate: crates/knowledge/src/vault.rs:19:pub struct KnowledgeVault {
+  candidate: crates/knowledge/src/vault.rs:21:    books:  Vec<BookRecord>,
+  candidate: crates/knowledge/src/vault.rs:24:impl KnowledgeVault {
+  candidate: crates/knowledge/src/vault.rs:39:    pub fn by_dewey(&self, class: u16) -> impl Iterator<Item = &BookRecord> {
+  candidate: crates/knowledge/src/vault.rs:40:        self.books.iter().filter(move |b| b.dewey_class == class)
+  candidate: crates/knowledge/src/vault.rs:43:    pub fn by_axiom(&self, tag: u16) -> impl Iterator<Item = &BookRecord> {
+  candidate: crates/knowledge/src/vault.rs:44:        self.books.iter().filter(move |b| b.axiom_tag == tag)
+
+### 03_time_map.md
+
+# time map — Book_02_The_Diary_And_The_Blue_Light
+
+## B02_000 — Vault Of Whispers
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_001 — The Rift Escalates
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_001A — The Wounded Rabbit In The Market
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_001B — The Healing That Does Not Hold
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_001C — The First Sign Of Trouble At The Market
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_002 — The Betrayal Executes
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_003 — The Diamond Break Window
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_004 — Mack Sacrifice
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_005 — Xethrolund Portal Arrival
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B02_006 — Stasis
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# The Diary And The Blue Light Scene Spine
+
+<!-- merged from 06_scene_expansion_part1.md -->
+# Book 2 Scene Expansion — Part 1
+# Covers Beats 01–12
+# Book: The Diary and the Blue Light
+
+## B02.01 — Sanctuary Aftershock
+target_scenes: 10
+
+S001 The-Morning-After-Book-One-Does-Not-Feel-Simple — The oasis carries the emotional aftershock of rescue rather than ordinary peace.
+S002 Pip-Wakes-Already-Changed — He feels the bond, the prophecy, and the widened world before the day fully begins.
+S003 Rylos Vayne Johnson-Is-Still-Here — The reality of continued presence lands as miracle and problem at once.
+S004 Mack-Reads-the-Household-Shift — The guardian quietly measures how deeply the rescue altered the sanctuary.
+S005 Domestic-Rhythm-Tries-to-Reassert-Itself — Meals, rest, and simple motion return, but under changed law.
+S006 Pain-and-Belonging-Coexist — Rylos Vayne Johnson's injury remains real even as his place in the oasis stabilizes.
+S007 Pip-Cannot-Go-Back-to-Before — His inner shape rejects any illusion of return.
+S008 The-Blue-Thread-Hums-Beneath-Calm — Prophetic current remains active under ordinary daylight.
+S009 Sanctuary-Is-No-Longer-Hiding-the-Plot — The house itself now feels like part of the saga's active machinery.
+S010 Book-Two-Opens-on-Changed-Home-Law — The new book starts with home transformed, not restored.
+
+## B02.02 — The Diary Enters the Orbit
+target_scenes: 10
+
+S011 The-Object-Is-Found-or-Reintroduced — A diary or diary-equivalent enters the foreground as more than a keepsake.
+S012 Pip-Feels-Drawn-Before-He-Understands-Why — The pull toward it is emotional, symbolic, and unsettling.
+S013 Mack-Recognizes-Its-Weight — The guardian knows the object carries consequence beyond paper.
+S014 Rylos Vayne Johnson-Watches-Pips-Reaction-Closely — He reads the diary first through Pip rather than through its contents.
+S015 The-Diary-Is-Not-Neutral-Memory — It behaves like a living thread into another structure of truth.
+S016 Home-Grows-Stranger-Without-Growing-Less-Loving — Sanctuary can hold mystery without losing safety.
+S017 Pip-Hesitates-to-Open-What-Wants-Him — Desire and fear meet at the threshold of reading.
+S018 The-Diary-Becomes-a-Second-Blue-Light — Its emotional function rhymes with the earlier prophecy-currents.
+S019 Rylos Vayne Johnson-Feels-the-Shift-in-the-Room — Even unopened, the object changes the atmosphere.
+S020 The-Beat-Ends-with-Access-Delayed-But-Inevitable — The reading is postponed only enough to increase weight.
+
+## B02.03 — Reading Changes the Air
+target_scenes: 10
+
+S021 The-First-Lines-Are-Read — The diary finally opens.
+S022 The-Voice-Inside-Is-Too-Close — The text feels intimate, destabilizing, or fate-adjacent rather than archival.
+S023 Pip-Feels-Seen-by-Words-Not-Meant-for-Now — The reading strikes him personally.
+S024 Mack-Reads-for-Pattern — The guardian tracks implication as much as literal content.
+S025 Rylos Vayne Johnson-Reads-the-Readers — He studies what the diary does to others while trying to place himself inside the scene.
+S026 The-Room-Tightens-Around-the-Text — Reading becomes event, not pastime.
+S027 The-Diary-Links-Past-and-Future — The words begin bridging memory and destiny.
+S028 Pip-Feels-Called-Deeper-Into-the-Thread — The object intensifies rather than explains.
+S029 Someone-Withholds-Full-Interpretation — Not all meaning is spoken aloud yet.
+S030 The-Beat-Ends-with-Reading-As-Activation — The diary has now changed the book's trajectory.
+
+## B02.04 — Blue Light in Daylight
+target_scenes: 10
+
+S031 The-Blue-Light-Returns-in-a-New-Mode — The symbolic current is now tied to text, thought, and waking life.
+S032 Pip-Cannot-Treat-the-Thread-as-Night-Only-Any-More — The future has entered daylight.
+S033 Mack-Insists-on-Holding-Wonder-and-Discipline-Together — The guardian keeps meaning from becoming chaos.
+S034 Rylos Vayne Johnson-Hears-Enough-to-Be-Drawn-Further-In — His place in the thread deepens.
+S035 Sanctuary-Holds-a-Strange-Conversation-as-Normal — The oasis expands what counts as daily life.
+S036 Fear-Is-No-Longer-the-Only-Lens — Curiosity and calling grow beside dread.
+S037 The-Diary-and-the-Blue-Light-Start-Rhyming — The book's two title-forces lock together.
+S038 Pip-Realizes-the-Thread-Wants-Language — Silence is no longer enough.
+S039 What-Is-Read-Begins-Changing-Choice — Interpretation starts affecting practical behavior.
+S040 The-Beat-Ends-with-Daylight-Prophecy-Legible — The supernatural current has entered open life.
+
+## B02.05 — Rylos Vayne Johnson and the Written World
+target_scenes: 10
+
+S041 Rylos Vayne Johnson-Engages-the-Diary-Indirectly-or-Directly — He moves from outsider to participant in the reading orbit.
+S042 His-Relationship-to-Written-Truth-Is-Revealed — The diary touches his history, pride, or wounds in a specific way.
+S043 Pip-Wants-the-Text-to-Make-Sense-of-Him — Protective love shapes how he wants Rylos Vayne Johnson held by meaning.
+S044 Mack-Refuses-to-Flatten-Him-into-Symbol — The guardian keeps the boy from becoming only a sign.
+S045 The-Diary-Creates-New-Intimacy — Shared reading alters the bond between Pip and Rylos Vayne Johnson.
+S046 Humor-Breaks-the-Tension-at-the-Right-Moment — Wit keeps revelation human.
+S047 The-Text-Pulls-Rylos Vayne Johnson-Closer-to-Future-Weight — He becomes harder to imagine as outside the prophecy.
+S048 Pip-Feels-the-Risk-of-Knowing-More — Deeper understanding now threatens innocence and calm.
+S049 The-Diary-Reads-Back-At-Them — The scene implies that reading is mutual in a symbolic sense.
+S050 The-Beat-Ends-with-Rylos Vayne Johnson-Entangled-in-Written-Fate — He is now inside the textual architecture too.
+
+## B02.06 — The Oasis Tries to Stay Ordinary
+target_scenes: 10
+
+S051 Meals-and-Care-Continue-Under-New-Weight — Domestic life persists despite rising symbolic pressure.
+S052 Mack-Protects-Ordinary-Rhythm-on-Purpose — The guardian knows routine is part of survival.
+S053 Pip-Fails-and-Succeeds-at-Acting-Normal — He keeps slipping between daily care and future dread.
+S054 Rylos Vayne Johnson-Learns-the-Household-Through-Small-Acts — Belonging grows through detail.
+S055 The-Diary-Waits-Even-When-Closed — Its influence remains active offstage.
+S056 Sanctuary-Feels-More-Precious-Because-It-Is-Temporary — Home's value sharpens under threat.
+S057 Pairhood-Deepens-in-Unremarkable-Minutes — Quiet scenes continue building structure.
+S058 The-Outside-World-Does-Not-Disappear — Distance pressure remains present.
+S059 Ordinary-Life-Becomes-Defensive-Magic — Routine itself becomes a form of warding.
+S060 The-Beat-Ends-with-Domesticity-as-Strategy — The house stays human on purpose.
+
+## B02.07 — The House Holds Secrets
+target_scenes: 10
+
+S061 Hidden-Layers-of-the-Oasis-Begin-to-Show — The sanctuary reveals deeper architecture.
+S062 Mack-Knows-More-Than-He-Has-Said — Authority thickens.
+S063 Pip-Starts-Seeing-Home-as-Made-Structure-Not-Accident — Sanctuary has design and law.
+S064 Rylos Vayne Johnson-Reads-Protection-and-Concealment-Together — He recognizes both kindness and guardedness.
+S065 The-Diary-Points-Toward-What-the-House-Is-Hiding — Text and place begin answering each other.
+S066 Some-Room-Object-or-Memory-Surface-Responds — The environment itself joins the mystery.
+S067 Trust-Becomes-the-Cost-of-Deeper-Access — Knowledge now depends on relationship.
+S068 Pip-Wants-In-But-Fears-What-It-Changes — Curiosity intensifies.
+S069 Rylos Vayne Johnson-Proves-He-Will-Not-Be-Easily-Excluded — His role in the core plot hardens.
+S070 The-Beat-Ends-with-the-House-As-Active-Memory — Home is now part archive, part guardian, part test.
+
+## B02.08 — The Wound and the Word
+target_scenes: 10
+
+S071 Rylos-Physical-Recovery-and-Diary-Reading-Start-Rhyming — Healing body and growing knowledge move together.
+S072 Pip-Learns-That-Care-Is-Interpretation — How he tends Rylos Vayne Johnson changes how he reads the book around them.
+S073 Mack-Binds-Healing-to-Discipline — Recovery remains practical, not sentimental.
+S074 The-Diary-Opens-an-Old-Scar-of-Some-Kind — Written truth touches pain that was not purely physical.
+S075 Rylos Vayne Johnson-Chooses-Not-to-Hide-One-Part-of-Himself — A controlled disclosure deepens trust.
+S076 Pip-Receives-Truth-Without-Trying-to-Fix-It-Too-Fast — Growth shows in restraint.
+S077 Home-Holds-a-Scene-of-Care-and-Revelation-Together — This fusion becomes central to Book 2's feel.
+S078 The-Wound-Is-No-Longer-Only-Medical — It becomes narrative, relational, and prophetic.
+S079 The-Word-Cannot-Be-Unread — The text changes future motion irreversibly.
+S080 The-Beat-Ends-with-Recovery-and-Meaning-Braided — Body and destiny are now moving together.
+
+## B02.09 — The World Beyond the Pages
+target_scenes: 10
+
+S081 Reading-Spills-Outward — The diary starts changing what matters outside itself.
+S082 Pip-Connects-Text-to-Larger-Conflict — He begins to see world-shape in what he reads.
+S083 Mack-Confirms-That-Books-Can-Be-Maps — The guardian legitimizes practical consequence.
+S084 Rylos Vayne Johnson-Feels-the-Pages-Reaching-Toward-His-Past — Personal and global arcs begin colliding.
+S085 Sanctuary-No-Longer-Feels-Isolated-from-History — The house sits inside broader events.
+S086 The-Diary-Demands-a-Response-Not-Just-A-Reaction — Passive reading is no longer enough.
+S087 Pip-Struggles-with-Scale-Again — One object opens too many doors at once.
+S088 The-Pair-Bond-Starts-Shaping-How-the-Text-Is-Held — Relationality becomes interpretive method.
+S089 The-Outside-Pressure-Rises-a-Notch — News, omen, or sense data confirms motion beyond the house.
+S090 The-Beat-Ends-with-Text-and-World-Locked — Reading is now structurally part of the plot.
+
+## B02.10 — What Mack Does Not Yet Say
+target_scenes: 10
+
+S091 The-Guardian-Withholds-for-a-Reason — Mack clearly knows more than he is speaking.
+S092 Pip-Feels-the-Limit-and-Resents-It-Slightly — Growth does not remove frustration.
+S093 Rylos Vayne Johnson-Understands-Withholding-Better-Than-Pip — His history makes him more fluent in guarded truths.
+S094 The-House-Feels-Fuller-of-Unsounded-Law — Hidden knowledge now has shape.
+S095 Mack-Tests-Whether-They-Can-Carry-More — Silence functions as discernment, not evasion.
+S096 Pip-Begins-Learning-That-Truth-Has-Timing — Not every revelation is mercy when badly timed.
+S097 Rylos Vayne Johnson-Proves-He-Can-Stand-Incomplete-Knowing — Maturity grows through tension.
+S098 The-Diary-Holds-Its-Own-Remaining-Reserve — Even the text has not yielded everything.
+S099 The-Scene-Ends-in-Love-Under-Restraint — Mack's withholding is understood as protective, even if painful.
+S100 The-Beat-Ends-with-Pressure-Banked-Not-Released — Book 2 stores future revelations deliberately.
+
+## B02.11 — The Pair Reads Forward
+target_scenes: 10
+
+S101 Pip-and-Rylos Vayne Johnson-Begin-Holding-Meaning-Together — Interpretation becomes shared labor.
+S102 Their-Differences-Make-the-Reading-Better — Personality contrast sharpens understanding.
+S103 Humor-and-Tenderness-Enter-Interpretive-Space — Intimacy alters cognition.
+S104 Mack-Watches-the-Bond-Mature-Through-Thought — The guardian sees their relation stabilizing into method.
+S105 The-Diary-Yields-a-Thread-About-What-Comes-Next — Some future-facing clue emerges.
+S106 Pip-Feels-Fear-and-Readiness-at-Once — He is growing into burdens that once would have crushed him.
+S107 Rylos Vayne Johnson-Claims-Place-in-the-Future-Without-Grandstanding — Quiet commitment matters.
+S108 The-House-Becomes-a-School-of-Fate — Sanctuary is now teaching them how to move.
+S109 Reading-Turns-into-Planning — Meaning begins affecting concrete next steps.
+S110 The-Beat-Ends-with-the-Pair-Facing-Forward-Together — Book 2 locks shared interpretive motion.
+
+## B02.12 — Book Two Finds Its First Deeper Shape
+target_scenes: 10
+
+S111 The-Diary-the-Blue-Light-and-the-Oasis-Form-a-Triad — Book 2's governing forces become legible.
+S112 Pip-Recognizes-He-Is-No-Longer-Only-Reacting — He has begun participating in the shape of what comes.
+S113 Rylos Vayne Johnson-Is-No-Longer-Merely-Rescued — He is now active thread, witness, and partner in meaning.
+S114 Mack-Stands-at-the-Center-as-Keeper-of-Timed-Truth — The guardian's role clarifies further.
+S115 Home-Text-and-Future-Are-Now-One-System — The book's world tightens structurally.
+S116 Domestic-Life-and-Cosmic-Weight-Are-Officially-Braided — This becomes core to the series texture.
+S117 The-Pair-Bond-Is-Shown-to-Be-Load-Bearing — It is not decoration; it helps carry fate.
+S118 The-Outside-World-Remains-Ready-to-Break-In — Calm is still conditional.
+S119 Book-Two-Locks-Its-First-True-Orbit — The story now knows how this volume moves.
+S120 The-Beat-Ends-with-Deeper-Descent-Promised — The next phase is now loaded.
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 2 Scene Expansion — Part 1
+# Covers Beats 01–12
+# Book: The Diary and the Blue Light
+
+## B02.01 — Sanctuary Aftershock
+target_scenes: 10
+
+S001 The-Morning-After-Book-One-Does-Not-Feel-Simple — The oasis carries the emotional aftershock of rescue rather than ordinary peace.
+S002 Pip-Wakes-Already-Changed — He feels the bond, the prophecy, and the widened world before the day fully begins.
+S003 Rylos-Is-Still-Here — The reality of continued presence lands as miracle and problem at once.
+S004 Mack-Reads-the-Household-Shift — The guardian quietly measures how deeply the rescue altered the sanctuary.
+S005 Domestic-Rhythm-Tries-to-Reassert-Itself — Meals, rest, and simple motion return, but under changed law.
+S006 Pain-and-Belonging-Coexist — Rylos's injury remains real even as his place in the oasis stabilizes.
+S007 Pip-Cannot-Go-Back-to-Before — His inner shape rejects any illusion of return.
+S008 The-Blue-Thread-Hums-Beneath-Calm — Prophetic current remains active under ordinary daylight.
+S009 Sanctuary-Is-No-Longer-Hiding-the-Plot — The house itself now feels like part of the saga's active machinery.
+S010 Book-Two-Opens-on-Changed-Home-Law — The new book starts with home transformed, not restored.
+
+## B02.02 — The Diary Enters the Orbit
+target_scenes: 10
+
+S011 The-Object-Is-Found-or-Reintroduced — A diary or diary-equivalent enters the foreground as more than a keepsake.
+S012 Pip-Feels-Drawn-Before-He-Understands-Why — The pull toward it is emotional, symbolic, and unsettling.
+S013 Mack-Recognizes-Its-Weight — The guardian knows the object carries consequence beyond paper.
+S014 Rylos-Watches-Pips-Reaction-Closely — He reads the diary first through Pip rather than through its contents.
+S015 The-Diary-Is-Not-Neutral-Memory — It behaves like a living thread into another structure of truth.
+S016 Home-Grows-Stranger-Without-Growing-Less-Loving — Sanctuary can hold mystery without losing safety.
+S017 Pip-Hesitates-to-Open-What-Wants-Him — Desire and fear meet at the threshold of reading.
+S018 The-Diary-Becomes-a-Second-Blue-Light — Its emotional function rhymes with the earlier prophecy-currents.
+S019 Rylos-Feels-the-Shift-in-the-Room — Even unopened, the object changes the atmosphere.
+S020 The-Beat-Ends-with-Access-Delayed-But-Inevitable — The reading is postponed only enough to increase weight.
+
+## B02.03 — Reading Changes the Air
+target_scenes: 10
+
+S021 The-First-Lines-Are-Read — The diary finally opens.
+S022 The-Voice-Inside-Is-Too-Close — The text feels intimate, destabilizing, or fate-adjacent rather than archival.
+S023 Pip-Feels-Seen-by-Words-Not-Meant-for-Now — The reading strikes him personally.
+S024 Mack-Reads-for-Pattern — The guardian tracks implication as much as literal content.
+S025 Rylos-Reads-the-Readers — He studies what the diary does to others while trying to place himself inside the scene.
+S026 The-Room-Tightens-Around-the-Text — Reading becomes event, not pastime.
+S027 The-Diary-Links-Past-and-Future — The words begin bridging memory and destiny.
+S028 Pip-Feels-Called-Deeper-Into-the-Thread — The object intensifies rather than explains.
+S029 Someone-Withholds-Full-Interpretation — Not all meaning is spoken aloud yet.
+S030 The-Beat-Ends-with-Reading-As-Activation — The diary has now changed the book's trajectory.
+
+## B02.04 — Blue Light in Daylight
+target_scenes: 10
+
+S031 The-Blue-Light-Returns-in-a-New-Mode — The symbolic current is now tied to text, thought, and waking life.
+S032 Pip-Cannot-Treat-the-Thread-as-Night-Only-Any-More — The future has entered daylight.
+S033 Mack-Insists-on-Holding-Wonder-and-Discipline-Together — The guardian keeps meaning from becoming chaos.
+S034 Rylos-Hears-Enough-to-Be-Drawn-Further-In — His place in the thread deepens.
+S035 Sanctuary-Holds-a-Strange-Conversation-as-Normal — The oasis expands what counts as daily life.
+S036 Fear-Is-No-Longer-the-Only-Lens — Curiosity and calling grow beside dread.
+S037 The-Diary-and-the-Blue-Light-Start-Rhyming — The book's two title-forces lock together.
+S038 Pip-Realizes-the-Thread-Wants-Language — Silence is no longer enough.
+S039 What-Is-Read-Begins-Changing-Choice — Interpretation starts affecting practical behavior.
+S040 The-Beat-Ends-with-Daylight-Prophecy-Legible — The supernatural current has entered open life.
+
+## B02.05 — Rylos and the Written World
+target_scenes: 10
+
+S041 Rylos-Engages-the-Diary-Indirectly-or-Directly — He moves from outsider to participant in the reading orbit.
+S042 His-Relationship-to-Written-Truth-Is-Revealed — The diary touches his history, pride, or wounds in a specific way.
+S043 Pip-Wants-the-Text-to-Make-Sense-of-Him — Protective love shapes how he wants Rylos held by meaning.
+S044 Mack-Refuses-to-Flatten-Him-into-Symbol — The guardian keeps the boy from becoming only a sign.
+S045 The-Diary-Creates-New-Intimacy — Shared reading alters the bond between Pip and Rylos.
+S046 Humor-Breaks-the-Tension-at-the-Right-Moment — Wit keeps revelation human.
+S047 The-Text-Pulls-Rylos-Closer-to-Future-Weight — He becomes harder to imagine as outside the prophecy.
+S048 Pip-Feels-the-Risk-of-Knowing-More — Deeper understanding now threatens innocence and calm.
+S049 The-Diary-Reads-Back-At-Them — The scene implies that reading is mutual in a symbolic sense.
+S050 The-Beat-Ends-with-Rylos-Entangled-in-Written-Fate — He is now inside the textual architecture too.
+
+## B02.06 — The Oasis Tries to Stay Ordinary
+target_scenes: 10
+
+S051 Meals-and-Care-Continue-Under-New-Weight — Domestic life persists despite rising symbolic pressure.
+S052 Mack-Protects-Ordinary-Rhythm-on-Purpose — The guardian knows routine is part of survival.
+S053 Pip-Fails-and-Succeeds-at-Acting-Normal — He keeps slipping between daily care and future dread.
+S054 Rylos-Learns-the-Household-Through-Small-Acts — Belonging grows through detail.
+S055 The-Diary-Waits-Even-When-Closed — Its influence remains active offstage.
+S056 Sanctuary-Feels-More-Precious-Because-It-Is-Temporary — Home's value sharpens under threat.
+S057 Pairhood-Deepens-in-Unremarkable-Minutes — Quiet scenes continue building structure.
+S058 The-Outside-World-Does-Not-Disappear — Distance pressure remains present.
+S059 Ordinary-Life-Becomes-Defensive-Magic — Routine itself becomes a form of warding.
+S060 The-Beat-Ends-with-Domesticity-as-Strategy — The house stays human on purpose.
+
+## B02.07 — The House Holds Secrets
+target_scenes: 10
+
+S061 Hidden-Layers-of-the-Oasis-Begin-to-Show — The sanctuary reveals deeper architecture.
+S062 Mack-Knows-More-Than-He-Has-Said — Authority thickens.
+S063 Pip-Starts-Seeing-Home-as-Made-Structure-Not-Accident — Sanctuary has design and law.
+S064 Rylos-Reads-Protection-and-Concealment-Together — He recognizes both kindness and guardedness.
+S065 The-Diary-Points-Toward-What-the-House-Is-Hiding — Text and place begin answering each other.
+S066 Some-Room-Object-or-Memory-Surface-Responds — The environment itself joins the mystery.
+S067 Trust-Becomes-the-Cost-of-Deeper-Access — Knowledge now depends on relationship.
+S068 Pip-Wants-In-But-Fears-What-It-Changes — Curiosity intensifies.
+S069 Rylos-Proves-He-Will-Not-Be-Easily-Excluded — His role in the core plot hardens.
+S070 The-Beat-Ends-with-the-House-As-Active-Memory — Home is now part archive, part guardian, part test.
+
+## B02.08 — The Wound and the Word
+target_scenes: 10
+
+S071 Rylos-Physical-Recovery-and-Diary-Reading-Start-Rhyming — Healing body and growing knowledge move together.
+S072 Pip-Learns-That-Care-Is-Interpretation — How he tends Rylos changes how he reads the book around them.
+S073 Mack-Binds-Healing-to-Discipline — Recovery remains practical, not sentimental.
+S074 The-Diary-Opens-an-Old-Scar-of-Some-Kind — Written truth touches pain that was not purely physical.
+S075 Rylos-Chooses-Not-to-Hide-One-Part-of-Himself — A controlled disclosure deepens trust.
+S076 Pip-Receives-Truth-Without-Trying-to-Fix-It-Too-Fast — Growth shows in restraint.
+S077 Home-Holds-a-Scene-of-Care-and-Revelation-Together — This fusion becomes central to Book 2's feel.
+S078 The-Wound-Is-No-Longer-Only-Medical — It becomes narrative, relational, and prophetic.
+S079 The-Word-Cannot-Be-Unread — The text changes future motion irreversibly.
+S080 The-Beat-Ends-with-Recovery-and-Meaning-Braided — Body and destiny are now moving together.
+
+## B02.09 — The World Beyond the Pages
+target_scenes: 10
+
+S081 Reading-Spills-Outward — The diary starts changing what matters outside itself.
+S082 Pip-Connects-Text-to-Larger-Conflict — He begins to see world-shape in what he reads.
+S083 Mack-Confirms-That-Books-Can-Be-Maps — The guardian legitimizes practical consequence.
+S084 Rylos-Feels-the-Pages-Reaching-Toward-His-Past — Personal and global arcs begin colliding.
+S085 Sanctuary-No-Longer-Feels-Isolated-from-History — The house sits inside broader events.
+S086 The-Diary-Demands-a-Response-Not-Just-A-Reaction — Passive reading is no longer enough.
+S087 Pip-Struggles-with-Scale-Again — One object opens too many doors at once.
+S088 The-Pair-Bond-Starts-Shaping-How-the-Text-Is-Held — Relationality becomes interpretive method.
+S089 The-Outside-Pressure-Rises-a-Notch — News, omen, or sense data confirms motion beyond the house.
+S090 The-Beat-Ends-with-Text-and-World-Locked — Reading is now structurally part of the plot.
+
+## B02.10 — What Mack Does Not Yet Say
+target_scenes: 10
+
+S091 The-Guardian-Withholds-for-a-Reason — Mack clearly knows more than he is speaking.
+S092 Pip-Feels-the-Limit-and-Resents-It-Slightly — Growth does not remove frustration.
+S093 Rylos-Understands-Withholding-Better-Than-Pip — His history makes him more fluent in guarded truths.
+S094 The-House-Feels-Fuller-of-Unsounded-Law — Hidden knowledge now has shape.
+S095 Mack-Tests-Whether-They-Can-Carry-More — Silence functions as discernment, not evasion.
+S096 Pip-Begins-Learning-That-Truth-Has-Timing — Not every revelation is mercy when badly timed.
+S097 Rylos-Proves-He-Can-Stand-Incomplete-Knowing — Maturity grows through tension.
+S098 The-Diary-Holds-Its-Own-Remaining-Reserve — Even the text has not yielded everything.
+S099 The-Scene-Ends-in-Love-Under-Restraint — Mack's withholding is understood as protective, even if painful.
+S100 The-Beat-Ends-with-Pressure-Banked-Not-Released — Book 2 stores future revelations deliberately.
+
+## B02.11 — The Pair Reads Forward
+target_scenes: 10
+
+S101 Pip-and-Rylos-Begin-Holding-Meaning-Together — Interpretation becomes shared labor.
+S102 Their-Differences-Make-the-Reading-Better — Personality contrast sharpens understanding.
+S103 Humor-and-Tenderness-Enter-Interpretive-Space — Intimacy alters cognition.
+S104 Mack-Watches-the-Bond-Mature-Through-Thought — The guardian sees their relation stabilizing into method.
+S105 The-Diary-Yields-a-Thread-About-What-Comes-Next — Some future-facing clue emerges.
+S106 Pip-Feels-Fear-and-Readiness-at-Once — He is growing into burdens that once would have crushed him.
+S107 Rylos-Claims-Place-in-the-Future-Without-Grandstanding — Quiet commitment matters.
+S108 The-House-Becomes-a-School-of-Fate — Sanctuary is now teaching them how to move.
+S109 Reading-Turns-into-Planning — Meaning begins affecting concrete next steps.
+S110 The-Beat-Ends-with-the-Pair-Facing-Forward-Together — Book 2 locks shared interpretive motion.
+
+## B02.12 — Book Two Finds Its First Deeper Shape
+target_scenes: 10
+
+S111 The-Diary-the-Blue-Light-and-the-Oasis-Form-a-Triad — Book 2's governing forces become legible.
+S112 Pip-Recognizes-He-Is-No-Longer-Only-Reacting — He has begun participating in the shape of what comes.
+S113 Rylos-Is-No-Longer-Merely-Rescued — He is now active thread, witness, and partner in meaning.
+S114 Mack-Stands-at-the-Center-as-Keeper-of-Timed-Truth — The guardian's role clarifies further.
+S115 Home-Text-and-Future-Are-Now-One-System — The book's world tightens structurally.
+S116 Domestic-Life-and-Cosmic-Weight-Are-Officially-Braided — This becomes core to the series texture.
+S117 The-Pair-Bond-Is-Shown-to-Be-Load-Bearing — It is not decoration; it helps carry fate.
+S118 The-Outside-World-Remains-Ready-to-Break-In — Calm is still conditional.
+S119 Book-Two-Locks-Its-First-True-Orbit — The story now knows how this volume moves.
+S120 The-Beat-Ends-with-Deeper-Descent-Promised — The next phase is now loaded.
+
+## Placed Beats
+
+### 0001__B02_01__The_Morning_After_Book_One_Does_Not_Feel_Simple.md
+
+# The-Morning-After-Book-One-Does-Not-Feel-Simple
+
+scene_id: S001
+beat: B02.01
+book: The Diary and the Blue Light
+
+The-Morning-After-Book-One-Does-Not-Feel-Simple — The oasis carries the emotional aftershock of rescue rather than ordinary peace.
+
+### 0002__B02_01__Pip_Wakes_Already_Changed.md
+
+# Pip-Wakes-Already-Changed
+
+scene_id: S002
+beat: B02.01
+book: The Diary and the Blue Light
+
+Pip-Wakes-Already-Changed — He feels the bond, the prophecy, and the widened world before the day fully begins.
+
+### 0003__B02_01__Rylos_Vayne_Johnson_Is_Still_Here.md
+
+# Rylos Vayne Johnson-Is-Still-Here
+
+scene_id: S003
+beat: B02.01
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Is-Still-Here — The reality of continued presence lands as miracle and problem at once.
+
+### 0004__B02_01__Mack_Reads_the_Household_Shift.md
+
+# Mack-Reads-the-Household-Shift
+
+scene_id: S004
+beat: B02.01
+book: The Diary and the Blue Light
+
+Mack-Reads-the-Household-Shift — The guardian quietly measures how deeply the rescue altered the sanctuary.
+
+### 0005__B02_01__Domestic_Rhythm_Tries_to_Reassert_Itself.md
+
+# Domestic-Rhythm-Tries-to-Reassert-Itself
+
+scene_id: S005
+beat: B02.01
+book: The Diary and the Blue Light
+
+Domestic-Rhythm-Tries-to-Reassert-Itself — Meals, rest, and simple motion return, but under changed law.
+
+### 0006__B02_01__Pain_and_Belonging_Coexist.md
+
+# Pain-and-Belonging-Coexist
+
+scene_id: S006
+beat: B02.01
+book: The Diary and the Blue Light
+
+Pain-and-Belonging-Coexist — Rylos Vayne Johnson's injury remains real even as his place in the oasis stabilizes.
+
+### 0007__B02_01__Pip_Cannot_Go_Back_to_Before.md
+
+# Pip-Cannot-Go-Back-to-Before
+
+scene_id: S007
+beat: B02.01
+book: The Diary and the Blue Light
+
+Pip-Cannot-Go-Back-to-Before — His inner shape rejects any illusion of return.
+
+### 0008__B02_01__The_Blue_Thread_Hums_Beneath_Calm.md
+
+# The-Blue-Thread-Hums-Beneath-Calm
+
+scene_id: S008
+beat: B02.01
+book: The Diary and the Blue Light
+
+The-Blue-Thread-Hums-Beneath-Calm — Prophetic current remains active under ordinary daylight.
+
+### 0009__B02_01__Sanctuary_Is_No_Longer_Hiding_the_Plot.md
+
+# Sanctuary-Is-No-Longer-Hiding-the-Plot
+
+scene_id: S009
+beat: B02.01
+book: The Diary and the Blue Light
+
+Sanctuary-Is-No-Longer-Hiding-the-Plot — The house itself now feels like part of the saga's active machinery.
+
+### 0010__B02_01__Book_Two_Opens_on_Changed_Home_Law.md
+
+# Book-Two-Opens-on-Changed-Home-Law
+
+scene_id: S010
+beat: B02.01
+book: The Diary and the Blue Light
+
+Book-Two-Opens-on-Changed-Home-Law — The new book starts with home transformed, not restored.
+
+### 0011__B02_02__The_Object_Is_Found_or_Reintroduced.md
+
+# The-Object-Is-Found-or-Reintroduced
+
+scene_id: S011
+beat: B02.02
+book: The Diary and the Blue Light
+
+The-Object-Is-Found-or-Reintroduced — A diary or diary-equivalent enters the foreground as more than a keepsake.
+
+### 0012__B02_02__Pip_Feels_Drawn_Before_He_Understands_Why.md
+
+# Pip-Feels-Drawn-Before-He-Understands-Why
+
+scene_id: S012
+beat: B02.02
+book: The Diary and the Blue Light
+
+Pip-Feels-Drawn-Before-He-Understands-Why — The pull toward it is emotional, symbolic, and unsettling.
+
+### 0013__B02_02__Mack_Recognizes_Its_Weight.md
+
+# Mack-Recognizes-Its-Weight
+
+scene_id: S013
+beat: B02.02
+book: The Diary and the Blue Light
+
+Mack-Recognizes-Its-Weight — The guardian knows the object carries consequence beyond paper.
+
+### 0014__B02_02__Rylos_Vayne_Johnson_Watches_Pips_Reaction_Closely.md
+
+# Rylos Vayne Johnson-Watches-Pips-Reaction-Closely
+
+scene_id: S014
+beat: B02.02
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Watches-Pips-Reaction-Closely — He reads the diary first through Pip rather than through its contents.
+
+### 0015__B02_02__The_Diary_Is_Not_Neutral_Memory.md
+
+# The-Diary-Is-Not-Neutral-Memory
+
+scene_id: S015
+beat: B02.02
+book: The Diary and the Blue Light
+
+The-Diary-Is-Not-Neutral-Memory — It behaves like a living thread into another structure of truth.
+
+### 0016__B02_02__Home_Grows_Stranger_Without_Growing_Less_Loving.md
+
+# Home-Grows-Stranger-Without-Growing-Less-Loving
+
+scene_id: S016
+beat: B02.02
+book: The Diary and the Blue Light
+
+Home-Grows-Stranger-Without-Growing-Less-Loving — Sanctuary can hold mystery without losing safety.
+
+### 0017__B02_02__Pip_Hesitates_to_Open_What_Wants_Him.md
+
+# Pip-Hesitates-to-Open-What-Wants-Him
+
+scene_id: S017
+beat: B02.02
+book: The Diary and the Blue Light
+
+Pip-Hesitates-to-Open-What-Wants-Him — Desire and fear meet at the threshold of reading.
+
+### 0018__B02_02__The_Diary_Becomes_a_Second_Blue_Light.md
+
+# The-Diary-Becomes-a-Second-Blue-Light
+
+scene_id: S018
+beat: B02.02
+book: The Diary and the Blue Light
+
+The-Diary-Becomes-a-Second-Blue-Light — Its emotional function rhymes with the earlier prophecy-currents.
+
+### 0019__B02_02__Rylos_Vayne_Johnson_Feels_the_Shift_in_the_Room.md
+
+# Rylos Vayne Johnson-Feels-the-Shift-in-the-Room
+
+scene_id: S019
+beat: B02.02
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Feels-the-Shift-in-the-Room — Even unopened, the object changes the atmosphere.
+
+### 0020__B02_02__The_Beat_Ends_with_Access_Delayed_But_Inevitable.md
+
+# The-Beat-Ends-with-Access-Delayed-But-Inevitable
+
+scene_id: S020
+beat: B02.02
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Access-Delayed-But-Inevitable — The reading is postponed only enough to increase weight.
+
+### 0021__B02_03__The_First_Lines_Are_Read.md
+
+# The-First-Lines-Are-Read
+
+scene_id: S021
+beat: B02.03
+book: The Diary and the Blue Light
+
+The-First-Lines-Are-Read — The diary finally opens.
+
+### 0022__B02_03__The_Voice_Inside_Is_Too_Close.md
+
+# The-Voice-Inside-Is-Too-Close
+
+scene_id: S022
+beat: B02.03
+book: The Diary and the Blue Light
+
+The-Voice-Inside-Is-Too-Close — The text feels intimate, destabilizing, or fate-adjacent rather than archival.
+
+### 0023__B02_03__Pip_Feels_Seen_by_Words_Not_Meant_for_Now.md
+
+# Pip-Feels-Seen-by-Words-Not-Meant-for-Now
+
+scene_id: S023
+beat: B02.03
+book: The Diary and the Blue Light
+
+Pip-Feels-Seen-by-Words-Not-Meant-for-Now — The reading strikes him personally.
+
+### 0024__B02_03__Mack_Reads_for_Pattern.md
+
+# Mack-Reads-for-Pattern
+
+scene_id: S024
+beat: B02.03
+book: The Diary and the Blue Light
+
+Mack-Reads-for-Pattern — The guardian tracks implication as much as literal content.
+
+### 0025__B02_03__Rylos_Vayne_Johnson_Reads_the_Readers.md
+
+# Rylos Vayne Johnson-Reads-the-Readers
+
+scene_id: S025
+beat: B02.03
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Reads-the-Readers — He studies what the diary does to others while trying to place himself inside the scene.
+
+### 0026__B02_03__The_Room_Tightens_Around_the_Text.md
+
+# The-Room-Tightens-Around-the-Text
+
+scene_id: S026
+beat: B02.03
+book: The Diary and the Blue Light
+
+The-Room-Tightens-Around-the-Text — Reading becomes event, not pastime.
+
+### 0027__B02_03__The_Diary_Links_Past_and_Future.md
+
+# The-Diary-Links-Past-and-Future
+
+scene_id: S027
+beat: B02.03
+book: The Diary and the Blue Light
+
+The-Diary-Links-Past-and-Future — The words begin bridging memory and destiny.
+
+### 0028__B02_03__Pip_Feels_Called_Deeper_Into_the_Thread.md
+
+# Pip-Feels-Called-Deeper-Into-the-Thread
+
+scene_id: S028
+beat: B02.03
+book: The Diary and the Blue Light
+
+Pip-Feels-Called-Deeper-Into-the-Thread — The object intensifies rather than explains.
+
+### 0029__B02_03__Someone_Withholds_Full_Interpretation.md
+
+# Someone-Withholds-Full-Interpretation
+
+scene_id: S029
+beat: B02.03
+book: The Diary and the Blue Light
+
+Someone-Withholds-Full-Interpretation — Not all meaning is spoken aloud yet.
+
+### 0030__B02_03__The_Beat_Ends_with_Reading_As_Activation.md
+
+# The-Beat-Ends-with-Reading-As-Activation
+
+scene_id: S030
+beat: B02.03
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Reading-As-Activation — The diary has now changed the book's trajectory.
+
+### 0031__B02_04__The_Blue_Light_Returns_in_a_New_Mode.md
+
+# The-Blue-Light-Returns-in-a-New-Mode
+
+scene_id: S031
+beat: B02.04
+book: The Diary and the Blue Light
+
+The-Blue-Light-Returns-in-a-New-Mode — The symbolic current is now tied to text, thought, and waking life.
+
+### 0032__B02_04__Pip_Cannot_Treat_the_Thread_as_Night_Only_Any_More.md
+
+# Pip-Cannot-Treat-the-Thread-as-Night-Only-Any-More
+
+scene_id: S032
+beat: B02.04
+book: The Diary and the Blue Light
+
+Pip-Cannot-Treat-the-Thread-as-Night-Only-Any-More — The future has entered daylight.
+
+### 0033__B02_04__Mack_Insists_on_Holding_Wonder_and_Discipline_Together.md
+
+# Mack-Insists-on-Holding-Wonder-and-Discipline-Together
+
+scene_id: S033
+beat: B02.04
+book: The Diary and the Blue Light
+
+Mack-Insists-on-Holding-Wonder-and-Discipline-Together — The guardian keeps meaning from becoming chaos.
+
+### 0034__B02_04__Rylos_Vayne_Johnson_Hears_Enough_to_Be_Drawn_Further_In.md
+
+# Rylos Vayne Johnson-Hears-Enough-to-Be-Drawn-Further-In
+
+scene_id: S034
+beat: B02.04
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Hears-Enough-to-Be-Drawn-Further-In — His place in the thread deepens.
+
+### 0035__B02_04__Sanctuary_Holds_a_Strange_Conversation_as_Normal.md
+
+# Sanctuary-Holds-a-Strange-Conversation-as-Normal
+
+scene_id: S035
+beat: B02.04
+book: The Diary and the Blue Light
+
+Sanctuary-Holds-a-Strange-Conversation-as-Normal — The oasis expands what counts as daily life.
+
+### 0036__B02_04__Fear_Is_No_Longer_the_Only_Lens.md
+
+# Fear-Is-No-Longer-the-Only-Lens
+
+scene_id: S036
+beat: B02.04
+book: The Diary and the Blue Light
+
+Fear-Is-No-Longer-the-Only-Lens — Curiosity and calling grow beside dread.
+
+### 0037__B02_04__The_Diary_and_the_Blue_Light_Start_Rhyming.md
+
+# The-Diary-and-the-Blue-Light-Start-Rhyming
+
+scene_id: S037
+beat: B02.04
+book: The Diary and the Blue Light
+
+The-Diary-and-the-Blue-Light-Start-Rhyming — The book's two title-forces lock together.
+
+### 0038__B02_04__Pip_Realizes_the_Thread_Wants_Language.md
+
+# Pip-Realizes-the-Thread-Wants-Language
+
+scene_id: S038
+beat: B02.04
+book: The Diary and the Blue Light
+
+Pip-Realizes-the-Thread-Wants-Language — Silence is no longer enough.
+
+### 0039__B02_04__What_Is_Read_Begins_Changing_Choice.md
+
+# What-Is-Read-Begins-Changing-Choice
+
+scene_id: S039
+beat: B02.04
+book: The Diary and the Blue Light
+
+What-Is-Read-Begins-Changing-Choice — Interpretation starts affecting practical behavior.
+
+### 0040__B02_04__The_Beat_Ends_with_Daylight_Prophecy_Legible.md
+
+# The-Beat-Ends-with-Daylight-Prophecy-Legible
+
+scene_id: S040
+beat: B02.04
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Daylight-Prophecy-Legible — The supernatural current has entered open life.
+
+### 0041__B02_05__Rylos_Vayne_Johnson_Engages_the_Diary_Indirectly_or_Directly.md
+
+# Rylos Vayne Johnson-Engages-the-Diary-Indirectly-or-Directly
+
+scene_id: S041
+beat: B02.05
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Engages-the-Diary-Indirectly-or-Directly — He moves from outsider to participant in the reading orbit.
+
+### 0042__B02_05__His_Relationship_to_Written_Truth_Is_Revealed.md
+
+# His-Relationship-to-Written-Truth-Is-Revealed
+
+scene_id: S042
+beat: B02.05
+book: The Diary and the Blue Light
+
+His-Relationship-to-Written-Truth-Is-Revealed — The diary touches his history, pride, or wounds in a specific way.
+
+### 0043__B02_05__Pip_Wants_the_Text_to_Make_Sense_of_Him.md
+
+# Pip-Wants-the-Text-to-Make-Sense-of-Him
+
+scene_id: S043
+beat: B02.05
+book: The Diary and the Blue Light
+
+Pip-Wants-the-Text-to-Make-Sense-of-Him — Protective love shapes how he wants Rylos Vayne Johnson held by meaning.
+
+### 0044__B02_05__Mack_Refuses_to_Flatten_Him_into_Symbol.md
+
+# Mack-Refuses-to-Flatten-Him-into-Symbol
+
+scene_id: S044
+beat: B02.05
+book: The Diary and the Blue Light
+
+Mack-Refuses-to-Flatten-Him-into-Symbol — The guardian keeps the boy from becoming only a sign.
+
+### 0045__B02_05__The_Diary_Creates_New_Intimacy.md
+
+# The-Diary-Creates-New-Intimacy
+
+scene_id: S045
+beat: B02.05
+book: The Diary and the Blue Light
+
+The-Diary-Creates-New-Intimacy — Shared reading alters the bond between Pip and Rylos Vayne Johnson.
+
+### 0046__B02_05__Humor_Breaks_the_Tension_at_the_Right_Moment.md
+
+# Humor-Breaks-the-Tension-at-the-Right-Moment
+
+scene_id: S046
+beat: B02.05
+book: The Diary and the Blue Light
+
+Humor-Breaks-the-Tension-at-the-Right-Moment — Wit keeps revelation human.
+
+### 0047__B02_05__The_Text_Pulls_Rylos_Vayne_Johnson_Closer_to_Future_Weight.md
+
+# The-Text-Pulls-Rylos Vayne Johnson-Closer-to-Future-Weight
+
+scene_id: S047
+beat: B02.05
+book: The Diary and the Blue Light
+
+The-Text-Pulls-Rylos Vayne Johnson-Closer-to-Future-Weight — He becomes harder to imagine as outside the prophecy.
+
+### 0048__B02_05__Pip_Feels_the_Risk_of_Knowing_More.md
+
+# Pip-Feels-the-Risk-of-Knowing-More
+
+scene_id: S048
+beat: B02.05
+book: The Diary and the Blue Light
+
+Pip-Feels-the-Risk-of-Knowing-More — Deeper understanding now threatens innocence and calm.
+
+### 0049__B02_05__The_Diary_Reads_Back_At_Them.md
+
+# The-Diary-Reads-Back-At-Them
+
+scene_id: S049
+beat: B02.05
+book: The Diary and the Blue Light
+
+The-Diary-Reads-Back-At-Them — The scene implies that reading is mutual in a symbolic sense.
+
+### 0050__B02_05__The_Beat_Ends_with_Rylos_Vayne_Johnson_Entangled_in_Written_Fate.md
+
+# The-Beat-Ends-with-Rylos Vayne Johnson-Entangled-in-Written-Fate
+
+scene_id: S050
+beat: B02.05
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Rylos Vayne Johnson-Entangled-in-Written-Fate — He is now inside the textual architecture too.
+
+### 0051__B02_06__Meals_and_Care_Continue_Under_New_Weight.md
+
+# Meals-and-Care-Continue-Under-New-Weight
+
+scene_id: S051
+beat: B02.06
+book: The Diary and the Blue Light
+
+Meals-and-Care-Continue-Under-New-Weight — Domestic life persists despite rising symbolic pressure.
+
+### 0052__B02_06__Mack_Protects_Ordinary_Rhythm_on_Purpose.md
+
+# Mack-Protects-Ordinary-Rhythm-on-Purpose
+
+scene_id: S052
+beat: B02.06
+book: The Diary and the Blue Light
+
+Mack-Protects-Ordinary-Rhythm-on-Purpose — The guardian knows routine is part of survival.
+
+### 0053__B02_06__Pip_Fails_and_Succeeds_at_Acting_Normal.md
+
+# Pip-Fails-and-Succeeds-at-Acting-Normal
+
+scene_id: S053
+beat: B02.06
+book: The Diary and the Blue Light
+
+Pip-Fails-and-Succeeds-at-Acting-Normal — He keeps slipping between daily care and future dread.
+
+### 0054__B02_06__Rylos_Vayne_Johnson_Learns_the_Household_Through_Small_Acts.md
+
+# Rylos Vayne Johnson-Learns-the-Household-Through-Small-Acts
+
+scene_id: S054
+beat: B02.06
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Learns-the-Household-Through-Small-Acts — Belonging grows through detail.
+
+### 0055__B02_06__The_Diary_Waits_Even_When_Closed.md
+
+# The-Diary-Waits-Even-When-Closed
+
+scene_id: S055
+beat: B02.06
+book: The Diary and the Blue Light
+
+The-Diary-Waits-Even-When-Closed — Its influence remains active offstage.
+
+### 0056__B02_06__Sanctuary_Feels_More_Precious_Because_It_Is_Temporary.md
+
+# Sanctuary-Feels-More-Precious-Because-It-Is-Temporary
+
+scene_id: S056
+beat: B02.06
+book: The Diary and the Blue Light
+
+Sanctuary-Feels-More-Precious-Because-It-Is-Temporary — Home's value sharpens under threat.
+
+### 0057__B02_06__Pairhood_Deepens_in_Unremarkable_Minutes.md
+
+# Pairhood-Deepens-in-Unremarkable-Minutes
+
+scene_id: S057
+beat: B02.06
+book: The Diary and the Blue Light
+
+Pairhood-Deepens-in-Unremarkable-Minutes — Quiet scenes continue building structure.
+
+### 0058__B02_06__The_Outside_World_Does_Not_Disappear.md
+
+# The-Outside-World-Does-Not-Disappear
+
+scene_id: S058
+beat: B02.06
+book: The Diary and the Blue Light
+
+The-Outside-World-Does-Not-Disappear — Distance pressure remains present.
+
+### 0059__B02_06__Ordinary_Life_Becomes_Defensive_Magic.md
+
+# Ordinary-Life-Becomes-Defensive-Magic
+
+scene_id: S059
+beat: B02.06
+book: The Diary and the Blue Light
+
+Ordinary-Life-Becomes-Defensive-Magic — Routine itself becomes a form of warding.
+
+### 0060__B02_06__The_Beat_Ends_with_Domesticity_as_Strategy.md
+
+# The-Beat-Ends-with-Domesticity-as-Strategy
+
+scene_id: S060
+beat: B02.06
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Domesticity-as-Strategy — The house stays human on purpose.
+
+### 0061__B02_07__Hidden_Layers_of_the_Oasis_Begin_to_Show.md
+
+# Hidden-Layers-of-the-Oasis-Begin-to-Show
+
+scene_id: S061
+beat: B02.07
+book: The Diary and the Blue Light
+
+Hidden-Layers-of-the-Oasis-Begin-to-Show — The sanctuary reveals deeper architecture.
+
+### 0062__B02_07__Mack_Knows_More_Than_He_Has_Said.md
+
+# Mack-Knows-More-Than-He-Has-Said
+
+scene_id: S062
+beat: B02.07
+book: The Diary and the Blue Light
+
+Mack-Knows-More-Than-He-Has-Said — Authority thickens.
+
+### 0063__B02_07__Pip_Starts_Seeing_Home_as_Made_Structure_Not_Accident.md
+
+# Pip-Starts-Seeing-Home-as-Made-Structure-Not-Accident
+
+scene_id: S063
+beat: B02.07
+book: The Diary and the Blue Light
+
+Pip-Starts-Seeing-Home-as-Made-Structure-Not-Accident — Sanctuary has design and law.
+
+### 0064__B02_07__Rylos_Vayne_Johnson_Reads_Protection_and_Concealment_Together.md
+
+# Rylos Vayne Johnson-Reads-Protection-and-Concealment-Together
+
+scene_id: S064
+beat: B02.07
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Reads-Protection-and-Concealment-Together — He recognizes both kindness and guardedness.
+
+### 0065__B02_07__The_Diary_Points_Toward_What_the_House_Is_Hiding.md
+
+# The-Diary-Points-Toward-What-the-House-Is-Hiding
+
+scene_id: S065
+beat: B02.07
+book: The Diary and the Blue Light
+
+The-Diary-Points-Toward-What-the-House-Is-Hiding — Text and place begin answering each other.
+
+### 0066__B02_07__Some_Room_Object_or_Memory_Surface_Responds.md
+
+# Some-Room-Object-or-Memory-Surface-Responds
+
+scene_id: S066
+beat: B02.07
+book: The Diary and the Blue Light
+
+Some-Room-Object-or-Memory-Surface-Responds — The environment itself joins the mystery.
+
+### 0067__B02_07__Trust_Becomes_the_Cost_of_Deeper_Access.md
+
+# Trust-Becomes-the-Cost-of-Deeper-Access
+
+scene_id: S067
+beat: B02.07
+book: The Diary and the Blue Light
+
+Trust-Becomes-the-Cost-of-Deeper-Access — Knowledge now depends on relationship.
+
+### 0068__B02_07__Pip_Wants_In_But_Fears_What_It_Changes.md
+
+# Pip-Wants-In-But-Fears-What-It-Changes
+
+scene_id: S068
+beat: B02.07
+book: The Diary and the Blue Light
+
+Pip-Wants-In-But-Fears-What-It-Changes — Curiosity intensifies.
+
+### 0069__B02_07__Rylos_Vayne_Johnson_Proves_He_Will_Not_Be_Easily_Excluded.md
+
+# Rylos Vayne Johnson-Proves-He-Will-Not-Be-Easily-Excluded
+
+scene_id: S069
+beat: B02.07
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Proves-He-Will-Not-Be-Easily-Excluded — His role in the core plot hardens.
+
+### 0070__B02_07__The_Beat_Ends_with_the_House_As_Active_Memory.md
+
+# The-Beat-Ends-with-the-House-As-Active-Memory
+
+scene_id: S070
+beat: B02.07
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-the-House-As-Active-Memory — Home is now part archive, part guardian, part test.
+
+### 0071__B02_08__Rylos_Physical_Recovery_and_Diary_Reading_Start_Rhyming.md
+
+# Rylos-Physical-Recovery-and-Diary-Reading-Start-Rhyming
+
+scene_id: S071
+beat: B02.08
+book: The Diary and the Blue Light
+
+Rylos-Physical-Recovery-and-Diary-Reading-Start-Rhyming — Healing body and growing knowledge move together.
+
+### 0072__B02_08__Pip_Learns_That_Care_Is_Interpretation.md
+
+# Pip-Learns-That-Care-Is-Interpretation
+
+scene_id: S072
+beat: B02.08
+book: The Diary and the Blue Light
+
+Pip-Learns-That-Care-Is-Interpretation — How he tends Rylos Vayne Johnson changes how he reads the book around them.
+
+### 0073__B02_08__Mack_Binds_Healing_to_Discipline.md
+
+# Mack-Binds-Healing-to-Discipline
+
+scene_id: S073
+beat: B02.08
+book: The Diary and the Blue Light
+
+Mack-Binds-Healing-to-Discipline — Recovery remains practical, not sentimental.
+
+### 0074__B02_08__The_Diary_Opens_an_Old_Scar_of_Some_Kind.md
+
+# The-Diary-Opens-an-Old-Scar-of-Some-Kind
+
+scene_id: S074
+beat: B02.08
+book: The Diary and the Blue Light
+
+The-Diary-Opens-an-Old-Scar-of-Some-Kind — Written truth touches pain that was not purely physical.
+
+### 0075__B02_08__Rylos_Vayne_Johnson_Chooses_Not_to_Hide_One_Part_of_Himself.md
+
+# Rylos Vayne Johnson-Chooses-Not-to-Hide-One-Part-of-Himself
+
+scene_id: S075
+beat: B02.08
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Chooses-Not-to-Hide-One-Part-of-Himself — A controlled disclosure deepens trust.
+
+### 0076__B02_08__Pip_Receives_Truth_Without_Trying_to_Fix_It_Too_Fast.md
+
+# Pip-Receives-Truth-Without-Trying-to-Fix-It-Too-Fast
+
+scene_id: S076
+beat: B02.08
+book: The Diary and the Blue Light
+
+Pip-Receives-Truth-Without-Trying-to-Fix-It-Too-Fast — Growth shows in restraint.
+
+### 0077__B02_08__Home_Holds_a_Scene_of_Care_and_Revelation_Together.md
+
+# Home-Holds-a-Scene-of-Care-and-Revelation-Together
+
+scene_id: S077
+beat: B02.08
+book: The Diary and the Blue Light
+
+Home-Holds-a-Scene-of-Care-and-Revelation-Together — This fusion becomes central to Book 2's feel.
+
+### 0078__B02_08__The_Wound_Is_No_Longer_Only_Medical.md
+
+# The-Wound-Is-No-Longer-Only-Medical
+
+scene_id: S078
+beat: B02.08
+book: The Diary and the Blue Light
+
+The-Wound-Is-No-Longer-Only-Medical — It becomes narrative, relational, and prophetic.
+
+### 0079__B02_08__The_Word_Cannot_Be_Unread.md
+
+# The-Word-Cannot-Be-Unread
+
+scene_id: S079
+beat: B02.08
+book: The Diary and the Blue Light
+
+The-Word-Cannot-Be-Unread — The text changes future motion irreversibly.
+
+### 0080__B02_08__The_Beat_Ends_with_Recovery_and_Meaning_Braided.md
+
+# The-Beat-Ends-with-Recovery-and-Meaning-Braided
+
+scene_id: S080
+beat: B02.08
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Recovery-and-Meaning-Braided — Body and destiny are now moving together.
+
+### 0081__B02_09__Reading_Spills_Outward.md
+
+# Reading-Spills-Outward
+
+scene_id: S081
+beat: B02.09
+book: The Diary and the Blue Light
+
+Reading-Spills-Outward — The diary starts changing what matters outside itself.
+
+### 0082__B02_09__Pip_Connects_Text_to_Larger_Conflict.md
+
+# Pip-Connects-Text-to-Larger-Conflict
+
+scene_id: S082
+beat: B02.09
+book: The Diary and the Blue Light
+
+Pip-Connects-Text-to-Larger-Conflict — He begins to see world-shape in what he reads.
+
+### 0083__B02_09__Mack_Confirms_That_Books_Can_Be_Maps.md
+
+# Mack-Confirms-That-Books-Can-Be-Maps
+
+scene_id: S083
+beat: B02.09
+book: The Diary and the Blue Light
+
+Mack-Confirms-That-Books-Can-Be-Maps — The guardian legitimizes practical consequence.
+
+### 0084__B02_09__Rylos_Vayne_Johnson_Feels_the_Pages_Reaching_Toward_His_Past.md
+
+# Rylos Vayne Johnson-Feels-the-Pages-Reaching-Toward-His-Past
+
+scene_id: S084
+beat: B02.09
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Feels-the-Pages-Reaching-Toward-His-Past — Personal and global arcs begin colliding.
+
+### 0085__B02_09__Sanctuary_No_Longer_Feels_Isolated_from_History.md
+
+# Sanctuary-No-Longer-Feels-Isolated-from-History
+
+scene_id: S085
+beat: B02.09
+book: The Diary and the Blue Light
+
+Sanctuary-No-Longer-Feels-Isolated-from-History — The house sits inside broader events.
+
+### 0086__B02_09__The_Diary_Demands_a_Response_Not_Just_A_Reaction.md
+
+# The-Diary-Demands-a-Response-Not-Just-A-Reaction
+
+scene_id: S086
+beat: B02.09
+book: The Diary and the Blue Light
+
+The-Diary-Demands-a-Response-Not-Just-A-Reaction — Passive reading is no longer enough.
+
+### 0087__B02_09__Pip_Struggles_with_Scale_Again.md
+
+# Pip-Struggles-with-Scale-Again
+
+scene_id: S087
+beat: B02.09
+book: The Diary and the Blue Light
+
+Pip-Struggles-with-Scale-Again — One object opens too many doors at once.
+
+### 0088__B02_09__The_Pair_Bond_Starts_Shaping_How_the_Text_Is_Held.md
+
+# The-Pair-Bond-Starts-Shaping-How-the-Text-Is-Held
+
+scene_id: S088
+beat: B02.09
+book: The Diary and the Blue Light
+
+The-Pair-Bond-Starts-Shaping-How-the-Text-Is-Held — Relationality becomes interpretive method.
+
+### 0089__B02_09__The_Outside_Pressure_Rises_a_Notch.md
+
+# The-Outside-Pressure-Rises-a-Notch
+
+scene_id: S089
+beat: B02.09
+book: The Diary and the Blue Light
+
+The-Outside-Pressure-Rises-a-Notch — News, omen, or sense data confirms motion beyond the house.
+
+### 0090__B02_09__The_Beat_Ends_with_Text_and_World_Locked.md
+
+# The-Beat-Ends-with-Text-and-World-Locked
+
+scene_id: S090
+beat: B02.09
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Text-and-World-Locked — Reading is now structurally part of the plot.
+
+### 0091__B02_10__The_Guardian_Withholds_for_a_Reason.md
+
+# The-Guardian-Withholds-for-a-Reason
+
+scene_id: S091
+beat: B02.10
+book: The Diary and the Blue Light
+
+The-Guardian-Withholds-for-a-Reason — Mack clearly knows more than he is speaking.
+
+### 0092__B02_10__Pip_Feels_the_Limit_and_Resents_It_Slightly.md
+
+# Pip-Feels-the-Limit-and-Resents-It-Slightly
+
+scene_id: S092
+beat: B02.10
+book: The Diary and the Blue Light
+
+Pip-Feels-the-Limit-and-Resents-It-Slightly — Growth does not remove frustration.
+
+### 0093__B02_10__Rylos_Vayne_Johnson_Understands_Withholding_Better_Than_Pip.md
+
+# Rylos Vayne Johnson-Understands-Withholding-Better-Than-Pip
+
+scene_id: S093
+beat: B02.10
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Understands-Withholding-Better-Than-Pip — His history makes him more fluent in guarded truths.
+
+### 0094__B02_10__The_House_Feels_Fuller_of_Unsounded_Law.md
+
+# The-House-Feels-Fuller-of-Unsounded-Law
+
+scene_id: S094
+beat: B02.10
+book: The Diary and the Blue Light
+
+The-House-Feels-Fuller-of-Unsounded-Law — Hidden knowledge now has shape.
+
+### 0095__B02_10__Mack_Tests_Whether_They_Can_Carry_More.md
+
+# Mack-Tests-Whether-They-Can-Carry-More
+
+scene_id: S095
+beat: B02.10
+book: The Diary and the Blue Light
+
+Mack-Tests-Whether-They-Can-Carry-More — Silence functions as discernment, not evasion.
+
+### 0096__B02_10__Pip_Begins_Learning_That_Truth_Has_Timing.md
+
+# Pip-Begins-Learning-That-Truth-Has-Timing
+
+scene_id: S096
+beat: B02.10
+book: The Diary and the Blue Light
+
+Pip-Begins-Learning-That-Truth-Has-Timing — Not every revelation is mercy when badly timed.
+
+### 0097__B02_10__Rylos_Vayne_Johnson_Proves_He_Can_Stand_Incomplete_Knowing.md
+
+# Rylos Vayne Johnson-Proves-He-Can-Stand-Incomplete-Knowing
+
+scene_id: S097
+beat: B02.10
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Proves-He-Can-Stand-Incomplete-Knowing — Maturity grows through tension.
+
+### 0098__B02_10__The_Diary_Holds_Its_Own_Remaining_Reserve.md
+
+# The-Diary-Holds-Its-Own-Remaining-Reserve
+
+scene_id: S098
+beat: B02.10
+book: The Diary and the Blue Light
+
+The-Diary-Holds-Its-Own-Remaining-Reserve — Even the text has not yielded everything.
+
+### 0099__B02_10__The_Scene_Ends_in_Love_Under_Restraint.md
+
+# The-Scene-Ends-in-Love-Under-Restraint
+
+scene_id: S099
+beat: B02.10
+book: The Diary and the Blue Light
+
+The-Scene-Ends-in-Love-Under-Restraint — Mack's withholding is understood as protective, even if painful.
+
+### 0100__B02_10__The_Beat_Ends_with_Pressure_Banked_Not_Released.md
+
+# The-Beat-Ends-with-Pressure-Banked-Not-Released
+
+scene_id: S100
+beat: B02.10
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Pressure-Banked-Not-Released — Book 2 stores future revelations deliberately.
+
+### 0101__B02_11__Pip_and_Rylos_Vayne_Johnson_Begin_Holding_Meaning_Together.md
+
+# Pip-and-Rylos Vayne Johnson-Begin-Holding-Meaning-Together
+
+scene_id: S101
+beat: B02.11
+book: The Diary and the Blue Light
+
+Pip-and-Rylos Vayne Johnson-Begin-Holding-Meaning-Together — Interpretation becomes shared labor.
+
+### 0102__B02_11__Their_Differences_Make_the_Reading_Better.md
+
+# Their-Differences-Make-the-Reading-Better
+
+scene_id: S102
+beat: B02.11
+book: The Diary and the Blue Light
+
+Their-Differences-Make-the-Reading-Better — Personality contrast sharpens understanding.
+
+### 0103__B02_11__Humor_and_Tenderness_Enter_Interpretive_Space.md
+
+# Humor-and-Tenderness-Enter-Interpretive-Space
+
+scene_id: S103
+beat: B02.11
+book: The Diary and the Blue Light
+
+Humor-and-Tenderness-Enter-Interpretive-Space — Intimacy alters cognition.
+
+### 0104__B02_11__Mack_Watches_the_Bond_Mature_Through_Thought.md
+
+# Mack-Watches-the-Bond-Mature-Through-Thought
+
+scene_id: S104
+beat: B02.11
+book: The Diary and the Blue Light
+
+Mack-Watches-the-Bond-Mature-Through-Thought — The guardian sees their relation stabilizing into method.
+
+### 0105__B02_11__The_Diary_Yields_a_Thread_About_What_Comes_Next.md
+
+# The-Diary-Yields-a-Thread-About-What-Comes-Next
+
+scene_id: S105
+beat: B02.11
+book: The Diary and the Blue Light
+
+The-Diary-Yields-a-Thread-About-What-Comes-Next — Some future-facing clue emerges.
+
+### 0106__B02_11__Pip_Feels_Fear_and_Readiness_at_Once.md
+
+# Pip-Feels-Fear-and-Readiness-at-Once
+
+scene_id: S106
+beat: B02.11
+book: The Diary and the Blue Light
+
+Pip-Feels-Fear-and-Readiness-at-Once — He is growing into burdens that once would have crushed him.
+
+### 0107__B02_11__Rylos_Vayne_Johnson_Claims_Place_in_the_Future_Without_Grandstanding.md
+
+# Rylos Vayne Johnson-Claims-Place-in-the-Future-Without-Grandstanding
+
+scene_id: S107
+beat: B02.11
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Claims-Place-in-the-Future-Without-Grandstanding — Quiet commitment matters.
+
+### 0108__B02_11__The_House_Becomes_a_School_of_Fate.md
+
+# The-House-Becomes-a-School-of-Fate
+
+scene_id: S108
+beat: B02.11
+book: The Diary and the Blue Light
+
+The-House-Becomes-a-School-of-Fate — Sanctuary is now teaching them how to move.
+
+### 0109__B02_11__Reading_Turns_into_Planning.md
+
+# Reading-Turns-into-Planning
+
+scene_id: S109
+beat: B02.11
+book: The Diary and the Blue Light
+
+Reading-Turns-into-Planning — Meaning begins affecting concrete next steps.
+
+### 0110__B02_11__The_Beat_Ends_with_the_Pair_Facing_Forward_Together.md
+
+# The-Beat-Ends-with-the-Pair-Facing-Forward-Together
+
+scene_id: S110
+beat: B02.11
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-the-Pair-Facing-Forward-Together — Book 2 locks shared interpretive motion.
+
+### 0111__B02_12__The_Diary_the_Blue_Light_and_the_Oasis_Form_a_Triad.md
+
+# The-Diary-the-Blue-Light-and-the-Oasis-Form-a-Triad
+
+scene_id: S111
+beat: B02.12
+book: The Diary and the Blue Light
+
+The-Diary-the-Blue-Light-and-the-Oasis-Form-a-Triad — Book 2's governing forces become legible.
+
+### 0112__B02_12__Pip_Recognizes_He_Is_No_Longer_Only_Reacting.md
+
+# Pip-Recognizes-He-Is-No-Longer-Only-Reacting
+
+scene_id: S112
+beat: B02.12
+book: The Diary and the Blue Light
+
+Pip-Recognizes-He-Is-No-Longer-Only-Reacting — He has begun participating in the shape of what comes.
+
+### 0113__B02_12__Rylos_Vayne_Johnson_Is_No_Longer_Merely_Rescued.md
+
+# Rylos Vayne Johnson-Is-No-Longer-Merely-Rescued
+
+scene_id: S113
+beat: B02.12
+book: The Diary and the Blue Light
+
+Rylos Vayne Johnson-Is-No-Longer-Merely-Rescued — He is now active thread, witness, and partner in meaning.
+
+### 0114__B02_12__Mack_Stands_at_the_Center_as_Keeper_of_Timed_Truth.md
+
+# Mack-Stands-at-the-Center-as-Keeper-of-Timed-Truth
+
+scene_id: S114
+beat: B02.12
+book: The Diary and the Blue Light
+
+Mack-Stands-at-the-Center-as-Keeper-of-Timed-Truth — The guardian's role clarifies further.
+
+### 0115__B02_12__Home_Text_and_Future_Are_Now_One_System.md
+
+# Home-Text-and-Future-Are-Now-One-System
+
+scene_id: S115
+beat: B02.12
+book: The Diary and the Blue Light
+
+Home-Text-and-Future-Are-Now-One-System — The book's world tightens structurally.
+
+### 0116__B02_12__Domestic_Life_and_Cosmic_Weight_Are_Officially_Braided.md
+
+# Domestic-Life-and-Cosmic-Weight-Are-Officially-Braided
+
+scene_id: S116
+beat: B02.12
+book: The Diary and the Blue Light
+
+Domestic-Life-and-Cosmic-Weight-Are-Officially-Braided — This becomes core to the series texture.
+
+### 0117__B02_12__The_Pair_Bond_Is_Shown_to_Be_Load_Bearing.md
+
+# The-Pair-Bond-Is-Shown-to-Be-Load-Bearing
+
+scene_id: S117
+beat: B02.12
+book: The Diary and the Blue Light
+
+The-Pair-Bond-Is-Shown-to-Be-Load-Bearing — It is not decoration; it helps carry fate.
+
+### 0118__B02_12__The_Outside_World_Remains_Ready_to_Break_In.md
+
+# The-Outside-World-Remains-Ready-to-Break-In
+
+scene_id: S118
+beat: B02.12
+book: The Diary and the Blue Light
+
+The-Outside-World-Remains-Ready-to-Break-In — Calm is still conditional.
+
+### 0119__B02_12__Book_Two_Locks_Its_First_True_Orbit.md
+
+# Book-Two-Locks-Its-First-True-Orbit
+
+scene_id: S119
+beat: B02.12
+book: The Diary and the Blue Light
+
+Book-Two-Locks-Its-First-True-Orbit — The story now knows how this volume moves.
+
+### 0120__B02_12__The_Beat_Ends_with_Deeper_Descent_Promised.md
+
+# The-Beat-Ends-with-Deeper-Descent-Promised
+
+scene_id: S120
+beat: B02.12
+book: The Diary and the Blue Light
+
+The-Beat-Ends-with-Deeper-Descent-Promised — The next phase is now loaded.
+
+### B02_000__Vault_Of_Whispers.md
+
+# B02_000 — Vault Of Whispers
+
+- function: market threshold / psychic-entropy entry
+- local_time_span: single sequence
+- location: Vault of Whispers / black market in chime-iron canyons
+- characters: Pip
+- confidence: high
+
+## notes
+Drive text repeatedly places an early black-market threshold before the full betrayal-collapse material.
+
+### B02_001A__The_Wounded_Rabbit_In_The_Market.md
+
+# B02_001A — The Wounded Rabbit In The Market
+
+- function: empathy hook / trap ignition
+- local_time_span: single scene
+- location: Vault of Whispers market
+- characters: Pip, Boojay
+- confidence: high
+
+## notes
+Drive text shows a market version of the wounded-rabbit encounter. This should not be skipped.
+

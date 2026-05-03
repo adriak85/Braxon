@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0093__B03_08__The_Open_World_No_Longer_Feels_Wholly_External.md.5db7c40fc3d0bc5b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.901906+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0093__B03_08__The_Open_World_No_Longer_Feels_Wholly_External.md.5db7c40fc3d0bc5b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0093__B03_08__The_Open_World_No_Longer_Feels_Wholly_External.md",
+  "source_bytes": 194,
+  "source_sha256": "5db7c40fc3d0bc5bbeba59a8bfa29cebf6d0791bd8ce94f4099894a305cce8c8",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0093__B03_08__The_Open_World_No_Longer_Feels_Wholly_External.md.5db7c40fc3d0bc5b"
+}

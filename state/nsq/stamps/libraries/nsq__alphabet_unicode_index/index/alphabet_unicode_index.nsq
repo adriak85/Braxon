@@ -1,0 +1,8 @@
+NSQ_INDEX alphabet_unicode_index
+basis = alphabet_and_unicode_range_seed
+charge_matters = true
+dialect_selected_by_first_lever = true
+leading_anchor_sets_charge = true
+body_index_chooses_slot = true
+unicode_symbol_space = stamp_space_middle_band
+unicode_full_expansion_policy = generate_on_demand_from_range_seed

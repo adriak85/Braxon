@@ -1,0 +1,82 @@
+[package]
+publish = false
+name = "Braxon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Root Braxon command center and seating verification entrance."
+
+[[bin]]
+name = "Braxon"
+path = "src/main.rs"
+
+[workspace]
+resolver = "2"
+members = [
+    ".",
+    "crates/braxon-cli",
+    "crates/braxon-core",
+    "crates/braxon-court",
+    "crates/braxon-ingest",
+    "crates/braxon-kingdom-generate",
+    "crates/braxon-showdown",
+    "crates/nsq-archon",
+    "crates/nsq-bench",
+    "crates/nsq-bench-compare",
+    "crates/nsq-bench-split",
+    "crates/nsq-calibrate",
+    "crates/nsq-cli",
+    "crates/nsq-compile",
+    "crates/nsq-compose",
+    "crates/nsq-compress",
+    "crates/nsq-core",
+    "crates/nsq-court",
+    "crates/nsq-debug",
+    "crates/nsq-decode",
+    "crates/nsq-generate",
+    "crates/nsq-index",
+    "crates/nsq-inspect",
+    "crates/nsq-lint",
+    "crates/nsq-native-bench",
+    "crates/nsq-optimize",
+    "crates/nsq-pack",
+    "crates/nsq-preserve",
+    "crates/nsq-pressure-bench",
+    "crates/nsq-prime",
+    "crates/nsq-profile",
+    "crates/nsq-proof",
+    "crates/nsq-query",
+    "crates/nsq-real-bench",
+    "crates/nsq-registry",
+    "crates/nsq-runtime",
+    "crates/nsq-source",
+    "crates/nsq-universal-fetch",
+    "crates/wowas-final-edition-v10",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "LicenseRef-Private"
+authors = ["Braxon Project"]
+rust-version = "1.78"
+
+[workspace.dependencies]
+blake3 = "1.8.5"
+cargo_metadata = "0.19.2"
+clap = { version = "4.6.1", features = ["derive"] }
+nsq-core = { path = "crates/nsq-core" }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+sha2 = "0.10.9"
+
+[dependencies]
+BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }
+clap.workspace = true
+nsq-core.workspace = true
+nsq-runtime = { path = "crates/nsq-runtime" }
+serde.workspace = true
+serde_json.workspace = true

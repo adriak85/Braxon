@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0063__B02_07__Pip_Starts_Seeing_Home_as_Made_Structure_.b9a32d65ac3b959a.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.598823+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0063__B02_07__Pip_Starts_Seeing_Home_as_Made_Structure_.b9a32d65ac3b959a.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0063__B02_07__Pip_Starts_Seeing_Home_as_Made_Structure_Not_Accident.md",
+  "source_bytes": 210,
+  "source_sha256": "b9a32d65ac3b959a9d7fd7d79a8dcde4cade0e5775c5025ae7c8b30e3c877cee",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0063__B02_07__Pip_Starts_Seeing_Home_as_Made_Structure_.b9a32d65ac3b959a"
+}

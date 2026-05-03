@@ -1,0 +1,17 @@
+id: nsq.write.nsq.docs.tokenizer.pipeline.v3
+type: workflow
+version: 3
+authority: Braxon
+role: write_nsq_docs_tokenizer_pipeline
+
+phases:
+  - build_authoring_registry
+  - build_projection_registry
+  - build_doc_emit_registry
+  - build_tokenizer_emit_registry
+  - bind_multiport_package_db
+  - emit_human_docs
+  - emit_machine_docs
+  - emit_tokenizer_surfaces
+  - prove_sync_and_roundtrip
+  - admit_write_nsq

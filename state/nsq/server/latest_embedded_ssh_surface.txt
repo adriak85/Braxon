@@ -1,0 +1,7 @@
+report=/data/data/com.termux/files/home/Braxon/state/nsq/server/embedded_ssh_surface_20260428_180003.txt
+config=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd_config
+pid=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid
+log=/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.log
+bin=/data/data/com.termux/files/home/Braxon/tools/nsq/server/bin
+activate=/data/data/com.termux/files/home/Braxon/tools/nsq/server/activate_embedded_server_surface.sh
+status=embedded_ssh_surface_installed

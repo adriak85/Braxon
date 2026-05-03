@@ -1,0 +1,6 @@
+{
+  "root": "config/nsq",
+  "chunk_bytes": 512,
+  "exact_repeat_groups": [],
+  "seam_candidates": []
+}

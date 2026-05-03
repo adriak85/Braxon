@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0074__B03_07__Pip_Knows_the_Thread_Will_Be_Tested_by_Motion.md.a4e655089b8971e8.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.966392+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0074__B03_07__Pip_Knows_the_Thread_Will_Be_Tested_by_Motion.md.a4e655089b8971e8.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0074__B03_07__Pip_Knows_the_Thread_Will_Be_Tested_by_Motion.md",
+  "source_bytes": 183,
+  "source_sha256": "a4e655089b8971e8b41b575d424fac8b1984ef25ce9ed7b2901f5fd1e57c3a4b",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0074__B03_07__Pip_Knows_the_Thread_Will_Be_Tested_by_Motion.md.a4e655089b8971e8"
+}

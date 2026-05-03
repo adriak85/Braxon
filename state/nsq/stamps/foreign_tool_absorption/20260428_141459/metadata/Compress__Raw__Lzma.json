@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Compress::Raw::Lzma",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Compress/Raw/Lzma.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Compress__Raw__Lzma.source",
+  "source_sha256": "407d5f907f402ca71ea922c78984e6f217e1433e22b332a3d8b62195f0230075",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Compress__Raw__Lzma.translated.nsq",
+  "nsq_body_sha256": "7655cd626e8e71f9a789f3de42a5a766197970497a407fad30acaabe9ce88ccb",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

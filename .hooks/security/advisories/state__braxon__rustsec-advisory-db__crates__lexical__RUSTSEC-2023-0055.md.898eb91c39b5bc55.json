@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__lexical__RUSTSEC-2023-0055.md.898eb91c39b5bc55.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.025195+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__lexical__RUSTSEC-2023-0055.md.898eb91c39b5bc55.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/lexical/RUSTSEC-2023-0055.md",
+  "source_bytes": 1995,
+  "source_sha256": "898eb91c39b5bc5592222405269016defebd5d632d85dfc1a4e485088cd6302d",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__lexical__RUSTSEC-2023-0055.md.898eb91c39b5bc55"
+}

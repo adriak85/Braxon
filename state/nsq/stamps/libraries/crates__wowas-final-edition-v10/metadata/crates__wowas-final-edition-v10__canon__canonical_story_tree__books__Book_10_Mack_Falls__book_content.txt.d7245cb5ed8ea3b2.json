@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_10_Mack_Falls__book_content.txt.d7245cb5ed8ea3b2.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.816005+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_10_Mack_Falls__book_content.txt.d7245cb5ed8ea3b2.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_10_Mack_Falls/book_content.txt",
+  "source_bytes": 16748,
+  "source_sha256": "d7245cb5ed8ea3b231ae3429a21b902f25e457fb83609a8cd257d3d209e09a51",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_10_Mack_Falls__book_content.txt.d7245cb5ed8ea3b2"
+}

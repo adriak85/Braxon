@@ -1,0 +1,13 @@
+NSQ/C comparison summary
+run_dir: /data/data/com.termux/files/home/Braxon/artifacts/nsq_compare/logs/20260408_100620
+
+Compared commands:
+- c-compare parse "wake self now"
+- nsq parse "wake self now"
+- c-compare ingest "/data/data/com.termux/files/home/Braxon/artifacts/nsq_compare/tmp/sample_input.txt"
+- nsq ingest "/data/data/com.termux/files/home/Braxon/artifacts/nsq_compare/tmp/sample_input.txt"
+
+Review:
+- *.out   => normal output
+- *.err   => stderr/build noise
+- *.time  => elapsed timing

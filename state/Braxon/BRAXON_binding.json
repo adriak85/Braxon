@@ -1,0 +1,15 @@
+{
+  "binding_state": "manifest_bound_not_hot_live",
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126
+  ],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance"
+}

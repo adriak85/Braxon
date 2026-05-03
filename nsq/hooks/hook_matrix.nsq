@@ -1,0 +1,23 @@
+# canonical hook matrix in NSQ
+
+triple hook.compile -> requires -> calibration_lock :layer 1 :plane 1 :anchor 100 :weight 50 :flags 1
+triple hook.compile -> requires -> compile_manifest :layer 1 :plane 1 :anchor 110 :weight 50 :flags 1
+triple hook.compile -> requires -> court_mode :layer 1 :plane 1 :anchor 120 :weight 50 :flags 1
+triple hook.compile -> requires -> source_dialect_detect :layer 1 :plane 1 :anchor 130 :weight 50 :flags 1
+triple hook.compile -> requires -> internal_family_lowering :layer 1 :plane 1 :anchor 140 :weight 50 :flags 1
+triple hook.compile -> requires -> canonical_projection :layer 1 :plane 1 :anchor 150 :weight 50 :flags 1
+triple hook.compile -> requires -> python3_shape_lowering :layer 1 :plane 1 :anchor 160 :weight 50 :flags 1
+
+triple hook.inspect -> requires -> decoded_surface :layer 1 :plane 1 :anchor 200 :weight 50 :flags 1
+triple hook.inspect -> requires -> parity_view :layer 1 :plane 1 :anchor 210 :weight 50 :flags 1
+triple hook.inspect -> requires -> source_dialect_view :layer 1 :plane 1 :anchor 220 :weight 50 :flags 1
+triple hook.inspect -> requires -> lowered_projection_view :layer 1 :plane 1 :anchor 230 :weight 50 :flags 1
+
+triple hook.proof -> requires -> density_score :layer 1 :plane 1 :anchor 300 :weight 50 :flags 1
+triple hook.proof -> requires -> parity_score :layer 1 :plane 1 :anchor 310 :weight 50 :flags 1
+triple hook.proof -> requires -> replay_sha256 :layer 1 :plane 1 :anchor 320 :weight 50 :flags 1
+triple hook.proof -> requires -> cross_dialect_identity :layer 1 :plane 1 :anchor 330 :weight 50 :flags 1
+
+membrane hook.compile :state present :flux 6 :gate 1 :phase 1
+membrane hook.inspect :state present :flux 4 :gate 1 :phase 1
+membrane hook.proof :state present :flux 4 :gate 1 :phase 1

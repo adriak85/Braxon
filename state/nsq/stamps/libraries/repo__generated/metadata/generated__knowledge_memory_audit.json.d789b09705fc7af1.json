@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__generated/asm/macros/generated__knowledge_memory_audit.json.d789b09705fc7af1.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.200219+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__generated",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__generated/metadata/generated__knowledge_memory_audit.json.d789b09705fc7af1.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "generated/knowledge_memory_audit.json",
+  "source_bytes": 473,
+  "source_sha256": "d789b09705fc7af1ed94973a0fd1245aa44a79e1f62d8176a38d3032402bcfd1",
+  "stamp_id": "nsq.asm.repo__generated.generated__knowledge_memory_audit.json.d789b09705fc7af1"
+}

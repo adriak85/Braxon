@@ -1,0 +1,20 @@
+NSQ_APP moral_invariant_guard
+NSQ_APP_VERSION 2
+
+NSQ_MORAL_INVARIANT_GUARD {
+  protected_file = specs/Braxon/BRAXON_PERSONAL_MORAL_INVARIANT.md
+
+  moral_code_is_not_goal_file = true
+  goals_may_be_rewritten = true
+  moral_code_may_not_mutate_toward_harm = true
+
+  no_source_file_may_override = true
+  no_metadata_file_may_override = true
+  no_generated_file_may_override = true
+  no_asm_file_may_override = true
+  no_binary_translation_may_override = true
+
+  value_preserving_translation_required = true
+  contradiction_requires_failure = true
+  guard_must_guard_guard = true
+}

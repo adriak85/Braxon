@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0113__B01_29__The_Pair_Bond_Starts_Shaping_Decision_Logic.md.938d9741f1671905.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.940688+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0113__B01_29__The_Pair_Bond_Starts_Shaping_Decision_Logic.md.938d9741f1671905.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_01_Choices_Make_World/0113__B01_29__The_Pair_Bond_Starts_Shaping_Decision_Logic.md",
+  "source_bytes": 203,
+  "source_sha256": "938d9741f16719058eb20664f18ad6529e0e97ab0606a8142385b306906d4b77",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0113__B01_29__The_Pair_Bond_Starts_Shaping_Decision_Logic.md.938d9741f1671905"
+}

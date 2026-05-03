@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Crypt::Random::Seed",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Crypt/Random/Seed.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Crypt__Random__Seed.source",
+  "source_sha256": "a06f2671a193d55d74db120c169ea15a5a4a070073c20b4ab4f0123cec4a2a21",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Crypt__Random__Seed.translated.nsq",
+  "nsq_body_sha256": "20330bd8d420175ab3637b9ff787c17f7cdfc6cc2df145c8d32a8bc608c279dd",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

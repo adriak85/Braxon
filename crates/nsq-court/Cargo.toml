@@ -1,0 +1,19 @@
+[package]
+publish = false
+name = "nsq-court"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "NSQ court — 25-role operational authority and hound dispatch."
+
+[[bin]]
+name = "nsq-court"
+path = "src/main.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+nsq-core.workspace = true

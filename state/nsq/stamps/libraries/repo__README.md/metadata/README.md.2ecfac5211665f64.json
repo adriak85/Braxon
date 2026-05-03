@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__README.md/asm/macros/README.md.2ecfac5211665f64.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.190043+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__README.md",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__README.md/metadata/README.md.2ecfac5211665f64.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "README.md",
+  "source_bytes": 2512,
+  "source_sha256": "2ecfac5211665f64f294f68273c24cb564db6b85eb25e4fef0529b2f77906106",
+  "stamp_id": "nsq.asm.repo__README.md.README.md.2ecfac5211665f64"
+}

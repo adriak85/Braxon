@@ -1,0 +1,15 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+BRAXON_PRECOMMIT_TMP_DIR="${BRAXON_PRECOMMIT_TMP_DIR:-$HOME/.cache/Braxon/precommit}"
+mkdir -p "$BRAXON_PRECOMMIT_TMP_DIR"
+BRAXON_MORAL_INVARIANT_GUARD_PRECOMMIT_JSON="$BRAXON_PRECOMMIT_TMP_DIR/braxon_moral_invariant_guard_precommit.json"
+cd "${BRAXON_ROOT:-$(git rev-parse --show-toplevel)}"
+
+if [ -x tools/codex_quality_gate/check_codex_quality.sh ]; then
+  tools/codex_quality_gate/check_codex_quality.sh
+fi
+
+if [ -x bin/Braxon-moral-invariant-guard ]; then
+  bin/Braxon-moral-invariant-guard >"$BRAXON_MORAL_INVARIANT_GUARD_PRECOMMIT_JSON"
+fi

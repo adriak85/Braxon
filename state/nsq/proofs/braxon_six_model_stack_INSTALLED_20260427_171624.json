@@ -1,0 +1,15 @@
+{
+  "schema": "Braxon.nsq.proof_marker.v1",
+  "authority": "NSQ_COURT",
+  "signed_by": "GPT-5.5 Thinking",
+  "stamp": "20260427_171624",
+  "claim": "Council of Six canonical target manifest installed",
+  "proof_level": "configuration_installed_not_rebuild_verified",
+  "canonical_manifest": "config/nsq/BRAXON_six_model_stack.json",
+  "citadel_target": "state/nsq/citadel699/current/target_models.json",
+  "request_capsule": "state/nsq/citadel699/current/request_capsule.json",
+  "nsq_surface": "apps/nsq/BRAXON_six_model_stack.nsq",
+  "raw_fetch_allowed": false,
+  "pointer_setup_allowed": false,
+  "whole_core_runtime_claim_blocked_until_rebuild_verify": true
+}

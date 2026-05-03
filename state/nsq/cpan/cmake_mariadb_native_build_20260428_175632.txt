@@ -1,0 +1,39 @@
+=== CMAKE / MARIADB NATIVE BUILD PIN ===
+created_at=2026-04-28T22:56:32Z
+root=/data/data/com.termux/files/home/Braxon
+prefix=/data/data/com.termux/files/usr
+hook=/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/native_cmake_mariadb_env.sh
+
+=== tool paths ===
+cmake=/data/data/com.termux/files/usr/bin/cmake
+make=/data/data/com.termux/files/usr/bin/make
+pkg_config=/data/data/com.termux/files/usr/bin/pkg-config
+clang=/data/data/com.termux/files/usr/bin/clang
+clangxx=/data/data/com.termux/files/usr/bin/clang++
+mysql_config=/data/data/com.termux/files/usr/bin/mysql_config
+
+=== versions ===
+cmake version 4.3.2
+GNU Make 4.4.1
+clang version 21.1.8
+12.2.2
+
+=== mariadb paths ===
+mysql_config_cflags=-I/data/data/com.termux/files/usr/include/mariadb -I/data/data/com.termux/files/usr/include/mariadb/mysql
+mysql_config_libs=-L/data/data/com.termux/files/usr/lib/aarch64-linux-android/ -lmariadb
+mariadb_libdir=/data/data/com.termux/files/usr/lib/aarch64-linux-android/
+mariadb_found=/data/data/com.termux/files/usr/lib/aarch64-linux-android/libmariadb.so
+mariadb_found_dir=/data/data/com.termux/files/usr/lib/aarch64-linux-android
+
+=== libmariadb candidates ===
+/data/data/com.termux/files/usr/glibc/lib/libmariadb.so
+/data/data/com.termux/files/usr/glibc/lib/libmariadb.so.3
+/data/data/com.termux/files/usr/lib/aarch64-linux-android/libmariadb.so
+
+=== status ===
+DBD::mysql 5.013 reached compile but failed against MariaDB API symbols.
+Recommended MariaDB driver path: DBD::MariaDB.
+
+Next:
+source "/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/native_cmake_mariadb_env.sh"
+cpan DBD::MariaDB

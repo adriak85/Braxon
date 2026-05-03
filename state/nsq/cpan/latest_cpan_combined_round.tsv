@@ -1,0 +1,29 @@
+status	module	dist_or_surface	evidence	action
+PASS	Sub::Metadata	ZEFRAM/Sub-Metadata-0.002	Build/test/install OK	pin as usable XS/module surface
+PASS	UNIVERSAL::Object	STEVAN/UNIVERSAL-Object-0.17	make/test/install OK	pin as usable object surface
+PASS	MOP	STEVAN/MOP-0.14	make/test/install OK	pin as usable metaobject surface
+PASS	decorators	STEVAN/decorators-0.01	make/test/install OK	pin as usable decorator surface
+PARTIAL_FORCED_INSTALL	XML::ED	GAM/XML-ED-v0.0.2	build OK; only POD syntax test failed; force install succeeded	pin as usable-but-doc-test-dirty surface
+FAIL_DOC_ONLY	Test::Pod::Coverage	NEILB/Test-Pod-Coverage-1.10	missing Pod::Coverage caused test cascade	install Pod::Coverage before retry
+FAIL_NAME	XML::XS / XML::xs	none	CPAN could not expand namespace	do not retry under this name
+FAIL_NAME	impied / implied	none	CPAN could not expand namespace	do not retry under this name
+FAIL_LIB_API	DBD::mysql	DVEEDEN/DBD-mysql-5.013	MariaDB lib found, but MySQL API symbols missing	use DBD::MariaDB or older compatible client strategy
+FAIL_OLD_PERL_API	DBD::mysql	CAPTTOFU/DBD-mysql-3.0008	build fails on Perl 5.42 symbols and old API	do not use this old dist on Perl 5.42
+PASS	Alien::MariaDB	EGOR/Alien-MariaDB-0.01	system libmariadb detected by pkg-config; tests pass	pin as MariaDB discovery surface
+FAIL_ANDROID_PROC	Proc::ProcessTable	JWB/Proc-ProcessTable-0.637	build OK; load fails missing OS_get_table	treat as Android-incompatible unless patched
+FAIL_EVENT_BACKEND	EV	MLEHMANN/EV-4.37	libev backend init fails / segv on tests	keep out of hot path; do not force as default event backend
+PASS	Async::Interrupt	MLEHMANN/Async-Interrupt-1.26	build/test/install OK	pin as usable async interrupt surface
+PASS	IO::String	GAAS/IO-String-1.08	make/test/install OK	pin as usable IO memory-string surface
+PASS	Protocol::WebSocket	VTI/Protocol-WebSocket-0.26	27 files, 685 tests OK	pin as usable websocket protocol surface
+PASS	Test::MonkeyMock	VTI/Test-MonkeyMock-0.12	tests OK	pin as usable test/mock surface
+PASS	SockJS	VTI/SockJS-0.10	14 files, 55 tests OK	pin as usable websocket fallback/session surface
+PASS	Net::DirectConnect::TigerHash	PRO/Net-DirectConnect-TigerHash-0.09	XS C++ build OK; tests pass	pin as usable native hash surface
+PASS	Sys::Sendfile	LEONT/Sys-Sendfile-0.19	XS build/test/install OK	pin as usable sendfile surface
+STOP_OUTDATED_DIST	Net::DirectConnect	PRO/Net-DirectConnect-0.10	deps resolved, build OK, stopped because CPAN index has newer 0.14	retry explicit newer dist only if needed
+FAIL_DEBUGGER_DEPS	Devel::hdb	BRUMMETT/Devel-hdb-0.25	missing Devel::Callsite and Devel::Chitin; many localhost test failures	do not pin until deps pass
+BUILD_OK_TEST_FAIL	Runops::Trace	JJORE/Runops-Trace-0.14	compiled with 141 warnings; tests fail stack_grow negative count and trace mismatch	do not force into runtime; mark unstable on Perl 5.42/Android
+FAIL_DEP_CHAIN	Devel::Dt	JJORE/Devel-Dt-0.04	depends on B::Utils and Runops::Trace; tests fail	mark blocked
+PASS	DBD::libsql	YTURTLE/DBD-libsql-0.06	7 files, 93 tests OK	pin as usable DBI/libsql surface
+FAIL_GUI_TK	Devel::tkdb	VKON/Devel-tkdb-2.4	Tcl::Tk unavailable; Tk package missing from tclsh	only retry after Termux Tk/Tcl works
+FAIL_GUI_TK	Tcl::Tk	VKON/Tcl-Tk-1.51	tclsh cannot package require Tk	platform GUI dependency not ready
+FAIL_GUI_TK	Tcl::Tk::Tkwidget::treectrl	VKON/Tcl-Tk-Tkwidget-treectrl-2.4.2.7	requires Tcl::Tk first	blocked

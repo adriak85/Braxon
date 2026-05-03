@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__diagnostics__scene_authority_audit_20260419_104619.txt.447a3117087da093.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.629609+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__diagnostics__scene_authority_audit_20260419_104619.txt.447a3117087da093.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/diagnostics/scene_authority_audit_20260419_104619.txt",
+  "source_bytes": 235680,
+  "source_sha256": "447a3117087da093a1e799ddd62ffce8ddba8750583bcf5250743bd33c011018",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__diagnostics__scene_authority_audit_20260419_104619.txt.447a3117087da093"
+}

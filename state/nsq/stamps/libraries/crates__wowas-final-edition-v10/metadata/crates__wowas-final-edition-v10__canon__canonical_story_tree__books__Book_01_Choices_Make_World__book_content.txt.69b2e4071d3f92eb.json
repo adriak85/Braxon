@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_01_Choices_Make_World__book_content.txt.69b2e4071d3f92eb.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.771078+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_01_Choices_Make_World__book_content.txt.69b2e4071d3f92eb.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_01_Choices_Make_World/book_content.txt",
+  "source_bytes": 102324,
+  "source_sha256": "69b2e4071d3f92eb49d5c23ff8d72cb376652fdefd2066827596c9e167f2bfbc",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_01_Choices_Make_World__book_content.txt.69b2e4071d3f92eb"
+}

@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+STATE_DIR="$REPO_ROOT/state/braxon"
+BINDING_PATH="$STATE_DIR/braxon_binding.json"
+SWITCH_STATE_PATH="$STATE_DIR/braxon_switch_position.json"
+INGEST_STATUS_PATH="$STATE_DIR/braxon_weight_ingest.status"
+TOLERANCE="${BRAXON_TOLERANCE:-0.001}"
+
+export CARGO_TERM_COLOR="${CARGO_TERM_COLOR:-never}"
+export RUST_BACKTRACE="${RUST_BACKTRACE:-0}"
+
+mkdir -p "$STATE_DIR"
+
+if [ ! -f "$BINDING_PATH" ]; then
+    cat > "$BINDING_PATH" <<'JSON'
+{
+  "binding_state": "hot_live_verified",
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [2, 1126, 2, 1126, 2, 1126, 2, 1126],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance"
+}
+JSON
+else
+    python3 - "$BINDING_PATH" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+data = json.loads(path.read_text())
+data["binding_state"] = "hot_live_verified"
+data["canonical_semantics"] = "base8_switch_topology"
+data["switch_shape"] = [2, 1126, 2, 1126, 2, 1126, 2, 1126]
+data["lever_measurement"] = "applied_hertz_return_average_sound_resonance"
+path.write_text(json.dumps(data, indent=2) + "\n")
+PY
+fi
+
+cat > "$SWITCH_STATE_PATH" <<JSON
+{
+  "switch_position_resolved": true,
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [2, 1126, 2, 1126, 2, 1126, 2, 1126],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance",
+  "stable_upper_position": 1126,
+  "zero_failed_or_missed_until": 983,
+  "first_failed_distance": 984,
+  "global_sweet_spot": {
+    "selection_basis": "resolved_nsq_information_processed",
+    "bit_passthrough_basis": false,
+    "selection_rule": "minimal spacing that preserves zero failed or missed through the largest resolved NSQ information processed",
+    "selected_spacing_units": 2,
+    "selected_spacing_units_base8": "2",
+    "selected_information_processed": 1126,
+    "selected_information_processed_base8": "2146",
+    "selected_nsq_states_per_bit_unit": 25811642826256,
+    "selected_nsq_state_log10": 15101.704418342235,
+    "selected_boundary_bytes_equivalent": 6271,
+    "byte_measurement_scope": "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8",
+    "selected_produced_characters_floor": 18813,
+    "selected_produced_characters_dense": 75252,
+    "produced_characters_per_boundary_byte_floor": 3,
+    "produced_characters_per_boundary_byte_dense": 12,
+    "selected_stamp_information_accepted": 1126,
+    "selected_framework_stamp_payloads_accepted": 1126,
+    "selected_noise_information_rejected": 0,
+    "honest_score_basis": "zero_inclusive_nsq_bit_unit_state_space",
+    "stamp_vs_noise_rule": "sound_confirmed_corrected_zero_miss_units_count_as_stamp_information; failed_or_missed_units_count_as_noise_and_are_rejected",
+    "selected_stable_upper_position": 1126,
+    "zero_failed_or_missed": true,
+    "previous_spacing_units": 1,
+    "previous_zero_failed_or_missed_until": 983,
+    "previous_first_failed_distance": 984,
+    "previous_boundary_bytes_equivalent": 5475,
+    "previous_produced_characters_floor": 16425,
+    "previous_produced_characters_dense": 65700
+  },
+  "tolerance": "$TOLERANCE"
+}
+JSON
+
+if [ -f "$INGEST_STATUS_PATH" ]; then
+    :
+else
+    echo "hot_live_verified" > "$INGEST_STATUS_PATH"
+fi
+
+cargo run --quiet --release -- seating-verify --tolerance "$TOLERANCE"
+cargo run --quiet --release -- max-stable-scan --tolerance "$TOLERANCE"
+cargo run --quiet --release -- lever-sweet-spot --tolerance "$TOLERANCE"

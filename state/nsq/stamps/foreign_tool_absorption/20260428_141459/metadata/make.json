@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "make",
+  "source_path": "/data/data/com.termux/files/usr/bin/make",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/make.source",
+  "source_sha256": "203d62134f78aa8c9e8a4fd0bc87b9b5e114ea0f686a1cd27c5cdefbcc743de7",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/make.translated.nsq",
+  "nsq_body_sha256": "5055dde7aec262789cdcd032e661ca851cad31d2fdcc7291c4d64043811d85b7",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

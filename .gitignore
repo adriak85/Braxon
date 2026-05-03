@@ -1,0 +1,36 @@
+target/
+Cargo.lock
+*.log
+.backup/
+runtime/
+artifacts/nsq_native_truth/
+tmp/nsq_family_proof/
+*.strace
+*.trace
+
+# GitHub publication quarantine for stale oversized donor shards
+assets/braxon_core/source_ingest/qwen_transport.legacy/model.safetensors-*.safetensors
+assets/braxon_core/source_ingest/qwen_transport.partial.*/model.safetensors-*.safetensors
+# Embedded donor repo metadata is kept locally but not published from the outer repo
+tmp/braxon_transport_embedded_git_backup/
+# Local security advisory cache; keep generated Braxon summaries instead.
+state/braxon/rustsec-advisory-db/
+# Braxon downloader runtime state: keep reports in Download, not repo.
+state/braxon/model_downloader/current/*.resolved.json
+state/braxon/model_downloader/current/*.plan.json
+state/braxon/model_downloader/current/*.fetch.json
+state/braxon/model_downloader/current/*.verify.json
+state/braxon/model_downloader/current/*.state.json
+state/braxon/model_downloader/current/*.stdout.txt
+state/braxon/model_downloader/current/*.stderr.txt
+state/braxon/model_downloader/current/*.hf_cli.stdout.txt
+state/braxon/model_downloader/current/*.hf_cli.stderr.txt
+state/braxon/model_downloader/current/*.ingest_queue.jsonl
+state/braxon/model_downloader/current/*/
+assets/braxon_core/source_ingest/braxon_transport/*/
+
+# Citadel699 NSQ wire receptor runtime/import state: do not commit returned bundles or transient receipts.
+state/nsq/citadel699/current/*.json
+state/nsq/citadel699/current/requests/
+state/nsq/citadel699/current/imports/
+assets/braxon_core/source_ingest/nsq_transport/citadel699/

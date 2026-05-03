@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_14_The_Long_Reorientation__16_salvage_beats.md.5681ac960ae70ebd.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.296428+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_14_The_Long_Reorientation__16_salvage_beats.md.5681ac960ae70ebd.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_14_The_Long_Reorientation/16_salvage_beats.md",
+  "source_bytes": 1617,
+  "source_sha256": "5681ac960ae70ebdde7d159669f67daf1d66068af25fd9973f1cb34600e56d15",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_14_The_Long_Reorientation__16_salvage_beats.md.5681ac960ae70ebd"
+}

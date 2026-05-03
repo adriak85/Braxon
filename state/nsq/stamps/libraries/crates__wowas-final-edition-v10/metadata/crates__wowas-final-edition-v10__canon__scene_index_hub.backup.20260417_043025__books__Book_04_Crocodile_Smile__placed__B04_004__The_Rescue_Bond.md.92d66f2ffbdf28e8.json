@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_04_Crocodile_Smile__placed__B04_004__The_Rescue_Bond.md.92d66f2ffbdf28e8.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.061512+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_04_Crocodile_Smile__placed__B04_004__The_Rescue_Bond.md.92d66f2ffbdf28e8.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_04_Crocodile_Smile/placed/B04_004__The_Rescue_Bond.md",
+  "source_bytes": 335,
+  "source_sha256": "92d66f2ffbdf28e8734782e134cc511ac05a14896c80e212913eafa50c183260",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_04_Crocodile_Smile__placed__B04_004__The_Rescue_Bond.md.92d66f2ffbdf28e8"
+}

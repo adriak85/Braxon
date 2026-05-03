@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__wowas_corridor_encounter_pressure_patch_v8.tsv.c96f6d2536cd99c9.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.500512+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__wowas_corridor_encounter_pressure_patch_v8.tsv.c96f6d2536cd99c9.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/wowas_corridor_encounter_pressure_patch_v8.tsv",
+  "source_bytes": 70198,
+  "source_sha256": "c96f6d2536cd99c9f21ac50b61c23d5783e80dea73695f3170dc7b8927c53018",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__wowas_corridor_encounter_pressure_patch_v8.tsv.c96f6d2536cd99c9"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "DBIx::TransactionManager",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/DBIx/TransactionManager.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/DBIx__TransactionManager.source",
+  "source_sha256": "448e44e8d5b3da9f58bfae49ec5503c026906895f8dc35a61515bcd649827797",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/DBIx__TransactionManager.translated.nsq",
+  "nsq_body_sha256": "1e95840b790174e69ec4e072a508c9213c5497f0df9533ec05b9b936cc954c33",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

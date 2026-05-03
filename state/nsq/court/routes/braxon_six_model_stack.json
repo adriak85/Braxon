@@ -1,0 +1,16 @@
+{
+  "schema": "nsq.court.route.v1",
+  "route": "BRAXON_six_model_stack",
+  "owned_by": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "required_model_count": 6,
+  "transfer_method": "citadel699_nsq_request_return_rebuild",
+  "transfer_form": "nsq_only",
+  "raw_fetch_allowed": false,
+  "raw_payload_transfer_allowed": false,
+  "pointer_setup_allowed": false,
+  "truth": "Braxon model stack is exactly six registry-declared models. Citadel699 returns NSQ rebuild material only; no raw GGUF/safetensors or pointer files are accepted as the transfer artifact."
+}

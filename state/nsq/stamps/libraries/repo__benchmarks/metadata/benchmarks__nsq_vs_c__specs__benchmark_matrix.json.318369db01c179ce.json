@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__nsq_vs_c__specs__benchmark_matrix.json.318369db01c179ce.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.525623+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__nsq_vs_c__specs__benchmark_matrix.json.318369db01c179ce.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/nsq_vs_c/specs/benchmark_matrix.json",
+  "source_bytes": 430,
+  "source_sha256": "318369db01c179ce1b2fe8d90f77208a6d61d98d1ca60ddf95dc0f5f1d371d3e",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__nsq_vs_c__specs__benchmark_matrix.json.318369db01c179ce"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__codex/asm/macros/codex__hooks__pre_tool_use_alignment.py.46eadb9b4dcf0578.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.221392+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__codex",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__codex/metadata/codex__hooks__pre_tool_use_alignment.py.46eadb9b4dcf0578.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": ".codex/hooks/pre_tool_use_alignment.py",
+  "source_bytes": 1132,
+  "source_sha256": "46eadb9b4dcf05782457011f91e824079eba445b96878147cd8403db08397279",
+  "stamp_id": "nsq.asm.repo__codex.codex__hooks__pre_tool_use_alignment.py.46eadb9b4dcf0578"
+}

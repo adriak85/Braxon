@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Digest::HMAC",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Digest/HMAC.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Digest__HMAC.source",
+  "source_sha256": "bce9ee90fb1548325275b609bfd69ba6c3bea827eaba08a1148e92da2ec2dbf5",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Digest__HMAC.translated.nsq",
+  "nsq_body_sha256": "7610723882af6262ab19656f51fc6815bd806b32a7c5376417d7123493f93a19",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,27 @@
+NSQ_TRANSLATED_TOOL_BODY v14
+SOURCE_KIND cpan_source
+SOURCE_NAME common::sense
+SOURCE_SHA256 b53c12f66c4f759675614e03f2478da853df9c32e97800192e3a00dd65b794c9
+RUNTIME_AUTHORITY nsq_substrate
+FOREIGN_RUNTIME_ALLOWED false
+NO_PARALLEL_RUNTIME true
+NO_SILENT_FOREIGN_EXECUTION true
+STAMP_SYSTEM_ACTIVE true
+BODY_BEGIN
+NSQ_SOURCE_LINE 00000001 "package common::sense;"
+NSQ_SOURCE_LINE 00000002 ""
+NSQ_SOURCE_LINE 00000003 "our $VERSION = 3.75;"
+NSQ_SOURCE_LINE 00000004 ""
+NSQ_SOURCE_LINE 00000005 "# overload should be included"
+NSQ_SOURCE_LINE 00000006 ""
+NSQ_SOURCE_LINE 00000007 "sub import {"
+NSQ_SOURCE_LINE 00000008 "   local $^W; # work around perl 5.16 spewing out warnings for next statement"
+NSQ_SOURCE_LINE 00000009 "   # use warnings"
+NSQ_SOURCE_LINE 00000010 "   ${^WARNING_BITS} ^= ${^WARNING_BITS} ^ \"\\x0c\\x3f\\x33\\x00\\x03\\xf0\\x0f\\xc0\\xf0\\xfc\\x33\\x00\\x00\\xc0\\x00\\x00\\x00\\x00\\x00\\x00\";"
+NSQ_SOURCE_LINE 00000011 "   # use strict, use utf8; use feature;"
+NSQ_SOURCE_LINE 00000012 "   $^H |= 0x3c820fc0;"
+NSQ_SOURCE_LINE 00000013 "   @^H{qw(feature___SUB__ feature_apos_as_name_sep feature_bareword_filehandles feature_evalbytes feature_fc feature_indirect feature_multidimensional feature_say feature_smartmatch feature_state feature_switch feature_unicode)} = (1) x 12;"
+NSQ_SOURCE_LINE 00000014 "}"
+NSQ_SOURCE_LINE 00000015 ""
+NSQ_SOURCE_LINE 00000016 "1"
+BODY_END

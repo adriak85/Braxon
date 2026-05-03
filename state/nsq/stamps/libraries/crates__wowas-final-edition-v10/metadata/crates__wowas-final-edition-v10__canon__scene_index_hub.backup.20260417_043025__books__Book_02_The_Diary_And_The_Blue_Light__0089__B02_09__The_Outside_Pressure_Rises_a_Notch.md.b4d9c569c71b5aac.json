@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0089__B02_09__The_Outside_Pressure_Rises_a_Notch.md.b4d9c569c71b5aac.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.556806+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0089__B02_09__The_Outside_Pressure_Rises_a_Notch.md.b4d9c569c71b5aac.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0089__B02_09__The_Outside_Pressure_Rises_a_Notch.md",
+  "source_bytes": 202,
+  "source_sha256": "b4d9c569c71b5aac868a8cf9fbfa04f3e932ec1ea36706dc30ac4fc7345ca80d",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0089__B02_09__The_Outside_Pressure_Rises_a_Notch.md.b4d9c569c71b5aac"
+}

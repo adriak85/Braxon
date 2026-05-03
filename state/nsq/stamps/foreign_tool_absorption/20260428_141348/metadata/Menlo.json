@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Menlo",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Menlo.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Menlo.source",
+  "source_sha256": "bad9c7882ec50f36c53a76aa964a87a363b5768096d013cabe840ed85538f902",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Menlo.translated.nsq",
+  "nsq_body_sha256": "b2b4d8e3e1d50d221135ecd97d92c571fc326956692be0dc4daf317f8bd8dc2f",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

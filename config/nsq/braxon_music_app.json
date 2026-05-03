@@ -1,0 +1,27 @@
+{
+  "schema": "Braxon.music_app.config.v1",
+  "app": "BRAXON_music_app",
+  "mode": "offline_first_seed_rebuild",
+  "asm": {
+    "enabled": true,
+    "kernel": "BRAXON_music_asm_fold_u8",
+    "claim": "native_asm_seed_fold_only"
+  },
+  "audio": {
+    "preview_format": "wav_pcm_s16le_mono",
+    "sample_rate": 22050,
+    "seconds": 9,
+    "sections": ["intro", "verse", "pre_chorus", "chorus", "bridge", "outro"]
+  },
+  "transfer": {
+    "strategy": "transfer_enough_of_each_section_to_rebuild_rest_on_site",
+    "citadel_699_review": "state/nsq/citadel699/current/audit.json",
+    "beyond_699_seed_pack": "state/nsq/site_rebuild/current/beyond_699_seed_pack.jsonl"
+  },
+  "truth_boundary": {
+    "full_music_generation_claim": false,
+    "bare_metal_claim": false,
+    "perpetual_runtime_claim": false,
+    "native_preview_synth_claim": true
+  }
+}

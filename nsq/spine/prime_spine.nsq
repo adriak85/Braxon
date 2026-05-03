@@ -1,0 +1,28 @@
+# prime runtime spine truth
+
+triple spine.prime -> owns -> dialect_intake :layer 1 :plane 1 :anchor 100 :weight 100 :flags 1
+triple spine.prime -> owns -> canonical_lowering :layer 1 :plane 1 :anchor 110 :weight 100 :flags 1
+triple spine.prime -> owns -> prime_ir :layer 1 :plane 1 :anchor 120 :weight 100 :flags 1
+triple spine.prime -> owns -> substrate_dispatch :layer 1 :plane 1 :anchor 130 :weight 100 :flags 1
+triple spine.prime -> owns -> proof_replay :layer 1 :plane 1 :anchor 140 :weight 100 :flags 1
+
+triple dialect.canonical -> enters -> spine.prime :layer 1 :plane 1 :anchor 200 :weight 90 :flags 1
+triple dialect.sexpr -> enters -> spine.prime :layer 1 :plane 1 :anchor 210 :weight 90 :flags 1
+triple dialect.lua_shape -> enters -> spine.prime :layer 1 :plane 1 :anchor 220 :weight 90 :flags 1
+triple dialect.python_shape -> enters -> spine.prime :layer 1 :plane 1 :anchor 230 :weight 90 :flags 1
+triple dialect.rust_hook -> enters -> spine.prime :layer 1 :plane 1 :anchor 240 :weight 90 :flags 1
+
+triple spine.prime -> emits -> prime.node :layer 1 :plane 1 :anchor 300 :weight 80 :flags 1
+triple spine.prime -> emits -> prime.edge :layer 1 :plane 1 :anchor 310 :weight 80 :flags 1
+triple spine.prime -> emits -> prime.state :layer 1 :plane 1 :anchor 320 :weight 80 :flags 1
+triple spine.prime -> emits -> prime.dispatch :layer 1 :plane 1 :anchor 330 :weight 80 :flags 1
+
+triple runtime.rust -> becomes -> substrate.rust :layer 1 :plane 1 :anchor 400 :weight 80 :flags 1
+triple runtime.shell -> becomes -> substrate.shell :layer 1 :plane 1 :anchor 410 :weight 80 :flags 1
+triple runtime.local -> becomes -> substrate.local :layer 1 :plane 1 :anchor 420 :weight 80 :flags 1
+
+triple substrate.rust -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 500 :weight 80 :flags 1
+triple substrate.shell -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 510 :weight 80 :flags 1
+triple substrate.local -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 520 :weight 80 :flags 1
+
+membrane spine.prime :state sealed :flux 9 :gate 1 :phase 1

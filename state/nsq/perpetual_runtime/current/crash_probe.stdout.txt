@@ -1,0 +1,13 @@
+NSQ_PERPETUAL_RUNTIME_CRASH_PROBE
+authority=NSQ_COURT
+architecture_root=true
+king=compositor
+queen=linter
+route=perpetual_runtime
+source_language=NSQ
+compiled_surface=NSQASM_AARCH64
+runtime_kind=nsqasm_aarch64_no_libc
+c_runner_used=false
+seq=2
+intentional_crash_probe=true
+ok=false

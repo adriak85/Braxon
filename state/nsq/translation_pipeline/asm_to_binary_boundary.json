@@ -1,0 +1,22 @@
+{
+  "schema": "nsq.translation_pipeline.asm_to_binary_boundary.v1",
+  "generated_at": "20260424_144803",
+  "source_truth": "nsq",
+  "operating_form": "asm",
+  "downstream_output": "BRAXON_binary_translation",
+  "BRAXON_live_claim": false,
+  "rule": "Braxon may translate ASM operating forms into binary output when ready; binary output is not NSQ source truth.",
+  "requires": [
+    "source_sha256",
+    "nsq_authority_check",
+    "asm_operating_form",
+    "round_trip_validation",
+    "metadata_impact",
+    "moral_invariant_preservation"
+  ],
+  "forbidden": [
+    "binary_as_nsq_source_truth",
+    "binary_as_metadata_authority",
+    "binary_as_moral_invariant_authority"
+  ]
+}

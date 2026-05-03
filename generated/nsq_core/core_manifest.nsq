@@ -1,0 +1,13 @@
+# generated core manifest root
+
+triple manifest.core -> includes -> nsq/core/system_core.nsq :layer 1 :plane 1 :anchor 1500 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/hooks/hook_matrix.nsq :layer 1 :plane 1 :anchor 1510 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/hooks/dialects.nsq :layer 1 :plane 1 :anchor 1520 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/install/install_capsule.nsq :layer 1 :plane 1 :anchor 1530 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_source_lib.nsq :layer 1 :plane 1 :anchor 1540 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_compile_lib.nsq :layer 1 :plane 1 :anchor 1550 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_inspect_lib.nsq :layer 1 :plane 1 :anchor 1560 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_pack_lib.nsq :layer 1 :plane 1 :anchor 1570 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_compose_lib.nsq :layer 1 :plane 1 :anchor 1580 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/libs/nsq_prime_lib.nsq :layer 1 :plane 1 :anchor 1590 :weight 100 :flags 1
+triple manifest.core -> includes -> nsq/repos/active_repo_set.nsq :layer 1 :plane 1 :anchor 1600 :weight 100 :flags 1

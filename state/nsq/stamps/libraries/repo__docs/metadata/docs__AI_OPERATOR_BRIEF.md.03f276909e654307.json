@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__AI_OPERATOR_BRIEF.md.03f276909e654307.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.222758+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__AI_OPERATOR_BRIEF.md.03f276909e654307.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/AI_OPERATOR_BRIEF.md",
+  "source_bytes": 1697,
+  "source_sha256": "03f276909e654307d3505637cf185114355ee7f552d9b56dc155802e4d73ee82",
+  "stamp_id": "nsq.asm.repo__docs.docs__AI_OPERATOR_BRIEF.md.03f276909e654307"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0008__B02_01__The_Blue_Thread_Hums_Beneath_Calm.md.f39d6e681d30afa9.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.432692+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0008__B02_01__The_Blue_Thread_Hums_Beneath_Calm.md.f39d6e681d30afa9.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0008__B02_01__The_Blue_Thread_Hums_Beneath_Calm.md",
+  "source_bytes": 198,
+  "source_sha256": "f39d6e681d30afa964928aa8512d0d11c4a77e30b4994e3481a3b55d991fef7e",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0008__B02_01__The_Blue_Thread_Hums_Beneath_Calm.md.f39d6e681d30afa9"
+}

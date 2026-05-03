@@ -1,0 +1,43 @@
+=== NSQ CPAN SURFACE ATTACH ===
+date: Tue Apr 28 17:32:29 CDT 2026
+root: /data/data/com.termux/files/home/Braxon
+prefix: /data/data/com.termux/files/usr
+
+=== visible commands before ===
+perl         /data/data/com.termux/files/usr/bin/perl
+cpan         /data/data/com.termux/files/usr/bin/cpan
+cpanm        cpm          /data/data/com.termux/files/usr/bin/cpm
+carton       /data/data/com.termux/files/usr/bin/carton
+prove        /data/data/com.termux/files/usr/bin/prove
+perldoc      /data/data/com.termux/files/usr/bin/perldoc
+corelist     /data/data/com.termux/files/usr/bin/corelist
+fatpack      /data/data/com.termux/files/usr/bin/fatpack
+minicpan     /data/data/com.termux/files/usr/bin/minicpan
+archer       /data/data/com.termux/files/usr/bin/archer
+ark          
+=== perl identity ===
+version='5.42.0';
+archname='aarch64-android';
+prefix='/data/data/com.termux/files/usr';
+siteprefix='/data/data/com.termux/files/usr';
+
+
+=== attach result ===
+modules:  /data/data/com.termux/files/home/Braxon/state/nsq/cpan/cpan_module_manifest.tsv
+commands: /data/data/com.termux/files/home/Braxon/state/nsq/cpan/cpan_command_manifest.tsv
+stamps:   /data/data/com.termux/files/home/Braxon/state/nsq/stamps/cpan_command_surface_stamps.jsonl
+wrappers: /data/data/com.termux/files/home/Braxon/tools/nsq/cpan/bin
+module_count:  5380
+command_count: 947
+stamp_count:   947
+
+=== missing app command check ===
+MODULE_NOT_LOADABLE App::cpanminus -> cpanm
+OK App::cpm -> cpm
+OK App::FatPacker -> fatpack
+OK CPAN::Mini -> minicpan
+OK Archer -> archer
+MODULE_PRESENT_COMMAND_MISSING Ark -> ark
+
+Activate:
+source "/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/activate_cpan_surface.sh"

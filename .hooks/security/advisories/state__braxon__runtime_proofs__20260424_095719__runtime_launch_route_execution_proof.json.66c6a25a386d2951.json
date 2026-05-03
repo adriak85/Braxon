@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__runtime_proofs__20260424_095719__runtime_launch_route_execution_proof.json.66c6a25a386d2951.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.270236+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__runtime_proofs__20260424_095719__runtime_launch_route_execution_proof.json.66c6a25a386d2951.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/runtime_proofs/20260424_095719/runtime_launch_route_execution_proof.json",
+  "source_bytes": 5796,
+  "source_sha256": "66c6a25a386d2951f79f6cc9f0328520d8e41c0b5f5388f213590f97c35b040f",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__runtime_proofs__20260424_095719__runtime_launch_route_execution_proof.json.66c6a25a386d2951"
+}

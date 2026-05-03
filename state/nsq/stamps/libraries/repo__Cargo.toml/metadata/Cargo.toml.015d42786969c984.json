@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__Cargo.toml/asm/macros/Cargo.toml.015d42786969c984.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.188786+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__Cargo.toml",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__Cargo.toml/metadata/Cargo.toml.015d42786969c984.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "Cargo.toml",
+  "source_bytes": 3382,
+  "source_sha256": "015d42786969c984593fe7805e6f8cc80443bec98ac69f7d3adf00c0461abdee",
+  "stamp_id": "nsq.asm.repo__Cargo.toml.Cargo.toml.015d42786969c984"
+}

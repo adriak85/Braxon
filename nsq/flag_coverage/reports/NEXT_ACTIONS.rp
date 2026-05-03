@@ -1,0 +1,7 @@
+Next actions for this batch
+
+1. verify every language and platform family against the spine/runtime and language capture trees
+2. build a native flag registry instead of relying on foreign spellings
+3. connect flag resolution to the local packed package-db model
+4. add nsq_write_nsq translation seeds so NSQ can move toward writing NSQ natively
+5. collapse repeated flag bundles into stamps and warm reusable plans

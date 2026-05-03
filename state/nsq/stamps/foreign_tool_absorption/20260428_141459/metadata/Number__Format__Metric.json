@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Number::Format::Metric",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Number/Format/Metric.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Number__Format__Metric.source",
+  "source_sha256": "143aef5cfa1c7d1ee004bb085374a34963b2bdb95ba6fee0c51b809548917962",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Number__Format__Metric.translated.nsq",
+  "nsq_body_sha256": "0dd7cd6bca9aa94a15e2407347ecb2033f8697d9fbbc17fe3f5d31f188613c5d",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "roles": [
+    {
+      "name": "composer",
+      "title": "composer",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "queen",
+      "title": "queen",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "bard",
+      "title": "bard",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "jack",
+      "title": "jack",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "ace",
+      "title": "ace",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "keeper",
+      "title": "keeper",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "archon_gates",
+      "title": "archon_gates",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "guard",
+      "title": "guard",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "ticketmaster",
+      "title": "ticketmaster",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "manager",
+      "title": "manager",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "director",
+      "title": "director",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "detective",
+      "title": "detective",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "keymaster",
+      "title": "keymaster",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "locksmith",
+      "title": "locksmith",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "healer",
+      "title": "healer",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "tank",
+      "title": "tank",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "arcmage",
+      "title": "arcmage",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "conjurer",
+      "title": "conjurer",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "rook",
+      "title": "rook",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "knight",
+      "title": "knight",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "bishop",
+      "title": "bishop",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "crier",
+      "title": "crier",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "sees_all",
+      "title": "sees_all",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "seer",
+      "title": "seer",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    },
+    {
+      "name": "oracle",
+      "title": "oracle",
+      "class": "court_seat",
+      "authority": true,
+      "crash_guarded": true,
+      "persistence": "seat_bound"
+    }
+  ],
+  "promotion_ladder": [
+    "disposable_agent",
+    "page",
+    "recoverable_page",
+    "court_seat"
+  ],
+  "deadlock_chain": [
+    "bard",
+    "jack",
+    "ace",
+    "keeper"
+  ]
+}

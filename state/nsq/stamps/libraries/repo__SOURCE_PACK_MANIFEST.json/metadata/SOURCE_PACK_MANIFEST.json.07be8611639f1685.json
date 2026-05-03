@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__SOURCE_PACK_MANIFEST.json/asm/macros/SOURCE_PACK_MANIFEST.json.07be8611639f1685.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.193007+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__SOURCE_PACK_MANIFEST.json",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__SOURCE_PACK_MANIFEST.json/metadata/SOURCE_PACK_MANIFEST.json.07be8611639f1685.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "SOURCE_PACK_MANIFEST.json",
+  "source_bytes": 391,
+  "source_sha256": "07be8611639f168530030cdc60956d7faa39db5ea1e24e31040ba6a6c0eabb13",
+  "stamp_id": "nsq.asm.repo__SOURCE_PACK_MANIFEST.json.SOURCE_PACK_MANIFEST.json.07be8611639f1685"
+}

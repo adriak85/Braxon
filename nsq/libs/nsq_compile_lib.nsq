@@ -1,0 +1,10 @@
+# nsq-compile library declaration
+
+triple lib.nsq_compile -> consumes -> canonical_projection :layer 1 :plane 1 :anchor 900 :weight 80 :flags 1
+triple lib.nsq_compile -> consumes -> calibration_lock :layer 1 :plane 1 :anchor 910 :weight 80 :flags 1
+triple lib.nsq_compile -> emits -> nsqb_artifact :layer 1 :plane 1 :anchor 920 :weight 80 :flags 1
+triple lib.nsq_compile -> emits -> compile_manifest :layer 1 :plane 1 :anchor 930 :weight 80 :flags 1
+triple lib.nsq_compile -> records -> source_dialect :layer 1 :plane 1 :anchor 940 :weight 80 :flags 1
+triple lib.nsq_compile -> records -> spine_lines :layer 1 :plane 1 :anchor 950 :weight 80 :flags 1
+
+membrane lib.nsq_compile :state required :flux 6 :gate 1 :phase 1

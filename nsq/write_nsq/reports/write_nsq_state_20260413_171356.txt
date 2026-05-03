@@ -1,0 +1,22 @@
+NSQ write_nsq/docs/tokenizer state scan v3
+root=/data/data/com.termux/files/home/Braxon
+
+== required registries ==
+present /data/data/com.termux/files/home/Braxon/nsq/write_nsq/databases/authoring_registry.db
+present /data/data/com.termux/files/home/Braxon/nsq/write_nsq/databases/doc_emit_registry.db
+present /data/data/com.termux/files/home/Braxon/nsq/write_nsq/databases/tokenizer_emit_registry.db
+present /data/data/com.termux/files/home/Braxon/nsq/write_nsq/databases/package_db_binding_registry.db
+
+== package-db binding ==
+id: nsq.write.nsq.package.db.binding.registry.v3
+type: database
+version: 3
+authority: Braxon
+role: package_db_binding_registry
+
+bindings:
+  package_db_source: config/nsq/runtime_native/package_db/multiport_package_db.json
+  minimum_ports: 8
+  authority_commit_port: 7
+  tokenizer_doc_emit_port: 5
+  proof_port: 6

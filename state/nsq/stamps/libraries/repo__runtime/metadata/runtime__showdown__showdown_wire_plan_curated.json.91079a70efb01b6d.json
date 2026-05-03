@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__runtime/asm/macros/runtime__showdown__showdown_wire_plan_curated.json.91079a70efb01b6d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.509119+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__runtime",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__runtime/metadata/runtime__showdown__showdown_wire_plan_curated.json.91079a70efb01b6d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "runtime/showdown/showdown_wire_plan_curated.json",
+  "source_bytes": 2545,
+  "source_sha256": "91079a70efb01b6d4d450dd2e522f3c613aae804ffb345a03f9914d349c8f0ac",
+  "stamp_id": "nsq.asm.repo__runtime.runtime__showdown__showdown_wire_plan_curated.json.91079a70efb01b6d"
+}

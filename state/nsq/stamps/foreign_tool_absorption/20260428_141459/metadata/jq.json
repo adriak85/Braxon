@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "jq",
+  "source_path": "/data/data/com.termux/files/usr/bin/jq",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/jq.source",
+  "source_sha256": "f747cd49c333d32344ed40a666cc48111a0adb945f435cce50deeda8d1ea6bb9",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/jq.translated.nsq",
+  "nsq_body_sha256": "2d3f454a1f6a6099c81a04f3edbd8c114c0a3d87e72be10605aff711f2b0f55c",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__hann-rs-service__RUSTSEC-2023-0123.md.2a8f71d123cb0d24.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.948316+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__hann-rs-service__RUSTSEC-2023-0123.md.2a8f71d123cb0d24.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/hann-rs-service/RUSTSEC-2023-0123.md",
+  "source_bytes": 641,
+  "source_sha256": "2a8f71d123cb0d24b4c5dc41b83a7b39930cdc155f959ea78091cbf51536540a",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__hann-rs-service__RUSTSEC-2023-0123.md.2a8f71d123cb0d24"
+}

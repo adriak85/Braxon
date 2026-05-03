@@ -1,0 +1,19 @@
+== NSQ native hardware proof production round v3 ==
+native_nsqasm_elf_probe_executed=True
+lawful_nsq_semantic_runtime_executed=false
+nsq_task_file_semantically_executed=false
+nsq_runtime_elapsed_measured=false
+bare_metal_proven=false
+bare_metal_claim_allowed=false
+round_3_tracking=false
+round_3_macro_discovery=false
+round_3_tracers=false
+
+truth_boundary=Native no-libc NSQASM ELF execution is proven; full NSQ semantic runtime and bare-metal driver boundary are not proven yet.
+
+next_required_proof:
+- native ELF runner must read the NSQ task file
+- native ELF runner must execute task semantics from the NSQ file
+- production run must keep tracking, tracers, and macro discovery disabled
+- elapsed time must be measured for NSQ runtime work
+- driver or mount boundary proof must pass before bare-metal claim

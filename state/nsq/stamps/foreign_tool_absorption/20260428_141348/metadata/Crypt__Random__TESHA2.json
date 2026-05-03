@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Crypt::Random::TESHA2",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Crypt/Random/TESHA2.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Crypt__Random__TESHA2.source",
+  "source_sha256": "16f22f63a929a0cff0c38eb3759fe5e4bf304f84a9d9dff78af26c684599821b",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Crypt__Random__TESHA2.translated.nsq",
+  "nsq_body_sha256": "d47754a15c13b5f049353ceff0546d648a1c73ee4fbd6f775b3c5a50ac5885d1",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

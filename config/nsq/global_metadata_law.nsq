@@ -1,0 +1,40 @@
+NSQ_CONFIG global_metadata_law
+
+scan_policy {
+  scan_local_repo = true
+  skip_generated_stamp_bodies = true
+  skip_quarantine = true
+  skip_harm_reports_as_source = true
+  skip_target_build_outputs = true
+}
+
+impact_policy {
+  build_forward_dependencies = true
+  build_reverse_dependencies = true
+  compare_current_snapshot_to_live_repo = true
+  emit_changed_added_removed = true
+  emit_transitive_affected = true
+  max_depth_default = 8
+}
+
+metadata_hygiene_policy {
+  source_metadata_is_tracking_and_identity = true
+  generated_metadata_is_lineage_and_proof = true
+  generated_metadata_is_not_payload = true
+  stale_metadata_must_be_reported = true
+  stale_proofs_must_be_reported = true
+}
+
+scoring_policy {
+  benchmark_rounds = 2
+  scored_round = 2
+  generated_noise_excluded = true
+}
+
+asm_operating_metadata_policy {
+  track_asm_as_operating_form = true
+  track_binary_as_downstream_output = true
+  preserve_nsq_source_truth = true
+  preserve_moral_invariant = true
+  require_impact_report_after_asm_law_change = true
+}

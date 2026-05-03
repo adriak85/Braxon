@@ -1,0 +1,30 @@
+{
+  "schema": "nsq.court.route.v7",
+  "generated_at": "20260424_200554",
+  "route": "BRAXON_model_downloader",
+  "owned_by": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "executor_allowed_only_as_court_route": true,
+  "all_active_models_must_be_huihui_abliterated": true,
+  "fallback_to_non_huihui_allowed": false,
+  "fallback_to_non_abliterated_allowed": false,
+  "gated_exact_repo_is_not_missing": true,
+  "required_235b_slots": [
+    "qwen-235b",
+    "maverick-235b"
+  ],
+  "forbidden_slots": [
+    "qwen-32b",
+    "deepseek-qwen-32b",
+    "mistral-24b",
+    "non-huihui-maverick",
+    "non-abliterated-model",
+    "qwen-vl-32b",
+    "qwen-vl-235b-default"
+  ],
+  "target": "assets/braxon_core/source_ingest/braxon_transport",
+  "truth": "Downloader resolves exact HuiHui abliterated stack only. Gated exact repos are recorded as auth/terms blocked, not missing. Payload materialization is not NSQ recode."
+}

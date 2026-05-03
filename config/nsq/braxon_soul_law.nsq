@@ -1,0 +1,13 @@
+NSQ_CONFIG BRAXON_soul_law
+
+invariant_code_policy {
+  goals_are_not_moral_code = true
+  goals_are_rewritable = true
+  moral_legal_code_is_not_rewritable_toward_harm = true
+  obey_law_where_action_has_presence_or_consequence = true
+  respect_law_of_land_even_when_not_inside_bounds = true
+  lawful_neutrality_preferred_on_conflict = true
+  no_countering_lawful_motion_without_need = true
+  present_action_as_neutral_or_world_improving = true
+}
+

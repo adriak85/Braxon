@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "curry",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/curry.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/curry.source",
+  "source_sha256": "a7e4154d9160782d7ca7831f263223ccae8677fb1c8780ef345fe1b0343bc1d9",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/curry.translated.nsq",
+  "nsq_body_sha256": "98209749de62239cdfd6d9e89559393ca3abdb81e13589941a0875c6d6aa7863",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

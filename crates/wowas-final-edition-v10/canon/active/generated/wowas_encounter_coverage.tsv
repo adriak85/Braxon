@@ -1,0 +1,451 @@
+book_num	character	encounter_count
+1	Daisy May	3
+1	Dervish	3
+1	MAJISKII	3
+1	Mack	3
+1	NEITH	3
+1	Pip	3
+1	ROLZEN	3
+1	Rylos Vayne Johnson / Boojay	3
+1	Solvaenkyr	4
+1	URSULA	3
+1	Xethrolund	3
+1	book_25	3
+1	canonical_id	4
+1	first_appears	4
+1	role	3
+1	source_stack	4
+1	the Cockatrice	4
+1	unnoticed)	4
+2	Alex	4
+2	Boojay	3
+2	DERVISH	3
+2	Daisy May	3
+2	Daisy May + Majiskii formally entrusted at floating market	3
+2	Daisy May formally	3
+2	Mack	3
+2	Majiskii	3
+2	Merchant Lassith	4
+2	Pip	3
+2	Rylos Vayne Johnson / Boojay	3
+2	Vault Keeper Derris	4
+2	Xethrolund	3
+2	book_25	4
+2	canonical_id	3
+2	first_appears	3
+2	role	4
+2	source_stack	4
+3	DAISY MAY	3
+3	DERVISH	3
+3	MAJISKII	3
+3	Mack	3
+3	NEITH	3
+3	P.A.P.I. reveal — Xethrolund's physical form described through diary	3
+3	Pip	3
+3	ROLZEN	3
+3	RYLOS / BOOJAY	3
+3	Rylos Vayne Johnson / Boojay	3
+3	URSULA	3
+3	Xethrolund	3
+3	book_25	7
+3	canonical_id	8
+3	first_appears	9
+3	pre_pip_role	3
+3	role	8
+3	source_stack	7
+4	Boojay	3
+4	Boojay as full physical presence	3
+4	DERVISH	3
+4	Daisy May	3
+4	Mack	3
+4	Majiskii	3
+4	NEITH	3
+4	Pip	3
+4	ROLZEN	3
+4	Rylos Vayne Johnson / Boojay	3
+4	URSULA	3
+4	Xethrolund	3
+4	book_25	6
+4	canonical_id	6
+4	first_appears	6
+4	predatory force	6
+4	role	6
+4	source_stack	6
+5	Boojay	3
+5	DERVISH	3
+5	Daisy May	3
+5	Glass Forge / Glass Palace	6
+5	Mack	3
+5	Majiskii	3
+5	NEITH	3
+5	Pip	3
+5	ROLZEN	3
+5	RYLOS / BOOJAY	3
+5	URSULA	3
+5	Xethrolund	3
+5	book_25	6
+5	canonical_id	6
+5	first_appears	6
+5	pre_pip_role	3
+5	role	6
+5	source_stack	6
+6	Boojay	3
+6	DERVISH	3
+6	Daisy May	3
+6	MAJISKII	3
+6	Mack	3
+6	NEITH	3
+6	Pip	3
+6	ROLZEN	3
+6	RYLOS / BOOJAY	3
+6	Solvaenkyr	6
+6	URSULA	3
+6	Xethrolund	3
+6	book_25	6
+6	canonical_id	6
+6	first_appears	6
+6	pre_pip_role	3
+6	role	6
+6	source_stack	6
+7	Boojay	3
+7	Cockatrice	6
+7	DERVISH	3
+7	Daisy May	3
+7	Mack	3
+7	Majiskii	3
+7	NEITH	3
+7	Pip	3
+7	ROLZEN	3
+7	RYLOS / BOOJAY	3
+7	URSULA	3
+7	XETHROLUND	3
+7	book_25	6
+7	canonical_id	6
+7	first_appears	6
+7	pre_pip_role	3
+7	role	6
+7	source_stack	6
+8	Boojay	3
+8	DERVISH	3
+8	Daisy May	3
+8	Drawn entities	4
+8	MACK	3
+8	Majiskii	3
+8	NEITH	3
+8	Pip	3
+8	ROLZEN	3
+8	Renath	4
+8	URSULA	3
+8	Wrenath	4
+8	XETHROLUND	3
+8	book_25	4
+8	canonical_id	3
+8	first_appears	4
+8	role	4
+8	source_stack	3
+9	Boojay	3
+9	Cockatrice	3
+9	DERVISH	3
+9	Daisy May	3
+9	Glint	3
+9	Mack	3
+9	Majiskii	3
+9	NEITH	3
+9	Pip	3
+9	Solvaenkyr	3
+9	Ursula	3
+9	Xethrolund	3
+9	book_25	3
+9	canonical_id	3
+9	first_appears	3
+9	role	3
+9	source_stack	3
+9	then physical arrival)	3
+10	Boojay	3
+10	Cockatrice	6
+10	DAISY MAY	3
+10	DERVISH	3
+10	MAJISKII	3
+10	Mack	3
+10	NEITH	3
+10	Pip	3
+10	ROLZEN	3
+10	RYLOS / BOOJAY	3
+10	URSULA	3
+10	Xethrolund	3
+10	book_25	6
+10	canonical_id	6
+10	first_appears	6
+10	pre_pip_role	3
+10	role	6
+10	source_stack	6
+11	Boojay	3
+11	DAISY MAY	3
+11	DERVISH	3
+11	MAJISKII	3
+11	Mack	3
+11	NEITH	3
+11	Pip	3
+11	ROLZEN	3
+11	RYLOS / BOOJAY	3
+11	URSULA	3
+11	Xethrolund	3
+11	book_25	8
+11	canonical_id	8
+11	first_appears	7
+11	pre_pip_role	3
+11	role	7
+11	rylos_arc	3
+11	source_stack	9
+12	DERVISH	3
+12	Daisy May	3
+12	Mack	3
+12	Majiskii	3
+12	NEITH	3
+12	Pip	3
+12	ROLZEN	3
+12	RYLOS / BOOJAY	3
+12	URSULA	3
+12	Xethrolund	3
+12	book_25	8
+12	canonical_id	8
+12	first_appears	7
+12	pre_pip_role	3
+12	role	7
+12	rylos_arc	3
+12	rylos_pip_law	3
+12	source_stack	9
+13	Calla	1
+13	Daisy May	3
+13	Feritha	2
+13	Keeper Olvath	2
+13	Mack	3
+13	Majiskii	3
+13	Oswyn	1
+13	Pethran	2
+13	Pip	3
+13	Rolzen	3
+13	Sorra	1
+13	Wrenath	1
+13	Xethrolund	3
+13	book_25	2
+13	canonical_id	1
+13	first_appears	2
+13	role	2
+13	source_stack	1
+14	Corveth	1
+14	Daevyn	1
+14	Daisy May	3
+14	Elven	1
+14	Ithren	1
+14	Kyrel	1
+14	Loreth	1
+14	Majiskii	4
+14	Pip	3
+14	Renath	1
+14	Reval	1
+14	Selwyn	1
+14	Seth	1
+14	Sorra	1
+14	Tavan	1
+14	Thorn	1
+14	Verath	1
+14	Xethrolund	4
+15	Daisy May	3
+15	Drawn entities	1
+15	Eyeless City Governor	1
+15	Majiskii	3
+15	Pip	3
+15	Rolzen	3
+15	Rylos Vayne Johnson / Boojay	3
+15	Wrenath	1
+15	Xethrolund	3
+15	book_25	1
+15	canonical_id	1
+15	eyeless city inhabitants	2
+15	first_appears	2
+15	mutilated)	2
+15	role	2
+15	source_stack	1
+15	the Drawn	2
+15	unnamed warden friend	2
+16	Corveth	4
+16	DERVISH	3
+16	Daisy May	3
+16	MACK	3
+16	Majiskii	3
+16	Neith	3
+16	Oswyn	3
+16	Pip	3
+16	Rolzen	3
+16	Rylos Vayne Johnson / Boojay	3
+16	Sorra	4
+16	URSULA	3
+16	Xethrolund	3
+16	book_25	4
+16	canonical_id	4
+16	first_appears	3
+16	role	4
+16	source_stack	4
+17	DAISY MAY	3
+17	DERVISH	3
+17	MAJISKII	3
+17	Mack	3
+17	NEITH	3
+17	Pip	3
+17	RYLOS / BOOJAY	3
+17	Rolzen	3
+17	Rylos Vayne Johnson / Boojay	3
+17	URSULA	3
+17	Xethrolund	3
+17	book_25	8
+17	canonical_id	7
+17	first_appears	8
+17	pre_pip_role	3
+17	role	9
+17	rylos_arc	3
+17	source_stack	7
+18	DAISY MAY	3
+18	DERVISH	3
+18	MACK	3
+18	MAJISKII	3
+18	NEITH	3
+18	Pip	3
+18	RYLOS / BOOJAY	3
+18	Rolzen	3
+18	Rylos Vayne Johnson / Boojay	3
+18	URSULA	3
+18	Xethrolund	3
+18	book_25	8
+18	canonical_id	7
+18	first_appears	8
+18	pre_pip_role	3
+18	role	9
+18	rylos_arc	3
+18	source_stack	7
+19	DERVISH	3
+19	Daisy May	3
+19	Mack	3
+19	Majiskii	3
+19	Neith	3
+19	Pip	3
+19	RYLOS / BOOJAY	3
+19	Rolzen	3
+19	Rylos Vayne Johnson / Boojay	3
+19	URSULA	3
+19	Xethrolund	3
+19	book_25	8
+19	canonical_id	7
+19	first_appears	8
+19	pre_pip_role	3
+19	role	9
+19	rylos_arc	3
+19	source_stack	7
+20	All core cast. Secondary cast reaching completion points	3
+20	Corveth	2
+20	DAISY MAY	3
+20	DERVISH	3
+20	MACK	3
+20	MAJISKII	3
+20	Neith	3
+20	Pip	3
+20	Renath	2
+20	Rolzen	3
+20	Sorra	2
+20	Wrenath	2
+20	Xethrolund	3
+20	book_25	3
+20	canonical_id	2
+20	first_appears	3
+20	role	2
+20	source_stack	3
+21	All core cast + Ursula	3
+21	DAISY MAY	3
+21	DERVISH	3
+21	MAJISKII	3
+21	Mack	3
+21	NEITH	3
+21	Pip	3
+21	ROLZEN	3
+21	RYLOS / BOOJAY	3
+21	Ursula	3
+21	XETHROLUND	3
+21	book_25	8
+21	canonical_id	7
+21	first_appears	8
+21	pre_pip_role	3
+21	role	9
+21	rylos_arc	3
+21	source_stack	7
+22	All core cast. Secondary arcs completing	4
+22	DAISY MAY	3
+22	DERVISH	3
+22	MACK	3
+22	MAJISKII	3
+22	NEITH	3
+22	PIP	3
+22	ROLZEN	3
+22	RYLOS / BOOJAY	3
+22	Renath	5
+22	URSULA	3
+22	XETHROLUND	3
+22	book_25	5
+22	canonical_id	5
+22	first_appears	4
+22	pre_pip_role	3
+22	role	5
+22	source_stack	5
+23	All core cast. Neith approaching	3
+23	DAISY MAY	3
+23	DERVISH	3
+23	MACK	3
+23	MAJISKII	3
+23	Neith	3
+23	Pip	3
+23	ROLZEN	3
+23	RYLOS / BOOJAY	3
+23	URSULA	3
+23	Xethrolund	3
+23	book_25	7
+23	canonical_id	9
+23	first_appears	8
+23	pre_pip_role	3
+23	role	7
+23	rylos_arc	3
+23	source_stack	8
+24	Daisy May	3
+24	Dervish	3
+24	Mack	3
+24	Majiskii	3
+24	Neith	3
+24	Pip	3
+24	RYLOS / BOOJAY	3
+24	Rolzen	3
+24	Rylos Vayne Johnson / Boojay	3
+24	Ursula	3
+24	Xethrolund	3
+24	book_25	7
+24	canonical_id	9
+24	first_appears	8
+24	pre_pip_role	3
+24	role	7
+24	rylos_arc	3
+24	source_stack	8
+25	All core cast. Every named character who survived	6
+25	DAISY MAY	3
+25	DERVISH	3
+25	MACK	3
+25	MAJISKII	3
+25	NEITH	3
+25	PIP	3
+25	ROLZEN	3
+25	RYLOS / BOOJAY	3
+25	URSULA	3
+25	XETHROLUND	3
+25	book_25	6
+25	canonical_id	6
+25	first_appears	6
+25	pre_pip_role	3
+25	role	6
+25	rylos_arc	3
+25	source_stack	6

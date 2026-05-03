@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "goal": "Preserve legacy source-lowering compatibility while native runtime lanes become authoritative",
+  "compile_hooks": [
+    "calibration_lock",
+    "compile_manifest",
+    "court_mode",
+    "dialect_lowering",
+    "python3_shape_lowering",
+    "family_lowering",
+    "canonical_normalization"
+  ],
+  "inspect_hooks": [
+    "decoded_surface",
+    "parity_view",
+    "dialect_report",
+    "artifact_identity"
+  ],
+  "proof_hooks": [
+    "density_score",
+    "parity_score",
+    "replay_sha256",
+    "cross_dialect_equivalence"
+  ],
+  "rule": {
+    "foreign_runtime_required": false,
+    "layered_translation_required": false,
+    "internal_hooks_are_authoritative": false,
+    "native_runtime_lanes_are_authoritative": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__codex/asm/macros/codex__current_mission.json.a9b1788b884eb8f9.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.215694+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__codex",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__codex/metadata/codex__current_mission.json.a9b1788b884eb8f9.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": ".codex/current_mission.json",
+  "source_bytes": 762,
+  "source_sha256": "a9b1788b884eb8f9e1dfdd74fc47351b9e13576300adfec5a9307c2f918ea76f",
+  "stamp_id": "nsq.asm.repo__codex.codex__current_mission.json.a9b1788b884eb8f9"
+}

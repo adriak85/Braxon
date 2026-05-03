@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__repo_reality_vs_c__corpus__project__include__fraud.h.64de44619ca8e01a.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.014934+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__repo_reality_vs_c__corpus__project__include__fraud.h.64de44619ca8e01a.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/repo_reality_vs_c/corpus/project/include/fraud.h",
+  "source_bytes": 234,
+  "source_sha256": "64de44619ca8e01ae03b96b04c6924ae17e916b5483413c3aff01139085112fd",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__repo_reality_vs_c__corpus__project__include__fraud.h.64de44619ca8e01a"
+}

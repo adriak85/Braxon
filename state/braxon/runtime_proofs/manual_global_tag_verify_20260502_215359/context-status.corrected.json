@@ -1,0 +1,20 @@
+{
+  "manifest_path": "/data/data/com.termux/files/home/Braxon/config/braxon_context_manifest.json",
+  "loaded": true,
+  "identity": "Braxon",
+  "canonical_semantics": "base8_switch_topology",
+  "private_license": true,
+  "semantic_pointer_count": 20,
+  "missing_required": [],
+  "missing_optional": [],
+  "known_left_out": [
+    {
+      "path": ".git",
+      "reason": "repository internals are not semantic runtime context"
+    },
+    {
+      "path": "target",
+      "reason": "build output is regenerated from source and is not canonical context"
+    }
+  ]
+}

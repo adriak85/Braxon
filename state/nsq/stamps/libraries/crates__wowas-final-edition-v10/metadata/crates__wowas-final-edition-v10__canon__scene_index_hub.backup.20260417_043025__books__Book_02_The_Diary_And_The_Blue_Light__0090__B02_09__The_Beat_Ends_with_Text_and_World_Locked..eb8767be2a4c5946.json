@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0090__B02_09__The_Beat_Ends_with_Text_and_World_Locked..eb8767be2a4c5946.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.560547+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0090__B02_09__The_Beat_Ends_with_Text_and_World_Locked..eb8767be2a4c5946.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0090__B02_09__The_Beat_Ends_with_Text_and_World_Locked.md",
+  "source_bytes": 200,
+  "source_sha256": "eb8767be2a4c59468af405cc5a3a6a8397d1200983d32feee78a411110528795",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0090__B02_09__The_Beat_Ends_with_Text_and_World_Locked..eb8767be2a4c5946"
+}

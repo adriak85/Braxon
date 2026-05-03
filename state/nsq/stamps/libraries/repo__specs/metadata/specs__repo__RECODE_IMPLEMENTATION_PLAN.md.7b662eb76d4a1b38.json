@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__specs/asm/macros/specs__repo__RECODE_IMPLEMENTATION_PLAN.md.7b662eb76d4a1b38.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.302429+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__specs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__specs/metadata/specs__repo__RECODE_IMPLEMENTATION_PLAN.md.7b662eb76d4a1b38.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/repo/RECODE_IMPLEMENTATION_PLAN.md",
+  "source_bytes": 780,
+  "source_sha256": "7b662eb76d4a1b389274f7bfd66bbae90b96fc0daead6a78b7a132375cb90110",
+  "stamp_id": "nsq.asm.repo__specs.specs__repo__RECODE_IMPLEMENTATION_PLAN.md.7b662eb76d4a1b38"
+}

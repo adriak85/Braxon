@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__codex/asm/macros/codex__hooks__stop_must_implement_gate.py.24bfaf0d9f360cd4.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.225206+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__codex",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__codex/metadata/codex__hooks__stop_must_implement_gate.py.24bfaf0d9f360cd4.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": ".codex/hooks/stop_must_implement_gate.py",
+  "source_bytes": 6861,
+  "source_sha256": "24bfaf0d9f360cd4be2a539e714cf2f7492615b51393358459badaf555ee3021",
+  "stamp_id": "nsq.asm.repo__codex.codex__hooks__stop_must_implement_gate.py.24bfaf0d9f360cd4"
+}

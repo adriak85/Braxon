@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0110__B02_11__The_Beat_Ends_with_the_Pair_Facing_Forwar.96b42b346d8feb8f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.651180+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0110__B02_11__The_Beat_Ends_with_the_Pair_Facing_Forwar.96b42b346d8feb8f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0110__B02_11__The_Beat_Ends_with_the_Pair_Facing_Forward_Together.md",
+  "source_bytes": 217,
+  "source_sha256": "96b42b346d8feb8ff81e89f8ed6c68c074fd119e875420e3fe078602aeec352c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0110__B02_11__The_Beat_Ends_with_the_Pair_Facing_Forwar.96b42b346d8feb8f"
+}

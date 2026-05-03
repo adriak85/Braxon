@@ -1,0 +1,13 @@
+[package]
+publish = false
+name = "nsq-core"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Canonical NSQ base-8 switch semantics and court surface types."
+
+[dependencies]
+serde.workspace = true

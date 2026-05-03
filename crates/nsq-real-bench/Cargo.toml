@@ -1,0 +1,14 @@
+[package]
+publish = false
+name = "nsq-real-bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Derived packed transport benchmark and report surface."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

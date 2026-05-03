@@ -1,0 +1,15 @@
+== NSQ bare-metal lawful proof ==
+native_nsqasm_core_pass=True
+lawful_nsq_boot_pass=True
+driver_or_mount_boundary_pass=False
+moral_guard_pass=True
+metadata_current_present=True
+bare_metal_nsq_proven=False
+bare_metal_claim_allowed=False
+
+== runners ==
+state/nsq/bare_metal/build/nsqasm_lawful_core elf=True script=False rc=0 native=True
+bin/nsq-native elf=True script=False rc=0 native=True
+bin/nsqasm elf=True script=False rc=0 native=True
+
+== boundary candidates ==

@@ -1,0 +1,25 @@
+NSQ_APP native_claim_truth_boundary
+NSQ_APP_VERSION 1
+
+NSQ_NATIVE_CLAIM_TRUTH_BOUNDARY {
+  native_nsqasm_elf_probe_executed = true
+  lawful_nsq_semantic_runtime_executed = false_until_task_file_semantics_are_executed
+  nsq_task_file_semantically_executed = false_until_native_runner_reads_and_runs_nsq_task
+  bare_metal_claim_allowed = false_until_driver_or_mount_boundary_proof
+
+  no_libc_elf_execution_is_progress = true
+  no_libc_elf_execution_is_not_full_nsq_runtime_by_itself = true
+
+  production_run_must_disable {
+    macro_tracking = true
+    macro_discovery = true
+    tracers = true
+  }
+
+  next_required_proof {
+    read_nsq_task_file = true
+    execute_nsq_task_semantics = true
+    measure_nsq_elapsed_runtime = true
+    prove_driver_or_mount_boundary = true
+  }
+}

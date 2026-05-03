@@ -1,0 +1,17 @@
+[package]
+publish = false
+name = "nsq-runtime"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Native runtime lane registry and offline inference surface for NSQ."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+nsq-core = { path = "../nsq-core" }
+memmap2 = "0.9"
+safetensors = "0.4"

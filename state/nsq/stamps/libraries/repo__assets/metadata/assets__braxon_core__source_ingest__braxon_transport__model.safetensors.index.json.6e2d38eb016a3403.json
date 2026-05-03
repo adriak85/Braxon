@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__assets/asm/macros/assets__BRAXON_core__source_ingest__braxon_transport__model.safetensors.index.json.6e2d38eb016a3403.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.177090+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__assets",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__assets/metadata/assets__BRAXON_core__source_ingest__braxon_transport__model.safetensors.index.json.6e2d38eb016a3403.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json",
+  "source_bytes": 98934,
+  "source_sha256": "6e2d38eb016a3403e6c657b1934e8c05b5ec17c082f90dcf1d48d69809facb9d",
+  "stamp_id": "nsq.asm.repo__assets.assets__BRAXON_core__source_ingest__braxon_transport__model.safetensors.index.json.6e2d38eb016a3403"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__code_corpus_vs_c__scripts__c_code_corpus_reduce.py.ed9a52e6adaa83fa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.953180+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__code_corpus_vs_c__scripts__c_code_corpus_reduce.py.ed9a52e6adaa83fa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/code_corpus_vs_c/scripts/c_code_corpus_reduce.py",
+  "source_bytes": 2022,
+  "source_sha256": "ed9a52e6adaa83fa63cc1d2bf7023fff5de9bd3c50854d854a6147cbd8d1094b",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__code_corpus_vs_c__scripts__c_code_corpus_reduce.py.ed9a52e6adaa83fa"
+}

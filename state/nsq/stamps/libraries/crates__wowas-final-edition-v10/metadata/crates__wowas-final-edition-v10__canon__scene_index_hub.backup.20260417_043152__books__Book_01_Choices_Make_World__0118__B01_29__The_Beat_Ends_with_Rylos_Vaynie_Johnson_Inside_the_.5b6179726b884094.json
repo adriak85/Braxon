@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0118__B01_29__The_Beat_Ends_with_Rylos_Vaynie_Johnson_Inside_the_.5b6179726b884094.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.938809+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0118__B01_29__The_Beat_Ends_with_Rylos_Vaynie_Johnson_Inside_the_.5b6179726b884094.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_01_Choices_Make_World/0118__B01_29__The_Beat_Ends_with_Rylos_Vaynie_Johnson_Inside_the_Future_Tense.md",
+  "source_bytes": 256,
+  "source_sha256": "5b6179726b8840944a7af13bed91aa6f4ea60383e8d60a9a9c3be044661e2997",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__0118__B01_29__The_Beat_Ends_with_Rylos_Vaynie_Johnson_Inside_the_.5b6179726b884094"
+}

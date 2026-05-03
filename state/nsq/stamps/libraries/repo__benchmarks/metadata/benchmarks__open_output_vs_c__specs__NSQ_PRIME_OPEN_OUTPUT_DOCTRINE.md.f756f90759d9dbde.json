@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__benchmarks/asm/macros/benchmarks__open_output_vs_c__specs__NSQ_PRIME_OPEN_OUTPUT_DOCTRINE.md.f756f90759d9dbde.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.078951+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__benchmarks",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__benchmarks/metadata/benchmarks__open_output_vs_c__specs__NSQ_PRIME_OPEN_OUTPUT_DOCTRINE.md.f756f90759d9dbde.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "benchmarks/open_output_vs_c/specs/NSQ_PRIME_OPEN_OUTPUT_DOCTRINE.md",
+  "source_bytes": 3001,
+  "source_sha256": "f756f90759d9dbde53b6a50a1857dbd7f420aefc8dbe2ecf871ae9836d618a58",
+  "stamp_id": "nsq.asm.repo__benchmarks.benchmarks__open_output_vs_c__specs__NSQ_PRIME_OPEN_OUTPUT_DOCTRINE.md.f756f90759d9dbde"
+}

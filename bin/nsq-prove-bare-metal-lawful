@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+cd "${BRAXON_ROOT:-$HOME/Braxon}"
+exec python3 tools/nsq_bare_metal_proof/prove_lawful_bare_metal_nsq.py "$@"

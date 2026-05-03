@@ -1,0 +1,33 @@
+profile_id	name	status	score	book_or_region_range	recommended_use	canonical_notes
+CREATURE_WR00014	Aerindraaria14	active	39	last open gate	healing_symbiote_anchor	Unibreccianated verdant moss bear; sacred-dangerous healing symbiote. Top creature for healing, verdancy, broken-wholeness, and Last Open Gate value.
+CREATURE_WR00008	Aerdalencoriaavel8	active	38	xeth glyph yard	memory_predator_anchor	Resonant unbrictionable root hound as predatory memory mimic. Premium plot encounter for glyph spaces, memory, identity, and Xethrolund pressure.
+CREATURE_WR00010	Aeranoraen10	active	38	pocket sanctuary	burrow_architect_anchor	Weird cello-woken basalt hare as gentle burrow architect. Strong for humor, shelter-building, sanctuary logic, and cello-woken ecology.
+CREATURE_WR00011	Aermaeloramariel11	active	38	glass orchard	soil_restorer_anchor	Unbrictionable unibreccianated orchard eel as watchful soil restorer. Strong for broken-fragment wholeness and glass orchard restoration.
+CREATURE_WR00013	Aerfirabelldion13	active	38	willow-stone county	song_amplifier_predator	Cello-woken diamond-scarred cinder elk as predatory song amplifier. Excellent sonomancy pressure and post-Diamond scarring.
+CREATURE_WR00025	Aerdalenamarlarken25	active	39	pocket sanctuary	burrow_architect_anchor	Unbrictionable unibreccianated moth-deer as gentle burrow architect. Premium sanctuary creature; protective-home logic.
+CREATURE_WR00029	Aeranorianmossiel29	active	39	last open gate	healing_symbiote_anchor	Horrific beautiful orchard eel as sacred-dangerous healing symbiote. Premium body-repair / Last Open Gate encounter.
+CREATURE_WR00044	Aerdalenevaradria44	active	39	last open gate	healing_symbiote_anchor	Diamond-scarred glyph-touched root hound as sacred-dangerous healing symbiote. Premium mythic/medical use.
+CREATURE_WR00023	Aerdalenamarlarkion23	active	37	xeth glyph yard	memory_predator_anchor	Chaotic elegant quartz ram as predatory memory mimic. Excellent Xeth/glyph encounter creature.
+CREATURE_WR00038	Ashaavelbrookelle38	active	37	xeth glyph yard	memory_predator_anchor	Weird cello-woken mirror lynx as predatory memory mimic. Excellent reflected-memory threat.
+CREATURE_WR00043	Aeranoramariel43	active	37	willow-stone county	song_amplifier_predator	Horrific beautiful moth-deer as predatory song amplifier. Excellent county encounter: beauty/horror and song lure.
+CREATURE_WR00004	Aerfiraluthaelen4	active	34	root vale	sacred_glass_cleaner	Beautiful/gross marrow crane that cleans glass and makes sacred danger visible. Strong root/glass ecology.
+CREATURE_WR00007	Aermaeloriven7	active	35	blue-light road	pack_companion_pressure	Gross/weird moth-deer as hazardous pack companion. Strong relationship mirror, humor, fear, and route navigation.
+CREATURE_WR00009	Aeranoramarael9	active	34	stone fen	weather_listener_omen	Chaotic elegant glass heron as sacred-dangerous weather listener. Strong travel timing and storm warning use.
+CREATURE_WR00022	Ashagaleniel22	active	35	blue-light road	pack_companion_pressure	Resonant unbrictionable marrow crane as hazardous pack companion. High visual and relationship mirroring value.
+CREATURE_WR00027	Aerfiraaen27	active	34	neith edge	apex_grazer_hazard	Cello-woken diamond-scarred glass heron as hazardous apex grazer. Strong Neith-edge boundary danger.
+CREATURE_WR00028	Aeranoramaraelen28	active	36	willow-stone county	song_amplifier_predator	Unibreccianated verdant basalt hare as predatory song amplifier. Strong comedy-to-threat pivot.
+CREATURE_WR00030	Aeranorcoriaiven30	active	36	diamond breakland	gate_sentinel	Diamond-scarred glyph-touched lantern fox as gentle gate sentinel. Strong Diamond scar/glyph sentinel.
+CREATURE_WR00032	Aerfiraorcharddion32	active	33	ash river	river_filter_hazard	Beautiful gross moss bear as hazardous river filter. Memorable river ecology and mass.
+CREATURE_WR00037	Aeranorluthion37	active	35	blue-light road	pack_companion_pressure	Chaotic elegant ribbon serpent as hazardous pack companion. Strong route creature and motion pressure.
+CREATURE_WR00040	Aerindraaen40	active	35	pocket sanctuary	gentle_burrow_architect	Elegant horrific marrow crane as gentle burrow architect. Good sanctuary contradiction.
+CREATURE_WR00042	Ashaeliongroveavel42	active	34	neith edge	apex_grazer_hazard	Unibreccianated verdant song beetle as hazardous apex grazer. Unsettling ecology and Neith-edge pressure.
+CREATURE_WR00050	Aeranorevaraelle50	active	32	ripper tunnel	gentle_pollinator_reversal	Resonant unbrictionable moss bear as gentle pollinator. Strong gentle-in-horror reversal.
+MONSTER_CREEK_BEAR	Creek Bear	active	severe	Oklahoma corridor	terrain_breaking_set_piece	Severe terrain-breaking mammal pressure. Attacks by taking away footing/light/heat/memory/shelter before close.
+MONSTER_RED_DUST_COYOTE	Red-Dust Coyote	active	high	Oklahoma corridor	pack_misdirection	Pack misdirection, unstable mixed field, may help one survivor while endangering another. Route/social pressure.
+MONSTER_RAIL_HAWK	Rail Hawk	active	moderate	Oklahoma corridor	aerial_omen	Aerial omen and wreckage-to-pattern danger. Good skyline warning and false-beauty timing.
+MONSTER_OVERPASS_CROW	Overpass Crow	active	moderate	Oklahoma corridor	urban_omen_stripping	Circling omen, fear-by-stripping, removes shelter/coherence before strike. Good overpass/urban ruin scene.
+MONSTER_STORM_DUST_ALLIGATOR	Storm-Dust Alligator	active	high	Oklahoma corridor	threshold_heat_predator	Armor-plate siege and threshold heat/patience pressure. Use near water/storm-drain/underpass.
+MONSTER_DRAGON_CREEK_SPIDER	Dragon-Creek Spider	active	high	Oklahoma corridor	web_geometry_pressure	Web geometry/vision trap; unstable help/harm field. Useful spider-eater logic mirror when handled carefully.
+MONSTER_MERCY_SCORCH_SPIDER	Mercy-Scorch Spider	active	severe	Oklahoma corridor	ambush_horror	Severe web/ceiling/ambush pressure. Terrain-breaking horror with relentless/transformation source stack.
+MONSTER_STORM_FILM	Storm Film	active	moderate	Oklahoma corridor	invisible_field_threat	Microbial slick/breath-steal/invisible field pressure. Good non-obvious threat and route degradation.
+MONSTER_MERCY_GLAER_SHARD	Mercy-Glaer Shard	active	severe	Oklahoma corridor	terrain_witness_shard	Severe selenite/shard-burst terrain/witness pressure. Diamond/geode/stone callback.

@@ -1,0 +1,14 @@
+{
+  "schema": "nsq.universal_fetch.internal_repair.v3",
+  "stamp": "20260424_124144",
+  "nsq_only": true,
+  "target_compiled_in": false,
+  "source_compiled_in": false,
+  "acquisition_started": false,
+  "raw_body_transfer": "forbidden",
+  "wire": "nsq_units_only",
+  "app_carrier": "apps/nsq/universal_fetch.nsq",
+  "crate": "crates/nsq-universal-fetch",
+  "quarantine": "state/nsq/quarantine/misleading_universal_downloader_20260424_124144",
+  "report": "/data/data/com.termux/files/home/storage/shared/Download/nsq_universal_fetch_internal_v3_20260424_124144/report.txt"
+}

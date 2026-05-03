@@ -1,0 +1,20 @@
+field	value
+status	active_final_control
+release_stage	zero_unreleased
+story_character_target	5000
+ancillary_population_target	2000000
+creature_target	5000
+minimum_candidate_draws_per_story_character	30
+minimum_candidate_draws_per_creature	30
+selection_method	average_against_background_story_role_aesthetic_distance_origin_distance_and_orbit_need
+similarity_guard	reject_if_too_close_to_source_origin_or_existing_character
+background_integration	required_before_acceptance
+scene_orbit_integration	required_before_acceptance
+lattice_integration	required_before_acceptance
+atlas_or_biome_integration	required_before_acceptance
+microarc_integration	required_before_acceptance
+visual_design_check	required; picture placeholder allowed only as pending-art-reference, not final art
+weak_draw_action	rehash_until_useful
+forbidden_active_terms	Chrono decay; Chrono Coral; Chrono Chasm; Heart Chronometer; Aortic Labyrinth; Boojay-as-current-name; rape-elk-class shock naming
+final_character_home	canon/canonical_story_tree/characters/
+final_creature_home	canon/canonical_story_tree/world/creatures/

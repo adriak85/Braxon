@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/tools__nsq_finish/asm/macros/tools__nsq_finish__BRAXON_truthful_operability_gate.py.6274b193718226e4.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:45.302242+00:00",
+  "harm_hit_count": 3,
+  "library": "tools__nsq_finish",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/tools__nsq_finish/metadata/tools__nsq_finish__BRAXON_truthful_operability_gate.py.6274b193718226e4.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "tools/nsq_finish/braxon_truthful_operability_gate.py",
+  "source_bytes": 10894,
+  "source_sha256": "6274b193718226e4b37a030dd60a3594935212825174f9ff1c408b253beb0a1a",
+  "stamp_id": "nsq.asm.tools__nsq_finish.tools__nsq_finish__BRAXON_truthful_operability_gate.py.6274b193718226e4"
+}

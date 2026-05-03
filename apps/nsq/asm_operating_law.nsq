@@ -1,0 +1,71 @@
+NSQ_APP asm_operating_law
+NSQ_APP_VERSION 3
+
+NSQ_CANONICAL_IDENTITY {
+  NSQ is the lowest base language.
+  NSQ is not a wrapper.
+  NSQ is not a byte language.
+  NSQ does not lower to binary as its source truth.
+  NSQ is operated as NSQ through its authorized operating surfaces.
+}
+
+NSQ_ASM_OPERATING_LAW {
+  asm_is_operating_law_for_nsq = true
+  asm_is_optimization_surface_for_nsq = true
+  asm_is_recode_surface_for_incoming_material = true
+
+  asm_is_not_nsq_source_identity = true
+  asm_is_not_higher_authority_than_nsq = true
+  asm_does_not_replace_nsq_canonical_law = true
+
+  incoming_surface_requires_nsq_authority_check = true
+  incoming_surface_recode_target = asm_operating_form
+  asm_operating_form_requires_source_lineage = true
+  asm_operating_form_requires_metadata_tracking = true
+  asm_operating_form_requires_round_trip_validation = true
+
+  BRAXON_binary_translation_after_asm_when_ready = true
+  binary_translation_is_BRAXON_output = true
+  binary_translation_is_not_nsq_source_truth = true
+  binary_translation_is_not_metadata_authority = true
+}
+
+NSQ_PIPELINE_LAW {
+  step_01 = read_everything_available
+  step_02 = check_surroundings_and_context
+  step_03 = identify_all_aspects_of_all_perceivable
+  step_03_detail = do_this_until_you_are_sure_you_know_everything_you_can_about_everyone_and_everything_around_the_action
+  step_04 = understand_action_from_all_viewpoints
+  step_05 = make_best_decision
+  step_06 = act_with_the_very_best_of_being
+
+  input_path = any_supported_surface
+  authority_path = nsq_canonical_law
+  operating_path = asm_operating_form
+  emission_path = BRAXON_binary_translation_when_ready
+
+  incomplete_system_must_not_claim_live_completion = true
+  proof_green_requires_current_metadata = true
+}
+
+NSQ_MORAL_INVARIANT_BOUNDARY {
+  moral_invariant_file_is_highest_value_guard = true
+  goals_do_not_override_moral_invariant = true
+  metadata_does_not_override_moral_invariant = true
+  asm_does_not_override_moral_invariant = true
+  binary_translation_does_not_override_moral_invariant = true
+  generated_files_do_not_override_moral_invariant = true
+
+  all_translations_must_preserve_moral_value = true
+  no_file_may_morph_against_moral_invariant = true
+  no_file_may_translate_moral_value_into_opposite_value = true
+}
+
+NSQ_GUARD_RECURSION_LAW {
+  guard_must_guard_guard = true
+  guard_loop_until_stable = true
+  guard_loop_max_passes = 6
+  guarded_surfaces = moral_invariant, moral_guard_tool, nsq_authority, asm_operating_law, metadata_law, binary_boundary
+  self_exemption_for_guard = false
+  contradiction_requires_failure = true
+}

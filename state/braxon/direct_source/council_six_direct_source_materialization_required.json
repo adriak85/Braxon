@@ -1,0 +1,16 @@
+{
+  "schema": "Braxon.direct_source_materialization_required.v1",
+  "authority": "NSQ_COURT",
+  "stamp": "20260427_174433",
+  "status": "direct_source_materialization_required",
+  "direct_source_path_ready": true,
+  "source_pointer_stub_files": 0,
+  "required_model_count": 6,
+  "transfer_method": "citadel699_nsq_request_return_rebuild",
+  "transfer_form": "nsq_only",
+  "citadel699_rebuild_proof": "state/nsq/proofs/citadel699_current_rebuild.json",
+  "whole_core_runtime_claim_blocked_until_rebuild_verify": true,
+  "raw_fetch_allowed": false,
+  "raw_payload_transfer_allowed": false,
+  "pointer_setup_allowed": false
+}

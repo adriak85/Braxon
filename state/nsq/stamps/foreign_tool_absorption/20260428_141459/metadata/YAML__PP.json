@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "YAML::PP",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/YAML/PP.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/YAML__PP.source",
+  "source_sha256": "11dd15dc494adbdef39494e64372b0aae7b1c12d70c2fd1a9c7d6b18803309d9",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/YAML__PP.translated.nsq",
+  "nsq_body_sha256": "d9782d7988808a09b0076011850bca51bbf238901e1e9959860a3226db4558e4",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

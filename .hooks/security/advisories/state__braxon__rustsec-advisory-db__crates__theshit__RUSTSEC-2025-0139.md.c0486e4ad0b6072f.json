@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__theshit__RUSTSEC-2025-0139.md.c0486e4ad0b6072f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.988108+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__theshit__RUSTSEC-2025-0139.md.c0486e4ad0b6072f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/theshit/RUSTSEC-2025-0139.md",
+  "source_bytes": 1784,
+  "source_sha256": "c0486e4ad0b6072fcee008637b8a87baf88bd347d2bbd460fc4c8ae7f2987d14",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__theshit__RUSTSEC-2025-0139.md.c0486e4ad0b6072f"
+}

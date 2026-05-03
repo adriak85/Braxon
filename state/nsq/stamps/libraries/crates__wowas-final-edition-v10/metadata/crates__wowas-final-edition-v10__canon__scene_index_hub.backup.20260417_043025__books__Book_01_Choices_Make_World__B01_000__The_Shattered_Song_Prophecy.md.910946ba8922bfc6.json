@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__B01_000__The_Shattered_Song_Prophecy.md.910946ba8922bfc6.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.291546+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__B01_000__The_Shattered_Song_Prophecy.md.910946ba8922bfc6.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/B01_000__The_Shattered_Song_Prophecy.md",
+  "source_bytes": 388,
+  "source_sha256": "910946ba8922bfc62847076b81a866ad80a2b7953a3ff9deec63cf5795d22d13",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__B01_000__The_Shattered_Song_Prophecy.md.910946ba8922bfc6"
+}

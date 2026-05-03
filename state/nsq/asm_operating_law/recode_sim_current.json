@@ -1,0 +1,76 @@
+{
+  "counts": {
+    "c": {
+      "elapsed_seconds": 0.273514,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 59901.887
+    },
+    "json": {
+      "elapsed_seconds": 0.271805,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 60278.526
+    },
+    "markdown": {
+      "elapsed_seconds": 0.272636,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 60094.711
+    },
+    "nsq": {
+      "elapsed_seconds": 0.271016,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 60453.978
+    },
+    "python": {
+      "elapsed_seconds": 0.273319,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 59944.522
+    },
+    "rust": {
+      "elapsed_seconds": 0.274075,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 59779.174
+    },
+    "shell": {
+      "elapsed_seconds": 0.272309,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 60166.96
+    },
+    "toml": {
+      "elapsed_seconds": 0.271234,
+      "packets": 16384,
+      "third_pass_packets": 16384,
+      "third_pass_packets_per_second": 60405.321
+    }
+  },
+  "BRAXON_live_claim": false,
+  "elapsed_seconds": 2.180315,
+  "final_mix": "00b2935467a31286",
+  "generated_at": "2026-04-24T19:49:03.194671+00:00",
+  "meaning": [
+    "This is a deterministic recode simulation, not proof of live Braxon execution.",
+    "Other language surfaces are recoded into ASM operating form, then passed through NSQ three times.",
+    "The scored measurement is the third NSQ pass."
+  ],
+  "packets_per_surface": 16384,
+  "schema": "nsq.asm_operating_law.recode_sim.v1",
+  "simulation_only": true,
+  "surfaces": [
+    "rust",
+    "c",
+    "python",
+    "shell",
+    "json",
+    "toml",
+    "markdown",
+    "nsq"
+  ],
+  "third_pass_units_per_second": 60116.09,
+  "total_third_pass_units": 131072
+}

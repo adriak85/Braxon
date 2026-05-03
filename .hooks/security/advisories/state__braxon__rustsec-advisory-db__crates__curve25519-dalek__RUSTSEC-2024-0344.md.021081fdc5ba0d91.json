@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__curve25519-dalek__RUSTSEC-2024-0344.md.021081fdc5ba0d91.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.784493+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__curve25519-dalek__RUSTSEC-2024-0344.md.021081fdc5ba0d91.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/curve25519-dalek/RUSTSEC-2024-0344.md",
+  "source_bytes": 1754,
+  "source_sha256": "021081fdc5ba0d91f28ce3c4611b8ea3f4c069f8d9ddabb944cd3238ba057a6f",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__curve25519-dalek__RUSTSEC-2024-0344.md.021081fdc5ba0d91"
+}

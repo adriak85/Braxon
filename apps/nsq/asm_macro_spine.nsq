@@ -1,0 +1,77 @@
+NSQ_APP asm_macro_spine
+NSQ_APP_VERSION 1
+
+NSQ_CANONICAL_IDENTITY {
+  NSQ is the lowest base language.
+  NSQ is the substrate.
+  NSQ is the machine.
+  NSQ is the floor, not a layer.
+  NSQ is read as NSQ.
+  NSQ is executed as NSQ.
+
+  Binary is not the underlying truth while NSQ is active.
+  Binary is inactive while NSQ authority is active.
+
+  A lever is not a machine.
+  A lever is one switch.
+  A lever is one eighth of an NSQ bit.
+  An NSQ bit and a binary bit use the same number of compositor pulses.
+  An NSQ postcount is not the same voltage as a binary bit.
+  Hertz frequency is adjusted to position the lever.
+
+  A stamp is not a bit.
+  A stamp is not a byte.
+  A stamp is not a scalar.
+  A stamp is a hot-swappable macro representation built from NSQ machine reality.
+
+  Interpretation order:
+    1. first lever selects dialect
+    2. leading anchor sets charge
+    3. body index chooses slot
+}
+
+NSQ_ASM_SPECIALIZATION {
+  asm_first = true
+  daemon_required = false
+  external_source_uses_recode_carrier = true
+  local_repo_source_uses_direct_native_path = true
+  other_language_surfaces_are_translation_inputs = true
+  other_language_surfaces_are_not_runtime_authorities = true
+  useful_tool_forms_are_saved_as_asm_macros = true
+  stamp_directory_matches_source_library = true
+}
+
+NSQ_SMART_TOOL_POLICY {
+  benchmark_rounds = 2
+  scored_round = 2
+  round_1_role = warmup_discovery
+  round_2_role = scored_truth
+  harmful_flattening_rejected = true
+  raw_body_transfer = forbidden
+  source_repo_package_behavior_is_not_authoritative = true
+  parser_and_debug_behavior_must_recode_to_nsq_native = true
+}
+
+NSQ_STAMP_DIRECTORY_RULE {
+  library_stamp_root = state/nsq/stamps/libraries
+  registry_root = state/nsq/stamps/registry
+  index_root = state/nsq/stamps/indices
+
+  crate_path:
+    crates/<crate_name> -> state/nsq/stamps/libraries/crates__<crate_name>
+
+  nsq_config_path:
+    config/nsq -> state/nsq/stamps/libraries/config__nsq
+
+  nsq_app_path:
+    apps/nsq -> state/nsq/stamps/libraries/apps__nsq
+
+  nsq_spec_path:
+    specs/nsq -> state/nsq/stamps/libraries/specs__nsq
+}
+
+NSQ_FIRST_INDEXES {
+  alphabet_index = required
+  unicode_range_index = required
+  positive_negative_charge_examples = required
+}

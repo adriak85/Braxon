@@ -1,0 +1,9 @@
+{
+  "schema": "nsq.ubiquity.current.v1",
+  "generated_at": "20260424_153053",
+  "nsq_globally_accepted_authority_surface": true,
+  "nsqasm_authorized_operating_bridge": true,
+  "binary_downstream_only": true,
+  "bare_metal_claim": false,
+  "bare_metal_claim_requires": "state/nsq/native_hardware_proof/current/hardware_probe_report.json"
+}

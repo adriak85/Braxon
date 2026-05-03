@@ -1,0 +1,134 @@
+# BRAXON / NSQ solid core truth surface
+
+triple nsq.core -> role -> canonical_source :layer 1 :plane 1 :anchor 10 :weight 100 :flags 1
+triple nsq.core -> role -> lowering_source_of_truth :layer 1 :plane 1 :anchor 20 :weight 100 :flags 1
+triple nsq.core -> role -> compile_source_of_truth :layer 1 :plane 1 :anchor 30 :weight 100 :flags 1
+triple nsq.core -> role -> install_source_of_truth :layer 1 :plane 1 :anchor 40 :weight 100 :flags 1
+triple nsq.core -> forbids -> foreign_runtime_requirement :layer 1 :plane 1 :anchor 50 :weight 100 :flags 1
+triple nsq.core -> allows -> bootstrap_host_substrate :layer 1 :plane 1 :anchor 60 :weight 80 :flags 1
+triple bootstrap.host -> purpose -> nsq_lower_and_execute :layer 1 :plane 1 :anchor 70 :weight 80 :flags 1
+triple bootstrap.host -> is_not -> canonical_truth_surface :layer 1 :plane 1 :anchor 80 :weight 100 :flags 1
+
+membrane nsq.core :state sealed :flux 100 :gate 1 :phase 1
+# canonical hook matrix in NSQ
+
+triple hook.compile -> requires -> calibration_lock :layer 1 :plane 1 :anchor 100 :weight 50 :flags 1
+triple hook.compile -> requires -> compile_manifest :layer 1 :plane 1 :anchor 110 :weight 50 :flags 1
+triple hook.compile -> requires -> court_mode :layer 1 :plane 1 :anchor 120 :weight 50 :flags 1
+triple hook.compile -> requires -> source_dialect_detect :layer 1 :plane 1 :anchor 130 :weight 50 :flags 1
+triple hook.compile -> requires -> internal_family_lowering :layer 1 :plane 1 :anchor 140 :weight 50 :flags 1
+triple hook.compile -> requires -> canonical_projection :layer 1 :plane 1 :anchor 150 :weight 50 :flags 1
+
+triple hook.inspect -> requires -> decoded_surface :layer 1 :plane 1 :anchor 200 :weight 50 :flags 1
+triple hook.inspect -> requires -> parity_view :layer 1 :plane 1 :anchor 210 :weight 50 :flags 1
+triple hook.inspect -> requires -> source_dialect_view :layer 1 :plane 1 :anchor 220 :weight 50 :flags 1
+triple hook.inspect -> requires -> spine_projection_view :layer 1 :plane 1 :anchor 230 :weight 50 :flags 1
+
+triple hook.proof -> requires -> density_score :layer 1 :plane 1 :anchor 300 :weight 50 :flags 1
+triple hook.proof -> requires -> parity_score :layer 1 :plane 1 :anchor 310 :weight 50 :flags 1
+triple hook.proof -> requires -> replay_sha256 :layer 1 :plane 1 :anchor 320 :weight 50 :flags 1
+triple hook.proof -> requires -> cross_dialect_identity :layer 1 :plane 1 :anchor 330 :weight 50 :flags 1
+
+membrane hook.compile :state present :flux 6 :gate 1 :phase 1
+membrane hook.inspect :state present :flux 4 :gate 1 :phase 1
+membrane hook.proof :state present :flux 4 :gate 1 :phase 1
+# canonical dialect law in NSQ
+
+triple dialect.canonical -> lowers_to -> canonical :layer 1 :plane 1 :anchor 400 :weight 100 :flags 1
+triple dialect.sexpr -> lowers_to -> canonical :layer 1 :plane 1 :anchor 410 :weight 100 :flags 1
+triple dialect.lua_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 420 :weight 100 :flags 1
+triple dialect.python_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 430 :weight 100 :flags 1
+
+triple dialect.canonical -> requires -> internal_only :layer 1 :plane 1 :anchor 440 :weight 100 :flags 1
+triple dialect.sexpr -> requires -> internal_only :layer 1 :plane 1 :anchor 450 :weight 100 :flags 1
+triple dialect.lua_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 460 :weight 100 :flags 1
+triple dialect.python_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 470 :weight 100 :flags 1
+
+triple dialect.sexpr -> forbids -> scheme_runtime_requirement :layer 1 :plane 1 :anchor 480 :weight 100 :flags 1
+triple dialect.lua_shape -> forbids -> lua_runtime_requirement :layer 1 :plane 1 :anchor 490 :weight 100 :flags 1
+triple dialect.python_shape -> forbids -> python_runtime_requirement :layer 1 :plane 1 :anchor 500 :weight 100 :flags 1
+
+membrane dialect.canonical :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.sexpr :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.lua_shape :state accepted :flux 1 :gate 1 :phase 1
+membrane dialect.python_shape :state accepted :flux 1 :gate 1 :phase 1
+# installer source in canonical NSQ
+
+triple capsule.dev -> emits -> installer.shell :layer 1 :plane 1 :anchor 600 :weight 100 :flags 1
+triple installer.shell -> targets -> local.workspace :layer 1 :plane 1 :anchor 610 :weight 100 :flags 1
+triple installer.shell -> ensures -> env.contract :layer 1 :plane 1 :anchor 620 :weight 100 :flags 1
+triple installer.shell -> ensures -> command.surface :layer 1 :plane 1 :anchor 630 :weight 100 :flags 1
+triple installer.shell -> ensures -> hook.matrix :layer 1 :plane 1 :anchor 640 :weight 100 :flags 1
+triple installer.shell -> ensures -> dialect.matrix :layer 1 :plane 1 :anchor 650 :weight 100 :flags 1
+triple installer.shell -> ensures -> proof.runner :layer 1 :plane 1 :anchor 660 :weight 100 :flags 1
+triple installer.shell -> ensures -> container.lane :layer 1 :plane 1 :anchor 670 :weight 100 :flags 1
+triple installer.shell -> uses -> bootstrap.host_substrate :layer 1 :plane 1 :anchor 680 :weight 70 :flags 1
+triple installer.shell -> is_not -> canonical_truth_surface :layer 1 :plane 1 :anchor 690 :weight 100 :flags 1
+
+membrane installer.shell :state projected :flux 7 :gate 1 :phase 1
+# nsq-source library declaration
+
+triple lib.nsq_source -> owns -> dialect_detection :layer 1 :plane 1 :anchor 800 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> sexpr_lowering :layer 1 :plane 1 :anchor 810 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> lua_shape_lowering :layer 1 :plane 1 :anchor 820 :weight 80 :flags 1
+triple lib.nsq_source -> owns -> python_shape_lowering :layer 1 :plane 1 :anchor 830 :weight 80 :flags 1
+triple lib.nsq_source -> outputs -> canonical_projection :layer 1 :plane 1 :anchor 840 :weight 80 :flags 1
+triple lib.nsq_source -> forbids -> foreign_runtime_requirement :layer 1 :plane 1 :anchor 850 :weight 100 :flags 1
+
+membrane lib.nsq_source :state required :flux 5 :gate 1 :phase 1
+# nsq-compile library declaration
+
+triple lib.nsq_compile -> consumes -> canonical_projection :layer 1 :plane 1 :anchor 900 :weight 80 :flags 1
+triple lib.nsq_compile -> consumes -> calibration_lock :layer 1 :plane 1 :anchor 910 :weight 80 :flags 1
+triple lib.nsq_compile -> emits -> nsqb_artifact :layer 1 :plane 1 :anchor 920 :weight 80 :flags 1
+triple lib.nsq_compile -> emits -> compile_manifest :layer 1 :plane 1 :anchor 930 :weight 80 :flags 1
+triple lib.nsq_compile -> records -> source_dialect :layer 1 :plane 1 :anchor 940 :weight 80 :flags 1
+triple lib.nsq_compile -> records -> spine_lines :layer 1 :plane 1 :anchor 950 :weight 80 :flags 1
+
+membrane lib.nsq_compile :state required :flux 6 :gate 1 :phase 1
+# nsq-inspect library declaration
+
+triple lib.nsq_inspect -> consumes -> nsqb_artifact :layer 1 :plane 1 :anchor 1000 :weight 80 :flags 1
+triple lib.nsq_inspect -> emits -> decoded_surface :layer 1 :plane 1 :anchor 1010 :weight 80 :flags 1
+triple lib.nsq_inspect -> emits -> parity_view :layer 1 :plane 1 :anchor 1020 :weight 80 :flags 1
+triple lib.nsq_inspect -> verifies -> magic_header :layer 1 :plane 1 :anchor 1030 :weight 80 :flags 1
+
+membrane lib.nsq_inspect :state required :flux 4 :gate 1 :phase 1
+# nsq-pack library declaration
+
+triple lib.nsq_pack -> consumes -> nsqb_artifact :layer 1 :plane 1 :anchor 1100 :weight 80 :flags 1
+triple lib.nsq_pack -> consumes -> compile_manifest :layer 1 :plane 1 :anchor 1110 :weight 80 :flags 1
+triple lib.nsq_pack -> consumes -> inspect_report :layer 1 :plane 1 :anchor 1120 :weight 80 :flags 1
+triple lib.nsq_pack -> emits -> pack_manifest :layer 1 :plane 1 :anchor 1130 :weight 80 :flags 1
+triple lib.nsq_pack -> emits -> sealed_pack :layer 1 :plane 1 :anchor 1140 :weight 80 :flags 1
+
+membrane lib.nsq_pack :state required :flux 5 :gate 1 :phase 1
+# nsq-compose library declaration
+
+triple lib.nsq_compose -> consumes -> repo_surface_inputs :layer 1 :plane 1 :anchor 1200 :weight 80 :flags 1
+triple lib.nsq_compose -> emits -> composed_repo_surface :layer 1 :plane 1 :anchor 1210 :weight 80 :flags 1
+triple lib.nsq_compose -> emits -> nsq_dev_bundle :layer 1 :plane 1 :anchor 1220 :weight 80 :flags 1
+
+membrane lib.nsq_compose :state required :flux 3 :gate 1 :phase 1
+# nsq-prime library declaration
+
+triple lib.nsq_prime -> verifies -> nsq_source_present :layer 1 :plane 1 :anchor 1300 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_compile_present :layer 1 :plane 1 :anchor 1310 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_pack_present :layer 1 :plane 1 :anchor 1320 :weight 80 :flags 1
+triple lib.nsq_prime -> verifies -> nsq_inspect_present :layer 1 :plane 1 :anchor 1330 :weight 80 :flags 1
+triple lib.nsq_prime -> emits -> prime_report :layer 1 :plane 1 :anchor 1340 :weight 80 :flags 1
+
+membrane lib.nsq_prime :state required :flux 4 :gate 1 :phase 1
+# active repo / crate core set to include now
+
+triple repo.Braxon -> includes -> lib.nsq_source :layer 1 :plane 1 :anchor 1400 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_compile :layer 1 :plane 1 :anchor 1410 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_inspect :layer 1 :plane 1 :anchor 1420 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_pack :layer 1 :plane 1 :anchor 1430 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_compose :layer 1 :plane 1 :anchor 1440 :weight 90 :flags 1
+triple repo.Braxon -> includes -> lib.nsq_prime :layer 1 :plane 1 :anchor 1450 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.hook_matrix :layer 1 :plane 1 :anchor 1460 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.dialect_matrix :layer 1 :plane 1 :anchor 1470 :weight 90 :flags 1
+triple repo.Braxon -> includes -> nsq.install_lane :layer 1 :plane 1 :anchor 1480 :weight 90 :flags 1
+
+membrane repo.Braxon :state active :flux 9 :gate 1 :phase 1

@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Net::Domain::TLD",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Net/Domain/TLD.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Net__Domain__TLD.source",
+  "source_sha256": "0367ca9caa8f61ccaec06ce72fc5d73b70f2ca7c718d09d680b4ada006a74c7d",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Net__Domain__TLD.translated.nsq",
+  "nsq_body_sha256": "25fa459b5757cc208181bd248e315ae1f904e1495a7b9cc41dd72e7bfdf4ba55",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

@@ -1,0 +1,34 @@
+NSQ_CONFIG native_hardware_proof_law
+
+hardware_policy {
+  require_native_runner = true
+  require_driver_or_mount_probe = true
+  shim_allowed_only_as_bootstrap = true
+  shim_is_not_bare_metal_proof = true
+  no_bare_metal_claim_without_passed_probe = true
+}
+
+runtime_policy {
+  separate_runtimes_required = true
+  python_harness_may_orchestrate_only = true
+  python_harness_may_not_be_scored_runtime = true
+  rust_may_not_host_final_nsq_runtime = true
+  c_may_not_host_final_nsq_runtime = true
+  round_3_tracking = false
+  round_3_macro_discovery = false
+  round_3_tracers = false
+}
+
+timeout_policy {
+  timeout_seconds_per_surface = 10
+  hard_stop_per_surface = true
+  unwind_before_crash_when_possible = true
+}
+
+metric_policy {
+  primary_metric = tasks_completed
+  secondary_metric = parameter_windows_opened_and_operated
+  tertiary_metric = bit_operations
+  report_wrappers_and_shims = true
+  report_artificial_overhead = true
+}

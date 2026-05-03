@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0016__B01_18__The_Body_Keeps_Moving_After_Arrival.md.df5dbecc7cd399ce.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.975997+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0016__B01_18__The_Body_Keeps_Moving_After_Arrival.md.df5dbecc7cd399ce.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0016__B01_18__The_Body_Keeps_Moving_After_Arrival.md",
+  "source_bytes": 203,
+  "source_sha256": "df5dbecc7cd399ce1daa887c6aba2efde1758a0f2d1283a63ae7bc8a2755862a",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0016__B01_18__The_Body_Keeps_Moving_After_Arrival.md.df5dbecc7cd399ce"
+}

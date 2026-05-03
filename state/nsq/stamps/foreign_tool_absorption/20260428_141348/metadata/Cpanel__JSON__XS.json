@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Cpanel::JSON::XS",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/aarch64-android/Cpanel/JSON/XS.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Cpanel__JSON__XS.source",
+  "source_sha256": "5ff0b6a015d21a2344ec786a6f8faa7547346720cfa02a0526c9952b2211d903",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Cpanel__JSON__XS.translated.nsq",
+  "nsq_body_sha256": "8be2e27915487b6f62186d38c22b2bc9801949e4ce35ce93636b702ccd45d6b5",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

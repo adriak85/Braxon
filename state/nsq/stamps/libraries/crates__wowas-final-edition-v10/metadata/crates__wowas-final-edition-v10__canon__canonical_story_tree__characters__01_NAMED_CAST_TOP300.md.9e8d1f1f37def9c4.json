@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__characters__01_NAMED_CAST_TOP300.md.9e8d1f1f37def9c4.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.881653+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__characters__01_NAMED_CAST_TOP300.md.9e8d1f1f37def9c4.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/01_NAMED_CAST_TOP300.md",
+  "source_bytes": 33822,
+  "source_sha256": "9e8d1f1f37def9c4be3c40a9dddbab6e287d415243a882adbe421bfba02002a9",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__characters__01_NAMED_CAST_TOP300.md.9e8d1f1f37def9c4"
+}

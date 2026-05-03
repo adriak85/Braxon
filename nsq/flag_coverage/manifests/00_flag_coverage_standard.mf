@@ -1,0 +1,38 @@
+id: nsq.flag.coverage.standard.v1
+type: manifest
+version: 1
+authority: Braxon
+role: flag_coverage_standard
+
+purpose:
+  NSQ must support every meaningful flag surface another language, toolchain, runtime,
+  platform, renderer, package manager, or service stack exposes.
+
+core_rule:
+  foreign flag spelling is projection only
+  native flag meaning is sovereign
+  repeated flag patterns should collapse into stamps and cached execution plans
+
+hard_laws:
+  - No foreign flag meaning may remain inaccessible just because its original syntax differs.
+  - Flat string-flag authority is forbidden.
+  - Every flag must map to native semantic classes.
+  - Projection back into foreign spellings is allowed.
+  - Projection must not outrank native meaning.
+  - Repeated flag bundles should become stamps.
+  - Package and platform flag resolution should be cacheable and replayable.
+
+required_flag_families:
+  - build_compile
+  - package_dependency
+  - link_archive_artifact
+  - runtime_launch_env
+  - profile_debug_trace
+  - test_verify_replay
+  - platform_target_abi
+  - android_device
+  - render_asset_shader_scene
+  - storage_db_migration_config
+  - security_policy_permission
+  - network_queue_stream_registry
+  - projection_translation_export

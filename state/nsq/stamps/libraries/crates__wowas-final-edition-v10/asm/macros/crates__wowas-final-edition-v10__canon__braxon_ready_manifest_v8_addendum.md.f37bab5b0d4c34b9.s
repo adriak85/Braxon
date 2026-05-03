@@ -1,0 +1,14 @@
+.section .note.nsq.asm_macros,"a"
+.global nsq_asm_crates__wowas_final_edition_v10_crates__wowas_final_edition_v10__canon__BRAXON_ready_manifest_v8_addendum_md_f37bab5b0d4c34b9
+nsq_asm_crates__wowas_final_edition_v10_crates__wowas_final_edition_v10__canon__BRAXON_ready_manifest_v8_addendum_md_f37bab5b0d4c34b9:
+    .ascii "NSQ_ASM_MACRO_STAMP\\n"
+    .ascii "stamp_id=nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__BRAXON_ready_manifest_v8_addendum.md.f37bab5b0d4c34b9\\n"
+    .ascii "library=crates__wowas-final-edition-v10\\n"
+    .ascii "source=crates/wowas-final-edition-v10/canon/BRAXON_ready_manifest_v8_addendum.md\\n"
+    .ascii "source_sha256=f37bab5b0d4c34b9a8799fc86d89e26658ab0b3537572154ab68c138f290be06\\n"
+    .ascii "source_bytes=843\\n"
+    .ascii "nsq_lowest_base_language=true\\n"
+    .ascii "lever_is_one_switch=true\\n"
+    .ascii "lever_is_one_eighth_of_nsq_bit=true\\n"
+    .ascii "hertz_positions_lever=true\\n"
+    .ascii "other_surfaces_translation_inputs_only=true\\n"

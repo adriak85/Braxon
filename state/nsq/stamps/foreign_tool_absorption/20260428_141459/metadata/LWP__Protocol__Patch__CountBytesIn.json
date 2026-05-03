@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "LWP::Protocol::Patch::CountBytesIn",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/LWP/Protocol/Patch/CountBytesIn.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/LWP__Protocol__Patch__CountBytesIn.source",
+  "source_sha256": "75e47704672b12cd6bc5fe8d670df5704f105d5d6cf211766dc264ec9d53df6b",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/LWP__Protocol__Patch__CountBytesIn.translated.nsq",
+  "nsq_body_sha256": "c9db3b4394793def82d2acd3fee3d0f6c1c02373c684298da7f4ffbb7e0c1e5b",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

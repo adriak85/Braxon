@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__servo-fontconfig__RUSTSEC-2025-0059.md.36f55d4876cdca63.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.823051+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__servo-fontconfig__RUSTSEC-2025-0059.md.36f55d4876cdca63.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/servo-fontconfig/RUSTSEC-2025-0059.md",
+  "source_bytes": 484,
+  "source_sha256": "36f55d4876cdca630a1b8a548b512b72356ab4c7a6494d68d7783ec380166971",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__servo-fontconfig__RUSTSEC-2025-0059.md.36f55d4876cdca63"
+}

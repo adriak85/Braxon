@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0120__B03_10__The_Beat_Ends_with_the_Weave_Active.md.9998c44ff505a7fd.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.601280+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0120__B03_10__The_Beat_Ends_with_the_Weave_Active.md.9998c44ff505a7fd.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_03_The_First_Thread/0120__B03_10__The_Beat_Ends_with_the_Weave_Active.md",
+  "source_bytes": 165,
+  "source_sha256": "9998c44ff505a7fd3bf92a282857cd23d5570f90805dc7d6c2d99be9425ef9aa",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_03_The_First_Thread__0120__B03_10__The_Beat_Ends_with_the_Weave_Active.md.9998c44ff505a7fd"
+}

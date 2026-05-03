@@ -1,0 +1,21 @@
+[package]
+publish = false
+name = "Braxon-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Braxon orchestration, workspace mapping, and verification library."
+
+[dependencies]
+cargo_metadata.workspace = true
+serde_json = { workspace = true }
+serde.workspace = true
+nsq-core = { path = "../nsq-core" }
+nsq-runtime = { path = "../nsq-runtime" }
+
+[lib]
+name = "BRAXON_core"
+path = "src/lib.rs"

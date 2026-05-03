@@ -1,0 +1,13 @@
+{
+  "bare_metal_claim_allowed": false,
+  "bare_metal_nsq_proven": false,
+  "claim": "pending_hardware_proof",
+  "driver_or_mount_boundary_pass": false,
+  "generated_at": "2026-04-25T00:04:08.585765+00:00",
+  "lawful_nsq_boot_pass": true,
+  "lawful_nsq_required": true,
+  "metadata_current_present": true,
+  "moral_guard_pass": true,
+  "native_nsqasm_core_pass": true,
+  "schema": "nsq.bare_metal.claim.current.v1"
+}

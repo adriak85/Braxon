@@ -1,0 +1,14 @@
+NSQ_REPAIR universal_fetch_repo_recode_v1
+stamp = 20260424_125550
+nsq_only = true
+target_compiled_in = false
+source_compiled_in = false
+acquisition_started = false
+raw_body_transfer = forbidden
+wire = nsq_units_only
+local_repo_first = true
+repo_inside_root_uses_shim = false
+dialects_can_interweave = true
+app_carrier = apps/nsq/universal_fetch.nsq
+crate = crates/nsq-universal-fetch
+report = /data/data/com.termux/files/home/storage/shared/Download/nsq_universal_fetch_repo_recode_20260424_125550/report.txt

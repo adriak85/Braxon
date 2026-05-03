@@ -1,0 +1,81 @@
+CITADEL699_WIRE_RECEPTOR {
+  authority = NSQ_COURT
+  architecture_root = true
+  route = citadel699_wire_receptor
+
+  king = compositor
+  queen = linter
+  court_is_agents = false
+
+  reusable_citadel = true
+  no_c_reference_runner = true
+  no_daemons = true
+  no_raw_model_payload_transfer = true
+
+  bit_law {
+    bits_are_valued = true
+    bits_are_recycled = true
+    content_addressed_fragments = true
+    duplicate_bits_must_fold = true
+    null_spans_forbidden = true
+    pointer_files_forbidden = true
+    raw_gguf_forbidden_on_wire = true
+    raw_safetensors_forbidden_on_wire = true
+  }
+
+  wire_contract {
+    max_return_bundle_bytes = 1073741824
+    transfer_form = nsq_only
+    remote_payload_receptor = citadel699
+    remote_transform_required_before_return = true
+    returned_bundle_must_rebuild_locally = true
+
+    exact_size_required = true
+    blake3_required = true
+    triple_bite_required = true
+    whole_model_claim_blocked_until_rebuild_verify = true
+  }
+
+  learning_contract {
+    learn_from_surroundings = true
+    allowed_learning_form = abstract_transferable_system_skills_only
+
+    raw_source_code_retention = forbidden
+    raw_payload_byte_retention = forbidden
+    credentials_retention = forbidden
+    private_identifier_retention = forbidden
+    third_party_secret_retention = forbidden
+
+    learned_skills_breakdown_required = true
+    bad_habits_rejection_required = true
+    moral_filter_report_required = true
+    system_benefit_map_required = true
+    every_target_system_must_receive_benefit_notes = true
+  }
+
+  system_awareness_targets {
+    nsq_runtime = required
+    BRAXON_core = required
+    court_compositor = required
+    court_linter = required
+    lexor = required
+    picker = required
+    model_downloader = required
+    whole_model_verifier = required
+    universal_fetch = required
+    storage_architecture = required
+    moral_invariant = required
+    citadel699 = required
+    semantic_benchmark = required
+    bare_tasker = required
+    perpetual_runtime = required
+    wowas_canon_engine = required
+  }
+
+  default_stack {
+    qwen_235 = qwen-235b
+    maverick_235 = maverick-235b
+    support_70 = deepseek-llama-70b
+    gemma_only_small_slot = gemma-limbic
+  }
+}

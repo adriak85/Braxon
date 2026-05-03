@@ -1,0 +1,23 @@
+{
+  "schema": "Braxon.nsq.citadel699.rebuild_proof.v1",
+  "authority": "NSQ_COURT",
+  "stamp": "20260428_065519",
+  "status": "citadel699_rebuild_manifest_ready",
+  "transfer_method": "citadel699_nsq_request_return_rebuild",
+  "transfer_form": "nsq_only",
+  "raw_fetch_allowed": false,
+  "raw_payload_transfer_allowed": false,
+  "pointer_setup_allowed": false,
+  "separated_raw_shards_allowed": false,
+  "target_size_class": "mb_scale",
+  "reconstruction_seed": "tiny_nsq_seed",
+  "nurabit_citadel_groups": 21,
+  "nurabit_group_width_nsq_bit_units": 33,
+  "nurabit_groups_communicate": true,
+  "required_model_count": 6,
+  "rebuild_dir": "state/nsq/citadel699/rebuilds/20260428_065519",
+  "rebuild_surface": "state/nsq/citadel699/rebuilds/20260428_065519/council_six.rebuild.nsq",
+  "rebuild_bytes": 889,
+  "rebuild_sha256": "a0f37544f1a659d1c5833a79f7cd0ebbf6f6611481ee0a61cd3fd5e007ecd220",
+  "runtime_claim_verification_required": true
+}

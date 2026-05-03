@@ -1,0 +1,22 @@
+Port 8022
+Protocol 2
+
+HostKey /data/data/com.termux/files/usr/etc/ssh/ssh_host_ed25519_key
+HostKey /data/data/com.termux/files/usr/etc/ssh/ssh_host_rsa_key
+
+PidFile /data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid
+AuthorizedKeysFile .ssh/authorized_keys
+
+PubkeyAuthentication yes
+PasswordAuthentication yes
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM no
+
+X11Forwarding no
+AllowTcpForwarding yes
+GatewayPorts no
+PermitTunnel no
+
+PrintMotd no
+Subsystem sftp internal-sftp

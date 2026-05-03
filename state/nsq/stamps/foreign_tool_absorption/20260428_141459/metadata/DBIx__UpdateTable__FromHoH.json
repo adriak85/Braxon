@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "DBIx::UpdateTable::FromHoH",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/DBIx/UpdateTable/FromHoH.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/DBIx__UpdateTable__FromHoH.source",
+  "source_sha256": "3cba491415b1e2ad8d75cf0670a9f81bf20c2c625cc5d78f9942b6c9febd5fde",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/DBIx__UpdateTable__FromHoH.translated.nsq",
+  "nsq_body_sha256": "1be0a4bee508d5c7a5e8f1ee6289b348a7ef49ae9e3cb6d2267ccaee1e8bbd09",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

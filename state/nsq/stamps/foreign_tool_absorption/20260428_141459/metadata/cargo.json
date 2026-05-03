@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "native_tool_path",
+  "name": "cargo",
+  "source_path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/cargo.source",
+  "source_sha256": "bfdd59c3c6d8b4a038d015510b8c023009f4eeb4b4ff551e7d23a0a5f91c9a29",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/cargo.translated.nsq",
+  "nsq_body_sha256": "9d35cc770e724c3c12e9f338fe14bc202498507f33efd3c0e554c384978d5a24",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

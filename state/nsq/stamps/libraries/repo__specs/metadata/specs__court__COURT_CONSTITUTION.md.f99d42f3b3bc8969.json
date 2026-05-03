@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__specs/asm/macros/specs__court__COURT_CONSTITUTION.md.f99d42f3b3bc8969.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.290596+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__specs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__specs/metadata/specs__court__COURT_CONSTITUTION.md.f99d42f3b3bc8969.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/court/COURT_CONSTITUTION.md",
+  "source_bytes": 4588,
+  "source_sha256": "f99d42f3b3bc89697b14908cbb4e962126a32eff2d8021410d64d3036be0683e",
+  "stamp_id": "nsq.asm.repo__specs.specs__court__COURT_CONSTITUTION.md.f99d42f3b3bc8969"
+}

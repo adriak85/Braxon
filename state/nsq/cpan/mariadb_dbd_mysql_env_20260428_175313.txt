@@ -1,0 +1,18 @@
+=== MariaDB / DBD::mysql env hook written ===
+hook=/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/mysql_mariadb_env.sh
+mysql_config=/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/bin/mysql_config
+mysql_version=12.2.2
+mysql_cflags=-I/data/data/com.termux/files/usr/include/mariadb -I/data/data/com.termux/files/usr/include/mariadb/mysql
+mysql_libs=-L/data/data/com.termux/files/usr/lib/aarch64-linux-android/ -lmariadb
+mysql_libdir=/data/data/com.termux/files/usr/lib/aarch64-linux-android/
+found_lib=/data/data/com.termux/files/usr/lib/aarch64-linux-android/libmariadb.so
+found_dir=/data/data/com.termux/files/usr/lib/aarch64-linux-android
+
+=== libmariadb candidates ===
+/data/data/com.termux/files/usr/glibc/lib/libmariadb.so
+/data/data/com.termux/files/usr/glibc/lib/libmariadb.so.3
+/data/data/com.termux/files/usr/lib/aarch64-linux-android/libmariadb.so
+
+=== next ===
+source "/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/mysql_mariadb_env.sh"
+cpan DBD::mysql

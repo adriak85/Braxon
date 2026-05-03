@@ -1,0 +1,159 @@
+//! NSQ Court — Operational Authority
+//!
+//! All 25 court roles are implemented and wired here.
+//! This is not a report printer. This is the court.
+//!
+//! Usage:
+//!   nsq-court verify                         — verify all 25 seats are operational
+//!   nsq-court scan                           — full kingdom scan (SEES ALL)
+//!   nsq-court dispatch <role> <verb> [k=v…]  — dispatch an operation to a role
+//!   nsq-court check <path>                   — Linter/Queen validates a file
+//!   nsq-court coherence                      — Manager checks workspace coherence
+//!   nsq-court perceive                       — Seer scans for faint signals
+//!   nsq-court hound <name>                   — Crier calls a hound
+
+mod roles;
+mod native_wiring;
+
+use crate::native_wiring::verify_wiring;
+use roles::{Court, CourtOp, CourtRecord};
+use std::env;
+use std::path::PathBuf;
+use std::process::exit;
+
+fn workspace_root() -> PathBuf {
+    let mut path = env::current_dir().unwrap_or_else(|_| PathBuf::from("."));
+    loop {
+        if path.join("Cargo.toml").exists() {
+            let content = std::fs::read_to_string(path.join("Cargo.toml")).unwrap_or_default();
+            if content.contains("[workspace]") {
+                return path;
+            }
+        }
+        if !path.pop() {
+            return env::current_dir().unwrap_or_else(|_| PathBuf::from("."));
+        }
+    }
+}
+
+fn print_record(record: &CourtRecord) {
+    println!("{}", serde_json::to_string_pretty(record)
+        .unwrap_or_else(|_| format!("{:?}", record)));
+}
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    if args.len() < 2 {
+        eprintln!("NSQ Court — 25-role operational authority");
+        eprintln!("");
+        eprintln!("Usage:");
+        eprintln!("  nsq-court verify                        verify all 25 seats are present");
+        eprintln!("  nsq-court scan                          full kingdom scan (SEES ALL)");
+        eprintln!("  nsq-court check <path>                  validate file (Linter/Queen)");
+        eprintln!("  nsq-court coherence                     workspace coherence (Manager)");
+        eprintln!("  nsq-court perceive                      faint signal scan (Seer)");
+        eprintln!("  nsq-court hound <name>                  call a hound (Crier)");
+        eprintln!("  nsq-court dispatch <role> <verb> [k=v]  dispatch to a role");
+        exit(2);
+    }
+
+    let root = workspace_root();
+    let court = Court::new(&root);
+
+    match args[1].as_str() {
+        "verify" => {
+            println!("NSQ Court — Seat Verification");
+            println!("Workspace: {}", root.display());
+            println!("");
+            let seats = court.verify_seats();
+            let mut failed = 0usize;
+            for seat in &seats {
+                println!("  {}", seat);
+                if seat.contains("ABSENT") { failed += 1; }
+            }
+            println!("");
+            if failed == 0 {
+                println!("All 25 court seats operational.");
+            } else {
+                eprintln!("{} seat(s) absent. Court is incomplete.", failed);
+                exit(1);
+            }
+        }
+        "scan" => {
+            let op = CourtOp::new("scan-001", "court-cli", "sees_all", "scan");
+            let record = court.dispatch(&op);
+            println!("NSQ Court — Kingdom Scan");
+            println!("");
+            print_record(&record);
+            if !record.verdict.is_approved() { exit(1); }
+        }
+        "check" => {
+            if args.len() < 3 {
+                eprintln!("usage: nsq-court check <path>");
+                exit(2);
+            }
+            let path = &args[2];
+            let op = CourtOp::new("check-001", "court-cli", "linter", "validate")
+                .with("path", path);
+            let record = court.dispatch(&op);
+            println!("NSQ Court — Linter/Queen: {}", path);
+            println!("");
+            print_record(&record);
+            if !record.verdict.is_approved() { exit(1); }
+        }
+        "coherence" => {
+            let op = CourtOp::new("coh-001", "court-cli", "manager", "check_coherence");
+            let record = court.dispatch(&op);
+            println!("NSQ Court — Manager Coherence");
+            println!("Workspace: {}", root.display());
+            println!("");
+            print_record(&record);
+            if !record.verdict.is_approved() { exit(1); }
+        }
+        "perceive" => {
+            let op = CourtOp::new("perc-001", "court-cli", "seer", "perceive");
+            let record = court.dispatch(&op);
+            println!("NSQ Court — Seer Perception");
+            println!("");
+            print_record(&record);
+        }
+        "hound" => {
+            if args.len() < 3 {
+                eprintln!("usage: nsq-court hound <scent|proof|war|night|gate>");
+                exit(2);
+            }
+            let hound = &args[2];
+            let op = CourtOp::new("hound-001", "court-cli", "crier", "call_hounds")
+                .with("hound", hound);
+            let record = court.dispatch(&op);
+            println!("NSQ Court — Crier: {} hound", hound);
+            println!("");
+            print_record(&record);
+            if !record.verdict.is_approved() { exit(1); }
+        }
+        "dispatch" => {
+            if args.len() < 4 {
+                eprintln!("usage: nsq-court dispatch <role> <verb> [key=value ...]");
+                exit(2);
+            }
+            let role = &args[2];
+            let verb = &args[3];
+            let mut op = CourtOp::new("dispatch-001", "court-cli", role.as_str(), verb.as_str());
+            for arg in args.iter().skip(4) {
+                if let Some((k, v)) = arg.split_once('=') {
+                    op = op.with(k, v);
+                }
+            }
+            let record = court.dispatch(&op);
+            println!("NSQ Court — {} / {}", role, verb);
+            println!("");
+            print_record(&record);
+            if !record.verdict.is_approved() { exit(1); }
+        }
+        cmd => {
+            eprintln!("NSQ Court: unknown command '{}'. Run without args for usage.", cmd);
+            exit(2);
+        }
+    }
+}
+pub fn wiring_verifier() { verify_wiring(Path::new(env!("CARGO_MANIFEST_DIR"))).expect("House wired")) }

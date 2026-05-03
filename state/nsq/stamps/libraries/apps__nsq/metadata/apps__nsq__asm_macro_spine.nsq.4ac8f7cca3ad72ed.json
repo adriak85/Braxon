@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/apps__nsq/asm/macros/apps__nsq__asm_macro_spine.nsq.4ac8f7cca3ad72ed.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.315429+00:00",
+  "harm_hit_count": 0,
+  "library": "apps__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/apps__nsq/metadata/apps__nsq__asm_macro_spine.nsq.4ac8f7cca3ad72ed.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "apps/nsq/asm_macro_spine.nsq",
+  "source_bytes": 2217,
+  "source_sha256": "4ac8f7cca3ad72edbf10aa1ad08ef98ae3b01bc244180f2922f934a03e9ed1c2",
+  "stamp_id": "nsq.asm.apps__nsq.apps__nsq__asm_macro_spine.nsq.4ac8f7cca3ad72ed"
+}

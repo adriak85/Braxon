@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_15_Suffocating_In_Silence__06_scene_expansion_part1.md.15b8b445d94e81a6.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.315250+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_15_Suffocating_In_Silence__06_scene_expansion_part1.md.15b8b445d94e81a6.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_15_Suffocating_In_Silence/06_scene_expansion_part1.md",
+  "source_bytes": 12280,
+  "source_sha256": "15b8b445d94e81a67ed09216b7da8e3e6564e7996cfa89b647ceb8c85c17a73f",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_15_Suffocating_In_Silence__06_scene_expansion_part1.md.15b8b445d94e81a6"
+}

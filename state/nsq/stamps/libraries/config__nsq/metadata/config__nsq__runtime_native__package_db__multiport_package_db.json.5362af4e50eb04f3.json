@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__runtime_native__package_db__multiport_package_db.json.5362af4e50eb04f3.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.453769+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__runtime_native__package_db__multiport_package_db.json.5362af4e50eb04f3.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/runtime_native/package_db/multiport_package_db.json",
+  "source_bytes": 763,
+  "source_sha256": "5362af4e50eb04f32e785a2f6446439ab31c2e3c65caa80fe87b3b487cf710c8",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__runtime_native__package_db__multiport_package_db.json.5362af4e50eb04f3"
+}

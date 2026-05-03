@@ -1,0 +1,28 @@
+NSQ_APP native_parameter_task_runner
+NSQ_APP_VERSION 1
+
+NSQ_NATIVE_TASK {
+  task = rewrite_BRAXON_to_nsq_then_operate_parameter_windows
+  setup_phase_rewrite_to_nsq = true
+  setup_phase_restore_original_hashes = true
+  setup_phase_not_scored = true
+
+  final_phase_leave_nsq_absorbed_state = true
+  final_phase_runs_twice = true
+  scored_phase_tracking = false
+  scored_phase_macro_discovery = false
+  scored_phase_tracers = false
+
+  parameter_range_total = 6900000000000
+  parameter_range_is_address_space = true
+  parameter_window_default = 65536
+  timeout_seconds = 10
+
+  metrics {
+    tasks_completed = true
+    parameter_windows_opened = true
+    bit_operations = true
+    wrappers_detected = true
+    overhead_detected = true
+  }
+}

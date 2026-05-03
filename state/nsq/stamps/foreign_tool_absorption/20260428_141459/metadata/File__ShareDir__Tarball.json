@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "File::ShareDir::Tarball",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/File/ShareDir/Tarball.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/File__ShareDir__Tarball.source",
+  "source_sha256": "c3c1adcd5ef909435a3a96b62f85ee4daa8203ffc60fa1046729694fa94281ff",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/File__ShareDir__Tarball.translated.nsq",
+  "nsq_body_sha256": "cab8c653d491d97079c41504030783438cd0da95619b221f76c755d8dd1af190",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

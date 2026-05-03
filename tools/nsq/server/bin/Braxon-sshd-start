@@ -1,0 +1,25 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+CONF="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd_config"
+PID="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid"
+LOG="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.log"
+
+if [ -s "$PID" ] && kill -0 "$(cat "$PID")" 2>/dev/null; then
+  echo "Braxon SSHD already running: pid $(cat "$PID")"
+  exit 0
+fi
+
+sshd -f "$CONF" -E "$LOG"
+
+sleep 1
+
+if [ -s "$PID" ] && kill -0 "$(cat "$PID")" 2>/dev/null; then
+  echo "Braxon SSHD started"
+  echo "pid:  $(cat "$PID")"
+  echo "port: 8022"
+else
+  echo "Braxon SSHD start may have failed. Log:"
+  tail -n 80 "$LOG" 2>/dev/null || true
+  exit 1
+fi

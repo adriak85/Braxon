@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__substrate_lock.md.e20055e0ca47b5da.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.273501+00:00",
+  "harm_hit_count": 0,
+  "library": "specs__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__substrate_lock.md.e20055e0ca47b5da.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/nsq/substrate_lock.md",
+  "source_bytes": 1521,
+  "source_sha256": "e20055e0ca47b5da794523751bef0fedab561e05d4a1873e1ac8cb307e70b8f1",
+  "stamp_id": "nsq.asm.specs__nsq.specs__nsq__substrate_lock.md.e20055e0ca47b5da"
+}

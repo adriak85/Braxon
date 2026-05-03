@@ -1,0 +1,29 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+PID="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.pid"
+LOG="/data/data/com.termux/files/home/Braxon/state/nsq/server/BRAXON_sshd.log"
+
+echo "=== Braxon SSHD status ==="
+
+if [ -s "$PID" ] && kill -0 "$(cat "$PID")" 2>/dev/null; then
+  echo "running: yes"
+  echo "pid: $(cat "$PID")"
+else
+  echo "running: no"
+fi
+
+echo "port: 8022"
+echo
+
+echo "=== connect info ==="
+USER_NAME="$(whoami)"
+IP_ADDR="$(ip route get 1.1.1.1 2>/dev/null | awk '{for(i=1;i<=NF;i++) if($i=="src") print $(i+1)}' | head -n 1)"
+[ -n "$IP_ADDR" ] || IP_ADDR="<phone-ip>"
+
+echo "from another device on same network:"
+echo "ssh -p 8022 $USER_NAME@$IP_ADDR"
+echo
+
+echo "=== recent log ==="
+tail -n 40 "$LOG" 2>/dev/null || true

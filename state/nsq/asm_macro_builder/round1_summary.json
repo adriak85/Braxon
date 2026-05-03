@@ -1,0 +1,23 @@
+{
+  "alphabet_unicode_index": {
+    "asm": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/asm/alphabet_unicode_index.s",
+    "entries": 166,
+    "full_unicode_policy": "range_seed_plus_on_demand_expansion",
+    "generated_at": "2026-04-24T18:08:42.642568+00:00",
+    "index": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/index/alphabet_unicode_index.jsonl",
+    "library": "nsq__alphabet_unicode_index",
+    "nsq_index": "state/nsq/stamps/libraries/nsq__alphabet_unicode_index/index/alphabet_unicode_index.nsq",
+    "schema": "nsq.asm.alphabet_unicode_index.v1"
+  },
+  "elapsed_seconds": 7.515,
+  "generated_at": "2026-04-24T18:08:50.157994+00:00",
+  "harm_hits": 279,
+  "harm_report": "state/nsq/asm_macro_builder/harm_report_round1.jsonl",
+  "macro_registry": "state/nsq/stamps/registry/asm_macro_registry_round1.jsonl",
+  "round": 1,
+  "schema": "nsq.asm_macro_builder.round_summary.v1",
+  "score_rule": "only round 2 is scored",
+  "scored": false,
+  "source_files_encoded": 3388,
+  "translation_index": "state/nsq/stamps/registry/translation_index_round1.jsonl"
+}

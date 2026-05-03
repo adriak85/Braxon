@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0112__B02_12__Pip_Recognizes_He_Is_No_Longer_Only_React.5db7f243af597389.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.653018+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0112__B02_12__Pip_Recognizes_He_Is_No_Longer_Only_React.5db7f243af597389.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_02_The_Diary_And_The_Blue_Light/0112__B02_12__Pip_Recognizes_He_Is_No_Longer_Only_Reacting.md",
+  "source_bytes": 217,
+  "source_sha256": "5db7f243af5973891b27cced294647989be907517543c51908cd372538c94624",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0112__B02_12__Pip_Recognizes_He_Is_No_Longer_Only_React.5db7f243af597389"
+}

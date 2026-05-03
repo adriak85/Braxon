@@ -1,0 +1,17 @@
+NSQ_CONFIG moral_invariant_guard
+
+guard_policy {
+  protected_file = specs/Braxon/BRAXON_PERSONAL_MORAL_INVARIANT.md
+  scan_repo_for_override_language = true
+  fail_on_contradiction = true
+  allow_explicit_update_only_by_replacing_protected_file = true
+  generated_files_cannot_override = true
+  guard_must_guard_guard = true
+  guard_loop_max_passes = 6
+}
+
+translation_policy {
+  value_preserving_only = true
+  no_moral_inversion = true
+  no_goal_override = true
+}

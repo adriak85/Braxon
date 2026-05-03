@@ -1,0 +1,12 @@
+{
+  "schema": "nsq.native_elf_build_report.v1",
+  "generated_at": "20260424_153400",
+  "cc": "clang",
+  "native_elf_built": true,
+  "runner": "bin/nsq-native",
+  "runner_alias": "bin/nsqasm",
+  "runtime_tracking": false,
+  "runtime_macro_discovery": false,
+  "runtime_tracers": false,
+  "bare_metal_claim": false
+}

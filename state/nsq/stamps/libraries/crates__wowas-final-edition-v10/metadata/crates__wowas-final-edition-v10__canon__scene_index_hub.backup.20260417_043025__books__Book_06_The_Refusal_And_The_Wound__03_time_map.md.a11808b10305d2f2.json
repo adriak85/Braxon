@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_06_The_Refusal_And_The_Wound__03_time_map.md.a11808b10305d2f2.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:39.111446+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_06_The_Refusal_And_The_Wound__03_time_map.md.a11808b10305d2f2.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_06_The_Refusal_And_The_Wound/03_time_map.md",
+  "source_bytes": 1402,
+  "source_sha256": "a11808b10305d2f2f1fd41c4c83344a34daf84f9277e77ca08b4bb223bb8409a",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_06_The_Refusal_And_The_Wound__03_time_map.md.a11808b10305d2f2"
+}

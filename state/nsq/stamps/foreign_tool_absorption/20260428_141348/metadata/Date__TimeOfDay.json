@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141348",
+  "kind": "cpan_source",
+  "name": "Date::TimeOfDay",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Date/TimeOfDay.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Date__TimeOfDay.source",
+  "source_sha256": "29857e835ce31160bbc319633897c9c3de6e094f690514ef1fe27084641292d8",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Date__TimeOfDay.translated.nsq",
+  "nsq_body_sha256": "88ea4c4cd9f7439ddd961119724d75fcbf59058352dc83f1089ac7f456fceaa1",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

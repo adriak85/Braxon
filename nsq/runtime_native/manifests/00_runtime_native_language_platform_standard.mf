@@ -1,0 +1,44 @@
+id: nsq.runtime.native.language.platform.standard.v3
+type: manifest
+version: 3
+authority: Braxon
+role: runtime_native_language_platform_standard
+
+purpose:
+  Build every named language, toolchain, API, device surface, and platform surface
+  into NSQ runtime natively, then translate them into graded multipositional selector
+  and operating-code forms.
+
+core_rule:
+  foreign spellings are projection only
+  native meaning is sovereign
+  package resolution is local and offline
+  multithreaded package work uses multiport access
+
+required_domains:
+  - c
+  - cmake
+  - cpp
+  - csharp
+  - css
+  - rust
+  - lisp
+  - pico_surface
+  - lua
+  - kotlin
+  - java
+  - html
+  - python
+  - python3
+  - sql
+  - shell
+  - bash
+  - zsh
+  - fish
+  - api
+  - adb
+  - ndk
+  - jdk
+  - jni
+  - sdk
+  - minimum_sdk_floor

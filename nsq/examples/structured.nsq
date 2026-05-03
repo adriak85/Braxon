@@ -1,0 +1,4 @@
+# NSQ native structured lane
+triple wake -> semantic:address -> self :layer 2 :plane 4 :anchor 100 :weight 11 :flags 1
+triple delta -> delta:route:align -> graph :layer 3 :plane 6 :anchor 180 :weight 25 :flags 0
+triple membrane -> cell:membrane:matrix -> state :layer 1 :plane 9 :anchor 260 :weight 30 :flags 2

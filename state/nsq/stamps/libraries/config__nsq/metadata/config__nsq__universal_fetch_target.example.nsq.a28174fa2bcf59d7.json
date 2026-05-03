@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__universal_fetch_target.example.nsq.a28174fa2bcf59d7.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.448526+00:00",
+  "harm_hit_count": 0,
+  "library": "config__nsq",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__universal_fetch_target.example.nsq.a28174fa2bcf59d7.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "config/nsq/universal_fetch_target.example.nsq",
+  "source_bytes": 342,
+  "source_sha256": "a28174fa2bcf59d712c9d05163e0f71675587363d2befd9d82c3103591ebbaab",
+  "stamp_id": "nsq.asm.config__nsq.config__nsq__universal_fetch_target.example.nsq.a28174fa2bcf59d7"
+}

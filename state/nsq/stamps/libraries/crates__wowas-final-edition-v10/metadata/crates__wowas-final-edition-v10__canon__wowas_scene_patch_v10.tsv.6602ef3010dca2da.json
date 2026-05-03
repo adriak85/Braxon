@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__wowas_scene_patch_v10.tsv.6602ef3010dca2da.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.516564+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__wowas_scene_patch_v10.tsv.6602ef3010dca2da.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v10.tsv",
+  "source_bytes": 4036,
+  "source_sha256": "6602ef3010dca2da59a216336e13e0644cd120eb57f06b358b79a80813cb425c",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__wowas_scene_patch_v10.tsv.6602ef3010dca2da"
+}

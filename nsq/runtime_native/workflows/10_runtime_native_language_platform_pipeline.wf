@@ -1,0 +1,72 @@
+id: nsq.runtime.native.language.platform.pipeline.v3
+type: workflow
+version: 3
+authority: Braxon
+role: runtime_native_language_platform_pipeline
+
+phases:
+  - verify_domain_presence
+  - assign_native_runtime_domains
+  - assign_graded_selector_roots
+  - map_foreign_spellings_to_projection
+  - bind_local_package_repo
+  - enable_multiport_package_db
+  - build_cached_resolution_plans
+  - sync_human_machine_docs
+  - emit_tokenizer_mappings
+  - admit_runtime_domains
+
+phase_detail:
+  verify_domain_presence:
+    outputs:
+      - domain_inventory
+      - missing_domain_report
+
+  assign_native_runtime_domains:
+    outputs:
+      - runtime_domain_registry
+      - dialect_lock_registry
+
+  assign_graded_selector_roots:
+    outputs:
+      - selector_registry
+      - operating_code_registry
+
+  map_foreign_spellings_to_projection:
+    outputs:
+      - projection_registry
+      - foreign_flag_registry
+
+  bind_local_package_repo:
+    outputs:
+      - local_package_repo_registry
+      - dependency_edge_registry
+      - packed_package_manifest_registry
+
+  enable_multiport_package_db:
+    outputs:
+      - multiport_registry
+      - port_role_registry
+      - concurrency_rules
+
+  build_cached_resolution_plans:
+    outputs:
+      - warm_resolution_plans
+      - unpack_link_plans
+      - materialization_plans
+
+  sync_human_machine_docs:
+    outputs:
+      - human_doc_registry
+      - machine_doc_registry
+      - shared_source_registry
+
+  emit_tokenizer_mappings:
+    outputs:
+      - tokenizer_registry
+      - mytho_wowas_bias_registry
+      - qwen_to_nsq_registry
+
+  admit_runtime_domains:
+    gate:
+      only when every required domain has native runtime, selector, projection, package, and doc coverage

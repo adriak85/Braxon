@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__generated/asm/macros/generated__kingdom_surface_metrics.json.809d39016c5b7b1a.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.198502+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__generated",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__generated/metadata/generated__kingdom_surface_metrics.json.809d39016c5b7b1a.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "generated/kingdom_surface_metrics.json",
+  "source_bytes": 8352,
+  "source_sha256": "809d39016c5b7b1a1a88eac4e4550076f5f293d67d57107cd53635f2c95bd58c",
+  "stamp_id": "nsq.asm.repo__generated.generated__kingdom_surface_metrics.json.809d39016c5b7b1a"
+}

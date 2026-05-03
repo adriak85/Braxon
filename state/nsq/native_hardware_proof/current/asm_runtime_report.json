@@ -1,0 +1,16 @@
+{
+  "schema": "nsq.asm_runtime.report.v1",
+  "surface": "asm_native_step",
+  "runtime_language": "asm_with_c_launch_shim",
+  "separate_runtime": true,
+  "shim_used": true,
+  "shim_is_bare_metal_proof": false,
+  "parameter_range_total": 6900000000000,
+  "parameter_windows_opened": 287615,
+  "tasks_completed": 18849202176,
+  "bit_operations": 150793617408,
+  "unwound_before_crash": false,
+  "elapsed_seconds": 9.850328,
+  "digest_mix": "0000232364e00000",
+  "bare_metal_claim": false
+}

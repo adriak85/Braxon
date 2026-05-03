@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__wowas_county_creature_patch_v6.tsv.d7d2b6db49830eb3.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.473051+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__wowas_county_creature_patch_v6.tsv.d7d2b6db49830eb3.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/wowas_county_creature_patch_v6.tsv",
+  "source_bytes": 6141,
+  "source_sha256": "d7d2b6db49830eb3c59b07263e592e53b45aa72f092c6a079fc651213ef6baf8",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__wowas_county_creature_patch_v6.tsv.d7d2b6db49830eb3"
+}

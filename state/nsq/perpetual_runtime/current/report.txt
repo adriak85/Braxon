@@ -1,0 +1,27 @@
+== NSQ Court perpetual runtime proof v6 ==
+authority=NSQ_COURT
+architecture_root=true
+king=compositor
+queen=linter
+court_is_agents=false
+route=perpetual_runtime
+acceptance_runner=nsqasm_aarch64_no_libc
+source_language=NSQ
+compiled_surface=NSQASM_AARCH64
+nsqasm_tick_executed=True
+watchdog_restart_test_passed=True
+crash_resume_test_passed=True
+checkpoint_restored=True
+journal_replay_test_passed=True
+resource_ceiling_enforced=True
+manual_stop_works=True
+perpetual_runtime_allowed=True
+rewrite_all_BRAXON_to_nsq_allowed=True
+BRAXON_live_claim=false
+bare_metal_claim_allowed=false
+c_runner_used=false
+c_reference_runner_storage=false
+max_artifact_size_bytes=2312
+max_command_elapsed_seconds=1.050793
+
+truth=NSQ Court perpetual runtime proof passes through NSQASM/AArch64 no-libc host smoke artifacts. This authorizes the court-owned perpetual runtime scaffold, not a whole-core Braxon live claim and not a bare-metal execution claim.

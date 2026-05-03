@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__docs/asm/macros/docs__BRAXON_USER_FACING_CONTRACT.md.8bab453e4d61a888.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.236361+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__docs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__docs/metadata/docs__BRAXON_USER_FACING_CONTRACT.md.8bab453e4d61a888.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "docs/BRAXON_USER_FACING_CONTRACT.md",
+  "source_bytes": 3248,
+  "source_sha256": "8bab453e4d61a88819adbdda82f858f186492e435355604bd97ecbbc8cd32360",
+  "stamp_id": "nsq.asm.repo__docs.docs__BRAXON_USER_FACING_CONTRACT.md.8bab453e4d61a888"
+}

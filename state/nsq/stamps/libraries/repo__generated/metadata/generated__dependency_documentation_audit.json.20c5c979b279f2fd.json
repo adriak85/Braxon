@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__generated/asm/macros/generated__dependency_documentation_audit.json.20c5c979b279f2fd.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.201689+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__generated",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__generated/metadata/generated__dependency_documentation_audit.json.20c5c979b279f2fd.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "generated/dependency_documentation_audit.json",
+  "source_bytes": 357,
+  "source_sha256": "20c5c979b279f2fd05f78e95445907314cda8b798c45316d3559685f914128cb",
+  "stamp_id": "nsq.asm.repo__generated.generated__dependency_documentation_audit.json.20c5c979b279f2fd"
+}

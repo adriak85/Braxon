@@ -1,0 +1,30 @@
+NSQ_ROOT_BOUNDARY_V1
+stamp = 20260427_200514
+identity = Braxon
+authority = NSQ_COURT
+nsq_is_bus = true
+court_is_compositor = true
+
+observed_uid = 10470
+su_available = false
+root_available = false
+root_overlay_chroot_allowed = false
+kernel_overwrite_allowed = false
+bootloader_authority_available = false
+
+blocked:
+  mount_overlay_root = true
+  chroot_root = true
+  bind_dev_sys_proc = true
+  kernel_path_change = true
+  kde_plasma_baremetal_boot = true
+
+allowed:
+  native_rust_c_asm_userland = true
+  nsq_native_scanners = true
+  android_intent_reroute = true
+  BRAXON_app_surface = true
+  termux_launcher_only = true
+  repo_cleanup_and_verification = true
+
+next_correct_path = build_BRAXON_native_phone_runtime_without_root_then_intent_route

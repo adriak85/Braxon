@@ -1,0 +1,9 @@
+patch_id	scope	target	action	content
+V11_SC_001	dialogue_law	Pip	global_add	Pip dialogue follows pressure-state: short/practical in danger; clipped/quiet when hurt; suddenly specific and talkative in breakthrough moments.
+V11_SC_002	scene	prison_break_flux_discovery	insert_lock	Pip's only thought at Rolzen breaking the impossible is "that's what it looks like"; he does not understand why he is crying again.
+V11_SC_003	scene	post_flux_clearance	insert_lock	First thing once clear: Pip hugs Daisy May and Majiskii, smiles big, then becomes unusually talkative and asks Rolzen everything.
+V11_SC_004	scene	eggs_room	insert_lock	First line is Rolzen: "So you must be Majiskii!" Rolzen blushes from surprise; Pip is the one who briefly forgot where he was.
+V11_SC_005	gameplay	prison_break_route	insert_lock	Dogs choose the only correct route; hesitation/explore/loot/save attempts in the prison cost lives.
+V11_SC_006	gameplay	escape_gauntlet	insert_lock	Requires immediate blast on hinge-open, correct crowd-clear sequence, evade timing, Rolzen jump-cue response, wall-climb/gust/crystal-ball final jump/path summon.
+V11_SC_007	backstory	Rolzen	insert_lock	Former gymnast daredevil performer; lost partner to wraith-aging; defended New York by luring zombie Mack away until finally overwhelmed and taken.
+V11_SC_008	reveal	Neith_breakthrough	insert_lock	Only Rylos knows why manifestations intensify after Vaedric's altar breach; tells Xethrolund years into Pip search.

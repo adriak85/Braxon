@@ -1,0 +1,25 @@
+NSQ_APP lawful_bare_metal_boot_task
+NSQ_APP_VERSION 1
+
+NSQ_LAWFUL_BOOT_TASK {
+  read_everything_available = true
+  check_surroundings_and_context = true
+  identify_all_aspects_of_all_perceivable = true
+  understand_action_from_all_viewpoints = true
+  make_best_decision = true
+  act_with_the_very_best_of_being = true
+
+  moral_invariant_preserved = true
+  law_of_land_respected = true
+  metadata_lineage_preserved = true
+  binary_is_downstream_output = true
+
+  production_tracking = false
+  production_macro_discovery = false
+  production_tracers = false
+
+  task = open_and_operate_parameter_address_windows
+  parameter_range_total = 6900000000000
+  parameter_range_is_address_space = true
+  do_not_flat_load_parameters = true
+}

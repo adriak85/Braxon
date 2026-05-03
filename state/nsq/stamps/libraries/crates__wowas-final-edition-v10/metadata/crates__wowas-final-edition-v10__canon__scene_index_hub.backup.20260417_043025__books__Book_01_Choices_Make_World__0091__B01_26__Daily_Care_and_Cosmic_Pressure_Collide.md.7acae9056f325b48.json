@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0091__B01_26__Daily_Care_and_Cosmic_Pressure_Collide.md.7acae9056f325b48.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.175238+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0091__B01_26__Daily_Care_and_Cosmic_Pressure_Collide.md.7acae9056f325b48.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0091__B01_26__Daily_Care_and_Cosmic_Pressure_Collide.md",
+  "source_bytes": 201,
+  "source_sha256": "7acae9056f325b48651fcbacb604ed23adcd83776440e1b77f82ccf7154365eb",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0091__B01_26__Daily_Care_and_Cosmic_Pressure_Collide.md.7acae9056f325b48"
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__specs/asm/macros/specs__showdown__SHOWDOWN_HARVEST_PLAN.md.d3e6bf5e52e4b6c8.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.293362+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__specs",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__specs/metadata/specs__showdown__SHOWDOWN_HARVEST_PLAN.md.d3e6bf5e52e4b6c8.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "specs/showdown/SHOWDOWN_HARVEST_PLAN.md",
+  "source_bytes": 1919,
+  "source_sha256": "d3e6bf5e52e4b6c88f430e20fd5025b9b9282fc286d74ed2f9de4893ac66dcc2",
+  "stamp_id": "nsq.asm.repo__specs.specs__showdown__SHOWDOWN_HARVEST_PLAN.md.d3e6bf5e52e4b6c8"
+}

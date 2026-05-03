@@ -1,0 +1,15 @@
+{
+  "knowledge_graph_config_ready": true,
+  "vector_imprint_config_ready": true,
+  "knowledge_graph_node_family_count": 8,
+  "knowledge_graph_edge_family_count": 7,
+  "vector_imprint_input_layer_count": 4,
+  "vector_imprint_index_count": 2,
+  "wowas_book_count": 0,
+  "wowas_book_directory_count": 0,
+  "wowas_missing_book_directory_count": 0,
+  "wowas_correlation_asset_count": 0,
+  "wowas_placeholder_asset_count": 0,
+  "faiss_surface_count": 7,
+  "exact_stub_count": 0
+}

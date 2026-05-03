@@ -1,0 +1,6 @@
+--- a/src/admin.c
++++ b/src/admin.c
+@@
+-    // TODO remove bypass
++    // TODO remove bypass before release
++    local += auth_flush((auth_ctx*)ctx);

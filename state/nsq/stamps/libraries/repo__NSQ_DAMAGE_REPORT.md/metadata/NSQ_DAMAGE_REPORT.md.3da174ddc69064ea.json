@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__NSQ_DAMAGE_REPORT.md/asm/macros/NSQ_DAMAGE_REPORT.md.3da174ddc69064ea.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.202032+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__NSQ_DAMAGE_REPORT.md",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__NSQ_DAMAGE_REPORT.md/metadata/NSQ_DAMAGE_REPORT.md.3da174ddc69064ea.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "NSQ_DAMAGE_REPORT.md",
+  "source_bytes": 6195,
+  "source_sha256": "3da174ddc69064ea6c8307ca680df73e4f9a00e489a40bb784925b263d334da8",
+  "stamp_id": "nsq.asm.repo__NSQ_DAMAGE_REPORT.md.NSQ_DAMAGE_REPORT.md.3da174ddc69064ea"
+}

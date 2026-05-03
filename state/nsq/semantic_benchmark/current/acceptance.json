@@ -1,0 +1,12 @@
+{
+  "schema": "nsq.semantic_benchmark.acceptance.v1",
+  "nonce": "NSQ_SEMANTIC_BENCHMARK_20260424_190345",
+  "task_file": "state/nsq/semantic_benchmark/current/task.nsq",
+  "expected_result": 21,
+  "required_output_nonce": "NSQ_SEMANTIC_BENCHMARK_20260424_190345",
+  "required_flags": {
+    "tracking": false,
+    "macro_discovery": false,
+    "tracers": false
+  }
+}

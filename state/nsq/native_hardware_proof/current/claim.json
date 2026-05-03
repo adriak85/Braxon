@@ -1,0 +1,12 @@
+{
+  "bare_metal_claim_allowed": false,
+  "bare_metal_proven": false,
+  "BRAXON_live_claim": false,
+  "driver_or_mount_boundary_proven": false,
+  "generated_at": "20260424_153608",
+  "lawful_nsq_semantic_runtime_executed": false,
+  "native_nsqasm_elf_probe_executed": true,
+  "nsq_task_file_semantically_executed": false,
+  "schema": "nsq.native_hardware_claim.current.v2",
+  "status": "native_nsqasm_elf_probe_present_semantic_runtime_and_bare_metal_boundary_pending"
+}

@@ -1,0 +1,26 @@
+[package]
+publish = false
+name = "nsq-query"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Query CLI and library for NSQ index artifacts."
+
+[lib]
+name = "nsq_query"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nsq-query"
+path = "src/main.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+nsq-index  = { path = "../nsq-index" }
+
+[dev-dependencies]
+nsq-core = { path = "../nsq-core" }

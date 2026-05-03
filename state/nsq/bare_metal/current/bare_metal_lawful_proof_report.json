@@ -1,0 +1,165 @@
+{
+  "bare_metal_claim_allowed": false,
+  "bare_metal_nsq_proven": false,
+  "build_report": {
+    "arch": "aarch64",
+    "attempted": true,
+    "binary": "state/nsq/bare_metal/build/nsqasm_lawful_core",
+    "binary_sha256": "a19129b76137fe375b1a2902480a9e9d57c69225edc37d4891b2735b459be248",
+    "build_result": {
+      "cmd": [
+        "/data/data/com.termux/files/usr/bin/clang",
+        "-nostdlib",
+        "-Wl,--build-id=none",
+        "/data/data/com.termux/files/home/Braxon/tools/nsq_bare_metal_proof/nsqasm_lawful_core_aarch64.S",
+        "-o",
+        "/data/data/com.termux/files/home/Braxon/state/nsq/bare_metal/build/nsqasm_lawful_core"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "timeout": false
+    },
+    "built": true,
+    "cc": "/data/data/com.termux/files/usr/bin/clang",
+    "generated_at": "2026-04-25T00:03:58.932524+00:00",
+    "schema": "nsq.bare_metal.nsqasm_core_build.v1"
+  },
+  "BRAXON_live_claim": false,
+  "driver_boundary_candidates": [],
+  "driver_or_mount_boundary_pass": false,
+  "failure_meaning": "Bare-metal claim remains blocked until native NSQ boot and driver/mount boundary proof both pass.",
+  "generated_at": "2026-04-25T00:04:08.518867+00:00",
+  "lawful_nsq_boot_pass": true,
+  "machine": "aarch64",
+  "metadata_current_present": true,
+  "moral_guard_pass": true,
+  "moral_guard_result": {
+    "cmd": [
+      "/data/data/com.termux/files/home/Braxon/bin/Braxon-moral-invariant-guard",
+      "--out",
+      "/data/data/com.termux/files/home/Braxon/state/nsq/bare_metal/current"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"finding_count\": 0,\n  \"findings\": [],\n  \"generated_at\": \"2026-04-25T00:04:08.492787+00:00\",\n  \"missing_required_files\": [],\n  \"ok\": true,\n  \"protected_file\": \"specs/Braxon/BRAXON_PERSONAL_MORAL_INVARIANT.md\",\n  \"protected_sha256\": \"241b15f407bec4fe252bbcf8341d58b94e290766ab1c62f314aacc62ec1c4644\",\n  \"rule\": \"No other file may override, morph, invert, or translate against the moral invariant.\",\n  \"schema\": \"Braxon.moral_invariant_guard.report.v2\"\n}\n",
+    "timeout": false
+  },
+  "native_nsqasm_core_pass": true,
+  "platform": "Android-16-aarch64-64bit-ELF",
+  "production_macro_discovery": false,
+  "production_tracers": false,
+  "production_tracking": false,
+  "runner_reports": [
+    {
+      "cmd_result": {
+        "cmd": [
+          "/data/data/com.termux/files/home/Braxon/state/nsq/bare_metal/build/nsqasm_lawful_core"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\"schema\":\"nsq.nsqasm_lawful_core.native.v1\",\"lawful_nsq_core_executed\":true,\"native_machine_code\":true,\"nsqasm_core\":true,\"production_tracking\":false,\"production_macro_discovery\":false,\"production_tracers\":false,\"bare_metal_proven\":false,\"bare_metal_claim_allowed\":false,\"reason\":\"native_machine_core_executed_but_driver_or_mount_boundary_still_required\"}\n",
+        "timeout": false
+      },
+      "is_elf": true,
+      "is_script": false,
+      "native_binary_candidate": true,
+      "parsed_stdout_json": {
+        "bare_metal_claim_allowed": false,
+        "bare_metal_proven": false,
+        "lawful_nsq_core_executed": true,
+        "native_machine_code": true,
+        "nsqasm_core": true,
+        "production_macro_discovery": false,
+        "production_tracers": false,
+        "production_tracking": false,
+        "reason": "native_machine_core_executed_but_driver_or_mount_boundary_still_required",
+        "schema": "nsq.nsqasm_lawful_core.native.v1"
+      },
+      "runner": "state/nsq/bare_metal/build/nsqasm_lawful_core",
+      "sha256": "a19129b76137fe375b1a2902480a9e9d57c69225edc37d4891b2735b459be248"
+    },
+    {
+      "cmd_result": {
+        "cmd": [
+          "/data/data/com.termux/files/home/Braxon/bin/nsq-native",
+          "/data/data/com.termux/files/home/Braxon/apps/nsq/lawful_bare_metal_boot_task.nsq"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\n  \"schema\": \"nsq.native_runner.elf.v1\",\n  \"surface\": \"nsq_native\",\n  \"runtime_language\": \"nsqasm_native_elf_no_libc\",\n  \"separate_runtime\": true,\n  \"shim_used\": false,\n  \"wrapper_runtime\": false,\n  \"final_nsq_runtime_executed\": true,\n  \"round_3_tracking\": false,\n  \"round_3_macro_discovery\": false,\n  \"round_3_tracers\": false,\n  \"production_like\": true,\n  \"parameter_range_total\": 6900000000000,\n  \"parameter_range_is_address_space\": true,\n  \"parameter_windows_opened\": 1048576,\n  \"tasks_completed\": 67108864,\n  \"bit_operations\": 536870912,\n  \"native_machine_code\": true,\n  \"nsqasm_core\": true,\n  \"bare_metal_claim\": false,\n  \"hardware_proof_claim\": false,\n  \"claim_blocked_reason\": \"native_elf_executed_but_driver_or_mount_boundary_proof_still_required\"\n}\n",
+        "timeout": false
+      },
+      "is_elf": true,
+      "is_script": false,
+      "native_binary_candidate": true,
+      "parsed_stdout_json": {
+        "bare_metal_claim": false,
+        "bit_operations": 536870912,
+        "claim_blocked_reason": "native_elf_executed_but_driver_or_mount_boundary_proof_still_required",
+        "final_nsq_runtime_executed": true,
+        "hardware_proof_claim": false,
+        "native_machine_code": true,
+        "nsqasm_core": true,
+        "parameter_range_is_address_space": true,
+        "parameter_range_total": 6900000000000,
+        "parameter_windows_opened": 1048576,
+        "production_like": true,
+        "round_3_macro_discovery": false,
+        "round_3_tracers": false,
+        "round_3_tracking": false,
+        "runtime_language": "nsqasm_native_elf_no_libc",
+        "schema": "nsq.native_runner.elf.v1",
+        "separate_runtime": true,
+        "shim_used": false,
+        "surface": "nsq_native",
+        "tasks_completed": 67108864,
+        "wrapper_runtime": false
+      },
+      "runner": "bin/nsq-native",
+      "sha256": "3f5aa40bf0a3560e0eb8776f34215ba44eef4d7671785f2fb9af7498781e1e35"
+    },
+    {
+      "cmd_result": {
+        "cmd": [
+          "/data/data/com.termux/files/home/Braxon/bin/nsqasm",
+          "/data/data/com.termux/files/home/Braxon/apps/nsq/lawful_bare_metal_boot_task.nsq"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "{\n  \"schema\": \"nsq.native_runner.elf.v1\",\n  \"surface\": \"nsq_native\",\n  \"runtime_language\": \"nsqasm_native_elf_no_libc\",\n  \"separate_runtime\": true,\n  \"shim_used\": false,\n  \"wrapper_runtime\": false,\n  \"final_nsq_runtime_executed\": true,\n  \"round_3_tracking\": false,\n  \"round_3_macro_discovery\": false,\n  \"round_3_tracers\": false,\n  \"production_like\": true,\n  \"parameter_range_total\": 6900000000000,\n  \"parameter_range_is_address_space\": true,\n  \"parameter_windows_opened\": 1048576,\n  \"tasks_completed\": 67108864,\n  \"bit_operations\": 536870912,\n  \"native_machine_code\": true,\n  \"nsqasm_core\": true,\n  \"bare_metal_claim\": false,\n  \"hardware_proof_claim\": false,\n  \"claim_blocked_reason\": \"native_elf_executed_but_driver_or_mount_boundary_proof_still_required\"\n}\n",
+        "timeout": false
+      },
+      "is_elf": true,
+      "is_script": false,
+      "native_binary_candidate": true,
+      "parsed_stdout_json": {
+        "bare_metal_claim": false,
+        "bit_operations": 536870912,
+        "claim_blocked_reason": "native_elf_executed_but_driver_or_mount_boundary_proof_still_required",
+        "final_nsq_runtime_executed": true,
+        "hardware_proof_claim": false,
+        "native_machine_code": true,
+        "nsqasm_core": true,
+        "parameter_range_is_address_space": true,
+        "parameter_range_total": 6900000000000,
+        "parameter_windows_opened": 1048576,
+        "production_like": true,
+        "round_3_macro_discovery": false,
+        "round_3_tracers": false,
+        "round_3_tracking": false,
+        "runtime_language": "nsqasm_native_elf_no_libc",
+        "schema": "nsq.native_runner.elf.v1",
+        "separate_runtime": true,
+        "shim_used": false,
+        "surface": "nsq_native",
+        "tasks_completed": 67108864,
+        "wrapper_runtime": false
+      },
+      "runner": "bin/nsqasm",
+      "sha256": "3f5aa40bf0a3560e0eb8776f34215ba44eef4d7671785f2fb9af7498781e1e35"
+    }
+  ],
+  "schema": "nsq.bare_metal.lawful_proof.v1",
+  "termux_layer_detected": true
+}

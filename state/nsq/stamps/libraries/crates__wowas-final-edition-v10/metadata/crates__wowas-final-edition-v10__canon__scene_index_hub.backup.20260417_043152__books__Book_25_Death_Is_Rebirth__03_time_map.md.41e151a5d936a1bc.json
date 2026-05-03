@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_25_Death_Is_Rebirth__03_time_map.md.41e151a5d936a1bc.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.178085+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_25_Death_Is_Rebirth__03_time_map.md.41e151a5d936a1bc.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_25_Death_Is_Rebirth/03_time_map.md",
+  "source_bytes": 451,
+  "source_sha256": "41e151a5d936a1bcff421a46d086213bc077d5d0ac9b8c49a47c92c56327bbd2",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_25_Death_Is_Rebirth__03_time_map.md.41e151a5d936a1bc"
+}

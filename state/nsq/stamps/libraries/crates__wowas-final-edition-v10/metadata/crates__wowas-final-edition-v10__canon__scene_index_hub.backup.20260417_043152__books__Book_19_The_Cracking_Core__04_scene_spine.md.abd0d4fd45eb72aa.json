@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_19_The_Cracking_Core__04_scene_spine.md.abd0d4fd45eb72aa.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.031054+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_19_The_Cracking_Core__04_scene_spine.md.abd0d4fd45eb72aa.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_19_The_Cracking_Core/04_scene_spine.md",
+  "source_bytes": 33,
+  "source_sha256": "abd0d4fd45eb72aa0a6558689678ba69800c9ec97e0c62c8e993ca79aa7da182",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_19_The_Cracking_Core__04_scene_spine.md.abd0d4fd45eb72aa"
+}

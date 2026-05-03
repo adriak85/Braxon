@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0061__B02_07__Hidden_Layers_of_the_Oasis_Begin_to_Show..7582d6c7fdcdacc3.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:40.351979+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0061__B02_07__Hidden_Layers_of_the_Oasis_Begin_to_Show..7582d6c7fdcdacc3.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_02_The_Diary_And_The_Blue_Light/0061__B02_07__Hidden_Layers_of_the_Oasis_Begin_to_Show.md",
+  "source_bytes": 197,
+  "source_sha256": "7582d6c7fdcdacc314000a429bf5c865fe546b6d782d1676aea7933564d5050d",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0061__B02_07__Hidden_Layers_of_the_Oasis_Begin_to_Show..7582d6c7fdcdacc3"
+}

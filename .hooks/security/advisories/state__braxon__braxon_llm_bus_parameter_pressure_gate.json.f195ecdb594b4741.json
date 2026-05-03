@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__braxon_llm_bus_parameter_pressure_gate.json.f195ecdb594b4741.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.263001+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__braxon_llm_bus_parameter_pressure_gate.json.f195ecdb594b4741.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/braxon_llm_bus_parameter_pressure_gate.json",
+  "source_bytes": 1027,
+  "source_sha256": "f195ecdb594b474193b4a2e7fc6aaaaa66bab52859942a18f63f3e2610915689",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__braxon_llm_bus_parameter_pressure_gate.json.f195ecdb594b4741"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "Braxon.moral_invariant.current.v2",
+  "generated_at": "20260424_144803",
+  "protected_file": "specs/Braxon/BRAXON_PERSONAL_MORAL_INVARIANT.md",
+  "status": "protected_highest_value_guard",
+  "is_goal_file": false,
+  "goals_may_be_rewritten": true,
+  "moral_code_may_mutate_toward_harm": false,
+  "guard_must_guard_guard": true,
+  "forbidden_overrides": [
+    "metadata",
+    "asm",
+    "binary_translation",
+    "generated_reports",
+    "future_tools",
+    "source_files",
+    "goal_files"
+  ],
+  "required_translation_property": "value_preserving"
+}

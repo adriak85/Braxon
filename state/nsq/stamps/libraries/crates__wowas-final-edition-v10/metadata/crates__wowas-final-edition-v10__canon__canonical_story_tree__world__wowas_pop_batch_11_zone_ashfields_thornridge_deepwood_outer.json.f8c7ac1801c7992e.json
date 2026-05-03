@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__world__wowas_pop_batch_11_zone_ashfields_thornridge_deepwood_outer.json.f8c7ac1801c7992e.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.897870+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__world__wowas_pop_batch_11_zone_ashfields_thornridge_deepwood_outer.json.f8c7ac1801c7992e.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_pop_batch_11_zone_ashfields_thornridge_deepwood_outer.json",
+  "source_bytes": 22525,
+  "source_sha256": "f8c7ac1801c7992ef928aafc59209f4d4d7d1c753e48290b70339a68667928a3",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__canonical_story_tree__world__wowas_pop_batch_11_zone_ashfields_thornridge_deepwood_outer.json.f8c7ac1801c7992e"
+}

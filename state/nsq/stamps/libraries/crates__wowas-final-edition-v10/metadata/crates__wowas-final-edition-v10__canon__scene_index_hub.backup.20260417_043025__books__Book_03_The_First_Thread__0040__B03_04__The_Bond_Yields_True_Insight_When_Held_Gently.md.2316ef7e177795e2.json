@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0040__B03_04__The_Bond_Yields_True_Insight_When_Held_Gently.md.2316ef7e177795e2.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.770910+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0040__B03_04__The_Bond_Yields_True_Insight_When_Held_Gently.md.2316ef7e177795e2.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0040__B03_04__The_Bond_Yields_True_Insight_When_Held_Gently.md",
+  "source_bytes": 183,
+  "source_sha256": "2316ef7e177795e29e8423e63e4ed12af9e40dd8c38b08ae1bb70e9af0d7a574",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0040__B03_04__The_Bond_Yields_True_Insight_When_Held_Gently.md.2316ef7e177795e2"
+}

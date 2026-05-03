@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__nsq-compose/asm/macros/crates__nsq-compose__tests__phase_one.rs.935c96db0b06d7b2.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:37.309275+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__nsq-compose",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__nsq-compose/metadata/crates__nsq-compose__tests__phase_one.rs.935c96db0b06d7b2.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/nsq-compose/tests/phase_one.rs",
+  "source_bytes": 1336,
+  "source_sha256": "935c96db0b06d7b288a1bdb789da554ece709f9317a3a7e61f63b9e3624df38d",
+  "stamp_id": "nsq.asm.crates__nsq-compose.crates__nsq-compose__tests__phase_one.rs.935c96db0b06d7b2"
+}

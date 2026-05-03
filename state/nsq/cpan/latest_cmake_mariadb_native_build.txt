@@ -1,0 +1,4 @@
+report=/data/data/com.termux/files/home/Braxon/state/nsq/cpan/cmake_mariadb_native_build_20260428_175632.txt
+hook=/data/data/com.termux/files/home/Braxon/tools/nsq/cpan/native_cmake_mariadb_env.sh
+pin=/data/data/com.termux/files/home/Braxon/state/nsq/stamps/cmake_mariadb_native_pins.jsonl
+status=native_cmake_mariadb_env_pinned

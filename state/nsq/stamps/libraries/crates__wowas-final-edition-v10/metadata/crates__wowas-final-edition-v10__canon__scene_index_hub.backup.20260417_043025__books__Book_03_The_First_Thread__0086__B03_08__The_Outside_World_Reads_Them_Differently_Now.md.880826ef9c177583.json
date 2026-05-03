@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0086__B03_08__The_Outside_World_Reads_Them_Differently_Now.md.880826ef9c177583.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.893305+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0086__B03_08__The_Outside_World_Reads_Them_Differently_Now.md.880826ef9c177583.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_03_The_First_Thread/0086__B03_08__The_Outside_World_Reads_Them_Differently_Now.md",
+  "source_bytes": 183,
+  "source_sha256": "880826ef9c1775831bb18f4fb266078af611a6c14a241f06d3436198f31bf58d",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_03_The_First_Thread__0086__B03_08__The_Outside_World_Reads_Them_Differently_Now.md.880826ef9c177583"
+}

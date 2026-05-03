@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Config::IOD::Reader",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Config/IOD/Reader.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Config__IOD__Reader.source",
+  "source_sha256": "660eefdeb7397eeb52ad85aad4180b505fc899d0b263b1aaea6b96a9af7150ee",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Config__IOD__Reader.translated.nsq",
+  "nsq_body_sha256": "4c7f069a888ef724819533b626f54a3e70e373aaafefc216d7bc9313bd6f2d62",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

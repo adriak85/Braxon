@@ -1,0 +1,55 @@
+{
+  "components": {
+    "compositor": [
+      "NSQASM_CORE",
+      "LINEAGE_STAMP",
+      "BINARY_BOUNDARY"
+    ],
+    "inspector": [
+      "HARDWARE_PROOF",
+      "WRAPPER_OVERHEAD",
+      "METADATA_CURRENT"
+    ],
+    "lexer": [
+      "NSQ_TOKEN_SURFACE",
+      "NSQASM_OPERATING_BRIDGE"
+    ],
+    "lexor": [
+      "IDENTIFY_ALL_PERCEIVABLE",
+      "NSQ_SOURCE_TRUTH"
+    ],
+    "linter": [
+      "LAWFUL_NSQ",
+      "MORAL_INVARIANT",
+      "NO_FALSE_BARE_METAL_CLAIM"
+    ],
+    "optimizer": [
+      "MACRO_PROMOTION",
+      "NO_TRACKING_PRODUCTION"
+    ],
+    "parser": [
+      "LAWFUL_BOOT_TASK",
+      "PARAMETER_ADDRESS_WINDOW"
+    ],
+    "picker": [
+      "BEST_DECISION",
+      "PROOF_GATE"
+    ],
+    "router": [
+      "NATIVE_RUNNER_ROUTE",
+      "DRIVER_BOUNDARY_ROUTE"
+    ],
+    "scheduler": [
+      "TEN_SECOND_GATE",
+      "UNWIND_BEFORE_CRASH"
+    ]
+  },
+  "court_identity_rule": "king_and_queen_are_canonical_court_slots_not_duplicate_agents",
+  "court_is_agents": false,
+  "generated_at": "20260424_153255",
+  "king": "compositor",
+  "macro_tracking_disallowed_in_production": true,
+  "macro_tracking_runtime_default": false,
+  "queen": "linter",
+  "schema": "nsq.court.bare_metal_macro_equipment.v1"
+}

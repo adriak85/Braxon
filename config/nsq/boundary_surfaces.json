@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "canonical_internal_layer": {
+    "truth": "canonical_nsq",
+    "semantics": "alternating_full_binary_anchors_and_multipositional_levers"
+  },
+  "court_layer": {
+    "components": [
+      "compositor",
+      "lexer",
+      "parser",
+      "linter",
+      "optimizer",
+      "router",
+      "scheduler",
+      "inspector"
+    ]
+  },
+  "native_spine_layer": {
+    "surfaces": [
+      "runtime_dispatch",
+      "court_routing",
+      "preservation",
+      "calibration"
+    ]
+  },
+  "foreign_boundary_layers": [
+    {
+      "surface": "debugger",
+      "direction": "projection_out",
+      "allowed_carriers": ["json_trace", "text_trace", "artifact_manifest"]
+    },
+    {
+      "surface": "security_checker",
+      "direction": "projection_out",
+      "allowed_carriers": ["json_trace", "graph_projection", "artifact_manifest"]
+    },
+    {
+      "surface": "static_analyzer",
+      "direction": "projection_out",
+      "allowed_carriers": ["graph_projection", "text_trace", "artifact_manifest"]
+    },
+    {
+      "surface": "compiler_and_build_tools",
+      "direction": "projection_out",
+      "allowed_carriers": ["surface_bundle", "artifact_manifest", "toolchain_manifest"]
+    },
+    {
+      "surface": "binary_and_system_interfaces",
+      "direction": "projection_out",
+      "allowed_carriers": ["system_manifest", "bridge_frame", "artifact_manifest"]
+    },
+    {
+      "surface": "foreign_runtime_ecosystems",
+      "direction": "projection_out",
+      "allowed_carriers": ["surface_bundle", "runtime_projection", "graph_projection"]
+    }
+  ]
+}

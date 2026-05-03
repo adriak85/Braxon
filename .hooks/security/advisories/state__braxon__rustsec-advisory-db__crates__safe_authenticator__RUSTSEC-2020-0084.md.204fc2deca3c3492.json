@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__safe_authenticator__RUSTSEC-2020-0084.md.204fc2deca3c3492.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.745390+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__safe_authenticator__RUSTSEC-2020-0084.md.204fc2deca3c3492.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/safe_authenticator/RUSTSEC-2020-0084.md",
+  "source_bytes": 392,
+  "source_sha256": "204fc2deca3c3492c1763b939bf566ae112fdc7445344eb32d934c36eea81297",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__safe_authenticator__RUSTSEC-2020-0084.md.204fc2deca3c3492"
+}

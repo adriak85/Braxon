@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0070__B01_23__The_Beat_Ends_on_Preparation_Not_Panic.md.b72095802e0e0941.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:38.158429+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0070__B01_23__The_Beat_Ends_on_Preparation_Not_Panic.md.b72095802e0e0941.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043025/books/Book_01_Choices_Make_World/0070__B01_23__The_Beat_Ends_on_Preparation_Not_Panic.md",
+  "source_bytes": 217,
+  "source_sha256": "b72095802e0e09418046df5511cf9edd63eefff7868ee3550e7669b1096c04f4",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__0070__B01_23__The_Beat_Ends_on_Preparation_Not_Panic.md.b72095802e0e0941"
+}

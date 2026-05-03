@@ -1,0 +1,17 @@
+{
+  "schema": "nsq.foreign_tool.absorbed_stamp.v14",
+  "generated_at": "20260428_141459",
+  "kind": "cpan_source",
+  "name": "Data::TableData::Rank",
+  "source_path": "/data/data/com.termux/files/usr/lib/perl5/site_perl/5.42.0/Data/TableData/Rank.pm",
+  "capture_path": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/source_capture/Data__TableData__Rank.source",
+  "source_sha256": "4ab95faa88526bb65da5f7e553d3074bc99f1f6092a81db88c33847f8e0c2be1",
+  "nsq_body": "state/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Data__TableData__Rank.translated.nsq",
+  "nsq_body_sha256": "3ad9cb7c550b541a9d85c579efdf1494cffdad72a5425fd704956603a3d095f6",
+  "runtime_authority": "nsq_substrate",
+  "foreign_runtime_allowed": false,
+  "parallel_runtime_allowed": false,
+  "silent_foreign_execution_allowed": false,
+  "stamp_system_active": true,
+  "status": "captured_translated_to_nsq_stamp_body"
+}

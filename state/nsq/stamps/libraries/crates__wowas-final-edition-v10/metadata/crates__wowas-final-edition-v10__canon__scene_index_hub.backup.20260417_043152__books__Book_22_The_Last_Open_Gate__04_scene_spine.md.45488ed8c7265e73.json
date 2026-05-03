@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_22_The_Last_Open_Gate__04_scene_spine.md.45488ed8c7265e73.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:41.098175+00:00",
+  "harm_hit_count": 0,
+  "library": "crates__wowas-final-edition-v10",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_22_The_Last_Open_Gate__04_scene_spine.md.45488ed8c7265e73.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "crates/wowas-final-edition-v10/canon/scene_index_hub.backup.20260417_043152/books/Book_22_The_Last_Open_Gate/04_scene_spine.md",
+  "source_bytes": 34,
+  "source_sha256": "45488ed8c7265e738f1cc15639e5441316cca41ac6320d39ae074980975f3d67",
+  "stamp_id": "nsq.asm.crates__wowas-final-edition-v10.crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_22_The_Last_Open_Gate__04_scene_spine.md.45488ed8c7265e73"
+}
