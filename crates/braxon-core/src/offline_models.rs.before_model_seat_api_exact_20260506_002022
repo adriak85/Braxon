@@ -112,7 +112,7 @@ pub enum PipelineStage {
 impl PipelineStage {
     pub fn as_str(self) -> String {
         match self {
-            Self::SourceMissing => "source_missing".to_string(),
+            Self::SourceMissing => "source_missing",
             Self::SourceDownloading => "source_downloading",
             Self::SourceReady => "source_ready",
             Self::NsqRewriting => "nsq_rewriting",
@@ -164,8 +164,8 @@ impl ModelRegistry {
             .collect();
 
         Self {
-            schema: "nsq.court.model_registry.v1".to_string(),
-            watermark: "BRAXON_NSQ_COURT_MODEL_REGISTRY_TEN_POLE_V1".to_string(),
+            schema: "nsq.court.model_registry.v1",
+            watermark: "BRAXON_NSQ_COURT_MODEL_REGISTRY_TEN_POLE_V1",
             assets,
         }
     }

@@ -22,3 +22,4 @@ clap.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 BRAXON_core = { package = "Braxon-core", path = "../braxon-core" }
+nsq-runtime = { path = "../nsq-runtime" }

@@ -71,9 +71,14 @@ pub use offline_agent::{
     OfflineTaskAction, OfflineTaskCounts, OfflineTaskStatus,
 };
 pub use offline_models::{
-    load_or_initialize_offline_model_registry, save_offline_model_registry,
-    OfflineModelAssetRecord, OfflineModelRegistryState,
+    load_or_initialize_model_registry, save_model_registry,
+    ModelAssetRecord, ModelRegistry,
 };
+
+pub use offline_models::load_or_initialize_model_registry as load_or_initialize_offline_model_registry;
+pub use offline_models::save_model_registry as save_offline_model_registry;
+pub use offline_models::ModelAssetRecord as OfflineModelAssetRecord;
+pub use offline_models::ModelRegistry as OfflineModelRegistryState;
 
 pub fn nu128_install_oversight_status(root: &Path) -> Nu128InstallOversightStatus {
     let config_path = root.join("config/nsq/nu128_install_oversight.json");

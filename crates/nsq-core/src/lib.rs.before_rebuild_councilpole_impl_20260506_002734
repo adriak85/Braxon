@@ -924,12 +924,6 @@ pub mod intent {
         SurfaceTranslation,
     }
     impl CouncilPole {
-        #[allow(non_upper_case_globals)]
-        pub const DeepSeekAnalyzer: CouncilPole = CouncilPole::AnalyzerAuditor;
-
-        #[allow(non_upper_case_globals)]
-        pub const DevstralArbiter: CouncilPole = CouncilPole::ArbiterJudge;
-
         pub const ALL: [CouncilPole; 10] = [
             CouncilPole::MaverickLogic,
             CouncilPole::QwenCreativity,
@@ -943,6 +937,9 @@ pub mod intent {
             CouncilPole::SurfaceTranslation,
         ];
 
+        pub const DeepSeekAnalyzer: CouncilPole = CouncilPole::AnalyzerAuditor;
+        pub const DevstralArbiter: CouncilPole = CouncilPole::ArbiterJudge;
+
         pub fn as_str(&self) -> &'static str {
             match self {
                 CouncilPole::MaverickLogic => "maverick_logic",
@@ -955,8 +952,6 @@ pub mod intent {
                 CouncilPole::Audio => "audio",
                 CouncilPole::Emotion => "emotion",
                 CouncilPole::SurfaceTranslation => "surface_translation",
-            }
-        }
 
         pub fn canonical_model_source(&self) -> &'static str {
             match self {
@@ -973,6 +968,7 @@ pub mod intent {
             }
         }
 
+
         pub fn parameter_floor_b(&self) -> u64 {
             match self {
                 CouncilPole::MaverickLogic => 22,
@@ -985,6 +981,9 @@ pub mod intent {
                 CouncilPole::Audio => 7,
                 CouncilPole::Emotion => 9,
                 CouncilPole::SurfaceTranslation => 12,
+            }
+        }
+
             }
         }
     }

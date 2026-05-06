@@ -924,12 +924,6 @@ pub mod intent {
         SurfaceTranslation,
     }
     impl CouncilPole {
-        #[allow(non_upper_case_globals)]
-        pub const DeepSeekAnalyzer: CouncilPole = CouncilPole::AnalyzerAuditor;
-
-        #[allow(non_upper_case_globals)]
-        pub const DevstralArbiter: CouncilPole = CouncilPole::ArbiterJudge;
-
         pub const ALL: [CouncilPole; 10] = [
             CouncilPole::MaverickLogic,
             CouncilPole::QwenCreativity,
@@ -942,6 +936,9 @@ pub mod intent {
             CouncilPole::Emotion,
             CouncilPole::SurfaceTranslation,
         ];
+
+        pub const DeepSeekAnalyzer: CouncilPole = CouncilPole::AnalyzerAuditor;
+        pub const DevstralArbiter: CouncilPole = CouncilPole::ArbiterJudge;
 
         pub fn as_str(&self) -> &'static str {
             match self {

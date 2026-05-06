@@ -910,6 +910,7 @@ pub mod intent {
             reason: "eight-variable NSQ intent gradient frame".to_string(),
         }
     }
+
     #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
     pub enum CouncilPole {
         MaverickLogic,
@@ -923,71 +924,7 @@ pub mod intent {
         Emotion,
         SurfaceTranslation,
     }
-    impl CouncilPole {
-        #[allow(non_upper_case_globals)]
-        pub const DeepSeekAnalyzer: CouncilPole = CouncilPole::AnalyzerAuditor;
 
-        #[allow(non_upper_case_globals)]
-        pub const DevstralArbiter: CouncilPole = CouncilPole::ArbiterJudge;
-
-        pub const ALL: [CouncilPole; 10] = [
-            CouncilPole::MaverickLogic,
-            CouncilPole::QwenCreativity,
-            CouncilPole::ArbiterJudge,
-            CouncilPole::AnalyzerAuditor,
-            CouncilPole::LimbicEmpath,
-            CouncilPole::SupportMemory,
-            CouncilPole::Vision,
-            CouncilPole::Audio,
-            CouncilPole::Emotion,
-            CouncilPole::SurfaceTranslation,
-        ];
-
-        pub fn as_str(&self) -> &'static str {
-            match self {
-                CouncilPole::MaverickLogic => "maverick_logic",
-                CouncilPole::QwenCreativity => "qwen_creativity",
-                CouncilPole::ArbiterJudge => "arbiter_judge",
-                CouncilPole::AnalyzerAuditor => "analyzer_auditor",
-                CouncilPole::LimbicEmpath => "limbic_empath",
-                CouncilPole::SupportMemory => "support_memory",
-                CouncilPole::Vision => "vision",
-                CouncilPole::Audio => "audio",
-                CouncilPole::Emotion => "emotion",
-                CouncilPole::SurfaceTranslation => "surface_translation",
-            }
-        }
-
-        pub fn canonical_model_source(&self) -> &'static str {
-            match self {
-                CouncilPole::MaverickLogic => "assets/braxon_core/source_ingest/maverick_logic",
-                CouncilPole::QwenCreativity => "assets/braxon_core/source_ingest/qwen_creativity",
-                CouncilPole::ArbiterJudge => "assets/braxon_core/source_ingest/devstral_arbiter",
-                CouncilPole::AnalyzerAuditor => "assets/braxon_core/source_ingest/deepseek_analyzer",
-                CouncilPole::LimbicEmpath => "assets/braxon_core/source_ingest/limbic_empath",
-                CouncilPole::SupportMemory => "assets/braxon_core/source_ingest/support_memory",
-                CouncilPole::Vision => "assets/braxon_core/source_ingest/vision",
-                CouncilPole::Audio => "assets/braxon_core/source_ingest/audio",
-                CouncilPole::Emotion => "assets/braxon_core/source_ingest/emotion",
-                CouncilPole::SurfaceTranslation => "assets/braxon_core/source_ingest/surface_translation",
-            }
-        }
-
-        pub fn parameter_floor_b(&self) -> u64 {
-            match self {
-                CouncilPole::MaverickLogic => 22,
-                CouncilPole::QwenCreativity => 72,
-                CouncilPole::ArbiterJudge => 123,
-                CouncilPole::AnalyzerAuditor => 604,
-                CouncilPole::LimbicEmpath => 8,
-                CouncilPole::SupportMemory => 14,
-                CouncilPole::Vision => 32,
-                CouncilPole::Audio => 7,
-                CouncilPole::Emotion => 9,
-                CouncilPole::SurfaceTranslation => 12,
-            }
-        }
-    }
     #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
     pub enum IntentSurface {
         SurfaceIngress,
@@ -1024,37 +961,6 @@ pub mod intent {
         pub seated: bool,
     }
 
-
-    impl SeatedPole {
-        pub fn new(
-            pole: CouncilPole,
-            model_id: impl Into<String>,
-            parameter_count: u64,
-            unrestricted: bool,
-        ) -> Self {
-            Self {
-                pole,
-                model_id: model_id.into(),
-                parameter_count,
-                binding: IntentGradientBinding {
-                    variable: NsqIntentVariable::Agency,
-                    anchor: NsqIntentScaleAnchor::Systemic,
-                    position: NsqFinalLeverPosition::new(
-                        CANONICAL_LEVER_MAX_POSITION,
-                        if unrestricted {
-                            NsqFinalSide::Positive
-                        } else {
-                            NsqFinalSide::Neutral
-                        },
-                    ),
-                    semantic_range: "brain_seat_model_lane".to_string(),
-                    cognitive_bias: "preserve_model_seat_authority".to_string(),
-                },
-                seated: unrestricted,
-            }
-        }
-    }
-
     #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
     pub struct CourtSeating {
         pub seats: Vec<SeatedPole>,
@@ -1063,22 +969,6 @@ pub mod intent {
     }
 
     impl CourtSeating {
-        pub fn new(seats: Vec<SeatedPole>) -> Self {
-            Self {
-                seats,
-                inner_language: "nsq_intent_gradient_grid".to_string(),
-                surface_translation_only: true,
-            }
-        }
-
-        pub fn operational_count(&self) -> usize {
-            self.seats.iter().filter(|seat| seat.seated).count()
-        }
-
-        pub fn council_ready(&self) -> bool {
-            self.seats.len() == 10 && self.seats.iter().all(|seat| seat.seated)
-        }
-
         pub fn seat_count(&self) -> usize {
             self.seats.len()
         }

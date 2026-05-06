@@ -1,0 +1,14 @@
+[package]
+publish = false
+name = "Braxon-showdown"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Kingdom and court artifact readiness gate for Braxon."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
