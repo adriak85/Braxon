@@ -1,0 +1,19 @@
+{
+  "schema": "braxon.substrate.nsq_court_start_proof.v1",
+  "authority": "NSQ_COURT",
+  "purpose": "first direct AArch64 no-libc machine-contact proof for NSQ Court substrate descent",
+  "source": "asm/nsq_court_start/start.S",
+  "build_script": "asm/nsq_court_start/build.sh",
+  "verify_script": "asm/nsq_court_start/verify.sh",
+  "expected_output": "NSQ_COURT_START_PROOF_OK",
+  "expected_exit_status": 37,
+  "requires_no_libc": true,
+  "requires_no_dynamic_section": true,
+  "requires_explicit_start_symbol": "_start",
+  "runtime_claim": "substrate_start_proof_only_not_full_runtime",
+  "repo_policy": {
+    "generated_binary_inside_git": false,
+    "generated_object_inside_git": false,
+    "proof_reports_allowed_in_state": true
+  }
+}
