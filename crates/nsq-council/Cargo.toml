@@ -1,0 +1,10 @@
+[package]
+name = "nsq-council"
+version = "0.1.0"
+edition = "2021"
+description = "NSQ Court Council of Six — sovereign agentic dispatch and six-pole intent gradient routing"
+
+[dependencies]
+nsq-core = { path = "../nsq-core" }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
