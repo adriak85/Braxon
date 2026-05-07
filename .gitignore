@@ -34,3 +34,8 @@ state/nsq/citadel699/current/*.json
 state/nsq/citadel699/current/requests/
 state/nsq/citadel699/current/imports/
 assets/braxon_core/source_ingest/nsq_transport/citadel699/
+
+# NSQ substrate generated objects/binaries/temp checks
+state/substrate/nsq_court_start/nsq_court_start
+state/substrate/nsq_court_start/*.o
+state/substrate/nsq_court_start/*dynamic_check*.txt
