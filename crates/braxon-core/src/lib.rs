@@ -1,5 +1,6 @@
 pub mod context_manifest;
 pub mod council;
+pub mod council_ten;
 pub mod greeting;
 pub mod offline_agent;
 pub mod offline_models;
@@ -9,6 +10,9 @@ pub mod wowas_rescue;
 use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::Path;
+
+pub use council_ten::{CouncilTen, CouncilTenWakeTrace, WakeStep, WakeStepResult,
+    STAMP_WAKE_COUNCIL_TEN, COUNCIL_TEN_AUTHORITY};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct BRAXONIdentity {
@@ -59,23 +63,24 @@ struct Nu128InstallOversightConfig {
 }
 
 pub use context_manifest::{
-    braxon_context_manifest_path, braxon_context_manifest_status, braxon_wake_linked_change_report,
-    braxon_wake_linked_change_report_from_env, braxon_wake_linked_change_report_with_db,
-    load_braxon_chain_root_db, load_braxon_context_manifest, BraxonContextManifest,
-    BraxonContextManifestStatus, ChainRootRecord, ContextChainRootDb, LeftOutContext,
-    LinkedChangeSuggestion, LinkedSurfaceTag, MissingContextPointer, RuntimeAdjustmentLane,
-    SemanticPointer, WakeActionAnnouncement, WakeChainLink, WakeLinkedChangeReport,
+    braxon_context_manifest_path, braxon_context_manifest_status,
+    braxon_wake_linked_change_report, braxon_wake_linked_change_report_from_env,
+    braxon_wake_linked_change_report_with_db, load_braxon_chain_root_db,
+    load_braxon_context_manifest, BraxonContextManifest, BraxonContextManifestStatus,
+    ChainRootRecord, ContextChainRootDb, LeftOutContext, LinkedChangeSuggestion,
+    LinkedSurfaceTag, MissingContextPointer, RuntimeAdjustmentLane, SemanticPointer,
+    WakeActionAnnouncement, WakeChainLink, WakeLinkedChangeReport,
 };
 pub use offline_agent::{
     load_or_initialize_offline_agent_state, save_offline_agent_state, OfflineAgentState,
     OfflineTaskAction, OfflineTaskCounts, OfflineTaskStatus,
 };
 pub use offline_models::{
-    load_or_initialize_model_registry, save_model_registry,
-    ModelAssetRecord, ModelRegistry,
+    load_or_initialize_model_registry, save_model_registry, ModelAssetRecord, ModelRegistry,
 };
 
-pub use offline_models::load_or_initialize_model_registry as load_or_initialize_offline_model_registry;
+pub use offline_models::load_or_initialize_model_registry
+    as load_or_initialize_offline_model_registry;
 pub use offline_models::save_model_registry as save_offline_model_registry;
 pub use offline_models::ModelAssetRecord as OfflineModelAssetRecord;
 pub use offline_models::ModelRegistry as OfflineModelRegistryState;
@@ -89,7 +94,10 @@ pub fn nu128_install_oversight_status(root: &Path) -> Nu128InstallOversightStatu
     let source_authority_lane = config
         .as_ref()
         .and_then(|cfg| cfg.source_authority_lane.clone())
-        .unwrap_or_else(|| "assets/braxon_core/source_ingest/braxon_transport".to_string());
+        .unwrap_or_else(|| {
+            "assets/braxon_core/source_ingest/braxon_transport".to_string()
+        });
+
     let direct_source_path_ready = root.join(&source_authority_lane).exists();
     let runtime_authority_required = config
         .as_ref()
