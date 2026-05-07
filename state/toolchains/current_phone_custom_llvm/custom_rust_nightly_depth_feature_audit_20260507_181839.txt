@@ -1,0 +1,167 @@
+== Braxon custom Rust nightly depth / feature audit ==
+date=2026-05-07T18:18:39-05:00
+root=/data/data/com.termux/files/home/Braxon
+rust_root=/data/data/com.termux/files/usr/opt/rust-nightly
+
+== active toolchain paths ==
+command_rustc=/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc
+command_cargo=/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo
+expected_rustc=/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc
+expected_cargo=/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo
+
+== rustc identity ==
+rustc 1.96.0-nightly (fd0c901b0 2026-03-18) (built from a source tarball)
+rustc 1.96.0-nightly (fd0c901b0 2026-03-18) (built from a source tarball)
+binary: rustc
+commit-hash: fd0c901b00ee1e08a250039cdb90258603497e20
+commit-date: 2026-03-18
+host: aarch64-linux-android
+release: 1.96.0-nightly
+LLVM version: 21.1.8
+
+== cargo identity ==
+cargo 1.96.0-nightly (cbb9bb8bd 2026-03-13) (built from a source tarball)
+cargo 1.96.0-nightly (cbb9bb8bd 2026-03-13) (built from a source tarball)
+release: 1.96.0-nightly
+commit-hash: cbb9bb8bd0fb272b1be0d63a010701ecb3d1d6d3
+commit-date: 2026-03-13
+host: aarch64-linux-android
+libgit2: 1.9.2 (sys:0.20.4 vendored)
+libcurl: 8.15.0-DEV (sys:0.4.83+curl-8.15.0 vendored ssl:OpenSSL/3.6.2)
+os: Android 16.0.0 [64-bit]
+
+== PATH verification ==
+PASS: PATH rustc resolves to custom nightly
+PASS: PATH cargo resolves to custom nightly
+
+== source-tarball marker ==
+PASS: rustc reports built from a source tarball
+
+== search local rust build-stage evidence ==
+/data/data/com.termux/files/home/.cache/dax/Dax_MERGED_STAGE_20260427_152446/.codex/config.toml
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/.fingerprint/dax_stage_merge-8d7dd2bfd06ce394/bin-dax_stage_merge
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/.fingerprint/dax_stage_merge-8d7dd2bfd06ce394/bin-dax_stage_merge.json
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/.fingerprint/dax_stage_merge-8d7dd2bfd06ce394/dep-bin-dax_stage_merge
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/.fingerprint/dax_stage_merge-8d7dd2bfd06ce394/output-bin-dax_stage_merge
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/dax_stage_merge
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/dax_stage_merge.d
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/deps/dax_stage_merge-8d7dd2bfd06ce394
+/data/data/com.termux/files/home/.cache/dax/dax_stage_merge_20260427_152446/target/release/deps/dax_stage_merge-8d7dd2bfd06ce394.d
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/.fingerprint/fix_stage_workspace_members-4efea4acb22552d1/bin-fix_stage_workspace_members
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/.fingerprint/fix_stage_workspace_members-4efea4acb22552d1/bin-fix_stage_workspace_members.json
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/.fingerprint/fix_stage_workspace_members-4efea4acb22552d1/dep-bin-fix_stage_workspace_members
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/deps/fix_stage_workspace_members-4efea4acb22552d1
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/deps/fix_stage_workspace_members-4efea4acb22552d1.d
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/fix_stage_workspace_members
+/data/data/com.termux/files/home/.cache/dax/fix_stage_workspace_members_20260427_152651/target/release/fix_stage_workspace_members.d
+/data/data/com.termux/files/home/.cache/dax/hook_core_fast_20260427_144832/A_41M_DIRECT_OR_PATCH/extract/.codex/config.toml
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/.fingerprint/plain_overlay_stage-88987ac87c78ba98/bin-plain_overlay_stage
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/.fingerprint/plain_overlay_stage-88987ac87c78ba98/bin-plain_overlay_stage.json
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/.fingerprint/plain_overlay_stage-88987ac87c78ba98/dep-bin-plain_overlay_stage
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/.fingerprint/plain_overlay_stage-88987ac87c78ba98/output-bin-plain_overlay_stage
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/deps/plain_overlay_stage-88987ac87c78ba98
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/deps/plain_overlay_stage-88987ac87c78ba98.d
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/plain_overlay_stage
+/data/data/com.termux/files/home/.cache/dax/plain_overlay_stage_20260427_153623/target/release/plain_overlay_stage.d
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/.fingerprint/restore_missing_stage_deps-e4d6797d79c81546/bin-restore_missing_stage_deps
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/.fingerprint/restore_missing_stage_deps-e4d6797d79c81546/bin-restore_missing_stage_deps.json
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/.fingerprint/restore_missing_stage_deps-e4d6797d79c81546/dep-bin-restore_missing_stage_deps
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/.fingerprint/restore_missing_stage_deps-e4d6797d79c81546/output-bin-restore_missing_stage_deps
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/deps/restore_missing_stage_deps-e4d6797d79c81546
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/deps/restore_missing_stage_deps-e4d6797d79c81546.d
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/restore_missing_stage_deps
+/data/data/com.termux/files/home/.cache/dax/restore_missing_stage_deps_20260427_153131/target/release/restore_missing_stage_deps.d
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/.fingerprint/restore_wowas_to_stage-79a4ae27ec53c551/bin-restore_wowas_to_stage
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/.fingerprint/restore_wowas_to_stage-79a4ae27ec53c551/bin-restore_wowas_to_stage.json
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/.fingerprint/restore_wowas_to_stage-79a4ae27ec53c551/dep-bin-restore_wowas_to_stage
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/.fingerprint/restore_wowas_to_stage-79a4ae27ec53c551/output-bin-restore_wowas_to_stage
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/deps/restore_wowas_to_stage-79a4ae27ec53c551
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/deps/restore_wowas_to_stage-79a4ae27ec53c551.d
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/restore_wowas_to_stage
+/data/data/com.termux/files/home/.cache/dax/restore_wowas_to_stage_20260427_152903/target/release/restore_wowas_to_stage.d
+/data/data/com.termux/files/home/.cache/dax/symlink_overlay_underlay_20260427_165248/.codex/config.toml
+/data/data/com.termux/files/home/.cargo/config.toml
+/data/data/com.termux/files/home/.codex/config.toml
+/data/data/com.termux/files/home/.codex/memories/rollout_summaries/2026-04-18T02-52-05-U5kK-qwen_ingress_resume_audit_huihui_abliterated.md
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-0/_alien/build_i9KO/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stderr.txt
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-0/_alien/build_i9KO/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stdout.txt
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-1/_alien/build_DsU_/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stderr.txt
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-1/_alien/build_DsU_/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stdout.txt
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-2/_alien/build_dhXS/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stderr.txt
+/data/data/com.termux/files/home/.cpan/build/Alien-cmake3-0.10-2/_alien/build_dhXS/cmake-3.31.12/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stdout.txt
+/data/data/com.termux/files/home/.cpan/build/Module-Build-0.4234-0/t/resume.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/10stages-permit.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/11stages-check.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/blib/arch/auto/t/stages/stages.bs
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/blib/arch/auto/t/stages/stages.so
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/stages.c
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/stages.o
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Keyword-0.49-0/t/stages.xs
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/10stages-permit.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/11stages-pre_subparse.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/12stages-post_blockstart.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/13stages-pre_blockend.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/14stages-post_newcv.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/15stages-filter_attr.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/16stages-signature.t
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/blib/arch/auto/t/stages/stages.bs
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/blib/arch/auto/t/stages/stages.so
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/stages.c
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/stages.o
+/data/data/com.termux/files/home/.cpan/build/XS-Parse-Sublike-0.41-0/t/stages.xs
+/data/data/com.termux/files/home/.cpan/build/mod_perl-1.31-0/t/modules/stage.t
+/data/data/com.termux/files/home/.rustup/toolchains/nightly-2025-12-01-aarch64-unknown-linux-musl/lib/rustlib/src/rust/src/llvm-project/libunwind/test/unw_resume.pass.cpp
+/data/data/com.termux/files/home/Braxon/.codex/config.toml
+/data/data/com.termux/files/home/Braxon_dirty/.codex/config.toml
+/data/data/com.termux/files/home/Braxon_dirty/Braxon_Dirty/.codex/config.toml
+/data/data/com.termux/files/home/Braxon_push_snapshot_20260503_000828/.codex/config.toml
+/data/data/com.termux/files/home/CLEAN_ROOM/etc/profile.d/01-termux-bootstrap-second-stage-fallback.sh
+/data/data/com.termux/files/home/CLEAN_ROOM/etc/termux/termux-bootstrap/second-stage/termux-bootstrap-second-stage.sh
+/data/data/com.termux/files/home/DAX-FULL/repo0_backups/wowas_removed_from_dax_20260430_002635/staged_before.patch
+/data/data/com.termux/files/home/Dax.backup.20260427_154136/.codex/config.toml
+/data/data/com.termux/files/home/Dax.backup.20260427_154416/.codex/config.toml
+/data/data/com.termux/files/home/Dax.backup.20260427_154416/Dax/.codex/config.toml
+/data/data/com.termux/files/home/Dax.backup.20260427_155015/.codex/config.toml
+/data/data/com.termux/files/home/Dax.backup.20260427_155015/Dax/.codex/config.toml
+/data/data/com.termux/files/home/Dax.before_restore_claude_final_20260425_200655/.codex/config.toml
+/data/data/com.termux/files/home/Dax_APRIL0021_RECOVER_REDO_20260427_131844/Dax/.codex/config.toml
+/data/data/com.termux/files/home/Dax_clean/.codex/config.toml
+/data/data/com.termux/files/home/Dax_clean/Dax/.codex/config.toml
+/data/data/com.termux/files/home/Dax_rebuild/.codex/config.toml
+/data/data/com.termux/files/home/Dax_rebuild/Dax/.codex/config.toml
+/data/data/com.termux/files/home/Dax_retired_20260501_024002/.codex/config.toml
+/data/data/com.termux/files/home/Ddax/.codex/config.toml
+/data/data/com.termux/files/home/cmake-python-distributions/CMake-src/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stderr.txt
+/data/data/com.termux/files/home/cmake-python-distributions/CMake-src/Tests/RunCMake/CPack/tests/EXTERNAL/stage_and_package-stdout.txt
+/data/data/com.termux/files/home/custom_toolchains/logs/current_phone_tool_versions_20260507_181314.txt
+/data/data/com.termux/files/home/dax_address_truth_20260326_231950/package/.cargo/config.toml
+/data/data/com.termux/files/home/dax_guide/Dax/workspace/.cargo/config.toml
+/data/data/com.termux/files/home/dax_rust_build.log
+/data/data/com.termux/files/home/daxx/Dax/.codex/config.toml
+/data/data/com.termux/files/home/etc/profile.d/01-termux-bootstrap-second-stage-fallback.sh
+/data/data/com.termux/files/home/etc/termux/termux-bootstrap/second-stage/termux-bootstrap-second-stage.sh
+/data/data/com.termux/files/home/tmp/dax_citadel_forward_patch_then_verify_v2_20260424_051439/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_clean_master_e604c09_20260424_041620/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_clean_runtime_tree_20260423_222102/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_clean_runtime_tree_v2_20260423_222355/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_clean_runtime_tree_v3_20260423_222706/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_clean_runtime_tree_v4_20260424_035545/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_fix_citadel_699_naming_v1_20260424_045131/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_fix_citadel_699_naming_v2_20260424_050451/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_fix_citadel_699_naming_v2_20260424_051236/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_fix_runtime_backup_files_v6_20260424_040303/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_forward_nsq_largest_dash_v1_20260424_043307/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_llm_bus_pressure_gate_v10_20260424_055547/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_llm_bus_pressure_gate_v10_20260424_055848/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_merge_forward_nsq_pr1_v1_20260424_044328/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_model_launch_ready_gate_v9_20260424_054919/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_big_forward_dash_v4_20260424_051807/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_finish_line_install_clean_expand_v8_20260424_054547/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_standalone_core_gate_v6_20260424_053936/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_whole_todo_release_gate_v5_20260424_052127/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_whole_todo_release_gate_v5_20260424_053619/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_nsq_whole_todo_release_gate_v5_20260424_053926/.codex/config.toml
+/data/data/com.termux/files/home/tmp/dax_wowas_knowledge_tree_docs_ingest_v3_20260424_091126/.codex/config.toml
+/data/data/com.termux/files/home/tmp/wowas_streamline_apply_and_gate_v2_20260424_055237/.codex/config.toml
+/data/data/com.termux/files/home/tmp/wowas_streamline_prose_gate_v1_20260424_055043/.codex/config.toml
+/data/data/com.termux/files/home/wowas_stage_retire.sh
