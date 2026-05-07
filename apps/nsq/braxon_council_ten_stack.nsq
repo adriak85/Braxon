@@ -1,0 +1,46 @@
+BRAXON_COUNCIL_TEN_STACK {
+  authority = NSQ_COURT
+  architecture_root = true
+  required_model_count = 10
+  brain_model_count = 6
+  sensory_body_count = 4
+  registry_default_stack_is_authoritative = true
+  video_and_voice_required = true
+
+  transfer_method = citadel699_nsq_request_return_rebuild
+  transfer_form = nsq_only
+  raw_fetch_allowed = false
+  raw_payload_transfer_allowed = false
+  pointer_setup_allowed = false
+  donor_transport_pointer_stub_allowed = false
+
+  wiring_protocol = nsq_macro_stamping
+  substrate = base8_switch_topology_nurabit_21x33
+  round_table_assembly = true
+  citadel_699_wire_station = true
+
+  brain_models {
+    deepseek_v3_671b = deepseek-v3-671b
+    qwen3_235b_a22b = qwen3-235b-a22b
+    qwen2_5_72b = qwen2.5-72b
+    deepseek_v3_671b_analyzer = deepseek-v3-671b-analyzer
+    llama3_3_70b = llama3.3-70b
+    gemma3_27b = gemma3-27b
+  }
+
+  sensory_bodies {
+    image_cortex = FLUX.1-dev
+    video_cortex = Wan2.1-T2V-14B
+    voice_body = IndexTTS2
+    world_body_3d = Hunyuan3D-2.1
+  }
+
+  truth_boundary {
+    request_capsule_is_not_raw_download = true
+    whole_core_runtime_verification_required = true
+    raw_fetch_allowed = false
+    raw_payload_transfer_allowed = false
+    pointer_setup_allowed = false
+    target_size_class = mb_scale
+  }
+}

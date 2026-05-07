@@ -1,0 +1,19 @@
+BRAXON_BUS_SURFACE citadel699_environment_bus
+schema = Braxon.citadel699.environment_bus.v2
+created = 20260427_182108
+identity = Braxon
+citadel = Citadel699
+authority = NSQ_COURT
+nsq_is_bus = true
+court_is_compositor = true
+citadel_reads_environment = true
+citadel_has_hardware_address = false
+required_mobile_bit_count = 11
+required_model_count = 10
+brain_model_count = 6
+sensory_body_count = 4
+video_cortex = Wan2.1-T2V-14B
+voice_body = IndexTTS2
+raw_fetch_allowed = false
+raw_payload_transfer_allowed = false
+synthetic_runner_allowed = false
