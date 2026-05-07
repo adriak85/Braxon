@@ -131,7 +131,7 @@ fn discover_authority_seeds(root: &Path) -> Vec<AuthoritySeed> {
         "crates/nsq-core/src/lib.rs",
         "crates/nsq-core/src/intent.rs",
         "crates/nsq-court/src/main.rs",
-        "crates/nsq-runtime/src/lib.rs",
+        "crates/braxon-court/src/main.rs",
         "crates/nsq-wake/src/lib.rs",
         "crates/nsq-grid/src/lib.rs",
         "crates/braxon-core/src/offline_models.rs",

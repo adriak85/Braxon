@@ -42,7 +42,11 @@ fn main() -> Result<(), String> {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::Scan { arch, input, output } => {
+        Commands::Scan {
+            arch,
+            input,
+            output,
+        } => {
             let mut compressor = ModelCompressor::new();
             compressor
                 .scan_root(&input)

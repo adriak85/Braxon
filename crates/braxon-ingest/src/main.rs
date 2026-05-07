@@ -1,5 +1,5 @@
 use clap::{Parser, Subcommand};
-use BRAXON_ingest::{BRAXON_ingest_status, workspace_root};
+use BRAXON_ingest::{workspace_root, BRAXON_ingest_status};
 
 #[derive(Parser, Debug)]
 #[command(name = "Braxon-ingest")]
@@ -36,9 +36,15 @@ fn main() {
 fn print_status(status: &BRAXON_ingest::BRAXONIngestStatus) {
     println!("target_lineage={}", status.target_lineage);
     println!("canonical_semantics={}", status.canonical_semantics);
-    println!("target_source_variant_gb={}", status.target_source_variant_gb);
+    println!(
+        "target_source_variant_gb={}",
+        status.target_source_variant_gb
+    );
     println!("nsq_storage_target_gb={}", status.nsq_storage_target_gb);
-    println!("nsq_hot_memory_target_gb={}", status.nsq_hot_memory_target_gb);
+    println!(
+        "nsq_hot_memory_target_gb={}",
+        status.nsq_hot_memory_target_gb
+    );
     println!(
         "nsq_hot_residency_surface={}",
         status.nsq_hot_residency_surface
@@ -50,7 +56,10 @@ fn print_status(status: &BRAXON_ingest::BRAXONIngestStatus) {
         "target_lineage_bound_to_active_source={}",
         status.target_lineage_bound_to_active_source
     );
-    println!("visible_source_host_bytes={}", status.visible_source_host_bytes);
+    println!(
+        "visible_source_host_bytes={}",
+        status.visible_source_host_bytes
+    );
     println!(
         "visible_source_within_chunk_window={}",
         status.visible_source_within_chunk_window
@@ -67,10 +76,7 @@ fn print_status(status: &BRAXON_ingest::BRAXONIngestStatus) {
         "direct_source_path_ready={}",
         status.direct_source_path_ready
     );
-    println!(
-        "runtime_authority_bound={}",
-        status.runtime_authority_bound
-    );
+    println!("runtime_authority_bound={}", status.runtime_authority_bound);
     println!("next_chunk_allowed={}", status.next_chunk_allowed);
     println!("target_manifest_bound={}", status.target_manifest_bound);
     println!("target_manifest_state={}", status.target_manifest_state);

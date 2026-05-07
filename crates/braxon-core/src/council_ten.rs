@@ -95,35 +95,61 @@ impl CouncilTen {
         let pressure = self.brain.unified_thought_pressure();
         let roster = self.brain.sensory_generation_roster();
 
-        step!(1, "verify_brain_model_count_is_six",
-            self.brain.members.len() == COUNCIL_MODEL_COUNT);
+        step!(
+            1,
+            "verify_brain_model_count_is_six",
+            self.brain.members.len() == COUNCIL_MODEL_COUNT
+        );
 
-        step!(2, "verify_sensory_body_count_is_four",
-            roster.bodies.len() == SENSORY_GENERATION_BODY_COUNT);
+        step!(
+            2,
+            "verify_sensory_body_count_is_four",
+            roster.bodies.len() == SENSORY_GENERATION_BODY_COUNT
+        );
 
-        step!(3, "verify_total_poles_is_ten",
-            self.brain.members.len() + roster.bodies.len() == COUNCIL_TEN_TOTAL_POLES);
+        step!(
+            3,
+            "verify_total_poles_is_ten",
+            self.brain.members.len() + roster.bodies.len() == COUNCIL_TEN_TOTAL_POLES
+        );
 
-        step!(4, "verify_transfer_form_is_nsq_only",
-            COUNCIL_TEN_TRANSFER == "citadel699_nsq_request_return_rebuild");
+        step!(
+            4,
+            "verify_transfer_form_is_nsq_only",
+            COUNCIL_TEN_TRANSFER == "citadel699_nsq_request_return_rebuild"
+        );
 
-        step!(5, "verify_raw_fetch_is_false",
-            true); // enforced by config; no raw fetch path exists in this runtime
+        step!(5, "verify_raw_fetch_is_false", true); // enforced by config; no raw fetch path exists in this runtime
 
-        step!(6, "verify_unified_pressure_ready",
-            pressure.unified_pressure_ready);
+        step!(
+            6,
+            "verify_unified_pressure_ready",
+            pressure.unified_pressure_ready
+        );
 
-        step!(7, "verify_all_brain_regions_unique",
-            pressure.all_regions_unique);
+        step!(
+            7,
+            "verify_all_brain_regions_unique",
+            pressure.all_regions_unique
+        );
 
-        step!(8, "verify_sensory_footprint_within_allowance",
-            roster.footprint_within_allowance);
+        step!(
+            8,
+            "verify_sensory_footprint_within_allowance",
+            roster.footprint_within_allowance
+        );
 
-        step!(9, "project_to_address_nurabit_21x33",
-            COUNCIL_TEN_SUBSTRATE.contains("nurabit_21x33"));
+        step!(
+            9,
+            "project_to_address_nurabit_21x33",
+            COUNCIL_TEN_SUBSTRATE.contains("nurabit_21x33")
+        );
 
-        step!(10, "assemble_coherence_trace",
-            steps.iter().all(|s| s.result == WakeStepResult::Pass));
+        step!(
+            10,
+            "assemble_coherence_trace",
+            steps.iter().all(|s| s.result == WakeStepResult::Pass)
+        );
 
         let all_passed = steps.iter().all(|s| s.result == WakeStepResult::Pass);
 

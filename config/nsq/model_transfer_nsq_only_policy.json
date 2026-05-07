@@ -10,6 +10,8 @@
   "source_edge_payload_transfer_scope": "build_and_translate_for_this_system_once",
   "source_edge_raw_material_allowed": true,
   "source_edge_raw_payload_contact_allowed": true,
+  "raw_weight_download_allowed": false,
+  "raw_payload_transfer_allowed": false,
   "raw_payload_direct_to_hardware_allowed": false,
   "raw_payload_direct_to_hypervisor_allowed": false,
   "raw_payload_home_wire_allowed": false,

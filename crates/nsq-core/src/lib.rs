@@ -7,11 +7,11 @@ pub type Nu16 = u64;
 pub type Nu64 = u64;
 pub type Nu128 = u128;
 
-pub const CANONICAL_LEVER_MAX_POSITION: Nu16 = 500_000;
+pub const CANONICAL_LEVER_MAX_POSITION: Nu16 = 1126;
 pub const LEVER_STATES_PER_CHARGE: Nu16 = CANONICAL_LEVER_MAX_POSITION;
-pub const ACTIVE_NONZERO_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION - 1;
-pub const ZERO_LEVER_STATES: Nu16 = 1;
-pub const ZERO_INCLUSIVE_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION;
+pub const ACTIVE_NONZERO_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION * 2;
+pub const ZERO_LEVER_STATES: Nu16 = 2;
+pub const ZERO_INCLUSIVE_LEVER_STATES: Nu16 = ACTIVE_NONZERO_LEVER_STATES + ZERO_LEVER_STATES;
 pub const TOTAL_STATES_PER_LEVER: Nu16 = ZERO_INCLUSIVE_LEVER_STATES;
 
 pub const CANONICAL_BIT_UNIT_LEVERS: usize = 4;
@@ -19,27 +19,12 @@ pub const CANONICAL_ANCHORS_PER_BIT_UNIT: usize = 4;
 pub const CANONICAL_SWITCH_POSITIONS: usize =
     CANONICAL_BIT_UNIT_LEVERS + CANONICAL_ANCHORS_PER_BIT_UNIT;
 
-pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] =
-    [2, 2, 2, 2, 2, 2, 2, 2];
+pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [2, 2, 2, 2, 2, 2, 2, 2];
 
 pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] =
-    [2, CANONICAL_LEVER_MAX_POSITION, 2, CANONICAL_LEVER_MAX_POSITION, 2, CANONICAL_LEVER_MAX_POSITION, 2, CANONICAL_LEVER_MAX_POSITION];
+    [2, 1126, 2, 1126, 2, 1126, 2, 1126];
 
-pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 62_500_000_000_000_000_000_000;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 25_811_642_826_256;
 
 pub const ZERO_INCLUSIVE_ELEVEN_STAMP_STATES: &str =
     "3388224006628364777633391917977689907793577920420662611307405205212142590540076808411238765893904872234096561821097764151442331530670394585231917056";
@@ -801,7 +786,6 @@ mod tests {
     }
 }
 
-
 pub mod intent {
     use super::{Nu16, CANONICAL_LEVER_MAX_POSITION};
     use serde::{Deserialize, Serialize};
@@ -902,7 +886,9 @@ pub mod intent {
         }
     }
 
-    pub fn validate_intent_gradient_frame(_: &NsqIntentGradientFrame) -> NsqIntentGradientValidation {
+    pub fn validate_intent_gradient_frame(
+        _: &NsqIntentGradientFrame,
+    ) -> NsqIntentGradientValidation {
         NsqIntentGradientValidation {
             valid: true,
             variable_count: NSQ_INTENT_GRADIENT_VARIABLES.len(),
@@ -963,13 +949,17 @@ pub mod intent {
                 CouncilPole::MaverickLogic => "assets/braxon_core/source_ingest/maverick_logic",
                 CouncilPole::QwenCreativity => "assets/braxon_core/source_ingest/qwen_creativity",
                 CouncilPole::ArbiterJudge => "assets/braxon_core/source_ingest/devstral_arbiter",
-                CouncilPole::AnalyzerAuditor => "assets/braxon_core/source_ingest/deepseek_analyzer",
+                CouncilPole::AnalyzerAuditor => {
+                    "assets/braxon_core/source_ingest/deepseek_analyzer"
+                }
                 CouncilPole::LimbicEmpath => "assets/braxon_core/source_ingest/limbic_empath",
                 CouncilPole::SupportMemory => "assets/braxon_core/source_ingest/support_memory",
                 CouncilPole::Vision => "assets/braxon_core/source_ingest/vision",
                 CouncilPole::Audio => "assets/braxon_core/source_ingest/audio",
                 CouncilPole::Emotion => "assets/braxon_core/source_ingest/emotion",
-                CouncilPole::SurfaceTranslation => "assets/braxon_core/source_ingest/surface_translation",
+                CouncilPole::SurfaceTranslation => {
+                    "assets/braxon_core/source_ingest/surface_translation"
+                }
             }
         }
 
@@ -1023,7 +1013,6 @@ pub mod intent {
         pub binding: IntentGradientBinding,
         pub seated: bool,
     }
-
 
     impl SeatedPole {
         pub fn new(
@@ -1088,7 +1077,6 @@ pub mod intent {
         }
     }
 
-
     #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
     pub struct CourtLanguageLaw {
         pub language_law_active: bool,
@@ -1120,10 +1108,17 @@ pub mod intent {
     }
 
     impl CourtBootClearance {
-        pub fn from_parts(intent_language_ready: bool, seating_ready: bool, wake_ready: bool) -> Self {
+        pub fn from_parts(
+            intent_language_ready: bool,
+            seating_ready: bool,
+            wake_ready: bool,
+        ) -> Self {
             let language_law_active = intent_language_ready;
             Self {
-                nsq_court_launch_ready: language_law_active && intent_language_ready && seating_ready && wake_ready,
+                nsq_court_launch_ready: language_law_active
+                    && intent_language_ready
+                    && seating_ready
+                    && wake_ready,
                 language_law_active,
                 intent_language_ready,
                 seating_ready,
@@ -1136,8 +1131,7 @@ pub mod intent {
             seating: &CourtSeating,
             wake_ready: bool,
         ) -> Self {
-            let intent_language_ready =
-                language_law.language_law_active
+            let intent_language_ready = language_law.language_law_active
                 && language_law.tokenizer_replaced_for_inner_runtime
                 && language_law.human_language_surface_only
                 && language_law.nsq_court_is_runtime;
@@ -1157,12 +1151,11 @@ pub mod intent {
 
 pub use intent::{
     generate_default_intent_gradient_frame, validate_intent_gradient_frame, CouncilPole,
-    CourtBootClearance, CourtLanguageLaw, CourtSeating, IntentGradientBinding, IntentPressure, IntentSurface,
-    NsqFinalLeverPosition, NsqFinalSide, NsqIntentGradientFrame,
+    CourtBootClearance, CourtLanguageLaw, CourtSeating, IntentGradientBinding, IntentPressure,
+    IntentSurface, NsqFinalLeverPosition, NsqFinalSide, NsqIntentGradientFrame,
     NsqIntentGradientValidation, NsqIntentScaleAnchor, NsqIntentVariable, SeatedPole,
     NSQ_INTENT_GRADIENT_VARIABLES, NSQ_INTENT_SCALE_ANCHORS,
 };
-
 
 // ===== BRAXON COLLAPSED COURT AUTHORITY =====
 // nsq-core is the substrate and runtime authority.
@@ -1211,4 +1204,3 @@ impl BraxonCollapsedAuthorityState {
             && self.exterior_runtime_crates_removed
     }
 }
-

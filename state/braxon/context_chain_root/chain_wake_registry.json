@@ -226,12 +226,12 @@
     {
       "numeric_id": 15,
       "numeric_id_base8": "17",
-      "semantic_id": "braxon.context.chain_root.council_of_six",
-      "pointer_id": "council_of_six",
+      "semantic_id": "braxon.context.chain_root.council_of_ten",
+      "pointer_id": "council_of_ten",
       "kind": "model_council",
-      "path": "config/nsq/braxon_six_model_stack.json",
+      "path": "config/nsq/braxon_council_ten_stack.json",
       "runtime_adjustable": false,
-      "chain_root": "state/braxon/context_chain_root/council_of_six",
+      "chain_root": "state/braxon/context_chain_root/council_of_ten",
       "wake_action": "wake_announce_non_runtime_adjustment",
       "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
     },

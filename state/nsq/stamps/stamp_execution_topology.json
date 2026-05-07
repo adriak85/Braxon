@@ -1,0 +1,28 @@
+{
+  "schema": "braxon.nsq.stamp_execution_topology.v1",
+  "authority": "NSQ_COURT",
+  "stamp_behavior": {
+    "stamp_is_wake_trigger": true,
+    "stamp_is_address_anchor": true,
+    "stamp_is_operational_ignition": true,
+    "passive_stamp_only_mode_allowed": false
+  },
+  "framework_behavior": {
+    "stored_operation_required": true,
+    "wake_packet_required": true,
+    "runtime_projection_required": true,
+    "materialization_path_required": true
+  },
+  "runtime_requirements": {
+    "semantic_execution_continuity_required": true,
+    "semantic_routing_required": true,
+    "runtime_causality_required": true,
+    "projection_resolution_required": true
+  },
+  "fail_closed_conditions": {
+    "missing_execution_projection": true,
+    "missing_runtime_behavior": true,
+    "missing_materialization_path": true,
+    "missing_semantic_continuity": true
+  }
+}

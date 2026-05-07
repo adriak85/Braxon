@@ -8,13 +8,13 @@ cd "$ROOT" || exit 1
 
 REQUEST="state/nsq/citadel699/current/request_capsule.json"
 TARGET="state/nsq/citadel699/current/target_models.json"
-SURFACE="apps/nsq/BRAXON_six_model_stack.nsq"
+SURFACE="apps/nsq/braxon_council_ten_stack.nsq"
 OUTDIR="state/nsq/citadel699/rebuilds/$STAMP"
 PROOF="state/nsq/proofs/citadel699_current_rebuild.json"
 
 mkdir -p "$OUTDIR" state/nsq/proofs
 
-for f in "$REQUEST" "$TARGET" "$SURFACE" config/nsq/BRAXON_six_model_stack.json; do
+for f in "$REQUEST" "$TARGET" "$SURFACE" config/nsq/braxon_council_ten_stack.json; do
   if [ ! -s "$f" ]; then
     echo "ERROR: required Citadel699 input missing: $f"
     exit 2
@@ -22,20 +22,20 @@ for f in "$REQUEST" "$TARGET" "$SURFACE" config/nsq/BRAXON_six_model_stack.json;
 done
 
 if grep -RInE 'raw_fetch_allowed[[:space:]]*[:=][[:space:]]*true|raw_payload_transfer_allowed[[:space:]]*[:=][[:space:]]*true|pointer_setup_allowed[[:space:]]*[:=][[:space:]]*true|donor_transport_pointer_stub_allowed[[:space:]]*[:=][[:space:]]*true' \
-  "$REQUEST" "$TARGET" "$SURFACE" config/nsq/BRAXON_six_model_stack.json
+  "$REQUEST" "$TARGET" "$SURFACE" config/nsq/braxon_council_ten_stack.json
 then
   echo "ERROR: forbidden raw/pointer allowance in live Citadel699 input"
   exit 3
 fi
 
-for model in deepseek-v3-671b qwen3-235b-a22b qwen2.5-72b deepseek-v3-671b-analyzer llama3.3-70b gemma3-27b; do
+for model in deepseek-v3-671b qwen3-235b-a22b qwen2.5-72b deepseek-v3-671b-analyzer llama3.3-70b gemma3-27b FLUX.1-dev Wan2.1-T2V-14B IndexTTS2 Hunyuan3D-2.1; do
   grep -q "$model" "$TARGET" || {
     echo "ERROR: missing model in target manifest: $model"
     exit 4
   }
 done
 
-cat > "$OUTDIR/council_six.rebuild.nsq" <<NSQ
+cat > "$OUTDIR/council_ten.rebuild.nsq" <<NSQ
 CITADEL699_REQUEST_RETURN_REBUILD {
   authority = NSQ_COURT
   stamp = $STAMP
@@ -52,7 +52,11 @@ CITADEL699_REQUEST_RETURN_REBUILD {
   nurabit_group_width_nsq_bit_units = 33
   nurabit_groups_communicate = true
 
-  target_models {
+  required_model_count = 10
+  brain_model_count = 6
+  sensory_body_count = 4
+
+  brain_models {
     deepseek_v3_671b = deepseek-v3-671b
     qwen3_235b_a22b = qwen3-235b-a22b
     qwen2_5_72b = qwen2.5-72b
@@ -61,14 +65,21 @@ CITADEL699_REQUEST_RETURN_REBUILD {
     gemma3_27b = gemma3-27b
   }
 
+  sensory_bodies {
+    image_cortex = FLUX.1-dev
+    video_cortex = Wan2.1-T2V-14B
+    voice_body = IndexTTS2
+    world_body_3d = Hunyuan3D-2.1
+  }
+
   status = rebuild_manifest_materialized
   runtime_claim = verification_required_for_active_unified_load
 }
 NSQ
 
-cat > "$OUTDIR/council_six.materialization.json" <<JSON
+cat > "$OUTDIR/council_ten.materialization.json" <<JSON
 {
-  "schema": "Braxon.nsq.citadel699.rebuild_materialization.v1",
+  "schema": "Braxon.nsq.citadel699.rebuild_materialization.v2",
   "authority": "NSQ_COURT",
   "stamp": "$STAMP",
   "status": "rebuild_manifest_materialized",
@@ -84,25 +95,39 @@ cat > "$OUTDIR/council_six.materialization.json" <<JSON
   "nurabit_citadel_groups": 21,
   "nurabit_group_width_nsq_bit_units": 33,
   "nurabit_groups_communicate": true,
-  "required_model_count": 6,
+  "required_model_count": 10,
+  "brain_model_count": 6,
+  "sensory_body_count": 4,
   "models": [
     "deepseek-v3-671b",
     "qwen3-235b-a22b",
     "qwen2.5-72b",
     "deepseek-v3-671b-analyzer",
     "llama3.3-70b",
-    "gemma3-27b"
+    "gemma3-27b",
+    "FLUX.1-dev",
+    "Wan2.1-T2V-14B",
+    "IndexTTS2",
+    "Hunyuan3D-2.1"
+  ],
+  "sensory_bodies": [
+    "image_cortex",
+    "video_cortex",
+    "voice_body",
+    "world_body_3d"
   ],
   "request_capsule": "$REQUEST",
   "target_models": "$TARGET",
   "nsq_surface": "$SURFACE",
-  "nsq_rebuild_surface": "$OUTDIR/council_six.rebuild.nsq",
+  "nsq_rebuild_surface": "$OUTDIR/council_ten.rebuild.nsq",
   "whole_core_runtime_verification_required": true
 }
 JSON
 
-BYTES="$(wc -c < "$OUTDIR/council_six.rebuild.nsq" | tr -d ' ')"
-SHA="$(sha256sum "$OUTDIR/council_six.rebuild.nsq" | awk '{print $1}')"
+BYTES="$(wc -c < "$OUTDIR/council_ten.rebuild.nsq" | tr -d ' ')"
+SHA="$(sha256sum "$OUTDIR/council_ten.rebuild.nsq" | awk '{print $1}')"
+MBYTES="$(wc -c < "$OUTDIR/council_ten.materialization.json" | tr -d ' ')"
+MSHA="$(sha256sum "$OUTDIR/council_ten.materialization.json" | awk '{print $1}')"
 
 cat > "$PROOF" <<JSON
 {
@@ -121,20 +146,25 @@ cat > "$PROOF" <<JSON
   "nurabit_citadel_groups": 21,
   "nurabit_group_width_nsq_bit_units": 33,
   "nurabit_groups_communicate": true,
-  "required_model_count": 6,
+  "required_model_count": 10,
+  "brain_model_count": 6,
+  "sensory_body_count": 4,
   "rebuild_dir": "$OUTDIR",
-  "rebuild_surface": "$OUTDIR/council_six.rebuild.nsq",
+  "materialization": "$OUTDIR/council_ten.materialization.json",
+  "materialization_bytes": $MBYTES,
+  "materialization_sha256": "$MSHA",
+  "rebuild_surface": "$OUTDIR/council_ten.rebuild.nsq",
   "rebuild_bytes": $BYTES,
   "rebuild_sha256": "$SHA",
   "runtime_claim_verification_required": true
 }
 JSON
 
-ln -sf "../rebuilds/$STAMP/council_six.materialization.json" state/nsq/citadel699/current/materialization.json
-ln -sf "../rebuilds/$STAMP/council_six.rebuild.nsq" state/nsq/citadel699/current/council_six.rebuild.nsq
+ln -sf "../rebuilds/$STAMP/council_ten.materialization.json" state/nsq/citadel699/current/materialization.json
+ln -sf "../rebuilds/$STAMP/council_ten.rebuild.nsq" state/nsq/citadel699/current/council_ten.rebuild.nsq
 
 echo "citadel699_rebuild_status=0"
 echo "rebuild_dir=$OUTDIR"
-echo "rebuild_surface=$OUTDIR/council_six.rebuild.nsq"
+echo "rebuild_surface=$OUTDIR/council_ten.rebuild.nsq"
 echo "proof=$PROOF"
 echo "rebuild_sha256=$SHA"

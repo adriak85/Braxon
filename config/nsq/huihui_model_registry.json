@@ -134,8 +134,8 @@
     }
   },
   "optional_stack": [],
-  "registry_role": "six_model_stack_authority",
-  "required_model_count": 6,
+  "registry_role": "brain_source_registry_for_ten_surface_stack",
+  "required_model_count": 10,
   "schema": "Braxon.nsq.huihui_model_registry.v7",
   "transfer_policy": {
     "active_transfer_method": "citadel699_nsq_request_return_rebuild",
