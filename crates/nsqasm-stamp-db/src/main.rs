@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::collections::{BTreeMap, BTreeSet};
 use std::env;
-use std::fs::{self, File, OpenOptions};
+use std::fs::{self, File};
 use std::io::{BufWriter, Write};
 use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
@@ -27,6 +27,16 @@ struct StampCandidate {
     semantic_kind: String,
     reusable_score: u64,
     preview: String,
+}
+
+
+impl StampCandidate {
+    fn identity_key(&self) -> String {
+        format!(
+            "{}|{}|{}|{}|{}",
+            self.source_path, self.start_line, self.end_line, self.language, self.sha256
+        )
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -81,8 +91,14 @@ fn main() -> Result<()> {
     let accepted_path = out_dir.join("accepted.jsonl");
     let report_path = out_dir.join("scanner_report.txt");
 
-    let mut candidate_writer = append_jsonl(&candidates_path)?;
-    let mut accepted_writer = append_jsonl(&accepted_path)?;
+    let candidates_tmp_path = out_dir.join("candidates.jsonl.tmp");
+    let accepted_tmp_path = out_dir.join("accepted.jsonl.tmp");
+    let report_tmp_path = out_dir.join("scanner_report.txt.tmp");
+
+    let mut candidate_writer = replace_jsonl(&candidates_tmp_path)?;
+    let mut accepted_writer = replace_jsonl(&accepted_tmp_path)?;
+    let mut seen_candidates: BTreeSet<String> = BTreeSet::new();
+    let mut seen_accepted: BTreeSet<String> = BTreeSet::new();
 
     let mut stats = ScanStats::default();
 
@@ -115,9 +131,13 @@ fn main() -> Result<()> {
         stats.files_read += 1;
 
         for candidate in candidates_from_text(&root, path, language, &text)? {
-            stats.candidates += 1;
-            serde_json::to_writer(&mut candidate_writer, &candidate)?;
-            writeln!(candidate_writer)?;
+            let candidate_key = candidate.identity_key();
+
+            if seen_candidates.insert(candidate_key) {
+                stats.candidates += 1;
+                serde_json::to_writer(&mut candidate_writer, &candidate)?;
+                writeln!(candidate_writer)?;
+            }
 
             if accepts_candidate(&candidate) {
                 let accepted = AcceptedStamp {
@@ -131,9 +151,13 @@ fn main() -> Result<()> {
                     pre_bake_state: "bishop_prepared_king_composable".to_string(),
                     projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
                 };
-                serde_json::to_writer(&mut accepted_writer, &accepted)?;
-                writeln!(accepted_writer)?;
-                stats.accepted += 1;
+
+                let accepted_key = accepted.candidate.identity_key();
+                if seen_accepted.insert(accepted_key) {
+                    serde_json::to_writer(&mut accepted_writer, &accepted)?;
+                    writeln!(accepted_writer)?;
+                    stats.accepted += 1;
+                }
             }
         }
     }
@@ -157,7 +181,14 @@ fn main() -> Result<()> {
         accepted_path.display(),
     );
 
-    fs::write(&report_path, report).context("write scanner report")?;
+    candidate_writer.flush().context("flush candidates jsonl")?;
+    accepted_writer.flush().context("flush accepted jsonl")?;
+
+    fs::write(&report_tmp_path, report).context("write scanner report tmp")?;
+
+    fs::rename(&candidates_tmp_path, &candidates_path).context("replace candidates jsonl")?;
+    fs::rename(&accepted_tmp_path, &accepted_path).context("replace accepted jsonl")?;
+    fs::rename(&report_tmp_path, &report_path).context("replace scanner report")?;
 
     println!("PASS: NSQASM stamp database scan complete");
     println!("files_seen={}", stats.files_seen);
@@ -169,12 +200,8 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn append_jsonl(path: &Path) -> Result<BufWriter<File>> {
-    let file = OpenOptions::new()
-        .create(true)
-        .append(true)
-        .open(path)
-        .with_context(|| format!("open {}", path.display()))?;
+fn replace_jsonl(path: &Path) -> Result<BufWriter<File>> {
+    let file = File::create(path).with_context(|| format!("create {}", path.display()))?;
     Ok(BufWriter::new(file))
 }
 

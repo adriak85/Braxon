@@ -39,3 +39,6 @@ assets/braxon_core/source_ingest/nsq_transport/citadel699/
 state/substrate/nsq_court_start/nsq_court_start
 state/substrate/nsq_court_start/*.o
 state/substrate/nsq_court_start/*dynamic_check*.txt
+
+# NSQ substrate repeated verification reports
+state/substrate/nsq_court_start/nsq_court_start_verify_*.txt
