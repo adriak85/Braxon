@@ -1,0 +1,10 @@
+schema=braxon.nsqasm.stamp_database_record_verify.v1
+authority=NSQ_COURT
+candidate_records=24947
+accepted_records=6179
+candidate_unique_keys=24947
+accepted_unique_keys=6179
+duplicate_candidates=0
+duplicate_accepted=0
+failures=0
+

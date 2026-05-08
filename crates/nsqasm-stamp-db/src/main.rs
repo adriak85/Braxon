@@ -53,6 +53,33 @@ struct AcceptedStamp {
     projection_lane: String,
 }
 
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+struct StampWakeDispatch {
+    schema: String,
+    authority: String,
+    stamp_id: String,
+    source_path: String,
+    source_sha256: String,
+    semantic_kind: String,
+    language: String,
+    court_route: CourtRoute,
+    pre_bake_state: String,
+    projection_lane: String,
+    wake_packet: StampWakePacket,
+    verified: bool,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+struct StampWakePacket {
+    stored_operation_required: bool,
+    wake_packet_required: bool,
+    runtime_projection_required: bool,
+    materialization_path_required: bool,
+    semantic_execution_continuity_required: bool,
+    passive_stamp_only_mode_allowed: bool,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct CourtRoute {
     scan: CourtSeat,
@@ -81,7 +108,18 @@ struct ScanStats {
 }
 
 fn main() -> Result<()> {
-    let root = env::args().nth(1).unwrap_or_else(|| ".".to_string());
+    let args: Vec<String> = env::args().collect();
+
+    if args.get(1).map(|s| s.as_str()) == Some("resolve") {
+        let root = args.get(2).cloned().unwrap_or_else(|| ".".to_string());
+        let stamp_id = args
+            .get(3)
+            .cloned()
+            .context("resolve mode requires stamp_id argument")?;
+        return resolve_stamp(PathBuf::from(root), &stamp_id);
+    }
+
+    let root = args.get(1).cloned().unwrap_or_else(|| ".".to_string());
     let root = PathBuf::from(root).canonicalize().context("canonicalize root")?;
 
     let out_dir = root.join("state/nsq/stamp_build_chain");
@@ -196,6 +234,114 @@ fn main() -> Result<()> {
     println!("candidates={}", stats.candidates);
     println!("accepted={}", stats.accepted);
     println!("report={}", report_path.display());
+
+    Ok(())
+}
+
+
+fn resolve_stamp(root: PathBuf, stamp_id: &str) -> Result<()> {
+    let root = root.canonicalize().context("canonicalize root")?;
+    let out_dir = root.join("state/nsq/stamp_build_chain");
+    let accepted_path = out_dir.join("accepted.jsonl");
+    let resolved_dir = out_dir.join("resolved");
+    fs::create_dir_all(&resolved_dir).context("create resolved stamp dir")?;
+
+    let text = fs::read_to_string(&accepted_path)
+        .with_context(|| format!("read {}", accepted_path.display()))?;
+
+    let mut found: Option<AcceptedStamp> = None;
+
+    for (idx, line) in text.lines().enumerate() {
+        let line = line.trim();
+        if line.is_empty() {
+            continue;
+        }
+
+        let record: AcceptedStamp = serde_json::from_str(line)
+            .with_context(|| format!("parse accepted record line {}", idx + 1))?;
+
+        if record.candidate.stamp_id == stamp_id {
+            found = Some(record);
+            break;
+        }
+    }
+
+    let record = found.with_context(|| format!("stamp_id not found: {stamp_id}"))?;
+    verify_accepted_record(&record)?;
+
+    let dispatch = StampWakeDispatch {
+        schema: "braxon.nsqasm.stamp_wake_dispatch.v1".to_string(),
+        authority: AUTHORITY.to_string(),
+        stamp_id: record.candidate.stamp_id.clone(),
+        source_path: record.candidate.source_path.clone(),
+        source_sha256: record.candidate.sha256.clone(),
+        semantic_kind: record.candidate.semantic_kind.clone(),
+        language: record.candidate.language.clone(),
+        court_route: record.candidate.court_route.clone(),
+        pre_bake_state: record.pre_bake_state.clone(),
+        projection_lane: record.projection_lane.clone(),
+        wake_packet: StampWakePacket {
+            stored_operation_required: record.stored_operation_required,
+            wake_packet_required: record.wake_packet_required,
+            runtime_projection_required: record.runtime_projection_required,
+            materialization_path_required: record.materialization_path_required,
+            semantic_execution_continuity_required: record.semantic_execution_continuity_required,
+            passive_stamp_only_mode_allowed: record.passive_stamp_only_mode_allowed,
+        },
+        verified: true,
+    };
+
+    let safe_name = sanitize(stamp_id);
+    let out_path = resolved_dir.join(format!("{safe_name}.wake.json"));
+    let tmp_path = resolved_dir.join(format!("{safe_name}.wake.json.tmp"));
+
+    let pretty = serde_json::to_string_pretty(&dispatch).context("serialize wake dispatch")?;
+    fs::write(&tmp_path, pretty).context("write wake dispatch tmp")?;
+    fs::rename(&tmp_path, &out_path).context("replace wake dispatch")?;
+
+    println!("PASS: stamp resolved to wake dispatch");
+    println!("stamp_id={stamp_id}");
+    println!("dispatch={}", out_path.display());
+
+    Ok(())
+}
+
+fn verify_accepted_record(record: &AcceptedStamp) -> Result<()> {
+    if record.candidate.authority != AUTHORITY {
+        anyhow::bail!("accepted stamp authority mismatch");
+    }
+    if record.candidate.schema != SCHEMA {
+        anyhow::bail!("accepted stamp schema mismatch");
+    }
+    if !record.stored_operation_required {
+        anyhow::bail!("accepted stamp missing stored operation requirement");
+    }
+    if !record.wake_packet_required {
+        anyhow::bail!("accepted stamp missing wake packet requirement");
+    }
+    if !record.runtime_projection_required {
+        anyhow::bail!("accepted stamp missing runtime projection requirement");
+    }
+    if !record.materialization_path_required {
+        anyhow::bail!("accepted stamp missing materialization path requirement");
+    }
+    if !record.semantic_execution_continuity_required {
+        anyhow::bail!("accepted stamp missing semantic execution continuity requirement");
+    }
+    if record.passive_stamp_only_mode_allowed {
+        anyhow::bail!("passive stamp-only mode is not allowed");
+    }
+    if record.candidate.court_route.validate.court_position != "queen" {
+        anyhow::bail!("stamp validation route must be queen");
+    }
+    if record.candidate.court_route.prepare.court_position != "bishop" {
+        anyhow::bail!("stamp preparation route must be bishop");
+    }
+    if record.candidate.court_route.compose.court_position != "composer"
+        || record.candidate.court_route.compose.title != "King"
+    {
+        anyhow::bail!("stamp composition route must be King/composer");
+    }
 
     Ok(())
 }
@@ -621,4 +767,68 @@ mod tests {
         assert!(accepted.materialization_path_required);
         assert!(accepted.semantic_execution_continuity_required);
     }
+    #[test]
+    fn verifier_rejects_passive_stamp_only_record() {
+        let record = AcceptedStamp {
+            candidate: StampCandidate {
+                schema: SCHEMA.to_string(),
+                authority: AUTHORITY.to_string(),
+                stamp_id: "test".to_string(),
+                source_path: "x.rs".to_string(),
+                language: "rust".to_string(),
+                start_line: 1,
+                end_line: 8,
+                line_count: 8,
+                byte_count: 400,
+                sha256: sha256("pub fn example() { println!(\"NSQ stamp wake\"); }"),
+                court_route: court_route(),
+                semantic_kind: "rust_item".to_string(),
+                reusable_score: 50,
+                preview: "preview".to_string(),
+            },
+            stored_operation_required: true,
+            wake_packet_required: true,
+            runtime_projection_required: true,
+            materialization_path_required: true,
+            semantic_execution_continuity_required: true,
+            passive_stamp_only_mode_allowed: true,
+            pre_bake_state: "bishop_prepared_king_composable".to_string(),
+            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+        };
+
+        assert!(verify_accepted_record(&record).is_err());
+    }
+
+    #[test]
+    fn verifier_accepts_court_seated_stamp_record() {
+        let record = AcceptedStamp {
+            candidate: StampCandidate {
+                schema: SCHEMA.to_string(),
+                authority: AUTHORITY.to_string(),
+                stamp_id: "test".to_string(),
+                source_path: "x.rs".to_string(),
+                language: "rust".to_string(),
+                start_line: 1,
+                end_line: 8,
+                line_count: 8,
+                byte_count: 400,
+                sha256: sha256("pub fn example() { println!(\"NSQ stamp wake\"); }"),
+                court_route: court_route(),
+                semantic_kind: "rust_item".to_string(),
+                reusable_score: 50,
+                preview: "preview".to_string(),
+            },
+            stored_operation_required: true,
+            wake_packet_required: true,
+            runtime_projection_required: true,
+            materialization_path_required: true,
+            semantic_execution_continuity_required: true,
+            passive_stamp_only_mode_allowed: false,
+            pre_bake_state: "bishop_prepared_king_composable".to_string(),
+            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+        };
+
+        assert!(verify_accepted_record(&record).is_ok());
+    }
+
 }
