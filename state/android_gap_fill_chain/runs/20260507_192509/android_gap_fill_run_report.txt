@@ -1,0 +1,8 @@
+schema=braxon.android_gap_fill.run_report.v1
+date=2026-05-07T19:25:19-05:00
+run_dir=/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509
+custom_rust_preserved=true
+upstream_rust_clone_attempted=false
+tmp_used=false
+manifest=config/toolchains/android_gap_fill_chain.json
+initial_gap_report=/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/reports/initial_gap_report.json

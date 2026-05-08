@@ -1,0 +1,34 @@
+{
+  "schema": "braxon.android_gap_fill_chain.v1",
+  "authority": "BRAXON_ANDROID_GAP_FILL",
+  "created_at": "2026-05-07T19:25:10-05:00",
+  "repo_head": "a179c031346d6bbc7677f7cfb5f7d96aaaa6d11c",
+  "branch": "braxon-current-preserve-20260507-172011",
+  "paths": {
+    "chain_root": "state/android_gap_fill_chain",
+    "runs": "state/android_gap_fill_chain/runs",
+    "src": "state/android_gap_fill_chain/src",
+    "build": "state/android_gap_fill_chain/build",
+    "install": "state/android_gap_fill_chain/install"
+  },
+  "preservation_rules": {
+    "custom_rust_is_preserved": true,
+    "active_rust_is_input_authority": true,
+    "do_not_clone_or_replace_rust": true,
+    "do_not_write_tmp": true,
+    "build_missing_gaps_from_source": true,
+    "nsqasm_allowed_as_dispatch_prebake_not_source_replacement": true
+  },
+  "gap_targets": [
+    "android_no_libc_assembly_start",
+    "linker_surface",
+    "crt_start_objects",
+    "libunwind_surface",
+    "compiler_rt_builtins_surface",
+    "libcxx_surface",
+    "pkg_config_surface",
+    "headers_surface",
+    "sysroot_probe",
+    "source_built_release_bake"
+  ]
+}
