@@ -6,11 +6,11 @@
   "record_count": 23,
   "records": [
     {
-      "bytes": 1332,
+      "bytes": 1362,
       "link_required": true,
       "path": "Cargo.toml",
       "present": true,
-      "sha256": "fbd2b033fe4596fddc7d665c1f3e6741f101dd598eeb3daf7fcd3690bda7dfd5",
+      "sha256": "41acec1298ab729608eae798e125b154bfb1afd7b29823e0a233eb301d6eb2ba",
       "trigger_role": "root_package_manifest"
     },
     {
