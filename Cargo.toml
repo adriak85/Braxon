@@ -30,6 +30,7 @@ members = [
     "crates/nsq-compress",
     "crates/nsq-core",
     "crates/wowas-final-edition-v10",
+    "crates/nsqasm-stamp-db",
 ]
 
 [workspace.package]
