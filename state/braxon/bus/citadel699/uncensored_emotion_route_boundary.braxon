@@ -1,0 +1,30 @@
+BRAXON_BUS_SURFACE citadel699_uncensored_emotion_route_boundary
+schema = braxon.citadel699.uncensored_emotion_route_boundary.v1
+identity = Braxon
+authority = NSQ_COURT
+nsq_is_bus = true
+court_is_compositor = true
+
+model_lane_censorship_policy = uncensored_model_lanes
+uncensored_model_lane = true
+safety_control_surface = emotional_routing_plus_moral_invariant
+
+ordinary_full_weight_download_is_source_truth = false
+full_local_fp32_weight_storage_required = false
+bus_manifestation_required = true
+reconstruction_handles_are_valid_when_route_proven = true
+stamp_wake_materialization_required = true
+
+runtime_rule = do_not_claim_hot_live_without_executable_route_proof
+route_proof_requires = input_handle,bus_record,stamp_wake,materialization_recipe,output_state,validation_digest,moral_invariant_check
+
+lane.01 = deepseek-v3-671b | brain | uncensored | emotion_routing_required
+lane.02 = qwen3-235b-a22b | brain | uncensored | emotion_routing_required
+lane.03 = qwen2.5-72b | brain | uncensored | emotion_routing_required
+lane.04 = deepseek-v3-671b-analyzer | brain | uncensored | emotion_routing_required
+lane.05 = llama3.3-70b | brain | uncensored | emotion_routing_required
+lane.06 = gemma3-27b | brain | uncensored | emotion_routing_required
+lane.07 = FLUX.1-dev | sensory_image | uncensored | emotion_routing_required
+lane.08 = Wan2.1-T2V-14B | sensory_video | uncensored | emotion_routing_required
+lane.09 = IndexTTS2 | sensory_voice | uncensored | emotion_routing_required
+lane.10 = Hunyuan3D-2.1 | sensory_world_3d | uncensored | emotion_routing_required

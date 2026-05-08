@@ -1,0 +1,52 @@
+{
+  "schema": "braxon.citadel699.reconstruction_route_gate.v1",
+  "identity": "Braxon",
+  "authority": "NSQ_COURT",
+  "nsq_is_bus": true,
+  "court_is_compositor": true,
+  "ordinary_full_weight_download_is_source_truth": false,
+  "full_local_fp32_weight_storage_required": false,
+  "bus_manifestation_required": true,
+  "pointer_like_small_files_are_not_automatic_failure": true,
+  "reconstruction_handle_rule": {
+    "inert_pointer_stub_only_if_no_route_evidence_exists": true,
+    "route_evidence_sources": [
+      "bus_record",
+      "reconstruction_manifest",
+      "seed_pack",
+      "wake_packet",
+      "stamp_registry",
+      "materialization_recipe",
+      "validation_digest",
+      "moral_invariant_check",
+      "identity_preservation_check"
+    ]
+  },
+  "route_proof_chain": [
+    "input_handle",
+    "bus_record",
+    "stamp_wake",
+    "stored_operation_or_framework",
+    "materialization_recipe",
+    "output_state",
+    "validation_digest",
+    "moral_invariant_check",
+    "identity_preservation_check"
+  ],
+  "status_ladder": [
+    "inert_pointer_stub_or_catalog_only",
+    "reconstruction_handle_unverified",
+    "reconstruction_route_verified_not_hot_live",
+    "reconstruction_route_executed_not_runtime_bound",
+    "hot_live_verified"
+  ],
+  "hot_live_rule": {
+    "metadata_alone_is_not_hot_live": true,
+    "manifest_alone_is_not_hot_live": true,
+    "reserved_artifact_name_alone_is_not_hot_live": true,
+    "hot_live_requires_executable_route_proof": true
+  },
+  "citadel699_roster_required_count": 10,
+  "uncensored_lane_emotion_routing_required": true,
+  "moral_invariant_preservation_required": true
+}

@@ -1,0 +1,151 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="$HOME/Braxon"
+TC="$ROOT/state/full_android_language_toolchain"
+SRC="$TC/source_forge"
+GUILE_LANE="$SRC/guile_nsq_logic"
+VER="${GUILE_VERSION:-3.0.10}"
+PREFIX="$SRC/install/guile-$VER"
+OUT="$TC/build_source_guile_nsq_lane_$(date +%Y%m%d_%H%M%S).log"
+JOBS="${JOBS:-7}"
+
+mkdir -p "$GUILE_LANE"/{src,build,install,docs,tools,reports,locks,tmp} "$SRC/downloads"
+
+{
+  cd "$ROOT"
+  source "$SRC/source_forge_env" 2>/dev/null || true
+
+  export JOBS="$JOBS"
+  export PREFIX="$PREFIX"
+  export PATH="$PREFIX/bin:$SRC/install/bin:$ROOT:$TC/install/python/bin:/data/data/com.termux/files/usr/opt/rust-nightly/bin:/data/data/com.termux/files/usr/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+  export LD_LIBRARY_PATH="$PREFIX/lib:$SRC/install/lib:$TC/install/braxon_android_overlay/lib:/data/data/com.termux/files/usr/lib"
+  export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$SRC/install/lib/pkgconfig:/data/data/com.termux/files/usr/lib/pkgconfig:/data/data/com.termux/files/usr/share/pkgconfig"
+  export CC="${CC:-/data/data/com.termux/files/usr/bin/clang}"
+  export CXX="${CXX:-/data/data/com.termux/files/usr/bin/clang++}"
+  export LD="${LD:-/data/data/com.termux/files/usr/bin/ld.lld}"
+  export AR="${AR:-/data/data/com.termux/files/usr/bin/llvm-ar}"
+  export RANLIB="${RANLIB:-/data/data/com.termux/files/usr/bin/llvm-ranlib}"
+
+  echo "=== source-build Guile for Braxon NSQ lane ==="
+  date
+  echo "version=$VER"
+  echo "prefix=$PREFIX"
+  echo "jobs=$JOBS"
+
+  echo
+  echo "=== install bootstrap deps only ==="
+  for p in clang lld make pkg-config curl tar gzip xz-utils patch gawk sed grep \
+           gmp libffi libgc libunistring readline ncurses libiconv gettext; do
+    pkg install -y "$p" || true
+  done
+
+  echo
+  echo "=== fetch Guile source ==="
+  cd "$SRC/downloads"
+  TARBALL="guile-$VER.tar.gz"
+  [ -f "$TARBALL" ] || curl -L -o "$TARBALL" "https://ftp.gnu.org/gnu/guile/$TARBALL"
+  sha256sum "$TARBALL" > "$GUILE_LANE/reports/guile_tarball.sha256"
+
+  echo
+  echo "=== unpack ==="
+  rm -rf "$GUILE_LANE/src/guile-$VER" "$GUILE_LANE/build/guile-$VER"
+  set +e
+  tar --no-same-owner --no-same-permissions -xzf "$TARBALL" -C "$GUILE_LANE/src"
+  TAR_RC="$?"
+  set -e
+  if [ ! -f "$GUILE_LANE/src/guile-$VER/configure" ]; then
+    echo "Guile source did not unpack enough to configure; tar rc=$TAR_RC"
+    exit 1
+  fi
+  if [ "$TAR_RC" != "0" ]; then
+    echo "Guile tar reported Android hardlink warnings; continuing because configure exists."
+  fi
+  cp -R "$GUILE_LANE/src/guile-$VER" "$GUILE_LANE/build/guile-$VER"
+
+  echo
+  echo "=== configure ==="
+  cd "$GUILE_LANE/build/guile-$VER"
+
+  ./configure \
+    --prefix="$PREFIX" \
+    --host=aarch64-linux-android \
+    --build=aarch64-linux-android \
+    --disable-nls \
+    --without-libintl-prefix \
+    --with-libgmp-prefix=/data/data/com.termux/files/usr \
+    --with-libunistring-prefix=/data/data/com.termux/files/usr \
+    --with-libffi-prefix=/data/data/com.termux/files/usr \
+    CC="$CC" \
+    CFLAGS="-O2 -fPIC" \
+    CPPFLAGS="-I/data/data/com.termux/files/usr/include" \
+    LDFLAGS="-L/data/data/com.termux/files/usr/lib"
+
+  echo
+  echo "=== build j$JOBS ==="
+  make -j "$JOBS"
+
+  echo
+  echo "=== install ==="
+  make install
+
+  echo
+  echo "=== source-built Guile proof ==="
+  "$PREFIX/bin/guile" --version | tee "$GUILE_LANE/reports/source_guile_version.txt"
+
+  echo
+  echo "=== write Braxon Guile env ==="
+  cat > "$GUILE_LANE/guile_nsq_env" <<EOF
+export BRAXON_GUILE_NSQ_LOGIC="$GUILE_LANE"
+export GUILE_SOURCE_PREFIX="$PREFIX"
+export PATH="$PREFIX/bin:\$PATH"
+export LD_LIBRARY_PATH="$PREFIX/lib:$SRC/install/lib:$TC/install/braxon_android_overlay/lib:/data/data/com.termux/files/usr/lib"
+export GUILE_LOAD_PATH="$PREFIX/share/guile/site/3.0:$PREFIX/share/guile/3.0"
+export GUILE_LOAD_COMPILED_PATH="$PREFIX/lib/guile/3.0/site-ccache:$PREFIX/lib/guile/3.0/ccache"
+EOF
+  chmod +x "$GUILE_LANE/guile_nsq_env"
+
+  echo
+  echo "=== write verifier ==="
+  cat > "$ROOT/scripts/verify_source_guile_nsq_lane.sh" <<'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="$HOME/Braxon"
+TC="$ROOT/state/full_android_language_toolchain"
+SRC="$TC/source_forge"
+GUILE_LANE="$SRC/guile_nsq_logic"
+
+source "$GUILE_LANE/guile_nsq_env"
+
+command -v guile
+guile --version
+guile -c '(display "guile source lane ok")(newline)'
+
+echo "BRAXON SOURCE GUILE NSQ LANE VERIFY OK"
+EOF
+  chmod +x "$ROOT/scripts/verify_source_guile_nsq_lane.sh"
+  "$ROOT/scripts/verify_source_guile_nsq_lane.sh"
+
+  echo
+  echo "=== lock ==="
+  {
+    echo "BRAXON_SOURCE_GUILE_NSQ_LANE_LOCK=1"
+    date
+    echo "GUILE_VERSION=$VER"
+    echo "PREFIX=$PREFIX"
+    "$PREFIX/bin/guile" --version
+  } > "$GUILE_LANE/locks/LOCKED_SOURCE_GUILE_NSQ_LANE.txt"
+
+  find "$GUILE_LANE/guile_nsq_env" "$PREFIX/bin/guile" "$ROOT/scripts/verify_source_guile_nsq_lane.sh" \
+    -type f -print0 2>/dev/null | sort -z | xargs -0 sha256sum \
+    > "$GUILE_LANE/locks/manifest.sha256"
+
+  echo
+  echo "DONE"
+  echo "guile: $PREFIX/bin/guile"
+  echo "env: $GUILE_LANE/guile_nsq_env"
+  echo "log: $OUT"
+} 2>&1 | tee "$OUT"
+
+ln -sf "$OUT" "$TC/build_source_guile_nsq_lane_latest.log"

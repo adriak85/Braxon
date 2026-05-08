@@ -1,0 +1,15 @@
+/data/data/com.termux/files/home/Braxon/packaged/identity/BRAXTON_SOURCE_SYSTEMS_IDENTITY.md
+/data/data/com.termux/files/home/Braxon/packaged/manifests/package_file_list.txt
+/data/data/com.termux/files/home/Braxon/packaged/review-notes/SOURCE_FIRST_RELEASE_PREP.md
+/data/data/com.termux/files/home/Braxon/packaged/scripts/build_source_guile_nsq_lane.sh
+/data/data/com.termux/files/home/Braxon/packaged/scripts/build_source_mandoc_apropos_lane.sh
+/data/data/com.termux/files/home/Braxon/packaged/scripts/fix_mandoc_android_hardlink_resume.sh
+/data/data/com.termux/files/home/Braxon/packaged/scripts/probe_gpm_guile_extension_lane.sh
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/docs/NSQ_DOC_STAGING_POLICY.md
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/locks/LOCKED_GUILE_NSQ_DOC_LOGIC_LANE.txt
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/locks/manifest.sha256
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/reports/guile_probe.txt
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/reports/guile_tarball.sha256
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/reports/nsq_guile_logic_run.txt
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/guile_nsq_logic/reports/pkg_search_guile.txt
+/data/data/com.termux/files/home/Braxon/packaged/source-lanes/mandoc_apropos_logic/reports/mandoc_tarball.sha256

@@ -1,0 +1,16 @@
+{
+  "schema": "braxon.citadel699.reconstruction_route_gate.latest_report.v1",
+  "identity": "Braxon",
+  "authority": "NSQ_COURT",
+  "stamp": "20260508_165026",
+  "report": "/data/data/com.termux/files/home/Braxon/state/reports/citadel699_reconstruction_route_gate_20260508_165026.txt",
+  "config": "config/nsq/citadel699_reconstruction_route_gate.json",
+  "bus": "state/braxon/bus/citadel699/reconstruction_route_gate.braxon",
+  "doc": "docs/braxon/CITADEL699_RECONSTRUCTION_ROUTE_GATE.md",
+  "verifier": "scripts/verify_citadel699_reconstruction_route_gate.sh",
+  "ordinary_full_weight_download_is_source_truth": false,
+  "full_local_fp32_weight_storage_required": false,
+  "bus_manifestation_required": true,
+  "pointer_like_small_files_are_not_automatic_failure": true,
+  "status": "verified"
+}
