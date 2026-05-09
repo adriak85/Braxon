@@ -125,6 +125,7 @@
   "nurabit_groups_communicate": true,
   "cathedral_flow": "post_near_source_receive_and_translate",
   "raw_weight_download_allowed": false,
+  "raw_payload_transfer_allowed": false,
   "open_weight_required": true,
   "censor_free_required": true,
   "huihui_preferred_source": true,

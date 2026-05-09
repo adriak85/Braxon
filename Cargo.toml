@@ -30,6 +30,7 @@ members = [
     "crates/nsq-compress",
     "crates/nsq-core",
     "crates/wowas-final-edition-v10",
+    "crates/nsqasm-stamp-db",
 ]
 
 [workspace.package]
@@ -54,3 +55,4 @@ clap.workspace = true
 nsq-core.workspace = true
 serde.workspace = true
 serde_json.workspace = true
+sha2.workspace = true

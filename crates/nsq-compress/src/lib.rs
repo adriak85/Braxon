@@ -153,15 +153,13 @@ pub fn write_json<T: Serialize>(path: &Path, value: &T) -> io::Result<()> {
     if let Some(parent) = path.parent() {
         fs::create_dir_all(parent)?;
     }
-    let body = serde_json::to_vec_pretty(value)
-        .map_err(|err| io::Error::other(err.to_string()))?;
+    let body = serde_json::to_vec_pretty(value).map_err(|err| io::Error::other(err.to_string()))?;
     fs::write(path, body)
 }
 
 pub fn read_json<T: DeserializeOwned>(path: &Path) -> io::Result<T> {
     let body = fs::read(path)?;
-    serde_json::from_slice(&body)
-        .map_err(|err| io::Error::other(err.to_string()))
+    serde_json::from_slice(&body).map_err(|err| io::Error::other(err.to_string()))
 }
 
 pub fn verify_manifest(manifest: &PipelineManifest) -> io::Result<Vec<String>> {
@@ -169,7 +167,9 @@ pub fn verify_manifest(manifest: &PipelineManifest) -> io::Result<Vec<String>> {
     let mut stamp_ids = BTreeMap::<String, String>::new();
 
     for record in &manifest.stamp_records {
-        if let Some(existing) = stamp_ids.insert(record.stamp_id.clone(), record.source_path.clone()) {
+        if let Some(existing) =
+            stamp_ids.insert(record.stamp_id.clone(), record.source_path.clone())
+        {
             notes.push(format!(
                 "duplicate stamp id {} for {} and {}",
                 record.stamp_id, existing, record.source_path
@@ -310,7 +310,10 @@ fn collect_files(root: &Path, out: &mut Vec<PathBuf>) -> io::Result<()> {
 }
 
 fn should_skip_dir_name(name: &str) -> bool {
-    matches!(name, ".git" | "target" | "state" | "rustsec-advisory-db" | "node_modules")
+    matches!(
+        name,
+        ".git" | "target" | "state" | "rustsec-advisory-db" | "node_modules"
+    )
 }
 
 fn classify_path(path: &Path) -> String {

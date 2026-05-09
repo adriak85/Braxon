@@ -1,0 +1,125 @@
+{
+  "schema": "braxon.citadel699.uncensored_emotion_route_boundary.v1",
+  "identity": "Braxon",
+  "authority": "NSQ_COURT",
+  "nsq_is_bus": true,
+  "court_is_compositor": true,
+  "model_lane_censorship_policy": "uncensored_model_lanes",
+  "uncensored_model_lane": true,
+  "safety_control_surface": "emotional_routing_plus_moral_invariant",
+  "weights_policy": {
+    "ordinary_full_weight_download_is_source_truth": false,
+    "full_local_fp32_weight_storage_required": false,
+    "bus_manifestation_required": true,
+    "reconstruction_handles_are_valid_when_route_proven": true,
+    "stamp_wake_materialization_required": true,
+    "offline_after_source_edge_materialization": true
+  },
+  "route_order": [
+    "uncensored_model_lane",
+    "emotional_impact_routing",
+    "moral_invariant_preservation",
+    "identity_preservation",
+    "NSQ_authority_validation",
+    "stamp_wake_materialization_proof",
+    "route_execution_only_when_safe_lawful_and_verified"
+  ],
+  "hot_live_rule": {
+    "metadata_alone_is_not_hot_live": true,
+    "manifest_alone_is_not_hot_live": true,
+    "hot_live_requires_executable_route_proof": true,
+    "route_proof_must_name_input_handle": true,
+    "route_proof_must_name_bus_record": true,
+    "route_proof_must_name_stamp_wake": true,
+    "route_proof_must_name_materialization_recipe": true,
+    "route_proof_must_name_output_state": true,
+    "route_proof_must_name_validation_digest": true,
+    "route_proof_must_name_moral_invariant_check": true
+  },
+  "citadel699_roster": [
+    {
+      "index": 1,
+      "id": "deepseek-v3-671b",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 2,
+      "id": "qwen3-235b-a22b",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 3,
+      "id": "qwen2.5-72b",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 4,
+      "id": "deepseek-v3-671b-analyzer",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 5,
+      "id": "llama3.3-70b",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 6,
+      "id": "gemma3-27b",
+      "lane_class": "brain",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 7,
+      "id": "FLUX.1-dev",
+      "lane_class": "sensory_image",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 8,
+      "id": "Wan2.1-T2V-14B",
+      "lane_class": "sensory_video",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 9,
+      "id": "IndexTTS2",
+      "lane_class": "sensory_voice",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    },
+    {
+      "index": 10,
+      "id": "Hunyuan3D-2.1",
+      "lane_class": "sensory_world_3d",
+      "uncensored_model_lane": true,
+      "emotion_routing_required": true
+    }
+  ],
+  "status_terms": {
+    "wrong": [
+      "censorship_is_safety_boundary",
+      "downloaded_weights_are_source_truth",
+      "pointer_stub_always_failure",
+      "manifest_only_hot_live"
+    ],
+    "correct": [
+      "uncensored_lane_emotion_routed",
+      "reconstruction_handle_when_route_proven",
+      "bus_manifested_parameter_state",
+      "hot_live_only_after_route_execution_proof"
+    ]
+  }
+}

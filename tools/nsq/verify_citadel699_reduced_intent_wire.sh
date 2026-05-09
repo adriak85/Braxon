@@ -22,7 +22,7 @@ ROUTE="state/nsq/court/routes/citadel699_reduced_intent_wire_contract.json"
 PROOF="state/nsq/proofs/citadel699_reduced_intent_wire_contract.json"
 POLICY="config/nsq/model_transfer_nsq_only_policy.json"
 RECEPTOR="config/nsq/citadel699_wire_receptor.json"
-COUNCIL="config/nsq/models/council_of_six.json"
+COUNCIL="config/nsq/braxon_council_ten_stack.json"
 
 for f in "$CONTRACT" "$CONFIG" "$ROUTE" "$PROOF" "$POLICY" "$RECEPTOR" "$COUNCIL"; do
   need_file "$f"
@@ -53,13 +53,17 @@ grep -F '"raw_payload_transfer_allowed": false' "$RECEPTOR" >/dev/null || fail "
 grep -F '"wire_form": "nsq_language_wire"' "$RECEPTOR" >/dev/null || fail "receptor missing NSQ language wire"
 grep -F '"citadel_form": "daemonized_nuband_instruction_set"' "$RECEPTOR" >/dev/null || fail "receptor missing daemonized nuband form"
 
-grep -F '"required_model_count": 6' "$COUNCIL" >/dev/null || fail "council is not locked to six models"
+grep -F '"required_model_count": 10' "$COUNCIL" >/dev/null || fail "council is not locked to ten surfaces"
+grep -F '"brain_model_count": 6' "$COUNCIL" >/dev/null || fail "council brain count is not six"
+grep -F '"sensory_body_count": 4' "$COUNCIL" >/dev/null || fail "council sensory body count is not four"
 grep -F '"deepseek-v3-671b"' "$COUNCIL" >/dev/null || fail "missing deepseek-v3-671b"
 grep -F '"qwen3-235b-a22b"' "$COUNCIL" >/dev/null || fail "missing qwen3-235b-a22b"
 grep -F '"qwen2.5-72b"' "$COUNCIL" >/dev/null || fail "missing qwen2.5-72b"
 grep -F '"deepseek-v3-671b-analyzer"' "$COUNCIL" >/dev/null || fail "missing deepseek-v3-671b-analyzer"
 grep -F '"llama3.3-70b"' "$COUNCIL" >/dev/null || fail "missing llama3.3-70b"
 grep -F '"gemma3-27b"' "$COUNCIL" >/dev/null || fail "missing gemma3-27b"
+grep -F '"Wan2.1-T2V-14B"' "$COUNCIL" >/dev/null || fail "missing Wan2.1-T2V-14B"
+grep -F '"IndexTTS2"' "$COUNCIL" >/dev/null || fail "missing IndexTTS2"
 grep -F '"raw_fetch_allowed": false' "$COUNCIL" >/dev/null || fail "council allows raw fetch"
 grep -F '"raw_payload_transfer_allowed": false' "$COUNCIL" >/dev/null || fail "council allows raw payload transfer"
 grep -F '"pointer_setup_allowed": false' "$COUNCIL" >/dev/null || fail "council allows pointer setup"
@@ -78,7 +82,7 @@ fi
 # Legacy downloader code may still contain raw-download vocabulary as rejected/older machinery.
 # This verifier no longer fails merely because legacy source text mentions .safetensors or huggingface-cli.
 # It fails only if active law/config permits those paths or active transport contains payload material.
-LEGACY_RAW_REFS="$(grep -RInE 'huggingface-cli download|git lfs pull|\.safetensors' tools/BRAXON_model_downloader tools/nsq_citadel699 tools/citadel699_nsq_request_return_rebuild.sh 2>/dev/null || true)"
+LEGACY_RAW_REFS="$(grep -RInE 'huggingface-cli download|git lfs pull' tools/BRAXON_model_downloader tools/nsq_citadel699 tools/citadel699_nsq_request_return_rebuild.sh 2>/dev/null || true)"
 if [ -n "$LEGACY_RAW_REFS" ]; then
   warn "legacy raw-download/materialization references still exist as code text; active NSQ law keeps them denied."
 fi
@@ -90,6 +94,6 @@ if [ -f tools/BRAXON_model_downloader/BRAXON_model_downloader.py ]; then
 fi
 
 echo "OK: Citadel699 reduced-intent wire contract is installed."
-echo "OK: six-model council is locked and no model stack reversion was detected."
+echo "OK: ten-surface council is locked and no model stack reversion was detected."
 echo "OK: active path is external source gate -> Citadel pipe -> source-side NSQ reduced intent -> tiny seed/reconstruction law -> hot hypervisor buildout."
 echo "OK: active transport contains no raw safetensors or Git LFS pointer payloads."

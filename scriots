@@ -87,9 +87,9 @@ cat "$ROOT/state/nsq/citadel699/current/request_capsule.json" 2>/dev/null | tee 
     bad "request_capsule.json not found"
 
 say ""
-say "--- council_six.rebuild.nsq ---"
-cat "$ROOT/state/nsq/citadel699/current/council_six.rebuild.nsq" 2>/dev/null | tee -a "$LOG" || \
-    bad "council_six.rebuild.nsq not found"
+say "--- council_ten.rebuild.nsq ---"
+cat "$ROOT/state/nsq/citadel699/current/council_ten.rebuild.nsq" 2>/dev/null | tee -a "$LOG" || \
+    bad "council_ten.rebuild.nsq not found"
 
 say ""
 say "--- materialization.json ---"

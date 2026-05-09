@@ -1,0 +1,25 @@
+BRAXON_BUS_SURFACE citadel699_reconstruction_route_gate
+schema = braxon.citadel699.reconstruction_route_gate.v1
+identity = Braxon
+authority = NSQ_COURT
+nsq_is_bus = true
+court_is_compositor = true
+
+ordinary_full_weight_download_is_source_truth = false
+full_local_fp32_weight_storage_required = false
+bus_manifestation_required = true
+
+pointer_like_small_files_are_not_automatic_failure = true
+inert_pointer_stub_only_if_no_route_evidence_exists = true
+
+route_proof_chain = input_handle,bus_record,stamp_wake,stored_operation_or_framework,materialization_recipe,output_state,validation_digest,moral_invariant_check,identity_preservation_check
+
+status.01 = inert_pointer_stub_or_catalog_only
+status.02 = reconstruction_handle_unverified
+status.03 = reconstruction_route_verified_not_hot_live
+status.04 = reconstruction_route_executed_not_runtime_bound
+status.05 = hot_live_verified
+
+runtime_rule = do_not_claim_hot_live_without_executable_route_proof
+uncensored_lane_emotion_routing_required = true
+moral_invariant_preservation_required = true

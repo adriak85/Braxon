@@ -46,7 +46,7 @@ human text
     ↓
 IntentPressure (eight variable positions, scale anchor, court surface)
     ↓
-[court routing — nsq-council dispatch, pole-to-pole pressure]
+[court routing — NSQ Court substrate dispatch, pole-to-pole pressure]
     ↓
 IntentPressure (synthesized council response)
     ↓
@@ -113,7 +113,7 @@ The court does not reference Braxon's prior name anywhere.
 - `nsq-core` — the NSQ law, lever math, intent gradient, court types
 - `nsq-court` — 25-role operational authority
 - `nsq-runtime` — native platform backbone and boot authority
-- `nsq-council` — six-pole intent gradient dispatch (agentic loop)
+- NSQ Court — single runtime/substrate authority for intent-gradient dispatch; no separate runtime layer above court
 
 **Braxon surface:**
 - `braxon-core` — identity, model registry, WoWaS integration

@@ -1,0 +1,22 @@
+== verify NSQASM stamp build chain ==
+date=2026-05-07T18:55:31-05:00
+root=/data/data/com.termux/files/home/Braxon
+head=8902bc4623813b8414a338abe29c24b430400a0a
+
+== required files ==
+PASS: config and spec exist
+
+== stamp execution meaning ==
+PASS: stamp meaning matches runtime contract
+
+== court role placement ==
+PASS: Queen/Bishop/King placement exists
+
+== cross-project database ==
+PASS: shared stamp database paths exist
+
+== generated artifact policy ==
+PASS: generated binary policy is explicit
+
+== proof source alignment ==
+PASS: spec states court chain

@@ -1,0 +1,31 @@
+{
+  "schema": "braxon.nsq.watermark_execution_contract.v1",
+  "authority": "NSQ_COURT",
+  "active_family_watermark": "BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1",
+  "watermark_behavior": {
+    "watermarks_are_operational": true,
+    "watermarks_are_not_cosmetic": true,
+    "watermarks_participate_in_execution_validation": true,
+    "watermarks_participate_in_materialization_validation": true,
+    "watermarks_participate_in_semantic_routing": true,
+    "watermarks_participate_in_runtime_validation": true
+  },
+  "required_continuity": {
+    "base8_semantic_topology": true,
+    "lever_scale_continuity": true,
+    "semantic_family_continuity": true,
+    "dimensional_gradient_continuity": true,
+    "reconstruction_continuity": true
+  },
+  "fail_closed_conditions": {
+    "missing_watermark": true,
+    "watermark_mismatch": true,
+    "donor_lane_contamination": true,
+    "placeholder_runtime_claim": true,
+    "unauthorized_family_mutation": true
+  },
+  "legacy_reference": {
+    "1126": "historical_only",
+    "2254": "historical_only"
+  }
+}

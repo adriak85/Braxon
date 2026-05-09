@@ -43,18 +43,25 @@
     "bits_receive_instruction_cycles": true,
     "bits_may_return_for_pipe_reform_cycle": true
   },
-  "council_of_six": {
+  "council_of_ten": {
     "decision_method": "semantic_weighted_intent_coupling",
     "models_hear_shared_intent_state": true,
     "intent_is_nearly_as_loud_as_own_role_state": true,
     "gemma_softcraft_support": true,
+    "model_count": 10,
+    "brain_model_count": 6,
+    "sensory_body_count": 4,
     "roles": {
       "deepseek-v3-671b": "maverick_logic",
       "qwen3-235b-a22b": "qwen_creativity",
       "qwen2.5-72b": "arbiter_judge",
       "deepseek-v3-671b-analyzer": "analyzer_auditor",
       "llama3.3-70b": "limbic_empath",
-      "gemma3-27b": "support_memory_softcraft"
+      "gemma3-27b": "support_memory_softcraft",
+      "FLUX.1-dev": "image_cortex",
+      "Wan2.1-T2V-14B": "video_cortex",
+      "IndexTTS2": "voice_body",
+      "Hunyuan3D-2.1": "world_body_3d"
     }
   },
   "proof_requirements": {

@@ -1,0 +1,93 @@
+{
+  "schema": "braxon.nsqasm.stamp_build_chain.v1",
+  "authority": "NSQ_COURT",
+  "purpose": "court-seated build chain for scanning, validating, preparing, composing, and projecting NSQASM stamps",
+  "stamp_meaning": {
+    "stamp_is_passive_text": false,
+    "stamp_is_full_payload": false,
+    "stamp_is_wake_trigger": true,
+    "stamp_is_address_anchor": true,
+    "stamp_is_operational_ignition": true,
+    "stored_operation_required": true,
+    "wake_packet_required": true,
+    "runtime_projection_required": true,
+    "materialization_path_required": true,
+    "semantic_execution_continuity_required": true
+  },
+  "court_chain": [
+    {
+      "stage": "scan_candidate",
+      "court_position": "seer",
+      "title": "Seer",
+      "duty": "recognize repeated or high-value latent stamp candidates"
+    },
+    {
+      "stage": "validate_candidate",
+      "court_position": "queen",
+      "title": "Queen",
+      "duty": "validate notation, syntax equivalence, integrity, and semantic continuity"
+    },
+    {
+      "stage": "prepare_elevation",
+      "court_position": "bishop",
+      "title": "Bishop",
+      "duty": "prepare, imbue, elevate, recycle, or reassign stamp material"
+    },
+    {
+      "stage": "compose_projection",
+      "court_position": "composer",
+      "title": "King",
+      "duty": "perform composition, integration, and final assembly"
+    },
+    {
+      "stage": "route_execution",
+      "court_position": "director",
+      "title": "Director",
+      "duty": "direct the selected execution lane"
+    },
+    {
+      "stage": "queue_governance",
+      "court_position": "ticketmaster",
+      "title": "Ticketmaster",
+      "duty": "govern queued stamp identity and custody"
+    },
+    {
+      "stage": "boundary_guard",
+      "court_position": "guard",
+      "title": "Guard",
+      "duty": "enforce boundary, seizure, and containment law"
+    },
+    {
+      "stage": "audit_result",
+      "court_position": "detective",
+      "title": "Detective",
+      "duty": "trace cause, fact recovery, and proof record"
+    }
+  ],
+  "projection_lanes": {
+    "current": [
+      "aarch64_no_libc_assembly",
+      "binary_fixture_when_declared_golden",
+      "host_language_filter_projection"
+    ],
+    "next": [
+      "nsqasm_native_projection",
+      "nsq_complete_projection"
+    ]
+  },
+  "shared_database": {
+    "scope": "cross_project",
+    "usable_by_braxon": true,
+    "usable_by_future_projects": true,
+    "candidate_records_path": "state/nsq/stamp_build_chain/candidates.jsonl",
+    "accepted_records_path": "state/nsq/stamp_build_chain/accepted.jsonl",
+    "golden_fixture_manifest_path": "state/nsq/stamp_build_chain/golden_fixtures.json"
+  },
+  "generated_artifact_policy": {
+    "generated_binaries_committed_by_default": false,
+    "golden_fixtures_may_be_committed": true,
+    "golden_fixture_requires_hash": true,
+    "golden_fixture_requires_source_commit": true,
+    "golden_fixture_requires_verification_report": true
+  }
+}

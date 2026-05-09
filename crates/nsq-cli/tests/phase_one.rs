@@ -1,11 +1,19 @@
 use std::fs;
+use std::path::PathBuf;
 use std::process::Command;
 use std::time::{SystemTime, UNIX_EPOCH};
-use std::path::PathBuf;
 
 fn temp_dir(name: &str) -> PathBuf {
-    let stamp = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_nanos();
-    let dir = std::env::temp_dir().join(format!("BRAXON_phase_one_{}_{}_{}", name, std::process::id(), stamp));
+    let stamp = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap()
+        .as_nanos();
+    let dir = std::env::temp_dir().join(format!(
+        "BRAXON_phase_one_{}_{}_{}",
+        name,
+        std::process::id(),
+        stamp
+    ));
     fs::create_dir_all(&dir).unwrap();
     dir
 }

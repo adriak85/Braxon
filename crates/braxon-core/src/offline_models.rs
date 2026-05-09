@@ -1,7 +1,7 @@
 //! NSQ Court Model Registry
 //!
 //! Models are SEATED into court poles by the court.
-//! Models do not attach features to a runtime.
+//! Models do not seat models to a runtime.
 //! Models do not register capabilities as feature flags.
 //! The court owns the seating authority. A model either meets the
 //! requirements of its pole (parameter scale, unrestricted weights)
@@ -36,8 +36,7 @@ pub const MAX_CHUNK_SIZE_GB: u64 = 50;
 pub const MAX_LIVE_DOWNLOADS: usize = 1;
 
 /// Source ingest path for raw model weights before NSQ rewrite.
-pub const SOURCE_INGEST_DIRECTORY: &str =
-    "assets/braxon_core/source_ingest/braxon_transport";
+pub const SOURCE_INGEST_DIRECTORY: &str = "assets/braxon_core/source_ingest/braxon_transport";
 
 /// NSQ weights directory after Citadel 699 rewrite.
 pub const NSQ_WEIGHTS_DIRECTORY: &str = "assets/braxon_core/weights/nsq";
@@ -113,12 +112,12 @@ impl PipelineStage {
     pub fn as_str(self) -> String {
         match self {
             Self::SourceMissing => "source_missing".to_string(),
-            Self::SourceDownloading => "source_downloading",
-            Self::SourceReady => "source_ready",
-            Self::NsqRewriting => "nsq_rewriting",
-            Self::NsqReady => "nsq_ready",
-            Self::Seated => "seated",
-            Self::SeatFailed => "seat_failed",
+            Self::SourceDownloading => "source_downloading".to_string(),
+            Self::SourceReady => "source_ready".to_string(),
+            Self::NsqRewriting => "nsq_rewriting".to_string(),
+            Self::NsqReady => "nsq_ready".to_string(),
+            Self::Seated => "seated".to_string(),
+            Self::SeatFailed => "seat_failed".to_string(),
         }
     }
 
@@ -153,8 +152,7 @@ impl ModelRegistry {
                 model_id: pole.canonical_model_source().to_string(),
                 confirmed_parameter_scale_b: pole.parameter_floor_b(),
                 unrestricted: false, // confirmed only after ingest validates the weights
-                source_ingest_path: PathBuf::from(SOURCE_INGEST_DIRECTORY)
-                    .join(pole.as_str()),
+                source_ingest_path: PathBuf::from(SOURCE_INGEST_DIRECTORY).join(pole.as_str()),
                 nsq_weights_path: None,
                 pipeline_stage: PipelineStage::SourceMissing,
                 pole_seated: false,
@@ -180,17 +178,12 @@ impl ModelRegistry {
 
     /// How many of the ten poles are seated?
     pub fn seated_count(&self) -> usize {
-        self.assets
-            .iter()
-            .filter(|a| a.pole_seated)
-            .count()
+        self.assets.iter().filter(|a| a.pole_seated).count()
     }
 
     /// Get the asset record for a specific pole.
     pub fn asset_for_pole(&self, pole: CouncilPole) -> Option<&ModelAssetRecord> {
-        self.assets
-            .iter()
-            .find(|a| a.target_pole == pole.as_str())
+        self.assets.iter().find(|a| a.target_pole == pole.as_str())
     }
 
     /// Attempt to produce a CourtSeating from all assets that are ready.
@@ -276,9 +269,7 @@ mod tests {
     #[test]
     fn correct_pole_models_in_canonical_roster() {
         let registry = ModelRegistry::new();
-        let maverick = registry
-            .asset_for_pole(CouncilPole::MaverickLogic)
-            .unwrap();
+        let maverick = registry.asset_for_pole(CouncilPole::MaverickLogic).unwrap();
         let analyzer = registry
             .asset_for_pole(CouncilPole::DeepSeekAnalyzer)
             .unwrap();

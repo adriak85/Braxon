@@ -33,14 +33,18 @@ LAW citadel_groups_must_hear_shared_intent_state
 LAW council_decision_uses_semantic_weighting
 LAW gemma_softcraft_support_allowed_without_raw_payload_authority
 
-MODEL_STACK council_of_six
-MODEL_COUNT 6
+MODEL_STACK council_of_ten
+MODEL_COUNT 10
 MODEL deepseek-v3-671b ROLE maverick_logic SOURCE huihui-ai/DeepSeek-V3-abliterated
 MODEL qwen3-235b-a22b ROLE qwen_creativity SOURCE Qwen/Qwen3-235B-A22B-Instruct
 MODEL qwen2.5-72b ROLE arbiter_judge SOURCE huihui-ai/Qwen2.5-72B-Instruct-abliterated
 MODEL deepseek-v3-671b-analyzer ROLE analyzer_auditor SOURCE huihui-ai/DeepSeek-V3-abliterated
 MODEL llama3.3-70b ROLE limbic_empath SOURCE huihui-ai/Llama-3.3-70B-Instruct-abliterated
 MODEL gemma3-27b ROLE support_memory_softcraft SOURCE huihui-ai/gemma-3-27b-it-abliterated
+MODEL FLUX.1-dev ROLE image_cortex SOURCE black-forest-labs/FLUX.1-dev
+MODEL Wan2.1-T2V-14B ROLE video_cortex SOURCE Wan2.1-T2V-14B
+MODEL IndexTTS2 ROLE voice_body SOURCE IndexTTS2
+MODEL Hunyuan3D-2.1 ROLE world_body_3d SOURCE Hunyuan3D-2.1
 
 WIRE_STAGE external_source_gate
 WIRE_STAGE citadel699_open_instruction_pipe

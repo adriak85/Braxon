@@ -1,0 +1,27 @@
+{
+  "schema": "braxon.nsq.eight_dimensional_gradient_contract.v1",
+  "authority": "NSQ_COURT",
+  "canonical_gradient_topology": true,
+  "flattened_integer_routing_allowed": false,
+  "byte_semantic_reduction_allowed": false,
+  "u8_semantic_reduction_allowed": false,
+  "semantic_coordinate_fields_required": true,
+  "persistent_semantic_state_required": true,
+  "gradient_execution_causality_required": true,
+  "semantic_routing_required": true,
+  "wake_execution_required": true,
+  "runtime_materialization_required": true,
+  "active_direction": {
+    "eight_dimensional_gradient": true,
+    "semantic_state_execution_topology": true,
+    "persistent_runtime_state": true,
+    "operational_stamp_semantics": true,
+    "runtime_causality": true,
+    "semantic_execution_continuity": true
+  },
+  "legacy": {
+    "1126_reference_compatibility_only": true,
+    "legacy_switch_topology_active": false,
+    "legacy_2254_reference_compatibility_only": true
+  }
+}

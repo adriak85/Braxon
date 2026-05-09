@@ -1,0 +1,21 @@
+schema=braxon.android_gap_fill.active_c_toolchain_authority.v1
+date=2026-05-07T19:25:10-05:00
+which_clang=/data/data/com.termux/files/usr/bin/clang
+which_clangxx=/data/data/com.termux/files/usr/bin/clang++
+which_ld_lld=/data/data/com.termux/files/usr/bin/ld.lld
+which_llvm_ar=/data/data/com.termux/files/usr/bin/llvm-ar
+which_llvm_nm=/data/data/com.termux/files/usr/bin/llvm-nm
+which_readelf=/data/data/com.termux/files/usr/bin/readelf
+
+clang version 21.1.8
+Target: aarch64-unknown-linux-android24
+Thread model: posix
+InstalledDir: /data/data/com.termux/files/usr/bin
+
+LLD 21.1.8 (compatible with GNU linkers)
+
+LLVM (http://llvm.org/):
+  LLVM version 21.1.8
+  Optimized build.
+
+PREFIX=/data/data/com.termux/files/usr

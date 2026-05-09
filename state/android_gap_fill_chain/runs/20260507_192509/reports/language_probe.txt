@@ -1,0 +1,16 @@
+== C compile/run ==
+BRAXON_ANDROID_GAP_PROBE_OK
+sizeof(void*)=8
+sizeof(uintptr_t)=8
+
+== C++ compile/run ==
+BRAXON
+ANDROID
+GAP
+PROBE
+OK
+
+== Rust compile/run using active custom Rust ==
+BRAXON_RUST_CUSTOM_AUTHORITY_PROBE_OK
+target_arch=aarch64
+target_os=android

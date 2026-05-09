@@ -1,8 +1,7 @@
 pub const WOWAS_PACK_ROOT: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/canon");
 
-/// v14 is the single first-load authority surface for the current WoWaS lane.
 pub const WOWAS_ACTIVE_CANON_CONTROL: &str =
-    concat!(env!("CARGO_MANIFEST_DIR"), "/canon/WOWAS_CANON_AUTHORITY_v14.md");
+    concat!(env!("CARGO_MANIFEST_DIR"), "/canon/wowas_canon_v1.md");
 
 /// Cohesive canon body loaded after the v14 authority surface.
 pub const WOWAS_COHESIVE_CANON_V1: &str =
@@ -111,7 +110,6 @@ pub fn wowas_pack_root() -> &'static str {
     WOWAS_PACK_ROOT
 }
 
-/// Backward-compatible function name, now corrected to v14 first-load authority.
 pub fn wowas_authority_file() -> &'static str {
     WOWAS_ACTIVE_CANON_CONTROL
 }
@@ -193,15 +191,10 @@ pub fn wowas_required_control_files() -> &'static [&'static str] {
         WOWAS_ACTIVE_CANON_CONTROL,
         WOWAS_SOURCE_OF_TRUTH_REGISTRY_V14,
         WOWAS_PROSE_AND_TONE_GUIDE,
-        WOWAS_PATCH_INGESTION_LEDGER_V14,
-        WOWAS_MAGIC_SYSTEM_CONTROL_V14,
-        WOWAS_CHARACTER_PLACEMENT_CONTROL_V14,
         WOWAS_COHESIVE_CANON_V1,
         WOWAS_AUTHORITY_MANIFEST_V13,
         WOWAS_AUTHORITY_ROUTER_V13,
         WOWAS_CANONICAL_STORY_TREE,
-        WOWAS_BOOKS_ROOT,
-        WOWAS_BOOK_01_ROOT,
         WOWAS_SCENE_HEADING_INDEX,
         WOWAS_CLEAN_SCENE_INDEX,
         WOWAS_CHARACTER_TIMELINE_LATTICE_V14,
