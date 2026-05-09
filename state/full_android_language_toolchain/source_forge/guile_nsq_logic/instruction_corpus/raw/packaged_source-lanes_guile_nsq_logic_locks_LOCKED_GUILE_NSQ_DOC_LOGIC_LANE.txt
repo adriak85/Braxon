@@ -1,0 +1,13 @@
+BRAXON_GUILE_NSQ_DOC_LOGIC_LANE_LOCK=1
+Fri May  8 14:04:25 CDT 2026
+JOBS=7
+GUILE=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/guile_nsq_logic
+/data/data/com.termux/files/usr/bin/guile
+guile (GNU Guile) 3.0.11
+Copyright (C) 2024 Free Software Foundation, Inc.
+
+License LGPLv3+: GNU LGPL 3 or later <http://gnu.org/licenses/lgpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+ba6f774f975a61ae75f13d80157086bbdc34815d7f0e32f36b4d55a4d147fcc8  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/guile_nsq_logic/docs/NSQ_DOC_STAGING_POLICY.md
+16837d76bbffb75dc5490e604918ee448c3bebb3456362dd3d06893f73a0f0b4  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/guile_nsq_logic/tools/nsq-stamp-logic.scm

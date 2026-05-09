@@ -1,0 +1,10 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -u
+for f in "$@"; do
+  echo "$f:"
+  if command -v readelf >/dev/null 2>&1; then
+    readelf -d "$f" 2>/dev/null | grep 'NEEDED\|RUNPATH\|RPATH' || true
+  else
+    echo "readelf not found"
+  fi
+done

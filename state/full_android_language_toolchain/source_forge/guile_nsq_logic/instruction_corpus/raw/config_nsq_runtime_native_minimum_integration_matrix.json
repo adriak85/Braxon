@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "required_domains": [
+    "c",
+    "cmake",
+    "cpp",
+    "csharp",
+    "css",
+    "rust",
+    "lisp",
+    "pico_surface",
+    "lua",
+    "kotlin",
+    "java",
+    "html",
+    "python",
+    "python3",
+    "sql",
+    "shell",
+    "bash",
+    "zsh",
+    "fish",
+    "api",
+    "adb",
+    "ndk",
+    "jdk",
+    "jni",
+    "sdk",
+    "minimum_sdk_floor"
+  ],
+  "multiport_package_db": {
+    "minimum_ports": 8,
+    "authority_commit_port": 7,
+    "tokenizer_doc_emit_port": 5,
+    "proof_port": 6
+  },
+  "translation_bias": {
+    "nsq_writes_nsq_first": true,
+    "mytho_wowas_bias": true,
+    "qwen_to_nsq_normalization": true
+  }
+}

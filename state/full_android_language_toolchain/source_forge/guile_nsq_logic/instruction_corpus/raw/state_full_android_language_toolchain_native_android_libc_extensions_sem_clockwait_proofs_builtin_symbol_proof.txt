@@ -1,0 +1,102 @@
+schema=braxon.android.builtin_sem_clockwait.overlay_symbol_proof.v1
+date=2026-05-07T20:44:30-05:00
+overlay=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay
+header=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/include/semaphore.h
+object=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/sem_clockwait.o
+archive=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.a
+shared=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.so
+
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/sem_clockwait.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.a: current ar archive
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, for Android 24, built by NDK r29 (14206865), not stripped
+
+== object symbols ==
+0000000000000000 T sem_clockwait
+
+== archive symbols ==
+sem_clockwait.o:
+0000000000000000 T sem_clockwait
+
+== shared exports ==
+     7: 00000000000006e0   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+    22: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS sem_clockwait.c
+    32: 00000000000006e0   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+
+== disassembly ==
+
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/sem_clockwait.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <sem_clockwait>:
+       0: d10183ff     	sub	sp, sp, #0x60
+       4: a9037bfd     	stp	x29, x30, [sp, #0x30]
+       8: f90023f5     	str	x21, [sp, #0x40]
+       c: a9054ff4     	stp	x20, x19, [sp, #0x50]
+      10: 9100c3fd     	add	x29, sp, #0x30
+      14: b4000220     	cbz	x0, 0x58 <sem_clockwait+0x58>
+      18: b4000202     	cbz	x2, 0x58 <sem_clockwait+0x58>
+      1c: f9400448     	ldr	x8, [x2, #0x8]
+      20: 52993ff4     	mov	w20, #0xc9ff            // =51711
+      24: 72a77354     	movk	w20, #0x3b9a, lsl #16
+      28: eb14011f     	cmp	x8, x20
+      2c: 54000168     	b.hi	0x58 <sem_clockwait+0x58>
+      30: d5033fdf     	isb
+      34: 7100043f     	cmp	w1, #0x1
+      38: 54000220     	b.eq	0x7c <sem_clockwait+0x7c>
+      3c: 350000e1     	cbnz	w1, 0x58 <sem_clockwait+0x58>
+      40: aa0203e1     	mov	x1, x2
+      44: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+      48: f94023f5     	ldr	x21, [sp, #0x40]
+      4c: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+      50: 910183ff     	add	sp, sp, #0x60
+      54: 14000000     	b	0x54 <sem_clockwait+0x54>
+      58: 94000000     	bl	0x58 <sem_clockwait+0x58>
+      5c: 528002c8     	mov	w8, #0x16               // =22
+      60: b9000008     	str	w8, [x0]
+      64: 12800000     	mov	w0, #-0x1               // =-1
+      68: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+      6c: f94023f5     	ldr	x21, [sp, #0x40]
+      70: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+      74: 910183ff     	add	sp, sp, #0x60
+      78: d65f03c0     	ret
+      7c: aa0003f3     	mov	x19, x0
+      80: d10043a1     	sub	x1, x29, #0x10
+      84: 52800020     	mov	w0, #0x1                // =1
+      88: aa0203f5     	mov	x21, x2
+      8c: 94000000     	bl	0x8c <sem_clockwait+0x8c>
+      90: 35fffea0     	cbnz	w0, 0x64 <sem_clockwait+0x64>
+      94: 910043e1     	add	x1, sp, #0x10
+      98: 94000000     	bl	0x98 <sem_clockwait+0x98>
+      9c: 35fffe40     	cbnz	w0, 0x64 <sem_clockwait+0x64>
+      a0: a94026a8     	ldp	x8, x9, [x21]
+      a4: a97f2faa     	ldp	x10, x11, [x29, #-0x10]
+      a8: cb0a0108     	sub	x8, x8, x10
+      ac: cb0b0129     	sub	x9, x9, x11
+      b0: ab89fd08     	adds	x8, x8, x9, asr #63
+      b4: 540002e4     	b.mi	0x110 <sem_clockwait+0x110>
+      b8: b100052a     	adds	x10, x9, #0x1
+      bc: a9412fec     	ldp	x12, x11, [sp, #0x10]
+      c0: 8b14014a     	add	x10, x10, x20
+      c4: 910003e1     	mov	x1, sp
+      c8: aa1303e0     	mov	x0, x19
+      cc: 9a89d149     	csel	x9, x10, x9, le
+      d0: 92993fea     	mov	x10, #-0xca00           // =-51712
+      d4: 8b090169     	add	x9, x11, x9
+      d8: f2b88caa     	movk	x10, #0xc465, lsl #16
+      dc: 8b080188     	add	x8, x12, x8
+      e0: eb14013f     	cmp	x9, x20
+      e4: 8b0a012a     	add	x10, x9, x10
+      e8: 9a88d508     	cinc	x8, x8, gt
+      ec: 9a89c149     	csel	x9, x10, x9, gt
+      f0: a90027e8     	stp	x8, x9, [sp]
+      f4: d5033fdf     	isb
+      f8: 94000000     	bl	0xf8 <sem_clockwait+0xf8>
+      fc: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+     100: f94023f5     	ldr	x21, [sp, #0x40]
+     104: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+     108: 910183ff     	add	sp, sp, #0x60
+     10c: d65f03c0     	ret
+     110: 94000000     	bl	0x110 <sem_clockwait+0x110>
+     114: 52800dc8     	mov	w8, #0x6e               // =110
+     118: 17ffffd2     	b	0x60 <sem_clockwait+0x60>

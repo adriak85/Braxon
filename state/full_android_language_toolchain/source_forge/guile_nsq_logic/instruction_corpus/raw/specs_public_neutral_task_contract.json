@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "kind": "public-neutral-task-contract",
+  "rules": {
+    "allowed_public_surfaces": [
+      "task names",
+      "input corpora",
+      "query lists",
+      "latency metrics",
+      "artifact bytes",
+      "index bytes",
+      "artifact sha256",
+      "result counts"
+    ],
+    "forbidden_private_surfaces": [
+      "nsq macros beyond task text",
+      "private calibration profiles",
+      "private condensation internals",
+      "private artifact section semantics",
+      "private optimization code"
+    ]
+  },
+  "required_metrics": [
+    "condense_ms",
+    "index_ms",
+    "compile_ms",
+    "inspect_ms",
+    "query_ms",
+    "symbols",
+    "macros",
+    "edges",
+    "states",
+    "condensed_lines",
+    "artifact_bytes",
+    "index_bytes",
+    "artifact_sha256"
+  ]
+}

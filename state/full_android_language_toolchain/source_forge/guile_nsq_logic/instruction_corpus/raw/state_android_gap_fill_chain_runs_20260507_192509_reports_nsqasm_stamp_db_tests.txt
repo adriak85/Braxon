@@ -1,0 +1,12 @@
+
+running 7 tests
+test tests::verifier_accepts_court_seated_stamp_record ... ok
+test tests::court_route_uses_existing_positions ... ok
+test tests::accepted_candidates_require_real_runtime_semantics ... ok
+test tests::short_low_score_blocks_are_not_promoted ... ok
+test tests::passive_stamp_only_mode_is_never_accepted ... ok
+test tests::stamp_id_hash_is_stable ... ok
+test tests::verifier_rejects_passive_stamp_only_record ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

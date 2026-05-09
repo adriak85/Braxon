@@ -1,0 +1,16 @@
+close_range
+copy_file_range
+dup3
+fexecve
+getloadavg
+getlogin_r
+getpwent
+pipe2
+preadv2
+process_vm_readv
+process_vm_writev
+pthread_getname_np
+pwritev2
+sem_clockwait
+setpwent
+statx

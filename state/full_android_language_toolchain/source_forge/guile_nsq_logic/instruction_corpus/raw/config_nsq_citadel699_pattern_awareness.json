@@ -1,0 +1,46 @@
+{
+  "schema": "Braxon.nsq.citadel699_pattern_awareness.config.v1",
+  "authority": "NSQ_COURT",
+  "architecture_root": true,
+  "route": "citadel699_pattern_awareness",
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "allowed_scope": {
+    "authorized_citadel699_lane": true,
+    "public_unprotected_material_allowed_only_when_explicitly_available": true,
+    "protected_material_allowed": false,
+    "unrelated_traffic_allowed": false,
+    "access_control_bypass_allowed": false,
+    "promiscuous_network_capture_allowed": false
+  },
+  "perception_contract": {
+    "structural_pattern_awareness": true,
+    "raw_content_recording_allowed": false,
+    "source_code_recording_allowed": false,
+    "credential_recording_allowed": false,
+    "private_identifier_recording_allowed": false,
+    "third_party_secret_recording_allowed": false,
+    "external_user_data_recording_allowed": false,
+    "retained_forms_allowed": [
+      "aggregate_shape",
+      "abstract_transferable_skills",
+      "system_benefit_notes",
+      "moral_filter_notes",
+      "verification_summary"
+    ]
+  },
+  "checksum_contract": {
+    "crc32c_allowed": true,
+    "crc32c_role": "optional_fast_lane_checksum",
+    "crc32c_is_identity_proof": false,
+    "blake3_required_for_identity": true,
+    "triple_bite_required_for_non_null_check": true
+  },
+  "truth_boundary": {
+    "pattern_awareness_is_not_packet_sniffing": true,
+    "protected_material_must_not_be_observed": true,
+    "raw_material_must_not_be_retained": true,
+    "learned_skills_are_abstract_only": true
+  }
+}

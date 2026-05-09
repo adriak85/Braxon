@@ -1,0 +1,849 @@
+=== Braxon combined bounded review ===
+Fri May  8 15:49:17 CDT 2026
+cwd=/data/data/com.termux/files/home/Braxon
+
+=== root artifact review: no quarantine, review first ===
+
+### ./--help
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./--help
+./--help: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./--help
+--- content, first 240 lines ---
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+--- bounded references: basename [--help] ---
+scripts/audit_nsq_commands_current.sh:22:    "$cmd" --help 2>&1 | sed -n '1,24p' || true
+--- bounded references: exact path token [./--help] ---
+
+### ./status
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./status
+./status: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./status
+--- content, first 240 lines ---
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+--- bounded references: basename [status] ---
+./INSTALL.sh:39:exec "$ROOT_DIR/bin/Braxon-capsule-status" "$@"
+./INSTALL.sh:58:echo "  \"$TARGET_DIR/bin/Braxon-capsule-status\""
+./build-tests.sh:16:fn nu128_install_oversight_status_keeps_pipeline_safe_while_whole_model_is_blocked() {
+./build-tests.sh:17:    let status = Nu128Status::default();
+./build-tests.sh:18:    assert!(status.direct_source_path_ready, "Pipeline safety requires direct path");
+./braxon_hooks.txt:23:./tools/nsq_citadel699/nsq_model_transfer_status.py
+./braxon_hooks.txt:72:./scripts/braxon_weight_ingest_status.sh
+./braxon_hooks.txt:149:./tools/nsq_citadel699/nsq_model_transfer_status.py
+./braxon_hooks.txt:241:./scripts/braxon_weight_ingest_status.sh
+./scriots:172:# STEP 8: Run status surfaces after restore
+./scriots:181:say "Braxon-ingest status:"
+./scriots:185:say "cargo run (full status):"
+./build_braxon_cpython_android_adoption_full.sh:363:echo "full status: $STATUS" | tee -a "$LOG"
+./fix_cpython_decimal_tk_detect.sh:69:CONFIG_ARGS="$(./config.status --config 2>/dev/null || true)"
+./fix_cpython_decimal_tk_detect.sh:70:test -n "$CONFIG_ARGS" || { echo "could not recover configure args from config.status"; exit 1; }
+./final_braxon_cpython_android_adoption_build.sh:254:echo "targeted build status: $STATUS" | tee -a "$LOG"
+./final_braxon_cpython_android_adoption_build.sh:274:echo "full build status: $STATUS" | tee -a "$LOG"
+./fix_braxon_cpython_extension_link.sh:71:echo "target relink status: $STATUS" | tee -a "$LOG"
+./relink_braxon_cpython_freeze.sh:42:echo "relink status: $STATUS" | tee -a "$LOG"
+./relink_braxon_cpython_freeze.sh:52:echo "full status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract.sh:79:echo "focused status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract.sh:86:echo "full status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract_v2.sh:89:echo "focused status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract_v2.sh:96:echo "full status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract_v3.sh:77:echo "focused status: $STATUS" | tee -a "$LOG"
+./fix_lazy_import_startup_contract_v3.sh:84:echo "full status: $STATUS" | tee -a "$LOG"
+./machine_lazy_import_contract_adapter.sh:79:echo "focused status: $STATUS" | tee -a "$LOG"
+./machine_lazy_import_contract_adapter.sh:85:echo "full status: $STATUS" | tee -a "$LOG"
+./fix_pgo_pwd_adoption_header.sh:48:echo "target status: $STATUS" | tee -a "$LOG"
+./fix_pgo_pwd_adoption_header.sh:60:echo "full status: $STATUS" | tee -a "$LOG"
+./lock_and_extend_braxon_dev_stack.sh:8:FAST="$ROOT/fastest_status"
+./lock_and_extend_braxon_dev_stack.sh:66:  echo "=== write fastest_status ==="
+./lock_and_extend_braxon_dev_stack.sh:79:echo "=== Braxon fastest status ==="
+./lock_and_extend_braxon_dev_stack.sh:115:  echo "=== run fastest_status once ==="
+./fastest_status:12:echo "=== Braxon fastest status ==="
+./clean_braxon_warning_noise.sh:69:  echo "=== run fastest_status ==="
+./clean_braxon_warning_noise.sh:70:  "$ROOT/fastest_status"
+./clean_braxon_warning_noise.sh:101:    "$ROOT/fastest_status" \
+./export_full_braxon_system_state.sh:72:for x in braxon-python braxon-rustc braxon-cargo fastest_status python3 perl cpan prove rustc cargo clang zig zls tree-sitter hb-shape fc-match glslc spirv-val vulkaninfo rg fd jq bash zsh fish; do
+./export_full_braxon_system_state.sh:166:cap "$OUTDIR/repos/git_status_full.txt" git status
+crates/nsq-cli/README.md:3:`nsq-cli` is the lightweight NSQ operator shell. It provides a small command surface for status, parse, eval, select, ingest, fetch, wake, and doctor flows, with an interactive REPL as the default experience.
+crates/nsq-cli/README.md:13:cargo run -p nsq-cli --release -- status
+crates/nsq-cli/README.md:20:- Output: human-readable status lines, environment checks, or stub responses
+crates/nsq-cli/src/main.rs:32:        Command::Status => cmd_status(),
+crates/nsq-cli/src/main.rs:44:fn cmd_status() {
+crates/nsq-cli/src/main.rs:45:    println!("NSQ status: ready");
+crates/nsq-cli/src/main.rs:146:    println!("type: status | parse <text> | eval <text> | select <text> | ingest <path> | fetch <target> | wake | doctor | quit");
+crates/nsq-cli/src/main.rs:171:        if input == "status" {
+crates/nsq-cli/src/main.rs:172:            cmd_status();
+crates/nsq-cli/tests/phase_one.rs:22:fn status_surface_is_live() {
+crates/nsq-cli/tests/phase_one.rs:24:        .arg("status")
+crates/nsq-cli/tests/phase_one.rs:28:    assert!(out.status.success());
+crates/nsq-cli/tests/phase_one.rs:30:    assert!(text.contains("NSQ status: ready"));
+crates/nsq-cli/tests/phase_one.rs:41:    assert!(!out.status.success());
+crates/nsq-cli/tests/phase_one.rs:55:    assert!(out.status.success());
+crates/nsq-compose/tests/phase_one.rs:44:    assert!(out.status.success());
+crates/nsq-core/src/intent.rs:48:    /// What is claimed — the epistemic status of the intent's content.
+crates/wowas-final-edition-v10/.non_wowas_source_inspiration_lattice.file:1:schema	source_id	source_name	franchise_or_origin	noncanonical_status	function_harvested	light_side	shadow_side	relationship_style	power_style	what_must_be_reimagined	reimagination_system	primary_wowas_anchor	candidate_wowas_uses	minimum_reuse_target	current_tracked_uses	moral_inversion_target	transient_dark_plot_rule	plot_thread_obligation	notes
+crates/wowas-final-edition-v10/INSTALL_SUMMARY_CRATE.txt:7:status=installed
+crates/wowas-final-edition-v10/canon/INSTALL_SUMMARY_v10.txt:5:status=installed
+crates/wowas-final-edition-v10/canon/INSTALL_SUMMARY_v11.txt:8:status=applied
+crates/wowas-final-edition-v10/canon/active/blood_cello_resolution_state.tsv:1:state_key	trigger	world_result	meaning	active_status
+crates/wowas-final-edition-v10/canon/active/book_spine_33.tsv:1:book_num	volume_num	book_code	active_title	legacy_source	function	arc_band	status
+crates/wowas-final-edition-v10/canon/active/canon_laws.tsv:1:law_id	scope	status	priority	canonical_law	apply_note
+crates/wowas-final-edition-v10/canon/active/character_profile_scores.tsv:1:profile_id	name	status	score	book_range	recommended_use	canonical_notes
+crates/wowas-final-edition-v10/canon/active/character_timeline_lattice_v14_33.tsv:1:character_id	name	tier	volume	book_anchor	role	house_pressure	region	source_anchor	candidate_draws	selection_score	story_background_law	visual_status
+crates/wowas-final-edition-v10/canon/active/commerce_politics_and_chow_layer.tsv:1:canon_key	layer	scope	active_law	implementation_note	status
+crates/wowas-final-edition-v10/canon/active/creature_profile_scores.tsv:1:profile_id	name	status	score	book_or_region_range	recommended_use	canonical_notes
+crates/wowas-final-edition-v10/canon/active/creature_registry_target_5000.tsv:1:creature_id	species_name	base_form	primary_trait	secondary_trait	biome	danger_band	ecology_role	candidate_draws	selection_score	generation_law	visual_status
+crates/wowas-final-edition-v10/canon/active/generated/generation_summary.tsv:6:picture_status	pending_art_reference
+crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_characters_5000.tsv:1:character_id	name	tier	volume	book_anchor	role	house_pressure	region	source_anchor	candidate_draws	selection_score	story_background_law	visual_status
+crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_creatures_5000.tsv:1:creature_id	species_name	base_form	primary_trait	secondary_trait	biome	danger_band	ecology_role	candidate_draws	selection_score	generation_law	visual_status
+crates/wowas-final-edition-v10/canon/active/patch_absorption.tsv:1:patch_id	source_path	book_or_scope	absorption_status	active_target	canonical_action	notes
+crates/wowas-final-edition-v10/canon/active/pip_unbrictionable_word_law.tsv:1:canon_key	word	status	discoverer	character_relation	meaning	usage_law	active_status
+crates/wowas-final-edition-v10/canon/active/scene_index.tsv:1:scene_id	book	status	source_absorbed	canonical_event	required_characters	required_creatures_or_pressure	notes
+crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv:1:scene_id	book	status	source_absorbed	canonical_event	required_characters	required_creatures_or_pressure	notes
+crates/wowas-final-edition-v10/canon/canonical_story_tree/_support/wowas_master_canon.json:410:      "boojay_status": "Still on the hill. Does not follow. Not yet.",
+crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/01_NAMED_CAST_TOP300.md:355:- **identity_status**: OPEN — to be named. Suggested: give them a Vel'Thane lineage and a role in the pre-Silence party that makes the loss feel specific. They should be the warm humor of the group.
+crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_pop_batch_10_zone_heartland_basin_marsh.json:64:        "updates_faction_ash_born": "Her departure from the Ashfields was a minor loss of craft capacity. During the triage disclosure, her unaffiliated status means she can say things about the Ash-Born that members cannot."
+crates/wowas-final-edition-v10/canon/control/character_generation_review_v14.tsv:2:status	active_final_control
+src/main.rs:8:    braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, CouncilTen,
+src/main.rs:138:        Command::Status => print_status(),
+src/main.rs:139:        Command::ContextStatus => print_context_status(),
+src/main.rs:226:            "status": if trace.all_passed {
+src/main.rs:241:    println!("  council  — show all ten poles (6 brain + 4 sensory) and their status");
+src/main.rs:242:    println!("  status   — system identity and NSQ lever state count");
+src/main.rs:243:    println!("  context  — context manifest status");
+src/main.rs:278:        "status": if trace.all_passed {
+src/main.rs:301:        let status = match &step.result {
+src/main.rs:305:        println!("  step {:02} [{}] {}", step.index, status, step.name);
+src/main.rs:374:    match braxon_context_manifest_status(&root) {
+src/main.rs:375:        Ok(status) => {
+src/main.rs:378:                serde_json::to_string_pretty(&status).unwrap_or_default()
+src/main.rs:381:        Err(err) => println!("context_status_error={err}"),
+src/main.rs:524:fn print_status() {
+src/main.rs:640:fn print_context_status() {
+src/main.rs:642:    match braxon_context_manifest_status(&root) {
+src/main.rs:643:        Ok(status) => println!("{}", serde_json::to_string_pretty(&status).unwrap()),
+src/main.rs:645:            eprintln!("context_status_error={err}");
+src/main.rs:678:        "status": "court_registry_bound"
+src/main.rs:696:            "status": "ingress_recorded_without_runtime_claim"
+src/main.rs:714:            "status": "request_recorded_without_runtime_claim"
+src/main.rs:813:        "status": if full_release_complete {
+src/main.rs:1101:            "status": "emotional_frequency_map_not_present",
+src/main.rs.before_real_repl:7:use BRAXON_core::{braxon_context_manifest_status, braxon_wake_linked_change_report_from_env};
+src/main.rs.before_real_repl:110:            print_status();
+src/main.rs.before_real_repl:119:        Command::Status => print_status(),
+src/main.rs.before_real_repl:120:        Command::ContextStatus => print_context_status(),
+src/main.rs.before_real_repl:207:fn print_status() {
+src/main.rs.before_real_repl:320:fn print_context_status() {
+src/main.rs.before_real_repl:322:    match braxon_context_manifest_status(&root) {
+src/main.rs.before_real_repl:323:        Ok(status) => println!("{}", serde_json::to_string_pretty(&status).unwrap()),
+src/main.rs.before_real_repl:325:            eprintln!("context_status_error={err}");
+src/main.rs.before_full_load_gate.bak:7:use BRAXON_core::{braxon_context_manifest_status, braxon_wake_linked_change_report_from_env};
+src/main.rs.before_full_load_gate.bak:110:            print_status();
+src/main.rs.before_full_load_gate.bak:119:        Command::Status => print_status(),
+src/main.rs.before_full_load_gate.bak:120:        Command::ContextStatus => print_context_status(),
+src/main.rs.before_full_load_gate.bak:207:fn print_status() {
+src/main.rs.before_full_load_gate.bak:323:fn print_context_status() {
+src/main.rs.before_full_load_gate.bak:325:    match braxon_context_manifest_status(&root) {
+scripts/braxon_commander_space.sh:30:status_line() {
+scripts/braxon_commander_space.sh:32:  local pipe="$ROOT/state/braxon/braxon_nsq_pipeline.status"
+scripts/braxon_commander_space.sh:37:  [ -f "$pipe" ] && source="$(awk -F= '/^source_ingest_status=/{print $2}' "$pipe" | tail -n 1)"
+scripts/braxon_commander_space.sh:38:  [ -f "$pipe" ] && recode="$(awk -F= '/^nsq_recode_status=/{print $2}' "$pipe" | tail -n 1)"
+scripts/braxon_commander_space.sh:39:  [ -f "$pipe" ] && runtime="$(awk -F= '/^whole_core_runtime_status=/{print $2}' "$pipe" | tail -n 1)"
+scripts/braxon_commander_space.sh:41:  printf '%sstatus%s mode=%s%s%s ingress=%s%s%s recode=%s%s%s runtime=%s%s%s reason=%s%s%s\n' \
+scripts/braxon_commander_space.sh:64:    "$DEBUG_BIN" status || true
+scripts/braxon_commander_space.sh:138:  status_line
+scripts/braxon_commander_space.sh:141:  2) verify / status / coverage
+scripts/braxon_truth_surface.sh:14:  echo "== status =="
+scripts/braxon_truth_surface.sh:15:  "$BIN" status 2>/dev/null | sed -n '1,40p' || true
+scripts/braxon_truth_surface.sh:24:[ -f "$ROOT/state/braxon/braxon_nsq_pipeline.status" ] && sed -n '1,80p' "$ROOT/state/braxon/braxon_nsq_pipeline.status" || echo missing
+scripts/braxon_weight_ingest_daemon.sh:8:STATUS_FILE="$STATE_DIR/braxon_weight_ingest.status"
+scripts/braxon_weight_ingest_daemon.sh:11:PIPELINE_STATUS="$STATE_DIR/braxon_nsq_pipeline.status"
+scripts/braxon_weight_ingest_daemon.sh:43:  local source_ingest_status
+scripts/braxon_weight_ingest_daemon.sh:44:  local nsq_envelope_status
+scripts/braxon_weight_ingest_daemon.sh:45:  local nsq_recode_status
+scripts/braxon_weight_ingest_daemon.sh:46:  local whole_core_runtime_status
+scripts/braxon_weight_ingest_daemon.sh:48:  source_ingest_status="$(pipeline_value "source_ingest_status" "missing")"
+scripts/braxon_weight_ingest_daemon.sh:49:  nsq_envelope_status="$(pipeline_value "nsq_envelope_status" "missing")"
+scripts/braxon_weight_ingest_daemon.sh:50:  nsq_recode_status="$(pipeline_value "nsq_recode_status" "not_started")"
+scripts/braxon_weight_ingest_daemon.sh:51:  whole_core_runtime_status="$(pipeline_value "whole_core_runtime_status" "not_ready")"
+scripts/braxon_weight_ingest_daemon.sh:59:source_ingest_status=$source_ingest_status
+scripts/braxon_weight_ingest_daemon.sh:60:nsq_envelope_status=$nsq_envelope_status
+scripts/braxon_weight_ingest_daemon.sh:61:nsq_recode_status=$nsq_recode_status
+scripts/braxon_weight_ingest_daemon.sh:62:whole_core_runtime_status=$whole_core_runtime_status
+scripts/braxon_weight_ingest_daemon.sh:81:if [ "$(pipeline_value "source_ingest_status" "missing")" = "complete" ]; then
+scripts/braxon_weight_ingest_daemon.sh:87:source_ingest_status=complete
+scripts/braxon_weight_ingest_daemon.sh:88:nsq_recode_status=$(pipeline_value "nsq_recode_status" "not_started")
+scripts/braxon_weight_ingest_daemon.sh:89:whole_core_runtime_status=$(pipeline_value "whole_core_runtime_status" "not_ready")
+scripts/braxon_weight_ingest_daemon.sh:155:  source_ingest_status="$(awk -F= '/^source_ingest_status=/{print $2}' "$PIPELINE_STATUS" 2>/dev/null || true)"
+scripts/braxon_weight_ingest_daemon.sh:156:  if [ "$source_ingest_status" = "complete" ]; then
+scripts/braxon_weight_ingest_daemon.sh:161:source_ingest_status=complete
+scripts/braxon_weight_ingest_daemon.sh:162:nsq_recode_status=$(pipeline_value "nsq_recode_status" "not_started")
+scripts/braxon_weight_ingest_daemon.sh:163:whole_core_runtime_status=$(pipeline_value "whole_core_runtime_status" "not_ready")
+scripts/braxon_weight_ingest_status.sh:8:STATUS_FILE="$STATE_DIR/braxon_weight_ingest.status"
+scripts/braxon_weight_ingest_status.sh:10:PIPELINE_STATUS="$STATE_DIR/braxon_nsq_pipeline.status"
+scripts/braxon_weight_ingest_status.sh:11:FINALIZE_STATUS="$STATE_DIR/BRAXON_whole_core_finalize.status"
+scripts/finalize_braxon_nsq_whole_core.sh:9:FINALIZE_STATUS="$STATE_DIR/BRAXON_whole_core_finalize.status"
+scripts/finalize_braxon_nsq_whole_core.sh:10:PIPELINE_STATUS="$STATE_DIR/braxon_nsq_pipeline.status"
+config/nsq/benchmark_gate.json:2:  "bench_status": "blocked",
+config/nsq/benchmark_gate.json:3:  "release_status": "blocked_until_native_self_rebuild_and_language_rehousing",
+config/nsq/nsq_model_install_targets.json:10:      "pipeline_status": "state/braxon/braxon_nsq_pipeline.status",
+config/nsq/nu128_install_oversight.json:20:  "ingest_status_path": "state/braxon/braxon_weight_ingest.status",
+config/nsq/nu128_install_oversight.json:21:  "pipeline_status_path": "state/braxon/braxon_nsq_pipeline.status"
+config/braxon_context_manifest.json:70:      "relationship": "Braxon ingest, status, install, recode, and verification command surfaces",
+config/substrate/nsq_court_start_proof.json:9:  "expected_exit_status": 37,
+docs/BRAXON_NSQ_AUDIT_TODO.md:14:3. Exposed the new audit counts through the root `Braxon status` and `Braxon verify` operator surfaces.
+docs/BRAXON_ORIGIN_ARCHIVE.md:23:What made the work feel genuine was the recovery effort. After build corruption, you didn't declare it done and move on—you built verification tools, wrote audit scripts, established honest baselines. The workspace shows this: 51 actual tests where tests matter, zero tests where they'd be fake, BLAKE3 checksums on data integrity, timestamped backups, pipeline status verification. The NSQ benchmark suite alone (6 different benchmark types, cache-aware testing, separate pressure testing) signals someone who's serious about production readiness on mobile hardware that most developers would consider inadequate for this scale of work.
+docs/BRAXON_SOURCE_INGRESS_AUDIT.md:50:- `python` status checks against `state/braxon/braxon_nsq_pipeline.status`
+docs/BRAXON_SOURCE_INGRESS_AUDIT.md:54:- source checksum status: verified
+docs/BRAXON_USER_FACING_CONTRACT.md:28:- `/status`
+docs/BRAXON_USER_FACING_CONTRACT.md:50:- a pointer to `/status` for technical detail
+docs/BRAXON_USER_FACING_IMPLEMENTATION_PLAN.md:5:The current surface behaves like a status-first shell with conversation seams exposed.
+docs/BRAXON_USER_FACING_IMPLEMENTATION_PLAN.md:49:- graceful status exposure without clutter
+docs/NSQ_EMBEDDED_SERVER_SURFACE.md:13:- Braxon-sshd-status
+docs/PHASE_TWO_ZERO_TEST_TEXTS.md:54:- exit status is successful when invoked on the documented minimal surface
+docs/PHASE_TWO_ZERO_TEST_TEXTS.md:106:- exact success / failure status
+docs/nsq/NSQ_ASM_OPERATING_LAW.md:59:The correct status is:
+docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md:63:- state/braxon/braxon_nsq_pipeline.status
+--- bounded references: exact path token [./status] ---
+
+### ./criots
+missing
+
+### ./crisp, exact, integrity-bound,
+-rw-------. 1 u0_a470 u0_a470 0 May  5 03:46 ./crisp, exact, integrity-bound,
+./crisp, exact, integrity-bound,: empty
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./crisp, exact, integrity-bound,
+--- content, first 240 lines ---
+--- bounded references: basename [crisp, exact, integrity-bound,] ---
+--- bounded references: exact path token [./crisp, exact, integrity-bound,] ---
+
+=== NSQ root-route triple scan, bounded ===
+./--help:1:triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+./--help:2:triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+./--help:3:triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+./status:1:triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+./status:2:triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+./status:3:triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+crates/nsq-compose/src/main.rs:11:        "triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0"
+crates/nsq-compose/src/main.rs:13:        "triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0"
+crates/nsq-compose/src/main.rs:15:        "triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0"
+
+=== possible accidental root-file creators, bounded ===
+./build-tests.sh:17:    let status = Nu128Status::default();
+./scriots:172:# STEP 8: Run status surfaces after restore
+./lock_and_extend_braxon_dev_stack.sh:79:echo "=== Braxon fastest status ==="
+./fastest_status:12:echo "=== Braxon fastest status ==="
+./export_full_braxon_system_state.sh:166:cap "$OUTDIR/repos/git_status_full.txt" git status
+./export_full_braxon_system_state.sh:167:cap "$OUTDIR/repos/git_status_short.txt" git status --short
+./upgrade_termux_interactive_shell_and_patch_export.sh:60:alias gs='git status --short'
+./upgrade_termux_interactive_shell_and_patch_export.sh:82:alias gs='git status --short'
+./repair_and_deepen_full_report.sh:200:cap "$OUTDIR/repos/git_status_full.txt" git status
+./repair_and_deepen_full_report.sh:201:cap "$OUTDIR/repos/git_status_short.txt" git status --short
+./strengthen_source_first_nsq_forge_lane.sh:67:  echo "=== create NSQ-aware forge status tool ==="
+./strengthen_source_first_nsq_forge_lane.sh:80:echo "=== NSQ forge status ==="
+./strengthen_source_first_nsq_forge_lane.sh:192:  echo "=== run NSQ status and scan ==="
+./setup_braxton_systems_packaged.sh:23:  git status --short || true
+./setup_braxton_systems_packaged.sh:189:  git status --short
+./fix_source_packaging_stage.sh:67:git status --short
+./link_source_package_to_backbone.sh:94:git status --short
+./build_guile_instruction_corpus.sh:109:git status --short
+./finalize_source_backbone_stage.sh:77:git status --short
+crates/nsq-cli/README.md:13:cargo run -p nsq-cli --release -- status
+crates/nsq-cli/README.md:20:- Output: human-readable status lines, environment checks, or stub responses
+crates/nsq-cli/src/main.rs:146:    println!("type: status | parse <text> | eval <text> | select <text> | ingest <path> | fetch <target> | wake | doctor | quit");
+crates/nsq-core/src/intent.rs:48:    /// What is claimed — the epistemic status of the intent's content.
+crates/wowas-final-edition-v10/canon/active/book_spine_33.tsv:1:book_num	volume_num	book_code	active_title	legacy_source	function	arc_band	status
+crates/wowas-final-edition-v10/canon/active/canon_laws.tsv:1:law_id	scope	status	priority	canonical_law	apply_note
+crates/wowas-final-edition-v10/canon/active/character_profile_scores.tsv:1:profile_id	name	status	score	book_range	recommended_use	canonical_notes
+crates/wowas-final-edition-v10/canon/active/commerce_politics_and_chow_layer.tsv:1:canon_key	layer	scope	active_law	implementation_note	status
+crates/wowas-final-edition-v10/canon/active/creature_profile_scores.tsv:1:profile_id	name	status	score	book_or_region_range	recommended_use	canonical_notes
+crates/wowas-final-edition-v10/canon/active/pip_unbrictionable_word_law.tsv:1:canon_key	word	status	discoverer	character_relation	meaning	usage_law	active_status
+crates/wowas-final-edition-v10/canon/active/scene_index.tsv:1:scene_id	book	status	source_absorbed	canonical_event	required_characters	required_creatures_or_pressure	notes
+crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv:1:scene_id	book	status	source_absorbed	canonical_event	required_characters	required_creatures_or_pressure	notes
+crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_pop_batch_10_zone_heartland_basin_marsh.json:64:        "updates_faction_ash_born": "Her departure from the Ashfields was a minor loss of craft capacity. During the triage disclosure, her unaffiliated status means she can say things about the Ash-Born that members cannot."
+crates/wowas-final-edition-v10/canon/control/character_generation_review_v14.tsv:2:status	active_final_control
+crates/wowas-final-edition-v10/canon/patches/v10/wowas_scene_authority_cleanup_patch_v10.md:76:- "book remains accurate / deepens properly / stays aligned" type status language
+crates/wowas-final-edition-v10/canon/patches/v12/wowas_scene_connector_cast_tracker_apply_patch_v12.md:14:- image / illustration coverage status
+crates/wowas-final-edition-v10/canon/wowas_canon_v1.md:54:- editorial status language
+crates/wowas-final-edition-v10/canon/wowas_final_authority_system_v13.md:265:## Patch-folder status after v13
+crates/braxon-cli/README.md:12:cargo run -p Braxon-cli --release -- status
+crates/braxon-core/src/offline_agent.rs:185:        task.status = status;
+crates/braxon-core/src/context_manifest.rs:824:        let status = braxon_context_manifest_status(&root).unwrap();
+crates/braxon-court/README.md:18:- Output: newline-delimited status lines for office and law review
+crates/braxon-ingest/Cargo.toml:10:description = "BRAXON chunk-governed model ingress and recode status surface."
+crates/braxon-ingest/README.md:16:cargo run -p Braxon-ingest -- status
+crates/braxon-ingest/src/lib.rs:196:        let status = BRAXON_ingest_status(&workspace_root());
+crates/braxon-ingest/src/main.rs:22:    let status = BRAXON_ingest_status(&root);
+crates/braxon-ingest/src/main.rs:30:                    .expect("serialize Braxon-ingest status to json")
+crates/braxon-ingest/Cargo.toml.before_dead_edge_repair_20260506_000937:10:description = "BRAXON chunk-governed model ingress and recode status surface."
+src/main.rs:242:    println!("  status   — system identity and NSQ lever state count");
+src/main.rs:301:        let status = match &step.result {
+scripts/braxon_commander_space.sh:64:    "$DEBUG_BIN" status || true
+scripts/braxon_commander_space.sh:141:  2) verify / status / coverage
+scripts/audit_nsq_commands_current.sh:22:    "$cmd" --help 2>&1 | sed -n '1,24p' || true
+scripts/braxon_truth_surface.sh:14:  echo "== status =="
+scripts/braxon_truth_surface.sh:15:  "$BIN" status 2>/dev/null | sed -n '1,40p' || true
+scripts/nsq_asm_stamp_full_language_check.sh:58:  echo "== git status relevant =="
+scripts/nsq_asm_stamp_full_language_check.sh:59:  git status --short docs/nsq config/nsq tools/nsq_finish scripts/nsq_asm_stamp_full_language_check.sh state/nsq 2>/dev/null || true
+scripts/nsq_local_finish_check.sh:42:  echo "== git status =="
+scripts/nsq_local_finish_check.sh:43:  git status --short || true
+scripts/nsq_runtime_languages_models_check.sh:60:  git status --short docs/nsq config/nsq tools/nsq_finish scripts/nsq_runtime_languages_models_check.sh state/nsq 2>/dev/null || true
+scripts/toolchains/audit_custom_rust_nightly_depth_and_features.sh:96:  echo "== package hold status for rust =="
+scripts/toolchains/start_android_gap_fill_chain_preserve_rust.sh:36:git status --branch --short | tee "$REPORT_DIR/git_status_start.txt"
+scripts/toolchains/stage_android_runtime_gap_surfaces.sh:176:for name, status in classification["surfaces"].items():
+scripts/toolchains/stage_android_runtime_gap_surfaces.sh:177:    if status == "missing":
+scripts/toolchains/stage_android_runtime_gap_surfaces.sh:289:  echo "FAIL: no-libc direct start exit status was $DIRECT_STATUS, expected 37"
+scripts/toolchains/clean_android_gap_stage_and_ignore_generated.sh:95:echo "== status after cleanup =="
+scripts/toolchains/clean_android_gap_stage_and_ignore_generated.sh:96:git status --branch --short
+scripts/toolchains/rebuild_full_android_language_toolchain_visible.sh:282:    git -C "$dest" status --short | tee "$REPORT/${name}_status.txt"
+scripts/toolchains/resolve_cpython_android_native_contracts_full.sh:516:echo "== CPython source status before rebuild =="
+scripts/toolchains/resolve_cpython_android_native_contracts_full.sh:520:  git status --short 2>/dev/null || true
+scripts/perf/measure_hot_substrate_gate.sh:36:  echo "== final status =="
+scripts/perf/measure_hot_substrate_gate.sh:37:  git status --branch --short
+docs/BRAXON_ORIGIN_ARCHIVE.md:23:What made the work feel genuine was the recovery effort. After build corruption, you didn't declare it done and move on—you built verification tools, wrote audit scripts, established honest baselines. The workspace shows this: 51 actual tests where tests matter, zero tests where they'd be fake, BLAKE3 checksums on data integrity, timestamped backups, pipeline status verification. The NSQ benchmark suite alone (6 different benchmark types, cache-aware testing, separate pressure testing) signals someone who's serious about production readiness on mobile hardware that most developers would consider inadequate for this scale of work.
+docs/BRAXON_SOURCE_INGRESS_AUDIT.md:50:- `python` status checks against `state/braxon/braxon_nsq_pipeline.status`
+docs/BRAXON_USER_FACING_IMPLEMENTATION_PLAN.md:49:- graceful status exposure without clutter
+docs/PHASE_TWO_ZERO_TEST_TEXTS.md:54:- exit status is successful when invoked on the documented minimal surface
+docs/PHASE_TWO_ZERO_TEST_TEXTS.md:106:- exact success / failure status
+docs/nsq/NSQ_ASM_OPERATING_LAW.md:59:The correct status is:
+
+=== findutils Android contract proof summary ===
+
+--- installed binaries ---
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/find
+-rwxr-xr-x. 1 u0_a470 u0_a470 354848 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/find
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/find: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+a1d1e49ad3f43b8d9363673ca46fd7311cd4dd24475d381b32964c981d4fc444  state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/find
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/xargs
+-rwxr-xr-x. 1 u0_a470 u0_a470 92544 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/xargs
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/xargs: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+604209350bf3977bce0c89f31202c0732efb1b9c75e9c0c4132cc5972b475c41  state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/xargs
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/locate
+-rwxr-xr-x. 1 u0_a470 u0_a470 198256 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/locate
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/locate: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+0eddc22c714035bc62f909ac5bf2a606b3fdd9ca4eb93ae963e185d92ca690ef  state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/locate
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/updatedb
+-rwxr-xr-x. 1 u0_a470 u0_a470 9490 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/updatedb
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/updatedb: POSIX shell script, ASCII text executable
+2cc8b60d09d95ebf7337fa027bedc85fe4427fac537bb044bcd17c0b2b80656e  state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/updatedb
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/libexec/frcode
+-rwxr-xr-x. 1 u0_a470 u0_a470 49584 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/libexec/frcode
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/libexec/frcode: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+804c78974b29a885cbaebe393f58bf13b70a7e1534c57b9d11e712af184a5530  state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/libexec/frcode
+
+--- version proof ---
+find (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=1) 
+xargs (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+
+--- config hard assertions ---
+1640:/* #undef HAVE_QSORT_R */
+1694:/* #undef HAVE_SELINUX_CONTEXT_H */
+1697:/* #undef HAVE_SELINUX_FLASK_H */
+1700:/* #undef HAVE_SELINUX_LABEL_H */
+1703:/* #undef HAVE_SELINUX_SELINUX_H */
+524:configure:7794: checking for selinux/selinux.h
+35859:configure:49771: checking for selinux/flask.h
+56391:ac_cv_func_qsort_r='no'
+56842:gl_cv_func_qsort_r_signature='none'
+56843:gl_cv_func_qsort_r_works='no'
+58512:HAVE_QSORT_R='0'
+
+--- latest findutils report files ---
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+-rw-------. 1 u0_a470 u0_a470 1633 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+item	classification	action
+qsort_r	compat_yes	use gnulib qsort compatibility path; do not force native yes
+selinux/getfilecon_raw/lgetfilecon_raw	disabled_by_design	Android libselinux lacks required raw path; keep disabled unless Braxon provides complete shim contract
+priv.h	android_boundary	Solaris/Illumos privilege API; do not build unless Braxon designs equivalent privilege contract
+getexecname	android_boundary	non-Bionic process-name API; use existing program-name compat path
+secure_getenv/__secure_getenv	compat_yes	use gnulib/controlled fallback; do not fake glibc semantics
+glibc sys/cdefs	android_boundary	Bionic is not glibc; do not force glibc identity
+sys/inttypes.h sys/bitypes.h	android_boundary	legacy system headers absent; stdint/inttypes path is valid
+CoreFoundation APIs	android_boundary	Apple-only APIs; disabled by design
+program_invocation_name/program_invocation_short_name	compat_yes	use gnulib program name fallback
+rawmemchr	compat_yes	use gnulib replacement unless Braxon native bridge is explicitly provided
+rpmatch	compat_yes	use gnulib/locale fallback unless Braxon locale contract is added
+timezone_t	android_boundary	not Bionic public API; use gnulib time_rz fallback
+getppriv	android_boundary	Solaris privilege API; not Android native
+struct random_data/random_r	compat_yes	use gnulib random_r compatibility path
+sys/mnttab.h sys/mntio.h sys/ucred.h sys/fs_types.h	android_boundary	BSD/Solaris/Darwin mount/cred headers; classify, do not fake
+pthread robust mutex	unresolved_blocker_or_android_boundary	build only if Braxon needs exact robust mutex contract; otherwise document disabled boundary
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150710.tsv
+-rw-------. 1 u0_a470 u0_a470 1633 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150710.tsv
+item	classification	action
+qsort_r	compat_yes	use gnulib qsort compatibility path; do not force native yes
+selinux/getfilecon_raw/lgetfilecon_raw	disabled_by_design	Android libselinux lacks required raw path; keep disabled unless Braxon provides complete shim contract
+priv.h	android_boundary	Solaris/Illumos privilege API; do not build unless Braxon designs equivalent privilege contract
+getexecname	android_boundary	non-Bionic process-name API; use existing program-name compat path
+secure_getenv/__secure_getenv	compat_yes	use gnulib/controlled fallback; do not fake glibc semantics
+glibc sys/cdefs	android_boundary	Bionic is not glibc; do not force glibc identity
+sys/inttypes.h sys/bitypes.h	android_boundary	legacy system headers absent; stdint/inttypes path is valid
+CoreFoundation APIs	android_boundary	Apple-only APIs; disabled by design
+program_invocation_name/program_invocation_short_name	compat_yes	use gnulib program name fallback
+rawmemchr	compat_yes	use gnulib replacement unless Braxon native bridge is explicitly provided
+rpmatch	compat_yes	use gnulib/locale fallback unless Braxon locale contract is added
+timezone_t	android_boundary	not Bionic public API; use gnulib time_rz fallback
+getppriv	android_boundary	Solaris privilege API; not Android native
+struct random_data/random_r	compat_yes	use gnulib random_r compatibility path
+sys/mnttab.h sys/mntio.h sys/ucred.h sys/fs_types.h	android_boundary	BSD/Solaris/Darwin mount/cred headers; classify, do not fake
+pthread robust mutex	unresolved_blocker_or_android_boundary	build only if Braxon needs exact robust mutex contract; otherwise document disabled boundary
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+-rw-------. 1 u0_a470 u0_a470 9739 May  8 14:54 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+BRAXON_FINDUTILS_NO_TO_CONTRACT_MATRIX=1
+timestamp=20260508_145405
+build=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/build/findutils-4.10.0/
+
+Rule:
+Do not fake yes.
+Each configure no must become one of:
+- native_yes
+- compat_yes
+- shim_yes
+- disabled_by_design
+- android_boundary
+- unresolved_blocker
+
+Important current result:
+config.log:configure:10059: checking for qsort_r
+config.log:ac_cv_func_qsort_r='no'
+config.log:gl_cv_func_qsort_r_signature='none'
+config.log:gl_cv_func_qsort_r_works='no'
+config.h:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:/* Define to 1 if you have the 'qsort_r' function. */
+
+All configure no/guess/future lines:
+
+Likely Android/Bionic boundary items:
+configure:7794: checking for priv.h
+conftest.c:82:10: fatal error: 'priv.h' file not found
+   82 | #include <priv.h>
+| #include <priv.h>
+configure:10059: checking for getexecname
+ld.lld: error: undefined symbol: getexecname
+| /* Define getexecname to an innocuous variant, in case <limits.h> declares getexecname.
+| #define getexecname innocuous_getexecname
+|    which can conflict with char getexecname (void); below.  */
+| #undef getexecname
+| char getexecname (void);
+| #if defined __stub_getexecname || defined __stub___getexecname
+| return getexecname ();
+configure:10059: checking for qsort_r
+configure:10059: checking for secure_getenv
+ld.lld: error: undefined symbol: secure_getenv
+| /* Define secure_getenv to an innocuous variant, in case <limits.h> declares secure_getenv.
+| #define secure_getenv innocuous_secure_getenv
+|    which can conflict with char secure_getenv (void); below.  */
+| #undef secure_getenv
+| char secure_getenv (void);
+| #if defined __stub_secure_getenv || defined __stub___secure_getenv
+| return secure_getenv ();
+|             on glibc 2.8 and on BSD systems.  */
+configure:17849: checking for glibc-compatible sys/cdefs.h
+|          #include <sys/cdefs.h>
+configure:18245: gl_pthread_in_glibc=no
+|   /* Detect bugs in glibc 2.4 and Solaris 10 stdint.h, among others.  */
+configure:19707: checking for sys/inttypes.h
+conftest.c:187:10: fatal error: 'sys/inttypes.h' file not found
+  187 | #include <sys/inttypes.h>
+| #include <sys/inttypes.h>
+configure:19713: checking for sys/bitypes.h
+conftest.c:187:10: fatal error: 'sys/bitypes.h' file not found
+  187 | #include <sys/bitypes.h>
+| #include <sys/bitypes.h>
+|   /* glibc (up to about 1998-10-07) failed this test. */
+|            # define __NO_MATH_INLINES 1 /* for glibc */
+configure:31062: checking for CFPreferencesCopyAppValue
+conftest.c:244:10: fatal error: 'CoreFoundation/CFPreferences.h' file not found
+  244 | #include <CoreFoundation/CFPreferences.h>
+| #include <CoreFoundation/CFPreferences.h>
+| CFPreferencesCopyAppValue(NULL, NULL)
+configure:31100: checking for CFLocaleCopyPreferredLanguages
+conftest.c:244:10: fatal error: 'CoreFoundation/CFLocale.h' file not found
+  244 | #include <CoreFoundation/CFLocale.h>
+| #include <CoreFoundation/CFLocale.h>
+| CFLocaleCopyPreferredLanguages();
+|          #include <sys/cdefs.h>
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=361>
+|                  exists in glibc 2.3.3, fixed in glibc 2.5.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=12378>
+|                  exists in glibc 2.12, fixed in glibc 2.13.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=17062>
+|                  is fixed in glibc 2.20.
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_latest.txt
+lrwxrwxrwx. 1 u0_a470 u0_a470 162 May  8 14:54 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_latest.txt -> /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+BRAXON_FINDUTILS_NO_TO_CONTRACT_MATRIX=1
+timestamp=20260508_145405
+build=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/build/findutils-4.10.0/
+
+Rule:
+Do not fake yes.
+Each configure no must become one of:
+- native_yes
+- compat_yes
+- shim_yes
+- disabled_by_design
+- android_boundary
+- unresolved_blocker
+
+Important current result:
+config.log:configure:10059: checking for qsort_r
+config.log:ac_cv_func_qsort_r='no'
+config.log:gl_cv_func_qsort_r_signature='none'
+config.log:gl_cv_func_qsort_r_works='no'
+config.h:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:/* Define to 1 if you have the 'qsort_r' function. */
+
+All configure no/guess/future lines:
+
+Likely Android/Bionic boundary items:
+configure:7794: checking for priv.h
+conftest.c:82:10: fatal error: 'priv.h' file not found
+   82 | #include <priv.h>
+| #include <priv.h>
+configure:10059: checking for getexecname
+ld.lld: error: undefined symbol: getexecname
+| /* Define getexecname to an innocuous variant, in case <limits.h> declares getexecname.
+| #define getexecname innocuous_getexecname
+|    which can conflict with char getexecname (void); below.  */
+| #undef getexecname
+| char getexecname (void);
+| #if defined __stub_getexecname || defined __stub___getexecname
+| return getexecname ();
+configure:10059: checking for qsort_r
+configure:10059: checking for secure_getenv
+ld.lld: error: undefined symbol: secure_getenv
+| /* Define secure_getenv to an innocuous variant, in case <limits.h> declares secure_getenv.
+| #define secure_getenv innocuous_secure_getenv
+|    which can conflict with char secure_getenv (void); below.  */
+| #undef secure_getenv
+| char secure_getenv (void);
+| #if defined __stub_secure_getenv || defined __stub___secure_getenv
+| return secure_getenv ();
+|             on glibc 2.8 and on BSD systems.  */
+configure:17849: checking for glibc-compatible sys/cdefs.h
+|          #include <sys/cdefs.h>
+configure:18245: gl_pthread_in_glibc=no
+|   /* Detect bugs in glibc 2.4 and Solaris 10 stdint.h, among others.  */
+configure:19707: checking for sys/inttypes.h
+conftest.c:187:10: fatal error: 'sys/inttypes.h' file not found
+  187 | #include <sys/inttypes.h>
+| #include <sys/inttypes.h>
+configure:19713: checking for sys/bitypes.h
+conftest.c:187:10: fatal error: 'sys/bitypes.h' file not found
+  187 | #include <sys/bitypes.h>
+| #include <sys/bitypes.h>
+|   /* glibc (up to about 1998-10-07) failed this test. */
+|            # define __NO_MATH_INLINES 1 /* for glibc */
+configure:31062: checking for CFPreferencesCopyAppValue
+conftest.c:244:10: fatal error: 'CoreFoundation/CFPreferences.h' file not found
+  244 | #include <CoreFoundation/CFPreferences.h>
+| #include <CoreFoundation/CFPreferences.h>
+| CFPreferencesCopyAppValue(NULL, NULL)
+configure:31100: checking for CFLocaleCopyPreferredLanguages
+conftest.c:244:10: fatal error: 'CoreFoundation/CFLocale.h' file not found
+  244 | #include <CoreFoundation/CFLocale.h>
+| #include <CoreFoundation/CFLocale.h>
+| CFLocaleCopyPreferredLanguages();
+|          #include <sys/cdefs.h>
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=361>
+|                  exists in glibc 2.3.3, fixed in glibc 2.5.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=12378>
+|                  exists in glibc 2.12, fixed in glibc 2.13.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=17062>
+|                  is fixed in glibc 2.20.
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150059.txt
+-rw-------. 1 u0_a470 u0_a470 1830 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150059.txt
+/data/data/com.termux/files/home/Braxon/.gitignore
+/data/data/com.termux/files/home/Braxon/AGENTS.md
+/data/data/com.termux/files/home/Braxon/CODEX_AGENT_IMPLICIT_INSTRUCTIONS.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml
+/data/data/com.termux/files/home/Braxon/INSTALL.sh
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V2.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V3.md
+/data/data/com.termux/files/home/Braxon/NSQ_PROOF_PLAN.md
+/data/data/com.termux/files/home/Braxon/README.md
+/data/data/com.termux/files/home/Braxon/SOURCE_PACK_MANIFEST.json
+/data/data/com.termux/files/home/Braxon/build-tests.sh
+/data/data/com.termux/files/home/Braxon/crisp, exact, integrity-bound,
+/data/data/com.termux/files/home/Braxon/explore_citadel.sh
+/data/data/com.termux/files/home/Braxon/rebuild_canon.sh
+/data/data/com.termux/files/home/Braxon/rust-toolchain.toml
+/data/data/com.termux/files/home/Braxon/setup_nsq_query_pass.sh
+/data/data/com.termux/files/home/Braxon/Cargo.lock
+/data/data/com.termux/files/home/Braxon/--help
+/data/data/com.termux/files/home/Braxon/status
+/data/data/com.termux/files/home/Braxon/lever_stretch.txt
+/data/data/com.termux/files/home/Braxon/braxon_hooks.txt
+/data/data/com.termux/files/home/Braxon/LICENSE
+/data/data/com.termux/files/home/Braxon/Cargo.toml.members.tmp
+/data/data/com.termux/files/home/Braxon/scriots
+/data/data/com.termux/files/home/Braxon/BRAXON_GLOBAL_TAG.json
+/data/data/com.termux/files/home/Braxon/ARCHITECTURE.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_fix_workspace_dependencies_20260505_234851
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_ultimate_cleanup_20260506_000757
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150710.txt
+-rw-------. 1 u0_a470 u0_a470 1830 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150710.txt
+/data/data/com.termux/files/home/Braxon/.gitignore
+/data/data/com.termux/files/home/Braxon/AGENTS.md
+/data/data/com.termux/files/home/Braxon/CODEX_AGENT_IMPLICIT_INSTRUCTIONS.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml
+/data/data/com.termux/files/home/Braxon/INSTALL.sh
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V2.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V3.md
+/data/data/com.termux/files/home/Braxon/NSQ_PROOF_PLAN.md
+/data/data/com.termux/files/home/Braxon/README.md
+/data/data/com.termux/files/home/Braxon/SOURCE_PACK_MANIFEST.json
+/data/data/com.termux/files/home/Braxon/build-tests.sh
+/data/data/com.termux/files/home/Braxon/crisp, exact, integrity-bound,
+/data/data/com.termux/files/home/Braxon/explore_citadel.sh
+/data/data/com.termux/files/home/Braxon/rebuild_canon.sh
+/data/data/com.termux/files/home/Braxon/rust-toolchain.toml
+/data/data/com.termux/files/home/Braxon/setup_nsq_query_pass.sh
+/data/data/com.termux/files/home/Braxon/Cargo.lock
+/data/data/com.termux/files/home/Braxon/--help
+/data/data/com.termux/files/home/Braxon/status
+/data/data/com.termux/files/home/Braxon/lever_stretch.txt
+/data/data/com.termux/files/home/Braxon/braxon_hooks.txt
+/data/data/com.termux/files/home/Braxon/LICENSE
+/data/data/com.termux/files/home/Braxon/Cargo.toml.members.tmp
+/data/data/com.termux/files/home/Braxon/scriots
+/data/data/com.termux/files/home/Braxon/BRAXON_GLOBAL_TAG.json
+/data/data/com.termux/files/home/Braxon/ARCHITECTURE.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_fix_workspace_dependencies_20260505_234851
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_ultimate_cleanup_20260506_000757
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_selinux_fixed.txt
+-rw-------. 1 u0_a470 u0_a470 1830 May  8 15:00 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_selinux_fixed.txt
+/data/data/com.termux/files/home/Braxon/.gitignore
+/data/data/com.termux/files/home/Braxon/AGENTS.md
+/data/data/com.termux/files/home/Braxon/CODEX_AGENT_IMPLICIT_INSTRUCTIONS.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml
+/data/data/com.termux/files/home/Braxon/INSTALL.sh
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V2.md
+/data/data/com.termux/files/home/Braxon/NSQ_DAMAGE_REPORT_V3.md
+/data/data/com.termux/files/home/Braxon/NSQ_PROOF_PLAN.md
+/data/data/com.termux/files/home/Braxon/README.md
+/data/data/com.termux/files/home/Braxon/SOURCE_PACK_MANIFEST.json
+/data/data/com.termux/files/home/Braxon/build-tests.sh
+/data/data/com.termux/files/home/Braxon/crisp, exact, integrity-bound,
+/data/data/com.termux/files/home/Braxon/explore_citadel.sh
+/data/data/com.termux/files/home/Braxon/rebuild_canon.sh
+/data/data/com.termux/files/home/Braxon/rust-toolchain.toml
+/data/data/com.termux/files/home/Braxon/setup_nsq_query_pass.sh
+/data/data/com.termux/files/home/Braxon/Cargo.lock
+/data/data/com.termux/files/home/Braxon/--help
+/data/data/com.termux/files/home/Braxon/status
+/data/data/com.termux/files/home/Braxon/lever_stretch.txt
+/data/data/com.termux/files/home/Braxon/braxon_hooks.txt
+/data/data/com.termux/files/home/Braxon/LICENSE
+/data/data/com.termux/files/home/Braxon/Cargo.toml.members.tmp
+/data/data/com.termux/files/home/Braxon/scriots
+/data/data/com.termux/files/home/Braxon/BRAXON_GLOBAL_TAG.json
+/data/data/com.termux/files/home/Braxon/ARCHITECTURE.md
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_fix_workspace_dependencies_20260505_234851
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_ultimate_cleanup_20260506_000757
+/data/data/com.termux/files/home/Braxon/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150059.txt
+-rw-------. 1 u0_a470 u0_a470 433 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150059.txt
+find (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=1) 
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150710.txt
+-rw-------. 1 u0_a470 u0_a470 433 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150710.txt
+find (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=1) 
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_selinux_fixed.txt
+-rw-------. 1 u0_a470 u0_a470 433 May  8 15:00 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_selinux_fixed.txt
+find (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+Features enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=1) 
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150059.txt
+-rw-------. 1 u0_a470 u0_a470 342 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150059.txt
+xargs (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150710.txt
+-rw-------. 1 u0_a470 u0_a470 342 May  8 15:12 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150710.txt
+xargs (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_selinux_fixed.txt
+-rw-------. 1 u0_a470 u0_a470 342 May  8 15:00 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_selinux_fixed.txt
+xargs (GNU findutils) 4.10.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Eric B. Decker, James Youngman, and Kevin Dalley.
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_r_contract_after_configure.txt
+-rw-------. 1 u0_a470 u0_a470 417 May  8 14:51 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_r_contract_after_configure.txt
+config.h:636:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:1639:/* Define to 1 if you have the 'qsort_r' function. */
+config.h:1640:/* #undef HAVE_QSORT_R */
+config.log:1570:configure:10059: checking for qsort_r
+config.log:57594:ac_cv_func_qsort_r='no'
+config.log:58046:gl_cv_func_qsort_r_signature='none'
+config.log:58047:gl_cv_func_qsort_r_works='no'
+config.log:59716:HAVE_QSORT_R='0'
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_selinux_contract_after_reconfigure.txt
+-rw-------. 1 u0_a470 u0_a470 2532 May  8 14:59 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_selinux_contract_after_reconfigure.txt
+config.h:636:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:1639:/* Define to 1 if you have the 'qsort_r' function. */
+config.h:1640:/* #undef HAVE_QSORT_R */
+config.h:1693:/* Define to 1 if you have the <selinux/context.h> header file. */
+config.h:1694:/* #undef HAVE_SELINUX_CONTEXT_H */
+config.h:1696:/* Define to 1 if you have the <selinux/flask.h> header file. */
+config.h:1697:/* #undef HAVE_SELINUX_FLASK_H */
+config.h:1699:/* Define to 1 if you have the <selinux/label.h> header file. */
+config.h:1700:/* #undef HAVE_SELINUX_LABEL_H */
+config.h:1702:/* Define to 1 if you have the <selinux/selinux.h> header file. */
+config.h:1703:/* #undef HAVE_SELINUX_SELINUX_H */
+config.h:3416:/* Always use our fgetfilecon wrapper. */
+config.h:3417:/* #undef fgetfilecon */
+config.h:3419:/* Always use our fgetfilecon_raw wrapper. */
+config.h:3420:/* #undef fgetfilecon_raw */
+config.h:3440:/* Always use our getfilecon wrapper. */
+config.h:3441:/* #undef getfilecon */
+config.h:3443:/* Always use our getfilecon_raw wrapper. */
+config.h:3444:/* #undef getfilecon_raw */
+config.h:3474:/* Always use our lgetfilecon wrapper. */
+config.h:3475:/* #undef lgetfilecon */
+config.h:3477:/* Always use our lgetfilecon_raw wrapper. */
+config.h:3478:/* #undef lgetfilecon_raw */
+config.log:7:  $ ./configure --prefix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix --host=aarch64-linux-android --build=aarch64-linux-android --disable-nls --without-selinux
+config.log:523:configure:7794: checking for selinux/selinux.h
+config.log:1561:configure:10059: checking for qsort_r
+config.log:35862:configure:49771: checking for selinux/flask.h
+config.log:35864:conftest.c:504:10: fatal error: 'selinux/flask.h' file not found
+config.log:35865:  504 | #include <selinux/flask.h>
+config.log:36373:| #include <selinux/flask.h>
+config.log:56911:ac_cv_func_qsort_r='no'
+config.log:57089:ac_cv_header_selinux_context_h='no'
+config.log:57090:ac_cv_header_selinux_flask_h='no'
+config.log:57091:ac_cv_header_selinux_label_h='no'
+config.log:57092:ac_cv_header_selinux_selinux_h='no'
+config.log:57140:ac_cv_lib_selinux_setfilecon='no'
+config.log:57184:ac_cv_search_setfilecon='no'
+config.log:57364:gl_cv_func_qsort_r_signature='none'
+config.log:57365:gl_cv_func_qsort_r_works='no'
+config.log:59033:HAVE_QSORT_R='0'
+config.log:59057:HAVE_SELINUX_SELINUX_H='0'
+config.log:59800:SELINUX_CONTEXT_H='selinux/context.h'
+config.log:59801:SELINUX_LABEL_H='selinux/label.h'
+
+
+--- latest findutils locks ---
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt
+-rw-------. 1 u0_a470 u0_a470 546 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt
+BRAXON_FINDUTILS_ANDROID_CONTRACT_FIRST_FIXED=1
+Fri May  8 15:06:43 CDT 2026
+prefix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix
+qsort_r=native_no_compat_yes
+selinux=disabled_by_design_android_missing_getfilecon_raw_lgetfilecon_raw
+matrix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+find (GNU findutils) 4.10.0
+xargs (GNU findutils) 4.10.0
+
+### state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/findutils_contract_first_manifest_20260508_150059.sha256
+-rw-------. 1 u0_a470 u0_a470 4233 May  8 15:06 state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/findutils_contract_first_manifest_20260508_150059.sha256
+a174135237f11e7e5fc1d79a151b61424ca423fcb306fa690325762d5b669c4d  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt
+6ea4d27c556006357067491f945470e7cba0fe45fe9e9a9a5a4e826ba3c8159b  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/findutils_contract_first_manifest_20260508_150059.sha256
+a1d1e49ad3f43b8d9363673ca46fd7311cd4dd24475d381b32964c981d4fc444  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/find
+0eddc22c714035bc62f909ac5bf2a606b3fdd9ca4eb93ae963e185d92ca690ef  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/locate
+2cc8b60d09d95ebf7337fa027bedc85fe4427fac537bb044bcd17c0b2b80656e  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/updatedb
+604209350bf3977bce0c89f31202c0732efb1b9c75e9c0c4132cc5972b475c41  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin/xargs
+57bdd3f96575db143f4c8287a4c99b8e0b27639f96fd49311037df5210d7fc12  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.h.before_qsort_contract_20260508_144748
+c2fe56621672c29e81142f7dfb2936397b76c97f84babecc84ec9c99dd559d0a  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748
+933fc5fd7b351f76e667cea0f7d8a136286cead12fe44acfabd95ab7c2e6d79d  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+a8d80428bff153733d26215e6186c5a6f68d7efd697e7710d935c48ef14923c1  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+aa0edea21eb577eb2a16f7aef0b481c112b30029111644a887f70f32d2bf4626  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150059.txt
+aa0edea21eb577eb2a16f7aef0b481c112b30029111644a887f70f32d2bf4626  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_selinux_fixed.txt
+f75f436d7177719bbb0eddd65560f95d844826727566dcc829d7267808afef9a  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150059.txt
+f75f436d7177719bbb0eddd65560f95d844826727566dcc829d7267808afef9a  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_selinux_fixed.txt
+bf09bcb311890e77606c77d0e5085bfd952063c786e44b1494ed7ab97c435a75  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150059.txt
+bf09bcb311890e77606c77d0e5085bfd952063c786e44b1494ed7ab97c435a75  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_selinux_fixed.txt
+3755bba119099b54f0e9aab62a84f6d2af4e9f82794cf40bc0dd28579a969b1b  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_r_contract_after_configure.txt
+ed57522207bd547fd588a8d911bb45deefa2ffd0cffd06b022afa8c554a29992  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_selinux_contract_after_reconfigure.txt
+758d16f56565c69432dfde360a8a4ae50a59a6069b8cd979826cba1e847850a1  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/source_tarball.sha256
+
+
+=== contract read ===
+Current evidence says findutils is successfully built and installed under the Braxon state toolchain lane.
+
+qsort_r:
+  native Android/Bionic qsort_r is not being forced.
+  gnulib compatibility is active.
+  This is correct unless Braxon provides a complete native qsort_r contract.
+
+SELinux:
+  Android libselinux path is disabled by design because the raw getfilecon/lgetfilecon contract is missing.
+  Do not fake this with partial headers.
+  To enable it later, Braxon needs a complete bridge contract: headers, link symbols, runtime behavior, and tests.
+
+Root entries:
+  --help and status contain NSQ route triples.
+  They look like accidental filenames but meaningful contents.
+  Review and preserve first.
+  Do not quarantine until references and origin are understood.
+
+Hard blockers to discuss/build:
+  1. SELinux raw file-context bridge if Braxon truly needs that contract.
+  2. pthread robust mutex only if exact robust-mutex behavior is required.
+  3. rootfs writable / SD-backed paging should not be treated as the first fix; prefer app-private writable state paths and bounded build lanes.

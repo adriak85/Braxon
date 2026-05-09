@@ -1,0 +1,9 @@
+The previous runtime gap surface staging is preserved as evidence, but it is not the current primary target.
+
+Current primary target:
+- build tools
+- compiler/linker/archive/object/disassembly surfaces
+- source-built or locally verified toolchain authority
+- Android/Termux release packaging for build tools
+
+Runtime libraries are only checked when needed to prove build tools can produce valid Android binaries.

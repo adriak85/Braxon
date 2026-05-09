@@ -1,0 +1,36 @@
+NSQ Guile logic scaffold
+watermark: BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1
+active lever floor: 220000
+proven effective positions: 225370
+legacy 1126 only: #t
+not u8: #t
+not bytes: #t
+
+core laws:
+ - do no harm
+ - respect user privacy
+ - respect user agency
+ - support user goals
+ - fail closed on false proof
+ - preserve source-first build lanes
+ - do not fake hot-live state
+ - state registry is first-class
+ - NSQ is the bus
+ - court is compositor/internal machine component
+
+resolver strategies:
+ - current_config_path
+ - tool_config_path
+ - pkg_config_path
+ - overlay_include_path
+ - adoption_include_path
+ - dereferenced_integrated_prefix
+ - copied_native_header_prefix
+ - patched_sysconfig_or_metadata
+ - env_override_flags
+ - generated_config_shim
+
+;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
+;;;       or pass the --no-auto-compile argument to disable.
+;;; compiling /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/guile_nsq_logic/tools/nsq-stamp-logic.scm
+;;; compiled /data/data/com.termux/files/home/.cache/guile/ccache/3.0-LE-8-4.7/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/guile_nsq_logic/tools/nsq-stamp-logic.scm.go

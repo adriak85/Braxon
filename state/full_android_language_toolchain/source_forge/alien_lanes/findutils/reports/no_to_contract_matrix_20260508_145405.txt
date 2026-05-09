@@ -1,0 +1,210 @@
+BRAXON_FINDUTILS_NO_TO_CONTRACT_MATRIX=1
+timestamp=20260508_145405
+build=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/build/findutils-4.10.0/
+
+Rule:
+Do not fake yes.
+Each configure no must become one of:
+- native_yes
+- compat_yes
+- shim_yes
+- disabled_by_design
+- android_boundary
+- unresolved_blocker
+
+Important current result:
+config.log:configure:10059: checking for qsort_r
+config.log:ac_cv_func_qsort_r='no'
+config.log:gl_cv_func_qsort_r_signature='none'
+config.log:gl_cv_func_qsort_r_works='no'
+config.h:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:/* Define to 1 if you have the 'qsort_r' function. */
+
+All configure no/guess/future lines:
+
+Likely Android/Bionic boundary items:
+configure:7794: checking for priv.h
+conftest.c:82:10: fatal error: 'priv.h' file not found
+   82 | #include <priv.h>
+| #include <priv.h>
+configure:10059: checking for getexecname
+ld.lld: error: undefined symbol: getexecname
+| /* Define getexecname to an innocuous variant, in case <limits.h> declares getexecname.
+| #define getexecname innocuous_getexecname
+|    which can conflict with char getexecname (void); below.  */
+| #undef getexecname
+| char getexecname (void);
+| #if defined __stub_getexecname || defined __stub___getexecname
+| return getexecname ();
+configure:10059: checking for qsort_r
+configure:10059: checking for secure_getenv
+ld.lld: error: undefined symbol: secure_getenv
+| /* Define secure_getenv to an innocuous variant, in case <limits.h> declares secure_getenv.
+| #define secure_getenv innocuous_secure_getenv
+|    which can conflict with char secure_getenv (void); below.  */
+| #undef secure_getenv
+| char secure_getenv (void);
+| #if defined __stub_secure_getenv || defined __stub___secure_getenv
+| return secure_getenv ();
+|             on glibc 2.8 and on BSD systems.  */
+configure:17849: checking for glibc-compatible sys/cdefs.h
+|          #include <sys/cdefs.h>
+configure:18245: gl_pthread_in_glibc=no
+|   /* Detect bugs in glibc 2.4 and Solaris 10 stdint.h, among others.  */
+configure:19707: checking for sys/inttypes.h
+conftest.c:187:10: fatal error: 'sys/inttypes.h' file not found
+  187 | #include <sys/inttypes.h>
+| #include <sys/inttypes.h>
+configure:19713: checking for sys/bitypes.h
+conftest.c:187:10: fatal error: 'sys/bitypes.h' file not found
+  187 | #include <sys/bitypes.h>
+| #include <sys/bitypes.h>
+|   /* glibc (up to about 1998-10-07) failed this test. */
+|            # define __NO_MATH_INLINES 1 /* for glibc */
+configure:31062: checking for CFPreferencesCopyAppValue
+conftest.c:244:10: fatal error: 'CoreFoundation/CFPreferences.h' file not found
+  244 | #include <CoreFoundation/CFPreferences.h>
+| #include <CoreFoundation/CFPreferences.h>
+| CFPreferencesCopyAppValue(NULL, NULL)
+configure:31100: checking for CFLocaleCopyPreferredLanguages
+conftest.c:244:10: fatal error: 'CoreFoundation/CFLocale.h' file not found
+  244 | #include <CoreFoundation/CFLocale.h>
+| #include <CoreFoundation/CFLocale.h>
+| CFLocaleCopyPreferredLanguages();
+|          #include <sys/cdefs.h>
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=361>
+|                  exists in glibc 2.3.3, fixed in glibc 2.5.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=12378>
+|                  exists in glibc 2.12, fixed in glibc 2.13.  */
+|               /* glibc bug <https://sourceware.org/bugzilla/show_bug.cgi?id=17062>
+|                  is fixed in glibc 2.20.
+|                  glibc bugs <https://sourceware.org/bugzilla/show_bug.cgi?id=18032>
+|                  are fixed in glibc 2.22.
+|                  therefore test the glibc version.  */
+configure:40757: checking whether program_invocation_name is declared
+conftest.c:371:10: error: use of undeclared identifier 'program_invocation_name'
+  371 |   (void) program_invocation_name;
+| #ifndef program_invocation_name
+|   (void) program_invocation_name;
+|   (void) program_invocation_name;
+| /* glibc uses struct timezone * rather than the POSIX void *
+|                  since the glibc definition is actually more typesafe, it is
+|              # define __NO_MATH_INLINES 1 /* for glibc */
+configure:46247: checking for sys/ucred.h
+conftest.c:418:10: fatal error: 'sys/ucred.h' file not found
+  418 | #include <sys/ucred.h>
+| #include <sys/ucred.h>
+configure:46275: checking for sys/fs_types.h
+conftest.c:446:10: fatal error: 'sys/fs_types.h' file not found
+  446 | #include <sys/fs_types.h>
+| #include <sys/fs_types.h>
+| # include <sys/ucred.h> /* needed by powerpc-apple-darwin1.3.7 */
+| # include <sys/fs_types.h> /* needed by powerpc-apple-darwin1.3.7 */
+| # include <sys/ucred.h> /* needed by powerpc-apple-darwin1.3.7 */
+| # include <sys/fs_types.h> /* needed by powerpc-apple-darwin1.3.7 */
+configure:48098: checking whether program_invocation_name is declared
+configure:48109: checking whether program_invocation_short_name is declared
+conftest.c:449:10: error: use of undeclared identifier 'program_invocation_short_name'
+  449 |   (void) program_invocation_short_name;
+| #ifndef program_invocation_short_name
+|   (void) program_invocation_short_name;
+|   (void) program_invocation_short_name;
+configure:48260: checking for rawmemchr
+ld.lld: error: undefined symbol: rawmemchr
+| /* Define rawmemchr to an innocuous variant, in case <limits.h> declares rawmemchr.
+| #define rawmemchr innocuous_rawmemchr
+|    which can conflict with char rawmemchr (void); below.  */
+| #undef rawmemchr
+| char rawmemchr (void);
+| #if defined __stub_rawmemchr || defined __stub___rawmemchr
+| return rawmemchr ();
+|             /* Some builds of glibc go into an infinite loop on this
+|                   /* This test is from glibc bug 15078.
+|             /* This test is from glibc bug 3957, reported by Andrew Mackey.  */
+|                 /* This should fail, but succeeds for glibc-2.5.  */
+|             /* This should succeed, but does not for glibc-2.1.3.  */
+|                 /* This should match, but does not for glibc-2.2.1.  */
+|                 /* glibc-2.2.93 does not work with a negative RANGE argument.  */
+|             /* REG_STARTEND was added to glibc on 2004-01-15.
+|                an assertion failure prior to glibc-2.28:
+|                With glibc-2.28, compilation fails and reports the invalid
+|             /* glibc bug 11053.  */
+|                narrow (including glibc on hosts with 64-bit ptrdiff_t and
+|                32-bit int), but we should wait until glibc implements this
+configure:49676: checking for rpmatch
+ld.lld: error: undefined symbol: rpmatch
+| /* Define rpmatch to an innocuous variant, in case <limits.h> declares rpmatch.
+| #define rpmatch innocuous_rpmatch
+|    which can conflict with char rpmatch (void); below.  */
+| #undef rpmatch
+| char rpmatch (void);
+| #if defined __stub_rpmatch || defined __stub___rpmatch
+| return rpmatch ();
+configure:53771: checking for timezone_t
+conftest.c:542:13: error: use of undeclared identifier 'timezone_t'; did you mean 'timezone'?
+  542 | if (sizeof (timezone_t))
+| if (sizeof (timezone_t))
+|            # define __NO_MATH_INLINES 1 /* for glibc */
+configure:59555: checking for getppriv
+ld.lld: error: undefined symbol: getppriv
+| /* Define getppriv to an innocuous variant, in case <limits.h> declares getppriv.
+| #define getppriv innocuous_getppriv
+|    which can conflict with char getppriv (void); below.  */
+| #undef getppriv
+| char getppriv (void);
+| #if defined __stub_getppriv || defined __stub___getppriv
+| return getppriv ();
+configure:60883: checking for struct random_data
+conftest.c:607:5: error: invalid application of 'sizeof' to an incomplete type 'struct random_data'
+  607 | if (sizeof (struct random_data))
+conftest.c:607:20: note: forward declaration of 'struct random_data'
+  607 | if (sizeof (struct random_data))
+| if (sizeof (struct random_data))
+configure:60906: checking for random_r
+ld.lld: error: undefined symbol: random_r
+| /* Define random_r to an innocuous variant, in case <limits.h> declares random_r.
+| #define random_r innocuous_random_r
+|    which can conflict with char random_r (void); below.  */
+| #undef random_r
+| char random_r (void);
+| #if defined __stub_random_r || defined __stub___random_r
+| return random_r ();
+configure:61060: checking for __secure_getenv
+ld.lld: error: undefined symbol: __secure_getenv
+| /* Define __secure_getenv to an innocuous variant, in case <limits.h> declares __secure_getenv.
+| #define __secure_getenv innocuous___secure_getenv
+|    which can conflict with char __secure_getenv (void); below.  */
+| #undef __secure_getenv
+| char __secure_getenv (void);
+| #if defined __stub___secure_getenv || defined __stub_____secure_getenv
+| return __secure_getenv ();
+configure:64577: checking for sys/mnttab.h
+conftest.c:658:10: fatal error: 'sys/mnttab.h' file not found
+  658 | #include <sys/mnttab.h>
+| #include <sys/mnttab.h>
+configure:64583: checking for sys/mntio.h
+conftest.c:658:10: fatal error: 'sys/mntio.h' file not found
+  658 | #include <sys/mntio.h>
+| #include <sys/mntio.h>
+configure:67673: checking for CFPreferencesCopyAppValue
+configure:67711: checking for CFLocaleCopyPreferredLanguages
+ac_cv_func___secure_getenv='no'
+ac_cv_func_getexecname='no'
+ac_cv_func_getppriv='no'
+ac_cv_func_qsort_r='no'
+ac_cv_func_random_r='no'
+ac_cv_func_rawmemchr='no'
+ac_cv_func_rpmatch='no'
+ac_cv_func_secure_getenv='no'
+ac_cv_have_decl_program_invocation_name='no'
+ac_cv_have_decl_program_invocation_short_name='no'
+ac_cv_header_priv_h='no'
+ac_cv_type_timezone_t='no'
+gl_cv_func_qsort_r_signature='none'
+gl_cv_func_qsort_r_works='no'
+gt_cv_func_CFLocaleCopyPreferredLanguages='no'
+gt_cv_func_CFPreferencesCopyAppValue='no'
+
+Build products:
+
+Version probes:

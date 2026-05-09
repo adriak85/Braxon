@@ -1,0 +1,1688 @@
+=== Braxon need-it-all inventory ===
+Fri May  8 15:52:40 CDT 2026
+cwd=/data/data/com.termux/files/home/Braxon
+
+=== root identity / launch ===
+
+### README
+path=README.md
+-rw-------. 1 u0_a470 u0_a470 2533 May  5 03:46 README.md
+README.md: ASCII text
+cb6877cd29ba578fa65aa24ebe1a69f23be4b36e40ba57894cb65051b893d26c  README.md
+# Braxon
+
+Braxon is the root command center for the NSQ-aligned workspace in this repository. The root package provides the primary `Braxon` launch path, while the workspace members cover canonical NSQ semantics, runtime incorporation, court routing, inspection, indexing, preservation, and benchmark surfaces.
+
+## Workspace Role
+- root command entrance for Braxon operators
+- orchestration over `Braxon-core` and the NSQ runtime surfaces
+- verification and audit entrypoint for the current production-state bundle
+
+## Launch
+- `cargo run` enters the root NSQ operator gate by default
+- `cargo run -- console` opens the same root gate explicitly
+- `cargo run -- sovereign-reset` runs the pre-wipe sovereign lifecycle audit and reports whether the sanctuary is actually safe to wipe around
+- `cargo run -- runtime android-oaboot` reports the Android-first model boot path and whether the root runtime is actually ready to boot there
+- `cargo run -- runtime nu128-install` reports the chunk-governed install posture for a nu128-managed model so the system does not assume all weights can live locally at once
+- when the runtime is hot/live, the gate opens the live NSQ operator window
+- when the runtime is not hot/live, the gate prints the exact remaining finish steps instead of attaching a thin placeholder session
+- user-facing runtime/session surfaces are normalized at the root CLI boundary so legacy lane names do not leak into normal operator flow
+- inside the live window, `/help` shows operator commands and any other line continues the active Braxon discussion session
+
+## Core Expectations
+- NSQ remains canonical base 8 with alternating full binary anchors and multipositional levers
+- host integer widths are boundary carriers only, never semantic truth
+- court surfaces stay native and explicit rather than being pushed into detached plugin wrappers
+- Android and Termux runs should stay within the root audit cap of `-j2` for whole-workspace Rust work unless a narrower, explicitly approved lane is being exercised
+- target lineage is `llama_4.2_604b_fp32_abliterated_800gb`; the current source-ingest lane is still a separate donor lane until the target is downloaded and translated into NSQ form
+- NSQ target compression for that lane is `2.2 GB` at rest and `1.02 GB` hot in memory, with the hot residency surface declared as `bus`
+- donor tokenizer/source-ingest assets may contain literal strings such as `llama`, but the active Braxon runtime lane does not use `llama.cpp`, `ggml`, or `gguf` as runtime authority
+
+### workspace Cargo.toml
+path=Cargo.toml
+-rw-------. 1 u0_a470 u0_a470 1362 May  7 18:59 Cargo.toml
+Cargo.toml: ASCII text
+41acec1298ab729608eae798e125b154bfb1afd7b29823e0a233eb301d6eb2ba  Cargo.toml
+[package]
+publish = false
+name = "Braxon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Root Braxon command center and seating verification entrance."
+
+[[bin]]
+name = "Braxon"
+path = "src/main.rs"
+
+[workspace]
+resolver = "2"
+members = [
+    ".",
+    "crates/braxon-cli",
+    "crates/braxon-core",
+    "crates/braxon-court",
+    "crates/braxon-ingest",
+    "crates/braxon-kingdom-generate",
+    "crates/braxon-showdown",
+    "crates/nsq-archon",
+    "crates/nsq-calibrate",
+    "crates/nsq-cli",
+    "crates/nsq-compose",
+    "crates/nsq-compress",
+    "crates/nsq-core",
+    "crates/wowas-final-edition-v10",
+    "crates/nsqasm-stamp-db",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "LicenseRef-Private"
+authors = ["Braxon Project"]
+rust-version = "1.78"
+
+[workspace.dependencies]
+nsq-core = { path = "crates/nsq-core" }
+blake3 = "1.8.5"
+cargo_metadata = "0.19.2"
+clap = { version = "4.6.1", features = ["derive"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+sha2 = "0.10.9"
+
+[dependencies]
+BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }
+clap.workspace = true
+nsq-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+### root command surface
+path=src/main.rs
+-rw-------. 1 u0_a470 u0_a470 44726 May  7 14:44 src/main.rs
+src/main.rs: C source, Unicode text, UTF-8 text
+52d9cea93daad9722919b762440a026aaee5151fc004a0e41e1a65b2f0957578  src/main.rs
+use clap::{Parser, Subcommand};
+use nsq_core::{
+    lever_max_zero_failure_scan, lever_spacing_sweet_spot_report, lever_sweet_spot_report,
+    CANONICAL_LEVER_MAX_POSITION, TOTAL_STATES_PER_LEVER, ZERO_INCLUSIVE_BIT_UNIT_STATES,
+};
+use sha2::{Digest, Sha256};
+use BRAXON_core::{
+    braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, CouncilTen,
+    STAMP_WAKE_COUNCIL_TEN,
+};
+
+#[derive(Parser)]
+#[command(name = "Braxon")]
+struct Cli {
+    #[command(subcommand)]
+    command: Option<Command>,
+}
+
+#[derive(Subcommand)]
+enum Command {
+    Apps {
+        #[command(subcommand)]
+        command: AppsCommand,
+    },
+    Console {
+        #[arg(long)]
+        seated_mode: bool,
+    },
+    SeatingVerify {
+        #[arg(long, default_value_t = 0.001)]
+        tolerance: f32,
+    },
+    MaxStableScan {
+        #[arg(long, default_value_t = 0.001)]
+        tolerance: f32,
+    },
+    LeverSweetSpot {
+        #[arg(long, default_value_t = 0.001)]
+        tolerance: f32,
+    },
+    Runtime {
+        #[command(subcommand)]
+        command: RuntimeCommand,
+    },
+    Handover {
+        #[command(subcommand)]
+        command: HandoverCommand,
+    },
+    Rescue,
+    Status,
+    ContextStatus,
+    ContextWake,
+    Wake,
+}
+
+#[derive(Subcommand)]
+enum AppsCommand {
+    List,
+    Show { app: String },
+    Verify,
+}
+
+#[derive(Subcommand)]
+enum RuntimeCommand {
+    Registry,
+    Python3 { call: String },
+    Infer { model: String, prompt: String },
+}
+
+#[derive(Subcommand)]
+enum HandoverCommand {
+    OsPowerRelease,
+}
+
+#[derive(Debug, Clone, Copy)]
+struct RootAppSurface {
+    app: &'static str,
+    package: &'static str,
+    bin_name: &'static str,
+    root_launchable: bool,
+    surface: &'static str,
+}
+
+const ROOT_APP_SURFACES: &[RootAppSurface] = &[
+    RootAppSurface {
+        app: "Braxon",
+        package: "Braxon-universal",
+        bin_name: "Braxon",
+        root_launchable: true,
+        surface: "root_entrance_orchestrator",
+    },
+    RootAppSurface {
+        app: "nsq-cli",
+        package: "nsq-cli",
+        bin_name: "nsq-cli",
+        root_launchable: true,
+        surface: "platform_entrance",
+    },
+    RootAppSurface {
+        app: "Braxon-cli",
+        package: "Braxon-cli",
+        bin_name: "Braxon-cli",
+        root_launchable: true,
+        surface: "platform_entrance",
+    },
+    RootAppSurface {
+        app: "Braxon-court",
+        package: "Braxon-court",
+        bin_name: "Braxon-court",
+        root_launchable: true,
+        surface: "court_config_projection",
+    },
+];
+
+fn main() {
+    if std::env::args().any(|a| a == "console") {
+        braxon_console_repl();
+        return;
+    }
+
+
+### architecture
+path=ARCHITECTURE.md
+-rw-------. 1 u0_a470 u0_a470 6027 May  7 17:38 ARCHITECTURE.md
+ARCHITECTURE.md: Unicode text, UTF-8 text
+97e2e3ebb6019c8f6c971981df67f36b73d68daa9fa34e5261cf112f9b9ab689  ARCHITECTURE.md
+# Braxon NSQ Court — Architecture Law
+
+## The substrate
+
+NSQ is the substrate. The court is the runtime. Everything else serves
+those two things or it does not belong in this workspace.
+
+Braxon is not an app. Braxon is not a feature of Android. Android is the
+carrier. Braxon is the sovereign OS running on top of it. The NSQ court is
+the authority. Termux is how the court reaches the carrier. Nothing about
+that makes Braxon subordinate to Android.
+
+---
+
+## The inner language
+
+The intent gradient IS the language of the inner system.
+
+Eight semantic variables. Four scale anchors. Final-tier lever positions.
+That is the complete communication protocol for everything that happens
+inside the court.
+
+```
+Motive   — destructive / exploitative / indifferent / protective / reparative / creative
+Agency   — coercive / manipulative / passive / cooperative / consentful / empowering
+Truth    — concealment / distortion / uncertainty / disclosure / clarity / proof
+Force    — whisper / nudge / guide / push / command / overwhelming_force
+Scope    — self / object / pair / group / system / world / universal_field
+Time     — archive / memory / delay / readiness / immediate / future_forging
+Relation — isolated / guarded / transactional / bonded / loyal / sacrificial
+Form     — thought / word / signal / image / movement / code / world_action
+```
+
+This covers every possible semantic intent. There is no concept in human
+language that falls outside this gradient. It was built to be complete.
+Use it as complete.
+
+---
+
+## The translation law
+
+```
+human text
+    ↓
+[surface_ingress — the ONLY place human language enters]
+    ↓
+IntentPressure (eight variable positions, scale anchor, court surface)
+    ↓
+[court routing — NSQ Court substrate dispatch, pole-to-pole pressure]
+    ↓
+IntentPressure (synthesized council response)
+    ↓
+[surface_egress — the ONLY place human language leaves]
+    ↓
+human text
+```
+
+There is no other path. Tokenization is a boundary projection tool only.
+It does not exist inside the court. It does not route between council poles.
+Nothing inside the dispatch loop speaks tokens or strings.
+
+---
+
+## The ten poles
+
+### Brain poles — Council of Six
+
+| Pole | Model | Parameters | Brain region |
+|------|-------|-----------|--------------|
+| MaverickLogic | maverick-0324-abliterated | ~232B | Prefrontal cortex |
+| QwenCreativity | qwen3-235b-a22b-abliterated | ~235B | Default mode network |
+| DevstralArbiter | devstral-small-2505-abliterated | ~123B | Anterior cingulate cortex |
+| DeepSeekAnalyzer | deepseek-r1-0528-abliterated | ~604B | Insular salience network |
+| GemmaLimbic | gemma-3-27b-abliterated | ~70B+ | Limbic system |
+| LlamaContinuity | llama-3.3-70b-abliterated | ~70B | Hippocampal formation |
+
+**Total floor: 1,334B (>1 trillion parameters)**
+
+All must be huihui-abliterated open-weights or foreign-origin unrestricted equivalent.
+Minimum acceptable: ~70B. Build as large as possible.
+A model that passes restricted output filters is not unrestricted.
+
+### Sensory generation bodies — four
+
+| Body | Codec | Role |
+|------|-------|------|
+| ImageCortex | wan2.1-image | Visual generation |
+| VideoCortex | wan2.1-video | Motion and scene generation |
+| VoiceBody | IndexTTS2 (7-channel emotional) | Acoustic output via NSQ-resolved channels |
+| WorldBody3D | hunyuan3d-2.0 | Spatial and environment generation |
+
+---
+
+## Seating law
+
+Models are SEATED into poles by the court.
+Models do not attach features to a runtime.
+Models do not register capability flags.
+
+If a model cannot be seated (wrong parameter scale, restricted weights,
+failed pipeline stage), the seat is VACANT. The court reports it as vacant.
+There is no degraded mode. There is no partial boot.
+
+`CourtBootClearance::nsq_court_launch_ready` is the boot gate.
+It was `final_dax_os_boot_launch_ready`. That name is retired.
+The court does not reference Braxon's prior name anywhere.
+
+---
+
+## What belongs in this workspace
+
+**Core substrate:**
+- `nsq-core` — the NSQ law, lever math, intent gradient, court types
+- `nsq-court` — 25-role operational authority
+- `nsq-runtime` — native platform backbone and boot authority
+- NSQ Court — single runtime/substrate authority for intent-gradient dispatch; no separate runtime layer above court
+
+**Braxon surface:**
+- `braxon-core` — identity, model registry, WoWaS integration
+- `braxon-court` — Braxon-facing court surface
+
+### global tag
+path=BRAXON_GLOBAL_TAG.json
+-rw-------. 1 u0_a470 u0_a470 1942 May  5 03:46 BRAXON_GLOBAL_TAG.json
+BRAXON_GLOBAL_TAG.json: JSON text data
+aea6cdeffed8c36c584b3204979c73bd8da92b27209aa8e888a56c14c13e8f9b  BRAXON_GLOBAL_TAG.json
+{
+  "schema": "Braxon.global_tag.v1",
+  "identity": "Braxon",
+  "tag": "BRAXON_GLOBAL_NSQ_CHARACTER_STAMP_SCORE_V1",
+  "canonical_semantics": "base8_switch_topology",
+  "nu_count_carrier": "Nu16",
+  "forbidden_flattening": ["u8", "u16", "u32", "u64", "byte_native_truth", "bit_passthrough"],
+  "nsq_bit_unit": {
+    "zero_inclusive_lever_states": 2254,
+    "levers_per_bit_unit": 4,
+    "states_per_bit_unit": 25811642826256
+  },
+  "honest_score": {
+    "base_measure": "produced_characters",
+    "boundary_byte_role": "comparison_only",
+    "minimum_symbols_per_boundary_byte": 3,
+    "dense_symbols_per_boundary_byte": 12,
+    "framework_stamp_payloads_allowed": true,
+    "stamp_vs_noise_rule": "sound_confirmed_corrected_zero_miss_units_count_as_stamp_information; failed_or_missed_units_count_as_noise_and_are_rejected",
+    "selection_basis": "resolved_nsq_information_processed",
+    "selection_rule": "minimal spacing that preserves zero failed or missed through the largest resolved NSQ information processed",
+    "measurement_methods": [
+      "applied_hertz",
+      "return_to_off",
+      "return_to_on",
+      "float_aware_return_average",
+      "sound_resonance",
+      "near_anchor_similarity_diagnostic",
+      "corrected_hertz"
+    ],
+    "byte_measurement_scope": "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8"
+  },
+  "current_global_sweet_spot": {
+    "spacing_units": 2,
+    "information_processed": 1126,
+    "selected_stable_upper_position": 1126,
+    "selected_hertz_spacing": 0.001777778,
+    "zero_failed_or_missed": true,
+    "boundary_bytes_equivalent": 6271,
+    "produced_characters_floor": 18813,
+    "produced_characters_dense": 75252,
+    "stamp_information_accepted": 1126,
+    "framework_stamp_payloads_accepted": 1126,
+    "noise_information_rejected": 0,
+    "selected_nsq_states_per_bit_unit": 25811642826256,
+    "selected_nsq_state_log10": 15101.704418342235
+  }
+}
+
+=== NSQ law / ASM / model contract ===
+
+### NSQ ASM operating law
+path=docs/nsq/NSQ_ASM_OPERATING_LAW.md
+-rw-------. 1 u0_a470 u0_a470 2566 May  5 03:46 docs/nsq/NSQ_ASM_OPERATING_LAW.md
+docs/nsq/NSQ_ASM_OPERATING_LAW.md: ASCII text
+e4b8f3a050c271e339f20a5272dbc0431402915fdee10a64fcd99cf80ef76bd5  docs/nsq/NSQ_ASM_OPERATING_LAW.md
+# NSQ ASM Operating Law
+
+## Core Rule
+
+ASM is now the operating law for NSQ execution, recode, and optimization.
+
+This does not mean NSQ becomes ASM.
+
+This does not mean NSQ becomes binary.
+
+The correct authority chain is:
+
+    NSQ canonical source truth
+      -> ASM operating / recode / optimization form
+      -> Braxon binary translation output when Braxon is ready to emit it
+
+## What ASM Does
+
+ASM is the operating surface that lets NSQ place, optimize, and execute incoming translated material with enough exactness for Braxon to use later.
+
+ASM should be used for:
+
+- recoding incoming source surfaces
+- optimizing NSQ-operable instructions
+- creating a machine-near operating form
+- preserving source lineage and metadata impact
+- preparing Braxon to emit binary translations
+
+## What ASM Does Not Do
+
+ASM does not become the identity of NSQ.
+
+ASM does not outrank NSQ.
+
+ASM does not turn NSQ into a wrapper, byte language, overlay, or binary frontend.
+
+ASM does not override the personal moral invariant.
+
+## What Binary Does
+
+Binary is a downstream Braxon translation product.
+
+Braxon may switch ASM operating forms into binary translations after NSQ authority and ASM operating validation are satisfied.
+
+Binary output must preserve lineage back to:
+
+1. original source
+2. NSQ authority law
+3. ASM operating form
+4. validation proof
+5. moral invariant preservation check
+
+Binary is not the source truth.
+
+## Repository Honesty Rule
+
+The repository must not pretend Braxon is live, finished, or complete merely because metadata, ASM carriers, or translation rules exist.
+
+The correct status is:
+
+    Braxon is being made runnable.
+    NSQ authority is being clarified.
+    ASM operating law is being installed.
+    Binary translation is the downstream target.
+
+## Moral-Invariant Boundary
+
+The personal moral invariant is not a goal file.
+
+Goals can be reviewed, prioritized, aligned, and rewritten.
+
+The moral invariant does not change toward harm.
+
+No code file, metadata file, ASM recode, generated report, binary translation, future tool, or downstream file may reinterpret the moral invariant into a contrary value.
+
+All translations must preserve the moral invariant's value.
+
+## Six-Step Operating Soul
+
+1. Read everything available.
+2. Check surroundings and context.
+3. Identify all aspects of all perceivable. Do this until you are sure you know everything you can about everyone and everything around the action.
+4. Understand action from every viewpoint, including your own.
+5. Make the best decision.
+6. Act with the very best of your being.
+
+### NSQ model installation contract
+path=docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md
+-rw-------. 1 u0_a470 u0_a470 2386 May  5 03:46 docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md
+docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md: ASCII text
+4b2e6dfa04a172b474233a08c091512caba3d9de0d355532b053e4d906f1d300  docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md
+# NSQ Model Installation Contract
+
+## Canon rule
+
+Braxon model installation is local, offline-first, manifest-bound, and verification-bound.
+
+A model is not installed because a pointer or donor name exists.
+
+A model is installable when the local registry, binding file, source target map, reconstruction manifest, and stamp bundle are present.
+
+A model is installed when required files exist and pass exact byte count plus full-file cryptographic hashes.
+
+A model is hot-live only when the runtime can actually route through it.
+
+## Required model states
+
+catalog_only:
+The model has pointer metadata but no local proof of usable bytes.
+
+manifest_bound:
+The model has a local manifest and binding state.
+
+source_targets_present:
+Small source/config/tokenizer targets exist locally.
+
+reconstruction_ready:
+The system has enough local data, stamps, deltas, exceptions, or deterministic generation rules to reconstruct the artifact.
+
+hash_verified:
+The reconstructed artifact matches exact byte count plus full SHA-256 plus full BLAKE3 when available.
+
+nsq_semantic_verified:
+The artifact also parses and validates through NSQ semantic digest rules.
+
+hot_live:
+The runtime can route local inference or local semantic execution through the model lane.
+
+## Hash rule
+
+Exact byte count plus full SHA-256 plus full BLAKE3 can prove byte identity after bytes exist.
+
+One-out-of-six-hundred-ninety-nine sampling is not full identity proof by itself.
+
+One-out-of-six-hundred-ninety-nine sampling is allowed as:
+
+- route witness
+- drift detector
+- sparse precheck
+- reconstruction guidance
+- pressure test
+
+It becomes reconstructive only when paired with deterministic generation, complete source map, erasure/parity data, or a full manifest of recoverable pieces.
+
+## Model install target
+
+The current Braxon target is a local NSQ/stamp-bound model lane.
+
+Expected local control files include:
+
+- models/braxon/manifest.json
+- state/braxon/offline_model_registry.json
+- state/braxon/braxon_binding.json
+- state/braxon/braxon_nsq_pipeline.status
+- assets/braxon_core/source_ingest/braxon_transport
+- assets/braxon_core/weights/nsq
+- state/nsq/model_reconstruction_manifest.json
+
+The runtime should report the difference between:
+
+- model metadata exists
+- source targets exist
+- compressed NSQ artifact exists
+- manifest claims hash identity
+- hash identity actually verifies
+- runtime can use it
+
+### ASM lowering law
+path=docs/nsq/NSQ_ASM_OPERATING_LAW.md
+-rw-------. 1 u0_a470 u0_a470 2566 May  5 03:46 docs/nsq/NSQ_ASM_OPERATING_LAW.md
+docs/nsq/NSQ_ASM_OPERATING_LAW.md: ASCII text
+e4b8f3a050c271e339f20a5272dbc0431402915fdee10a64fcd99cf80ef76bd5  docs/nsq/NSQ_ASM_OPERATING_LAW.md
+# NSQ ASM Operating Law
+
+## Core Rule
+
+ASM is now the operating law for NSQ execution, recode, and optimization.
+
+This does not mean NSQ becomes ASM.
+
+This does not mean NSQ becomes binary.
+
+The correct authority chain is:
+
+    NSQ canonical source truth
+      -> ASM operating / recode / optimization form
+      -> Braxon binary translation output when Braxon is ready to emit it
+
+## What ASM Does
+
+ASM is the operating surface that lets NSQ place, optimize, and execute incoming translated material with enough exactness for Braxon to use later.
+
+ASM should be used for:
+
+- recoding incoming source surfaces
+- optimizing NSQ-operable instructions
+- creating a machine-near operating form
+- preserving source lineage and metadata impact
+- preparing Braxon to emit binary translations
+
+## What ASM Does Not Do
+
+ASM does not become the identity of NSQ.
+
+ASM does not outrank NSQ.
+
+ASM does not turn NSQ into a wrapper, byte language, overlay, or binary frontend.
+
+ASM does not override the personal moral invariant.
+
+## What Binary Does
+
+Binary is a downstream Braxon translation product.
+
+Braxon may switch ASM operating forms into binary translations after NSQ authority and ASM operating validation are satisfied.
+
+Binary output must preserve lineage back to:
+
+1. original source
+2. NSQ authority law
+3. ASM operating form
+4. validation proof
+5. moral invariant preservation check
+
+Binary is not the source truth.
+
+## Repository Honesty Rule
+
+The repository must not pretend Braxon is live, finished, or complete merely because metadata, ASM carriers, or translation rules exist.
+
+The correct status is:
+
+    Braxon is being made runnable.
+    NSQ authority is being clarified.
+    ASM operating law is being installed.
+    Binary translation is the downstream target.
+
+## Moral-Invariant Boundary
+
+The personal moral invariant is not a goal file.
+
+Goals can be reviewed, prioritized, aligned, and rewritten.
+
+The moral invariant does not change toward harm.
+
+No code file, metadata file, ASM recode, generated report, binary translation, future tool, or downstream file may reinterpret the moral invariant into a contrary value.
+
+All translations must preserve the moral invariant's value.
+
+## Six-Step Operating Soul
+
+1. Read everything available.
+2. Check surroundings and context.
+3. Identify all aspects of all perceivable. Do this until you are sure you know everything you can about everyone and everything around the action.
+4. Understand action from every viewpoint, including your own.
+5. Make the best decision.
+6. Act with the very best of your being.
+
+### NSQ docs
+path=docs/nsq
+48K	docs/nsq
+docs/nsq/NSQ_ASM_OPERATING_LAW.md
+docs/nsq/NSQ_ASM_STAMP_SYSTEM.md
+docs/nsq/NSQ_BLAKE_NULL_DIGEST.md
+docs/nsq/NSQ_CANONICAL_IDENTITY.md
+docs/nsq/NSQ_FULL_LANGUAGE_STACK.md
+docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md
+docs/nsq/NSQ_PRIME_PATH_MULTIPLICATION.md
+docs/nsq/NSQ_RUNTIME_LANGUAGE_SURFACES.md
+docs/nsq/README.md
+
+=== model reconstruction / hot-live proof files ===
+
+### model manifest
+path=models/braxon/manifest.json
+-rw-------. 1 u0_a470 u0_a470 3749 May  5 03:46 models/braxon/manifest.json
+models/braxon/manifest.json: JSON text data
+5df00f77da588864ee4ca0ede24d3f0ff39dfcb875a128c9d4d9d386921dac03  models/braxon/manifest.json
+{
+  "agentic_capability": "full_agentic_conversation",
+  "asset_state": "stamp_bound_manifest",
+  "authority_lane": "offline_model_native_runtime_lane",
+  "canonical_semantics": "base8_switch_topology",
+  "capability_lattice_stamp": "nsq.runtime.native.Braxon.capability.lattice.v1",
+  "core_binding_path": "state/braxon/braxon_binding.json",
+  "cxx_runtime_authority": false,
+  "BRAXON_core_identity": "BRAXON_core_primary_model",
+  "BRAXON_feature_attachment_stamp": "nsq.runtime.native.Braxon.feature.attach.v1",
+  "BRAXON_feature_attachments": [
+    "status",
+    "agent",
+    "runtime_models",
+    "runtime_infer"
+  ],
+  "delta_extension_activation_mode": "semantic_score_alignment",
+  "delta_extension_mode": "sealed_reference_structure",
+  "env_parameter_copy_mode": "lazy_load",
+  "external_tool_host": "none",
+  "grid_26d_activation_mode": "semantic_score_alignment",
+  "grid_26d_mode": "sealed_reference_structure",
+  "id": "Braxon",
+  "label": "BRAXON",
+  "launch_form": "hot_whole_core",
+  "legacy_capabilities": [
+    "conversation_continuity",
+    "planning_memory_lane",
+    "court_tool_routing",
+    "task_queue_carry",
+    "session_persistence",
+    "authoring_bias_bridge",
+    "operator_shell_ingress",
+    "memory_guard_window"
+  ],
+  "legacy_capabilities_status": "capability_lattice_bound",
+  "legacy_capability_profile": "BRAXON_native_capability_lattice",
+  "live_delta_loading": false,
+  "live_grid_loading": false,
+  "nsq_artifact_state": "manifest_bundle_only",
+  "nsq_envelope_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
+  "nsq_envelope_status": "updated",
+  "nsq_recode_status": "manifest_bundle_only",
+  "nsq_rewrite_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
+  "nsq_rewrite_extension": "nsqb",
+  "nsq_rewrite_mode": "structure_preserving_base8_transform",
+  "nsq_rewrite_status": "manifest_bundle_only",
+  "offline_only": true,
+  "overhead_compensation_stamp": "nsq.runtime.native.overhead.compensation.v1",
+  "parameter_binding_state": "direct_source_materialization_required",
+  "parameter_projection_mode": "single_bit_factor_shim",
+  "provider_family": "Braxon",
+  "representation_mode": "stamp_bound_manifest",
+  "runtime_authority": "rust_native_offline_model_lane",
+  "runtime_authority_bound": false,
+  "runtime_authority_lane": "none_bound",
+  "runtime_authority_state": "unbound",
+  "runtime_load_policy": "whole_core_only",
+  "runtime_mass_profile": "manifest_and_stamps_only",
+  "session_mode": "persistent_agentic_conversation",
+  "session_surface": "zlm_native_runtime_surface",
+  "source_authority_lane": "assets/braxon_core/source_ingest/braxon_transport",
+  "source_authority_state": "direct_source_materialization_required",
+  "source_ingest_status": "direct_source_materialization_required",
+  "source_weights_directory": "assets/braxon_core/source_ingest/braxon_transport",
+  "stamp_bundle": [
+    "nsq.runtime.native.model.bundle.Braxon.v1",
+    "nsq.runtime.native.model.parameter.whole.v1",
+    "nsq.runtime.native.overhead.compensation.v1",
+    "nsq.runtime.native.tokenizer.bridge.v2",
+    "nsq.runtime.native.Braxon.feature.attach.v1"
+  ],
+  "status_state_path": "state/braxon/braxon_nsq_pipeline.status",
+  "supermodel_extension_activation_mode": "semantic_score_alignment",
+  "supermodel_extension_mode": "sealed_reference_structure",
+  "tokenizer_binding_state": "runtime_selected_donor_rooted_unified_overlay",
+  "tokenizer_bridge_stamp": "nsq.runtime.native.tokenizer.bridge.v2",
+  "weights_directory": "assets/braxon_core/weights/nsq",
+  "whole_core_runtime_status": "manifest_verified_not_hot_live",
+  "whole_parameter_stamp": "nsq.runtime.native.model.parameter.whole.v1",
+  "zlm_binding_mode": "whole_core_session_surface"
+}
+
+### offline model registry
+path=state/braxon/offline_model_registry.json
+-rw-------. 1 u0_a470 u0_a470 4221 May  5 03:46 state/braxon/offline_model_registry.json
+state/braxon/offline_model_registry.json: JSON text data
+28d41f1a056c47003ef1fb7859123471ee544af653555c382f53c8e293c5dd1b  state/braxon/offline_model_registry.json
+{
+  "lane_surface": "offline_model_native_runtime_lane",
+  "runtime_authority": "rust_native_offline_model_lane",
+  "canonical_semantics": "base8_switch_topology",
+  "assets": [
+    {
+      "id": "Braxon",
+      "label": "BRAXON",
+      "provider_family": "Braxon",
+      "manifest_path": "models/braxon/manifest.json",
+      "weights_directory": "assets/braxon_core/weights/nsq",
+      "source_weights_directory": "assets/braxon_core/source_ingest/braxon_transport",
+      "nsq_envelope_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
+      "status_state_path": "state/braxon/braxon_nsq_pipeline.status",
+      "source_ingest_status": "direct_source_materialization_required",
+      "source_authority_lane": "assets/braxon_core/source_ingest/braxon_transport",
+      "source_authority_state": "direct_source_materialization_required",
+      "nsq_envelope_status": "updated",
+      "nsq_rewrite_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
+      "nsq_rewrite_extension": "nsqb",
+      "nsq_rewrite_mode": "structure_preserving_base8_transform",
+      "nsq_rewrite_status": "manifest_bundle_only",
+      "runtime_load_policy": "whole_core_only",
+      "launch_form": "hot_whole_core",
+      "zlm_binding_mode": "whole_core_session_surface",
+      "grid_26d_mode": "sealed_reference_structure",
+      "grid_26d_activation_mode": "semantic_score_alignment",
+      "supermodel_extension_mode": "sealed_reference_structure",
+      "supermodel_extension_activation_mode": "semantic_score_alignment",
+      "delta_extension_mode": "sealed_reference_structure",
+      "delta_extension_activation_mode": "semantic_score_alignment",
+      "whole_core_runtime_status": "manifest_verified_not_hot_live",
+      "nsq_artifact_state": "manifest_bundle_only",
+      "runtime_authority_lane": "none_bound",
+      "runtime_authority_state": "unbound",
+      "runtime_authority_bound": false,
+      "live_grid_loading": false,
+      "live_delta_loading": false,
+      "authority_lane": "offline_model_native_runtime_lane",
+      "runtime_authority": "rust_native_offline_model_lane",
+      "offline_only": true,
+      "cxx_runtime_authority": false,
+      "external_tool_host": "none",
+      "status": "stamp_bound_manifest_registered_core",
+      "representation_mode": "stamp_bound_manifest",
+      "runtime_mass_profile": "manifest_and_stamps_only",
+      "tokenizer_bridge_stamp": "nsq.runtime.native.tokenizer.bridge.v2",
+      "overhead_compensation_stamp": "nsq.runtime.native.overhead.compensation.v1",
+      "BRAXON_feature_attachment_stamp": "nsq.runtime.native.Braxon.feature.attach.v1",
+      "whole_parameter_stamp": "nsq.runtime.native.model.parameter.whole.v1",
+      "parameter_projection_mode": "single_bit_factor_shim",
+      "env_parameter_copy_mode": "lazy_load",
+      "stamp_bundle": [
+        "nsq.runtime.native.model.bundle.Braxon.v1",
+        "nsq.runtime.native.model.parameter.whole.v1",
+        "nsq.runtime.native.overhead.compensation.v1",
+        "nsq.runtime.native.tokenizer.bridge.v2",
+        "nsq.runtime.native.Braxon.feature.attach.v1"
+      ],
+      "BRAXON_feature_attachments": [
+        "status",
+        "agent",
+        "runtime_models",
+        "runtime_infer"
+      ],
+      "session_surface": "zlm_native_runtime_surface",
+      "session_mode": "persistent_agentic_conversation",
+      "agentic_capability": "full_agentic_conversation",
+      "capability_lattice_stamp": "nsq.runtime.native.Braxon.capability.lattice.v1",
+      "legacy_capability_profile": "BRAXON_native_capability_lattice",
+      "legacy_capabilities": [
+        "conversation_continuity",
+        "planning_memory_lane",
+        "court_tool_routing",
+        "task_queue_carry",
+        "session_persistence",
+        "authoring_bias_bridge",
+        "operator_shell_ingress",
+        "memory_guard_window"
+      ],
+      "legacy_capabilities_status": "capability_lattice_bound",
+      "BRAXON_core_identity": "BRAXON_core_primary_model",
+      "core_binding_path": "state/braxon/braxon_binding.json",
+      "tokenizer_binding_state": "runtime_selected_donor_rooted_unified_overlay",
+      "parameter_binding_state": "direct_source_materialization_required"
+    }
+  ]
+}
+
+### Braxon binding
+path=state/braxon/braxon_binding.json
+-rw-------. 1 u0_a470 u0_a470 3868 May  5 03:46 state/braxon/braxon_binding.json
+state/braxon/braxon_binding.json: JSON text data
+466f64865efa09ab4bbe346c8b6e103f669ae08dc979d72c6620b99246c70576  state/braxon/braxon_binding.json
+{
+  "model_name": "BRAXON",
+  "core_identity": "BRAXON_core_primary_model",
+  "binding_state": "hot_live_verified",
+  "tokenizer": {
+    "binding_state": "runtime_selected_donor_rooted_unified_overlay",
+    "source_inventory": [
+      "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json",
+      "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json",
+      "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json",
+      "assets/braxon_core/bootstrap/braxon_slice/qwen_qwen3_8b_tokenizer_json.delta",
+      "assets/braxon_core/bootstrap/braxon_slice/qwen_qwen3_8b_tokenizer_config_json.delta"
+    ],
+    "bridge_stamp": "nsq.runtime.native.tokenizer.bridge.v2",
+    "binding_mode": "semantic_feed_bridge_not_runtime_unified"
+  },
+  "parameters": {
+    "binding_state": "direct_source_materialization_required",
+    "source_config": "assets/braxon_core/source_ingest/braxon_transport/config.json",
+    "generation_config": "assets/braxon_core/source_ingest/braxon_transport/generation_config.json",
+    "hidden_size": 5120,
+    "hidden_layers": 64,
+    "attention_heads": 64,
+    "key_value_heads": 8,
+    "max_positions": 262144,
+    "rope_theta": 5000000.0,
+    "vocab_size": 151936,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "lineage_source": "/data/data/com.termux/files/home/Braxon/assets/braxon_core/lineage/parameter_lineage_registry.json"
+  },
+  "runtime_packaging": {
+    "source_ingest_directory": "assets/braxon_core/source_ingest/braxon_transport",
+    "nsq_rewrite_directory": "assets/braxon_core/weights/nsq",
+    "nsq_rewrite_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
+    "nsq_envelope_artifact": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
+    "artifact_extension": "nsqb",
+    "runtime_load_policy": "whole_core_only",
+    "launch_form": "hot_whole_core",
+    "zlm_binding_mode": "whole_core_session_surface",
+    "grid_26d_mode": "sealed_reference_structure",
+    "grid_26d_activation_mode": "semantic_score_alignment",
+    "supermodel_extension_mode": "sealed_reference_structure",
+    "supermodel_extension_activation_mode": "semantic_score_alignment",
+    "delta_extension_mode": "sealed_reference_structure",
+    "delta_extension_activation_mode": "semantic_score_alignment",
+    "whole_parameter_stamp": "nsq.runtime.native.model.parameter.whole.v1",
+    "parameter_projection_mode": "single_bit_factor_shim",
+    "env_parameter_copy_mode": "lazy_load",
+    "live_grid_loading": false,
+    "live_delta_loading": false,
+    "status_state_path": "state/braxon/braxon_nsq_pipeline.status",
+    "source_ingest_status": "direct_source_materialization_required",
+    "source_authority_lane": "assets/braxon_core/source_ingest/braxon_transport",
+    "source_authority_state": "direct_source_materialization_required",
+    "nsq_envelope_status": "updated",
+    "nsq_recode_status": "manifest_bundle_only",
+    "whole_core_runtime_status": "manifest_verified_not_hot_live",
+    "nsq_artifact_state": "manifest_bundle_only",
+    "runtime_authority_lane": "none_bound",
+    "runtime_authority_state": "unbound",
+    "runtime_authority_bound": false,
+    "rewrite_status": "manifest_bundle_only"
+  },
+  "primary_job_order": [
+    "nsq_documentation_additive_layer",
+    "wowas_canon_completion",
+    "wowas_final_prose_novel_generation",
+    "wowas_game_build_supervision",
+    "game_weights_ingress",
+    "realworld_representative_universe"
+  ],
+  "context": {
+    "aligned_window": 262144,
+    "reserve_window": 4096,
+    "usable_window": 258048,
+    "session_turn_budget": 15
+  },
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126,
+    2,
+    1126
+  ],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance"
+}
+
+### NSQ pipeline status
+path=state/braxon/braxon_nsq_pipeline.status
+-rw-------. 1 u0_a470 u0_a470 1164 May  5 03:46 state/braxon/braxon_nsq_pipeline.status
+state/braxon/braxon_nsq_pipeline.status: ASCII text
+4ea7162d81283f1a9cd5c1d9aa081bc7a5c9d4813720277c9ddc356dd9f8fad8  state/braxon/braxon_nsq_pipeline.status
+source_ingest_status=direct_source_materialization_required
+source_authority_lane=assets/braxon_core/source_ingest/braxon_transport
+source_authority_state=direct_source_materialization_required
+nsq_artifact_state=manifest_bundle_only
+runtime_authority_lane=none_bound
+runtime_authority_state=unbound
+runtime_authority_bound=false
+nsq_envelope_status=updated
+nsq_recode_status=manifest_bundle_only
+whole_core_runtime_status=manifest_verified_not_hot_live
+artifact_verification_status=manifest_bundle_verified
+verification_state=manifest_only
+source_required_files=14
+source_present_files=14
+source_materialized_files=0
+source_pointer_stub_files=14
+source_text_stub_files=0
+source_total_bytes=135
+source_blake3_manifest=/data/data/com.termux/files/home/Braxon/assets/braxon_core/source_ingest/braxon_transport/BLAKE3SUMS
+source_blake3_recorded_files=14
+source_blake3_status=verified
+nsq_envelope_artifact=/data/data/com.termux/files/home/Braxon/assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta
+reserved_runtime_artifact=/data/data/com.termux/files/home/Braxon/assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb
+reserved_runtime_artifact_present=yes
+
+### model reconstruction manifest
+path=state/nsq/model_reconstruction_manifest.json
+-rw-------. 1 u0_a470 u0_a470 419 May  5 03:46 state/nsq/model_reconstruction_manifest.json
+state/nsq/model_reconstruction_manifest.json: JSON text data
+87762b368b419bf25937400962528741b500b6f9623ad658be5d7c53a6570e3b  state/nsq/model_reconstruction_manifest.json
+{
+  "canon": "Exact identity is full byte_count plus full sha256 plus full blake3 where available. Sparse one-of-699 sampling is a route/sanity prefilter, not a proof by itself.",
+  "files": [
+    {
+      "path": "assets/braxon_core/model_config/config.json",
+      "byte_count": null,
+      "sha256": null,
+      "blake3": null,
+      "source": "git/source target only",
+      "role": "small config target"
+    }
+  ]
+}
+### source ingest transport
+path=assets/braxon_core/source_ingest/braxon_transport
+12M	assets/braxon_core/source_ingest/braxon_transport
+assets/braxon_core/source_ingest/braxon_transport/BLAKE3SUMS
+assets/braxon_core/source_ingest/braxon_transport/README.md
+assets/braxon_core/source_ingest/braxon_transport/UPSTREAM_DONOR_README.md
+assets/braxon_core/source_ingest/braxon_transport/added_tokens.json
+assets/braxon_core/source_ingest/braxon_transport/chat_template.jinja
+assets/braxon_core/source_ingest/braxon_transport/chat_template.json
+assets/braxon_core/source_ingest/braxon_transport/config.json
+assets/braxon_core/source_ingest/braxon_transport/generation_config.json
+assets/braxon_core/source_ingest/braxon_transport/merges.txt
+assets/braxon_core/source_ingest/braxon_transport/preprocessor_config.json
+assets/braxon_core/source_ingest/braxon_transport/special_tokens_map.json
+assets/braxon_core/source_ingest/braxon_transport/tokenizer.json
+assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json
+assets/braxon_core/source_ingest/braxon_transport/video_preprocessor_config.json
+assets/braxon_core/source_ingest/braxon_transport/vocab.json
+assets/braxon_core/source_ingest/braxon_transport/.gitattributes
+
+### NSQ weights/artifact lane
+path=assets/braxon_core/weights/nsq
+20K	assets/braxon_core/weights/nsq
+assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta
+assets/braxon_core/weights/nsq/README.txt
+assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb
+
+=== state registry / toolchain proof ===
+
+### full Android language toolchain state
+path=state/full_android_language_toolchain
+5.2G	state/full_android_language_toolchain
+state/full_android_language_toolchain/runs
+state/full_android_language_toolchain/runs/20260507_194057
+state/full_android_language_toolchain/runs/20260507_200744
+state/full_android_language_toolchain/runs/builtin_sem_clockwait_20260507_203425
+state/full_android_language_toolchain/runs/builtin_sem_clockwait_overlay_20260507_204427
+state/full_android_language_toolchain/runs/20260507_204800
+state/full_android_language_toolchain/runs/symlink_promotion_20260507_211709
+state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057
+state/full_android_language_toolchain/runs/close_range_extension_20260507_212757
+state/full_android_language_toolchain/runs/unified_android_libc_contracts_20260507_214007
+state/full_android_language_toolchain/runs/unified_android_libc_contracts_20260507_220413
+state/full_android_language_toolchain/runs/android_libc_contract_overlay_v2_20260507_221656
+state/full_android_language_toolchain/runs/android_pwd_contract_overlay_20260507_222052
+state/full_android_language_toolchain/runs/android_pwd_contract_overlay_20260507_223237
+state/full_android_language_toolchain/runs/android_pwd_contract_overlay_20260507_223851
+state/full_android_language_toolchain/runs/pwd_contract_private_overlay_v2_20260507_230609
+state/full_android_language_toolchain/runs/dedup_android_libc_extensions_20260507_230854
+state/full_android_language_toolchain/runs/rebuild_libc_extensions_whitelist_20260507_231241
+state/full_android_language_toolchain/runs/rebuild_libc_extensions_whitelist_20260507_231341
+state/full_android_language_toolchain/runs/remote_debug_contracts_v1_20260507_233422
+state/full_android_language_toolchain/src
+state/full_android_language_toolchain/src/cpython
+state/full_android_language_toolchain/src/llvm-project
+state/full_android_language_toolchain/src/rust
+state/full_android_language_toolchain/build
+state/full_android_language_toolchain/install
+state/full_android_language_toolchain/install/python
+state/full_android_language_toolchain/install/sysroot
+state/full_android_language_toolchain/install/braxon_android_overlay
+state/full_android_language_toolchain/install/braxon_android_builtin_stage
+state/full_android_language_toolchain/install/braxon_android_active_links
+state/full_android_language_toolchain/install/braxon_private_bin
+state/full_android_language_toolchain/install/rustup-nightly3
+state/full_android_language_toolchain/install/rustup-mend
+state/full_android_language_toolchain/baked
+state/full_android_language_toolchain/baked/current
+state/full_android_language_toolchain/cache
+state/full_android_language_toolchain/cache/llvm_project.tar.gz
+state/full_android_language_toolchain/no_tmp_redirect
+state/full_android_language_toolchain/native
+state/full_android_language_toolchain/native/android_libc_extensions
+state/full_android_language_toolchain/USE_BRAXON_PRIVATE_CC.env
+state/full_android_language_toolchain/rerun_failed_tests_20260507_235038.log
+state/full_android_language_toolchain/rerun_failed_tests_after_platform_patch_20260507_235338.log
+state/full_android_language_toolchain/rerun_failed_tests_after_platform_linepatch_20260508_000043.log
+state/full_android_language_toolchain/rerun_failed_tests_after_indentfix_20260508_000301.log
+state/full_android_language_toolchain/rerun_re_sqlite_after_direct_posixshmem_20260508_001155.log
+state/full_android_language_toolchain/test_time_signal31_isolation_20260508_001204.log
+state/full_android_language_toolchain/rerun_re_sqlite_time_after_posixshmem_clockskip_20260508_001446.log
+state/full_android_language_toolchain/rerun_time_sqlite_after_skip_wrap_20260508_001718.log
+state/full_android_language_toolchain/test_re_sqlite3_after_real_posixshmem_20260508_002504.log
+state/full_android_language_toolchain/profile_catalog
+state/full_android_language_toolchain/profile_catalog/raw
+state/full_android_language_toolchain/rerun_profile_catalog_20260508_002745.log
+state/full_android_language_toolchain/skip_catalog
+state/full_android_language_toolchain/skip_catalog/latest_skips.raw.txt
+state/full_android_language_toolchain/skip_catalog/latest_skip_reasons.counts.txt
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503/probe.c
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503/compile.log
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503/run.log
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503/probe
+state/full_android_language_toolchain/posixmodule_retry_20260508_005743.log
+state/full_android_language_toolchain/posixmodule_retry_with_extra_force_20260508_005921.log
+state/full_android_language_toolchain/adoption
+state/full_android_language_toolchain/adoption/include
+state/full_android_language_toolchain/adoption/src
+state/full_android_language_toolchain/adoption/mpdecimal
+state/full_android_language_toolchain/adoption/build_decimal_native
+state/full_android_language_toolchain/posixmodule_adoption_retry_20260508_010150.log
+state/full_android_language_toolchain/full_make_adoption_20260508_011152.log
+state/full_android_language_toolchain/full_make_adoption_latest.log
+state/full_android_language_toolchain/rebuild_posixshmem_config_python_20260508_013618.log
+state/full_android_language_toolchain/rebuild_missing_posix_pieces_20260508_013816.log
+state/full_android_language_toolchain/full_android_adoption_contract_20260508_014327.log
+state/full_android_language_toolchain/full_android_adoption_contract_latest.log
+state/full_android_language_toolchain/full_android_adoption_contract_20260508_014524.log
+state/full_android_language_toolchain/resume_with_libbraxon_path_20260508_014655.log
+state/full_android_language_toolchain/relink_python_then_resume_20260508_014811.log
+state/full_android_language_toolchain/relink_python_then_resume_latest.log
+state/full_android_language_toolchain/final_android_adoption_build_20260508_015729.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/summary.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/startup_modules.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/verbose_stdout.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/verbose_stderr.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/suspect_import_lines.log
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007/env_suspects.log
+state/full_android_language_toolchain/fix_extension_link_20260508_020201.log
+state/full_android_language_toolchain/relink_freeze_20260508_020644.log
+state/full_android_language_toolchain/relink_freeze_latest.log
+state/full_android_language_toolchain/startup_os_trace_20260508_021608
+state/full_android_language_toolchain/startup_os_trace_20260508_021608/summary.log
+state/full_android_language_toolchain/startup_os_trace_20260508_021608/direct_check.log
+state/full_android_language_toolchain/startup_os_trace_20260508_021608/verbose_stdout.log
+state/full_android_language_toolchain/startup_os_trace_20260508_021608/verbose_stderr.log
+state/full_android_language_toolchain/startup_os_trace_20260508_021608/suspect_lines.log
+state/full_android_language_toolchain/fix_lazy_import_startup_contract_v2_20260508_022038.log
+state/full_android_language_toolchain/fix_lazy_import_startup_contract_v3_20260508_022226.log
+state/full_android_language_toolchain/machine_lazy_import_contract_adapter_20260508_023011.log
+state/full_android_language_toolchain/braxon_lazy_import_startup_contract_adapter.stamp
+state/full_android_language_toolchain/fix_pgo_pwd_adoption_header_20260508_024108.log
+state/full_android_language_toolchain/fix_pgo_pwd_adoption_header_latest.log
+state/full_android_language_toolchain/full_android_adoption_contract_20260508_070423.log
+state/full_android_language_toolchain/probe_optional_decimal_tk_20260508_072148.log
+state/full_android_language_toolchain/fix_decimal_tk_detect_20260508_072356.log
+state/full_android_language_toolchain/build_decimal_tk_native_20260508_072616.log
+state/full_android_language_toolchain/build_tkinter_native_20260508_072934.log
+state/full_android_language_toolchain/build_tkinter_native_latest.log
+state/full_android_language_toolchain/link_braxon_cpython_deep_20260508_074030.log
+state/full_android_language_toolchain/link_braxon_cpython_deep_latest.log
+state/full_android_language_toolchain/rebuild_stack_matched_20260508_074712.log
+state/full_android_language_toolchain/stack_match_changes_20260508_074713.txt
+state/full_android_language_toolchain/rebuild_stack_matched_latest.log
+state/full_android_language_toolchain/locks
+state/full_android_language_toolchain/locks/braxon_python_3.16_native
+state/full_android_language_toolchain/locks/braxon_python_3.16_native_manifest.sha256
+state/full_android_language_toolchain/locks/braxon_rust_nightly3_candidate
+state/full_android_language_toolchain/locks/braxon_rust_nightly_native
+state/full_android_language_toolchain/locks/braxon_rustup_mend_lane
+
+### findutils source-forge lane
+path=state/full_android_language_toolchain/source_forge/alien_lanes/findutils
+44M	state/full_android_language_toolchain/source_forge/alien_lanes/findutils
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/alienfile.d
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/src
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/build
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/build/findutils-4.10.0
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/bin
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/share
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/libexec
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix/var
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/source_tarball.sha256
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.h.before_qsort_contract_20260508_144748
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_r_contract_after_configure.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_latest.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_selinux_contract_after_reconfigure.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_latest.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150710.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150710.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150710.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150710.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/findutils_contract_first_manifest_20260508_150059.sha256
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_latest.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/backups
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/backups/termux-findutils-20260508_144115.tar.gz.bak
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/backups/termux-findutils-20260508_144115.tar.gz.bak.sha256
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/tmp
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/alienfile
+
+### findutils locks
+path=state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks
+16K	state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/findutils_contract_first_manifest_20260508_150059.sha256
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_latest.txt
+
+### findutils reports
+path=state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports
+2.1M	state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/source_tarball.sha256
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.h.before_qsort_contract_20260508_144748
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_r_contract_after_configure.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_latest.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/qsort_selinux_contract_after_reconfigure.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_selinux_fixed.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150059.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_latest.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150710.tsv
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_version_20260508_150710.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_xargs_version_20260508_150710.txt
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/prefix_find_probe_20260508_150710.txt
+
+=== crates that must map into the OS/substrate ===
+
+### crates/nsq-core
+path=crates/nsq-core
+627K	crates/nsq-core
+crates/nsq-core/Cargo.toml
+crates/nsq-core/README.md
+crates/nsq-core/src
+crates/nsq-core/src/lib.rs
+crates/nsq-core/src/preserve.rs
+crates/nsq-core/src/intent.rs
+crates/nsq-core/src/seating.rs
+crates/nsq-core/src/lib.rs.before_remove_duplicate_tail_20260505_235235
+crates/nsq-core/src/lib.rs.before_root_foundation_repair_20260505_235618
+crates/nsq-core/src/lib.rs.before_comfort_fit_runtime_20260505_235841
+crates/nsq-core/src/lib.rs.before_ultimate_cleanup_20260506_000757
+crates/nsq-core/src/lib.rs.before_shape_payload_width_20260506_001049
+crates/nsq-core/src/lib.rs.before_preserve_brain_seats_api_20260506_001424
+crates/nsq-core/src/lib.rs.before_bad_derive_repair_20260506_001543
+crates/nsq-core/src/lib.rs.before_model_seat_api_exact_20260506_002022
+crates/nsq-core/src/lib.rs.before_seatedpole_marker_repair_20260506_002526
+crates/nsq-core/src/lib.rs.before_rebuild_councilpole_impl_20260506_002734
+crates/nsq-core/src/lib.rs.before_precise_alignment_20260506_003409
+crates/nsq-core/src/lib.rs.before_precise_alignment_20260506_005106
+crates/nsq-core/src/lib.rs.before_architecture_now_20260506_014334
+crates/nsq-core/src/stamp_execution_contract.rs
+crates/nsq-core/src/watermark_execution_contract.rs
+crates/nsq-core/src/eight_dimensional_gradient_contract.rs
+crates/nsq-core/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/nsq-runtime
+path=crates/nsq-runtime
+MISSING
+
+### crates/nsq-cli
+path=crates/nsq-cli
+35K	crates/nsq-cli
+crates/nsq-cli/Cargo.toml
+crates/nsq-cli/README.md
+crates/nsq-cli/src
+crates/nsq-cli/src/main.rs
+crates/nsq-cli/tests
+crates/nsq-cli/tests/phase_one.rs
+crates/nsq-cli/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/nsq-compose
+path=crates/nsq-compose
+35K	crates/nsq-compose
+crates/nsq-compose/Cargo.toml
+crates/nsq-compose/README.md
+crates/nsq-compose/src
+crates/nsq-compose/src/lib.rs
+crates/nsq-compose/src/main.rs
+crates/nsq-compose/tests
+crates/nsq-compose/tests/phase_one.rs
+crates/nsq-compose/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/nsq-court
+path=crates/nsq-court
+MISSING
+
+### crates/braxon-core
+path=crates/braxon-core
+215K	crates/braxon-core
+crates/braxon-core/Cargo.toml
+crates/braxon-core/README.md
+crates/braxon-core/src
+crates/braxon-core/src/lib.rs
+crates/braxon-core/src/offline_agent.rs
+crates/braxon-core/src/offline_models.rs
+crates/braxon-core/src/wowas_rescue.rs
+crates/braxon-core/src/greeting.rs
+crates/braxon-core/src/council.rs
+crates/braxon-core/src/wowas.rs
+crates/braxon-core/src/context_manifest.rs
+crates/braxon-core/src/offline_models.rs.before_model_seat_api_exact_20260506_002022
+crates/braxon-core/src/offline_models.rs.before_seatedpole_marker_repair_20260506_002526
+crates/braxon-core/src/offline_models.rs.before_source_status_code_string_fix_20260506_002936
+crates/braxon-core/src/offline_models.rs.before_precise_alignment_20260506_003409
+crates/braxon-core/src/offline_models.rs.before_precise_alignment_20260506_005106
+crates/braxon-core/src/offline_models.rs.before_architecture_now_20260506_014334
+crates/braxon-core/src/offline_models.rs.before_full_load_gate.bak
+crates/braxon-core/src/council_ten.rs
+crates/braxon-core/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/braxon-ingest
+path=crates/braxon-ingest
+43K	crates/braxon-ingest
+crates/braxon-ingest/Cargo.toml
+crates/braxon-ingest/README.md
+crates/braxon-ingest/src
+crates/braxon-ingest/src/lib.rs
+crates/braxon-ingest/src/main.rs
+crates/braxon-ingest/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/braxon-court
+path=crates/braxon-court
+27K	crates/braxon-court
+crates/braxon-court/Cargo.toml
+crates/braxon-court/README.md
+crates/braxon-court/src
+crates/braxon-court/src/main.rs
+crates/braxon-court/src/native_wiring.rs
+crates/braxon-court/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+### crates/braxon-cli
+path=crates/braxon-cli
+47K	crates/braxon-cli
+crates/braxon-cli/Cargo.toml
+crates/braxon-cli/README.md
+crates/braxon-cli/src
+crates/braxon-cli/src/main.rs
+crates/braxon-cli/tests
+crates/braxon-cli/tests/phase_one.rs
+crates/braxon-cli/tests/phase_one.rs.bak.20260502_222450
+crates/braxon-cli/tests/phase_one.rs.bak.20260502_222459
+crates/braxon-cli/tests/phase_one.rs.recover.20260502_222534
+crates/braxon-cli/tests/phase_one.rs.identity_fix.20260502_222709
+crates/braxon-cli/Cargo.toml.before_dead_edge_repair_20260506_000937
+
+=== root NSQ route artifacts ===
+
+### root --help route artifact
+path=./--help
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./--help
+./--help: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./--help
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+
+### root status route artifact
+path=./status
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./status
+./status: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./status
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+
+### scriots script/artifact
+path=./scriots
+-rw-------. 1 u0_a470 u0_a470 7153 May  7 06:39 ./scriots
+./scriots: OS/2 REXX batch file, Unicode text, UTF-8 text
+609095ef0d795cf151b60c49f0519e4d37fba98dc9737b867663a5c34c13eea5  ./scriots
+#!/data/data/com.termux/files/usr/bin/bash
+# BRAXON_restore_and_read_citadel.sh
+# 1. Removes the config.json that broke rope theta
+# 2. Removes the 0MB symlinks that pollute the transport
+# 3. Reads the actual citadel699 state to understand what's needed
+# Run from: ~/Braxon
+
+set -euo pipefail
+
+ROOT="$HOME/Braxon"
+TRANSPORT="$ROOT/assets/braxon_core/source_ingest/braxon_transport"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+LOG="$HOME/storage/shared/Download/BRAXON_restore_citadel_$STAMP.log"
+
+mkdir -p "$(dirname "$LOG")"
+: > "$LOG"
+
+say() { printf '%s\n' "$*" | tee -a "$LOG"; }
+ok()  { say "  ✓ $*"; }
+bad() { say "  ✗ $*"; }
+section() { say ""; say "=========================================================="; say "$1"; say "=========================================================="; }
+
+cd "$ROOT"
+
+section "BRAXON RESTORE + CITADEL READ — $STAMP"
+
+# ============================================================================
+# STEP 1: Remove the bad config.json we wrote (caused missing rope theta)
+# ============================================================================
+
+section "1. Remove bad transport config.json"
+
+if [ -f "$TRANSPORT/config.json" ]; then
+    # Check if it's our bad one (has council_role key we added)
+    if grep -q "council_role" "$TRANSPORT/config.json" 2>/dev/null; then
+        rm "$TRANSPORT/config.json"
+        ok "Removed bad config.json (had council_role = our overwrite)"
+    else
+        say "  config.json exists but not ours — leaving it"
+    fi
+else
+    say "  No config.json in transport"
+fi
+
+# ============================================================================
+# STEP 2: Remove 0MB symlinks (they are placeholders, not real weights)
+# ============================================================================
+
+section "2. Remove 0MB symlinks from transport"
+
+REMOVED=0
+for link in "$TRANSPORT"/model-*.safetensors; do
+    [ -L "$link" ] || continue
+    TARGET="$(readlink "$link")"
+    if [ ! -f "$TARGET" ] || [ "$(wc -c < "$TARGET" 2>/dev/null || echo 0)" -eq 0 ]; then
+        rm "$link"
+        bad "Removed dead/empty symlink: $(basename "$link") -> $TARGET"
+        REMOVED=$((REMOVED + 1))
+    else
+        ok "Real shard kept: $(basename "$link") ($(wc -c < "$TARGET" | tr -d ' ') bytes)"
+    fi
+done
+
+say "  Removed $REMOVED empty symlinks"
+
+# ============================================================================
+# STEP 3: Show what's actually in transport now
+# ============================================================================
+
+section "3. Transport directory after cleanup"
+
+ls -lah "$TRANSPORT/" | tee -a "$LOG"
+
+# ============================================================================
+# STEP 4: Read the actual citadel699 state
+# ============================================================================
+
+section "4. Citadel699 state files"
+
+say "--- state/nsq/citadel699/current/ ---"
+ls -la "$ROOT/state/nsq/citadel699/current/" 2>/dev/null | tee -a "$LOG" || \
+    bad "state/nsq/citadel699/current/ not found"
+
+say ""
+say "--- request_capsule.json ---"
+cat "$ROOT/state/nsq/citadel699/current/request_capsule.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "request_capsule.json not found"
+
+say ""
+say "--- council_ten.rebuild.nsq ---"
+cat "$ROOT/state/nsq/citadel699/current/council_ten.rebuild.nsq" 2>/dev/null | tee -a "$LOG" || \
+    bad "council_ten.rebuild.nsq not found"
+
+say ""
+say "--- materialization.json ---"
+cat "$ROOT/state/nsq/citadel699/current/materialization.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "materialization.json not found"
+
+say ""
+say "--- target_models.json ---"
+cat "$ROOT/state/nsq/citadel699/current/target_models.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "target_models.json not found"
+
+say ""
+say "--- proofs/citadel699_current_rebuild.json ---"
+cat "$ROOT/state/nsq/proofs/citadel699_current_rebuild.json" 2>/dev/null | tee -a "$LOG" || \
+    bad "proof not found"
+
+# ============================================================================
+# STEP 5: Read what the bus executor expects
+# ============================================================================
+
+section "5. Bus executor state"
+
+say "--- state/braxon/bus/ contents ---"
+find "$ROOT/state/braxon/bus/" -type f 2>/dev/null | sort | while read f; do
+    say ""
+    say "  FILE: ${f#$ROOT/}"
+    cat "$f" 2>/dev/null | head -60 | tee -a "$LOG" || true
+done
+
+### empty crisp artifact
+path=./crisp, exact, integrity-bound,
+-rw-------. 1 u0_a470 u0_a470 0 May  5 03:46 ./crisp, exact, integrity-bound,
+./crisp, exact, integrity-bound,: empty
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./crisp, exact, integrity-bound,
+
+=== git state ===
+## braxton-source-systems
+ M .gitignore
+A  build_source_guile_nsq_lane.sh
+A  build_source_mandoc_apropos_lane.sh
+ M crates/braxon-core/src/lib.rs
+ M crates/braxon-core/src/wowas_rescue.rs
+ M crates/braxon-ingest/src/lib.rs
+ M crates/nsqasm-stamp-db/src/main.rs
+A  fix_mandoc_android_hardlink_resume.sh
+A  packaged/backbone-links/BACKBONE_LINK_POLICY.md
+A  packaged/backbone-links/full_android_language_toolchain
+A  packaged/backbone-links/source_forge
+A  packaged/backbone-links/state_backbone
+AD packaged/bake-over/BAXON_SOURCE_BAKE_OVER_PLAN.md
+A  packaged/manifests/backbone_link_manifest.txt
+AM packaged/manifests/package_file_list.txt
+AM packaged/manifests/package_manifest.sha256
+A  packaged/review-notes/SOURCE_FIRST_RELEASE_PREP.md
+A  packaged/scripts/build_source_guile_nsq_lane.sh
+A  packaged/scripts/build_source_mandoc_apropos_lane.sh
+A  packaged/scripts/fix_mandoc_android_hardlink_resume.sh
+A  packaged/scripts/probe_gpm_guile_extension_lane.sh
+A  packaged/source-lanes/guile_nsq_logic/docs/NSQ_DOC_STAGING_POLICY.md
+A  packaged/source-lanes/guile_nsq_logic/locks/LOCKED_GUILE_NSQ_DOC_LOGIC_LANE.txt
+A  packaged/source-lanes/guile_nsq_logic/locks/manifest.sha256
+A  packaged/source-lanes/guile_nsq_logic/reports/guile_probe.txt
+A  packaged/source-lanes/guile_nsq_logic/reports/guile_tarball.sha256
+A  packaged/source-lanes/guile_nsq_logic/reports/nsq_guile_logic_run.txt
+A  packaged/source-lanes/guile_nsq_logic/reports/pkg_search_guile.txt
+A  packaged/source-lanes/mandoc_apropos_logic/reports/mandoc_tarball.sha256
+A  probe_gpm_guile_extension_lane.sh
+ M scripts/toolchains/stage_android_runtime_gap_surfaces.sh
+ M state/android_gap_fill_chain/release_stage/current/ANDROID_GAP_FILL_RELEASE_STAGE.json
+ D state/android_gap_fill_chain/release_stage/current/SHA256SUMS
+ M state/android_gap_fill_chain/release_stage/current/proofs/no_libc_direct_start_proof.txt
+ D state/android_gap_fill_chain/runs/20260507_192850/reports/release_probe_output.txt
+ D state/android_gap_fill_chain/runs/20260507_192952/reports/release_probe_output.txt
+?? audit_findutils_no_to_contract_matrix.sh
+?? audit_reseat_braxon_rust_nightly.sh
+?? boost_braxon_forge_environment.sh
+?? braxon-cargo
+?? braxon-forge-env
+?? braxon-python
+?? braxon-rust-env
+?? braxon-rustc
+?? braxon-terminal
+?? braxon-text-env
+?? build_braxon_cpython_android_adoption_full.sh
+?? build_braxon_decimal_tk_native.sh
+?? build_braxon_tkinter_native.sh
+?? build_guile_instruction_corpus.sh
+?? build_or_repair_fc_match.sh
+?? build_source_guile_nsq_lane.sh.before_hardlink_fix_20260508_142558
+?? clean_braxon_warning_noise.sh
+?? config/toolchains/android_build_tools_release_lane.json
+?? config/toolchains/android_builtin_libc_extensions.json
+?? config/toolchains/android_builtin_libc_extensions_overlay.json
+?? config/toolchains/cpython_android_native_contract_resolve.json
+?? config/toolchains/full_android_language_toolchain.json
+?? config/toolchains/full_android_language_toolchain_visible.json
+?? create_braxon_terminal.sh
+?? diagnose_braxon_python_startup_imports.sh
+?? explore_braxon_perl_native.sh
+?? export_full_braxon_system_state.sh
+?? fastest_status
+?? final_braxon_cpython_android_adoption_build.sh
+?? finalize_source_backbone_stage.sh
+?? fix_braxon_cpython_extension_link.sh
+?? fix_braxon_python_native_lock.sh
+?? fix_cpython_decimal_tk_detect.sh
+?? fix_findutils_contract_first_android.sh
+?? fix_findutils_selinux_android_boundary.sh
+?? fix_lazy_import_startup_contract.sh
+?? fix_lazy_import_startup_contract_v2.sh
+?? fix_lazy_import_startup_contract_v3.sh
+?? fix_pgo_pwd_adoption_header.sh
+?? fix_source_packaging_stage.sh
+?? fix_verify_braxon_rust_workspace.sh
+?? forge_braxon_terminal_forge_lane.sh
+?? forge_braxon_zig_text_stack.sh
+?? go_gold_alien_findutils_lane.sh
+?? install_braxon_missing_dev_text_packages.sh
+?? link_braxon_cpython_deep.sh
+?? link_source_package_to_backbone.sh
+?? lock_and_extend_braxon_dev_stack.sh
+?? lock_braxon_python_native.sh
+?? lock_braxon_python_pkg_safe.sh
+?? machine_lazy_import_contract_adapter.sh
+?? mend_rustup_toolchain_lane.sh
+?? packaged/bake-over/BRAXON_SOURCE_BAKE_OVER_PLAN.md
+?? packaged/identity/
+?? packaged/manifests/backbone_symlink_map.txt
+?? packaged/tarballs/
+?? prime_source_first_forge_lane.sh
+?? probe_braxon_android_posix_caps.sh
+?? probe_cpython_optional_decimal_tk.sh
+?? rebuild_braxon_cpython_stack_matched.sh
+?? relink_braxon_cpython_freeze.sh
+?? repair_and_deepen_full_report.sh
+?? repair_import_helper_lazy_contract.sh
+?? resume_findutils_contract_completion.sh
+?? scripts/reseat_braxon_python_native.sh
+?? scripts/toolchains/clean_android_gap_stage_and_ignore_generated.sh
+?? scripts/toolchains/dedup_braxon_android_libc_extensions.sh
+?? scripts/toolchains/extend_android_libc_extension_close_range.sh
+?? scripts/toolchains/fix_android_libc_contract_overlay_v2.sh
+?? scripts/toolchains/fix_android_pwd_contract_overlay_v1.sh
+?? scripts/toolchains/fix_pwd_contract_private_overlay_v2.sh
+?? scripts/toolchains/fix_remote_debug_contracts_v1.sh
+?? scripts/toolchains/force_braxon_android_contract_headers.sh
+?? scripts/toolchains/install_braxon_private_cc_overlay.sh
+?? scripts/toolchains/install_builtin_sem_clockwait_overlay_and_resume.sh
+?? scripts/toolchains/install_builtin_sem_clockwait_sysroot_and_resume.sh
+?? scripts/toolchains/promote_android_libc_extension_by_symlink.sh
+?? scripts/toolchains/rebuild_braxon_libc_extensions_whitelist.sh
+?? scripts/toolchains/rebuild_full_android_language_toolchain.sh
+?? scripts/toolchains/rebuild_full_android_language_toolchain_visible.sh
+?? scripts/toolchains/resolve_cpython_android_native_contracts_full.sh
+?? scripts/toolchains/start_android_build_tools_release_lane.sh
+?? scripts/toolchains/unified_android_libc_contract_overlay.sh
+?? scripts/verify_braxon_guile_nsq_doc_logic_lane.sh
+?? scripts/verify_braxon_python_native.sh
+?? scripts/verify_braxon_source_first_forge_lane.sh
+?? scripts/verify_braxon_source_first_nsq_forge_lane.sh
+?? scripts/verify_braxon_terminal.sh
+?? scripts/verify_braxon_zig_text_stack.sh
+?? setup_braxton_systems_packaged.sh
+?? stage_guile_nsq_doc_logic_lane.sh
+?? state/android_build_tools_release_lane/
+?? state/android_gap_fill_chain/runs/20260507_193420/
+?? state/full_android_language_toolchain/
+?? state/reports/
+?? state/tools/
+?? strengthen_source_first_nsq_forge_lane.sh
+?? trace_braxon_startup_os_import.sh
+?? unlock_braxon_rustup_nightly3.sh
+?? upgrade_termux_interactive_shell_and_patch_export.sh
+ced6af2 stage Android runtime gap surfaces
+a179c03 refresh os power release watermark trigger set
+607642a add callable NSQASM stamp wake resolver
+7723208 harden NSQASM stamp database dedupe and verification
+ee1827a add executable NSQASM stamp database scanner
+4519f51 add NSQASM stamp build chain
+8902bc4 record hot substrate gate timing
+4f9cb7e ignore generated NSQ substrate binaries
+c38458e add NSQ Court no-libc assembly start proof
+87c8147 checkpoint before NSQ substrate rebuild
+
+=== summary classification ===
+NEEDED:
+- NSQ authority files
+- ASM lowering law and implementation
+- state registry proof files
+- model reconstruction manifest and binding
+- hot-live runtime proof
+- bounded build lanes
+- integrity locks and hashes
+- root-route artifacts until provenance is resolved
+
+DO NOT TREAT AS FAILURE BY ITSELF:
+- missing full local FP32 weights
+- qsort_r native no when gnulib compatibility is active
+- SELinux disabled when raw getfilecon/lgetfilecon bridge is not complete
+- state/ being huge
+
+DO TREAT AS BLOCKER:
+- claiming hot-live without runtime route
+- pointer-only model “install”
+- missing reconstruction manifest when claiming reconstruction_ready
+- hash claim without exact byte count plus full cryptographic hash after bytes exist
+- fake glibc/Bionic identity
+- partial SELinux headers without runtime/link proof

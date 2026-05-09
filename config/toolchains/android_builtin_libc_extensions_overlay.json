@@ -1,0 +1,29 @@
+{
+  "schema": "braxon.android.builtin_libc_extensions.overlay.v1",
+  "created_at": "2026-05-07T20:44:27-05:00",
+  "repo_head": "ced6af253888bf194375692de86d0678dc70d847",
+  "branch": "braxon-current-preserve-20260507-172011",
+  "authority": "BRAXON_ANDROID_BUILTIN_LIBC_EXTENSION_OVERLAY",
+  "chain_root": "state/full_android_language_toolchain",
+  "overlay": "state/full_android_language_toolchain/install/braxon_android_overlay",
+  "surfaces": [
+    {
+      "name": "sem_clockwait",
+      "exported_symbol": "sem_clockwait",
+      "header": "include/semaphore.h",
+      "static_archive": "lib/libbraxon_android_libc_extensions.a",
+      "shared_library": "lib/libbraxon_android_libc_extensions.so",
+      "default_landing": true,
+      "partial_sysroot": false,
+      "manual_per_source_patch_required": false,
+      "consumer": "cpython/Python/parking_lot.c"
+    }
+  ],
+  "known_hard_blocks": [
+    "A partial sysroot masks errno.h/stdint.h/time.h and fails before sem_clockwait is tested.",
+    "include_next requires the real Termux/Android header tree after the overlay include path.",
+    "This builds a Braxon-chain native extension surface, not a modified Android system libc.",
+    "Full libc-native requires a separate custom libc or bionic replacement lane.",
+    "CPython development head may expose additional Android incompatibilities after this one."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "parameters": [
+    {
+      "id": "runtime_identity",
+      "title": "Runtime Identity",
+      "crate": "Braxon-core",
+      "module_path": "crates/braxon-core/src/lib.rs",
+      "descriptor_ids": ["sem:Braxon-core.runtime.identity"],
+      "inherits": [],
+      "attachment_targets": ["BRAXON_runtime", "session_state"],
+      "enabled_by": ["identity", "canonicality"],
+      "shape": "singleton"
+    },
+    {
+      "id": "semantic_address",
+      "title": "Semantic Address",
+      "crate": "agents",
+      "module_path": "crates/agents/src/bin/BRAXON_action.rs",
+      "descriptor_ids": ["sem:Braxon-core.runtime.identity", "sem:agents.session.semantic-runtime", "sem:nullsquared-core.lowering.basis"],
+      "inherits": ["runtime_identity"],
+      "attachment_targets": ["intent_resolution", "agent_session"],
+      "enabled_by": ["addressing", "routing", "nullsquared_basis"],
+      "shape": "address"
+    },
+    {
+      "id": "plane_hits",
+      "title": "Plane Hits",
+      "crate": "agents",
+      "module_path": "crates/agents/src/bin/BRAXON_action.rs",
+      "descriptor_ids": ["sem:agents.session.semantic-runtime", "sem:Braxon-kernel.boot.graph-authority"],
+      "inherits": ["semantic_address"],
+      "attachment_targets": ["session_state", "graph_inspection"],
+      "enabled_by": ["semantic_core", "semantic_exception", "coherence"],
+      "shape": "set"
+    },
+    {
+      "id": "exception_layers",
+      "title": "Exception Layers",
+      "crate": "knowledge",
+      "module_path": "crates/knowledge/src/lib.rs",
+      "descriptor_ids": ["sem:knowledge.descriptor.enrichment", "sem:agents.session.semantic-runtime"],
+      "inherits": ["plane_hits"],
+      "attachment_targets": ["knowledge_runtime", "session_state"],
+      "enabled_by": ["semantic_exception", "psychological_axioms", "sociological_striation"],
+      "shape": "set"
+    },
+    {
+      "id": "parameter_surface",
+      "title": "Parameter Surface",
+      "crate": "flux-engine",
+      "module_path": "crates/flux-engine/src/lib.rs",
+      "descriptor_ids": ["sem:flux-engine.semantic.route", "sem:nullsquared-core.lowering.basis"],
+      "inherits": ["semantic_address"],
+      "attachment_targets": ["flux_route", "nullsquared_basis"],
+      "enabled_by": ["parameter_enablement", "parameter_shape"],
+      "shape": "map"
+    },
+    {
+      "id": "enabled_parameter_groups",
+      "title": "Enabled Parameter Groups",
+      "crate": "flux-engine",
+      "module_path": "crates/flux-engine/src/lib.rs",
+      "descriptor_ids": ["sem:flux-engine.semantic.route"],
+      "inherits": ["parameter_surface"],
+      "attachment_targets": ["semantic_release"],
+      "enabled_by": ["parameter_enablement", "execution"],
+      "shape": "set"
+    },
+    {
+      "id": "graph_status",
+      "title": "Graph Status",
+      "crate": "Braxon-kernel",
+      "module_path": "crates/Braxon-kernel/src/boot.rs",
+      "descriptor_ids": ["sem:Braxon-kernel.boot.graph-authority", "sem:Braxon-core.runtime.identity"],
+      "inherits": [],
+      "attachment_targets": ["startup_validation", "session_state"],
+      "enabled_by": ["canonicality", "execution"],
+      "shape": "status"
+    },
+    {
+      "id": "active_crate_context",
+      "title": "Active Crate Context",
+      "crate": "agents",
+      "module_path": "crates/agents/src/bin/BRAXON_action.rs",
+      "descriptor_ids": ["sem:agents.session.semantic-runtime"],
+      "inherits": ["semantic_address", "graph_status"],
+      "attachment_targets": ["session_state", "audit_priority"],
+      "enabled_by": ["routing", "canonicality"],
+      "shape": "context"
+    },
+    {
+      "id": "recent_story_context",
+      "title": "Recent Story Context",
+      "crate": "agents",
+      "module_path": "crates/agents/src/bin/BRAXON_action.rs",
+      "descriptor_ids": ["sem:story.material.corpus", "sem:agents.session.semantic-runtime"],
+      "inherits": ["active_crate_context"],
+      "attachment_targets": ["session_state"],
+      "enabled_by": ["modality_text", "knowledge_real_world"],
+      "shape": "context"
+    }
+  ]
+}

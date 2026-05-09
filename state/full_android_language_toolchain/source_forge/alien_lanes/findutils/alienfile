@@ -1,0 +1,18 @@
+use alienfile;
+
+plugin 'Probe::CommandLine' => (
+  command => 'find',
+  args => ['--version'],
+  match => qr/GNU findutils/,
+);
+
+share {
+  start_url 'https://ftp.gnu.org/gnu/findutils/findutils-4.10.0.tar.xz';
+  plugin 'Download';
+  plugin 'Extract' => 'tar.xz';
+  build [
+    '%{configure} --prefix=%{.install.prefix} --host=aarch64-linux-android --build=aarch64-linux-android --disable-nls',
+    '%{make}',
+    '%{make} install',
+  ];
+};

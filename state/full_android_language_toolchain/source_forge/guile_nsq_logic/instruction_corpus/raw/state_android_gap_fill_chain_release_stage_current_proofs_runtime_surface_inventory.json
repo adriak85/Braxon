@@ -1,0 +1,96 @@
+{
+  "schema": "braxon.android_gap_fill.runtime_surface_inventory.v1",
+  "prefix": "/data/data/com.termux/files/usr",
+  "groups": {
+    "crt_objects": {
+      "crtbegin_dynamic.o": [
+        "/data/data/com.termux/files/usr/lib/crtbegin_dynamic.o"
+      ],
+      "crtbegin_static.o": [
+        "/data/data/com.termux/files/usr/lib/crtbegin_static.o"
+      ],
+      "crtbegin_so.o": [
+        "/data/data/com.termux/files/usr/lib/crtbegin_so.o"
+      ],
+      "crtend_android.o": [
+        "/data/data/com.termux/files/usr/lib/crtend_android.o"
+      ],
+      "crtend_so.o": [
+        "/data/data/com.termux/files/usr/lib/crtend_so.o"
+      ]
+    },
+    "compiler_rt": {
+      "libclang_rt.builtins-aarch64-android.a": [
+        "/data/data/com.termux/files/usr/lib/clang/21/lib/linux/libclang_rt.builtins-aarch64-android.a"
+      ],
+      "libclang_rt.builtins.a": []
+    },
+    "unwind": {
+      "libunwind.a": [
+        "/data/data/com.termux/files/usr/lib/libunwind.a"
+      ],
+      "libunwind.so": [
+        "/data/data/com.termux/files/usr/glibc/lib/libunwind.so"
+      ],
+      "libgcc.a": []
+    },
+    "libcxx": {
+      "libc++_shared.so": [
+        "/data/data/com.termux/files/usr/lib/libc++_shared.so",
+        "/data/data/com.termux/files/usr/lib/node_modules/@mmmbuto/codex-cli-termux/bin/libc++_shared.so"
+      ],
+      "libc++_static.a": [],
+      "libc++.so": [],
+      "libc++.a": []
+    },
+    "libcxxabi": {
+      "libc++abi.a": [],
+      "libc++abi.so": []
+    },
+    "system_libs": {
+      "libc.so": [
+        "/data/data/com.termux/files/usr/glibc/lib/libc.so"
+      ],
+      "libm.so": [
+        "/data/data/com.termux/files/usr/glibc/lib/libm.so"
+      ],
+      "libdl.so": []
+    }
+  },
+  "headers": {
+    "stdint.h": [
+      "/data/data/com.termux/files/usr/glibc/include/stdint.h",
+      "/data/data/com.termux/files/usr/glibc/include/unistring/stdint.h",
+      "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/stdint.h",
+      "/data/data/com.termux/files/usr/include/stdint.h",
+      "/data/data/com.termux/files/usr/include/unistring/stdint.h",
+      "/data/data/com.termux/files/usr/lib/clang/21/include/stdint.h"
+    ],
+    "stdio.h": [
+      "/data/data/com.termux/files/usr/glibc/include/bits/stdio.h",
+      "/data/data/com.termux/files/usr/glibc/include/stdio.h",
+      "/data/data/com.termux/files/usr/include/bits/fortify/stdio.h",
+      "/data/data/com.termux/files/usr/include/bsd/stdio.h",
+      "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/stdio.h",
+      "/data/data/com.termux/files/usr/include/c++/v1/stdio.h",
+      "/data/data/com.termux/files/usr/include/stdio.h",
+      "/data/data/com.termux/files/usr/lib/clang/21/include/llvm_libc_wrappers/stdio.h"
+    ],
+    "iostream": [
+      "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/iostream",
+      "/data/data/com.termux/files/usr/include/c++/v1/iostream"
+    ],
+    "vector": [
+      "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/vector",
+      "/data/data/com.termux/files/usr/include/c++/v1/vector"
+    ],
+    "string": [
+      "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/string",
+      "/data/data/com.termux/files/usr/include/c++/v1/string"
+    ],
+    "unwind.h": [
+      "/data/data/com.termux/files/usr/glibc/include/unwind.h",
+      "/data/data/com.termux/files/usr/lib/clang/21/include/unwind.h"
+    ]
+  }
+}

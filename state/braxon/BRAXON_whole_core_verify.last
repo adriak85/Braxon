@@ -1,0 +1,3 @@
+verify=false
+reason=manifest_entry_missing_on_disk
+missing=model.safetensors.index.json

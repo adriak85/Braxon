@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__endian_trait__RUSTSEC-2021-0039.md.ef7296a6df4eaa83.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.840912+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__endian_trait__RUSTSEC-2021-0039.md.ef7296a6df4eaa83.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/endian_trait/RUSTSEC-2021-0039.md",
+  "source_bytes": 761,
+  "source_sha256": "ef7296a6df4eaa836d83a5025340f99be0100cfa4b304bd660468094b74ac45b",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__endian_trait__RUSTSEC-2021-0039.md.ef7296a6df4eaa83"
+}

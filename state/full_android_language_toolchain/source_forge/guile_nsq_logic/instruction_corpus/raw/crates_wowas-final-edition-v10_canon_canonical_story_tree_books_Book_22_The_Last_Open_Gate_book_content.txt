@@ -1,0 +1,605 @@
+# Book_22_The_Last_Open_Gate
+
+# Book_22_The_Last_Open_Gate
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 22 — Passage = Judgment
+
+## Working local time span
+weeks
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_22_The_Last_Open_Gate
+
+- none placed yet
+- B22_101 — Gate = Judgment
+- B22_102 — Core = Mother
+- B22_103 — Cost = Reader
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_22_The_Last_Open_Gate
+
+- no mapped beats yet
+
+## B22_101 — Gate = Judgment
+
+## B22_102 — Core = Mother
+
+## B22_103 — Cost = Reader
+
+### 04_scene_spine.md
+
+# The Last Open Gate Scene Spine
+
+### 06_blood_cello_escalation.md
+
+# Book 22 — The Last Open Gate — Blood Cello Escalation
+
+Status: provisional working draft  
+Authority: best-fit inferred escalation
+
+## Current late-book structural need
+Turn all prior choices into access law.
+
+## Nieth pressure in this book
+Her remaining weave is what keeps the last gate open at all.
+
+## Rippers / Unweavers pressure in this book
+They try to sever access and collapse the final convergence route.
+
+## Wraithbound / Wraith pressure in this book
+They weaponize false arrival, false beloveds, and threshold confusion.
+
+## War / battle pressure
+Gate-war under choice pressure.
+
+## Mystic wonder set piece
+The final gate as living impossible architecture sustained by damaged weave and contested faith.
+
+## Emotional fracture / reunion vector
+Only true alignment holds; false loyalty fails visibly.
+
+## Major sacrifice or death candidate
+Gate-holder or witness-character who dies so passage remains possible.
+
+## Villain downfall candidate
+One who tries to own the gate and is judged by it.
+
+## Blood Cello setup consequence
+By the end, only the final trigger death remains capable of beginning Blood Cello.
+
+## 10 candidate escalations
+1. Gate-law judges prior choices
+2. Rippers swarm the gate edges
+3. Wraith false-beloved sequence
+4. Xethrolund becomes indispensable threshold reader
+5. Rolzen counter-rhythm defense at the gate
+6. Support death holding the opening
+7. Villain tries to claim the gate
+8. Daisy stabilizes true passage
+9. Ursula inheritance opens the final phase
+10. Mack-root logic decides who gets through
+
+## score table
+- 1: 10
+- 2: 8
+- 3: 9
+- 4: 8
+- 5: 8
+- 6: 8
+- 7: 8
+- 8: 7
+- 9: 8
+- 10: 8
+
+## winning escalation
+The gate itself judges prior choices and determines how each person may or may not help in the final convergence.
+
+## reason chosen
+Best matches your game-shaped end logic and makes Book 25 earned by the whole series.
+
+## rejected 9 and why
+- 2 and 3 remain major support pressures
+- 4 and 5 support but should not replace the gate’s own law
+- 6 important but narrower
+- 7 can occur inside the event
+- 8 and 9 are support functions
+- 10 can be part of the judgment grammar
+
+## downstream consequence into later books / Blood Cello
+Final-field help is now relationally justified, not convenient.
+
+## exact source surfaces consulted
+- saved Codex prompt 03
+- party architecture report
+- arc coverage report
+
+### 07_death_rebirth_framework.md
+
+# Book 22 The Last Open Gate — Death / Rebirth Framework
+
+Status: provisional working draft
+Authority: best-fit inferred framework
+
+## Current structural need
+This book must make death mean something specific and prepare Blood Cello return to answer that meaning rather than erase it.
+
+## Good / beloved deaths in this book should clarify
+- what was being saved
+- why that saving mattered
+- who inherits the consequence
+- what emotional and structural hole is left behind
+- what kind of rebirth answer Blood Cello should eventually provide
+
+## Bad / villainous deaths in this book should clarify
+- what was learned too late
+- what truth or terror they died with
+- what kind of complicated return Blood Cello should eventually allow
+
+## Wake emphasis
+- specific wake over generic sadness
+- structural wake over isolated sentiment
+- return must answer the wound-form this book creates
+
+## Book-specific emphasis
+- gate-held sacrifices
+- access judged by prior choices
+- death as passage law, not only battlefield cost
+
+### 08_named_support_cast_assignment.md
+
+# Book 22 The Last Open Gate — Named Support-Cast Assignment
+
+Status: provisional working draft
+Authority: best-fit inferred support-cast assignment
+
+## Purpose
+Assign named support characters to concrete sacrifice, wake, continuity, and return functions so the late run feels fully inhabited and Blood Cello return payoff becomes communal.
+
+## Requirements
+- every named support death must save something specific
+- every wake must leave a distinct hole
+- every return must answer that hole
+- no support death may compete with Rylos as trigger death
+
+## Book-specific support assignment
+- Halveth or Corveth most likely dies preserving correct alliance or gate passage
+- Selkara may die holding the perimeter if pressure demands it
+- wake effect: counsel-hole, alliance-hole, or defense-hole
+- return effect: clarifying and stabilizing
+
+### 09_villain_return_texture.md
+
+# Book 22 The Last Open Gate — Villain Return Texture
+
+Status: provisional working draft
+Authority: best-fit inferred villain-return pass
+
+## Purpose
+Ensure antagonists die learning something specific and return in Blood Cello with an emotionally correct texture rather than cheap redemption or flat punishment.
+
+## Core requirements
+- identify what the villain dies learning
+- identify what their wake is
+- identify what kind of return texture best fits
+- identify how this strengthens Blood Cello
+
+## Book-specific mapping
+- best-fit villain type: threshold tyrant / gate-owner
+- dies learning: access cannot be owned without corruption
+- wake: trapped inside the very law they imposed
+- return texture: judgment return
+- Blood Cello value: aligns gate-law with moral consequence
+
+### 10_weak_area_balance.md
+
+# Book 22 The Last Open Gate — Weak Area Balance
+
+Status: provisional working draft
+Authority: best-fit inferred balancing pass
+
+## Purpose
+Identify any remaining thin areas in this book and balance them using the same 10-option scoring method.
+
+## Standard weak areas to test
+- Ursula’s Domain density
+- Xethrolund late embodiment
+- Boojay / Rylos trigger-line loading
+- Nieth physical continuity effects
+- Rippers / Wraithbound differentiation
+- support-cast function clarity
+- villain specificity
+- wake / return scene visibility
+
+## Book-specific balancing
+- likely weak area: gate law could feel abstract if unsupported
+- balance choice: show prior choices affecting concrete who-gets-through outcomes
+
+### 11_scene_insertion_targets.md
+
+# Book 22 The Last Open Gate — Scene Insertion Targets
+
+Status: provisional working draft
+Authority: best-fit inferred scene pass
+
+## Purpose
+Turn chosen escalation, death/wake, support-cast, villain-texture, and weak-area balancing into visible page events.
+
+## insertion count target
+- minimum: 1
+- preferred: 2
+- maximum: 3
+- Book 25 may exceed this because it is terminal convergence
+
+## target scenes
+1. gate judgment scene where prior choices visibly alter access outcomes
+2. gate sacrifice scene tied to Halveth / Corveth / Selkara if used
+3. threshold tyrant judged by the very law they tried to own
+
+### 12_scene_blocks.md
+
+# Book 22 The Last Open Gate — Scene Blocks
+
+Status: provisional working draft
+Authority: best-fit inferred scene implantation pass
+
+## Purpose
+Provide direct insertable scene blocks that satisfy the already locked escalation, wake, support-cast, villain-texture, and weak-area requirements.
+
+## Formatting note
+These are not final prose chapters. They are canon scene blocks designed to be inserted, expanded, or fused into beat files and chapter surfaces.
+
+## Scene Block 1 — Gate Judgment in Action
+Placement: first encounter with the gate’s active law
+
+Summary:
+The gate does not merely stand there. It judges. Prior choices now have visible consequences. Who can cross, who can help, who is refused, who is delayed, and who must pay — all of it becomes materially legible.
+
+Purpose:
+- make game-consequence logic visible on-page
+- prevent gate-law from staying abstract
+- convert prior narrative choices into final convergence value
+
+Required details:
+- at least two characters receive visibly different outcomes from the same threshold
+- someone realizes too late that an earlier choice mattered more than they thought
+- the gate’s judgment must feel lawful, not random
+
+## Scene Block 2 — Sacrifice at Access
+Placement: after first gate judgment
+
+Summary:
+A support-cast figure tied to alliance, perimeter, or counsel sacrifices themselves so the right passage remains open. This must feel like a death of passage-law, not generic battle waste.
+
+Purpose:
+- make access costly
+- sharpen wake logic tied to passage and alliance
+- dignify support-cast labor
+
+## Scene Block 3 — Threshold Tyrant Broken
+Placement: near book climax
+
+Summary:
+A gate-owning or threshold-possessing antagonist is judged by the very law they tried to monopolize.
+
+Purpose:
+- set up villain return texture
+- align moral law with structural law
+- make threshold ownership visibly corrupt
+
+### 13_dialogue_targets.md
+
+# Book 22 The Last Open Gate — Dialogue Targets
+
+Status: provisional working draft
+Authority: best-fit inferred dialogue pass
+
+## Purpose
+Define what each inserted scene must accomplish through dialogue, silence, interruption, subtext, confession, command, or refusal.
+
+## Rules
+- keep dialogue character-native
+- no exposition speeches unless a character would actually break that way
+- prefer pressure-revealing lines over lore-explaining lines
+
+## Dialogue Target 1 — Concrete Gate Speech
+- dialogue must sound like people reacting to specific outcomes
+- avoid abstract destiny language unless a character would truly use it
+- people should speak from debt, consequence, regret, loyalty, and loss
+
+## Dialogue Target 2 — Threshold Tyrant
+- their speech should reveal ownership pathology
+- they should sound offended that reality is not yielding to possession
+
+### 14_prose_tone_targets.md
+
+# Book 22 The Last Open Gate — Prose Tone Targets
+
+Status: provisional working draft
+Authority: best-fit inferred prose pass
+
+## Purpose
+Lock the tonal behavior of this book so inserted scenes, dialogue, wakes, returns, and villain textures all sound like the same saga.
+
+## Evaluation frame
+Score uncertain prose decisions by:
+- character truth
+- structural necessity
+- wake specificity
+- rebirth answer potential
+- pressure value
+- mythic coherence
+- relational consequence
+- scene visibility
+
+## tonal priorities
+- gate law must feel concrete, lawful, and emotionally consequential
+- this book should feel severe, chosen, and morally narrowing
+- threshold speech must reveal character history, not abstract destiny
+
+## likely weak prose risks
+- gate law sounding too conceptual
+- sacrifice at access sounding generic
+- threshold tyrant sounding like a stock fantasy villain
+
+## strongest prose corrections
+- show different access outcomes on bodies and relationships
+- make the sacrifice preserve a specific passage
+- let the tyrant sound possessive and offended by reality itself
+
+### 15_resolution_evaluation.md
+
+# Book 22 The Last Open Gate — Resolution + Evaluation
+
+Status: provisional working draft
+Authority: best-fit inferred finalization pass
+
+## Purpose
+Provide a sane resolution order and evaluation method for finishing this book without overworking low-value surfaces.
+
+## Resolution rule
+Prefer the option that most strengthens:
+- Pip’s humility
+- Boojay / Rylos singularity
+- wake specificity
+- return precision
+- pressure and inevitability
+- Rippers / Wraithbound distinction
+
+## best resolution priority
+1. gate-judgment scene
+2. gate-sacrifice scene
+3. threshold tyrant judgment scene
+
+## evaluation focus
+- if the gate does not visibly alter outcomes, the scene is not finished
+- if sacrifice does not leave an alliance/counsel/defense hole, sharpen it
+- if the tyrant sounds interchangeable, rewrite from ownership pathology
+
+### 16_salvage_beats.md
+
+# Book 22 — The Last Open Gate — Salvage Beats
+
+Status: additive completion pass
+Authority: character salvage integration
+
+## B22_101 — Gate = Judgment
+Function:
+Gate law judges prior choices and determines how each person may help.
+
+Required truths:
+- help is relationally earned
+- passage outcomes differ by history, wound, and love
+- no generic fantasy gate language
+
+## B22_102 — Core = Mother
+Function:
+The Core beat ties Ursula to access, inheritance, and maternal threshold logic.
+
+Required truths:
+- Ursula is not a lore reveal only
+- her mostly-dead state matters to how access works
+- she is vast, holy, and damaged
+- the gate recognizes her through ghost-weight as well as bloodline
+
+## B22_103 — Cost = Reader
+Function:
+Xethrolund pays a visible threshold cost in reading or holding the gate grammar.
+
+Required truths:
+- he remains indispensable
+- his care is action-first
+- Mack-root logic and Ursula-threshold logic both materially implicate him
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 22 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Last Open Gate
+
+## B22.01 — The Gate Stays Open Long Enough to Become Terrifying
+target_scenes: 12
+
+S001 The-Book-Opens-on-an-Opening-That-Does-Not-Feel-Like-Salvation — The gate is possibility and threat at once.
+S002 Pip-Feels-the-Open-Line-As-Pressure-on-His-Chest-and-Choices — Emotional and structural stakes deepen immediately.
+S003 Rylos-Vayne-Johnson-Reads-the-Gate-As-Conditional-Not-Benevolent — Discernment remains load-bearing.
+S004 Mack-Booming-Voice-Rolls-Through-a-Sanctuary-Oriented-Toward-the-Open-Threshold — The vast willow remains present through threshold strain.
+S005 The-Ground-Grows-Approach-Paths-Holding-Rims-and-Waiting-Hollows-Out-of-the-Earth — Life magic responds to threshold reality.
+S006 Pip-Understands-That-an-Open-Gate-Is-Not-the-Same-As-a-Safe-One — Serious maturity note.
+S007 Rylos-Refuses-to-Let-Him-Treat-Access-As-Answer — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Center-In-Silent-Great-Dane-Truth — Canon remains central.
+S009 The-Sanctuary-Feels-Like-a-Living-Body-Leaning-Toward-a-Risk-It-Cannot-Ignore — Setting truth deepens.
+S010 Pip-Does-Not-Imagine-Sonomancy-Will-Suddenly-Decipher-the-Gate-Cleanly — Safeguard remains intact.
+S011 Mack-Frames-the-Open-Gate-As-a-Test-of-Reading-and-Relation — Deity-scale reading enters.
+S012 The-Beat-Ends-with-the-Last-Open-Gate-Classified-Correctly — Book 22 begins under threshold law.
+
+## B22.02 — An Opening Rearranges Everyone Around It
+target_scenes: 12
+
+S013 The-Existence-of-the-Gate-Begins-Reordering-Desire-Fear-and-Planning — The threshold changes household gravity.
+S014 Pip-Feels-How-Openings-Can-Make-People-More-Fragile-Than-Walls-Do — Emotional realism deepens.
+S015 Rylos-Reads-Which-Hopes-Are-Useful-and-Which-Are-Only-Projections — Practical clarity remains essential.
+S016 Mack-Grows-Radial-Paths-Decision-Niches-and-Gathering-Rings-Out-of-the-Earth — Terrain becomes threshold architecture.
+S017 The-Sanctuary-Uses-Living-Form-to-Teach-Approach-Without-Surrender — Setting remains active intelligence.
+S018 Daisy-May-Rests-Silent-Within-the-Hard-Conversation — Great Dane truth remains powerful.
+S019 Majeski-Holds-the-Outer-Readiness-of-the-Household — The pair remain themselves.
+S020 Pip-Understands-That-Openings-Can-Distort-Truth-If-Read-Through-Want-Alone — Serious maturity note.
+S021 Rylos-Confirms-It-Cleanly — Bond remains refined.
+S022 Mack-Rejects-Wishful-Threshold-Mythology — Tonal law remains serious.
+S023 The-Land-Itself-Feels-Tense-With-Possibility — World-state texture sharpens.
+S024 The-Beat-Ends-with-the-Opening-Recast-As-Moral-Problem-Not-Mere-Opportunity — Book 22 deepens properly.
+
+## B22.03 — Pip Trains with the Gate in Mind
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-He-Cannot-Bear-Meeting-a-Gate-This-Large-Without-Even-Private-Attempt — Persistence remains core.
+S026 He-Practices-Alone-In-a-Chamber-Mack-Grows-With-Held-Quiet-and-Threshold-Like-Acoustics — Private discipline continues.
+S027 The-First-Attempt-Fails-Because-He-Reaches-for-Answer-Before-Listening-Well-Enough — Difficulty remains severe.
+S028 The-Second-Attempt-Catches-a-Faint-Pattern-and-Breaks — Tiny progress only.
+S029 Pip-Feels-How-Hope-Itself-Can-Damage-His-Focus — Honest emotional truth deepens.
+S030 He-Does-Not-Convert-That-Into-False-Destiny-Drama — Safeguard remains intact.
+S031 He-Stays-a-Determined-Real-Being-Failing-in-Private — Character truth remains stable.
+S032 Rylos-Senses-the-Strain-Afterward-Again — Bond sensitivity continues.
+S033 Mack-Knows-and-Keeps-It-Private-Again — Sanctuary protects dignity.
+S034 Sonomancy-Stays-Rare-Hard-and-Non-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Discipline-Around-Desire-Not-Mastery-of-Thresholds — Honest development.
+S036 The-Beat-Ends-with-the-Gate-Still-Ahead-of-His-Magic — Book law stays true.
+
+## B22.04 — The Household Learns Threshold Discipline
+target_scenes: 12
+
+S037 The-Open-Gate-Changes-Daily-Life-Itself — Domestic structure reorganizes around access and restraint.
+S038 Pip-Feels-How-Hard-It-Is-to-Live-Normally-Near-Something-That-Could-Change-Everything — Emotional realism deepens.
+S039 Rylos-Reads-Where-the-Household-Is-Most-Likely-to-Fray-Under-Possibility — Practical clarity remains crucial.
+S040 Mack-Grows-Holding-Grottos-Watch-Paths-and-Interim-Shelters-Out-of-the-Earth — Life magic remains central and relational.
+S041 The-Sanctuary-Becomes-a-Living-School-of-Approach-Without-Rush — Setting truth deepens.
+S042 Daisy-May-and-Majeski-Hold-the-Household-Center-As-Everyone-Starts-Orienting-Toward-the-Threshold — Great Dane truth remains structural.
+S043 Pip-Learns-That-Self-Control-Is-Part-of-Opening-Correctly — Serious growth note.
+S044 Rylos-Keeps-the-Moment-From-Turning-Into-Only-Longing — Bond remains corrective.
+S045 Mack-Frames-Threshold-Discipline-As-Real-Work-Not-Delay — Deity teaching deepens.
+S046 The-Land-Feels-More-Stable-When-No-One-Runs-Ahead-of-Meaning — World-state mirrors truth.
+S047 The-Household-Begins-to-Inhabit-the-Approach-to-the-Gate — Family architecture adapts.
+S048 The-Beat-Ends-with-Threshold-Discipline-Recast-As-Love-and-Survival — Book 22 remains accurate.
+
+## B22.05 — Ursula and the Gate
+target_scenes: 12
+
+S049 The-Last-Open-Gate-Makes-Ursulas-Core-Bound-Half-Existence-Feel-Like-the-Truth-Any-Real-Threshold-Must-Reckon-With — Deity truth remains central.
+S050 Pip-Feels-the-Amethyst-Core-As-the-Sorrow-Beneath-the-Opening — Emotional stakes deepen.
+S051 Rylos-Reads-That-No-Gate-Worth-Taking-Ignores-the-Core-Wound — Practical clarity matters.
+S052 Mack-Speaks-of-Ursula-As-Core-Bound-Deity-Again-Without-Flattening-Her — Canon stays embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Rising-Beneath-Threshold-Rootwork — Symbol and state remain joined.
+S054 Pip-Understands-That-Openings-Without-Truth-Below-Become-Lies — Serious maturity note.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague cosmic drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Larger-Wound — Great Dane truth holds.
+S057 Mack-Frames-the-Gate-As-Something-That-Must-Be-Read-Through-Binding-Not-Around-It — Deity reading sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Growing-a-Threshold-Over-Buried-Wrongness — Setting truth deepens.
+S059 Pip-Hates-That-Truth-and-Stays-Present-to-It — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Gate-Book — Book 22 stays aligned.
+
+## B22.06 — Rylos Refuses Threshold Fever
+target_scenes: 12
+
+S061 The-Open-Gate-Invites-Everyone-to-Go-Stupid-in-a-Different-Way — Tonal and moral risk sharpens.
+S062 Pip-Feels-the-Pull-of-Threshold-Fever — Emotional realism continues.
+S063 Rylos-Refuses-to-Let-Possibility-Override-Discernment — Mature love remains corrective.
+S064 Mack-Supports-the-Moment-With-Land-Shaped-for-Steady-Approach-Not-Reckless-Crossing — Terrain reinforces moral clarity.
+S065 Daisy-May-Lies-Silent-at-the-Center-and-Keeps-the-Resistance-Honest — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Outer-Readiness-of-the-Household — Pair truth continues.
+S067 Pip-Learns-That-Not-Every-Open-Thing-Should-Be-Entered-on-First-Desire — Serious growth deepens.
+S068 Rylos-Gives-Him-Cleaner-Language-for-Refusal-and-Readiness — Bond remains refined.
+S069 Mack-Rejects-Cheap-Threshold-Exaltation — Deity teaching remains sharp.
+S070 The-Land-Feels-Less-Treacherous-When-No-One-Worships-the-Opening — Setting mirrors truth.
+S071 Pip-Stays-Real-Under-Pressure-to-Rush — Internal victory.
+S072 The-Beat-Ends-with-Threshold-Fever-Refused — Book 22 deepens correctly.
+
+## B22.07 — Daisy-May and Majeski Remain Household Truth at the Threshold
+target_scenes: 12
+
+S073 The-Gate-Book-Could-Easily-Use-the-Dogs-As-Purity-Tokens-and-Does-Not — Canon remains actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Living-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-It-Matters-That-Some-Truths-Stay-Untheatrical-at-the-Threshold-of-Huge-Change — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Presence-Keeps-the-Household-from-Going-Myth-Drunk — Important insight.
+S078 Mack-Grows-Sheltered-Runs-and-Resting-Hollows-for-Them-Without-Humanizing-Them — Representation stays correct.
+S079 The-Sanctuary-Honors-Them-With-Space-Not-Speech — Setting truth remains good.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Feels-More-True-When-Species-and-Relational-Truth-Are-Kept-Clean — Theme sharpens.
+S084 The-Beat-Ends-with-Daisy-May-and-Majeski-Held-Firm-at-the-Gate — Book 22 stays clean.
+
+## B22.08 — The First True Threshold Test
+target_scenes: 12
+
+S085 The-Open-Gate-Presents-a-Moment-Where-Approach-Becomes-Decision-in-Real-Time — Escalation becomes immediate.
+S086 Pip-Feels-the-Pull-of-Crossing-Before-He-Can-Think-It-All-The-Way-Through — Emotional realism deepens.
+S087 Rylos-Reads-the-Line-They-Can-Still-Hold-In-Real-Time — Practical clarity remains crucial.
+S088 Mack-Raises-Anchor-Roots-Holding-Rims-and-Counterpaths-From-the-Earth — Terraforming remains central.
+S089 The-Sanctuary-Acts-Like-a-Living-Brake-and-Guide-At-Once — Setting truth sharpens.
+S090 Pip-Does-Not-Assume-Courage-or-Magic-Makes-Thresholds-Simple — Honesty remains intact.
+S091 He-Does-Choose-Correctly-Within-His-Limits — Determination remains core.
+S092 Daisy-May-and-Majeski-Move-Within-the-Household-Pattern-As-Silent-Great-Dane-Truth — Canon continues to matter.
+S093 Ursula's-Core-Presence-Feels-More-Implicated-During-the-Test — Deity stakes remain active.
+S094 Rylos-Keeps-the-Choice-Clean-From-Panic-and-Fantasy — Bond remains corrective.
+S095 The-World-Feels-More-Open-and-More-Dangerous-than-Before — Tone remains honest.
+S096 The-Beat-Ends-with-the-Threshold-Test-Underway — Book 22 gains forward motion.
+
+## B22.09 — What Gates Do to Love
+target_scenes: 12
+
+S097 The-Open-Gate-Forces-the-Pair-to-Reckon-With-How-Love-Behaves-in-the-Presence-of-Possibility — Relational stakes deepen.
+S098 Pip-Feels-How-Easy-It-Is-to-Mistake-Shared-Longing-for-Shared-Wisdom — Emotional insight sharpens.
+S099 Rylos-Frames-Love-As-Something-That-Must-Stay-Accurate-At-the-Threshold — Mature clarity remains.
+S100 Mack-Grows-a-Low-Wide-Threshold-Glen-for-the-Conversation — The land becomes relational truth space again.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Center-As-That-Truth-Is-Spoken — Great Dane truth remains central.
+S102 Ursula's-Binding-Makes-Every-Love-Question-Feel-Bigger-and-Sadder — Deity stakes deepen.
+S103 Pip-Does-Not-Turn-Love-Into-Threshold-Martyrdom — Anti-martyr safeguard remains intact.
+S104 He-Does-Take-Its-Accuracy-Seriously — Determination remains real.
+S105 Rylos-Stands-With-Him-In-the-Cleaner-Version-of-That-Truth — Pair refinement continues.
+S106 Mack-Blesses-Accurate-Love-Not-Open-Gate-Fantasy — Character remains true.
+S107 The-Sanctuary-Proves-That-Love-Can-Stay-True-Without-Rushing-the-Crossing — Setting truth shines.
+S108 The-Beat-Ends-with-Love-Recast-Under-Threshold-Pressure — Book 22 deepens honestly.
+
+## B22.10 — Book Twenty-Two Locks Its First Gate Law
+target_scenes: 12
+
+S109 Gate-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Threshold-Pressure — Core correction remains intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-Last-Open-Gate — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-the-Last-Open-Gate-Book — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Threshold-Pressure — Canon actively protected.
+S115 The-Last-Open-Gate-Is-Recast-As-Conditional-Truth-Not-Automatic-Salvation — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Threshold-Solution — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Under-Open-Threshold-Strain — Pair refinement continues.
+S118 The-Book-Finds-Its-Gate-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Final-Resonance-Scale-Consequences — Book 23 loads forward.
+S120 The-Beat-Ends-with-the-Household-Truly-Brought-to-the-Gate — Book 22 is properly underway.
+
+## Canon Guard
+- Use Rylos, not Rylos, in live spine material.
+- Daisy-May and Majeski remain silent Great Danes.
+- Mack remains a half-mile willow tree with booming human speech, terraforming, and life magic.
+- Pip is non-machinic, determined, limited, and sonomancy remains rare and difficult.
+- Ursula remains deity-scale, core-bound, and half-existent.
+

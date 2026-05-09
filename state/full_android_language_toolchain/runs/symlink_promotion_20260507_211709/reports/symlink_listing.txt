@@ -1,0 +1,13 @@
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_active_links/include:
+total 7
+drwx------. 2 u0_a470 u0_a470 3452 May  7 21:17 .
+drwx------. 4 u0_a470 u0_a470 3452 May  7 21:17 ..
+lrwxrwxrwx. 1 u0_a470 u0_a470  132 May  7 21:17 pthread.h -> /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/pthread.h
+lrwxrwxrwx. 1 u0_a470 u0_a470  134 May  7 21:17 semaphore.h -> /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/semaphore.h
+
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_active_links/lib:
+total 7
+drwx------. 2 u0_a470 u0_a470 3452 May  7 21:17 .
+drwx------. 4 u0_a470 u0_a470 3452 May  7 21:17 ..
+lrwxrwxrwx. 1 u0_a470 u0_a470  154 May  7 21:17 libbraxon_android_libc_extensions.a -> /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.a
+lrwxrwxrwx. 1 u0_a470 u0_a470  155 May  7 21:17 libbraxon_android_libc_extensions.so -> /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.so

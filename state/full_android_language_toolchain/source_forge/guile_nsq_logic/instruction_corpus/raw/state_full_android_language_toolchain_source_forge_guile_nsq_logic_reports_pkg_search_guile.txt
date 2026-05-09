@@ -1,0 +1,16 @@
+Checking availability of current mirror:
+[*] https://termux.mentality.rip/termux-main: ok
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Sorting...
+Full Text Search...
+guile/stable 3.0.11-1 aarch64
+  Portable, embeddable Scheme implementation written in C
+
+guile-static/stable 3.0.11-1 aarch64
+  Static libraries for guile
+
+make-guile/stable 4.4.1-2 aarch64
+  Tool to control the generation of non-source files from source files
+

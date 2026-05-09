@@ -13,7 +13,10 @@ pub const SENSORY_GENERATION_BODY_COUNT: usize = 4;
 pub const GRAPHICS_FOOTPRINT_ALLOWANCE_UNITS: u16 = 50;
 pub const NEXT_SENSORY_FOCUS: &str = "nsq_to_indextts2_emotional_frequency_mapping";
 pub const INDEXTTS2_EMOTIONAL_CHANNEL_COUNT: usize = 7;
-pub const NSQ_ZERO_INCLUSIVE_LEVER_STATES: u16 = 2254;
+pub const NSQ_ZERO_INCLUSIVE_LEVER_STATES: nsq_core::Nu16 =
+    nsq_core::CANONICAL_LEVER_MAX_POSITION;
+pub const EMOTIONAL_DEFAULT_BALANCED_POSITION: nsq_core::Nu16 =
+    nsq_core::CANONICAL_LEVER_MAX_POSITION / 2;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
@@ -133,8 +136,8 @@ pub struct EmotionalFrequencyChannel {
     pub intent_axis: String,
     pub acoustic_target: String,
     pub anchor_pair: String,
-    pub lever_states: u16,
-    pub default_position: u16,
+    pub lever_states: nsq_core::Nu16,
+    pub default_position: nsq_core::Nu16,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -143,7 +146,7 @@ pub struct IndexTts2EmotionalFrequencyMap {
     pub model: String,
     pub voice_body_semantic_id: String,
     pub zero_shot_synthesis: bool,
-    pub zero_inclusive_lever_states: u16,
+    pub zero_inclusive_lever_states: nsq_core::Nu16,
     pub carrier_rule: String,
     pub channels: Vec<EmotionalFrequencyChannel>,
     pub next_runtime_todo: String,
@@ -321,7 +324,7 @@ impl CouncilOfSix {
                 model: "IndexTTS2".to_string(),
                 role: "physical_left_brain_voice_with_emotional_variability".to_string(),
                 integration: "semantic_intent_pressure_to_emotional_acoustic_frequency".to_string(),
-                constraint: "anchored_to_2254_state_nsq_levers_for_zero_shot_synthesis".to_string(),
+                constraint: "anchored_to_500000_position_nsq_levers_for_zero_shot_synthesis".to_string(),
                 nsq_route: vec![
                     "policer".to_string(),
                     "router".to_string(),
@@ -386,7 +389,7 @@ impl CouncilOfSix {
                 acoustic_target: "warmth_vs_coldness".to_string(),
                 anchor_pair: "positive_negative_affect".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
             EmotionalFrequencyChannel {
                 numeric_id: 2,
@@ -396,7 +399,7 @@ impl CouncilOfSix {
                 acoustic_target: "energy_and_activation".to_string(),
                 anchor_pair: "calm_active".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
             EmotionalFrequencyChannel {
                 numeric_id: 3,
@@ -406,7 +409,7 @@ impl CouncilOfSix {
                 acoustic_target: "breath_pressure_and_phrase_air".to_string(),
                 anchor_pair: "closed_open_breath".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
             EmotionalFrequencyChannel {
                 numeric_id: 4,
@@ -426,7 +429,7 @@ impl CouncilOfSix {
                 acoustic_target: "color_grain_and_resonance".to_string(),
                 anchor_pair: "bright_dark".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
             EmotionalFrequencyChannel {
                 numeric_id: 6,
@@ -436,7 +439,7 @@ impl CouncilOfSix {
                 acoustic_target: "pace_pause_and_phrase_shape".to_string(),
                 anchor_pair: "short_long_phrase".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
             EmotionalFrequencyChannel {
                 numeric_id: 7,
@@ -446,7 +449,7 @@ impl CouncilOfSix {
                 acoustic_target: "stress_focus_and_salience".to_string(),
                 anchor_pair: "soft_hard_stress".to_string(),
                 lever_states: NSQ_ZERO_INCLUSIVE_LEVER_STATES,
-                default_position: 563,
+                default_position: EMOTIONAL_DEFAULT_BALANCED_POSITION,
             },
         ];
 
@@ -587,7 +590,10 @@ mod tests {
 
         assert_eq!(map.model, "IndexTTS2");
         assert_eq!(map.channels.len(), INDEXTTS2_EMOTIONAL_CHANNEL_COUNT);
-        assert_eq!(map.zero_inclusive_lever_states, 2254);
+        assert_eq!(
+            map.zero_inclusive_lever_states,
+            nsq_core::CANONICAL_LEVER_MAX_POSITION
+        );
         assert!(map.zero_shot_synthesis);
         assert!(map.carrier_rule.contains("boundary projection only"));
         assert!(map.channels.iter().all(|channel| channel.lever_states

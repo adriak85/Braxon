@@ -1,0 +1,6 @@
+BRAXON_SOURCE_FIRST_FORGE_LANE_LOCK=1
+Fri May  8 13:56:43 CDT 2026
+SRC=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge
+JOBS=7
+dbe1bb97739c825652e1006f09fd2690f867b8f11f52e1aa8a7a13d52542b319  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/SOURCE_FIRST_POLICY.md
+096e205b9032bea56ba44e5928031884c74f5654efb472e3b321999496aa836f  /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/source_forge_env

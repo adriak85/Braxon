@@ -1,0 +1,7 @@
+      3 
+      2 test needs en_US.iso88591 locale
+      2 not enough memory: 6.0G minimum needed
+      1 requires debug build
+      1 not enough memory: 8.0G minimum needed
+      1 not enough memory: 4.0G minimum needed
+      1 "resource 'cpu' is not enabled"

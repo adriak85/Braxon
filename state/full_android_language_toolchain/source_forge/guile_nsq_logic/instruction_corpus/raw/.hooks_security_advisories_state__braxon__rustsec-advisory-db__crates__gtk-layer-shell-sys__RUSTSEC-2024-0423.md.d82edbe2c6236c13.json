@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__gtk-layer-shell-sys__RUSTSEC-2024-0423.md.d82edbe2c6236c13.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.935565+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__gtk-layer-shell-sys__RUSTSEC-2024-0423.md.d82edbe2c6236c13.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/gtk-layer-shell-sys/RUSTSEC-2024-0423.md",
+  "source_bytes": 690,
+  "source_sha256": "d82edbe2c6236c13a8b861da3650f7ab079c66d0e225031da92c8968f5d2c8a9",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__gtk-layer-shell-sys__RUSTSEC-2024-0423.md.d82edbe2c6236c13"
+}

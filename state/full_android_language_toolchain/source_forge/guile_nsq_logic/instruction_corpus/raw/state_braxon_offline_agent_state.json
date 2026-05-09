@@ -1,0 +1,79 @@
+{
+  "mission": "BRAXON_offline_first",
+  "charter": "boot offline, work the local task list, verify each step, then expand native runtime and model lanes under Braxon",
+  "cycle_count": 9,
+  "tasks": [
+    {
+      "id": "BRAXON_offline_agent_boot",
+      "phase": "phase_1",
+      "title": "Braxon offline agent boot",
+      "detail": "The root launch path must boot Braxon as an actual offline agent surface.",
+      "status": "done",
+      "action": "verify_root_launch_path",
+      "last_verification": {
+        "verifier": "offline_agent_boot_check",
+        "summary": "root launch path verified with manifest=true, root_main=true, state_file=true"
+      }
+    },
+    {
+      "id": "BRAXON_self_list_execution",
+      "phase": "phase_1",
+      "title": "Braxon self-list execution",
+      "detail": "Braxon must inspect, select, mark, execute, verify, and continue through the internal queue.",
+      "status": "done",
+      "action": "verify_task_queue_control",
+      "last_verification": {
+        "verifier": "offline_task_queue_check",
+        "summary": "queue control verified with prior_done=1 and remaining_actionable=true"
+      }
+    },
+    {
+      "id": "nsq_native_runtime_lane_smoke",
+      "phase": "phase_1",
+      "title": "NSQ native runtime lane smoke",
+      "detail": "Braxon must exercise a native NSQ runtime lane through the root agent surface.",
+      "status": "done",
+      "action": "verify_python3_runtime_lane",
+      "last_verification": {
+        "verifier": "python3_native_runtime_lane",
+        "summary": "lane=python3_native_runtime_lane symbol=offline_boot canonical_cells=5 route=policer->lexer->parser->router->inspector"
+      }
+    },
+    {
+      "id": "nsq_native_offline_model_lane",
+      "phase": "phase_2",
+      "title": "NSQ-native offline model lane",
+      "detail": "Create an explicit offline inference/runtime lane under Braxon and NSQ without C++ authority.",
+      "status": "done",
+      "action": "prepare_offline_model_lane",
+      "last_verification": {
+        "verifier": "offline_model_lane",
+        "summary": "lane=offline_model_native_runtime_lane authority=rust_native_offline_model_lane assets=2 route=policer->router->scheduler->inspector session_surface=zlm_native_runtime_surface representation=stamp_bound_manifest"
+      }
+    },
+    {
+      "id": "BRAXON_core_under_BRAXON",
+      "phase": "phase_2",
+      "title": "BRAXON core model under Braxon",
+      "detail": "Register BRAXON as the core runtime model under the native Braxon path.",
+      "status": "done",
+      "action": "register_BRAXON_core_asset",
+      "last_verification": {
+        "verifier": "Braxon",
+        "summary": "asset=BRAXON manifest=models/braxon/manifest.json authority=rust_native_offline_model_lane session_surface=zlm_native_runtime_surface stamp_bundle=nsq.runtime.native.model.bundle.Braxon.v1,nsq.runtime.native.overhead.compensation.v1,nsq.runtime.native.tokenizer.bridge.v2,nsq.runtime.native.Braxon.feature.attach.v1 summary=offline_request_bound(model=Braxon, prompt_chars=32, representation=stamp_bound_manifest, session_surface=zlm_native_runtime_surface)"
+      }
+    },
+    {
+      "id": "wowas_final_prose_through_BRAXON",
+      "phase": "phase_4",
+      "title": "WoWaS final prose through Braxon",
+      "detail": "Final prose assembly happens only after Braxon can carry the work through its own queue.",
+      "status": "done",
+      "action": "prepare_wowas_final_prose",
+      "last_verification": {
+        "verifier": "wowas_final_prose",
+        "summary": "wowas_final_prose_surface_ready books=25 directories=25 missing_directories=0 correlation_assets=275"
+      }
+    }
+  ]
+}

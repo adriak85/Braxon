@@ -1,0 +1,24 @@
+{
+  "architecture_default": "nu336",
+  "open_weights_required": true,
+  "obliterated_required": true,
+  "model_stack": {
+    "logic_pole": "maverick_232b_obliterated",
+    "creative_pole": "qwen_232b_obliterated",
+    "support_pole": "deepseek_r1_distill_llama_70b_obliterated",
+    "limbic_pole": "gemma_27b_obliterated",
+    "arbiter_pole": "mistral_70b_obliterated",
+    "analyzer_pole": "deepseek_r1_distill_qwen_70b_obliterated"
+  },
+  "law": {
+    "abbreviate_only_provably_safe_sections": true,
+    "stamp_reuse_requires_exact_validation": true,
+    "seam_reuse_requires_exact_transform_validation": true,
+    "section_form": "stamp_reference + local_delta + exception_mask + integrity_witness"
+  },
+  "nu256": {
+    "lead_bit": "o_bit",
+    "lead_payload": "nu256",
+    "satellite_bits": "1_bit_base_units"
+  }
+}

@@ -1,4 +1,4 @@
-use crate::{Charge, NSQLever};
+use crate::{Charge, NSQLever, CANONICAL_LEVER_MAX_POSITION};
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -24,7 +24,8 @@ impl SeatingVerification {
 
     pub fn seat(&mut self) -> Result<(), String> {
         self.state = SeatingState::Seated;
-        self.levers.push(NSQLever::new(Charge::Positive, 1126)?);
+        self.levers
+            .push(NSQLever::new(Charge::Positive, CANONICAL_LEVER_MAX_POSITION)?);
         Ok(())
     }
 

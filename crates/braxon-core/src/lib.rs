@@ -1,3 +1,5 @@
+#![allow(non_snake_case)]
+pub mod bus;
 pub mod context_manifest;
 pub mod council;
 pub mod council_ten;
@@ -14,6 +16,11 @@ use std::path::Path;
 pub use council_ten::{
     CouncilTen, CouncilTenWakeTrace, WakeStep, WakeStepResult, COUNCIL_TEN_AUTHORITY,
     STAMP_WAKE_COUNCIL_TEN,
+};
+pub use bus::{
+    BraxonBus, BraxonBusReport, BusReplyLayer, IntentEnglishLoop, SharedThought,
+    SpeechLoopState, ThoughtPressureCandidate, BRAXON_BUS_ROUTE, BRAXON_BUS_SCHEMA,
+    BRAXON_REPLY_SCHEMA,
 };
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

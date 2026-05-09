@@ -1,0 +1,19 @@
+{
+  "schema": "braxon.android.symlink_promoted_libc_extension.v1",
+  "created_at": "2026-05-07T21:17:12-05:00",
+  "stage": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage",
+  "linkroot": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_active_links",
+  "overlay": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay",
+  "prefix": "/data/data/com.termux/files/usr",
+  "system_write_attempted": false,
+  "termux_prefix_overwrite_attempted": false,
+  "symlink_probe_passed": true,
+  "overlay_probe_passed": true,
+  "symbols": [
+    "sem_clockwait",
+    "pthread_getname_np"
+  ],
+  "transfer_model": "stage_target_to_active_symlink_to_overlay_symlink",
+  "reversible": true,
+  "note": "This proves the active Braxon build chain can land on the staged files through symlinked header/library positions before any irreversible placement."
+}

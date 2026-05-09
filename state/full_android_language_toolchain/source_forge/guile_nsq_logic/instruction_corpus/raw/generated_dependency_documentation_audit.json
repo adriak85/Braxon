@@ -1,0 +1,13 @@
+{
+  "workspace_member_count": 37,
+  "workspace_member_with_docs_count": 36,
+  "workspace_member_missing_docs_count": 1,
+  "workspace_member_missing_docs": [
+    "nsq-universal-fetch"
+  ],
+  "recursive_manifest_count": 38,
+  "recursive_unique_dependency_count": 16,
+  "recursive_internal_path_dependency_count": 5,
+  "system_doc_surface_count": 9,
+  "system_doc_surface_ready_count": 9
+}

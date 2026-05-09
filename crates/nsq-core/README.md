@@ -4,7 +4,7 @@
 
 ## Responsibilities
 - validate anchors as `0|1`
-- validate levers in the canonical `1..=1126` range
+- validate levers in the canonical `1..=500000` range
 - stabilize lever positions from applied hertz samples and correction windows
 - expose canonical switch and word structures used by higher runtime layers
 - define the royal court surface enum

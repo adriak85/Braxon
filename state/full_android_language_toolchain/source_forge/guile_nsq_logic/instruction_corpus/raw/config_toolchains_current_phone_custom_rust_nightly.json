@@ -1,0 +1,21 @@
+{
+  "schema": "braxon.toolchain.custom_rust_nightly_binding.v1",
+  "authority": "NSQ_COURT",
+  "purpose": "bind the current phone custom Rust nightly as the Rust lane for Braxon full-quality builds",
+  "rust_lane": "current_phone_custom_rust_nightly",
+  "rustc_path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc",
+  "cargo_path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo",
+  "expected_host": "aarch64-linux-android",
+  "expected_release_contains": "1.96.0-nightly",
+  "expected_llvm_version_contains": "21.1.8",
+  "source_tarball_build_required": true,
+  "termux_pkg_rust_replacement_allowed": false,
+  "held_rust_package_mutation_allowed": false,
+  "quality_reduction_allowed_without_boundary_report": false,
+  "feature_reduction_allowed_without_boundary_report": false,
+  "repo_policy": {
+    "rust_toolchain_payload_inside_braxon": false,
+    "braxon_consumes_rust_by_manifest": true,
+    "custom_rust_nightly_is_external_toolchain_state": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__slack-morphism__RUSTSEC-2022-0087.md.78b51741d4d1721f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.770629+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__slack-morphism__RUSTSEC-2022-0087.md.78b51741d4d1721f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/slack-morphism/RUSTSEC-2022-0087.md",
+  "source_bytes": 482,
+  "source_sha256": "78b51741d4d1721f5ddfdf665153e165a2f3116e6f6e3877effd676f1da6817e",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__slack-morphism__RUSTSEC-2022-0087.md.78b51741d4d1721f"
+}

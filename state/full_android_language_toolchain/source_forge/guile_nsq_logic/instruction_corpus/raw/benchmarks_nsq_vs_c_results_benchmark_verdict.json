@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "nsq_present": true,
+  "c_present": true,
+  "notes": [
+    "nsq_ok_runs=12",
+    "c_reports=4"
+  ],
+  "verdict": {
+    "nsq_has_artifacts": true,
+    "nsq_determinism_ready": true,
+    "c_has_artifacts": true,
+    "benchmark_state": "compare_now"
+  }
+}

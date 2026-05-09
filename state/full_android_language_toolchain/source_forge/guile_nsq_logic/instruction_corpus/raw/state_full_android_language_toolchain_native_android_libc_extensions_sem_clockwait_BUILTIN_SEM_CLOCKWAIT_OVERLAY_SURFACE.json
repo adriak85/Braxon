@@ -1,0 +1,15 @@
+{
+  "schema": "braxon.android.builtin_sem_clockwait.overlay_surface.v1",
+  "created_at": "2026-05-07T20:48:00-05:00",
+  "overlay": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay",
+  "header": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/include/semaphore.h",
+  "object": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/sem_clockwait.o",
+  "static_archive": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.a",
+  "shared_library": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib/libbraxon_android_libc_extensions.so",
+  "visible_rebuild_script_patched": "/data/data/com.termux/files/home/Braxon/scripts/toolchains/rebuild_full_android_language_toolchain_visible.sh",
+  "default_methods_land_on_surface": true,
+  "partial_sysroot_used": false,
+  "standard_headers_visible": true,
+  "prefix_modified": false,
+  "active_rust_replaced": false
+}

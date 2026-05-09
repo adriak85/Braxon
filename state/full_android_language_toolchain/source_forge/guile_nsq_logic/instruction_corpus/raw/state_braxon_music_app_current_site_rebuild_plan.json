@@ -1,0 +1,142 @@
+{
+  "citadel_699_review": {
+    "beyond_699_hit_count": 2113183,
+    "citadel_hit_count": 943,
+    "path": "state/nsq/citadel699/current/audit.json"
+  },
+  "created_at_unix": 1777076176,
+  "schema": "Braxon.music_app.site_rebuild_plan.v1",
+  "sections": [
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 0,
+      "section": "intro",
+      "seed_hash": "d3d2a664ad4ef3b1c164081f9adceb7fa790064a7536acfd09fd69928fba4f35",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    },
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 1,
+      "section": "verse",
+      "seed_hash": "9b13609e97fde293423c7aed90164cf53ff8df5389fe3b6d7c3bca0236a3edab",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    },
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 2,
+      "section": "pre_chorus",
+      "seed_hash": "21abf0b09aff29293d2862d8f7ddcee02ef9af578ee5f825f196af7e78787351",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    },
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 3,
+      "section": "chorus",
+      "seed_hash": "79f7e48fb902db7220a5826983330c3dabb9f4e50ae9462283e208e0751908c2",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    },
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 4,
+      "section": "bridge",
+      "seed_hash": "2794d8a0ec0fa2bf6732cba16e9fd94e3ed622b54455dfc4b9454110cf30fd59",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    },
+    {
+      "local_generation_rule": "native_preview_synth_seeded_section_pattern_v1",
+      "ordinal": 5,
+      "section": "outro",
+      "seed_hash": "94655821d8ba4c6d9305d8b56c3e61033bef04bdffdb3c152ce78eb0be04c579",
+      "transfer": {
+        "omit_if_rebuildable": [
+          "full_pcm",
+          "expanded_stems",
+          "duplicated_pattern_body"
+        ],
+        "required": [
+          "section_name",
+          "ordinal",
+          "seed_hash",
+          "duration_hint",
+          "local_generation_rule"
+        ]
+      }
+    }
+  ],
+  "seed_pack": {
+    "entries": 900,
+    "path": "state/nsq/site_rebuild/current/beyond_699_seed_pack.jsonl",
+    "sha256": "8704cf961b29f5fd90f183b207520b0b7f7ce2f298fc2fd4e220813fc3b1835b"
+  },
+  "strategy": "transfer_enough_of_each_section_to_rebuild_rest_on_site",
+  "truth_boundary": {
+    "can_rebuild_deterministic_sections": true,
+    "can_rebuild_unknown_source_without_verifier": false,
+    "full_music_generation_claim": false
+  }
+}

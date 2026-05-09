@@ -1,0 +1,618 @@
+# Book_21_The_Final_Descent
+
+# Book_21_The_Final_Descent
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 21 — Depth = Pressure
+
+## Working local time span
+weeks
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_21_The_Final_Descent
+
+- none placed yet
+- B21_101 — Roots = Revelation
+- B21_102 — Descent = Inheritance
+- B21_103 — Return = Marked
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_21_The_Final_Descent
+
+- no mapped beats yet
+
+## B21_101 — Roots = Revelation
+
+## B21_102 — Descent = Inheritance
+
+## B21_103 — Return = Marked
+
+### 04_scene_spine.md
+
+# The Final Descent Scene Spine
+
+### 06_blood_cello_escalation.md
+
+# Book 21 — The Final Descent — Blood Cello Escalation
+
+Status: provisional working draft  
+Authority: best-fit inferred escalation
+
+## Current late-book structural need
+Descend through a world that is both war zone and wound chamber.
+
+## Nieth pressure in this book
+Her lingering weave is one of the major reasons the descent path still coheres at all.
+
+## Rippers / Unweavers pressure in this book
+Relentless route-denial and anti-thread violence.
+
+## Wraithbound / Wraith pressure in this book
+Threshold horror, dead-presence falsehoods, and emotional distortion.
+
+## War / battle pressure
+Near-continuous underworld war pressure.
+
+## Mystic wonder set piece
+Final descent through layered domains of light-loss, glass fracture, and living shadow.
+
+## Emotional fracture / reunion vector
+Characters are forced to descend through the exact forms of grief they were avoiding.
+
+## Major sacrifice or death candidate
+Support-cast terminal loss with clear inherited consequence.
+
+## Villain downfall candidate
+Threshold tyrant or anti-return architect.
+
+## Blood Cello setup consequence
+Everything narrows toward one final trigger rather than diffusing across many deaths.
+
+## 10 candidate escalations
+1. Descent under anti-thread bombardment
+2. Wraith-guided false reunion trap
+3. Nieth-held passage collapses behind the cast
+4. Xethrolund rescue that costs stability
+5. Support-cast death saving the path
+6. Ursula-domain war bottleneck explodes
+7. Pip forced to feel all living threads in descent
+8. Rolzen saves a collapse window
+9. Villain is undone by refusing mercy
+10. Daisy anchors a return-point in the descent
+
+## score table
+- 1: 8
+- 2: 8
+- 3: 9
+- 4: 8
+- 5: 8
+- 6: 7
+- 7: 10
+- 8: 8
+- 9: 7
+- 10: 7
+
+## winning escalation
+Pip is forced to feel all living and failing threads during a Nieth-held passage collapse.
+
+## reason chosen
+Best prepares Blood Cello’s life-thread logic while keeping descent physically catastrophic.
+
+## rejected 9 and why
+- 1 supports the event, but is less unique
+- 2 strong secondary pressure
+- 3 merged with winning escalation
+- 4 should support not dominate
+- 5 useful, but not the defining movement
+- 6 too external
+- 8 better as support beat
+- 9 better later in revelation-field logic
+- 10 strong but secondary
+
+## downstream consequence into later books / Blood Cello
+Pip’s final playing in Book 25 feels seeded, not sudden.
+
+## exact source surfaces consulted
+- saved Codex prompt 03
+- saved Codex prompt 05
+- arc coverage report
+
+### 07_death_rebirth_framework.md
+
+# Book 21 The Final Descent — Death / Rebirth Framework
+
+Status: provisional working draft
+Authority: best-fit inferred framework
+
+## Current structural need
+This book must make death mean something specific and prepare Blood Cello return to answer that meaning rather than erase it.
+
+## Good / beloved deaths in this book should clarify
+- what was being saved
+- why that saving mattered
+- who inherits the consequence
+- what emotional and structural hole is left behind
+- what kind of rebirth answer Blood Cello should eventually provide
+
+## Bad / villainous deaths in this book should clarify
+- what was learned too late
+- what truth or terror they died with
+- what kind of complicated return Blood Cello should eventually allow
+
+## Wake emphasis
+- specific wake over generic sadness
+- structural wake over isolated sentiment
+- return must answer the wound-form this book creates
+
+## Book-specific emphasis
+- descent as wound chamber
+- deaths that save path, continuity, or shared survival
+- Pip learning the texture of failing life-threads
+
+### 08_named_support_cast_assignment.md
+
+# Book 21 The Final Descent — Named Support-Cast Assignment
+
+Status: provisional working draft
+Authority: best-fit inferred support-cast assignment
+
+## Purpose
+Assign named support characters to concrete sacrifice, wake, continuity, and return functions so the late run feels fully inhabited and Blood Cello return payoff becomes communal.
+
+## Requirements
+- every named support death must save something specific
+- every wake must leave a distinct hole
+- every return must answer that hole
+- no support death may compete with Rylos as trigger death
+
+## Book-specific support assignment
+- Sorra most likely dies preserving triage continuity
+- Damwen or Davan may also die if the descent needs second-order cost
+- wake effect: care-hole, elder-hole, or knowledge-hole
+- return effect: relief, dignity, and restoration of survivable order
+
+### 09_villain_return_texture.md
+
+# Book 21 The Final Descent — Villain Return Texture
+
+Status: provisional working draft
+Authority: best-fit inferred villain-return pass
+
+## Purpose
+Ensure antagonists die learning something specific and return in Blood Cello with an emotionally correct texture rather than cheap redemption or flat punishment.
+
+## Core requirements
+- identify what the villain dies learning
+- identify what their wake is
+- identify what kind of return texture best fits
+- identify how this strengthens Blood Cello
+
+## Book-specific mapping
+- best-fit villain type: anti-return / anti-thread architect
+- dies learning: severance cannot erase meaning cleanly
+- wake: terror at what they almost removed from reality
+- return texture: unsettling return
+- Blood Cello value: lets resurrection answer anti-thread desecration directly
+
+### 10_weak_area_balance.md
+
+# Book 21 The Final Descent — Weak Area Balance
+
+Status: provisional working draft
+Authority: best-fit inferred balancing pass
+
+## Purpose
+Identify any remaining thin areas in this book and balance them using the same 10-option scoring method.
+
+## Standard weak areas to test
+- Ursula’s Domain density
+- Xethrolund late embodiment
+- Boojay / Rylos trigger-line loading
+- Nieth physical continuity effects
+- Rippers / Wraithbound differentiation
+- support-cast function clarity
+- villain specificity
+- wake / return scene visibility
+
+## Book-specific balancing
+- likely weak area: life-thread logic may still need seeding
+- balance choice: make Pip feel failing threads directly during descent passages
+
+### 11_scene_insertion_targets.md
+
+# Book 21 The Final Descent — Scene Insertion Targets
+
+Status: provisional working draft
+Authority: best-fit inferred scene pass
+
+## Purpose
+Turn chosen escalation, death/wake, support-cast, villain-texture, and weak-area balancing into visible page events.
+
+## insertion count target
+- minimum: 1
+- preferred: 2
+- maximum: 3
+- Book 25 may exceed this because it is terminal convergence
+
+## target scenes
+1. Pip directly feeling failing life-threads during descent collapse
+2. triage-continuity sacrifice scene, tied to Sorra if used
+3. Nieth-held passage collapse showing catastrophe coherence in action
+
+### 12_scene_blocks.md
+
+# Book 21 The Final Descent — Scene Blocks
+
+Status: provisional working draft
+Authority: best-fit inferred scene implantation pass
+
+## Purpose
+Provide direct insertable scene blocks that satisfy the already locked escalation, wake, support-cast, villain-texture, and weak-area requirements.
+
+## Formatting note
+These are not final prose chapters. They are canon scene blocks designed to be inserted, expanded, or fused into beat files and chapter surfaces.
+
+## Scene Block 1 — Thread Pressure in the Descent
+Placement: early-middle descent
+
+Summary:
+The descent collapses partially, and Pip feels living and failing life-threads directly for the first time at unbearable scale. This is not yet Blood Cello, but it is its bodily precursor. He does not gain mastery from this. He gains pain, scale, and unwilling intimacy with the survival of others.
+
+Purpose:
+- seed Book 25 thread perception
+- turn descent into wound-chamber, not just environment
+- make Pip’s burden more exact
+
+Required details:
+- physical collapse and life-thread perception happen together
+- Pip’s humility remains intact; he does not treat this like power acquisition
+- someone has to pull him back into motion
+
+## Scene Block 2 — Sorra’s Care-Hole
+Placement: after collapse survival, if Sorra line is used
+
+Summary:
+Sorra chooses triage continuity over self-preservation. The important thing is not only that she dies or is lost; it is that the group immediately feels what kind of world disappears when a healer like her is gone. Her wake must be practical, moral, and intimate.
+
+Purpose:
+- create a care-hole
+- satisfy death/rebirth framework with specific wake
+- diversify the kinds of late-book cost
+
+Required details:
+- someone survives because Sorra stays
+- someone else understands instantly what has been lost
+- no melodrama inflation; let function make it hurt
+
+## Scene Block 3 — Nieth-Held Passage
+Placement: later descent transition
+
+Summary:
+A passage that should have collapsed long ago still holds because Nieth’s destroyed-but-lingering weave remains active. The scene must make that coherence feel damaged, wrong, and necessary.
+
+Purpose:
+- prevent Nieth from staying abstract
+- justify how catastrophe remains navigable long enough for convergence
+- deepen the sense that the world is being held together by wounded remnants
+
+### 13_dialogue_targets.md
+
+# Book 21 The Final Descent — Dialogue Targets
+
+Status: provisional working draft
+Authority: best-fit inferred dialogue pass
+
+## Purpose
+Define what each inserted scene must accomplish through dialogue, silence, interruption, subtext, confession, command, or refusal.
+
+## Rules
+- keep dialogue character-native
+- no exposition speeches unless a character would actually break that way
+- prefer pressure-revealing lines over lore-explaining lines
+
+## Dialogue Target 1 — Pip Under Thread Pressure
+- Pip should speak less, not more, as the pressure rises
+- if he names what he feels, it should sound involuntary and personal, not analytical
+- other characters should react to his suffering before they understand it
+
+## Dialogue Target 2 — Sorra’s Scene
+- care-language must be direct and unsentimental
+- final words, if any, should be about the saved, not the self
+- the group’s reaction should reveal the size of the care-hole
+
+## Dialogue Target 3 — Nieth Passage
+- characters should argue over whether to trust a path that feels wrong
+- no one should sound sure
+
+### 14_prose_tone_targets.md
+
+# Book 21 The Final Descent — Prose Tone Targets
+
+Status: provisional working draft
+Authority: best-fit inferred prose pass
+
+## Purpose
+Lock the tonal behavior of this book so inserted scenes, dialogue, wakes, returns, and villain textures all sound like the same saga.
+
+## Evaluation frame
+Score uncertain prose decisions by:
+- character truth
+- structural necessity
+- wake specificity
+- rebirth answer potential
+- pressure value
+- mythic coherence
+- relational consequence
+- scene visibility
+
+## tonal priorities
+- prose should narrow under strain
+- descent must feel bodily, not only scenic
+- thread-language should hurt before it clarifies
+- care scenes must be exact and unsentimental
+
+## likely weak prose risks
+- thread language becoming grandiose
+- triage scenes becoming melodramatic
+- Nieth-held passage becoming mere explanation
+
+## strongest prose corrections
+- keep Pip’s perception partial
+- let Sorra or equivalent care through action-first language
+- make collapsing passage concrete in stone, sound, breath, and motion
+
+### 15_resolution_evaluation.md
+
+# Book 21 The Final Descent — Resolution + Evaluation
+
+Status: provisional working draft
+Authority: best-fit inferred finalization pass
+
+## Purpose
+Provide a sane resolution order and evaluation method for finishing this book without overworking low-value surfaces.
+
+## Resolution rule
+Prefer the option that most strengthens:
+- Pip’s humility
+- Boojay / Rylos singularity
+- wake specificity
+- return precision
+- pressure and inevitability
+- Rippers / Wraithbound distinction
+
+## best resolution priority
+1. thread-pressure scene
+2. care-hole sacrifice scene
+3. Nieth-held passage scene
+
+## evaluation focus
+- Pip must sound burdened, not empowered
+- if care scenes sound inspirational instead of costly, rewrite lower and plainer
+- if the passage scene feels lore-heavy, cut explanation and increase physical detail
+
+### 16_salvage_beats.md
+
+# Book 21 — The Final Descent — Salvage Beats
+
+Status: additive completion pass
+Authority: character salvage integration
+
+## B21_101 — Roots = Revelation
+Function:
+Roots Revealed lands during the descent. Retreat becomes structurally impossible.
+
+Required truths:
+- Mack and Ursula inheritance logic both matter
+- revelation happens through environment and cost
+- Pip is forced into knowledge he cannot unknow
+
+## B21_102 — Descent = Inheritance
+Function:
+Ursula's ghost-pressure joins Mack-root pressure in the underworld path.
+
+Required truths:
+- she is still not casually embodied
+- her presence changes what stone, passage, and collapse do
+- maternal threshold energy enters action rather than lecture
+
+## B21_103 — Return = Marked
+Function:
+Daisy May marks the return-point physically and emotionally during final descent.
+
+Required truths:
+- she gives the party one true line back
+- she does not need explanation to be correct
+- the beat must hurt because it feels dependable amid catastrophe
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 21 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Final Descent
+
+## B21.01 — Descent Stops Being Metaphor
+target_scenes: 12
+
+S001 The-Book-Opens-on-Movement-Downward-That-Is-No-Longer-Symbolic — The final descent becomes route reality.
+S002 Pip-Feels-the-Lowering-As-Bodily-Dread-and-Necessity — Emotional and structural strain deepen immediately.
+S003 Rylos-Vayne-Johnson-Reads-the-Descent-As-Both-Physical-and-Moral-Commitment — Discernment remains load-bearing.
+S004 Mack-Booming-Voice-Rolls-Through-a-Sanctuary-Preparing-the-Household-for-Lowered-Worlds — The vast willow remains present through the plunge.
+S005 The-Ground-Grows-Downward-Paths-Root-Ramps-and-Depth-Grottos-Out-of-the-Earth — Life magic responds to lowering stakes.
+S006 Pip-Understands-That-Going-Down-Means-Entering-What-Has-Been-Beneath-So-Much-of-Everything — Serious maturity note.
+S007 Rylos-Refuses-to-Let-Him-Treat-the-Descent-As-Only-Heroic-Course — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Center-In-Silent-Great-Dane-Truth — Canon remains central.
+S009 The-Sanctuary-Feels-Like-a-Living-Origin-Point-for-a-Drop-That-Matters-to-the-Whole-World — Setting truth deepens.
+S010 Pip-Does-Not-Imagine-Sonomancy-Will-Suddenly-Make-Depth-Simple — Safeguard remains intact.
+S011 Mack-Frames-the-Descent-As-a-Choice-to-Enter-Reality-More-Fully — Deity-scale reading enters.
+S012 The-Beat-Ends-with-the-Final-Descent-Classified-Correctly — Book 21 begins under downward-entry law.
+
+## B21.02 — What Lies Below Has Been Governing Above
+target_scenes: 12
+
+S013 The-Household-Begins-Understanding-How-Much-the-Lower-World-Has-Already-Shaped-the-Upper-One — Pattern clarity deepens.
+S014 Pip-Feels-the-Terror-of-Retroactive-Meaning — Emotional realism deepens.
+S015 Rylos-Reads-Which-Surface-Histories-Now-Make-More-Sense-in-Light-of-Depth — Practical clarity remains essential.
+S016 Mack-Grows-Low-Observation-Rings-Listening-Shelves-and-Descending-Corridors-Out-of-the-Ground — Terrain becomes descent-reading apparatus.
+S017 The-Sanctuary-Uses-Living-Form-to-Teach-Vertical-Truth — Setting remains active intelligence.
+S018 Daisy-May-Rests-Silent-Within-the-Hard-Conversation — Great Dane truth remains powerful.
+S019 Majeski-Holds-the-Outer-Readiness-of-the-Household — The pair remain themselves.
+S020 Pip-Understands-That-Descent-Is-Not-Detour-But-Source-Approach — Serious maturity note.
+S021 Rylos-Confirms-It-Cleanly — Bond remains refined.
+S022 Mack-Rejects-Any-Reading-of-Depth-As-Only-Evil-or-Only-Myth — Tonal law remains serious.
+S023 The-Land-Itself-Feels-Like-It-Is-Revealing-Its-Stacked-Truths — World-state texture sharpens.
+S024 The-Beat-Ends-with-Below-Recast-As-Governing-Truth — Book 21 deepens properly.
+
+## B21.03 — Pip Trains Before Going Lower
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-He-Cannot-Bear-Entering-Greater-Depth-This-Unready — Persistence remains core.
+S026 He-Practices-Alone-In-a-Chamber-Mack-Grows-Deep-Quiet-and-Root-Braced — Private discipline continues.
+S027 The-First-Attempt-Fails-Because-the-Thought-of-Descent-Distorts-His-Focus — Difficulty remains severe.
+S028 The-Second-Attempt-Catches-a-Faint-Vertical-Resonance-and-Loses-It — Tiny progress only.
+S029 Pip-Feels-How-Little-His-Skill-Matches-the-Depth-They-Are-Approaching — Honest emotional truth deepens.
+S030 He-Does-Not-Convert-That-Into-False-Chosen-Suffering — Safeguard remains intact.
+S031 He-Stays-a-Determined-Real-Being-Failing-in-Private — Character truth remains stable.
+S032 Rylos-Senses-the-Strain-Afterward-Again — Bond sensitivity continues.
+S033 Mack-Knows-and-Keeps-It-Private-Again — Sanctuary protects dignity.
+S034 Sonomancy-Stays-Rare-Hard-and-Non-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Discipline-for-Fear-Not-Mastery-of-Depth — Honest development.
+S036 The-Beat-Ends-with-Depth-Still-Beyond-His-Magic — Book law stays true.
+
+## B21.04 — The Household Reorients Around Going Down
+target_scenes: 12
+
+S037 The-Imminent-Descent-Changes-Daily-Life-Itself — Domestic structure rearranges toward vertical commitment.
+S038 Pip-Feels-How-Hard-It-Is-to-Live-Normally-When-the-Next-Step-Is-Lowering-Into-World-Wound — Emotional realism deepens.
+S039 Rylos-Reads-Where-the-Household-Is-Most-Likely-to-Fray-Before-Departure — Practical clarity remains crucial.
+S040 Mack-Grows-Staging-Grottos-Intermediate-Platforms-and-Safe-Ramp-Points-Out-of-the-Earth — Life magic remains central and relational.
+S041 The-Sanctuary-Becomes-a-Living-Descent-Engine — Setting truth deepens.
+S042 Daisy-May-and-Majeski-Hold-the-Household-Center-As-Everything-Starts-Orienting-Downward — Great Dane truth remains structural.
+S043 Pip-Learns-That-Preparation-for-Depth-Is-Itself-a-Phase-of-Descent — Serious growth note.
+S044 Rylos-Keeps-the-Moment-From-Turning-Into-Only-Dread — Bond remains corrective.
+S045 Mack-Frames-Reorientation-Around-Descent-As-Real-Work-Not-Dramatic-Posture — Deity teaching deepens.
+S046 The-Land-Feels-More-Stable-When-No-One-Pretends-the-Drop-Isn't-Coming — World-state mirrors truth.
+S047 The-Household-Begins-to-Inhabit-the-Approach-to-Lowering — Family architecture adapts.
+S048 The-Beat-Ends-with-Going-Down-Recast-As-Lived-Preparation — Book 21 remains accurate.
+
+## B21.05 — Ursula Draws Nearer Through Descent
+target_scenes: 12
+
+S049 The-Final-Descent-Makes-Ursulas-Core-Bound-Half-Existence-Feel-Nearer-and-More-Immediate-than-Ever — Deity truth remains central.
+S050 Pip-Feels-the-Amethyst-Core-As-a-Destination-of-Sorrow — Emotional stakes deepen.
+S051 Rylos-Reads-That-Descent-Is-Also-Approach-to-Her-Binding — Practical clarity matters.
+S052 Mack-Speaks-of-Ursula-As-Core-Bound-Deity-Again-Without-Flattening-Her — Canon stays embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Deepening-Beneath-Descending-Rootwork — Symbol and state remain joined.
+S054 Pip-Understands-That-Going-Lower-Means-Going-Closer-to-the-Center-of-Wrongness-and-Loss — Serious maturity note.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague cosmic drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Larger-Wound — Great Dane truth holds.
+S057 Mack-Frames-the-Descent-As-Approach-to-a-Bound-Truth-Not-Only-a-Geological-One — Deity reading sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Growing-a-Path-Toward-a-Buried-Goddess-and-Broken-Heart — Setting truth deepens.
+S059 Pip-Hates-That-Truth-and-Stays-Present-to-It — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Final-Descent-Book — Book 21 stays aligned.
+
+## B21.06 — Rylos Refuses Depth Worship
+target_scenes: 12
+
+S061 The-Approach-to-Depth-Invites-Everyone-to-Treat-Below-As-More-Real-Than-Love-or-Life-Above — Tonal and moral risk sharpens.
+S062 Pip-Feels-the-Pull-of-That-Seriousness — Emotional realism continues.
+S063 Rylos-Refuses-to-Let-Depth-Itself-Be-Crowned-as-Truth's-Only-Form — Mature love remains corrective.
+S064 Mack-Supports-the-Moment-With-Land-Shaped-for-Standing-True-Before-Lowering — Terrain reinforces moral clarity.
+S065 Daisy-May-Lies-Silent-at-the-Center-and-Keeps-the-Resistance-Honest — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Outer-Readiness-of-the-Household — Pair truth continues.
+S067 Pip-Learns-That-Going-Down-Is-Not-the-Same-As-Bowing-Down — Serious growth deepens.
+S068 Rylos-Gives-Him-Cleaner-Language-for-Entering-Depth-Without-Worshipping-It — Bond remains refined.
+S069 Mack-Rejects-Cheap-Depth-Reverence — Deity teaching remains sharp.
+S070 The-Land-Feels-Less-Malignant-When-No-One-Confers-Sovereignty-on-the-Below — Setting mirrors truth.
+S071 Pip-Stays-Real-Under-Pressure-to-Be-Rewritten-by-Approach — Internal victory.
+S072 The-Beat-Ends-with-Depth-Worship-Refused — Book 21 deepens correctly.
+
+## B21.07 — Daisy-May and Majeski Remain True at the Brink
+target_scenes: 12
+
+S073 The-Descent-Book-Could-Easily-Use-the-Dogs-As-Innocence-Icons-and-Does-Not — Canon remains actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Living-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-It-Matters-That-Some-Presences-Remain-Clean-and-Real-at-the-Brink-of-Depth — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Truthfulness-Keeps-the-Household-from-Going-Symbolic-and-Wrong — Important insight.
+S078 Mack-Grows-Sheltered-Runs-and-Resting-Hollows-for-Them-Without-Humanizing-Them — Representation stays correct.
+S079 The-Sanctuary-Honors-Them-With-Space-Not-Speech — Setting truth remains good.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Feels-More-True-When-Species-and-Relational-Truth-Are-Kept-Clean — Theme sharpens.
+S084 The-Beat-Ends-with-Daisy-May-and-Majeski-Held-Firm-at-the-Brink — Book 21 stays clean.
+
+## B21.08 — The First Committed Lowering
+target_scenes: 12
+
+S085 The-Household-Makes-Its-First-True-Commitment-to-the-Descent-Route — Escalation becomes route fact.
+S086 Pip-Feels-the-Downward-Choice-In-His-Body-Before-He-Can-Fully-Name-It — Emotional realism deepens.
+S087 Rylos-Reads-the-Line-They-Can-Still-Hold-In-Real-Time — Practical clarity remains crucial.
+S088 Mack-Raises-Descending-Root-Ramps-Anchor-Ridges-and-Fall-Checks-From-the-Earth — Terraforming remains central.
+S089 The-Sanctuary-Acts-Like-a-Living-Spine-Carrying-Them-Lower — Setting truth sharpens.
+S090 Pip-Does-Not-Assume-Courage-or-Magic-Will-Make-This-Clean — Honesty remains intact.
+S091 He-Does-Choose-Correctly-Within-His-Limits — Determination remains core.
+S092 Daisy-May-and-Majeski-Move-Within-the-Household-Pattern-As-Silent-Great-Dane-Truth — Canon continues to matter.
+S093 Ursula's-Core-Presence-Feels-Agonizingly-Nearer-During-the-Lowering — Deity stakes remain active.
+S094 Rylos-Keeps-the-Choice-Clean-From-Panic-Fantasy — Bond remains corrective.
+S095 The-World-Feels-More-Vertical-and-More-Personal-than-Before — Tone remains honest.
+S096 The-Beat-Ends-with-Committed-Lowering-Underway — Book 21 gains forward motion.
+
+## B21.09 — What Descent Does to Love
+target_scenes: 12
+
+S097 The-Final-Descent-Forces-the-Pair-to-Reckon-With-How-Love-Holds-While-Moving-Toward-Worse-Truths — Relational stakes deepen.
+S098 Pip-Feels-How-Easy-It-Is-to-Mistake-Shared-Descent-for-Fate-Instead-of-Choice — Emotional insight sharpens.
+S099 Rylos-Frames-Love-As-Something-That-Must-Remain-Accurate-Even-Going-Lower — Mature clarity remains.
+S100 Mack-Grows-a-Low-Wide-Descent-Glen-for-the-Conversation — The land becomes relational truth space again.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Center-As-That-Truth-Is-Spoken — Great Dane truth remains central.
+S102 Ursula's-Binding-Makes-Every-Love-Question-Feel-Bigger-and-Sadder — Deity stakes deepen.
+S103 Pip-Does-Not-Turn-Love-Into-Descent-Martyrdom — Anti-martyr safeguard remains intact.
+S104 He-Does-Take-Its-Accuracy-Seriously — Determination remains real.
+S105 Rylos-Stands-With-Him-In-the-Cleaner-Version-of-That-Truth — Pair refinement continues.
+S106 Mack-Blesses-Accurate-Love-Not-Bottomless-Devotion — Character remains true.
+S107 The-Sanctuary-Proves-That-Love-Can-Stay-True-While-Moving-Toward-Depth — Setting truth shines.
+S108 The-Beat-Ends-with-Love-Recast-Under-Descent-Pressure — Book 21 deepens honestly.
+
+## B21.10 — Book Twenty-One Locks Its First Descent Law
+target_scenes: 12
+
+S109 Descent-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Lowering-Pressure — Core correction remains intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-Final-Descent — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-the-Final-Descent-Book — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Lowering-Pressure — Canon actively protected.
+S115 The-Final-Descent-Is-Recast-As-Route-Into-Buried-Truth-Not-Only-Dramatic-Fall — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Depth-Solution — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Under-Lowering-Truth — Pair refinement continues.
+S118 The-Book-Finds-Its-Descent-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Last-Open-Gate-Scale-Consequences — Book 22 loads forward.
+S120 The-Beat-Ends-with-the-Household-Truly-Entering-the-Final-Descent — Book 21 is properly underway.
+
+## Canon Guard
+- Use Rylos, not Rylos, in live spine material.
+- Daisy-May and Majeski remain silent Great Danes.
+- Mack remains a half-mile willow tree with booming human speech, terraforming, and life magic.
+- Pip is non-machinic, determined, limited, and sonomancy remains rare and difficult.
+- Ursula remains deity-scale, core-bound, and half-existent.
+

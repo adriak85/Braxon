@@ -1,0 +1,226 @@
+BRAXON TERMINAL FORGE REPORT
+jobs: 7
+
+resolver strategies:
+01. current_config_path
+02. tool_config_path
+03. pkg_config_path
+04. overlay_include_path
+05. adoption_include_path
+06. dereferenced_integrated_prefix
+07. copied_native_header_prefix
+08. patched_sysconfig_or_metadata
+09. env_override_flags
+10. generated_config_shim
+
+tool surface:
+=== braxon-python ===
+found: false
+path: 
+version: 
+
+=== braxon-rustc ===
+found: false
+path: 
+version: 
+
+=== braxon-cargo ===
+found: false
+path: 
+version: 
+
+=== python3 ===
+found: true
+path: /data/data/com.termux/files/usr/bin/python3
+version: Python 3.13.13
+
+=== perl ===
+found: true
+path: /data/data/com.termux/files/usr/bin/perl
+version: This is perl 5, version 42, subversion 0 (v5.42.0) built for aarch64-android |  | Copyright 1987-2025, Larry Wall |  | Perl may be copied only under the terms of either the Artistic License or the | GNU General Public License, which may be found in the Perl 5 source kit.
+
+=== ruby ===
+found: true
+path: /data/data/com.termux/files/usr/bin/ruby
+version: ruby 3.4.1 (2024-12-25 revision 48d4efcb85) +PRISM [aarch64-linux-android]
+
+=== node ===
+found: true
+path: /data/data/com.termux/files/usr/bin/node
+version: v25.8.2
+
+=== npm ===
+found: true
+path: /data/data/com.termux/files/usr/bin/npm
+version: 11.13.0
+
+=== go ===
+found: true
+path: /data/data/com.termux/files/usr/bin/go
+version: go version go1.26.2 android/arm64
+
+=== lua ===
+found: true
+path: /data/data/com.termux/files/usr/bin/lua
+version: Lua 5.4.8  Copyright (C) 1994-2025 Lua.org, PUC-Rio
+
+=== rustc ===
+found: true
+path: /data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc
+version: rustc 1.96.0-nightly (fd0c901b0 2026-03-18) (built from a source tarball)
+
+=== cargo ===
+found: true
+path: /data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo
+version: cargo 1.96.0-nightly (cbb9bb8bd 2026-03-13) (built from a source tarball)
+
+=== clang ===
+found: true
+path: /data/data/com.termux/files/usr/bin/clang
+version: clang version 21.1.8 | Target: aarch64-unknown-linux-android24 | Thread model: posix | InstalledDir: /data/data/com.termux/files/usr/bin
+
+=== clang++ ===
+found: true
+path: /data/data/com.termux/files/usr/bin/clang++
+version: clang version 21.1.8 | Target: aarch64-unknown-linux-android24 | Thread model: posix | InstalledDir: /data/data/com.termux/files/usr/bin
+
+=== ld.lld ===
+found: true
+path: /data/data/com.termux/files/usr/bin/ld.lld
+version: 
+
+=== llvm-ar ===
+found: true
+path: /data/data/com.termux/files/usr/bin/llvm-ar
+version: 
+
+=== llvm-ranlib ===
+found: true
+path: /data/data/com.termux/files/usr/bin/llvm-ranlib
+version: 
+
+=== zig ===
+found: true
+path: /data/data/com.termux/files/usr/bin/zig
+version: 0.16.0
+
+=== zls ===
+found: true
+path: /data/data/com.termux/files/usr/bin/zls
+version: 0.16.0
+
+=== tree-sitter ===
+found: true
+path: /data/data/com.termux/files/usr/bin/tree-sitter
+version: tree-sitter 0.26.8
+
+=== java ===
+found: false
+path: 
+version: 
+
+=== javac ===
+found: false
+path: 
+version: 
+
+=== gradle ===
+found: false
+path: 
+version: 
+
+=== kotlinc ===
+found: false
+path: 
+version: 
+
+=== kotlin ===
+found: false
+path: 
+version: 
+
+=== aapt ===
+found: false
+path: 
+version: 
+
+=== apksigner ===
+found: false
+path: 
+version: 
+
+=== dx ===
+found: false
+path: 
+version: 
+
+=== zipalign ===
+found: false
+path: 
+version: 
+
+=== cmake ===
+found: true
+path: /data/data/com.termux/files/usr/bin/cmake
+version: cmake version 4.3.2 |  | CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+=== ninja ===
+found: true
+path: /data/data/com.termux/files/usr/bin/ninja
+version: 1.13.2
+
+=== make ===
+found: true
+path: /data/data/com.termux/files/usr/bin/make
+version: GNU Make 4.4.1 | Built for aarch64-unknown-linux-android | Copyright (C) 1988-2023 Free Software Foundation, Inc. | License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html> | This is free software: you are free to change and redistribute it. | There is NO WARRANTY, to the extent permitted by law.
+
+=== pkg-config ===
+found: true
+path: /data/data/com.termux/files/usr/bin/pkg-config
+version: 0.29.2
+
+=== git ===
+found: true
+path: /data/data/com.termux/files/usr/bin/git
+version: 
+
+=== curl ===
+found: true
+path: /data/data/com.termux/files/home/bin/curl
+version: 
+
+=== jq ===
+found: true
+path: /data/data/com.termux/files/usr/bin/jq
+version: jq-1.8.1
+
+=== rg ===
+found: true
+path: /data/data/com.termux/files/usr/bin/rg
+version: ripgrep 15.1.0 |  | features:+pcre2 | simd(compile):+NEON | simd(runtime):+NEON | 
+
+=== fd ===
+found: true
+path: /data/data/com.termux/files/usr/bin/fd
+version: fd 10.4.2
+
+=== file ===
+found: true
+path: /data/data/com.termux/files/usr/bin/file
+version: 
+
+=== proot ===
+found: true
+path: /data/data/com.termux/files/usr/bin/proot
+version: _____ _____              ___ | |  __ \  __ \_____  _____|   |_ | |   __/     /  _  \/  _  \    _| | |__|  |__|__\_____/\_____/\____| 5.1.0 |  | built-in accelerators: process_vm = yes, seccomp_filter = yes
+
+=== fakeroot ===
+found: false
+path: 
+version: 
+
+=== tsu ===
+found: false
+path: 
+version: 
+

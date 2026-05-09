@@ -1,0 +1,7 @@
+BRAXON_PYTHON_NATIVE_LOCK=1
+PYTHON=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/python/bin/python3.16
+LAUNCHER=/data/data/com.termux/files/home/Braxon/braxon-python
+PREFIX=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/python
+DYNLIB=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/python/lib/python3.16/lib-dynload
+VERIFY=/data/data/com.termux/files/home/Braxon/scripts/verify_braxon_python_native.sh
+RESEAT=/data/data/com.termux/files/home/Braxon/scripts/reseat_braxon_python_native.sh

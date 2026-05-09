@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+source "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/terminal/braxon-term-1/braxon-terminal.env"
+exec /data/data/com.termux/files/usr/bin/bash --noprofile --norc "$@"

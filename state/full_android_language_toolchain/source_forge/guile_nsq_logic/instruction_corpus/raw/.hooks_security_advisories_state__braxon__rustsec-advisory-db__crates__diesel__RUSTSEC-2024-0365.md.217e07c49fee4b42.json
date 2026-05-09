@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__diesel__RUSTSEC-2024-0365.md.217e07c49fee4b42.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.811125+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__diesel__RUSTSEC-2024-0365.md.217e07c49fee4b42.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/diesel/RUSTSEC-2024-0365.md",
+  "source_bytes": 2523,
+  "source_sha256": "217e07c49fee4b424a7b5c00aebd8c06c61ea9f27749f730d88776b22d40fabc",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__diesel__RUSTSEC-2024-0365.md.217e07c49fee4b42"
+}

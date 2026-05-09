@@ -1,0 +1,4 @@
+#ifndef BRAXON_ANDROID_BUILTIN_SYS_STAT_ALIAS_H
+#define BRAXON_ANDROID_BUILTIN_SYS_STAT_ALIAS_H
+#include_next <sys/stat.h>
+#endif

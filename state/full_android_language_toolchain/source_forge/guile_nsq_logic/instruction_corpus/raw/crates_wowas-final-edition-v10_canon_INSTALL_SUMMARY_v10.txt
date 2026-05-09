@@ -1,0 +1,6 @@
+install_target=/data/data/com.termux/files/home/storage/shared/Download/wowas_final_edition_BRAXON_ready_v10
+base_v8_zip=/data/data/com.termux/files/home/storage/shared/Download/wowas_final_edition_BRAXON_ready_v8.zip
+v9_patch=/data/data/com.termux/files/home/storage/shared/Download/wowas_v9_polish_patch.tar.gz
+v10_source=/data/data/com.termux/files/home/storage/shared/Download/wowas_update10_bundle
+status=installed
+next_step=point_BRAXON_ingest_at_CURRENT_APPLY_ORDER_v10.md

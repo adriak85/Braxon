@@ -1,0 +1,45 @@
+{
+  "recommended_commit_scope": [
+    ".gitignore",
+    "specs/repo/RUSTSEC_CACHE_POLICY.md",
+    "state/braxon/security_audit_summary.json"
+  ],
+  "rustsec_advisory_db": {
+    "exists_locally": true,
+    "local_advisory_like_file_count": 1050,
+    "local_file_count": 1096,
+    "path": "state/braxon/rustsec-advisory-db",
+    "policy": "local_cache_not_tracked",
+    "reason": "The full RustSec advisory database is useful as an offline local security cache, but should not be treated as canonical Braxon runtime substrate unless a Braxon-owned manifest explicitly binds a small curated subset.",
+    "sample_advisories": [
+      "state/braxon/rustsec-advisory-db/rust/cargo/CVE-2019-16760.md",
+      "state/braxon/rustsec-advisory-db/rust/rustdoc/CVE-2018-1000622.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2015-20001.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2017-20004.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2018-1000657.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2018-1000810.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2018-25008.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2019-1010299.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2019-12083.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2020-36317.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2020-36318.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2020-36323.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-28875.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-28876.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-28877.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-28878.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-28879.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-29922.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2021-31162.md",
+      "state/braxon/rustsec-advisory-db/rust/std/CVE-2022-21658.md",
+      "state/braxon/rustsec-advisory-db/crates/abi_stable/RUSTSEC-2020-0105.md",
+      "state/braxon/rustsec-advisory-db/crates/abomonation/RUSTSEC-2021-0120.md",
+      "state/braxon/rustsec-advisory-db/crates/abox/RUSTSEC-2020-0121.md",
+      "state/braxon/rustsec-advisory-db/crates/acc_reader/RUSTSEC-2020-0155.md",
+      "state/braxon/rustsec-advisory-db/crates/acceptxmr-rs/RUSTSEC-2023-0115.md"
+    ],
+    "tracked_file_count": 1
+  },
+  "schema": "Braxon.security_audit_summary.v1",
+  "tracked_summary": "state/braxon/security_audit_summary.json"
+}

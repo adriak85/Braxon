@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__inconceivable__RUSTSEC-2022-0058.md.073829dc31b18ac2.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.477426+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__inconceivable__RUSTSEC-2022-0058.md.073829dc31b18ac2.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/inconceivable/RUSTSEC-2022-0058.md",
+  "source_bytes": 584,
+  "source_sha256": "073829dc31b18ac236931b796eff0bc4ed60261354a4d684c997a227ac5b4836",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__inconceivable__RUSTSEC-2022-0058.md.073829dc31b18ac2"
+}

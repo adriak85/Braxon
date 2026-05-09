@@ -1,0 +1,27 @@
+{
+  "mission_name":  braxon_nsq_recode_and_root_workspace",
+  "law": {
+    "nsq_is_base8": true,
+    "court_is_component_layer": true,
+    "nothing_is_directly_moved": true,
+    "narrative_frameworks_are_excluded": true
+  },
+  "required_sequence": [
+    "audit",
+    "classify",
+    "target_map",
+    "initiate_implementation",
+    "continue_implementation",
+    "verification"
+  ],
+  "completion_requirements": {
+    "must_have_classification": true,
+    "must_have_nsq_coverage_evaluation": true,
+    "must_have_target_state_map": true,
+    "must_have_exclusion_list": true,
+    "must_have_targeted_recode_plan": true,
+    "must_have_actual_implementation_work": true,
+    "must_have_focused_verification": true,
+    "allow_stop_only_if_hard_blocked": true
+  }
+}

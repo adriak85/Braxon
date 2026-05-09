@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__nsq-compress__repeat_scan_wowas_canon.json.ba0d9b555d43f889.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.351570+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__nsq-compress__repeat_scan_wowas_canon.json.ba0d9b555d43f889.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/nsq-compress/repeat_scan_wowas_canon.json",
+  "source_bytes": 634350,
+  "source_sha256": "ba0d9b555d43f88904f70311229489dd2f337dc6bc3cb0af82feb36e6d7209f1",
+  "stamp_id": "nsq.asm.repo__state.state__nsq-compress__repeat_scan_wowas_canon.json.ba0d9b555d43f889"
+}

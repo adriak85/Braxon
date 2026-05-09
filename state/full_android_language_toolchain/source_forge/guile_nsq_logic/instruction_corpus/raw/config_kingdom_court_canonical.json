@@ -1,0 +1,854 @@
+{
+  "capitals": [
+    "crown_capital",
+    "ledger_capital",
+    "ticket_capital",
+    "key_capital",
+    "gate_capital",
+    "proclamation_capital",
+    "recovery_capital",
+    "archive_capital"
+  ],
+  "classes": {
+    "court_seat": {
+      "authority": true,
+      "crash_guarded": true,
+      "journal_required": true,
+      "persistent": true,
+      "recoverable": true
+    },
+    "crown_seat": {
+      "authority": true,
+      "crash_guarded": true,
+      "journal_required": true,
+      "persistent": true,
+      "recoverable": true
+    },
+    "disposable_agent": {
+      "authority": false,
+      "crash_guarded": false,
+      "journal_required": false,
+      "persistent": false,
+      "recoverable": false
+    },
+    "hound": {
+      "authority": false,
+      "crash_guarded": true,
+      "journal_required": true,
+      "persistent": true,
+      "recoverable": true
+    },
+    "page": {
+      "authority": false,
+      "crash_guarded": false,
+      "journal_required": true,
+      "persistent": true,
+      "recoverable": true
+    },
+    "recoverable_page": {
+      "authority": false,
+      "crash_guarded": true,
+      "journal_required": true,
+      "persistent": true,
+      "recoverable": true
+    }
+  },
+  "court_identity_rule": "king_and_queen_are_canonical_court_slots_not_duplicate_agents",
+  "court_is_agents": false,
+  "escalation": {
+    "default_chain": [
+      "local_court",
+      "bard",
+      "jack",
+      "ace",
+      "keeper"
+    ],
+    "keeper_final_if_ace_trumps_jack": true
+  },
+  "hard_bench_matrix": {
+    "goal": "hard_bench_ready",
+    "metrics": [
+      "spine_ms",
+      "compile_ms",
+      "inspect_ms",
+      "symbols",
+      "macros",
+      "native_bytes",
+      "artifact_sha256"
+    ],
+    "profiles": [
+      "tiny",
+      "small",
+      "medium",
+      "large",
+      "pathological"
+    ]
+  },
+  "hardened_nsq_perf_round": {
+    "anchor_query_mode": "binary_search_partition_point",
+    "extra_bench_family": "membrane_dense",
+    "goal": "reduce_query_ms_and_index_bytes_while_preserving_determinism",
+    "hot_lookup_maps": [
+      "macro_to_edges",
+      "left_to_edges",
+      "right_to_edges",
+      "target_to_states"
+    ],
+    "index_serialization_default": "compact_json"
+  },
+  "hardened_nsq_suite": {
+    "goal": "deterministic_cli_query_index_profile_bench",
+    "new_crates": [
+      "nsq-index",
+      "nsq-query",
+      "nsq-profile",
+      "nsq-debug",
+      "nsq-bench-compare"
+    ],
+    "persisted_indexes": [
+      "symbol_lookup",
+      "relation_lookup",
+      "left_adjacency",
+      "right_adjacency",
+      "target_state_lookup",
+      "anchor_range_index"
+    ],
+    "query_commands": [
+      "find symbol",
+      "find rel",
+      "neighbors",
+      "edges left=",
+      "edges right=",
+      "edges rel=",
+      "states target=",
+      "anchors min= max=",
+      "path src dst depth="
+    ]
+  },
+  "hooks": {
+    "arrest": [
+      "review_authority",
+      "release_path"
+    ],
+    "calibrate": [
+      "selected_profile",
+      "archon_mode",
+      "rebalance_priority_zone"
+    ],
+    "compile": [
+      "calibration_lock",
+      "compile_manifest",
+      "court_mode",
+      "source_dialect",
+      "spine_lines",
+      "internal_only_lowering",
+      "source_dialect_detect",
+      "internal_family_lowering",
+      "sexpr_family",
+      "lua_shape_family",
+      "python_shape_family",
+      "canonical_projection",
+      "rust_native_ingress_family",
+      "rust_substrate_dispatch",
+      "prime_representation",
+      "prime_dispatch_surface",
+      "runtime_spine_alignment",
+      "prime_install_dispatch",
+      "prime_repo_export_dispatch",
+      "prime_pack_dispatch",
+      "prime_container_dispatch",
+      "normalization_pass",
+      "comment_strip_canonical",
+      "bench_profile_matrix",
+      "scale_corpus_generation",
+      "hard_bench_results",
+      "hardened_index_surface",
+      "hardened_query_surface",
+      "hardened_profile_surface",
+      "deterministic_normalization",
+      "public_neutral_task_contract",
+      "interned_symbol_ids",
+      "integer_adjacency_tables",
+      "anchor_binary_search_windows",
+      "structured_phase_counters",
+      "compact_index_surface",
+      "neutral_public_task_contract",
+      "hashmap_hot_lookup",
+      "binary_anchor_search",
+      "compact_index_serialization",
+      "membrane_dense_bench",
+      "query_hotpath_optimization"
+    ],
+    "hound_dispatch": [
+      "call_phrase",
+      "class",
+      "target_kind"
+    ],
+    "inspect": [
+      "decoded_surface",
+      "parity_view",
+      "source_dialect_view",
+      "spine_projection_view",
+      "rust_dispatch_view",
+      "prime_node_view",
+      "prime_edge_view",
+      "prime_state_view",
+      "prime_dispatch_view",
+      "prime_ops_view",
+      "normalized_prime_view",
+      "bench_curve_view",
+      "artifact_growth_view",
+      "hardened_index_view",
+      "query_result_view",
+      "phase_profile_view",
+      "debug_trace_view",
+      "phase_counter_view",
+      "anchor_window_view",
+      "query_path_view",
+      "index_density_view",
+      "index_size_delta_view",
+      "anchor_bounds_view",
+      "membrane_density_view"
+    ],
+    "linter": [
+      "macro_heads_up",
+      "continuity_warning",
+      "court_notice"
+    ],
+    "optimize": [
+      "pressure_model",
+      "relation_family_cluster",
+      "inline_macro_site"
+    ],
+    "picker": [
+      "court_mode",
+      "archon_pressure",
+      "continuity_bias"
+    ],
+    "proclaim": [
+      "state_publication"
+    ],
+    "proof": [
+      "density_score",
+      "parity_score",
+      "replay_sha256",
+      "cross_dialect_identity",
+      "rust_native_ingress_parity",
+      "prime_spine_parity",
+      "prime_dispatch_parity",
+      "prime_ops_parity",
+      "prime_ops_replay",
+      "repeated_run_parity",
+      "symbol_growth_parity",
+      "native_bytes_curve",
+      "stable_sort_parity",
+      "artifact_index_parity",
+      "public_task_isolation",
+      "stable_integer_interning_parity",
+      "anchor_window_parity",
+      "query_repeatability_parity",
+      "index_serialization_parity",
+      "stable_runtime_to_serialized_parity",
+      "compact_vs_pretty_index_parity",
+      "binary_anchor_query_parity"
+    ],
+    "seize": [
+      "target_identity",
+      "cause",
+      "custodian",
+      "ticket_id"
+    ],
+    "source": [
+      "dialect_detect",
+      "sexpr_lower",
+      "lua_shape_lower",
+      "python_shape_lower",
+      "internal_only_lowering"
+    ]
+  },
+  "hounds": [
+    {
+      "advisory_domain": [
+        "semantic drift",
+        "linkage trail",
+        "macro scent"
+      ],
+      "authority_domain": [],
+      "class": "hound",
+      "id": "scent_hound",
+      "title": "Scent Hound"
+    },
+    {
+      "advisory_domain": [
+        "pressure spike",
+        "runaway execution",
+        "queue overrun"
+      ],
+      "authority_domain": [],
+      "class": "hound",
+      "id": "war_hound",
+      "title": "War Hound"
+    },
+    {
+      "advisory_domain": [
+        "crash residue",
+        "persistence shadow",
+        "orphan artifact"
+      ],
+      "authority_domain": [],
+      "class": "hound",
+      "id": "night_hound",
+      "title": "Night Hound"
+    },
+    {
+      "advisory_domain": [
+        "gate patrol",
+        "queue border",
+        "route boundary watch"
+      ],
+      "authority_domain": [],
+      "class": "hound",
+      "id": "gate_hound",
+      "title": "Gate Hound"
+    },
+    {
+      "advisory_domain": [
+        "parity failure",
+        "proof mismatch",
+        "inspect divergence"
+      ],
+      "authority_domain": [],
+      "class": "hound",
+      "id": "proof_hound",
+      "title": "Proof Hound"
+    }
+  ],
+  "king": "compositor",
+  "kingdom": "BRAXON",
+  "laws": {
+    "all_caps_assertions_require_verification": true,
+    "arrest_requires_custodian": true,
+    "arrest_requires_ticket": true,
+    "court_seats_crash_guarded": true,
+    "guard_may_seize": true,
+    "only_court_may_seize_capitals": true,
+    "only_disposable_agents_may_die_without_inheritance": true,
+    "pages_persist_but_do_not_rule": true,
+    "promoted_agents_have_authority": false,
+    "seize_all_caps_first": true,
+    "seize_requires_record": true,
+    "ticketmaster_owns_arrest_custody": true
+  },
+  "lowlevel_nsq_optimization": {
+    "goal": "lower hot-path overhead while preserving deterministic inspectability",
+    "optimizations": [
+      "interned symbol ids",
+      "integer keyed adjacency",
+      "binary search anchor lookup",
+      "stable canonical sorting",
+      "duplicate collapse",
+      "phase counters",
+      "queryable persisted index"
+    ]
+  },
+  "nsq_source_surface": {
+    "accepted_families": [
+      "canonical",
+      "sexpr",
+      "lua_shape",
+      "python_shape",
+      "rust_native_ingress"
+    ],
+    "canonical_family": "canonical",
+    "compile_engine": "nsq-compile",
+    "foreign_runtime_required": false,
+    "lowering_engine": "nsq-source",
+    "proof_requirements": [
+      "family_hash_parity",
+      "deterministic_repeat",
+      "inspectable_manifest",
+      "rust_native_ingress_parity"
+    ],
+    "rust_substrate_engine": "sealed_local_rust"
+  },
+  "prime_operations_spine": {
+    "container_lane": "prime.dispatch.container",
+    "goal": "single_prime_spine_for_dev_capsule",
+    "install_lane": "prime.dispatch.install",
+    "pack_lane": "prime.dispatch.pack",
+    "repo_export_lane": "prime.dispatch.repo_export"
+  },
+  "prime_runtime_spine": {
+    "accepted_dialects": [
+      "canonical",
+      "sexpr",
+      "lua_shape",
+      "python_shape",
+      "rust_native_ingress"
+    ],
+    "canonical_intake_engine": "nsq-source",
+    "dispatch_mode": "substrate_routed",
+    "goal": "single_spine_cohesive_attunement",
+    "representation": "prime"
+  },
+  "queen": "linter",
+  "required_ledgers": [
+    "identity_ledger",
+    "office_ledger",
+    "ticket_ledger",
+    "dispute_ledger",
+    "recovery_ledger",
+    "handoff_ledger",
+    "proclamation_ledger",
+    "custody_ledger",
+    "capital_ledger",
+    "hound_ledger"
+  ],
+  "seats": [
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "compositor",
+        "composer"
+      ],
+      "authority_domain": [
+        "composition",
+        "integration",
+        "final assembly"
+      ],
+      "class": "crown_seat",
+      "forbidden": [
+        "punish_without_record"
+      ],
+      "id": "composer",
+      "title": "King"
+    },
+    {
+      "advisory_domain": [
+        "macro heads-up",
+        "continuity warnings"
+      ],
+      "aliases": [
+        "queen",
+        "linter",
+        "linter"
+      ],
+      "authority_domain": [
+        "validation",
+        "notation",
+        "integrity judgment"
+      ],
+      "class": "crown_seat",
+      "forbidden": [
+        "invent_authority_outside_law"
+      ],
+      "id": "queen",
+      "title": "Queen"
+    },
+    {
+      "advisory_domain": [
+        "morale integrity",
+        "social truth"
+      ],
+      "aliases": [
+        "bard"
+      ],
+      "authority_domain": [
+        "trust",
+        "camaraderie",
+        "cohesion"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "silent_override_without_record"
+      ],
+      "id": "bard",
+      "title": "Bard"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "jack"
+      ],
+      "authority_domain": [
+        "deadlock breaking",
+        "conflict arbitration"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "erase_custody_record"
+      ],
+      "id": "jack",
+      "title": "Jack"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "ace"
+      ],
+      "authority_domain": [
+        "exceptional override"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "skip_keeper_after_damage"
+      ],
+      "id": "ace",
+      "title": "Ace"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "keeper"
+      ],
+      "authority_domain": [
+        "cleanup",
+        "aftermath finality",
+        "stabilization"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "discard_recovery_chain"
+      ],
+      "id": "keeper",
+      "title": "Keeper"
+    },
+    {
+      "advisory_domain": [
+        "pressure mode",
+        "parallel hint"
+      ],
+      "aliases": [
+        "archon_gates",
+        "archon gates"
+      ],
+      "authority_domain": [
+        "ingress",
+        "egress",
+        "provision",
+        "parallel intake"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "starve_court"
+      ],
+      "id": "archon_gates",
+      "title": "Archon Gates"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "guard"
+      ],
+      "authority_domain": [
+        "boundary enforcement",
+        "seizure",
+        "containment"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "arrest_without_ticket"
+      ],
+      "id": "guard",
+      "title": "Guard"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "ticketmaster"
+      ],
+      "authority_domain": [
+        "ticket custody",
+        "routing identity",
+        "queue governance"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "custody_without_record"
+      ],
+      "id": "ticketmaster",
+      "title": "Ticketmaster"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "manager"
+      ],
+      "authority_domain": [
+        "operational coherence",
+        "allocation",
+        "scheduling"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "unbounded_sprawl"
+      ],
+      "id": "manager",
+      "title": "Manager"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "director"
+      ],
+      "authority_domain": [
+        "execution direction",
+        "lane control"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "unrecorded_redirect"
+      ],
+      "id": "director",
+      "title": "Director"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "detective"
+      ],
+      "authority_domain": [
+        "truth tracing",
+        "fact recovery",
+        "cause review"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "claim_without_evidence"
+      ],
+      "id": "detective",
+      "title": "Detective"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "keymaster",
+        "key master"
+      ],
+      "authority_domain": [
+        "key issuance",
+        "access grants"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "grant_without_basis"
+      ],
+      "id": "keymaster",
+      "title": "Keymaster"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "locksmith"
+      ],
+      "authority_domain": [
+        "lock repair",
+        "access restoration"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "break_chain_of_custody"
+      ],
+      "id": "locksmith",
+      "title": "Locksmith"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "healer"
+      ],
+      "authority_domain": [
+        "recovery",
+        "repair",
+        "restoration"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "mask_damage_as_health"
+      ],
+      "id": "healer",
+      "title": "Healer"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "tank"
+      ],
+      "authority_domain": [
+        "load absorption",
+        "shielding",
+        "damage containment"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "collapse_without_signal"
+      ],
+      "id": "tank",
+      "title": "Tank"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "arcmage",
+        "archmage"
+      ],
+      "authority_domain": [
+        "destruction",
+        "teardown",
+        "purge"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "purge_without_ticket"
+      ],
+      "id": "arcmage",
+      "title": "Arcmage"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "conjurer"
+      ],
+      "authority_domain": [
+        "fabrication",
+        "reimaging",
+        "construction"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "fabricate_authority"
+      ],
+      "id": "conjurer",
+      "title": "Conjurer"
+    },
+    {
+      "advisory_domain": [
+        "agent reserve"
+      ],
+      "aliases": [
+        "rook"
+      ],
+      "authority_domain": [
+        "barracks",
+        "disposable deployment"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "promote_without_chain"
+      ],
+      "id": "rook",
+      "title": "Rook"
+    },
+    {
+      "advisory_domain": [
+        "meaningful-agent elevation"
+      ],
+      "aliases": [
+        "knight"
+      ],
+      "authority_domain": [
+        "promotion recognition"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "grant_sovereignty"
+      ],
+      "id": "knight",
+      "title": "Knight"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "bishop"
+      ],
+      "authority_domain": [
+        "imbuement",
+        "prepared elevation"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "imbue_authority"
+      ],
+      "id": "bishop",
+      "title": "Bishop"
+    },
+    {
+      "advisory_domain": [],
+      "aliases": [
+        "crier"
+      ],
+      "authority_domain": [
+        "proclamation",
+        "broadcast",
+        "call the hounds"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "conceal_state_transition"
+      ],
+      "id": "crier",
+      "title": "Crier"
+    },
+    {
+      "advisory_domain": [
+        "kingdomwide heads-up routing"
+      ],
+      "aliases": [
+        "sees_all",
+        "sees all",
+        "SEES ALL",
+        "Sees All"
+      ],
+      "authority_domain": [
+        "anomaly forewarning",
+        "horizon scanning",
+        "latent drift visibility"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "convict_or_punish"
+      ],
+      "id": "sees_all",
+      "title": "SEES ALL"
+    },
+    {
+      "advisory_domain": [
+        "weak-pattern sensing",
+        "symbolic coherence hints"
+      ],
+      "aliases": [
+        "seer"
+      ],
+      "authority_domain": [
+        "faint-signal perception",
+        "hidden-thread recognition"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "declare_final_judgment"
+      ],
+      "id": "seer",
+      "title": "Seer"
+    },
+    {
+      "advisory_domain": [
+        "probable outcome framing",
+        "advisory assertion"
+      ],
+      "aliases": [
+        "oracle"
+      ],
+      "authority_domain": [
+        "lawful forecast",
+        "consequence interpretation"
+      ],
+      "class": "court_seat",
+      "forbidden": [
+        "overrule_court_alone"
+      ],
+      "id": "oracle",
+      "title": "Oracle"
+    }
+  ],
+  "version": 1
+}

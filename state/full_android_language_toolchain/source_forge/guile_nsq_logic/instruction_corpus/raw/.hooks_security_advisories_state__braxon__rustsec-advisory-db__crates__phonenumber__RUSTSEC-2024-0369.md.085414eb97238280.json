@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__phonenumber__RUSTSEC-2024-0369.md.085414eb97238280.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.261847+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__phonenumber__RUSTSEC-2024-0369.md.085414eb97238280.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/phonenumber/RUSTSEC-2024-0369.md",
+  "source_bytes": 1149,
+  "source_sha256": "085414eb97238280948515eaa45a440fb8c0dc66d9f7d1137b4345e49d4c0a0b",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__phonenumber__RUSTSEC-2024-0369.md.085414eb97238280"
+}

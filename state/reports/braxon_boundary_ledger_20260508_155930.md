@@ -1,0 +1,599 @@
+# Braxon boundary ledger
+
+timestamp=20260508_155930
+cwd=/data/data/com.termux/files/home/Braxon
+
+## 1. NSQ identity boundary
+
+- expected: NSQ substrate-native, not bytes/u8/wrapper/ASM
+- docs: docs/nsq/NSQ_CANONICAL_IDENTITY.md
+- current binding switch_shape:
+[2, 1126, 2, 1126, 2, 1126, 2, 1126]
+- boundary_status: CHECK_FOR_LEGACY_1126_DRIFT
+
+## 2. ASM lowering boundary
+
+- expected: NSQ source truth -> ASM operating/recode/optimization -> binary output
+- docs: docs/nsq/NSQ_ASM_OPERATING_LAW.md
+- implementation candidates:
+crates/nsq-core/src/stamp_execution_contract.rs
+docs/nsq/NSQ_ASM_OPERATING_LAW.md
+docs/nsq/NSQ_ASM_STAMP_SYSTEM.md
+scripts/codex/verify_stamp_execution_behavior.sh
+scripts/codex/verify_stamp_runtime_contract.sh
+scripts/nsq/resolve_first_nsqasm_stamp.sh
+scripts/nsq/run_nsqasm_stamp_db_scan.sh
+scripts/nsq/verify_nsqasm_stamp_build_chain.sh
+scripts/nsq/verify_nsqasm_stamp_db_records.sh
+scripts/nsq_asm_stamp_full_language_check.sh
+state/nsq/native_hardware_proof/current/asm_runtime_report.json
+state/nsq/native_hardware_proof/current/c8_asm_runtime_report.json
+state/nsq/nsq_asm_stamp_full_language_manifest.json
+state/nsq/runtime/stamp_runtime_contract.json
+state/nsq/semantic_benchmark/current/compile_asm.stderr.txt
+state/nsq/semantic_benchmark/current/compile_asm.stdout.txt
+state/nsq/semantic_benchmark/current/nsqasm_acceptance.stderr.txt
+state/nsq/semantic_benchmark/current/nsqasm_acceptance.stdout.txt
+state/nsq/smart_tools/asm_macro_tool_usage.json
+state/nsq/stamp_build_chain/resolved/nsqasm_stamp_markdown_reusable_text_window_l1_24_1846ae2fe67cf3e4.wake.json
+state/nsq/stamps/OPERATIONAL_STAMP_LAW.md
+state/nsq/stamps/braxon_stack_update_stamps.jsonl
+state/nsq/stamps/cpan_command_surface_stamps.jsonl
+state/nsq/stamps/embedded_server_surface_stamps.jsonl
+state/nsq/stamps/expanded/stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt
+state/nsq/stamps/foreign_tool_absorption/20260428_141348/foreign_tool_substrate_stamp_registry.jsonl
+state/nsq/stamps/foreign_tool_absorption/20260428_141459/foreign_tool_substrate_stamp_registry.jsonl
+state/nsq/stamps/libraries/apps__nsq/asm/macros/apps__nsq__asm_macro_spine.nsq.4ac8f7cca3ad72ed.s
+state/nsq/stamps/libraries/apps__nsq/metadata/apps__nsq__asm_macro_spine.nsq.4ac8f7cca3ad72ed.json
+state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__asm_macro_builder.nsq.21128af590186f89.s
+state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__nsq_asm_stamp_cipher_registry.json.6c9aa425599c2c6e.s
+state/nsq/stamps/libraries/config__nsq/asm/macros/config__nsq__tokenizer_stamp_matrix.json.520032d53a768845.s
+state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__asm_macro_builder.nsq.21128af590186f89.json
+state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__nsq_asm_stamp_cipher_registry.json.6c9aa425599c2c6e.json
+state/nsq/stamps/libraries/config__nsq/metadata/config__nsq__tokenizer_stamp_matrix.json.520032d53a768845.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_13_The_Afterwake__book_content.txt.2a36aa34f1f12bc5.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__B01_000E__Crossing_The_Chrono_Chasm.md.afaca68efdac84b1.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0002__B02_01__Pip_Wakes_Already_Changed.md.85ce2476c527a16b.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__00_book.md.a1ed9872fa85339e.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__01_contained_beats.md.b7f5823684d060ac.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__02_unplaced_candidates.md.370f4a7bcb44f33f.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__03_time_map.md.336359cc98e622f6.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__04_scene_spine.md.84b5c73f894e14b2.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__06_scene_expansion_part1.md.586b6298acce48ac.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_001__The_First_Exhale_After_Stasis.md.fa87b8d8cf3c4bb3.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_004__An_Agonizing_Restoration.md.1e01c44bdeb4fd41.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__B01_000E__Crossing_The_Chrono_Chasm.md.afaca68efdac84b1.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0002__B02_01__Pip_Wakes_Already_Changed.md.85ce2476c527a16b.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__00_book.md.a1ed9872fa85339e.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__01_contained_beats.md.b7f5823684d060ac.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__02_unplaced_candidates.md.370f4a7bcb44f33f.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__03_time_map.md.336359cc98e622f6.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__04_scene_spine.md.84b5c73f894e14b2.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__06_scene_expansion_part1.md.586b6298acce48ac.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_001__The_First_Exhale_After_Stasis.md.fa87b8d8cf3c4bb3.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/asm/macros/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_004__An_Agonizing_Restoration.md.1e01c44bdeb4fd41.s
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__canonical_story_tree__books__Book_13_The_Afterwake__book_content.txt.2a36aa34f1f12bc5.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_01_Choices_Make_World__B01_000E__Crossing_The_Chrono_Chasm.md.afaca68efdac84b1.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_02_The_Diary_And_The_Blue_Light__0002__B02_01__Pip_Wakes_Already_Changed.md.85ce2476c527a16b.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__00_book.md.a1ed9872fa85339e.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__01_contained_beats.md.b7f5823684d060ac.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__02_unplaced_candidates.md.370f4a7bcb44f33f.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__03_time_map.md.336359cc98e622f6.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__04_scene_spine.md.84b5c73f894e14b2.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__06_scene_expansion_part1.md.586b6298acce48ac.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_001__The_First_Exhale_After_Stasis.md.fa87b8d8cf3c4bb3.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043025__books__Book_13_The_Afterwake__placed__B13_004__An_Agonizing_Restoration.md.1e01c44bdeb4fd41.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_01_Choices_Make_World__B01_000E__Crossing_The_Chrono_Chasm.md.afaca68efdac84b1.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_02_The_Diary_And_The_Blue_Light__0002__B02_01__Pip_Wakes_Already_Changed.md.85ce2476c527a16b.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__00_book.md.a1ed9872fa85339e.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__01_contained_beats.md.b7f5823684d060ac.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__02_unplaced_candidates.md.370f4a7bcb44f33f.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__03_time_map.md.336359cc98e622f6.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__04_scene_spine.md.84b5c73f894e14b2.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__06_scene_expansion_part1.md.586b6298acce48ac.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_001__The_First_Exhale_After_Stasis.md.fa87b8d8cf3c4bb3.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_002__A_New_Baseline_With_Xethrolund.md.749cfa363b73902f.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_003__The_World_Is_Not_Back.md.abb2e7cefda80c78.json
+state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata/crates__wowas-final-edition-v10__canon__scene_index_hub.backup.20260417_043152__books__Book_13_The_Afterwake__placed__B13_004__An_Agonizing_Restoration.md.1e01c44bdeb4fd41.json
+state/nsq/stamps/libraries/docs__nsq/asm/macros/docs__nsq__NSQ_ASM_STAMP_SYSTEM.md.75865565aac7b4ca.s
+state/nsq/stamps/libraries/docs__nsq/metadata/docs__nsq__NSQ_ASM_STAMP_SYSTEM.md.75865565aac7b4ca.json
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cargo-asm__RUSTSEC-2025-0122.md.d6b2f3aad0f40e4e.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cosmwasm-std__RUSTSEC-2024-0338.md.5918b4ffa52ef655.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cosmwasm-vm__RUSTSEC-2024-0361.md.ef53c4c429ab3638.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cosmwasm-vm__RUSTSEC-2024-0366.md.777b1aa978abc34e.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cosmwasm__RUSTSEC-2024-0004.md.fd33ac30a65257bb.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__parity-wasm__RUSTSEC-2022-0061.md.3bf996e60d3c828d.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__serde-json-wasm__RUSTSEC-2024-0012.md.5546b44c42098935.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime-jit-debug__RUSTSEC-2024-0442.md.39e205270a66a1f0.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2021-0110.md.4297a44b0974a06b.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0016.md.6c091f03ee4f04e6.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0075.md.e38edc8de7ea911a.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0076.md.f91817044491fb1b.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0095.md.a9b63c9e0c534da1.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0096.md.16cf3b9de40f2ab3.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0097.md.80901c3d3668bc7e.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0098.md.496c2edcd813faa8.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0099.md.a8feac8659b8ac6f.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0100.md.f20f8c6c93014a53.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0101.md.6e657ff7f642a56d.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2022-0102.md.4d5e0ae55174c757.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2023-0090.md.d914fc97ee12c6aa.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2023-0091.md.5ffcc667d7c45e64.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2023-0092.md.88a55c3ceb15f3bc.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2023-0093.md.e84419128cf8d73b.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2024-0438.md.9240674a6130345d.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2024-0439.md.2c56cf3688750550.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2024-0440.md.99fd487dd430ec5e.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2024-0441.md.641d52c198254c56.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2025-0046.md.c98dfa298bd78fb5.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2025-0112.md.73e6b2b0a4d556b0.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2025-0118.md.1a4a468a67af6883.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0006.md.b94b6d4307f12077.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0020.md.324a25d4ac828715.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0021.md.3a6cfc3a234d00ed.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0022.md.2eb8def4f21d9f72.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0085.md.00cb169912ce0f3b.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0086.md.e08a47aa6f629946.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0087.md.9af2502e3ebaa142.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0088.md.e577a9b62b22ec5a.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0089.md.a4299708d91a6199.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0090.md.aae4ec329d6286c6.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0091.md.5219385be5a73462.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0092.md.a0d2c5652e1b2977.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0093.md.e30d53dcb8e2ab7c.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0094.md.ee360a1fef7eb8c4.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0095.md.6ae698692b35033e.s
+state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__wasmtime__RUSTSEC-2026-0096.md.195a4290f3ccbc88.s
+state/nsq/stamps/libraries/specs__nsq/asm/macros/specs__nsq__NSQ_ASM_MACRO_SPINE_CONTRACT.md.0c632c2b8301bc58.s
+state/nsq/stamps/libraries/specs__nsq/metadata/specs__nsq__NSQ_ASM_MACRO_SPINE_CONTRACT.md.0c632c2b8301bc58.json
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__harm_report_round1.jsonl.20eb6c8d39a5f662.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__harm_report_round1.jsonl.e1710d47eac0bab1.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__harm_report_round2.jsonl.612cafaafa450408.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__round1_summary.json.f87dc410c5c04ef0.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__asm_macro_builder__round2_summary.json.5120419484ede8a9.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__nsq_asm_stamp_full_language_manifest.json.c3e9914905dab1d8.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__smart_tools__asm_macro_tool_usage.json.2d773073c0411493.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__smart_tools__asm_macro_tool_usage.json.7729ae6b28d7a277.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__smart_tools__asm_macro_tool_usage.json.d045eb223ac327e8.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__stamps__expanded__stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt.5e3afa464f296d59.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__stamps__sources__stamp_asm_anchor_lever_pack_v1.s.72238c06e2fdf42f.s
+state/nsq/stamps/libraries/state__nsq/asm/macros/state__nsq__stamps__stamp_registry.jsonl.62a2eb3f8abec46f.s
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__harm_report_round1.jsonl.20eb6c8d39a5f662.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__harm_report_round1.jsonl.e1710d47eac0bab1.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__harm_report_round2.jsonl.612cafaafa450408.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__round1_summary.json.f87dc410c5c04ef0.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__asm_macro_builder__round2_summary.json.5120419484ede8a9.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__nsq_asm_stamp_full_language_manifest.json.c3e9914905dab1d8.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__smart_tools__asm_macro_tool_usage.json.2d773073c0411493.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__smart_tools__asm_macro_tool_usage.json.7729ae6b28d7a277.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__smart_tools__asm_macro_tool_usage.json.d045eb223ac327e8.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__stamps__expanded__stamp_asm_anchor_lever_pack_v1.aarch64_asm.txt.5e3afa464f296d59.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__stamps__sources__stamp_asm_anchor_lever_pack_v1.s.72238c06e2fdf42f.json
+state/nsq/stamps/libraries/state__nsq/metadata/state__nsq__stamps__stamp_registry.jsonl.62a2eb3f8abec46f.json
+state/nsq/stamps/libraries/tools__nsq_asm_macro_builder/asm/macros/tools__nsq_asm_macro_builder__nsq_asm_macro_builder.py.a343ecf17f102269.s
+state/nsq/stamps/libraries/tools__nsq_asm_macro_builder/metadata/tools__nsq_asm_macro_builder__nsq_asm_macro_builder.py.a343ecf17f102269.json
+state/nsq/stamps/libraries/tools__nsq_finish/asm/macros/tools__nsq_finish__nsq_stamp.py.f631728263b68972.s
+state/nsq/stamps/libraries/tools__nsq_finish/metadata/tools__nsq_finish__nsq_stamp.py.f631728263b68972.json
+state/nsq/stamps/model_full_download_stamps_20260428_183248.jsonl
+state/nsq/stamps/registry/asm_macro_registry_round1.jsonl
+state/nsq/stamps/registry/asm_macro_registry_round2.jsonl
+state/nsq/stamps/sources/stamp_asm_anchor_lever_pack_v1.s
+state/nsq/stamps/stamp_execution_topology.json
+state/nsq/stamps/stamp_registry.jsonl
+state/nsq/translation_pipeline/asm_to_binary_boundary.json
+- boundary_status: NEEDS_FILE_FUNCTION_LEDGER
+
+## 3. Model install / hot-live boundary
+
+- contract: docs/nsq/NSQ_MODEL_INSTALLATION_CONTRACT.md
+- binding_state=hot_live_verified
+- parameter_binding_state=direct_source_materialization_required
+- runtime whole_core_runtime_status=manifest_verified_not_hot_live
+
+### pipeline status
+source_ingest_status=direct_source_materialization_required
+source_authority_lane=assets/braxon_core/source_ingest/braxon_transport
+source_authority_state=direct_source_materialization_required
+nsq_artifact_state=manifest_bundle_only
+runtime_authority_lane=none_bound
+runtime_authority_state=unbound
+runtime_authority_bound=false
+nsq_envelope_status=updated
+nsq_recode_status=manifest_bundle_only
+whole_core_runtime_status=manifest_verified_not_hot_live
+artifact_verification_status=manifest_bundle_verified
+verification_state=manifest_only
+source_required_files=14
+source_present_files=14
+source_materialized_files=0
+source_pointer_stub_files=14
+source_text_stub_files=0
+source_total_bytes=135
+source_blake3_manifest=/data/data/com.termux/files/home/Braxon/assets/braxon_core/source_ingest/braxon_transport/BLAKE3SUMS
+source_blake3_recorded_files=14
+source_blake3_status=verified
+nsq_envelope_artifact=/data/data/com.termux/files/home/Braxon/assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta
+reserved_runtime_artifact=/data/data/com.termux/files/home/Braxon/assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb
+reserved_runtime_artifact_present=yes
+
+- boundary_status: HOT_LIVE_CONTRADICTION_IF_BINDING_STATE_REMAINS_HOT_LIVE_VERIFIED
+
+## 4. Reconstruction proof boundary
+
+- expected: byte_count + sha256 + blake3 when available after bytes exist
+- manifest:
+{
+  "canon": "Exact identity is full byte_count plus full sha256 plus full blake3 where available. Sparse one-of-699 sampling is a route/sanity prefilter, not a proof by itself.",
+  "files": [
+    {
+      "path": "assets/braxon_core/model_config/config.json",
+      "byte_count": null,
+      "sha256": null,
+      "blake3": null,
+      "source": "git/source target only",
+      "role": "small config target"
+    }
+  ]
+}
+- boundary_status: PLACEHOLDER_OR_PARTIAL_UNTIL_FULL_RECOVERABLE_PIECES_EXIST
+
+## 5. Android/Bionic contract boundary
+
+- findutils matrix latest:
+matrix=state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150710.tsv
+item	classification	action
+qsort_r	compat_yes	use gnulib qsort compatibility path; do not force native yes
+selinux/getfilecon_raw/lgetfilecon_raw	disabled_by_design	Android libselinux lacks required raw path; keep disabled unless Braxon provides complete shim contract
+priv.h	android_boundary	Solaris/Illumos privilege API; do not build unless Braxon designs equivalent privilege contract
+getexecname	android_boundary	non-Bionic process-name API; use existing program-name compat path
+secure_getenv/__secure_getenv	compat_yes	use gnulib/controlled fallback; do not fake glibc semantics
+glibc sys/cdefs	android_boundary	Bionic is not glibc; do not force glibc identity
+sys/inttypes.h sys/bitypes.h	android_boundary	legacy system headers absent; stdint/inttypes path is valid
+CoreFoundation APIs	android_boundary	Apple-only APIs; disabled by design
+program_invocation_name/program_invocation_short_name	compat_yes	use gnulib program name fallback
+rawmemchr	compat_yes	use gnulib replacement unless Braxon native bridge is explicitly provided
+rpmatch	compat_yes	use gnulib/locale fallback unless Braxon locale contract is added
+timezone_t	android_boundary	not Bionic public API; use gnulib time_rz fallback
+getppriv	android_boundary	Solaris privilege API; not Android native
+struct random_data/random_r	compat_yes	use gnulib random_r compatibility path
+sys/mnttab.h sys/mntio.h sys/ucred.h sys/fs_types.h	android_boundary	BSD/Solaris/Darwin mount/cred headers; classify, do not fake
+pthread robust mutex	unresolved_blocker_or_android_boundary	build only if Braxon needs exact robust mutex contract; otherwise document disabled boundary
+
+- boundary_status: FINDUTILS_SOLVED_PATTERN_REUSABLE
+
+## 6. SELinux boundary
+
+- expected: no fake SELinux; complete bridge only
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:523:configure:7794: checking for selinux/selinux.h
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10079:configure:26927: checking for library containing setfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10081:ld.lld: error: undefined symbol: setfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10293:| char setfilecon (void);
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10297:| return setfilecon ();
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10301:configure:26963: /data/data/com.termux/files/usr/bin/clang -o conftest -O2 -fPIC -I/data/data/com.termux/files/usr/include -L/data/data/com.termux/files/usr/lib conftest.c -lselinux   >&5
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:10303:configure:26985: result: -lselinux
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36320:configure:49771: checking for selinux/flask.h
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36322:conftest.c:506:10: fatal error: 'selinux/flask.h' file not found
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36323:  506 | #include <selinux/flask.h>
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36833:| #include <selinux/flask.h>
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36835:configure:49781: checking for selinux/selinux.h
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36837:configure:49919: checking for selinux/context.h
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:36841:configure:49940: checking for selinux/label.h
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37371:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37372:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37373:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37374:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37375:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37376:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37912:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37913:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37914:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37915:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37916:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:37917:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38430:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38431:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38432:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38433:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38434:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38435:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38950:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38951:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38952:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38953:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38954:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:38955:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39468:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39469:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39470:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39471:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39472:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39473:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39988:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39989:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39990:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39991:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39992:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:39993:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40506:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40507:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40508:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40509:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40510:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:40511:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41045:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41046:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41047:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41048:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41049:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41050:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41595:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41596:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41597:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41598:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41599:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:41600:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42177:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42178:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42179:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42180:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42181:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42182:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42794:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42795:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42796:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42797:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42798:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:42799:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43361:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43362:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43363:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43364:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43365:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43366:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43951:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43952:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43953:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43954:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43955:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:43956:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44516:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44517:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44518:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44519:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44520:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:44521:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45191:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45192:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45193:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45194:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45195:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45196:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45870:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45871:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45872:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45873:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45874:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:45875:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46531:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46532:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46533:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46534:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46535:| #define fgetfilecon rpl_fgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:46536:| #define fgetfilecon_raw rpl_fgetfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:47177:| #define getfilecon rpl_getfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:47178:| #define getfilecon_raw rpl_getfilecon_raw
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:47179:| #define lgetfilecon rpl_lgetfilecon
+state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/config.log.before_qsort_contract_20260508_144748:47180:| #define lgetfilecon_raw rpl_lgetfilecon_raw
+
+- boundary_status: NOT_SOLVED_DEFER_OR_DESIGN_FULL_BRIDGE
+
+## 7. State registry boundary
+
+- state/full_android_language_toolchain size:
+5.2G	state/full_android_language_toolchain
+- top-level state surfaces:
+state/Braxon
+state/android_build_tools_release_lane
+state/android_build_tools_release_lane/runs
+state/android_build_tools_release_lane/stage
+state/android_gap_fill_chain
+state/android_gap_fill_chain/build
+state/android_gap_fill_chain/install
+state/android_gap_fill_chain/release_stage
+state/android_gap_fill_chain/runs
+state/android_gap_fill_chain/src
+state/braxon
+state/braxon/audit
+state/braxon/backups
+state/braxon/bus
+state/braxon/context_chain_root
+state/braxon/direct_source
+state/braxon/environment
+state/braxon/handover
+state/braxon/hot
+state/braxon/model_downloader
+state/braxon/moral_invariant
+state/braxon/music_app
+state/braxon/release_gates
+state/braxon/runtime_proofs
+state/braxon/soul
+state/braxon/soul_law
+state/court
+state/court/records
+state/full_android_language_toolchain
+state/full_android_language_toolchain/adoption
+state/full_android_language_toolchain/baked
+state/full_android_language_toolchain/braxon_android_posix_capability_probe_20260508_005503
+state/full_android_language_toolchain/build
+state/full_android_language_toolchain/cache
+state/full_android_language_toolchain/install
+state/full_android_language_toolchain/locks
+state/full_android_language_toolchain/native
+state/full_android_language_toolchain/no_tmp_redirect
+state/full_android_language_toolchain/profile_catalog
+state/full_android_language_toolchain/reports
+state/full_android_language_toolchain/runs
+state/full_android_language_toolchain/skip_catalog
+state/full_android_language_toolchain/source_forge
+state/full_android_language_toolchain/src
+state/full_android_language_toolchain/startup_import_diagnosis_20260508_020007
+state/full_android_language_toolchain/startup_os_trace_20260508_021608
+state/full_android_language_toolchain/terminal
+state/full_android_language_toolchain/terminal_forge_lane
+state/full_android_language_toolchain/tmp
+state/nsq
+state/nsq-compress
+state/nsq/asm_c_c8_macro_benchmark
+state/nsq/asm_macro_builder
+state/nsq/asm_operating_law
+state/nsq/bare_metal
+state/nsq/bare_tasker
+state/nsq/boundary
+state/nsq/citadel699
+state/nsq/court
+state/nsq/cpan
+state/nsq/gradient
+state/nsq/materialization
+state/nsq/metadata_law
+state/nsq/native_hardware_proof
+state/nsq/perpetual_runtime
+state/nsq/proofs
+state/nsq/runtime
+state/nsq/semantic_benchmark
+state/nsq/server
+state/nsq/site_rebuild
+state/nsq/smart_tools
+state/nsq/stamp_build_chain
+state/nsq/stamps
+state/nsq/translation_pipeline
+state/nsq/ubiquity
+state/nsq/universal_fetch
+state/nsq/watermarks
+state/perf
+state/reports
+state/series
+state/series/nullsquared_odyssey
+state/substrate
+state/substrate/nsq_court_start
+state/toolchains
+state/toolchains/current_phone_custom_llvm
+state/tools
+
+- boundary_status: FIRST_CLASS_STATE_REGISTRY_NEEDS_MANIFEST
+
+## 8. Root route artifacts boundary
+
+
+### ./--help
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./--help
+./--help: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./--help
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+
+### ./status
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./status
+./status: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./status
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+
+### ./crisp, exact, integrity-bound,
+-rw-------. 1 u0_a470 u0_a470 0 May  5 03:46 ./crisp, exact, integrity-bound,
+./crisp, exact, integrity-bound,: empty
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./crisp, exact, integrity-bound,
+
+### ./scriots
+-rw-------. 1 u0_a470 u0_a470 7153 May  7 06:39 ./scriots
+./scriots: OS/2 REXX batch file, Unicode text, UTF-8 text
+609095ef0d795cf151b60c49f0519e4d37fba98dc9737b867663a5c34c13eea5  ./scriots
+#!/data/data/com.termux/files/usr/bin/bash
+# BRAXON_restore_and_read_citadel.sh
+# 1. Removes the config.json that broke rope theta
+# 2. Removes the 0MB symlinks that pollute the transport
+# 3. Reads the actual citadel699 state to understand what's needed
+# Run from: ~/Braxon
+
+set -euo pipefail
+
+ROOT="$HOME/Braxon"
+TRANSPORT="$ROOT/assets/braxon_core/source_ingest/braxon_transport"
+STAMP="$(date +%Y%m%d_%H%M%S)"
+LOG="$HOME/storage/shared/Download/BRAXON_restore_citadel_$STAMP.log"
+
+mkdir -p "$(dirname "$LOG")"
+: > "$LOG"
+
+say() { printf '%s\n' "$*" | tee -a "$LOG"; }
+ok()  { say "  ✓ $*"; }
+bad() { say "  ✗ $*"; }
+section() { say ""; say "=========================================================="; say "$1"; say "=========================================================="; }
+
+cd "$ROOT"
+
+section "BRAXON RESTORE + CITADEL READ — $STAMP"
+
+# ============================================================================
+# STEP 1: Remove the bad config.json we wrote (caused missing rope theta)
+# ============================================================================
+
+section "1. Remove bad transport config.json"
+
+if [ -f "$TRANSPORT/config.json" ]; then
+    # Check if it's our bad one (has council_role key we added)
+    if grep -q "council_role" "$TRANSPORT/config.json" 2>/dev/null; then
+        rm "$TRANSPORT/config.json"
+        ok "Removed bad config.json (had council_role = our overwrite)"
+    else
+        say "  config.json exists but not ours — leaving it"
+    fi
+else
+    say "  No config.json in transport"
+fi
+
+# ============================================================================
+# STEP 2: Remove 0MB symlinks (they are placeholders, not real weights)
+# ============================================================================
+
+section "2. Remove 0MB symlinks from transport"
+
+REMOVED=0
+for link in "$TRANSPORT"/model-*.safetensors; do
+    [ -L "$link" ] || continue
+    TARGET="$(readlink "$link")"
+    if [ ! -f "$TARGET" ] || [ "$(wc -c < "$TARGET" 2>/dev/null || echo 0)" -eq 0 ]; then
+        rm "$link"
+        bad "Removed dead/empty symlink: $(basename "$link") -> $TARGET"
+        REMOVED=$((REMOVED + 1))
+    else
+        ok "Real shard kept: $(basename "$link") ($(wc -c < "$TARGET" | tr -d ' ') bytes)"
+    fi
+done
+
+say "  Removed $REMOVED empty symlinks"
+
+# ============================================================================
+# STEP 3: Show what's actually in transport now
+# ============================================================================
+
+section "3. Transport directory after cleanup"
+
+ls -lah "$TRANSPORT/" | tee -a "$LOG"
+
+# ============================================================================
+# STEP 4: Read the actual citadel699 state
+# ============================================================================
+
+section "4. Citadel699 state files"
+
+say "--- state/nsq/citadel699/current/ ---"
+
+- boundary_status: PRESERVE_FIRST_PROMOTE_OR_CLASSIFY_AFTER_PROVENANCE

@@ -1,0 +1,287 @@
+{
+  "version": 1,
+  "durability_classes": {
+    "court_seat": {
+      "persistent": true,
+      "authority": true,
+      "crash_guarded": true
+    },
+    "crown_seat": {
+      "persistent": true,
+      "authority": true,
+      "crash_guarded": true
+    },
+    "disposable_agent": {
+      "persistent": false,
+      "authority": false,
+      "crash_guarded": false
+    },
+    "hound": {
+      "persistent": true,
+      "authority": false,
+      "crash_guarded": true
+    },
+    "page": {
+      "persistent": true,
+      "authority": false,
+      "crash_guarded": false
+    },
+    "recoverable_page": {
+      "persistent": true,
+      "authority": false,
+      "crash_guarded": true
+    }
+  },
+  "offices": {
+    "ace": {
+      "title": "Ace",
+      "class": "court_seat",
+      "authority_domain": [
+        "exceptional override"
+      ]
+    },
+    "archon_gates": {
+      "title": "Archon Gates",
+      "class": "court_seat",
+      "authority_domain": [
+        "ingress",
+        "egress",
+        "provision",
+        "parallel intake"
+      ]
+    },
+    "arcmage": {
+      "title": "Arcmage",
+      "class": "court_seat",
+      "authority_domain": [
+        "destruction",
+        "teardown",
+        "purge"
+      ]
+    },
+    "bard": {
+      "title": "Bard",
+      "class": "court_seat",
+      "authority_domain": [
+        "trust",
+        "camaraderie",
+        "cohesion"
+      ]
+    },
+    "bishop": {
+      "title": "Bishop",
+      "class": "court_seat",
+      "authority_domain": [
+        "imbuement",
+        "prepared elevation"
+      ]
+    },
+    "composer": {
+      "title": "King",
+      "class": "crown_seat",
+      "authority_domain": [
+        "composition",
+        "integration",
+        "final assembly"
+      ]
+    },
+    "conjurer": {
+      "title": "Conjurer",
+      "class": "court_seat",
+      "authority_domain": [
+        "fabrication",
+        "reimaging",
+        "construction"
+      ]
+    },
+    "crier": {
+      "title": "Crier",
+      "class": "court_seat",
+      "authority_domain": [
+        "proclamation",
+        "broadcast",
+        "call the hounds"
+      ]
+    },
+    "detective": {
+      "title": "Detective",
+      "class": "court_seat",
+      "authority_domain": [
+        "truth tracing",
+        "fact recovery",
+        "cause review"
+      ]
+    },
+    "director": {
+      "title": "Director",
+      "class": "court_seat",
+      "authority_domain": [
+        "execution direction",
+        "lane control"
+      ]
+    },
+    "guard": {
+      "title": "Guard",
+      "class": "court_seat",
+      "authority_domain": [
+        "boundary enforcement",
+        "seizure",
+        "containment"
+      ]
+    },
+    "healer": {
+      "title": "Healer",
+      "class": "court_seat",
+      "authority_domain": [
+        "recovery",
+        "repair",
+        "restoration"
+      ]
+    },
+    "jack": {
+      "title": "Jack",
+      "class": "court_seat",
+      "authority_domain": [
+        "deadlock breaking",
+        "conflict arbitration"
+      ]
+    },
+    "keeper": {
+      "title": "Keeper",
+      "class": "court_seat",
+      "authority_domain": [
+        "cleanup",
+        "aftermath finality",
+        "stabilization"
+      ]
+    },
+    "keymaster": {
+      "title": "Keymaster",
+      "class": "court_seat",
+      "authority_domain": [
+        "key issuance",
+        "access grants"
+      ]
+    },
+    "knight": {
+      "title": "Knight",
+      "class": "court_seat",
+      "authority_domain": [
+        "promotion recognition"
+      ]
+    },
+    "locksmith": {
+      "title": "Locksmith",
+      "class": "court_seat",
+      "authority_domain": [
+        "lock repair",
+        "access restoration"
+      ]
+    },
+    "manager": {
+      "title": "Manager",
+      "class": "court_seat",
+      "authority_domain": [
+        "operational coherence",
+        "allocation",
+        "scheduling"
+      ]
+    },
+    "oracle": {
+      "title": "Oracle",
+      "class": "court_seat",
+      "authority_domain": [
+        "lawful forecast",
+        "consequence interpretation"
+      ]
+    },
+    "queen": {
+      "title": "Queen",
+      "class": "crown_seat",
+      "authority_domain": [
+        "validation",
+        "notation",
+        "integrity judgment"
+      ]
+    },
+    "rook": {
+      "title": "Rook",
+      "class": "court_seat",
+      "authority_domain": [
+        "barracks",
+        "disposable deployment"
+      ]
+    },
+    "seer": {
+      "title": "Seer",
+      "class": "court_seat",
+      "authority_domain": [
+        "faint-signal perception",
+        "hidden-thread recognition"
+      ]
+    },
+    "sees_all": {
+      "title": "SEES ALL",
+      "class": "court_seat",
+      "authority_domain": [
+        "anomaly forewarning",
+        "horizon scanning",
+        "latent drift visibility"
+      ]
+    },
+    "tank": {
+      "title": "Tank",
+      "class": "court_seat",
+      "authority_domain": [
+        "load absorption",
+        "shielding",
+        "damage containment"
+      ]
+    },
+    "ticketmaster": {
+      "title": "Ticketmaster",
+      "class": "court_seat",
+      "authority_domain": [
+        "ticket custody",
+        "routing identity",
+        "queue governance"
+      ]
+    }
+  },
+  "escalation": {
+    "default_chain": [
+      "local_court",
+      "bard",
+      "jack",
+      "ace",
+      "keeper"
+    ],
+    "keeper_final_if_ace_trumps_jack": true
+  },
+  "laws": {
+    "all_caps_assertions_require_verification": true,
+    "arrest_requires_custodian": true,
+    "arrest_requires_ticket": true,
+    "court_seats_crash_guarded": true,
+    "guard_may_seize": true,
+    "only_court_may_seize_capitals": true,
+    "only_disposable_agents_may_die_without_inheritance": true,
+    "pages_persist_but_do_not_rule": true,
+    "promoted_agents_have_authority": false,
+    "seize_all_caps_first": true,
+    "seize_requires_record": true,
+    "ticketmaster_owns_arrest_custody": true
+  },
+  "required_ledgers": [
+    "identity_ledger",
+    "office_ledger",
+    "ticket_ledger",
+    "dispute_ledger",
+    "recovery_ledger",
+    "handoff_ledger",
+    "proclamation_ledger",
+    "custody_ledger",
+    "capital_ledger",
+    "hound_ledger"
+  ]
+}

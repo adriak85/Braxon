@@ -1,0 +1,8 @@
+{
+  "schema": "Braxon.moral_invariant.guard_loop.current.v2",
+  "passes_requested": 6,
+  "passes_ran": 2,
+  "stable_count": 1,
+  "last_semantic_report_sha256": "7fdd2fcc56aae3aa69109833388cda140a2ba93284dbfe550ca9a3d08771bfda",
+  "ok": true
+}

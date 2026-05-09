@@ -1,0 +1,18 @@
+BRAXON_RUST_NIGHTLY_NATIVE_LOCK=1
+Fri May  8 09:32:06 CDT 2026
+SYSROOT=/data/data/com.termux/files/usr/opt/rust-nightly
+rustc 1.96.0-nightly (fd0c901b0 2026-03-18) (built from a source tarball)
+binary: rustc
+commit-hash: fd0c901b00ee1e08a250039cdb90258603497e20
+commit-date: 2026-03-18
+host: aarch64-linux-android
+release: 1.96.0-nightly
+LLVM version: 21.1.8
+cargo 1.96.0-nightly (cbb9bb8bd 2026-03-13) (built from a source tarball)
+release: 1.96.0-nightly
+commit-hash: cbb9bb8bd0fb272b1be0d63a010701ecb3d1d6d3
+commit-date: 2026-03-13
+host: aarch64-linux-android
+libgit2: 1.9.2 (sys:0.20.4 vendored)
+libcurl: 8.15.0-DEV (sys:0.4.83+curl-8.15.0 vendored ssl:OpenSSL/3.6.2)
+os: Android 16.0.0 [64-bit]

@@ -1,0 +1,78 @@
+WoWaS uploaded tar.gz contents readout
+=====================================
+
+Archive: wowas_character_system_complete.tar.gz
+Contained docs:
+- 00_ENGINE_RULES.md
+- 01_NAMED_CAST_TOP300.md
+- 02_CHARACTER_PLACEMENT_BY_BOOK.md
+- 03_WORLD_POPULATION_CANON.md
+- 04_SOURCE_HERO_ENGINE.md
+- 05_SELF_CORRECTING_CANON_RULES.md
+- 06_CHARACTER_REGISTRY.json
+
+Most important statements Claude encoded in the WoWaS character package
+---------------------------------------------------------------------
+
+1) Structural rule
+- Salvage the existing arc-engine machinery.
+- Spread it across the real 25-book spine.
+- Never collapse the story to a one-book frame.
+
+2) Pip lock
+- Pip is an adult male around 25, not 15.
+- Age-15 data is explicitly labeled a bad branch.
+- Pip source stack includes Stitch, Tasslehoff, Barefoot, Asta, Yuno, Gray, Lucy, Drizzt, Menolly, Hermione, F'nor, Erza.
+- Shadow layer includes Gromph Baenre.
+- Magic stack includes sonomancy, void-fold, quantum field, flux field, chronomancy latency, superposition.
+
+3) Population rule
+- World target is about 2,000,000 characters.
+- Most are background-only but must still have lives, routines, ties, pressures, places, memory, and faction logic.
+
+4) Character engine rule
+- Required roles are parsed from story need.
+- Each generated character is built from 2 to 4 source heroes depending on importance.
+- Each source hero must be reused at least 3 times, never the same way.
+- About 1/3 of strong positive source material must be used in morally mixed or evil characters.
+- Evil characters must still retain a real good side.
+
+5) Rolzen lock
+- Rolzen is the correct spelling, not Rosen.
+- He is 6'11", thick-chested, heavy-leg-haired, body-forward, not lean fantasy-pretty.
+- Source stack: Jason Stackhouse, Charmy, Natsu, Noelle Silva.
+- Emotional palette: Bad Santa, Tommy Pickles, Eric Hough, Joey Tribbiani.
+- Rescue origin is locked: Pip finds him mutilated and ripper-damaged, mistakes him for a ripper, recreates the diamond spell in the cell, heals him for about a year, restores eyes/jaw/ears, personality returns faster than body.
+- Bond law: Rolzen/Pip is unshakable interdependence, unlike Pip/Rylos toxic collapse.
+
+6) Xethrolund lock
+- Xethrolund is 7 feet, muscular, red-haired, librarian-bodied.
+- Magic is glyph-based and code-like.
+- Written glyphs behave as deterministic compiled instructions, not loose spellcasting.
+- Shadow source uses Freddy Krueger-like invasive dream threat translated into a glyph/archive register.
+
+7) Rylos lock
+- Transmutation is central to self-identity.
+- McGonagall is a source input for the transmutation logic.
+- Arc is accountability, not redemption.
+
+8) Mack lock
+- Mack never uses human language.
+- He communicates geologically: root pressure, temperature, resonance, 40Hz/42Hz logic.
+- Diamond Break lock includes giant tree-zombie transformation.
+- Jason Voorhees + Nemesis traits are transformed into geological/protective momentum.
+
+9) Faction and survivor distribution
+- Diamond-era survivors are around 5,000 total with listed faction splits.
+- Post-Diamond world scales to roughly 2,000,000 through named cast, named background, and generated population.
+
+10) Self-correcting canon rules
+- The package includes consistency checks for Pip, Rolzen, Xethrolund, Rylos, Mack, Neith, the world population layers, the 25-book structure, and the Book 25 Blood Cello terminus.
+- Blood Cello locks include Pip thinking he is dying, singing forgiveness beginning with Mack and ending with Neith, Neith breaking and amplifying Pip, and the last sentence having no adjectives.
+
+What this means for implementation
+----------------------------------
+- This WoWaS upload is not an NSQ patch set.
+- It is a character/world canon engine package.
+- It is authoritative for character generation, source-hero blending, world-population layering, and consistency enforcement.
+- It should be merged into the WoWaS engine and generator pipeline, not into NSQ runtime semantics.

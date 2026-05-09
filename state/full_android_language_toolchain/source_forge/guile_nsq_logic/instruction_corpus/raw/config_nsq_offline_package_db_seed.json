@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "authority": "nsq_native",
+  "mode": "offline_local_repo_only",
+  "package_db": {
+    "storage_class": "local_packed_nsq_packages",
+    "unpack_rule": "local_only",
+    "link_rule": "tight_local_link_only",
+    "external_calls_forbidden": true,
+    "mirrors_required": true,
+    "families": [
+      "nsq_native_tooling",
+      "rust_operational_dialect",
+      "python_surface_family",
+      "c_surface_family",
+      "sql_surface_family",
+      "config_manifest_surface_family",
+      "shell_surface_family",
+      "web_surface_family",
+      "jvm_surface_family",
+      "engine_ui_surface_family",
+      "android_surface_family",
+      "observability_surface_family"
+    ]
+  }
+}

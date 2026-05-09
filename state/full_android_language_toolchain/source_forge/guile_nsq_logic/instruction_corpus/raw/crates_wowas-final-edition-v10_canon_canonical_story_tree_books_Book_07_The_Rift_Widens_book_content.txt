@@ -1,0 +1,247 @@
+# Book_07_The_Rift_Widens
+
+# Book_07_The_Rift_Widens
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 7 — Distance = Pressure
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_07_The_Rift_Widens
+
+- B07_001 — The Siege Defense
+- B07_002 — Mack Warns Again
+- B07_003 — Daisy May Arrives For Real
+- B07_004 — Quiet Harvest
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+## merged from generated candidates
+
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/support_purity_backup/Whispers of Willow and Stone- Boo-2b32eac30e90a813.docx.txt
+  candidate: The descent was pure bliss. He swam through a world of beautiful amethyst water, lit with scintillating rays of platinum light. He moved with a graceful, effortless speed, propelled by the golden pulse of his spell. The heavy pressure of the water grew with every inch he descended, pressing in from all sides as the light began to fade, dimming into a pale, ghostly glow until it was gone entirely. The silence of the deep was absolute. "Huh," he thought, the word a small, confused bubble in his mind. Then came the sound: a sickening, crackling grating of bone, a noise that devoured his senses and vibrated through his soul, promising a world of pain. Pip, a small chipmunk with paws that twitched nervously even in sleep, was adrift in a cold, infinite void known as the Sea of Unknowing. From the crushing depths below, great, dark tentacles, thick as ancient trees and slick with cosmic ooze, began to writhe and uncoil. They were not exploring; they were searching, hunting. Then, in that infinite darkness, a pair of brilliant, glowing yellow circles ignited. They were the size of suns, and they fixed on him with an intense, unblinking, and all-knowing stare.
+
+### 03_time_map.md
+
+# time map — Book_07_The_Rift_Widens
+
+## B07_001 — The Siege Defense
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B07_002 — Mack Warns Again
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B07_003 — Daisy May Arrives For Real
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B07_004 — Quiet Harvest
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# The Rift Widens Scene Spine
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 7 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Rift Widens
+
+## B07.01 — The First Tear That Will Not Close
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-Divide-Already-Growing — The rift is active before anyone can name all its edges.
+S002 Pip-Feels-the-World-Pulling-in-More-Than-One-Direction — Duty, love, fear, and destiny tug apart.
+S003 Rylos-Reads-the-Widening-Before-It-Becomes-Visible-to-Everyone — His clarity stays sharp.
+S004 Mack-Booming-Voice-Comes-Through-Canopy-and-Stone — The sanctuary answers with terraces and suspended rootways as he warns them.
+S005 The-Land-Reacts-Like-a-Living-Body-Under-Strain — Mack's half-mile willow self is felt through every shift in path and ground.
+S006 Pip-Knows-This-Is-Not-a-Simple-Choice-Book-Any-More — The scale has changed.
+S007 Rylos-Refuses-Cheap-Comfort — He keeps the reading honest.
+S008 Daisy-May-and-Majeski-Sense-the-Split-Through-Silence-and-Posture — Their Great Dane presence grounds the field.
+S009 The-Sanctuary-Can-Hold-Them-But-Not-Hold-Back-the-World — Home reaches a new limit.
+S010 Pip-Does-Not-Turn-Naive-Under-Pressure — He knows what widening means.
+S011 Mack-Names-the-Rift-as-a-Relational-and-World-State-Event — The split is not only external.
+S012 The-Beat-Ends-with-the-Tear-Confirmed — Book 7 begins under widening strain.
+
+## B07.02 — What Widens Between Worlds
+target_scenes: 12
+
+S013 The-Outside-World-Presses-Harder-Than-Before — Distance becomes active invasion.
+S014 Pip-Feels-the-Blue-Thread-and-the-Break-Pulling-Together — Symbolic pressure rises.
+S015 Rylos-Sees-Where-the-World-Is-Trying-to-Use-Bond-As-Leverage — Practical discernment matters.
+S016 Mack-Lifts-Low-Walls-and-Root-Bridges-to-Shape-a-Safer-Approach — Life magic remains part of every strategic exchange.
+S017 The-Sanctuarys-Grace-Takes-Material-Form — Protection is architectural.
+S018 Pip-Understands-That-Widening-Is-Also-Revelation — Hidden fractures are becoming visible.
+S019 Rylos-Knows-Some-Rifts-Are-Older-Than-the-Current-Crisis — His past deepens the read.
+S020 The-Dogs-Keep-Their-Place-In-the-Moving-Household — Daisy-May and Majeski remain themselves and steady the scene.
+S021 Mack-Refuses-to-Let-Fear-Set-the-Map — He keeps scale from becoming panic.
+S022 Pip-Takes-In-More-Than-He-Wants-and-Stays-Standing — Determination holds.
+S023 The-Rift-Proves-It-Affects-Place-Not-Only-People — World-state consequence sharpens.
+S024 The-Beat-Ends-with-the-World-Itself-Starting-to-Split-Open — Stakes expand.
+
+## B07.03 — Pip Trains Against Silence
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Again — He keeps trying because he is stubborn, not because he is secretly gifted.
+S026 He-Builds-Himself-a-Hidden-Practice-Space-and-Fails — Private struggle stays canonically true.
+S027 Mack-Quietly-Grows-a-Hollow-of-Roots-and-Soft-Needles-for-Him — Help without false success.
+S028 The-First-Attempt-Produces-Almost-Nothing — Difficulty remains severe.
+S029 Pip-Tries-Again-Because-Will-Is-His-Real-Power — Character truth holds.
+S030 The-Sound-Bends-For-One-Second-and-Dies — Tiny progress only.
+S031 He-Does-Not-Fantasize-Mastery-Out-of-Frustration — No drift into easy magic.
+S032 Rylos-Feels-That-Pip-Is-Wearing-Himself-Down-Privately — Bond sensitivity continues.
+S033 Mack-Knows-and-Does-Not-Shame-Him — Sanctuary protects effort.
+S034 Pip-Leaves-With-Better-Discipline-Not-Better-Control — Honest development.
+S035 Sonomancy-Remains-Rare-Unreliable-and-Private — Canon reinforced.
+S036 The-Beat-Ends-with-Silence-Still-Winning-For-Now — The struggle stays real.
+
+## B07.04 — Rylos Names the Split
+target_scenes: 12
+
+S037 Rylos-Finally-Puts-Clean-Words-On-What-Is-Happening — The widening gets a sharper human reading.
+S038 Pip-Hears-the-Truth-and-Hates-How-Right-It-Is — Clean naming hurts.
+S039 Mack-Shapes-a-Grotto-Below-His-Branch-Face-for-the-Talk — The environment becomes listening chamber.
+S040 The-Air-Itself-Feels-Heavier-With-Accuracy — Mack's presence and the moral weight combine.
+S041 Rylos-Explains-Where-Pressure-Is-Coming-From — Not all rupture is random.
+S042 Pip-Realizes-He-Has-Been-Holding-Two-Or-Three-Conflicting-Loyalties-at-Once — Complexity rises.
+S043 Daisy-May-Lies-Down-Between-Them-and-Changes-the-Temperature — Still silent, still consequential.
+S044 Majeski-Mirrors-Her-and-Holds-the-Outer-Edge — The pair remain Great Danes and guards.
+S045 Mack-Rejects-Flattened-Answers — No one gets to call the rift simple.
+S046 Rylos-Makes-Clear-That-Love-Will-Not-Remove-Cost — Mature bond truth.
+S047 Pip-Accepts-the-Reading-Without-Calling-Himself-Doomed — No martyr drift.
+S048 The-Beat-Ends-with-the-Split-Named-Correctly — Better vision changes the route.
+
+## B07.05 — The Rift Enters the Sanctuary
+target_scenes: 12
+
+S049 What-Was-Outside-Begins-Manifesting-Inside-Home — The widening crosses the threshold.
+S050 Mack-Responds-As-Land-Guardian-Not-Room-Guardian — Rootwork, earth-ridges, and living partitions rise.
+S051 Pip-Sees-That-No-Sanctuary-Stays-Pure-By-Ignoring-the-World — Home truth matures.
+S052 Rylos-Acts-Without-Waiting-to-Be-Told-Twice — He is load-bearing.
+S053 Daisy-May-and-Majeski-Shift-From-Comfort-Presence-to-Household-Defense — Their function sharpens without breaking species truth.
+S054 The-Needled-Canopy-Lowers-and-the-Ground-Tenses — Mack's body and magic are the scene.
+S055 Pip-Does-Not-Reach-for-Sonomancy-As-Easy-Solution — Limit stays intact.
+S056 The-Rift-Is-Revealed-as-Pattern-Not-Only-Impact — The split has structure.
+S057 Mack-Booming-Voice-Keeps-Them-From-Fracturing-Worse — He holds moral shape through speech.
+S058 Rylos-Catches-the-Meaning-Before-Pip-Does-In-One-Critical-Moment — Partnership remains asymmetrically useful.
+S059 Home-Survives-But-Changes — The sanctuary pays real cost.
+S060 The-Beat-Ends-with-Inside-and-Outside-No-Longer-Separable — Book 7 tightens.
+
+## B07.06 — Daisy-May Holds What Words Cannot
+target_scenes: 12
+
+S061 Daisy-May-Remains-Completely-Silent-and-Completely-Present — Her canon is actively honored.
+S062 Pip-Learns-from-Her-Kind-of-Steadiness — Not all holding requires language.
+S063 Majeski-Answers-Her-Lead-Through-Body-and-Position — The pair remain true.
+S064 Rylos-Relaxes-Only-When-He-Sees-Them-Still-There — Their presence matters to him deeply.
+S065 Mack-Grows-a-Broad-Low-Seat-and-Mossed-Path-From-the-Earth — He shapes comfort around the silence.
+S066 The-Sanctuary-Uses-Living-Space-to-Say-What-No-One-Can-Say-Cleanly — Mack's magic remains emotional architecture.
+S067 Pip-Feels-How-Much-the-Household-Actually-Holds-Him — Family truth deepens.
+S068 Daisy-May-Is-Never-Turned-Into-Symbolic-Sacrifice — The book actively resists polluted shorthand.
+S069 Majeski-Remains-With-Her-As-Son-Not-Prop — Relationship truth holds.
+S070 Rylos-Sees-That-Silence-Can-Be-a-Form-of-Force — Important emotional learning.
+S071 Mack-Allows-the-Scene-to-Stay-Quiet-and-Large — Boisterousness gives way to chosen restraint without disappearing from character truth.
+S072 The-Beat-Ends-with-Silence-Made-Load-Bearing — The story stays accurate.
+
+## B07.07 — The Route Fractures
+target_scenes: 12
+
+S073 The-Path-Forward-Splits-Literally-or-Strategically — The widening becomes route problem.
+S074 Pip-Hates-Having-to-Choose-Under-Incomplete-Knowing — The pressure is now operational.
+S075 Rylos-Reads-the-Better-Worse-Path-Not-the-Safer-Looking-One — Discernment remains key.
+S076 Mack-Raises-Temporary-Walkways-Over-Broken-Ground — Terraformed passage keeps him fully present.
+S077 The-Earth-Itself-Seems-to-Argue-Back — World-state and Mack's counter-shaping interact.
+S078 Pip-Tries-to-Hear-a-Sonomantic-Answer-and-Cannot-Hold-It — Difficulty remains honest.
+S079 He-Does-Not-Pretend-Failure-Is-Success — Character stays real.
+S080 Rylos-Commits-to-the-Route-With-Him — The bond stays active under uncertainty.
+S081 Daisy-May-and-Majeski-Move-When-the-Pair-Moves — Household continuity remains intact.
+S082 Mack-Sets-the-Cost-Plainly — His voice and land both refuse illusions.
+S083 The-Chosen-Path-Already-Hurts — Correct route is not painless route.
+S084 The-Beat-Ends-with-Fractured-Motion-Established — Book 7 gains forward drive.
+
+## B07.08 — What the Rift Wants
+target_scenes: 12
+
+S085 The-Split-Reveals-Its-Appetite — The rift is shown trying to separate bonds, meanings, or worlds.
+S086 Pip-Understands-It-Wants-Him-Smaller-More-Isolated-or-More-Confused — Target logic clarifies.
+S087 Rylos-Refuses-that-Reduction-on-Sight — He protects by naming the pattern.
+S088 Mack-Counters-With-Living-Connection-Work — Roots, paths, and sheltered spans are raised to keep relation intact.
+S089 The-Sanctuarys-Magic-Is-Shown-as-Anti-Rift-Logic — Mack's nature answers division with living joinedness.
+S090 Pip-Sees-That-Determination-Is-Not-Enough-Without-Connection — Growth note.
+S091 Rylos-Sees-That-Connection-Needs-Decision-Not-Only-Feeling — Paired growth.
+S092 Daisy-May-and-Majeski-Keep-the-Household-Coherent-At-the-Edges — Silent structure.
+S093 The-Rift-Fails-to-Take-Everything-It-Wanted — Partial victory.
+S094 The-World-Is-Still-More-Dangerous-Afterward — No false ease.
+S095 Mack-Frames-the-Rift-as-Enemy-of-Living-Orbit — Deity-class reading.
+S096 The-Beat-Ends-with-the-Split-Given-Clear-Opposition — The story has its counterforce.
+
+## B07.09 — Pip Refuses Collapse
+target_scenes: 12
+
+S097 Pressure-Stacks-Until-Pip-Could-Break — The emotional load peaks.
+S098 He-Does-Not-Go-Naive-and-He-Does-Not-Go-Machine-Cold — Core correction explicitly held.
+S099 He-Also-Does-Not-Become-Martyr-Beautiful-About-It — Another safeguard held.
+S100 Rylos-Calls-Him-Back-Into-Cleaner-Selfhood — Bond as correction.
+S101 Mack-Booming-Voice-Carries-Through-the-Branches-and-Ground — The sanctuary physically reinforces the recall.
+S102 The-Land-Forms-a-Stable-Ring-Under-Him — Life magic answers strain.
+S103 Pip-Accepts-Limit-Without-Quitting — Strong-willed truth remains.
+S104 Sonomancy-Still-Will-Not-Save-Him-on-Demand — Canon remains intact.
+S105 Daisy-May-and-Majeski-Stay-There-and-Do-Not-Break-Faith — Household truth holds.
+S106 Rylos-Stands-With-Him-Without-Flattening-Him — Mature love remains.
+S107 The-Rift-Fails-to-Claim-His-Identity — A major internal victory.
+S108 The-Beat-Ends-with-Pip-Still-Himself — Crucial correction locked in story form.
+
+## B07.10 — Book Seven Locks Its First Widening Law
+target_scenes: 12
+
+S109 Rift-Route-Bond-Sanctuary-and-World-State-Finally-Align — The volume's first major weave becomes clear.
+S110 Pip-Is-Reembedded-As-Determined-Limited-and-Accurate — Core correction holds again.
+S111 Rylos-Is-Set-As-Named-Partner-and-Clear-Reader — Deprecated drift stays rejected.
+S112 Mack-Vast-Willow-Embodiment-Booming-Voice-and-Life-Magic-Are-Fully-In-Play — The book holds him correctly.
+S113 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth — Their canon is actively protected.
+S114 The-Rift-Is-Recast-As-Division-Across-Relationship-and-World-State — Stakes deepen.
+S115 The-Sanctuary-Proves-It-Can-Oppose-Splitting-With-Living-Form — Mack's domain remains load-bearing.
+S116 Pip-Does-Not-Get-Easy-Magic-Or-Easy-Purity — Strong realism holds.
+S117 Rylos-and-Pip-Are-More-Accurately-Bound-Than-Before — Pair refinement continues.
+S118 The-Next-Phase-Is-Loaded-With-Greater-Distance-and-Greater-Need-for-Joinedness — Forward pressure.
+S119 The-Book-Finds-Its-Severe-Expansion-Law — Tone and structure lock.
+S120 The-Beat-Ends-with-the-Rift-Actively-Widening — Book 7 is properly underway.
+

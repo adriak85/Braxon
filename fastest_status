@@ -1,0 +1,43 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+ROOT="/data/data/com.termux/files/home/Braxon"
+TC="$ROOT/state/full_android_language_toolchain"
+cd "$ROOT"
+source "$ROOT/braxon-rust-env" 2>/dev/null || true
+
+export PATH="$ROOT:$TC/install/python/bin:/data/data/com.termux/files/usr/opt/rust-nightly/bin:/data/data/com.termux/files/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$TC/install/braxon_android_overlay/lib:/data/data/com.termux/files/usr/lib:${LD_LIBRARY_PATH:-}"
+
+echo "=== Braxon fastest status ==="
+date
+echo
+
+echo "python:"
+"$ROOT/braxon-python" -c 'import sys, math, _math_integer; print(sys.version.split()[0]); print(math.__file__); print(_math_integer.__file__)'
+
+echo
+echo "rust:"
+"$ROOT/braxon-rustc" --version
+"$ROOT/braxon-cargo" --version
+
+echo
+echo "text/dev:"
+zig version
+tree-sitter --version
+hb-shape --version
+fc-match --version
+
+echo
+echo "cargo packages:"
+"$ROOT/braxon-cargo" metadata --no-deps --format-version 1 \
+  | "$ROOT/braxon-python" -c 'import json,sys; [print(p["name"]) for p in json.load(sys.stdin)["packages"]]'
+
+echo
+echo "core tests:"
+"$ROOT/braxon-cargo" test -p nsq-core -- --nocapture
+"$ROOT/braxon-cargo" test -p Braxon-core -- --nocapture
+"$ROOT/braxon-cargo" test -p Braxon-ingest -- --nocapture
+
+echo
+echo "BRAXON FASTEST STATUS OK"

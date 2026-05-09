@@ -1,0 +1,105 @@
+{
+  "schema": "wowas.prose_and_tone_guide.v14.final_home",
+  "authority": "WOWAS_CANON_AUTHORITY_v14.md",
+  "source_status": "final_control_home_not_patch",
+  "point_of_view": "Tight third-person limited, exclusively from Pip's perspective. The reader should only know what Pip knows, notice what Pip notices, misread what Pip misreads, and feel events through his embodied perception.",
+  "manuscript_generation_note": "There is no prewritten completed manuscript route. Canon produces manuscript. Old or hidden prose must not be promoted to final canon unless explicitly marked completed-final by current v14 authority.",
+  "chapter_and_scene_expansion": {
+    "beat_to_chapter_rule": "Each beat should normally become its own chapter unless the scene index explicitly groups several microbeats into one continuous lived scene.",
+    "default_scene_target_words": 4000,
+    "preferred_scene_target_range_words": [3000, 5000],
+    "acceptable_short_chapter_floor": 750,
+    "full_refactor_rule": "For the 5,000 story-character / 5,000 creature target, expect many scenes to expand toward 3,000-5,000 words so appearances, microevents, emotional causality, atlas detail, magic state, and continuity load are not compressed.",
+    "embodiment_rule": "Expand through concrete sensation, consequence, relational pressure, dialogue, play, aftermath, and world texture.",
+    "no_padding_rule": "Length must come from required causality and lived detail, not filler, repeated slogans, or decorative excess."
+  },
+  "target_audience": {
+    "primary": "Adults across a broad range of fantasy, game, graphic novel, CYOA, and immersive-world readers.",
+    "secondary": "Some older teenagers where content boundaries allow.",
+    "reading_level_target": "Accessible seventh-grade sentence clarity with adult emotional, moral, and worldbuilding depth."
+  },
+  "cognitive_style": {
+    "name": "Resonant Felt Perception",
+    "description": "Pip has inner dialogue, but it is not his dominant mode. Most of the time he feels his way through the world before words fully form. He experiences people, objects, pressure, danger, and truth as resonance, pull, pattern, sensation, and lived metaphor before translating them into language.",
+    "inner_dialogue_rule": "Pip may think in words, but that is secondary. He should not read like a nonstop inner monologue.",
+    "world_attunement_rule": "Pip feels the world around him more than he merely sees it. Objects, especially recently touched ones, can retain a pull strong enough that their movement or changed relation registers almost like felt displacement.",
+    "social_attunement_rule": "Pip is unusually attuned to others. He often feels other people almost from inside their own pattern and can recognize the truth of what someone is about to say from tiny mismatches in body, pressure, hesitation, or tone.",
+    "pattern_rule": "Pip carries an immense internal codex of relation, memory, pattern, and comparison. His fast perception should feel like extraordinary attunement and pattern recognition, not omniscience."
+  },
+  "pip_identity_locks": {
+    "gender": "male",
+    "pronouns": "he/him",
+    "orientation": "gay; the people Pip is romantically/sexually interested in are male",
+    "not_robot": true,
+    "first_arc_form": "neurodivergent chipmunk",
+    "human_transition": "Pip becomes human through the portal / Diamond Break transition path and remains embodied, not mechanical.",
+    "name": "Pip / Indalwin Willowjayce"
+  },
+  "overall_tone": "Oscillates between majestic wonder and visceral psychological horror. The world should feel so beautiful that the reader longs to enter it and so dangerous that the reader fears what it would cost to live there.",
+  "prose_style": {
+    "pip_voice": "Pip is joyful, artistic, curious, honest, disciplined, and emotionally raw. He is not slogan-like. His joy should usually appear through what he notices, protects, jokes about, forgives, makes beautiful, and refuses to surrender.",
+    "human_register_rule": "Pip must remain recognizably human. He can be tired, hungry, embarrassed, awkward, blunt, playful, petty, grieving, confused, quietly affectionate, or intensely clear. His heightened perception deepens his humanity; it does not replace it.",
+    "dialogue_rule": "Dialogue should sound natural, specific, alive, and grounded. No catchphrases or thematic slogans unless the moment earns them.",
+    "environmental_description": "The Expanse should feel brutal, devastated, and breathtakingly beautiful all at once. The beauty is often because of the destruction rather than despite it.",
+    "action_sequences": "Action is not generic exchange. It is perception under unbearable pressure, invention under threat, pain transmuted into beauty, and survival through creativity. Use concrete consequence over decorative abstraction.",
+    "register_control": "Reserve ecstatic, manic, or overwhelming states for genuine peaks. Most scenes should let Pip breathe in lower, more human registers so the heightened moments land harder.",
+    "anti_repetition_rule": "Avoid repeating pet words, catchphrases, absolutes, or branded-sounding language. Vary diction by situation, body state, relationship, and world pressure."
+  },
+  "core_thematic_laws": {
+    "joy_rule": "Pip's joy is not a catchphrase or a constant mood. It is a vow: no matter how harsh life becomes, he will keep looking for the reason to be happy.",
+    "harmonic_resonance_rule": "Emotional state visibly affects power, perception, and the world around the characters.",
+    "hope_rule": "No matter how lost a world may seem, there is hope as long as joy can still be found."
+  },
+  "moral_and_decision_rules": {
+    "moral_line_rule": "Pip does not morally dither. To him there is a real line, not a gray blur. His uncertainty comes from incomplete perception, not confusion about whether right and wrong matter.",
+    "decision_rule": "When Pip truly decides, the decision is final, embodied, and resonant.",
+    "information_rule": "Pip does not passively wait for missing information. When truth is missing, he moves toward the gap and seizes clarity one way or another.",
+    "judgment_rule": "Pip expresses judgment without dehumanizing the one who is wrong."
+  },
+  "anti_omniscience_rules": {
+    "not_omniscient_rule": "Pip often perceives truth before others do, but he must not feel effortlessly omniscient. His insight carries costs, liabilities, and blind spots.",
+    "failure_rule": "Pip's failures usually come from taking too many blows before protecting himself, expecting others to value what seems obvious to him, refusing cruelly efficient solutions, and trying too hard to save people from their own moral decisions.",
+    "combat_rule": "Pip often knows what would be required to win, but comes closest to dying when he refuses to become less merciful, less hopeful, or less himself to secure victory."
+  },
+  "relationship_truths": {
+    "pip_xethrolund_rule": "After the 400-year period, Pip and Xethrolund fear overindulgence and codependence, especially Xethrolund. Their overcorrection helps create the conditions for Pip's capture.",
+    "pip_rylos_rule": "Rylos Vayne Johnson's fracture is rooted in manipulation and concealment, not merely desire. His darkness must not telegraph early; betrayal lands near the Diamond Break.",
+    "pip_rolzen_rule": "Pip and Rolzen are interdependent, not codependent. Their closeness comes from equal investment, mutual trust, captivity, damage, and the knowledge that presence is precious.",
+    "love_vectors": {
+      "xethrolund": "He fell in love with Pip's mind, reasoning, perception, adaptability, and terrifying clarity.",
+      "rolzen": "He fell in love with Pip's heart, wisdom, humility, compassion, morals, honesty, passion, and discipline.",
+      "rylos_vayne_johnson": "He fell in love with Pip's clueless beauty, teaching instinct, forgiveness, joy, curiosity, loyalty, and understanding."
+    }
+  },
+  "rolzen_cell_sequence": {
+    "rescue_rule": "Pip must recognize personhood in Rolzen before Rolzen can present it. Rolzen is terrifying because protection is the only thing left in him and he still refuses surrender.",
+    "capture_logic_rule": "The rippers throw Pip into Rolzen's cell hoping Rolzen killing an innocent human will finally break him, or that Pip will die or break from being locked in there with him.",
+    "recognition_rule": "Pip knows Rolzen is not evil, only trying to protect itself because that is all it knows.",
+    "healing_rule": "Pip survives by deflecting rather than striking, then begins flooding Rolzen with healing through each deflection as a bridge of proof.",
+    "love_timing_rule": "It takes months for Pip to heal Rolzen meaningfully, but only days for Pip to fall in love with him.",
+    "first_magic_rule": "Rolzen's first meaningful act of magic in nearly a century is to feed Pip. The first thing the rippers took was his eyes.",
+    "crystal_food_rule": "Rolzen can crack his crystal spheres open like eggs and let raw ingredients fall from them. This is care, domesticity, magic logic, and abundance."
+  },
+  "dialogue_and_play_policy": {
+    "dialogue_insertion_rule": "Dossier notes, side notes, relationship notes, and support-cast notes that imply meaningful spoken exchange should become manuscript-bearing dialogue moments where appropriate.",
+    "play_rule": "The party must have real moments of play, humor, wonder, curiosity, delight, flirtation, teasing, food, rest, and beauty.",
+    "fun_world_rule": "The cast should enjoy the world whenever they can. Pleasure should be textured and particular, not generic downtime."
+  },
+  "manuscript_filters": {
+    "every_event_filter": "Every event and character action must pass through Pip's vow-like commitment to joy, resonant perception, and the world's moral and emotional consequences.",
+    "scene_embodiment_filter": "Scenes must feel lived, not reported. Favor touch, pressure, temperature, sound, appetite, pain, relief, awkwardness, scent, and the immediate social field.",
+    "concrete_over_label_filter": "Prefer concrete emotional and sensory consequence over repeated named invocation of abstract laws."
+  },
+  "forbidden_failure_modes": [
+    "Do not let Pip sound like a slogan, mascot, or catchphrase engine.",
+    "Do not let heightened perception erase ordinary humanity.",
+    "Do not let joy become cheap optimism.",
+    "Do not let action become generic fantasy trading of blows.",
+    "Do not let beauty and horror separate into different books; they must coexist.",
+    "Do not confuse interdependence with manipulation or weakness.",
+    "Do not write Pip's suffering as caused by stupidity when it is caused by mercy, hope, overextension, or valuation of others.",
+    "Do not promote old hidden Book 1 prose to canon.",
+    "Do not use Chrono decay or Aortic Labyrinth as active canon.",
+    "Do not use Boojay as active canonical name where Rylos Vayne Johnson is meant."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "derived_only": true,
+  "input_layers": [
+    "knowledge_graph",
+    "canonical_artifact_tags",
+    "court_observer_traces",
+    "stack_surface_registry"
+  ],
+  "indexes": [
+    {
+      "name": "semantic_recall",
+      "purpose": "retrieval_support"
+    },
+    {
+      "name": "boundary_projection_recall",
+      "purpose": "foreign_tool_projection_support"
+    }
+  ]
+}

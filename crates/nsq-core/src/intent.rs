@@ -25,9 +25,9 @@ pub const NSQ_INTENT_SCALE_ANCHORS: usize = 4;
 
 /// The type for a final-tier lever position.
 /// Range: 1..=CANONICAL_LEVER_MAX_POSITION.
-/// With the current lever ceiling this gives 2254 zero-inclusive states per lever
-/// and 25,811,642,826,256 states per 4-lever bit-unit.
-pub type NsqFinalLeverPosition = u16;
+/// With the current lever ceiling this gives 500,000 zero-inclusive lever
+/// positions and 62,500,000,000,000,000,000,000 states per 4-lever bit-unit.
+pub type NsqFinalLeverPosition = u64;
 
 // ── Semantic variables ─────────────────────────────────────────────────────
 

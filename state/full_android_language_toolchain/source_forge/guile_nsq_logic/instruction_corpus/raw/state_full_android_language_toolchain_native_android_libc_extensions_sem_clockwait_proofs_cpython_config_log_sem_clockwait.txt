@@ -1,0 +1,2 @@
+15531:configure:20681: checking for sem_clockwait
+41886:ac_cv_func_sem_clockwait='yes'

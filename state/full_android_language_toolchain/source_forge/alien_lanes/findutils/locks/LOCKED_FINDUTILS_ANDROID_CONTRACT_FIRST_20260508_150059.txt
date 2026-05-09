@@ -1,0 +1,8 @@
+BRAXON_FINDUTILS_ANDROID_CONTRACT_FIRST_FIXED=1
+Fri May  8 15:06:43 CDT 2026
+prefix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix
+qsort_r=native_no_compat_yes
+selinux=disabled_by_design_android_missing_getfilecon_raw_lgetfilecon_raw
+matrix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv
+find (GNU findutils) 4.10.0
+xargs (GNU findutils) 4.10.0

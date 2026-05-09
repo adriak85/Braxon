@@ -1,0 +1,131 @@
+{
+  "schema": "Braxon.nsq.sensory_generation_roster.v1",
+  "authority": "NSQ_COURT",
+  "identity": "Braxon",
+  "canonical_semantics": "base8_switch_topology",
+  "extends_council_of_six": true,
+  "replaces_council_of_six": false,
+  "required_body_count": 4,
+  "graphics_footprint_allowance": {
+    "max_units": 50,
+    "used_units": 50,
+    "remaining_units": 0,
+    "within_allowance": true,
+    "unit": "nsq_graphics_footprint_unit",
+    "policy": "allow_up_to_50_units_for_native_visual_video_voice_world_surfaces",
+    "canonical_rule": "footprint accounting is an NSQ graphics/runtime allowance, not a byte or host-width limit"
+  },
+  "bodies": [
+    {
+      "numeric_id": 1,
+      "numeric_id_base8": "1",
+      "semantic_id": "braxon.sensory_generation.image_cortex",
+      "body": "image_cortex",
+      "title": "Artistic Peak Concept Engine",
+      "model": "FLUX.1-dev",
+      "source": "black-forest-labs/FLUX.1-dev",
+      "role": "Generates the highest level of artistic images, textures, and aura designs.",
+      "integration": "Direct Main Mind visual intent mapping to the NSQ image route.",
+      "constraint": "Native NSQ image-route surface; foreign representation is boundary-only.",
+      "nsq_route": ["policer", "router", "nsq_image_route", "compositor", "inspector"],
+      "graphics_footprint_units": 12,
+      "todo": [
+        "Define visual-intent lever anchors for aura, texture, material, and scene-style pressure.",
+        "Bind image output inspection to the central chain wake registry."
+      ]
+    },
+    {
+      "numeric_id": 2,
+      "numeric_id_base8": "2",
+      "semantic_id": "braxon.sensory_generation.video_cortex",
+      "body": "video_cortex",
+      "title": "Physical Reality Window",
+      "model": "Wan2.1-T2V-14B",
+      "source": "Wan2.1-T2V-14B",
+      "role": "Renders physically possible motion, momentum, and fluid dynamics.",
+      "integration": "Pure visual renderer resolving the physical consequences of Citadel intent.",
+      "constraint": "No independent decision authority; physical consequence renderer only.",
+      "nsq_route": ["policer", "router", "nsq_video_route", "scheduler", "inspector"],
+      "graphics_footprint_units": 14,
+      "todo": [
+        "Add momentum, fluid, lighting, depth, and edge-delta check gates.",
+        "Verify Citadel intent cannot bypass physical plausibility inspection."
+      ]
+    },
+    {
+      "numeric_id": 3,
+      "numeric_id_base8": "3",
+      "semantic_id": "braxon.sensory_generation.voice_body",
+      "body": "voice_body",
+      "title": "Emotional Acoustic Layer",
+      "model": "IndexTTS2",
+      "source": "IndexTTS2",
+      "role": "Provides Braxon's physical left-brain voice with deep emotional variability.",
+      "integration": "NSQ voice route maps semantic intent pressure to emotional acoustic frequency.",
+      "constraint": "Anchored to 2254-state NSQ levers for zero-shot synthesis.",
+      "emotional_frequency_map": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+      "nsq_route": ["policer", "router", "nsq_voice_route", "scheduler", "inspector"],
+      "graphics_footprint_units": 8,
+      "todo": [
+        "Focus next on NSQ-to-IndexTTS2 emotional frequency mapping.",
+        "Map valence, arousal, breath, tremor, timbre, cadence, and emphasis to zero-inclusive lever states."
+      ]
+    },
+    {
+      "numeric_id": 4,
+      "numeric_id_base8": "4",
+      "semantic_id": "braxon.sensory_generation.world_body_3d",
+      "body": "world_body_3d",
+      "title": "Geometry & Physics",
+      "model": "Hunyuan3D-2.1",
+      "source": "Hunyuan3D-2.1",
+      "role": "Converts 2D imaginations into 3D meshes for spatial worldbuilding.",
+      "integration": "Final spatial resolution for the Citadel environment.",
+      "constraint": "Geometry and physics body; canonical intent remains NSQ base-8 switch topology.",
+      "nsq_route": ["policer", "router", "nsq_world_route", "optimizer", "inspector"],
+      "graphics_footprint_units": 16,
+      "todo": [
+        "Define 2D-to-mesh semantic bridge without treating mesh data as canonical NSQ truth.",
+        "Add spatial consistency checks for collision, scale, surface, and material inheritance."
+      ]
+    }
+  ],
+  "todo": [
+    {
+      "numeric_id": 1,
+      "numeric_id_base8": "1",
+      "semantic_id": "braxon.todo.voice.index_tts2_emotional_frequency_mapping",
+      "priority": "next",
+      "task": "Implement NSQ-to-IndexTTS2 emotional frequency mapping."
+    },
+    {
+      "numeric_id": 2,
+      "numeric_id_base8": "2",
+      "semantic_id": "braxon.todo.image.flux_visual_intent_mapping",
+      "priority": "high",
+      "task": "Map Main Mind visual intent into FLUX.1-dev image-route pressure."
+    },
+    {
+      "numeric_id": 3,
+      "numeric_id_base8": "3",
+      "semantic_id": "braxon.todo.video.wan_physical_consequence_renderer",
+      "priority": "high",
+      "task": "Constrain Wan2.1-T2V-14B to physical consequence rendering from Citadel intent."
+    },
+    {
+      "numeric_id": 4,
+      "numeric_id_base8": "4",
+      "semantic_id": "braxon.todo.world.hunyuan3d_spatial_resolution",
+      "priority": "high",
+      "task": "Resolve Hunyuan3D-2.1 geometry and physics into Citadel environment surfaces."
+    },
+    {
+      "numeric_id": 5,
+      "numeric_id_base8": "5",
+      "semantic_id": "braxon.todo.graphics.footprint_allowance_guard",
+      "priority": "required",
+      "task": "Keep total sensory generation graphics footprint at or below 50 NSQ graphics footprint units."
+    }
+  ],
+  "next_focus": "nsq_to_indextts2_emotional_frequency_mapping"
+}

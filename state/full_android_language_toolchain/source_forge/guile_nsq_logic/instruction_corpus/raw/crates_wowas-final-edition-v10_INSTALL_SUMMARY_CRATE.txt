@@ -1,0 +1,7 @@
+root=/data/data/com.termux/files/home/Braxon
+pack=/data/data/com.termux/files/home/storage/shared/Download/wowas_final_edition_BRAXON_ready_v10
+crate_dir=/data/data/com.termux/files/home/Braxon/crates/wowas-final-edition-v10
+top_level_wowas_symlink=/data/data/com.termux/files/home/Braxon/wowas
+authority=/data/data/com.termux/files/home/Braxon/crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v10.md
+backup_dir=/data/data/com.termux/files/home/Braxon/.backup/wowas_crate_replace_20260419_030605
+status=installed

@@ -1,0 +1,19 @@
+{
+  "schema": "braxon.android_gap_fill.runtime_gap_classification.v1",
+  "surfaces": {
+    "crt_objects": "present",
+    "compiler_rt": "present",
+    "libunwind": "present",
+    "libcxx": "present",
+    "libcxxabi": "missing",
+    "system_libs": "present"
+  },
+  "next_action": [
+    "stage_and_hash:crt_objects",
+    "stage_and_hash:compiler_rt",
+    "stage_and_hash:libunwind",
+    "stage_and_hash:libcxx",
+    "build_or_vendor_from_source:libcxxabi",
+    "stage_and_hash:system_libs"
+  ]
+}

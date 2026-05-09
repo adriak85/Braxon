@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "families": ["noise", "triple", "membrane", "mixed"],
+  "scales": {
+    "small": 2048,
+    "medium": 8192,
+    "large": 16384,
+    "stress": 32768
+  },
+  "densities": {
+    "small": 8,
+    "medium": 16,
+    "large": 24,
+    "stress": 32
+  },
+  "repeats": 3,
+  "tracks": [
+    "artifact_density",
+    "compile_speed",
+    "decode_speed",
+    "proof_integrity",
+    "determinism",
+    "failure_discipline"
+  ]
+}

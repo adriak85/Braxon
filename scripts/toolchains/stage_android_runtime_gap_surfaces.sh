@@ -14,6 +14,7 @@ LIB_DIR="$STAGE_DIR/lib"
 INCLUDE_DIR="$STAGE_DIR/include"
 PROOF_DIR="$STAGE_DIR/proofs"
 
+rm -rf "$STAGE_DIR"
 mkdir -p "$REPORT_DIR" "$BIN_DIR" "$LIB_DIR" "$INCLUDE_DIR" "$PROOF_DIR" scripts/toolchains config/toolchains
 
 LOG="$RUN_DIR/stage_android_runtime_gap_surfaces.log"
@@ -346,7 +347,7 @@ echo "PASS: release probes compiled and ran"
 echo
 
 echo "== strip staged ELF binaries after debug copies =="
-find "$BIN_DIR" "$PROOF_DIR" -type f | while read -r f; do
+find "$BIN_DIR" "$PROOF_DIR" -type f ! -name '*.debug' ! -name '*.debug.*' | while read -r f; do
   if file "$f" | grep -q 'ELF'; then
     cp "$f" "$f.debug"
     llvm-strip "$f" || true
@@ -388,7 +389,8 @@ JSON
 echo "== hash release stage =="
 (
   cd "$STAGE_DIR"
-  find . -type f -print0 | sort -z | xargs -0 sha256sum
+  rm -f SHA256SUMS SHA256SUMS.tmp
+  find . -type f ! -name 'SHA256SUMS' ! -name 'SHA256SUMS.tmp' -print0 | sort -z | xargs -0 sha256sum
 ) | tee "$STAGE_DIR/SHA256SUMS"
 
 cp "$REPORT_DIR/runtime_surface_inventory.json" "$PROOF_DIR/runtime_surface_inventory.json"

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__tectonic_xdv__RUSTSEC-2021-0112.md.4324ce2d3a0afd44.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.109403+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__tectonic_xdv__RUSTSEC-2021-0112.md.4324ce2d3a0afd44.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/tectonic_xdv/RUSTSEC-2021-0112.md",
+  "source_bytes": 905,
+  "source_sha256": "4324ce2d3a0afd44f5d8c08ff690c0bfe48f9ffdc14ea5a90d8dee15e1308eb8",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__tectonic_xdv__RUSTSEC-2021-0112.md.4324ce2d3a0afd44"
+}

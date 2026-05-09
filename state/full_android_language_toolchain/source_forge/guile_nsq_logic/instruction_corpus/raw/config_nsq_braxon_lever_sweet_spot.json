@@ -1,0 +1,83 @@
+{
+  "schema": "Braxon.nsq.lever_sweet_spot.v1",
+  "authority": "NSQ_COURT",
+  "identity": "Braxon",
+  "canonical_semantics": "base8_switch_topology",
+  "switch_shape": [2, 1126, 2, 1126, 2, 1126, 2, 1126],
+  "lever_measurement": "applied_hertz_return_average_sound_resonance",
+  "measurement_methods": [
+    "applied_hertz",
+    "return_to_off",
+    "return_to_on",
+    "float_aware_return_average",
+    "sound_resonance",
+    "near_anchor_similarity_diagnostic",
+    "corrected_hertz"
+  ],
+  "tolerance": 0.001,
+  "previous_spacing_probe": {
+    "spacing_units": 1,
+    "spacing_units_base8": "1",
+    "zero_failed_or_missed_until": 983,
+    "first_failed_distance": 984,
+    "boundary_bytes_equivalent": 5475,
+    "produced_characters_floor": 16425,
+    "produced_characters_dense": 65700,
+    "stamp_information_accepted": 983,
+    "noise_information_rejected": 143,
+    "result": "not_global_sweet_spot"
+  },
+  "selected_sweet_spot": {
+    "selection_basis": "resolved_nsq_information_processed",
+    "honest_score_basis": "zero_inclusive_nsq_bit_unit_state_space",
+    "stamp_vs_noise_rule": "sound_confirmed_corrected_zero_miss_units_count_as_stamp_information; failed_or_missed_units_count_as_noise_and_are_rejected",
+    "bit_passthrough_basis": false,
+    "byte_measurement_scope": "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8",
+    "selection_rule": "minimal spacing that preserves zero failed or missed through the largest resolved NSQ information processed",
+    "spacing_units": 2,
+    "spacing_units_base8": "2",
+    "information_processed": 1126,
+    "information_processed_base8": "2146",
+    "nsq_states_per_bit_unit": 25811642826256,
+    "nsq_state_log10": 15101.704418342235,
+    "boundary_bytes_equivalent": 6271,
+    "boundary_bytes_formula": "ceil(log2((2254^4)^information_processed) / 8)",
+    "produced_characters_per_boundary_byte_floor": 3,
+    "produced_characters_per_boundary_byte_dense": 12,
+    "produced_characters_floor": 18813,
+    "produced_characters_dense": 75252,
+    "stamp_information_accepted": 1126,
+    "framework_stamp_payloads_accepted": 1126,
+    "noise_information_rejected": 0,
+    "stable_upper_position": 1126,
+    "stable_upper_hertz": 1.0,
+    "zero_failed_or_missed": true,
+    "hertz_spacing": 0.001777778
+  },
+  "global_adjustment": {
+    "apply_to": [
+      "scripts/braxon_seating_verify.sh",
+      "state/braxon/braxon_switch_position.json",
+      "crates/nsq-core/src/lib.rs",
+      "root_command:lever-sweet-spot"
+    ],
+    "rule": "use the selected sweet spot as the global lever-position spacing and processed-information default",
+    "not_canonical_meaning": ["byte_width", "host_integer_width", "u8", "bit_passthrough"]
+  },
+  "todo": [
+    {
+      "numeric_id": 1,
+      "numeric_id_base8": "1",
+      "semantic_id": "braxon.todo.lever.hardware_spacing_validation",
+      "priority": "next",
+      "task": "Run hardware-backed spacing probes and replace synthetic drift with measured return and sound resonance data."
+    },
+    {
+      "numeric_id": 2,
+      "numeric_id_base8": "2",
+      "semantic_id": "braxon.todo.lever.global_runtime_consumers",
+      "priority": "required",
+      "task": "Have runtime consumers read the global sweet spot instead of carrying local spacing assumptions."
+    }
+  ]
+}

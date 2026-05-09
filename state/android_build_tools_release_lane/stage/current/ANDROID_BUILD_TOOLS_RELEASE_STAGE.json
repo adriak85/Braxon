@@ -1,0 +1,27 @@
+{
+  "schema": "braxon.android_build_tools.release_stage.v1",
+  "created_at": "2026-05-07T19:38:05-05:00",
+  "repo_head": "ced6af253888bf194375692de86d0678dc70d847",
+  "branch": "braxon-current-preserve-20260507-172011",
+  "stage_dir": "state/android_build_tools_release_lane/stage/current",
+  "custom_rust_preserved": true,
+  "rustc": "rustc 1.96.0-nightly (fd0c901b0 2026-03-18) (built from a source tarball)",
+  "cargo": "cargo 1.96.0-nightly (cbb9bb8bd 2026-03-13) (built from a source tarball)",
+  "clang": "clang version 21.1.8",
+  "target": "aarch64-linux-android24",
+  "primary_claim": "Android/Termux build-tools gap-fill staging lane",
+  "runtime_scope": "dependency observation only",
+  "contains": [
+    "build tool authority report",
+    "build tool inventory",
+    "functional compile/link/archive/disassemble proof",
+    "staged active build-tool references",
+    "hash manifest"
+  ],
+  "non_claims": [
+    "does not replace custom Rust",
+    "does not claim runtime library package as primary target",
+    "does not claim complete Android NDK replacement",
+    "does not package model weights"
+  ]
+}

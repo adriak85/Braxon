@@ -1,4 +1,4 @@
-use nsq_core::{Charge, Dialect, NSQLever, NSQSlot};
+use nsq_core::{Charge, Dialect, NSQLever, NSQSlot, CANONICAL_LEVER_MAX_POSITION};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
@@ -44,7 +44,7 @@ impl WoWaSWorldState {
             Dialect::Intent,
             vec![
                 NSQLever::new(charge, 1001).unwrap(),
-                NSQLever::new(Charge::Positive, 1126).unwrap(),
+                NSQLever::new(Charge::Positive, CANONICAL_LEVER_MAX_POSITION).unwrap(),
             ],
         )
     }

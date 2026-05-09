@@ -1,0 +1,12 @@
+=== Braxon root entry review ===
+Fri May  8 15:43:05 CDT 2026
+
+### ./--help
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./--help
+./--help: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./--help
+--- full content ---
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+--- references in repo by exact path ---

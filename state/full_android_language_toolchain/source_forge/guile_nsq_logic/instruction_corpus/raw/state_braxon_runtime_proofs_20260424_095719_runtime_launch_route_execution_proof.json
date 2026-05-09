@@ -1,0 +1,158 @@
+{
+  "command_return_codes": {
+    "runtime_context": 0,
+    "runtime_infer": 0,
+    "runtime_lanes": 0,
+    "runtime_models": 0,
+    "runtime_python3": 0,
+    "status": 0
+  },
+  "failure_rule": "No proof field is marked true unless the corresponding live command output proves it.",
+  "final_active_digest": null,
+  "final_active_digest_present": false,
+  "generated_at": "2026-04-24T14:58:07.972226+00:00",
+  "loaded_binding_proven": false,
+  "proof_files": [
+    {
+      "bytes": 5461,
+      "path": "state/braxon/runtime_proofs/20260424_095719/git_status_head.txt",
+      "sha256": "499d56baff53b10a3d681c828d5a1b5faaa0f3479c33b39f56340bd7eb41f843"
+    },
+    {
+      "bytes": 49,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_context.cmd",
+      "sha256": "fad97296662d819076126966b8a4a208125c36beef1af60537ed6dc714b6949b"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_context.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 779,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_context.out",
+      "sha256": "f6f2e90099bda29c30f6a6ef23febba022b36c3b8db3d72e54c806a818bad7fa"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_context.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 181,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_infer.cmd",
+      "sha256": "43bd721145f8789ad7f6e4d992b7240f7db511b89a56f881c12638ee16d4d140"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_infer.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 4599,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_infer.out",
+      "sha256": "6d8d41cabc51be9d6a8608d5fb44b31b0abf8e404cfab8dbc1feb6fbbbd4e6c0"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_infer.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 43,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_lanes.cmd",
+      "sha256": "dc097c380d5e145c8674319567f702964369599ce2a77ca9124ba323d49602ae"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_lanes.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2269,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_lanes.out",
+      "sha256": "48177173b76a2f585a9cac875adafe8488f8f3a02a16308a8e752adfdc494472"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_lanes.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 44,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_models.cmd",
+      "sha256": "859a0b4f36ca0c8f7474f898d093f8b804b736856e79a83706e5e63c94a6aae9"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_models.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1430,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_models.out",
+      "sha256": "7c504f5f4573152128da4665b8c7d71a11cf2a371e76637207cfc2bdae5261ee"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_models.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 75,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_python3.cmd",
+      "sha256": "a97b3f19ef9294a0cb4e0076c3fef2f1940e31af825ab17f7b6bfaf8c6fc95be"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_python3.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 253,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_python3.out",
+      "sha256": "e9a6e4bad5c277dd3c0dffa71e0b2a921ff1bcc81be54635073513f454a57433"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/runtime_python3.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 36,
+      "path": "state/braxon/runtime_proofs/20260424_095719/status.cmd",
+      "sha256": "26a5662ed162d4d1cf2727d6c269b517f7854d2365aa8260c77034dfd24c5a30"
+    },
+    {
+      "bytes": 0,
+      "path": "state/braxon/runtime_proofs/20260424_095719/status.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5106,
+      "path": "state/braxon/runtime_proofs/20260424_095719/status.out",
+      "sha256": "f25847e1269e80a22867cdcfadca403e71ac513a397ea3f85491a527eb4038f1"
+    },
+    {
+      "bytes": 2,
+      "path": "state/braxon/runtime_proofs/20260424_095719/status.rc",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ],
+  "proof_passed": false,
+  "runtime_hot_live_proven": false,
+  "runtime_infer_observed": {
+    "donor_shard_is_lfs_pointer": true,
+    "donor_shard_payload_materialized": false,
+    "donor_tensor_activated": false,
+    "donor_tensor_addressed": false,
+    "pointer_free_runtime_ready": false,
+    "runtime_authority_bound": false,
+    "runtime_authority_lane": null,
+    "runtime_authority_state": null,
+    "tokenizer_runtime_bound": true
+  },
+  "runtime_route_proven": true,
+  "schema": "Braxon.runtime_launch_route_execution_proof.v1",
+  "stamp": "20260424_095719"
+}

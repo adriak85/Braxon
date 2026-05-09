@@ -1,0 +1,8 @@
+timestamp_utc=20260419_152227
+crate=/data/data/com.termux/files/home/Braxon/crates/wowas-final-edition-v10
+canon_dir=/data/data/com.termux/files/home/Braxon/crates/wowas-final-edition-v10/canon
+files_written=
+- wowas_final_canon_control_bundle_v11_addendum.md
+- wowas_scene_patch_v11.tsv
+- CURRENT_APPLY_ORDER_v11.md
+status=applied

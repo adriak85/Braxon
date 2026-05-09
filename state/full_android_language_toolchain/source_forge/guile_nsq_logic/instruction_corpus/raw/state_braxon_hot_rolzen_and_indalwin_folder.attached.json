@@ -1,0 +1,160 @@
+{
+  "asset_manifest": "rolzen_and_indalwin_folder",
+  "source_folder": "/sdcard/Download/Rolzen_and_Indalwin",
+  "destination_folder": "/data/data/com.termux/files/home/Braxon/assets/braxon_visual_model_references/rolzen_and_indalwin",
+  "asset_count": 6,
+  "classification_mode": "visual_context_required",
+  "horn_rule": "Images with visible horns are flux_state, even if filename does not mention horns.",
+  "assets": [
+    {
+      "index": 1,
+      "id": "rolzen_indalwin_01",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/file_0000000052d071fd818961a2810c7628.png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/01_context_classify_from_image_file_0000000052d071fd818961a2810c7628.png",
+      "sha256": "8b438ce6f36fb25443df90c64a1870792dd9cd340b5f558fe07fec61b0f1d21f",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    },
+    {
+      "index": 2,
+      "id": "rolzen_indalwin_02",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/file_0000000098dc71fda786f14b0c33bab9.png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/02_context_classify_from_image_file_0000000098dc71fda786f14b0c33bab9.png",
+      "sha256": "1b880d5e23f6a19690b8f3268b7f559c02c6273ddfbe50714de7a7f6e1b849a4",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    },
+    {
+      "index": 3,
+      "id": "rolzen_indalwin_03",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/file_00000000f7b071fda1addc0b78e1fd79.png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/03_context_classify_from_image_file_00000000f7b071fda1addc0b78e1fd79.png",
+      "sha256": "031aa04e2be0c36efab4214ac4a0a03c1aa7d682ac800fc98df764328c373273",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    },
+    {
+      "index": 4,
+      "id": "rolzen_indalwin_04",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/Screenshot_20260424-045223_Grok.png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/04_context_classify_from_image_Screenshot_20260424-045223_Grok.png",
+      "sha256": "47c7698db0a34d2bc1b0c13d2439a14d80e7a7b9e6d5e68599ac051ab22a8e4e",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    },
+    {
+      "index": 5,
+      "id": "rolzen_indalwin_05",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/Screenshot_20260424-050232_Grok.png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/05_context_classify_from_image_Screenshot_20260424-050232_Grok.png",
+      "sha256": "c6acf0810499c2bbf7af447ea1db87ac730d530639ceb6cbed7aa03cda098c65",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    },
+    {
+      "index": 6,
+      "id": "rolzen_indalwin_06",
+      "source_path": "/sdcard/Download/Rolzen_and_Indalwin/Screenshot_20260502-122144_Claude~2 (1).png",
+      "repo_relative_path": "assets/braxon_visual_model_references/rolzen_and_indalwin/06_context_classify_from_image_Screenshot_20260502-122144_Claude_2_1_.png",
+      "sha256": "fa68d77cf4aecb462452df8d84b4f04d2d7a2a665479609b6dacb2e3ba564c37",
+      "state": "context_classify_from_image",
+      "flux_state_filename_hint": false,
+      "visual_context_rule": "Classify by image context, not by filename. Any image showing horns is a flux_state reference.",
+      "bindings": {
+        "Indalwin": {
+          "binding": "Michael/user-self representation",
+          "instruction": "Indalwin is the representation of Michael/user-self in this visual set. Preserve identity direction; do not treat as a generic fantasy character or stock model."
+        },
+        "Rolzen": {
+          "binding": "character/model representation",
+          "instruction": "Rolzen is the character/model reference. Preserve his size, dangerous grace, combat force, bond posture, and Flux transformation language."
+        }
+      },
+      "model_attachment_use": {
+        "inner_language": "nsq_intent_gradient_grid",
+        "use": "visual identity/context reference for local offline reconstruction and image-consistency guidance",
+        "not_generic_stock_reference": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+== C object build ==
+/data/data/com.termux/files/home/Braxon/state/android_build_tools_release_lane/runs/20260507_193756/build_tool_probe_c.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+0000000000000000 T braxon_build_tool_probe
+
+/data/data/com.termux/files/home/Braxon/state/android_build_tools_release_lane/runs/20260507_193756/build_tool_probe_c.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <braxon_build_tool_probe>:
+       0: 528004a8     	mov	w8, #0x25               // =37
+       4: d29ffdc9     	mov	x9, #0xffee             // =65518
+       8: 9b087c08     	mul	x8, x0, x8
+       c: f2b5b809     	movk	x9, #0xadc0, lsl #16
+      10: f2c00169     	movk	x9, #0xb, lsl #32
+      14: ca090100     	eor	x0, x8, x9
+      18: d65f03c0     	ret
+
+000000000000001c <main>:
+      1c: 2a1f03e0     	mov	w0, wzr
+      20: d65f03c0     	ret
+
+== archive build ==
+build_tool_probe_c.o
+0000000000000000 T braxon_build_tool_probe
+
+== C executable link ==
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x5F8
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          4080 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         24
+  Section header string table index: 22
+
+== C++ executable link ==
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x27E0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          41464 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         27
+  Section header string table index: 25
+
+== Rust executable build with preserved custom Rust ==
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x13B20
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          507936 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         27
+  Section header string table index: 25

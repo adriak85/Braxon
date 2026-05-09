@@ -1,0 +1,851 @@
+{
+  "schema_version": 2,
+  "total_named_characters": 50,
+  "world_population_target": 2000000,
+  "tier_distribution": {
+    "tier_0_cosmological": 10,
+    "tier_1_named_recurring": 35,
+    "tier_2_named_world": 30,
+    "tier_3_documented_background": 5000,
+    "tier_4_world_population": 1994955
+  },
+  "canon_locks": {
+    "pip_age": 25,
+    "portal_years": 400,
+    "blood_cello_last_sentence": "no adjectives \u2014 subject verb object",
+    "rolzen_name": "ROLZEN (not Rosen)",
+    "rolzen_height": "6'11\"",
+    "glass_forge_start_book": 5,
+    "book_01_title": "Choices Make World",
+    "book_25_title": "Death Is Rebirth",
+    "book_24_title": "Born To Die",
+    "book_05_title": "Runes and Wound",
+    "book_15_title": "Suffocating in Silence",
+    "blood_cello_chapter": "terminus chapter of Book 25",
+    "daisy_may_never_speaks": true,
+    "daisy_may_never_sacrificed": true,
+    "mack_no_human_language": true,
+    "xeth_magic_type": "glyph-compiled / deterministic NSQ execution",
+    "rylos_arc": "accountability never redemption",
+    "solvaenkyr_threshold": "rapid not gradual",
+    "quantum_field_source": "Xethrolund teaches Pip in Silence (Book 15)",
+    "flux_field_source": "Rolzen teaches Pip (Book 17)",
+    "superposition": "Pip+Rylos \u2014 defeats Neith \u2014 was not supposed to be possible",
+    "rolzen_capture_timing": "~50 years before Pip returns from 400-year portal",
+    "neith_created_diamond": true,
+    "neith_is_rylos_mother": true,
+    "rippers_are_neiths_creatures": true
+  },
+  "characters": [
+    {
+      "id": "wowas::pip_indalwin_willowjayce",
+      "name": "Pip (Indalwin Willowjayce)",
+      "tier": 0,
+      "pronouns": "he/him",
+      "age": 25,
+      "species": "chipmunk/human",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "protagonist / sonomancer / world-maker",
+      "sources": [
+        "Stitch",
+        "Tasslehoff",
+        "Barefoot",
+        "Asta",
+        "Yuno",
+        "Gray Fullbuster",
+        "Lucy Heartfilia",
+        "Drizzt",
+        "Menolly",
+        "Hermione Granger",
+        "F'nor",
+        "Erza Scarlet"
+      ],
+      "shadow": "Gromph Baenre",
+      "magic": [
+        "sonomancy",
+        "void-fold",
+        "quantum field",
+        "flux field",
+        "chronomancy latency",
+        "superposition"
+      ],
+      "locked_traits": [
+        "he/him throughout",
+        "gay",
+        "ADHD+autistic",
+        "never truly redeemed by others \u2014 redeems the world",
+        "chipmunk form in Diamond time"
+      ]
+    },
+    {
+      "id": "wowas::mack_willow_father",
+      "name": "Mack",
+      "tier": 0,
+      "pronouns": "he/him",
+      "age": "ancient",
+      "species": "willow tree / planetary core",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "guardian / biological father / planetary anchor",
+      "sources": [
+        "Treebeard",
+        "Groot",
+        "Yggdrasil"
+      ],
+      "shadow": "Jason Voorhees + Nemesis",
+      "magic": [
+        "geological resonance",
+        "portal-creation (sacrifice)",
+        "40Hz-42Hz cello frequency"
+      ],
+      "locked_traits": [
+        "NEVER human language",
+        "40Hz baseline",
+        "grotesque form Books 10-21",
+        "helps remake world Book 25"
+      ]
+    },
+    {
+      "id": "wowas::xethrolund_papi",
+      "name": "Xethrolund",
+      "tier": 0,
+      "pronouns": "he/him",
+      "age": "ancient synthetic",
+      "species": "P.A.P.I.",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "librarian / guide / love interest",
+      "sources": [
+        "Giles",
+        "Remus Lupin",
+        "Librarian/Pratchett"
+      ],
+      "shadow": "Freddy Krueger",
+      "magic": [
+        "glyph-compiled / NSQ execution \u2014 deterministic NOT loose"
+      ],
+      "locked_traits": [
+        "7ft red hair muscular",
+        "believes cannot feel \u2014 wrong",
+        "blue light = his frequency",
+        "He ran. He came. He arrived."
+      ]
+    },
+    {
+      "id": "wowas::ursula_cosmic_mother",
+      "name": "Ursula",
+      "tier": 0,
+      "pronouns": "she/her",
+      "species": "cosmic deity / amethyst geode",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "biological mother / cosmic anchor",
+      "sources": [
+        "Galadriel",
+        "Lady of the Lake",
+        "Yennefer",
+        "Flemeth"
+      ],
+      "magic": [
+        "cosmic world-making"
+      ],
+      "locked_traits": [
+        "'Find me' voice in Book 01 prophecy",
+        "amethyst geode true form",
+        "helps remake world Book 25"
+      ]
+    },
+    {
+      "id": "wowas::neith_architect_mother",
+      "name": "Neith",
+      "tier": 0,
+      "pronouns": "she/her",
+      "species": "ancient sorceress",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "foundational architect villain / Rylos' mother",
+      "sources": [
+        "Cersei Lannister",
+        "White Queen",
+        "Morgan le Fay"
+      ],
+      "magic": [
+        "world-architecture",
+        "Diamond-creation",
+        "Ripper-creation"
+      ],
+      "locked_traits": [
+        "created Diamond to harvest Pip+Rylos power",
+        "Rippers are her creatures",
+        "mortal wound to Rylos Book 24",
+        "heart breaks Book 25 \u2014 amplifies Pip \u2014 helps remake world"
+      ]
+    },
+    {
+      "id": "wowas::rolzen_warrior_anchor",
+      "name": "Rolzen",
+      "tier": 0,
+      "pronouns": "he/him",
+      "age": "several centuries old",
+      "species": "human",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "none",
+      "role": "warrior / healing arc / flux field teacher",
+      "sources": [
+        "Jason Stackhouse",
+        "Charmy",
+        "Natsu",
+        "Noelle Silva"
+      ],
+      "palette": [
+        "Bad Santa",
+        "Tommy Pickles",
+        "Eric Hough",
+        "Joey Tribbiani"
+      ],
+      "magic": [
+        "flux field (teaches Pip)",
+        "fire-forward combat",
+        "physical force"
+      ],
+      "physical": "6'11\", thick-chested, heavy leg hair, John Cena 2003 / Joe Manganiello 2012 range",
+      "locked_traits": [
+        "Rolzen NOT Rosen",
+        "captured ~50yr before Pip returns",
+        "hog-tied by Pip \u2014 loves him from that moment",
+        "throws Pip over shoulder when protective",
+        "tucks Pip under arm when excited",
+        "decade after restoration before Pip allows connection",
+        "extremely persistent/horndog toward Pip"
+      ]
+    },
+    {
+      "id": "wowas::rylos_vayne_johnson",
+      "name": "Rylos (Rylos Vayne Johnson)",
+      "tier": 0,
+      "pronouns": "he/him",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "primary antagonist / accountability arc / Xeth love interest",
+      "sources": [
+        "Ares (VERY VERY primary)",
+        "Queen of the Damned",
+        "Uncle Jesse",
+        "Professor McGonagall (transmutation)",
+        "Yuno (secondary)"
+      ],
+      "magic": [
+        "transmutation \u2014 changes what things ARE, not just overpowers"
+      ],
+      "locked_traits": [
+        "accountability NOT redemption",
+        "toxic codependence with Pip",
+        "Strange Gravity with Xethrolund Book 18",
+        "mortal wound Book 24",
+        "superpositioned with Pip to defeat Neith"
+      ]
+    },
+    {
+      "id": "wowas::dervish_cosmic_entity",
+      "name": "Dervish",
+      "tier": 0,
+      "pronouns": "they/them",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "cosmic corrective force",
+      "locked_traits": [
+        "not good/evil",
+        "appears twice Book 01",
+        "helps remake world Book 25"
+      ]
+    },
+    {
+      "id": "wowas::daisy_may_great_dane",
+      "name": "Daisy May",
+      "tier": 0,
+      "pronouns": "she/her",
+      "species": "Great Dane (mother)",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none",
+      "role": "unconditional anchor",
+      "locked_traits": [
+        "never speaks",
+        "never sacrificed",
+        "frozen holding Pip's hand at stasis",
+        "always at the return point"
+      ]
+    },
+    {
+      "id": "wowas::majiskii_great_dane",
+      "name": "Majiskii",
+      "tier": 0,
+      "pronouns": "she/her",
+      "species": "Great Dane (daughter of Daisy May)",
+      "first_book": 7,
+      "last_book": 25,
+      "faction": "none",
+      "role": "anchor / receives 'Null is Everything' from Pip",
+      "locked_traits": [
+        "daughter of Daisy May",
+        "present at Blood Cello"
+      ]
+    },
+    {
+      "id": "wowas::solvaenkyr_faithfixer",
+      "name": "Solvaenkyr",
+      "tier": 1,
+      "pronouns": "they/them",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "none (Diamond-era classmate)",
+      "role": "Faith-Fixer / wraith-state endpoint",
+      "sources": [
+        "Giles inverse",
+        "Susan Pevensie inverse"
+      ],
+      "locked_traits": [
+        "Sol+Vaen+Kyr naming fate",
+        "rapid threshold NOT gradual",
+        "intelligent wraith-state endpoint Book 09",
+        "care still present / capacity to receive care gone"
+      ]
+    },
+    {
+      "id": "wowas::wrenath_velthane_stillwater",
+      "name": "Wrenath Vel'Thane Still-Water",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 1,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "historian / diplomat / Santa Hat",
+      "sources": [
+        "Sam Gamgee",
+        "Bilbo Baggins",
+        "Maester Luwin"
+      ],
+      "locked_traits": [
+        "Santa Hat event Book 08 (jock/bandana/hat progression)",
+        "floating city diplomat",
+        "feature relocated to nose",
+        "documents everything through Blood Cello"
+      ]
+    },
+    {
+      "id": "wowas::corveth_ashkoral_darkcurrent",
+      "name": "Corveth Ash'Koral Dark-Current",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Ash-Born",
+      "role": "faction lieutenant / reckoning arc",
+      "sources": [
+        "Boromir",
+        "Jaime Lannister inverse",
+        "Nick Fury"
+      ],
+      "grief": "Thorn Ash'Koral",
+      "locked_traits": [
+        "triage decision \u2014 saved 800 killed 400 \u2014 would do it again",
+        "Thorn returns Book 14 \u2014 his reckoning"
+      ]
+    },
+    {
+      "id": "wowas::sorra_marsoLen_thorngrace",
+      "name": "Sorra Marso'len Thorn-Grace",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Meridian",
+      "role": "healer-ethicist / protocol architect",
+      "sources": [
+        "Madam Pomfrey",
+        "Dr. Crusher",
+        "Hawkeye Pierce"
+      ],
+      "locked_traits": [
+        "unnamed casualty returns Book 14",
+        "develops stabilization protocol",
+        "ethical limits on Pip \u2014 productive tension"
+      ]
+    },
+    {
+      "id": "wowas::oswyn",
+      "name": "Oswyn",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Unaffiliated",
+      "role": "witness / Mack griever",
+      "sources": [
+        "Sam Gamgee",
+        "Neville Longbottom"
+      ],
+      "grief": "Mack",
+      "locked_traits": [
+        "witnesses all returns",
+        "found each other with Reth through shared silence"
+      ]
+    },
+    {
+      "id": "wowas::thorn_ashkoral",
+      "name": "Thorn Ash'Koral",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 22,
+      "faction": "Ash-Born (pre-collapse)",
+      "role": "returned / Corveth's reckoning",
+      "sources": [
+        "Banquo's ghost",
+        "Fred Weasley inverse"
+      ],
+      "locked_traits": [
+        "return forces Corveth's reckoning",
+        "not vengeful \u2014 just present"
+      ]
+    },
+    {
+      "id": "wowas::kyrel_onrylder_ironsong",
+      "name": "Kyrel On'Rylder Iron-Song",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "young survivor / future reserve",
+      "sources": [
+        "Neville Longbottom",
+        "Ginny Weasley"
+      ]
+    },
+    {
+      "id": "wowas::daevyn_onrylder_ironsong",
+      "name": "Daevyn On'Rylder Iron-Song",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "field medic youth cohort",
+      "sources": [
+        "Hawkeye Pierce young",
+        "Bones McCoy"
+      ]
+    },
+    {
+      "id": "wowas::elven_onrylder_stonehayne",
+      "name": "Elven On'Rylder Stone-Hayne",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "agricultural specialist",
+      "locked_traits": [
+        "'I'll need four days and I'll need to know how many' \u2014 complete emotional register"
+      ]
+    },
+    {
+      "id": "wowas::verath_onrylder_ashcinder",
+      "name": "Verath On'Rylder Ash-Cinder",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "communications relay"
+    },
+    {
+      "id": "wowas::calla_onrylder_willowjayce",
+      "name": "Calla On'Rylder Willow-Jayce",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "elder memory / pre-collapse governance",
+      "sources": [
+        "Minerva McGonagall",
+        "Olenna Tyrell"
+      ]
+    },
+    {
+      "id": "wowas::loreth_velthane_darkcurrent",
+      "name": "Loreth Vel'Thane Dark-Current",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "practical researcher"
+    },
+    {
+      "id": "wowas::seth_velthane_ironsong",
+      "name": "Seth Vel'Thane Iron-Song",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "cartographer"
+    },
+    {
+      "id": "wowas::ithren_velthane_ashcinder",
+      "name": "Ithren Vel'Thane Ash-Cinder",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "sonomancy history keeper",
+      "sources": [
+        "Ollivander",
+        "The Ancient One"
+      ]
+    },
+    {
+      "id": "wowas::tavan_velthane_stonehayne",
+      "name": "Tavan Vel'Thane Stone-Hayne",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "mid-generation anchor"
+    },
+    {
+      "id": "wowas::glint",
+      "name": "Glint",
+      "tier": 1,
+      "pronouns": "unknown",
+      "first_book": 9,
+      "last_book": 25,
+      "faction": "deferred_canon_review",
+      "role": "witness at choice trap / minor actor"
+    },
+    {
+      "id": "wowas::reth_nullheart",
+      "name": "Reth Null-Heart",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Meridian",
+      "role": "grief counselor / partial-return analyst",
+      "locked_traits": [
+        "suspects some returned people are not fully returned",
+        "processes no one processes him \u2014 found Oswyn"
+      ]
+    },
+    {
+      "id": "wowas::aenwyn",
+      "name": "Aenwyn",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "young survivor / Kyrel's co-dependent pair",
+      "sources": [
+        "Lavender Brown"
+      ]
+    },
+    {
+      "id": "wowas::reval",
+      "name": "Reval",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 20,
+      "faction": "Ash-Born",
+      "role": "internal tension with Corveth"
+    },
+    {
+      "id": "wowas::caera",
+      "name": "Caera",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Meridian (Sorra's off-ledger)",
+      "role": "off-ledger negotiator",
+      "sources": [
+        "Littlefinger inverse",
+        "Nathalie/Lupin"
+      ]
+    },
+    {
+      "id": "wowas::pethran",
+      "name": "Pethran",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Iron Accord / cross-faction",
+      "role": "post-collapse physical architect",
+      "sources": [
+        "Hephaestus",
+        "Christopher Wren"
+      ]
+    },
+    {
+      "id": "wowas::feritha",
+      "name": "Feritha",
+      "tier": 1,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Iron Accord cross-faction",
+      "role": "adult medical intake specialist"
+    },
+    {
+      "id": "wowas::selwyn",
+      "name": "Selwyn",
+      "tier": 1,
+      "pronouns": "they/them",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord",
+      "role": "youth cohort emotional support"
+    },
+    {
+      "id": "wowas::renath",
+      "name": "Renath",
+      "tier": 1,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Iron Accord / cross-faction",
+      "role": "logistics coordinator"
+    },
+    {
+      "id": "wowas::broker_teth_unmarked",
+      "name": "Broker Teth Unmarked",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 20,
+      "faction": "Unbound",
+      "role": "cross-faction resource broker / quest-giver",
+      "sources": [
+        "Han Solo",
+        "Tyrion Lannister"
+      ]
+    },
+    {
+      "id": "wowas::keeper_olvath_archive",
+      "name": "Keeper Olvath of the Resonance Archive",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "physical archive keeper / written records"
+    },
+    {
+      "id": "wowas::trademaster_saven_coalfire",
+      "name": "Trade Master Saven Coalfire",
+      "tier": 2,
+      "pronouns": "she/her",
+      "first_book": 14,
+      "last_book": 22,
+      "faction": "Iron Accord",
+      "role": "supply chain coordinator",
+      "sources": [
+        "Lobelia Sackville-Baggins reformed",
+        "Molly Weasley market mode"
+      ]
+    },
+    {
+      "id": "wowas::healer_thresh_nightbloom",
+      "name": "Healer Thresh Nightbloom",
+      "tier": 2,
+      "pronouns": "they/them",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Veil-Walkers",
+      "role": "dimensional medicine specialist",
+      "sources": [
+        "The Ancient One",
+        "River Tam"
+      ]
+    },
+    {
+      "id": "wowas::sentry_vreth_ashkoral",
+      "name": "Sentry Captain Vreth Ash'Koral",
+      "tier": 2,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 20,
+      "faction": "Ash-Born",
+      "role": "sentry captain",
+      "sources": [
+        "Brienne of Tarth",
+        "Sergeant Carter inverse"
+      ]
+    },
+    {
+      "id": "wowas::highwarden_drest",
+      "name": "High Warden Drest Ashkoral-Prime",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 21,
+      "faction": "Ash-Born",
+      "role": "faction leader"
+    },
+    {
+      "id": "wowas::accord_chair_peln",
+      "name": "Accord Chair Peln Ironspoke",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 13,
+      "last_book": 20,
+      "faction": "Iron Accord",
+      "role": "governance chair",
+      "sources": [
+        "Atticus Finch",
+        "Arthur Weasley"
+      ]
+    },
+    {
+      "id": "wowas::resonance_elder_maev",
+      "name": "Resonance Council Elder Maev",
+      "tier": 2,
+      "pronouns": "she/her",
+      "first_book": 13,
+      "last_book": 23,
+      "faction": "Resonance",
+      "role": "council elder / sonomancy policy",
+      "sources": [
+        "Yoda inverse",
+        "Dumbledore"
+      ],
+      "locked_traits": [
+        "classified certain sonomancy frequencies as forbidden \u2014 Pip uses them constantly"
+      ]
+    },
+    {
+      "id": "wowas::meridian_archhealer_sova",
+      "name": "Meridian Arch-Healer Sova",
+      "tier": 2,
+      "pronouns": "they/them",
+      "first_book": 13,
+      "last_book": 22,
+      "faction": "Meridian",
+      "role": "arch-healer"
+    },
+    {
+      "id": "wowas::ferryman_calix_grey",
+      "name": "Ferryman Calix the Grey",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Unaffiliated",
+      "role": "cross-world liminal guide",
+      "sources": [
+        "Charon",
+        "Aslan as door-warden"
+      ],
+      "locked_traits": [
+        "price is always a truth, not money"
+      ]
+    },
+    {
+      "id": "wowas::voice_caster_milo_stillsound",
+      "name": "Voice Caster Milo Stillsound",
+      "tier": 2,
+      "pronouns": "he/him",
+      "first_book": 14,
+      "last_book": 25,
+      "faction": "Resonance",
+      "role": "information broadcaster"
+    },
+    {
+      "id": "wowas::alex_market_guardian",
+      "name": "Alex",
+      "tier": 2,
+      "pronouns": "unknown",
+      "first_book": 2,
+      "last_book": 2,
+      "faction": "Unaffiliated",
+      "role": "entrusts Daisy May and Majiskii to Pip",
+      "locked_traits": [
+        "brief \u2014 the act of entrustment IS the character"
+      ]
+    },
+    {
+      "id": "wowas::eyeless_city_governor",
+      "name": "Eyeless City Governor",
+      "tier": 2,
+      "pronouns": "they/them",
+      "first_book": 8,
+      "last_book": 8,
+      "faction": "Floating City (independent)",
+      "role": "governor of the floating city above the pit",
+      "locked_traits": [
+        "agrees to Rolzen's field trip",
+        "treats Santa hat as structural crown"
+      ]
+    },
+    {
+      "id": "wowas::silence_death_warden",
+      "name": "Unnamed Warden Friend (dies Book 15)",
+      "tier": 1,
+      "pronouns": "deferred_canon_review",
+      "first_book": 1,
+      "last_book": 15,
+      "faction": "Diamond survivor",
+      "role": "core party member / dies in the Silence",
+      "locked_traits": [
+        "NOT Rolzen, NOT Xeth, NOT Rylos",
+        "warm humor of the group",
+        "suggest Vel'Thane lineage"
+      ]
+    },
+    {
+      "id": "wowas::ripper_prime",
+      "name": "Ripper-Prime",
+      "tier": 2,
+      "pronouns": "it/its",
+      "first_book": 14,
+      "last_book": 21,
+      "faction": "Neith's forces",
+      "role": "lead Ripper / chief enforcer",
+      "physical": "12-foot spider-humanoid, four articulated arms, two vestigial legs",
+      "sources": [
+        "Ungoliant",
+        "The Thing"
+      ]
+    },
+    {
+      "id": "wowas::cockatrice_king",
+      "name": "King of the Cockatrice",
+      "tier": 1,
+      "pronouns": "it/its",
+      "first_book": 1,
+      "last_book": 10,
+      "faction": "none",
+      "role": "monster antagonist / corrupted wizard",
+      "locked_traits": [
+        "true form was once a powerful wizard \u2014 not yet revealed Book 04",
+        "attacks defenseless Mack Book 10"
+      ]
+    }
+  ]
+}

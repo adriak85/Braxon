@@ -1,0 +1,5 @@
+CPPFLAGS=-isystem /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/include 
+CFLAGS=-isystem /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/include 
+LDFLAGS=-L/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib -fuse-ld=lld 
+LIBS=-lbraxon_android_libc_extensions 
+LD_LIBRARY_PATH=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay/lib:

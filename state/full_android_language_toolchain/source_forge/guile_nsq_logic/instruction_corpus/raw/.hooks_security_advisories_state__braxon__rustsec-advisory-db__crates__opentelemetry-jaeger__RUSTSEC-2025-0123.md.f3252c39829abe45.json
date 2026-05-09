@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__opentelemetry-jaeger__RUSTSEC-2025-0123.md.f3252c39829abe45.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.618609+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__opentelemetry-jaeger__RUSTSEC-2025-0123.md.f3252c39829abe45.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/opentelemetry-jaeger/RUSTSEC-2025-0123.md",
+  "source_bytes": 851,
+  "source_sha256": "f3252c39829abe4523b69496a0f6bd719c3ac63664a459a993ceeef8785d40ab",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__opentelemetry-jaeger__RUSTSEC-2025-0123.md.f3252c39829abe45"
+}

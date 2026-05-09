@@ -1,0 +1,623 @@
+{
+  "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+  "tag_namespace": "braxon.context",
+  "centralized_chain_db": "state/braxon/context_chain_root/chain_wake_registry.json",
+  "chain_root": "state/braxon/context_chain_root",
+  "wake_enabled": true,
+  "env_trigger": "BRAXON_CONTEXT_WAKE",
+  "changed_files_env": "BRAXON_CHANGED_FILES",
+  "exit_changed_files_env": "BRAXON_EXIT_CHANGED_FILES",
+  "changed_path_count": 2,
+  "suggestions": [
+    {
+      "numeric_id": 2565641626312618749,
+      "numeric_id_base8": "216327727347524331375",
+      "semantic_id": "braxon.context.change.braxon_global_tag.braxon_global_tag_json",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+      "mechanical_tags": [
+        "tag=braxon.context;kind=chain;numeric_id=2296975427707348959;numeric_id_base8=177403757551223023737;semantic_id=braxon.context.chain.braxon_global_tag.001.policer;surface=policer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=3349472685506214879;numeric_id_base8=271735572450436135737;semantic_id=braxon.context.chain.braxon_global_tag.002.router;surface=router;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=12125296791666766698;numeric_id_base8=1241055523017736631552;semantic_id=braxon.context.chain.braxon_global_tag.003.optimizer;surface=optimizer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=15940171731467212185;numeric_id_base8=1564666733606064712631;semantic_id=braxon.context.chain.braxon_global_tag.004.inspector;surface=inspector;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=change;numeric_id=2565641626312618749;numeric_id_base8=216327727347524331375;semantic_id=braxon.context.change.braxon_global_tag.braxon_global_tag_json;surface=braxon_global_tag_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+      ],
+      "changed_path": "BRAXON_GLOBAL_TAG.json",
+      "matched_pointer_id": "braxon_global_tag",
+      "matched_pointer_kind": "global_tag",
+      "relationship": "root Braxon global NSQ character/stamp scoring tag with Nu16 carrier language and produced-character base measure",
+      "pipe_chain": [
+        {
+          "numeric_id": 2296975427707348959,
+          "numeric_id_base8": "177403757551223023737",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.001.policer",
+          "surface": "policer",
+          "ordinal": 1,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=2296975427707348959;numeric_id_base8=177403757551223023737;semantic_id=braxon.context.chain.braxon_global_tag.001.policer;surface=policer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 3349472685506214879,
+          "numeric_id_base8": "271735572450436135737",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.002.router",
+          "surface": "router",
+          "ordinal": 2,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=3349472685506214879;numeric_id_base8=271735572450436135737;semantic_id=braxon.context.chain.braxon_global_tag.002.router;surface=router;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 12125296791666766698,
+          "numeric_id_base8": "1241055523017736631552",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.003.optimizer",
+          "surface": "optimizer",
+          "ordinal": 3,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=12125296791666766698;numeric_id_base8=1241055523017736631552;semantic_id=braxon.context.chain.braxon_global_tag.003.optimizer;surface=optimizer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 15940171731467212185,
+          "numeric_id_base8": "1564666733606064712631",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.004.inspector",
+          "surface": "inspector",
+          "ordinal": 4,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=15940171731467212185;numeric_id_base8=1564666733606064712631;semantic_id=braxon.context.chain.braxon_global_tag.004.inspector;surface=inspector;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        }
+      ],
+      "pipe_chain_surfaces": [
+        "policer",
+        "router",
+        "optimizer",
+        "inspector"
+      ],
+      "linked_paths": [
+        "Cargo.toml",
+        "LICENSE",
+        "crates/braxon-core",
+        "crates/nsq-core",
+        "crates/nsq-runtime",
+        "scripts/braxon_seating_verify.sh",
+        "scripts",
+        "models/braxon/manifest.json",
+        "state/braxon/offline_model_registry.json",
+        "state/braxon/braxon_binding.json",
+        "state/braxon/braxon_switch_position.json",
+        "config/nsq/braxon_lever_sweet_spot.json",
+        "state/braxon/context_chain_root/chain_wake_registry.json",
+        "state/braxon/bus/citadel699",
+        "config/nsq/citadel699_wire_receptor.json",
+        "config/nsq/braxon_six_model_stack.json",
+        "config/nsq/braxon_sensory_generation_roster.json",
+        "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+        "crates/wowas-final-edition-v10"
+      ],
+      "linked_surfaces": [
+        {
+          "numeric_id": 5901678113238302848,
+          "numeric_id_base8": "507467617467621040200",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.root_workspace",
+          "pointer_id": "root_workspace",
+          "kind": "workspace_entrance",
+          "path": "Cargo.toml",
+          "relationship": "root command center and workspace package graph",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=5901678113238302848;numeric_id_base8=507467617467621040200;semantic_id=braxon.context.linked.braxon_global_tag.root_workspace;surface=cargo_toml;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10975449788336482693,
+          "numeric_id_base8": "1141205026723373524605",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.private_license",
+          "pointer_id": "private_license",
+          "kind": "license",
+          "path": "LICENSE",
+          "relationship": "private proprietary license metadata",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10975449788336482693;numeric_id_base8=1141205026723373524605;semantic_id=braxon.context.linked.braxon_global_tag.private_license;surface=license;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 4896739702868045180,
+          "numeric_id_base8": "417645555032300066574",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_core_crate",
+          "pointer_id": "braxon_core_crate",
+          "kind": "crate",
+          "path": "crates/braxon-core",
+          "relationship": "Braxon identity, council, offline context, WoWaS, and model registry API",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=4896739702868045180;numeric_id_base8=417645555032300066574;semantic_id=braxon.context.linked.braxon_global_tag.braxon_core_crate;surface=crates_braxon_core;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11980886530937397998,
+          "numeric_id_base8": "1231045215121262221356",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.nsq_core_crate",
+          "pointer_id": "nsq_core_crate",
+          "kind": "crate",
+          "path": "crates/nsq-core",
+          "relationship": "canonical base-8 switch topology and lever measurement semantics",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11980886530937397998;numeric_id_base8=1231045215121262221356;semantic_id=braxon.context.linked.braxon_global_tag.nsq_core_crate;surface=crates_nsq_core;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 2251711477639517659,
+          "numeric_id_base8": "174775372425127712733",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.nsq_runtime_crate",
+          "pointer_id": "nsq_runtime_crate",
+          "kind": "crate",
+          "path": "crates/nsq-runtime",
+          "relationship": "native NSQ runtime hosting, offline inference, and persistent session surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=2251711477639517659;numeric_id_base8=174775372425127712733;semantic_id=braxon.context.linked.braxon_global_tag.nsq_runtime_crate;surface=crates_nsq_runtime;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 6117029369224050682,
+          "numeric_id_base8": "523440334651116633772",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_seating_verify",
+          "pointer_id": "braxon_seating_verify",
+          "kind": "script",
+          "path": "scripts/braxon_seating_verify.sh",
+          "relationship": "primary switch-position seating and zero-miss measurement entry",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=6117029369224050682;numeric_id_base8=523440334651116633772;semantic_id=braxon.context.linked.braxon_global_tag.braxon_seating_verify;surface=scripts_braxon_seating_verify_sh;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 18333713942735125871,
+          "numeric_id_base8": "1771563373073226476557",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_weight_ingest_scripts",
+          "pointer_id": "braxon_weight_ingest_scripts",
+          "kind": "script_family",
+          "path": "scripts",
+          "relationship": "Braxon ingest, status, install, recode, and verification command surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=18333713942735125871;numeric_id_base8=1771563373073226476557;semantic_id=braxon.context.linked.braxon_global_tag.braxon_weight_ingest_scripts;surface=scripts;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10684983326382979544,
+          "numeric_id_base8": "1121105373452001674730",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_model_manifest",
+          "pointer_id": "braxon_model_manifest",
+          "kind": "model_manifest",
+          "path": "models/braxon/manifest.json",
+          "relationship": "offline model identity and runtime packaging metadata",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10684983326382979544;numeric_id_base8=1121105373452001674730;semantic_id=braxon.context.linked.braxon_global_tag.braxon_model_manifest;surface=models_braxon_manifest_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10810587047296388076,
+          "numeric_id_base8": "1130067272217742445754",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_offline_registry",
+          "pointer_id": "braxon_offline_registry",
+          "kind": "state",
+          "path": "state/braxon/offline_model_registry.json",
+          "relationship": "offline model assets and runtime authority state",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10810587047296388076;numeric_id_base8=1130067272217742445754;semantic_id=braxon.context.linked.braxon_global_tag.braxon_offline_registry;surface=state_braxon_offline_model_registry_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10249293232698425592,
+          "numeric_id_base8": "1070746336213563400370",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_binding",
+          "pointer_id": "braxon_binding",
+          "kind": "state",
+          "path": "state/braxon/braxon_binding.json",
+          "relationship": "hot-live binding and tokenizer/parameter context",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10249293232698425592;numeric_id_base8=1070746336213563400370;semantic_id=braxon.context.linked.braxon_global_tag.braxon_binding;surface=state_braxon_braxon_binding_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11234844609684496961,
+          "numeric_id_base8": "1157521372272275161101",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_switch_position_state",
+          "pointer_id": "braxon_switch_position_state",
+          "kind": "state",
+          "path": "state/braxon/braxon_switch_position.json",
+          "relationship": "resolved NSQ switch position, zero-miss frontier, and sound-return measurement witness",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11234844609684496961;numeric_id_base8=1157521372272275161101;semantic_id=braxon.context.linked.braxon_global_tag.braxon_switch_position_state;surface=state_braxon_braxon_switch_position_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 12778584163028910790,
+          "numeric_id_base8": "1305265151365161241306",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_lever_sweet_spot_config",
+          "pointer_id": "braxon_lever_sweet_spot_config",
+          "kind": "nsq_measurement_config",
+          "path": "config/nsq/braxon_lever_sweet_spot.json",
+          "relationship": "global lever spacing and resolved-information-processed sweet spot with boundary byte-equivalent measurement selected from applied-hertz, return-average, sound-resonance, anchor-similarity diagnostics, and correction probes",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=12778584163028910790;numeric_id_base8=1305265151365161241306;semantic_id=braxon.context.linked.braxon_global_tag.braxon_lever_sweet_spot_config;surface=config_nsq_braxon_lever_sweet_spot_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11168045169544781752,
+          "numeric_id_base8": "1153746736445616757670",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_chain_root_db",
+          "pointer_id": "braxon_chain_root_db",
+          "kind": "chain_root_db",
+          "path": "state/braxon/context_chain_root/chain_wake_registry.json",
+          "relationship": "centralized mechanical wake database for chain-root records and non-runtime adjustment exit announcements",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11168045169544781752;numeric_id_base8=1153746736445616757670;semantic_id=braxon.context.linked.braxon_global_tag.braxon_chain_root_db;surface=state_braxon_context_chain_root_chain_wake_registry_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 9070629790630839449,
+          "numeric_id_base8": "767412633617750102231",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.citadel699_state_bus",
+          "pointer_id": "citadel699_state_bus",
+          "kind": "citadel",
+          "path": "state/braxon/bus/citadel699",
+          "relationship": "Citadel699 council and environment bus surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=9070629790630839449;numeric_id_base8=767412633617750102231;semantic_id=braxon.context.linked.braxon_global_tag.citadel699_state_bus;surface=state_braxon_bus_citadel699;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 9482436045261084405,
+          "numeric_id_base8": "1016303025372311313365",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.citadel699_config",
+          "pointer_id": "citadel699_config",
+          "kind": "citadel_config",
+          "path": "config/nsq/citadel699_wire_receptor.json",
+          "relationship": "Citadel699 wire receptor and request-return context",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=9482436045261084405;numeric_id_base8=1016303025372311313365;semantic_id=braxon.context.linked.braxon_global_tag.citadel699_config;surface=config_nsq_citadel699_wire_receptor_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10390010150294123892,
+          "numeric_id_base8": "1100605662733476772564",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.council_of_six",
+          "pointer_id": "council_of_six",
+          "kind": "model_council",
+          "path": "config/nsq/braxon_six_model_stack.json",
+          "relationship": "six brain-region model identities and balanced thought pressure",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10390010150294123892;numeric_id_base8=1100605662733476772564;semantic_id=braxon.context.linked.braxon_global_tag.council_of_six;surface=config_nsq_braxon_six_model_stack_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 14126114193582668272,
+          "numeric_id_base8": "1420120240200506234760",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.sensory_generation_roster",
+          "pointer_id": "sensory_generation_roster",
+          "kind": "model_roster",
+          "path": "config/nsq/braxon_sensory_generation_roster.json",
+          "relationship": "FLUX image cortex, Wan video cortex, IndexTTS2 voice body, and Hunyuan3D world body with graphics footprint allowance 50",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=14126114193582668272;numeric_id_base8=1420120240200506234760;semantic_id=braxon.context.linked.braxon_global_tag.sensory_generation_roster;surface=config_nsq_braxon_sensory_generation_roster_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 4588311460534284980,
+          "numeric_id_base8": "376547517324377771264",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.indextts2_emotional_frequency_map",
+          "pointer_id": "indextts2_emotional_frequency_map",
+          "kind": "voice_mapping",
+          "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+          "relationship": "NSQ-to-IndexTTS2 emotional frequency mapping for valence, arousal, breath, tremor, timbre, cadence, and emphasis",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=4588311460534284980;numeric_id_base8=376547517324377771264;semantic_id=braxon.context.linked.braxon_global_tag.indextts2_emotional_frequency_map;surface=config_nsq_braxon_indextts2_emotional_frequency_map_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 2747224701652021695,
+          "numeric_id_base8": "230400644761411330677",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.wowas_final_edition",
+          "pointer_id": "wowas_final_edition",
+          "kind": "story_system",
+          "path": "crates/wowas-final-edition-v10",
+          "relationship": "Whispers of Willow and Stone canon, scene, and character generation system",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=2747224701652021695;numeric_id_base8=230400644761411330677;semantic_id=braxon.context.linked.braxon_global_tag.wowas_final_edition;surface=crates_wowas_final_edition_v10;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        }
+      ],
+      "exit_wake_action": {
+        "numeric_id": 15438911665018085798,
+        "numeric_id_base8": "1531020205611002320646",
+        "semantic_id": "braxon.context.wake.exit.braxon_context_change_braxon_global_tag_braxon_global_tag_json",
+        "action": "wake_announce_non_runtime_adjustment",
+        "source_db": "state/braxon/context_chain_root/chain_wake_registry.json",
+        "chain_root": "state/braxon/context_chain_root/braxon_global_tag",
+        "runtime_adjustable": false,
+        "announcement": "wake_announce_non_runtime_adjustment: changed_path=BRAXON_GLOBAL_TAG.json; source_db=state/braxon/context_chain_root/chain_wake_registry.json; chain_root=state/braxon/context_chain_root/braxon_global_tag",
+        "mechanical_tag": "tag=braxon.context;kind=exit_wake;numeric_id=15438911665018085798;numeric_id_base8=1531020205611002320646;semantic_id=braxon.context.wake.exit.braxon_context_change_braxon_global_tag_braxon_global_tag_json;surface=braxon_global_tag_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+      }
+    },
+    {
+      "numeric_id": 2565641626312618749,
+      "numeric_id_base8": "216327727347524331375",
+      "semantic_id": "braxon.context.change.braxon_global_tag.braxon_global_tag_json",
+      "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+      "mechanical_tags": [
+        "tag=braxon.context;kind=chain;numeric_id=2296975427707348959;numeric_id_base8=177403757551223023737;semantic_id=braxon.context.chain.braxon_global_tag.001.policer;surface=policer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=3349472685506214879;numeric_id_base8=271735572450436135737;semantic_id=braxon.context.chain.braxon_global_tag.002.router;surface=router;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=12125296791666766698;numeric_id_base8=1241055523017736631552;semantic_id=braxon.context.chain.braxon_global_tag.003.optimizer;surface=optimizer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=chain;numeric_id=15940171731467212185;numeric_id_base8=1564666733606064712631;semantic_id=braxon.context.chain.braxon_global_tag.004.inspector;surface=inspector;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "tag=braxon.context;kind=change;numeric_id=2565641626312618749;numeric_id_base8=216327727347524331375;semantic_id=braxon.context.change.braxon_global_tag.braxon_global_tag_json;surface=braxon_global_tag_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+      ],
+      "changed_path": "BRAXON_GLOBAL_TAG.json",
+      "matched_pointer_id": "braxon_global_tag",
+      "matched_pointer_kind": "global_tag",
+      "relationship": "root Braxon global NSQ character/stamp scoring tag with Nu16 carrier language and produced-character base measure",
+      "pipe_chain": [
+        {
+          "numeric_id": 2296975427707348959,
+          "numeric_id_base8": "177403757551223023737",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.001.policer",
+          "surface": "policer",
+          "ordinal": 1,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=2296975427707348959;numeric_id_base8=177403757551223023737;semantic_id=braxon.context.chain.braxon_global_tag.001.policer;surface=policer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 3349472685506214879,
+          "numeric_id_base8": "271735572450436135737",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.002.router",
+          "surface": "router",
+          "ordinal": 2,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=3349472685506214879;numeric_id_base8=271735572450436135737;semantic_id=braxon.context.chain.braxon_global_tag.002.router;surface=router;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 12125296791666766698,
+          "numeric_id_base8": "1241055523017736631552",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.003.optimizer",
+          "surface": "optimizer",
+          "ordinal": 3,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=12125296791666766698;numeric_id_base8=1241055523017736631552;semantic_id=braxon.context.chain.braxon_global_tag.003.optimizer;surface=optimizer;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 15940171731467212185,
+          "numeric_id_base8": "1564666733606064712631",
+          "semantic_id": "braxon.context.chain.braxon_global_tag.004.inspector",
+          "surface": "inspector",
+          "ordinal": 4,
+          "mechanical_tag": "tag=braxon.context;kind=chain;numeric_id=15940171731467212185;numeric_id_base8=1564666733606064712631;semantic_id=braxon.context.chain.braxon_global_tag.004.inspector;surface=inspector;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        }
+      ],
+      "pipe_chain_surfaces": [
+        "policer",
+        "router",
+        "optimizer",
+        "inspector"
+      ],
+      "linked_paths": [
+        "Cargo.toml",
+        "LICENSE",
+        "crates/braxon-core",
+        "crates/nsq-core",
+        "crates/nsq-runtime",
+        "scripts/braxon_seating_verify.sh",
+        "scripts",
+        "models/braxon/manifest.json",
+        "state/braxon/offline_model_registry.json",
+        "state/braxon/braxon_binding.json",
+        "state/braxon/braxon_switch_position.json",
+        "config/nsq/braxon_lever_sweet_spot.json",
+        "state/braxon/context_chain_root/chain_wake_registry.json",
+        "state/braxon/bus/citadel699",
+        "config/nsq/citadel699_wire_receptor.json",
+        "config/nsq/braxon_six_model_stack.json",
+        "config/nsq/braxon_sensory_generation_roster.json",
+        "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+        "crates/wowas-final-edition-v10"
+      ],
+      "linked_surfaces": [
+        {
+          "numeric_id": 5901678113238302848,
+          "numeric_id_base8": "507467617467621040200",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.root_workspace",
+          "pointer_id": "root_workspace",
+          "kind": "workspace_entrance",
+          "path": "Cargo.toml",
+          "relationship": "root command center and workspace package graph",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=5901678113238302848;numeric_id_base8=507467617467621040200;semantic_id=braxon.context.linked.braxon_global_tag.root_workspace;surface=cargo_toml;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10975449788336482693,
+          "numeric_id_base8": "1141205026723373524605",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.private_license",
+          "pointer_id": "private_license",
+          "kind": "license",
+          "path": "LICENSE",
+          "relationship": "private proprietary license metadata",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10975449788336482693;numeric_id_base8=1141205026723373524605;semantic_id=braxon.context.linked.braxon_global_tag.private_license;surface=license;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 4896739702868045180,
+          "numeric_id_base8": "417645555032300066574",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_core_crate",
+          "pointer_id": "braxon_core_crate",
+          "kind": "crate",
+          "path": "crates/braxon-core",
+          "relationship": "Braxon identity, council, offline context, WoWaS, and model registry API",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=4896739702868045180;numeric_id_base8=417645555032300066574;semantic_id=braxon.context.linked.braxon_global_tag.braxon_core_crate;surface=crates_braxon_core;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11980886530937397998,
+          "numeric_id_base8": "1231045215121262221356",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.nsq_core_crate",
+          "pointer_id": "nsq_core_crate",
+          "kind": "crate",
+          "path": "crates/nsq-core",
+          "relationship": "canonical base-8 switch topology and lever measurement semantics",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11980886530937397998;numeric_id_base8=1231045215121262221356;semantic_id=braxon.context.linked.braxon_global_tag.nsq_core_crate;surface=crates_nsq_core;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 2251711477639517659,
+          "numeric_id_base8": "174775372425127712733",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.nsq_runtime_crate",
+          "pointer_id": "nsq_runtime_crate",
+          "kind": "crate",
+          "path": "crates/nsq-runtime",
+          "relationship": "native NSQ runtime hosting, offline inference, and persistent session surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=2251711477639517659;numeric_id_base8=174775372425127712733;semantic_id=braxon.context.linked.braxon_global_tag.nsq_runtime_crate;surface=crates_nsq_runtime;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 6117029369224050682,
+          "numeric_id_base8": "523440334651116633772",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_seating_verify",
+          "pointer_id": "braxon_seating_verify",
+          "kind": "script",
+          "path": "scripts/braxon_seating_verify.sh",
+          "relationship": "primary switch-position seating and zero-miss measurement entry",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=6117029369224050682;numeric_id_base8=523440334651116633772;semantic_id=braxon.context.linked.braxon_global_tag.braxon_seating_verify;surface=scripts_braxon_seating_verify_sh;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 18333713942735125871,
+          "numeric_id_base8": "1771563373073226476557",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_weight_ingest_scripts",
+          "pointer_id": "braxon_weight_ingest_scripts",
+          "kind": "script_family",
+          "path": "scripts",
+          "relationship": "Braxon ingest, status, install, recode, and verification command surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=18333713942735125871;numeric_id_base8=1771563373073226476557;semantic_id=braxon.context.linked.braxon_global_tag.braxon_weight_ingest_scripts;surface=scripts;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10684983326382979544,
+          "numeric_id_base8": "1121105373452001674730",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_model_manifest",
+          "pointer_id": "braxon_model_manifest",
+          "kind": "model_manifest",
+          "path": "models/braxon/manifest.json",
+          "relationship": "offline model identity and runtime packaging metadata",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10684983326382979544;numeric_id_base8=1121105373452001674730;semantic_id=braxon.context.linked.braxon_global_tag.braxon_model_manifest;surface=models_braxon_manifest_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10810587047296388076,
+          "numeric_id_base8": "1130067272217742445754",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_offline_registry",
+          "pointer_id": "braxon_offline_registry",
+          "kind": "state",
+          "path": "state/braxon/offline_model_registry.json",
+          "relationship": "offline model assets and runtime authority state",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10810587047296388076;numeric_id_base8=1130067272217742445754;semantic_id=braxon.context.linked.braxon_global_tag.braxon_offline_registry;surface=state_braxon_offline_model_registry_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10249293232698425592,
+          "numeric_id_base8": "1070746336213563400370",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_binding",
+          "pointer_id": "braxon_binding",
+          "kind": "state",
+          "path": "state/braxon/braxon_binding.json",
+          "relationship": "hot-live binding and tokenizer/parameter context",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10249293232698425592;numeric_id_base8=1070746336213563400370;semantic_id=braxon.context.linked.braxon_global_tag.braxon_binding;surface=state_braxon_braxon_binding_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11234844609684496961,
+          "numeric_id_base8": "1157521372272275161101",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_switch_position_state",
+          "pointer_id": "braxon_switch_position_state",
+          "kind": "state",
+          "path": "state/braxon/braxon_switch_position.json",
+          "relationship": "resolved NSQ switch position, zero-miss frontier, and sound-return measurement witness",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11234844609684496961;numeric_id_base8=1157521372272275161101;semantic_id=braxon.context.linked.braxon_global_tag.braxon_switch_position_state;surface=state_braxon_braxon_switch_position_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 12778584163028910790,
+          "numeric_id_base8": "1305265151365161241306",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_lever_sweet_spot_config",
+          "pointer_id": "braxon_lever_sweet_spot_config",
+          "kind": "nsq_measurement_config",
+          "path": "config/nsq/braxon_lever_sweet_spot.json",
+          "relationship": "global lever spacing and resolved-information-processed sweet spot with boundary byte-equivalent measurement selected from applied-hertz, return-average, sound-resonance, anchor-similarity diagnostics, and correction probes",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=12778584163028910790;numeric_id_base8=1305265151365161241306;semantic_id=braxon.context.linked.braxon_global_tag.braxon_lever_sweet_spot_config;surface=config_nsq_braxon_lever_sweet_spot_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 11168045169544781752,
+          "numeric_id_base8": "1153746736445616757670",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.braxon_chain_root_db",
+          "pointer_id": "braxon_chain_root_db",
+          "kind": "chain_root_db",
+          "path": "state/braxon/context_chain_root/chain_wake_registry.json",
+          "relationship": "centralized mechanical wake database for chain-root records and non-runtime adjustment exit announcements",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=11168045169544781752;numeric_id_base8=1153746736445616757670;semantic_id=braxon.context.linked.braxon_global_tag.braxon_chain_root_db;surface=state_braxon_context_chain_root_chain_wake_registry_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 9070629790630839449,
+          "numeric_id_base8": "767412633617750102231",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.citadel699_state_bus",
+          "pointer_id": "citadel699_state_bus",
+          "kind": "citadel",
+          "path": "state/braxon/bus/citadel699",
+          "relationship": "Citadel699 council and environment bus surfaces",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=9070629790630839449;numeric_id_base8=767412633617750102231;semantic_id=braxon.context.linked.braxon_global_tag.citadel699_state_bus;surface=state_braxon_bus_citadel699;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 9482436045261084405,
+          "numeric_id_base8": "1016303025372311313365",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.citadel699_config",
+          "pointer_id": "citadel699_config",
+          "kind": "citadel_config",
+          "path": "config/nsq/citadel699_wire_receptor.json",
+          "relationship": "Citadel699 wire receptor and request-return context",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=9482436045261084405;numeric_id_base8=1016303025372311313365;semantic_id=braxon.context.linked.braxon_global_tag.citadel699_config;surface=config_nsq_citadel699_wire_receptor_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 10390010150294123892,
+          "numeric_id_base8": "1100605662733476772564",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.council_of_six",
+          "pointer_id": "council_of_six",
+          "kind": "model_council",
+          "path": "config/nsq/braxon_six_model_stack.json",
+          "relationship": "six brain-region model identities and balanced thought pressure",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=10390010150294123892;numeric_id_base8=1100605662733476772564;semantic_id=braxon.context.linked.braxon_global_tag.council_of_six;surface=config_nsq_braxon_six_model_stack_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 14126114193582668272,
+          "numeric_id_base8": "1420120240200506234760",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.sensory_generation_roster",
+          "pointer_id": "sensory_generation_roster",
+          "kind": "model_roster",
+          "path": "config/nsq/braxon_sensory_generation_roster.json",
+          "relationship": "FLUX image cortex, Wan video cortex, IndexTTS2 voice body, and Hunyuan3D world body with graphics footprint allowance 50",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=14126114193582668272;numeric_id_base8=1420120240200506234760;semantic_id=braxon.context.linked.braxon_global_tag.sensory_generation_roster;surface=config_nsq_braxon_sensory_generation_roster_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 4588311460534284980,
+          "numeric_id_base8": "376547517324377771264",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.indextts2_emotional_frequency_map",
+          "pointer_id": "indextts2_emotional_frequency_map",
+          "kind": "voice_mapping",
+          "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+          "relationship": "NSQ-to-IndexTTS2 emotional frequency mapping for valence, arousal, breath, tremor, timbre, cadence, and emphasis",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=4588311460534284980;numeric_id_base8=376547517324377771264;semantic_id=braxon.context.linked.braxon_global_tag.indextts2_emotional_frequency_map;surface=config_nsq_braxon_indextts2_emotional_frequency_map_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        },
+        {
+          "numeric_id": 2747224701652021695,
+          "numeric_id_base8": "230400644761411330677",
+          "semantic_id": "braxon.context.linked.braxon_global_tag.wowas_final_edition",
+          "pointer_id": "wowas_final_edition",
+          "kind": "story_system",
+          "path": "crates/wowas-final-edition-v10",
+          "relationship": "Whispers of Willow and Stone canon, scene, and character generation system",
+          "mechanical_tag": "tag=braxon.context;kind=linked;numeric_id=2747224701652021695;numeric_id_base8=230400644761411330677;semantic_id=braxon.context.linked.braxon_global_tag.wowas_final_edition;surface=crates_wowas_final_edition_v10;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+          "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+        }
+      ],
+      "exit_wake_action": {
+        "numeric_id": 15438911665018085798,
+        "numeric_id_base8": "1531020205611002320646",
+        "semantic_id": "braxon.context.wake.exit.braxon_context_change_braxon_global_tag_braxon_global_tag_json",
+        "action": "wake_announce_non_runtime_adjustment",
+        "source_db": "state/braxon/context_chain_root/chain_wake_registry.json",
+        "chain_root": "state/braxon/context_chain_root/braxon_global_tag",
+        "runtime_adjustable": false,
+        "announcement": "wake_announce_non_runtime_adjustment: changed_path=BRAXON_GLOBAL_TAG.json; source_db=state/braxon/context_chain_root/chain_wake_registry.json; chain_root=state/braxon/context_chain_root/braxon_global_tag",
+        "mechanical_tag": "tag=braxon.context;kind=exit_wake;numeric_id=15438911665018085798;numeric_id_base8=1531020205611002320646;semantic_id=braxon.context.wake.exit.braxon_context_change_braxon_global_tag_braxon_global_tag_json;surface=braxon_global_tag_json;watermark=BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1",
+        "watermark": "BRAXON_NSQ_BASE8_CONTEXT_WAKE_V1"
+      }
+    }
+  ]
+}

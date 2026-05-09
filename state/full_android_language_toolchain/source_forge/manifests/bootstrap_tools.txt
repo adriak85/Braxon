@@ -1,0 +1,25 @@
+bootstrap tools:
+git            /data/data/com.termux/files/usr/bin/git
+curl           /data/data/com.termux/files/usr/bin/curl
+wget           /data/data/com.termux/files/usr/bin/wget
+tar            /data/data/com.termux/files/usr/bin/tar
+gzip           /data/data/com.termux/files/usr/bin/gzip
+xz             /data/data/com.termux/files/usr/bin/xz
+unzip          /data/data/com.termux/files/usr/bin/unzip
+patch          /data/data/com.termux/files/usr/bin/patch
+clang          /data/data/com.termux/files/usr/bin/clang
+clang++        /data/data/com.termux/files/usr/bin/clang++
+ld.lld         /data/data/com.termux/files/usr/bin/ld.lld
+cmake          /data/data/com.termux/files/usr/bin/cmake
+ninja          /data/data/com.termux/files/usr/bin/ninja
+make           /data/data/com.termux/files/usr/bin/make
+pkg-config     /data/data/com.termux/files/usr/bin/pkg-config
+rustc          /data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc
+cargo          /data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo
+zig            /data/data/com.termux/files/usr/bin/zig
+guile          perl           /data/data/com.termux/files/usr/bin/perl
+ruby           /data/data/com.termux/files/usr/bin/ruby
+node           /data/data/com.termux/files/usr/bin/node
+npm            /data/data/com.termux/files/usr/bin/npm
+go             /data/data/com.termux/files/usr/bin/go
+lua            /data/data/com.termux/files/usr/bin/lua
