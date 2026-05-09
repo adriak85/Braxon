@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__libdav1d-sys__RUSTSEC-2024-0016.md.1638013d96579f42.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.037424+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__libdav1d-sys__RUSTSEC-2024-0016.md.1638013d96579f42.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/libdav1d-sys/RUSTSEC-2024-0016.md",
+  "source_bytes": 576,
+  "source_sha256": "1638013d96579f427b40a6640c5baaeb3320f43f35d3921c0a7e011d442f20de",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__libdav1d-sys__RUSTSEC-2024-0016.md.1638013d96579f42"
+}

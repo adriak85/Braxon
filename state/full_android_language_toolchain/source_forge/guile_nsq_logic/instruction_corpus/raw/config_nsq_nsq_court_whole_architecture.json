@@ -1,0 +1,31 @@
+{
+  "schema": "nsq.court.whole_architecture.v3",
+  "generated_at": "20260424_193258",
+  "authority": "NSQ_COURT",
+  "architecture_root": true,
+  "duplicate_task_systems_allowed": false,
+  "direct_acceptance_runner_allowed": false,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "court_names_are_registry_owned": true,
+  "king_queen_terms_are_canonical": true,
+  "generic_reroute_terms_blocked": true,
+  "c_reference_runner_acceptance": false,
+  "c_reference_runner_storage": false,
+  "routes": {
+    "BRAXON_model_downloader": "court_owned",
+    "semantic_benchmark": "court_owned",
+    "bare_tasker": "court_owned",
+    "model_download": "court_owned",
+    "nsq_to_asm": "court_owned"
+  },
+  "acceptance": {
+    "source": "NSQ",
+    "route": "NSQ_COURT",
+    "compile_surface": "NSQASM_AARCH64",
+    "host_smoke_artifact": "ELF",
+    "bare_form_artifact": "flat_binary",
+    "c_runner_used": false
+  }
+}

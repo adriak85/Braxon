@@ -1,0 +1,45 @@
+{
+  "schema": "braxon.android_build_tools_release_lane.v1",
+  "authority": "BRAXON_ANDROID_BUILD_TOOLS",
+  "created_at": "2026-05-07T19:37:57-05:00",
+  "repo_head": "ced6af253888bf194375692de86d0678dc70d847",
+  "branch": "braxon-current-preserve-20260507-172011",
+  "purpose": "Prepare a releasable Android/Termux build-tools gap-fill package.",
+  "primary_scope": [
+    "clang",
+    "clang++",
+    "ld.lld",
+    "lld",
+    "llvm-ar",
+    "llvm-ranlib",
+    "llvm-nm",
+    "llvm-objdump",
+    "llvm-readelf",
+    "llvm-strip",
+    "llvm-strings",
+    "llvm-size",
+    "rustc",
+    "cargo",
+    "rustfmt",
+    "clippy-driver",
+    "python3",
+    "cmake",
+    "ninja",
+    "pkg-config",
+    "make"
+  ],
+  "non_goals": [
+    "runtime-library packaging as the main release target",
+    "model weight packaging",
+    "replacing custom Rust",
+    "claiming complete Android NDK replacement without separate proof"
+  ],
+  "rules": {
+    "custom_rust_preserved": true,
+    "runtime_surfaces_are_dependency_observations": true,
+    "source_build_preferred": true,
+    "active_verified_tools_allowed_as_current_release_lane": true,
+    "tmp_usage_allowed": false,
+    "generated_binaries_committed_by_default": false
+  }
+}

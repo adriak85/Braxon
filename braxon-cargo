@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+source /data/data/com.termux/files/home/Braxon/braxon-rust-env
+exec cargo "$@"

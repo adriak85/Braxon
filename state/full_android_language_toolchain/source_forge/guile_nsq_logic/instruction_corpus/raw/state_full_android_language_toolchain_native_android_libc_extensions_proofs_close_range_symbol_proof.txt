@@ -1,0 +1,31 @@
+schema=braxon.android.libc_extension.close_range.symbol_proof.v1
+date=2026-05-07T21:28:00-05:00
+stage=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage
+overlay=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay
+
+== overlay realpaths ==
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/unistd.h
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.a
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.so
+
+== archive symbols ==
+sem_clockwait.o:
+0000000000000000 T sem_clockwait
+pthread_getname_np.o:
+0000000000000000 T pthread_getname_np
+close_range.o:
+0000000000000000 T close_range
+
+== shared exports ==
+    15: 00000000000009e8   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+    16: 0000000000000b04   248 FUNC    GLOBAL DEFAULT    11 pthread_getname_np
+    17: 0000000000000bfc   288 FUNC    GLOBAL DEFAULT    11 close_range
+    22: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS sem_clockwait.c
+    26: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS pthread_getname_np.c
+    30: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS close_range.c
+    40: 00000000000009e8   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+    44: 0000000000000b04   248 FUNC    GLOBAL DEFAULT    11 pthread_getname_np
+    50: 0000000000000bfc   288 FUNC    GLOBAL DEFAULT    11 close_range
+
+== probe ==
+BRAXON_CLOSE_RANGE_NATIVE_CHAIN_OK

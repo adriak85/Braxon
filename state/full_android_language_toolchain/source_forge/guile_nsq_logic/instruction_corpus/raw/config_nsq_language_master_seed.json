@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "masters": [
+    {
+      "name": "python_master",
+      "stack_surface": "Python",
+      "court_routes": ["lexer", "parser", "optimizer"],
+      "boundary_exports": ["runtime_projection", "graph_projection"]
+    },
+    {
+      "name": "lua_master",
+      "stack_surface": "Lua",
+      "court_routes": ["lexer", "parser", "optimizer"],
+      "boundary_exports": ["runtime_projection", "graph_projection"]
+    },
+    {
+      "name": "c_family_master",
+      "stack_surface": "C++",
+      "court_routes": ["lexer", "parser", "compositor", "optimizer"],
+      "boundary_exports": ["artifact_manifest", "toolchain_manifest"]
+    },
+    {
+      "name": "shell_master",
+      "stack_surface": "shell",
+      "court_routes": ["lexer", "parser", "router"],
+      "boundary_exports": ["toolchain_manifest", "runtime_projection"]
+    },
+    {
+      "name": "java_kotlin_master",
+      "stack_surface": "Kotlin",
+      "court_routes": ["lexer", "parser", "optimizer"],
+      "boundary_exports": ["artifact_manifest", "runtime_projection"]
+    },
+    {
+      "name": "system_artifact_master",
+      "stack_surface": "DLL",
+      "court_routes": ["inspector", "router"],
+      "boundary_exports": ["system_manifest", "artifact_manifest"]
+    }
+  ]
+}

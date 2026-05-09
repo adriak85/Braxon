@@ -29,7 +29,6 @@ struct StampCandidate {
     preview: String,
 }
 
-
 impl StampCandidate {
     fn identity_key(&self) -> String {
         format!(
@@ -52,7 +51,6 @@ struct AcceptedStamp {
     pre_bake_state: String,
     projection_lane: String,
 }
-
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct StampWakeDispatch {
@@ -120,7 +118,9 @@ fn main() -> Result<()> {
     }
 
     let root = args.get(1).cloned().unwrap_or_else(|| ".".to_string());
-    let root = PathBuf::from(root).canonicalize().context("canonicalize root")?;
+    let root = PathBuf::from(root)
+        .canonicalize()
+        .context("canonicalize root")?;
 
     let out_dir = root.join("state/nsq/stamp_build_chain");
     fs::create_dir_all(&out_dir).context("create stamp db output dir")?;
@@ -187,7 +187,8 @@ fn main() -> Result<()> {
                     semantic_execution_continuity_required: true,
                     passive_stamp_only_mode_allowed: false,
                     pre_bake_state: "bishop_prepared_king_composable".to_string(),
-                    projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+                    projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native"
+                        .to_string(),
                 };
 
                 let accepted_key = accepted.candidate.identity_key();
@@ -237,7 +238,6 @@ fn main() -> Result<()> {
 
     Ok(())
 }
-
 
 fn resolve_stamp(root: PathBuf, stamp_id: &str) -> Result<()> {
     let root = root.canonicalize().context("canonicalize root")?;
@@ -394,14 +394,21 @@ fn candidates_from_text(
         "rust" => scan_rust_blocks(root, path, &lines, &mut out)?,
         "shell" => scan_shell_blocks(root, path, &lines, &mut out)?,
         "aarch64_asm" => scan_asm_blocks(root, path, &lines, &mut out)?,
-        "toml" | "json" | "markdown" => scan_repeated_text_windows(root, path, language, &lines, &mut out)?,
+        "toml" | "json" | "markdown" => {
+            scan_repeated_text_windows(root, path, language, &lines, &mut out)?
+        }
         _ => {}
     }
 
     Ok(out)
 }
 
-fn scan_rust_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<StampCandidate>) -> Result<()> {
+fn scan_rust_blocks(
+    root: &Path,
+    path: &Path,
+    lines: &[&str],
+    out: &mut Vec<StampCandidate>,
+) -> Result<()> {
     let mut starts = Vec::new();
 
     for (idx, line) in lines.iter().enumerate() {
@@ -434,12 +441,21 @@ fn scan_rust_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<Stam
     Ok(())
 }
 
-fn scan_shell_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<StampCandidate>) -> Result<()> {
+fn scan_shell_blocks(
+    root: &Path,
+    path: &Path,
+    lines: &[&str],
+    out: &mut Vec<StampCandidate>,
+) -> Result<()> {
     let mut starts = Vec::new();
 
     for (idx, line) in lines.iter().enumerate() {
         let t = line.trim();
-        if t.ends_with("() {") || t.starts_with("cat > ") || t.starts_with("cargo ") || t.starts_with("git ") {
+        if t.ends_with("() {")
+            || t.starts_with("cat > ")
+            || t.starts_with("cargo ")
+            || t.starts_with("git ")
+        {
             starts.push(idx);
         }
     }
@@ -447,13 +463,27 @@ fn scan_shell_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<Sta
     for pair in starts.windows(2) {
         let start = pair[0];
         let end = pair[1].saturating_sub(1);
-        push_candidate(root, path, "shell", "shell_operation", start, end, lines, out)?;
+        push_candidate(
+            root,
+            path,
+            "shell",
+            "shell_operation",
+            start,
+            end,
+            lines,
+            out,
+        )?;
     }
 
     Ok(())
 }
 
-fn scan_asm_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<StampCandidate>) -> Result<()> {
+fn scan_asm_blocks(
+    root: &Path,
+    path: &Path,
+    lines: &[&str],
+    out: &mut Vec<StampCandidate>,
+) -> Result<()> {
     let mut starts = Vec::new();
 
     for (idx, line) in lines.iter().enumerate() {
@@ -466,7 +496,16 @@ fn scan_asm_blocks(root: &Path, path: &Path, lines: &[&str], out: &mut Vec<Stamp
     for pair in starts.windows(2) {
         let start = pair[0];
         let end = pair[1].saturating_sub(1);
-        push_candidate(root, path, "aarch64_asm", "assembly_block", start, end, lines, out)?;
+        push_candidate(
+            root,
+            path,
+            "aarch64_asm",
+            "assembly_block",
+            start,
+            end,
+            lines,
+            out,
+        )?;
     }
 
     Ok(())
@@ -496,7 +535,16 @@ fn scan_repeated_text_windows(
         *count += 1;
 
         if *count > 1 || body.len() > 512 {
-            push_candidate(root, path, language, "reusable_text_window", start, end, lines, out)?;
+            push_candidate(
+                root,
+                path,
+                language,
+                "reusable_text_window",
+                start,
+                end,
+                lines,
+                out,
+            )?;
         }
     }
 
@@ -527,7 +575,11 @@ fn push_candidate(
     let line_count = end - start + 1;
     let byte_count = trimmed.as_bytes().len();
     let hash = sha256(trimmed);
-    let rel = path.strip_prefix(root).unwrap_or(path).to_string_lossy().to_string();
+    let rel = path
+        .strip_prefix(root)
+        .unwrap_or(path)
+        .to_string_lossy()
+        .to_string();
 
     let reusable_score = score_block(trimmed, line_count, byte_count);
     if reusable_score < 20 {
@@ -584,7 +636,11 @@ fn score_block(block: &str, line_count: usize, byte_count: usize) -> u64 {
     if block.contains("serde") || block.contains("Serialize") || block.contains("Deserialize") {
         score += 6;
     }
-    if block.contains("NSQ") || block.contains("Braxon") || block.contains("Court") || block.contains("stamp") {
+    if block.contains("NSQ")
+        || block.contains("Braxon")
+        || block.contains("Court")
+        || block.contains("stamp")
+    {
         score += 12;
     }
     if block.contains("test") || block.contains("PASS") || block.contains("FAIL") {
@@ -608,7 +664,8 @@ fn court_route() -> CourtRoute {
         validate: CourtSeat {
             court_position: "queen".to_string(),
             title: "Queen".to_string(),
-            duty: "validate notation, syntax equivalence, integrity, and semantic continuity".to_string(),
+            duty: "validate notation, syntax equivalence, integrity, and semantic continuity"
+                .to_string(),
         },
         prepare: CourtSeat {
             court_position: "bishop".to_string(),
@@ -651,7 +708,13 @@ fn sha256(input: &str) -> String {
 
 fn sanitize(s: &str) -> String {
     s.chars()
-        .map(|c| if c.is_ascii_alphanumeric() { c.to_ascii_lowercase() } else { '_' })
+        .map(|c| {
+            if c.is_ascii_alphanumeric() {
+                c.to_ascii_lowercase()
+            } else {
+                '_'
+            }
+        })
         .collect::<String>()
         .trim_matches('_')
         .to_string()
@@ -757,7 +820,8 @@ mod tests {
             semantic_execution_continuity_required: true,
             passive_stamp_only_mode_allowed: false,
             pre_bake_state: "bishop_prepared_king_composable".to_string(),
-            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native"
+                .to_string(),
         };
 
         assert!(!accepted.passive_stamp_only_mode_allowed);
@@ -793,7 +857,8 @@ mod tests {
             semantic_execution_continuity_required: true,
             passive_stamp_only_mode_allowed: true,
             pre_bake_state: "bishop_prepared_king_composable".to_string(),
-            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native"
+                .to_string(),
         };
 
         assert!(verify_accepted_record(&record).is_err());
@@ -825,10 +890,10 @@ mod tests {
             semantic_execution_continuity_required: true,
             passive_stamp_only_mode_allowed: false,
             pre_bake_state: "bishop_prepared_king_composable".to_string(),
-            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native".to_string(),
+            projection_lane: "current_binary_or_host_language_filtered_until_nsqasm_native"
+                .to_string(),
         };
 
         assert!(verify_accepted_record(&record).is_ok());
     }
-
 }

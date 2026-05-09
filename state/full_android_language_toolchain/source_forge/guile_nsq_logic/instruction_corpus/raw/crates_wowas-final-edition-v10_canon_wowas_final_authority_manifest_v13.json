@@ -1,0 +1,118 @@
+{
+  "version": "v13",
+  "status": "authoritative_entrypoint",
+  "entrypoint": "crates/wowas-final-edition-v10/canon/wowas_final_authority_system_v13.md",
+  "patch_absorption_registry": "crates/wowas-final-edition-v10/canon/wowas_patch_absorption_registry_v13.md",
+  "patch_folder_readme": "crates/wowas-final-edition-v10/canon/patches/README.md",
+  "runtime_patch_replay_required": false,
+  "patch_folder_role": [
+    "provenance",
+    "migration_history",
+    "audit_trail",
+    "subordinate_support"
+  ],
+  "absorbed_control_bundles": [
+    "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v7.md",
+    "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v8_addendum.md",
+    "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v10_addendum.md",
+    "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v11_addendum.md"
+  ],
+  "absorbed_patch_sources": [
+    "crates/wowas-final-edition-v10/canon/patches/PROSE_AND_TONE_GUIDE.json",
+    "crates/wowas-final-edition-v10/canon/patches/v9/wowas_v8_polish/wowas_morph_description_patch_v9.tsv",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_anti_placeholder_expansion_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_book_build_selection_order_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_books_24_25_priority_override_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_character_timeline_lattice_patch_v10.tsv",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_dialogue_and_play_insertion_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_magic_system_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_orbit_patch_v10.tsv",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_prose_and_tone_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_scene_authority_cleanup_patch_v10.md",
+    "crates/wowas-final-edition-v10/canon/patches/v10/wowas_scene_patch_v10.tsv",
+    "crates/wowas-final-edition-v10/canon/patches/v12/wowas_scene_connector_cast_tracker_apply_patch_v12.md",
+    "crates/wowas-final-edition-v10/canon/patches/v12/wowas_recursive_tree_rewrite_manifest_v12.md",
+    "crates/wowas-final-edition-v10/canon/patches/v12/wowas_quality_romance_calendar_and_resonance_patch_v12.md"
+  ],
+  "rewrite_priority": [
+    "Books 24-25",
+    "Silence/Lucent/Ursula lanes",
+    "Books 14-20 recovery/Rolzen/escape/convergence lanes",
+    "Books 01-03 school/prophecy/diary/Mack/early-bond lanes",
+    "remaining books outward from strongest anchors"
+  ],
+  "scene_file_required_blocks": {
+    "connector": [
+      "scene_id",
+      "book_id",
+      "beat_id",
+      "connector_in",
+      "connector_out",
+      "must_follow",
+      "must_precede",
+      "soft_follow",
+      "soft_precede",
+      "depends_on_scene_ids",
+      "opens_statement_ids",
+      "resolves_statement_ids",
+      "contradicts_statement_ids",
+      "carries_forward"
+    ],
+    "event_obligation": [
+      "open_statements",
+      "resolution_targets",
+      "timing_constraints",
+      "hard_due_before",
+      "hard_due_after",
+      "soft_due_before",
+      "blocked_by",
+      "pays_off",
+      "orphan_risk"
+    ],
+    "impact": [
+      "reader_impact_primary",
+      "reader_impact_secondary",
+      "public_read_risk",
+      "tone_risk",
+      "meme_risk",
+      "misread_risk",
+      "ecology_or_world_impact",
+      "relationship_impact",
+      "cost_marker",
+      "recovery_marker",
+      "spectacle_vs_humanity_balance"
+    ],
+    "cast_presence": [
+      "present_characters",
+      "role_primary",
+      "role_secondary",
+      "role_tertiary",
+      "witnesses",
+      "offscreen_pressures",
+      "background_named_presence",
+      "background_generated_presence",
+      "absence_that_matters"
+    ],
+    "generator_character_insertion": [
+      "candidate_generated_characters",
+      "selected_generated_characters",
+      "selection_reason",
+      "story_function",
+      "region_fit",
+      "survival_fit",
+      "repeat_presence_plan",
+      "drop_if_redundant"
+    ],
+    "image_coverage": [
+      "image_status",
+      "image_priority",
+      "featured_visual_subjects",
+      "missing_visual_references",
+      "best_picture_book_targets"
+    ]
+  },
+  "done_condition": {
+    "control_layer": "complete_when_BRAXON_can_start_from_v13_without_patch_replay",
+    "tree_layer": "complete_when_scene_tree_holds_ordered_truth_and_derived_indexes_regenerate_without_loss"
+  }
+}

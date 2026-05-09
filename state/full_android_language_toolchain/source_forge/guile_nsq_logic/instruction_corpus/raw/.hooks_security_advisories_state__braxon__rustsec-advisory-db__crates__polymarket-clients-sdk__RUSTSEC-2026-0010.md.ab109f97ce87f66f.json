@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__polymarket-clients-sdk__RUSTSEC-2026-0010.md.ab109f97ce87f66f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.277668+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__polymarket-clients-sdk__RUSTSEC-2026-0010.md.ab109f97ce87f66f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/polymarket-clients-sdk/RUSTSEC-2026-0010.md",
+  "source_bytes": 744,
+  "source_sha256": "ab109f97ce87f66fac449ae2cfba7d3f64fb631ff593a6c18ef65178b3113ba8",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__polymarket-clients-sdk__RUSTSEC-2026-0010.md.ab109f97ce87f66f"
+}

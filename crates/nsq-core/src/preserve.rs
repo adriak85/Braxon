@@ -1,4 +1,4 @@
-use crate::{Charge, Dialect, NSQLever, NSQSlot};
+use crate::{Charge, Dialect, NSQLever, NSQSlot, CANONICAL_LEVER_MAX_POSITION};
 
 pub enum BitState {
     Active,
@@ -39,7 +39,7 @@ impl NsqBit {
         // Re-approach logic: Load a "corrected" intent slot
         self.instructions.push(NSQSlot::new(
             Dialect::Intent,
-            vec![NSQLever::new(Charge::Positive, 1126).unwrap()],
+            vec![NSQLever::new(Charge::Positive, CANONICAL_LEVER_MAX_POSITION).unwrap()],
         ));
     }
 }

@@ -1,0 +1,182 @@
+{
+  "schema": "braxon.android_build_tools.inventory.v1",
+  "records": [
+    {
+      "tool": "clang",
+      "path": "/data/data/com.termux/files/usr/bin/clang",
+      "present": true,
+      "sha256": "3599a121ecc11b433d23bc43545bc0441f9a8ffcc587ea18e312d88188fcf282",
+      "file": "/data/data/com.termux/files/usr/bin/clang: symbolic link to clang-21"
+    },
+    {
+      "tool": "clang++",
+      "path": "/data/data/com.termux/files/usr/bin/clang++",
+      "present": true,
+      "sha256": "3599a121ecc11b433d23bc43545bc0441f9a8ffcc587ea18e312d88188fcf282",
+      "file": "/data/data/com.termux/files/usr/bin/clang++: symbolic link to clang-21"
+    },
+    {
+      "tool": "ld.lld",
+      "path": "/data/data/com.termux/files/usr/bin/ld.lld",
+      "present": true,
+      "sha256": "7a0e3dad3eaeaf7ec0e85337ab1047470141e95aae11e4b51eb12c749c1a561a",
+      "file": "/data/data/com.termux/files/usr/bin/ld.lld: symbolic link to lld"
+    },
+    {
+      "tool": "lld",
+      "path": "/data/data/com.termux/files/usr/bin/lld",
+      "present": true,
+      "sha256": "7a0e3dad3eaeaf7ec0e85337ab1047470141e95aae11e4b51eb12c749c1a561a",
+      "file": "/data/data/com.termux/files/usr/bin/lld: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "llvm-ar",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-ar",
+      "present": true,
+      "sha256": "a43266eaab0bbd4eabf2127f796015c46897044748bcc50976421fc116f37798",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-ar: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "llvm-ranlib",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-ranlib",
+      "present": true,
+      "sha256": "a43266eaab0bbd4eabf2127f796015c46897044748bcc50976421fc116f37798",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-ranlib: symbolic link to llvm-ar"
+    },
+    {
+      "tool": "llvm-nm",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-nm",
+      "present": true,
+      "sha256": "57e63606b82383d37d05b9038ec39dbd24f34093b251ff69b04f62551bd968eb",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-nm: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "llvm-objdump",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-objdump",
+      "present": true,
+      "sha256": "e9c6aac1b64e9743e6a062d4ee0c92a9a98373da9f04f447d0b679327d47b48f",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-objdump: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "llvm-readelf",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-readelf",
+      "present": true,
+      "sha256": "f409f88b053ede038c37d2cc844a6c065a9d623cdebdf3f63d544beb8b55630e",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-readelf: symbolic link to llvm-readobj"
+    },
+    {
+      "tool": "llvm-strip",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-strip",
+      "present": true,
+      "sha256": "b1196f21e347a912662b0bea76ad97c60f758e68c612b58006d505182a679392",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-strip: symbolic link to llvm-objcopy"
+    },
+    {
+      "tool": "llvm-strings",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-strings",
+      "present": true,
+      "sha256": "fdac293ca4ed3fcf149aae186696ce506a316624fa4828f1f6e3279c77de0978",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-strings: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "llvm-size",
+      "path": "/data/data/com.termux/files/usr/bin/llvm-size",
+      "present": true,
+      "sha256": "bfc784407a14099f107e056a94912c8e1de50851b8443947fe49d846f5f6f553",
+      "file": "/data/data/com.termux/files/usr/bin/llvm-size: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "rustc",
+      "path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc",
+      "present": true,
+      "sha256": "8e40cc4a194da68440e4b87155302d1eb4fc7b2b0b4ce128a05b7207284daf0d",
+      "file": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped"
+    },
+    {
+      "tool": "cargo",
+      "path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo",
+      "present": true,
+      "sha256": "bfdd59c3c6d8b4a038d015510b8c023009f4eeb4b4ff551e7d23a0a5f91c9a29",
+      "file": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped"
+    },
+    {
+      "tool": "rustfmt",
+      "path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustfmt",
+      "present": true,
+      "sha256": "01c8dc10afe48ab2787a679e48dc104c187ad496ff1ee722c675147964f3c077",
+      "file": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustfmt: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped"
+    },
+    {
+      "tool": "clippy-driver",
+      "path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/clippy-driver",
+      "present": true,
+      "sha256": "cab40b0c7c1fa522c1752a6759f34751cf8144bbed50e20e6cb30ea6cc9c1604",
+      "file": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/clippy-driver: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped"
+    },
+    {
+      "tool": "python3",
+      "path": "/data/data/com.termux/files/usr/bin/python3",
+      "present": true,
+      "sha256": "92d08e7db76871f36a96c83d4f2bb64f360d75cc1a471f17b1c1ac4148c02778",
+      "file": "/data/data/com.termux/files/usr/bin/python3: symbolic link to python3.13"
+    },
+    {
+      "tool": "cmake",
+      "path": "/data/data/com.termux/files/usr/bin/cmake",
+      "present": true,
+      "sha256": "6946e07c909fc703a671770475b3ae3b1bcda517e4a51fcd65840744989c20bc",
+      "file": "/data/data/com.termux/files/usr/bin/cmake: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "ninja",
+      "path": "/data/data/com.termux/files/usr/bin/ninja",
+      "present": true,
+      "sha256": "ad71fefa515777f6331530b12aedeb44acf3f9b9ce56af5ebaafa8fe799a1204",
+      "file": "/data/data/com.termux/files/usr/bin/ninja: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r28c (13676358), stripped"
+    },
+    {
+      "tool": "pkg-config",
+      "path": "/data/data/com.termux/files/usr/bin/pkg-config",
+      "present": true,
+      "sha256": "f3cbc64e66c18415c67fea4f3d4b25f1ce8b5407565553ae0f59a12679b61d9f",
+      "file": "/data/data/com.termux/files/usr/bin/pkg-config: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r28c (13676358), stripped"
+    },
+    {
+      "tool": "make",
+      "path": "/data/data/com.termux/files/usr/bin/make",
+      "present": true,
+      "sha256": "203d62134f78aa8c9e8a4fd0bc87b9b5e114ea0f686a1cd27c5cdefbcc743de7",
+      "file": "/data/data/com.termux/files/usr/bin/make: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r28c (13676358), stripped"
+    },
+    {
+      "tool": "git",
+      "path": "/data/data/com.termux/files/usr/bin/git",
+      "present": true,
+      "sha256": "b32c25294a370ae0b13aae0072fb867ae0f9ab40980bcef4d3c325bf96d55f11",
+      "file": "/data/data/com.termux/files/usr/bin/git: symbolic link to ../libexec/git-core/git"
+    },
+    {
+      "tool": "file",
+      "path": "/data/data/com.termux/files/usr/bin/file",
+      "present": true,
+      "sha256": "e57cb7139ce68307c0c37e914324b7aa60e406572249897bf50d424c6c622d8b",
+      "file": "/data/data/com.termux/files/usr/bin/file: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), stripped"
+    },
+    {
+      "tool": "readelf",
+      "path": "/data/data/com.termux/files/usr/bin/readelf",
+      "present": true,
+      "sha256": "f409f88b053ede038c37d2cc844a6c065a9d623cdebdf3f63d544beb8b55630e",
+      "file": "/data/data/com.termux/files/usr/bin/readelf: symbolic link to llvm-readobj"
+    },
+    {
+      "tool": "sha256sum",
+      "path": "/data/data/com.termux/files/usr/bin/sha256sum",
+      "present": true,
+      "sha256": "7ca2521aeb5cd41448e811ca71b4544db627d35a8f26d791718c822f3c93a330",
+      "file": "/data/data/com.termux/files/usr/bin/sha256sum: symbolic link to coreutils"
+    }
+  ],
+  "missing": [],
+  "complete": true
+}

@@ -1,0 +1,80 @@
+find . -depth -name '__pycache__' -exec rm -rf {} ';'
+find . -name '*.py[co]' -exec rm -f {} ';'
+# Keep the generated JIT shim objects with the rest of the JIT generated
+# files: they are regenerated as a group and tracked by .jit-stamp.
+find . -name '*.[oa]' ! -name 'jit_shim*.o' -exec rm -f {} ';'
+find . -name '*.s[ol]' -exec rm -f {} ';'
+find . -name '*.so.[0-9]*.[0-9]*' -exec rm -f {} ';'
+find . -name '*.lto' -exec rm -f {} ';'
+find . -name '*.wasm' -exec rm -f {} ';'
+find . -name '*.lst' -exec rm -f {} ';'
+find build -name 'fficonfig.h' -exec rm -f {} ';' || true
+find: ‘build’: No such file or directory
+find build -name '*.py' -exec rm -f {} ';' || true
+find: ‘build’: No such file or directory
+find build -name '*.py[co]' -exec rm -f {} ';' || true
+find: ‘build’: No such file or directory
+rm -f pybuilddir.txt
+rm -f _bootstrap_python
+rm -rf web_example python.mjs python.wasm python*.symbols python*.map
+rm -f Programs/_testembed Programs/_freeze_module
+rm -rf Python/deepfreeze
+rm -f Python/frozen_modules/*.h
+rm -f Python/frozen_modules/MANIFEST
+find build -type f -a ! -name '*.gc??' -exec rm -f {} ';'
+find: ‘build’: No such file or directory
+make: [Makefile:3511: clean-retain-profile] Error 1 (ignored)
+rm -f Include/pydtrace_probes.h
+rm -f profile-gen-stamp
+rm -rf Platforms/Apple/iOS/testbed/Python.xcframework/ios-*/bin
+rm -rf Platforms/Apple/iOS/testbed/Python.xcframework/ios-*/lib
+rm -rf Platforms/Apple/iOS/testbed/Python.xcframework/ios-*/include
+rm -rf Platforms/Apple/iOS/testbed/Python.xcframework/ios-*/Python.framework
+# Profile data.
+rm -f *.fdata
+# Pristine binaries before BOLT optimization.
+rm -f *.prebolt
+# BOLT instrumented binaries.
+rm -f *.bolt_inst
+make[1]: Entering directory '/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython'
+find . -name '*.gc??' -exec rm -f {} ';'
+find . -name '*.profclang?' -exec rm -f {} ';'
+find . -name '*.dyn' -exec rm -f {} ';'
+rm -f /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython/coverage.info
+rm -rf /data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython/lcov-report
+rm -f profile-run-stamp
+rm -f profile-bolt-stamp
+make[1]: Leaving directory '/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython'
+rm -f jit_stencils.h     .jit-stamp jit_stencils*.h jit_unwind_info*.h jit_shim*.o
+rm -f python libpython3.16.a libpython3.16.a  \
+	tags TAGS \
+	config.cache config.log pyconfig.h Modules/config.c
+rm -rf build platform
+rm -rf no-framework
+rm -rf Platforms/Apple/iOS/Frameworks
+rm -rf iOSTestbed.*
+rm -f python-config.py python-config
+rm -rf cross-build
+make -C ./Doc clean
+make[1]: Entering directory '/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython/Doc'
+rm -rf ./venv
+rm -rf build/*
+make[1]: Leaving directory '/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/src/cpython/Doc'
+for file in ./Lib/test/data/* ; do \
+    if test "$file" != "./Lib/test/data/README"; then rm "$file"; fi; \
+done
+rm -f core Makefile Makefile.pre config.status Modules/Setup.local \
+    Modules/Setup.bootstrap Modules/Setup.stdlib \
+	Modules/ld_so_aix Modules/python.exp Misc/python.pc \
+	Misc/python-embed.pc Misc/python-config.sh
+rm -f python*-gdb.py
+# Issue #28258: set LC_ALL to avoid issues with Estonian locale.
+# Expansion is performed here by shell (spawned by make) itself before
+# arguments are passed to find. So LC_ALL=C must be set as a separate
+# command.
+LC_ALL=C; find ./[a-zA-Z]* '(' -name '*.fdc' -o -name '*~' \
+			     -o -name '[@,#]*' -o -name '*.old' \
+			     -o -name '*.orig' -o -name '*.rej' \
+			     -o -name '*.bak' ')' \
+			     -exec rm -f {} ';'
+make: *** No rule to make target 'clean'.  Stop.

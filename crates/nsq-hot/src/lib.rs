@@ -5,7 +5,7 @@ use std::path::{Path, PathBuf};
 pub const HOT_LANE_COUNT: usize = 10;
 pub const GRID_DIMENSION_COUNT: usize = 8;
 pub const LEVERS_PER_UNIT: u64 = 4;
-pub const ZERO_INCLUSIVE_POSITIONS_PER_LEVER: u64 = 500_000;
+pub const ZERO_INCLUSIVE_POSITIONS_PER_LEVER: u64 = nsq_core::CANONICAL_LEVER_MAX_POSITION;
 pub const PARAMETER_ADDRESS_SPACE_TOTAL: u64 = 6_900_000_000_000;
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]

@@ -45,3 +45,24 @@ state/substrate/nsq_court_start/nsq_court_start_verify_*.txt
 
 # Local preservation backups for generated NSQASM stamp DB
 state/nsq/stamp_build_chain/backups/
+
+# Android gap-fill generated local artifacts
+state/android_toolchain_build_chain/
+state/android_gap_fill_chain/release_stage/current/bin/
+state/android_gap_fill_chain/release_stage/current/include/
+state/android_gap_fill_chain/release_stage/current/lib/
+state/android_gap_fill_chain/release_stage/current/proofs/*.o
+state/android_gap_fill_chain/release_stage/current/proofs/*_start
+state/android_gap_fill_chain/release_stage/current/proofs/*.debug
+state/android_gap_fill_chain/release_stage/current/proofs/*.debug.*
+state/android_gap_fill_chain/runs/*/*.c
+state/android_gap_fill_chain/runs/*/*.cpp
+state/android_gap_fill_chain/runs/*/*.rs
+state/android_gap_fill_chain/runs/*/*.S
+state/android_gap_fill_chain/runs/*/*.o
+state/android_gap_fill_chain/runs/*/probe_c
+state/android_gap_fill_chain/runs/*/probe_cpp
+state/android_gap_fill_chain/runs/*/probe_rust
+state/android_gap_fill_chain/runs/*/release_probe_*
+state/android_gap_fill_chain/runs/*/nsq_android_direct_start
+state/android_gap_fill_chain/runs/*/nsq_android_direct_start.*

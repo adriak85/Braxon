@@ -1,0 +1,14 @@
+OK: clang            /data/data/com.termux/files/usr/bin/clang
+OK: clang++          /data/data/com.termux/files/usr/bin/clang++
+OK: llvm-ar          /data/data/com.termux/files/usr/bin/llvm-ar
+OK: llvm-ranlib      /data/data/com.termux/files/usr/bin/llvm-ranlib
+OK: llvm-nm          /data/data/com.termux/files/usr/bin/llvm-nm
+OK: readelf          /data/data/com.termux/files/usr/bin/readelf
+OK: file             /data/data/com.termux/files/usr/bin/file
+OK: make             /data/data/com.termux/files/usr/bin/make
+OK: git              /data/data/com.termux/files/usr/bin/git
+OK: grep             /data/data/com.termux/files/home/bin/grep
+OK: sed              /data/data/com.termux/files/home/bin/sed
+OK: awk              /data/data/com.termux/files/usr/bin/awk
+OK: tee              /data/data/com.termux/files/usr/bin/tee
+OK: sha256sum        /data/data/com.termux/files/usr/bin/sha256sum

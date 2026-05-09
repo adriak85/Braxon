@@ -1,0 +1,570 @@
+NSQ flag coverage state scan
+root=/data/data/com.termux/files/home/Braxon
+
+== known language/platform families ==
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/nsq
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/rust
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/python
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/c
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/sql
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/bash
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/lua
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/ruby
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/perl
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/guile_lisp
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/xml_manifest_style
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/toml
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/yaml
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/json
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/java
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/kotlin
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/html
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/css
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/javascript
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/typescript
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/bevy_surface
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/wgpu_surface
+present /data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/egui_surface
+
+== runtime/court/proof surfaces ==
+present /data/data/com.termux/files/home/Braxon/crates/nsq-runtime
+present /data/data/com.termux/files/home/Braxon/crates/nsq-decode
+present /data/data/com.termux/files/home/Braxon/crates/nsq-proof
+present /data/data/com.termux/files/home/Braxon/crates/nsq-court
+present /data/data/com.termux/files/home/Braxon/crates/Braxon-court
+present /data/data/com.termux/files/home/Braxon/crates/nsq-source
+missing /data/data/com.termux/files/home/Braxon/crates/nsq-ir
+present /data/data/com.termux/files/home/Braxon/crates/nsq-pack
+
+== obvious flag/target/projection terms ==
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:44:      "proof_targets": ["boots", "routes", "remembers", "recovers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:51:      "proof_targets": ["boots", "routes", "recovers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:58:      "proof_targets": ["boots", "speaks"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:65:      "proof_targets": ["routes", "speaks"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:72:      "proof_targets": ["boots", "recovers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:79:      "proof_targets": ["boots"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:86:      "proof_targets": ["boots", "speaks"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:93:      "proof_targets": ["routes"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:100:      "proof_targets": ["routes"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:107:      "proof_targets": ["speaks"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:114:      "proof_targets": ["speaks"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:121:      "proof_targets": ["remembers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:128:      "proof_targets": ["remembers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:135:      "proof_targets": ["remembers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:142:      "proof_targets": ["guards"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:149:      "proof_targets": ["guards", "recovers"],
+/data/data/com.termux/files/home/Braxon/config/showdown/showdown_pull_matrix.json:156:      "proof_targets": ["boots", "routes"],
+/data/data/com.termux/files/home/Braxon/config/nsq_court.json:342:      "target_identity",
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:5:OUT="$ROOT/nsq/flag_coverage/reports/flag_coverage_state_$(date +%Y%m%d_%H%M%S).txt"
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:9:  echo "NSQ flag coverage state scan"
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:66:  echo "== obvious flag/target/projection terms =="
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:69:      -e 'flag' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:70:      -e 'target' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:71:      -e 'offline' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:72:      -e 'mirror' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:73:      -e 'cache' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:74:      -e 'projection' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/bin/scan_flag_coverage_state.sh:75:      -e 'translate' \
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:5:  (family platform_target_abi)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:8:  (native-flag enable :family build_compile)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:9:  (native-flag target :family platform_target_abi)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:10:  (native-flag verify :family test_verify_replay)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:11:  (native-flag mirror :family package_dependency)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:12:  (native-flag cache :family package_dependency)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:13:  (native-flag materialize :family projection_translation_export)
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:15:  (projection rust "--release" -> (native-flag profile :family build_compile))
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:16:  (projection rust "--target"  -> (native-flag target  :family platform_target_abi))
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:17:  (projection python "-m"      -> (native-flag materialize :family runtime_launch_env))
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:18:  (projection cargo "--offline" -> (native-flag mirror :family package_dependency))
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/examples/nsq_write_nsq_translation_seed.sexp.nsq:19:  (projection adb "install"    -> (native-flag materialize :family android_device))
+/data/data/com.termux/files/home/Braxon/config/nsq/runtime_watcher.json:5:    { "name": "lexer_observer", "surface": "lexer", "exports": ["route_event", "trace_projection"] },
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/reports/NEXT_ACTIONS.rp:4:2. build a native flag registry instead of relying on foreign spellings
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/reports/NEXT_ACTIONS.rp:5:3. connect flag resolution to the local packed package-db model
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/reports/NEXT_ACTIONS.rp:7:5. collapse repeated flag bundles into stamps and warm reusable plans
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:649:      "canonical_projection",
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:685:      "spine_projection_view",
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:732:      "target_identity",
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:747:      "target_kind"
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:809:      "target_state_lookup",
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:819:      "states target=",
+/data/data/com.termux/files/home/Braxon/config/kingdom/court_canonical.json:842:      "target_to_states"
+/data/data/com.termux/files/home/Braxon/nsq/examples/composed_working_surface.nsq:9:triple wake -> semantic:address -> self :layer 2 :plane 4 :anchor 100 :weight 11 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/examples/composed_working_surface.nsq:10:triple delta -> delta:route:align -> graph :layer 3 :plane 6 :anchor 180 :weight 25 :flags 0
+/data/data/com.termux/files/home/Braxon/nsq/examples/composed_working_surface.nsq:11:triple membrane -> cell:membrane:matrix -> state :layer 1 :plane 9 :anchor 260 :weight 30 :flags 2
+/data/data/com.termux/files/home/Braxon/config/nsq/vector_imprint.json:16:      "name": "boundary_projection_recall",
+/data/data/com.termux/files/home/Braxon/config/nsq/vector_imprint.json:17:      "purpose": "foreign_tool_projection_support"
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/package_cache.sp:1:id: nsq.flag.coverage.stamp.package_cache.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/package_cache.sp:5:role: package_cache_forms
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/package_cache.sp:8:  reusable forms for local packed package cache, unpack, link, and warm plan reuse
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:3:triple ops.install -> enters -> spine.prime :layer 1 :plane 1 :anchor 1000 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:4:triple ops.repo_export -> enters -> spine.prime :layer 1 :plane 1 :anchor 1010 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:5:triple ops.pack -> enters -> spine.prime :layer 1 :plane 1 :anchor 1020 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:6:triple ops.container -> enters -> spine.prime :layer 1 :plane 1 :anchor 1030 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:8:triple ops.install -> emits -> prime.dispatch.install :layer 1 :plane 1 :anchor 1100 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:9:triple ops.repo_export -> emits -> prime.dispatch.repo_export :layer 1 :plane 1 :anchor 1110 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:10:triple ops.pack -> emits -> prime.dispatch.pack :layer 1 :plane 1 :anchor 1120 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:11:triple ops.container -> emits -> prime.dispatch.container :layer 1 :plane 1 :anchor 1130 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:13:triple prime.dispatch.install -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1200 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:14:triple prime.dispatch.repo_export -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1210 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:15:triple prime.dispatch.pack -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1220 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:16:triple prime.dispatch.container -> targets -> substrate.shell :layer 1 :plane 1 :anchor 1230 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:18:triple prime.dispatch.install -> requires -> env.contract :layer 1 :plane 1 :anchor 1300 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:19:triple prime.dispatch.install -> requires -> hook.matrix :layer 1 :plane 1 :anchor 1310 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:20:triple prime.dispatch.install -> requires -> dialect.matrix :layer 1 :plane 1 :anchor 1320 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:22:triple prime.dispatch.repo_export -> emits -> repo_surface.nsq :layer 1 :plane 1 :anchor 1400 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:23:triple prime.dispatch.pack -> emits -> source_doc.tar.gz :layer 1 :plane 1 :anchor 1410 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/ops/prime_ops.nsq:24:triple prime.dispatch.container -> emits -> container.recipe :layer 1 :plane 1 :anchor 1420 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:30:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:35:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:36:      "allowed_carriers": ["json_trace", "graph_projection", "artifact_manifest"]
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:40:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:41:      "allowed_carriers": ["graph_projection", "text_trace", "artifact_manifest"]
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:45:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:50:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:55:      "direction": "projection_out",
+/data/data/com.termux/files/home/Braxon/config/nsq/boundary_surfaces.json:56:      "allowed_carriers": ["surface_bundle", "runtime_projection", "graph_projection"]
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/platform_flags.sp:1:id: nsq.flag.coverage.stamp.platform_flags.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/platform_flags.sp:5:role: platform_flag_forms
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/platform_flags.sp:8:  reusable native forms for target/platform/android/render/device bundles
+/data/data/com.termux/files/home/Braxon/config/nsq/knowledge_graph.json:9:    "boundary_projection",
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/runtime_flags.sp:1:id: nsq.flag.coverage.stamp.runtime_flags.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/runtime_flags.sp:5:role: runtime_flag_forms
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/runtime_flags.sp:8:  reusable native forms for launch/runtime/profile/debug/test flag bundles
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/build_flags.sp:1:id: nsq.flag.coverage.stamp.build_flags.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/build_flags.sp:5:role: build_flag_forms
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/stamps/build_flags.sp:8:  reusable native forms for build/compile/link/package flag bundles
+/data/data/com.termux/files/home/Braxon/config/nsq/offline_package_db_seed.json:4:  "mode": "offline_local_repo_only",
+/data/data/com.termux/files/home/Braxon/config/nsq/offline_package_db_seed.json:10:    "mirrors_required": true,
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:1:id: nsq.flag.coverage.main.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:5:role: flag_coverage_entry
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:8:  Give NSQ native semantic coverage for every meaningful flag surface exposed by the
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:13:  - capture foreign flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:15:  - normalize native flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:16:  - assign projection spellings
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/mains/flag_coverage.mn:18:  - cache reusable plans
+/data/data/com.termux/files/home/Braxon/config/nsq/language_master_seed.json:8:      "boundary_exports": ["runtime_projection", "graph_projection"]
+/data/data/com.termux/files/home/Braxon/config/nsq/language_master_seed.json:14:      "boundary_exports": ["runtime_projection", "graph_projection"]
+/data/data/com.termux/files/home/Braxon/config/nsq/language_master_seed.json:26:      "boundary_exports": ["toolchain_manifest", "runtime_projection"]
+/data/data/com.termux/files/home/Braxon/config/nsq/language_master_seed.json:32:      "boundary_exports": ["artifact_manifest", "runtime_projection"]
+/data/data/com.termux/files/home/Braxon/nsq/examples/structured.nsq:2:triple wake -> semantic:address -> self :layer 2 :plane 4 :anchor 100 :weight 11 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/examples/structured.nsq:3:triple delta -> delta:route:align -> graph :layer 3 :plane 6 :anchor 180 :weight 25 :flags 0
+/data/data/com.termux/files/home/Braxon/nsq/examples/structured.nsq:4:triple membrane -> cell:membrane:matrix -> state :layer 1 :plane 9 :anchor 260 :weight 30 :flags 2
+/data/data/com.termux/files/home/Braxon/config/nsq/benchmark_gate.json:13:    "offline_package_db",
+/data/data/com.termux/files/home/Braxon/config/nsq/benchmark_gate.json:14:    "local_mirror_inventory",
+/data/data/com.termux/files/home/Braxon/config/nsq/benchmark_gate.json:15:    "offline_install_build_test_proof"
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:1:id: nsq.flag.coverage.lib.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:5:role: flag_coverage_contract
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:8:  - capture_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:10:  - normalize_native_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:11:  - assign_projection_spellings
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/libraries/flag_coverage.lb:13:  - build_cached_resolution_plans
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:3:triple spine.prime -> owns -> dialect_intake :layer 1 :plane 1 :anchor 100 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:4:triple spine.prime -> owns -> canonical_lowering :layer 1 :plane 1 :anchor 110 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:5:triple spine.prime -> owns -> prime_ir :layer 1 :plane 1 :anchor 120 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:6:triple spine.prime -> owns -> substrate_dispatch :layer 1 :plane 1 :anchor 130 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:7:triple spine.prime -> owns -> proof_replay :layer 1 :plane 1 :anchor 140 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:9:triple dialect.canonical -> enters -> spine.prime :layer 1 :plane 1 :anchor 200 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:10:triple dialect.sexpr -> enters -> spine.prime :layer 1 :plane 1 :anchor 210 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:11:triple dialect.lua_shape -> enters -> spine.prime :layer 1 :plane 1 :anchor 220 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:12:triple dialect.python_shape -> enters -> spine.prime :layer 1 :plane 1 :anchor 230 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:13:triple dialect.rust_hook -> enters -> spine.prime :layer 1 :plane 1 :anchor 240 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:15:triple spine.prime -> emits -> prime.node :layer 1 :plane 1 :anchor 300 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:16:triple spine.prime -> emits -> prime.edge :layer 1 :plane 1 :anchor 310 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:17:triple spine.prime -> emits -> prime.state :layer 1 :plane 1 :anchor 320 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:18:triple spine.prime -> emits -> prime.dispatch :layer 1 :plane 1 :anchor 330 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:20:triple runtime.rust -> becomes -> substrate.rust :layer 1 :plane 1 :anchor 400 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:21:triple runtime.shell -> becomes -> substrate.shell :layer 1 :plane 1 :anchor 410 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:22:triple runtime.local -> becomes -> substrate.local :layer 1 :plane 1 :anchor 420 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:24:triple substrate.rust -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 500 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:25:triple substrate.shell -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 510 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/spine/prime_spine.nsq:26:triple substrate.local -> receives -> prime.dispatch :layer 1 :plane 1 :anchor 520 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:3:triple repo.Braxon -> includes -> lib.nsq_source :layer 1 :plane 1 :anchor 1400 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:4:triple repo.Braxon -> includes -> lib.nsq_compile :layer 1 :plane 1 :anchor 1410 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:5:triple repo.Braxon -> includes -> lib.nsq_inspect :layer 1 :plane 1 :anchor 1420 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:6:triple repo.Braxon -> includes -> lib.nsq_pack :layer 1 :plane 1 :anchor 1430 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:7:triple repo.Braxon -> includes -> lib.nsq_compose :layer 1 :plane 1 :anchor 1440 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:8:triple repo.Braxon -> includes -> lib.nsq_prime :layer 1 :plane 1 :anchor 1450 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:9:triple repo.Braxon -> includes -> nsq.hook_matrix :layer 1 :plane 1 :anchor 1460 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:10:triple repo.Braxon -> includes -> nsq.dialect_matrix :layer 1 :plane 1 :anchor 1470 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/repos/active_repo_set.nsq:11:triple repo.Braxon -> includes -> nsq.install_lane :layer 1 :plane 1 :anchor 1480 :weight 90 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_prime_lib.nsq:3:triple lib.nsq_prime -> verifies -> nsq_source_present :layer 1 :plane 1 :anchor 1300 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_prime_lib.nsq:4:triple lib.nsq_prime -> verifies -> nsq_compile_present :layer 1 :plane 1 :anchor 1310 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_prime_lib.nsq:5:triple lib.nsq_prime -> verifies -> nsq_pack_present :layer 1 :plane 1 :anchor 1320 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_prime_lib.nsq:6:triple lib.nsq_prime -> verifies -> nsq_inspect_present :layer 1 :plane 1 :anchor 1330 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_prime_lib.nsq:7:triple lib.nsq_prime -> emits -> prime_report :layer 1 :plane 1 :anchor 1340 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:1:id: nsq.flag.coverage.pipeline.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:5:role: flag_coverage_pipeline
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:8:  - capture_foreign_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:10:  - normalize_into_native_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:11:  - assign_flag_family
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:12:  - assign_projection_spellings
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:14:  - build_cached_resolution_plans
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:18:  - admit_flag_coverage
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:21:  capture_foreign_flags:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:23:      - per_language_flag_inventory
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:24:      - per_toolchain_flag_inventory
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:25:      - per_platform_flag_inventory
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:29:      - semantic_flag_classes
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:33:  normalize_into_native_flags:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:35:      - native_flag_registry
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:39:  assign_flag_family:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:44:      - platform_target_family
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:50:  assign_projection_spellings:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:52:      - rust_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:53:      - python_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:54:      - c_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:55:      - sql_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:56:      - android_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:57:      - render_projection_flags
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:61:      - build_flag_stamps
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:62:      - package_flag_stamps
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:63:      - runtime_flag_stamps
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:64:      - platform_flag_stamps
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:65:      - render_flag_stamps
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:67:  build_cached_resolution_plans:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:71:      - target_materialization_plans
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:77:      - mirror_cache_bindings
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:82:      - projection_seed_tables
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:87:      - projection_roundtrip_proof
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:88:      - cached_plan_reuse_proof
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/workflows/10_flag_coverage_pipeline.wf:91:  admit_flag_coverage:
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_inspect_lib.nsq:3:triple lib.nsq_inspect -> consumes -> nsqb_artifact :layer 1 :plane 1 :anchor 1000 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_inspect_lib.nsq:4:triple lib.nsq_inspect -> emits -> decoded_surface :layer 1 :plane 1 :anchor 1010 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_inspect_lib.nsq:5:triple lib.nsq_inspect -> emits -> parity_view :layer 1 :plane 1 :anchor 1020 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_inspect_lib.nsq:6:triple lib.nsq_inspect -> verifies -> magic_header :layer 1 :plane 1 :anchor 1030 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:3:triple capsule.dev -> emits -> installer.shell :layer 1 :plane 1 :anchor 600 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:4:triple installer.shell -> targets -> local.workspace :layer 1 :plane 1 :anchor 610 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:5:triple installer.shell -> ensures -> env.contract :layer 1 :plane 1 :anchor 620 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:6:triple installer.shell -> ensures -> command.surface :layer 1 :plane 1 :anchor 630 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:7:triple installer.shell -> ensures -> hook.matrix :layer 1 :plane 1 :anchor 640 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:8:triple installer.shell -> ensures -> dialect.matrix :layer 1 :plane 1 :anchor 650 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:9:triple installer.shell -> ensures -> proof.runner :layer 1 :plane 1 :anchor 660 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:10:triple installer.shell -> ensures -> container.lane :layer 1 :plane 1 :anchor 670 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:11:triple installer.shell -> uses -> bootstrap.host_substrate :layer 1 :plane 1 :anchor 680 :weight 70 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/install/install_capsule.nsq:12:triple installer.shell -> is_not -> canonical_truth_surface :layer 1 :plane 1 :anchor 690 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:3:triple dialect.canonical -> lowers_to -> canonical :layer 1 :plane 1 :anchor 400 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:4:triple dialect.sexpr -> lowers_to -> canonical :layer 1 :plane 1 :anchor 410 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:5:triple dialect.lua_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 420 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:6:triple dialect.python_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 430 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:7:triple dialect.python3_shape -> lowers_to -> canonical :layer 1 :plane 1 :anchor 435 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:9:triple dialect.canonical -> requires -> internal_only :layer 1 :plane 1 :anchor 440 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:10:triple dialect.sexpr -> requires -> internal_only :layer 1 :plane 1 :anchor 450 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:11:triple dialect.lua_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 460 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:12:triple dialect.python_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 470 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:13:triple dialect.python3_shape -> requires -> internal_only :layer 1 :plane 1 :anchor 475 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:15:triple dialect.sexpr -> forbids -> scheme_runtime_requirement :layer 1 :plane 1 :anchor 480 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:16:triple dialect.lua_shape -> forbids -> lua_runtime_requirement :layer 1 :plane 1 :anchor 490 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:17:triple dialect.python_shape -> forbids -> python_runtime_requirement :layer 1 :plane 1 :anchor 500 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/dialects.nsq:18:triple dialect.python3_shape -> forbids -> python3_runtime_requirement :layer 1 :plane 1 :anchor 505 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:3:triple lib.nsq_compile -> consumes -> canonical_projection :layer 1 :plane 1 :anchor 900 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:4:triple lib.nsq_compile -> consumes -> calibration_lock :layer 1 :plane 1 :anchor 910 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:5:triple lib.nsq_compile -> emits -> nsqb_artifact :layer 1 :plane 1 :anchor 920 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:6:triple lib.nsq_compile -> emits -> compile_manifest :layer 1 :plane 1 :anchor 930 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:7:triple lib.nsq_compile -> records -> source_dialect :layer 1 :plane 1 :anchor 940 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compile_lib.nsq:8:triple lib.nsq_compile -> records -> spine_lines :layer 1 :plane 1 :anchor 950 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_pack_lib.nsq:3:triple lib.nsq_pack -> consumes -> nsqb_artifact :layer 1 :plane 1 :anchor 1100 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_pack_lib.nsq:4:triple lib.nsq_pack -> consumes -> compile_manifest :layer 1 :plane 1 :anchor 1110 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_pack_lib.nsq:5:triple lib.nsq_pack -> consumes -> inspect_report :layer 1 :plane 1 :anchor 1120 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_pack_lib.nsq:6:triple lib.nsq_pack -> emits -> pack_manifest :layer 1 :plane 1 :anchor 1130 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_pack_lib.nsq:7:triple lib.nsq_pack -> emits -> sealed_pack :layer 1 :plane 1 :anchor 1140 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compose_lib.nsq:3:triple lib.nsq_compose -> consumes -> repo_surface_inputs :layer 1 :plane 1 :anchor 1200 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compose_lib.nsq:4:triple lib.nsq_compose -> emits -> composed_repo_surface :layer 1 :plane 1 :anchor 1210 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_compose_lib.nsq:5:triple lib.nsq_compose -> emits -> nsq_dev_bundle :layer 1 :plane 1 :anchor 1220 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:1:id: nsq.flag.coverage.standard.v1
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:5:role: flag_coverage_standard
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:8:  NSQ must support every meaningful flag surface another language, toolchain, runtime,
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:12:  foreign flag spelling is projection only
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:13:  native flag meaning is sovereign
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:14:  repeated flag patterns should collapse into stamps and cached execution plans
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:17:  - No foreign flag meaning may remain inaccessible just because its original syntax differs.
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:18:  - Flat string-flag authority is forbidden.
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:19:  - Every flag must map to native semantic classes.
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:22:  - Repeated flag bundles should become stamps.
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:23:  - Package and platform flag resolution should be cacheable and replayable.
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:25:required_flag_families:
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:32:  - platform_target_abi
+/data/data/com.termux/files/home/Braxon/nsq/flag_coverage/manifests/00_flag_coverage_standard.mf:38:  - projection_translation_export
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:3:triple hook.compile -> requires -> calibration_lock :layer 1 :plane 1 :anchor 100 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:4:triple hook.compile -> requires -> compile_manifest :layer 1 :plane 1 :anchor 110 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:5:triple hook.compile -> requires -> court_mode :layer 1 :plane 1 :anchor 120 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:6:triple hook.compile -> requires -> source_dialect_detect :layer 1 :plane 1 :anchor 130 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:7:triple hook.compile -> requires -> internal_family_lowering :layer 1 :plane 1 :anchor 140 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:8:triple hook.compile -> requires -> canonical_projection :layer 1 :plane 1 :anchor 150 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:9:triple hook.compile -> requires -> python3_shape_lowering :layer 1 :plane 1 :anchor 160 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:11:triple hook.inspect -> requires -> decoded_surface :layer 1 :plane 1 :anchor 200 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:12:triple hook.inspect -> requires -> parity_view :layer 1 :plane 1 :anchor 210 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:13:triple hook.inspect -> requires -> source_dialect_view :layer 1 :plane 1 :anchor 220 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:14:triple hook.inspect -> requires -> lowered_projection_view :layer 1 :plane 1 :anchor 230 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:16:triple hook.proof -> requires -> density_score :layer 1 :plane 1 :anchor 300 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:17:triple hook.proof -> requires -> parity_score :layer 1 :plane 1 :anchor 310 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:18:triple hook.proof -> requires -> replay_sha256 :layer 1 :plane 1 :anchor 320 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/hooks/hook_matrix.nsq:19:triple hook.proof -> requires -> cross_dialect_identity :layer 1 :plane 1 :anchor 330 :weight 50 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:3:triple lib.nsq_source -> owns -> dialect_detection :layer 1 :plane 1 :anchor 800 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:4:triple lib.nsq_source -> owns -> sexpr_lowering :layer 1 :plane 1 :anchor 810 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:5:triple lib.nsq_source -> owns -> lua_shape_lowering :layer 1 :plane 1 :anchor 820 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:6:triple lib.nsq_source -> owns -> python_shape_lowering :layer 1 :plane 1 :anchor 830 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:7:triple lib.nsq_source -> outputs -> canonical_projection :layer 1 :plane 1 :anchor 840 :weight 80 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/libs/nsq_source_lib.nsq:8:triple lib.nsq_source -> forbids -> foreign_runtime_requirement :layer 1 :plane 1 :anchor 850 :weight 100 :flags 1
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:5://! higher lane/family registries are projections and operational summaries only.
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:140:            surface: "offline_model_native_runtime_lane",
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:141:            runtime_authority: "rust_native_offline_model_lane",
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:151:    pub offline_only: bool,
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:260:                surface: "offline_model_native_runtime_lane",
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:262:                runtime_model: "rust_native_offline_inference_lane",
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:404:            return Err("offline model lane requires a model id".into());
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:407:            return Err(format!("unsupported offline model asset '{model_id}'"));
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:411:            return Err("offline model lane requires a non-empty prompt".into());
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:448:            offline_only: true,
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:458:                "offline_request_bound(model={model_id}, prompt_chars={})",
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:639:    fn offline_model_lane_binds_supported_assets_without_cpp_authority() {
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:643:        assert_eq!(report.lane, "offline_model_native_runtime_lane");
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:645:        assert!(report.offline_only);
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:646:        assert_eq!(report.runtime_authority, "rust_native_offline_model_lane");
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:654:    fn runtime_registry_contains_offline_model_lane() {
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:656:        let lane = registry.lane("offline_model_native_runtime_lane").unwrap();
+/data/data/com.termux/files/home/Braxon/crates/nsq-runtime/src/lib.rs:657:        assert_eq!(lane.runtime_model, "rust_native_offline_inference_lane");
+/data/data/com.termux/files/home/Braxon/crates/nsq-native-bench/src/main.rs:111:        s == ".git" || s == "target" || s == "node_modules" || s == ".cargo"
+/data/data/com.termux/files/home/Braxon/crates/nsq-decode/src/main.rs:3://! It decodes derived artifacts and readable projections from local NSQ-owned
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:33:    hot_targets: Vec<String>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:84:        flags: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:249:            let mut flags = String::new();
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:258:                    ":flags" => flags = toks[i + 1].to_string(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:272:                flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:354:            let mut flags = String::new();
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:363:                    "flags" => flags = toks[i + 1].clone(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:377:                flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-preserve/src/main.rs:458:                flags: kv.get("flags").cloned().unwrap_or_default(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-cli/src/main.rs:23:    Fetch { target: String },
+/data/data/com.termux/files/home/Braxon/crates/nsq-cli/src/main.rs:38:        Command::Fetch { target } => cmd_fetch(&target),
+/data/data/com.termux/files/home/Braxon/crates/nsq-cli/src/main.rs:95:fn cmd_fetch(target: &str) {
+/data/data/com.termux/files/home/Braxon/crates/nsq-cli/src/main.rs:97:    println!("target: {}", target);
+/data/data/com.termux/files/home/Braxon/crates/nsq-cli/src/main.rs:146:    println!("type: status | parse <text> | eval <text> | select <text> | ingest <path> | fetch <target> | wake | doctor | quit");
+/data/data/com.termux/files/home/Braxon/crates/nsq-bench-split/src/main.rs:22://!   Honest answer to: "what does the system feel like after first-build warm cache?"
+/data/data/com.termux/files/home/Braxon/crates/nsq-bench-split/src/main.rs:28:use nsq_query::{edges_left, find_rel, find_symbol, neighbors, states_target};
+/data/data/com.termux/files/home/Braxon/crates/nsq-bench-split/src/main.rs:96:                if let Some(n) = arg.strip_prefix("target=") {
+/data/data/com.termux/files/home/Braxon/crates/nsq-bench-split/src/main.rs:97:                    let _ = states_target(idx, n);
+/data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/nsq/inventories/self_rebuild_todo.mf:16:  - local_mirror_inventory
+/data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/nsq/inventories/self_rebuild_todo.mf:18:  - offline_build_proof
+/data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/nsq/inventories/self_rebuild_todo.mf:19:  - offline_test_proof
+/data/data/com.termux/files/home/Braxon/nsq/language_capture_tree/nsq/inventories/self_rebuild_todo.mf:21:  - platform_projection_rules
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:2:triple gate.benchmark -> requires -> lane.nsq_source :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:3:triple gate.benchmark -> requires -> lane.nsq_ir :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:4:triple gate.benchmark -> requires -> lane.nsq_pack :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:5:triple gate.benchmark -> requires -> lane.nsq_decode :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:6:triple gate.benchmark -> requires -> lane.nsq_query :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:7:triple gate.benchmark -> requires -> lane.nsq_inspect :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:8:triple gate.benchmark -> requires -> lane.nsq_proof :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:9:triple gate.benchmark -> requires -> proof.noise :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:10:triple gate.benchmark -> requires -> proof.structured :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/nsq/proof/native_self_rebuild_gate.nsq:11:triple gate.benchmark -> requires -> proof.membrane :layer 1 :plane 1 :anchor 1126 :weight 1 :flags 1
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:5:pub const OFFLINE_MODEL_REGISTRY_RELATIVE_PATH: &str = "state/braxon/offline_model_registry.json";
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:16:    pub offline_only: bool,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:33:            lane_surface: "offline_model_native_runtime_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:34:            runtime_authority: "rust_native_offline_model_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:43:                    authority_lane: "offline_model_native_runtime_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:44:                    runtime_authority: "rust_native_offline_model_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:45:                    offline_only: true,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:56:                    authority_lane: "offline_model_native_runtime_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:57:                    runtime_authority: "rust_native_offline_model_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:58:                    offline_only: true,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:72:pub fn offline_model_registry_path(root: &Path) -> PathBuf {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:76:pub fn load_or_initialize_offline_model_registry(
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:79:    let path = offline_model_registry_path(root);
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:83:                "failed to read offline model registry '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:89:                "failed to parse offline model registry '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:95:        save_offline_model_registry(root, &registry)?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:100:pub fn save_offline_model_registry(
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:104:    let path = offline_model_registry_path(root);
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:108:                "failed to create offline model registry directory '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:115:        .map_err(|err| format!("failed to serialize offline model registry: {err}"))?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:118:            "failed to write offline model registry '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:129:    fn default_registry_keeps_offline_only_assets() {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_models.rs:132:        assert!(registry.assets.iter().all(|asset| asset.offline_only));
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:5:pub const OFFLINE_AGENT_STATE_RELATIVE_PATH: &str = "state/braxon/offline_agent_state.json";
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:45:            Self::PrepareOfflineModelLane => "prepare_offline_model_lane",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:89:            mission: "BRAXON_offline_first".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:90:            charter: "boot offline, work the local task list, verify each step, then expand native runtime and model lanes under Braxon".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:94:                    id: "BRAXON_offline_agent_boot".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:96:                    title: "Braxon offline agent boot".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:97:                    detail: "The root launch path must boot Braxon as an actual offline agent surface.".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:121:                    id: "nsq_native_offline_model_lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:123:                    title: "NSQ-native offline model lane".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:124:                    detail: "Create an explicit offline inference/runtime lane under Braxon and NSQ without C++ authority.".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:133:                    detail: "Register Qwen-32B-Code as an offline runtime asset under the native Braxon path.".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:142:                    detail: "Register MythoMax as an offline runtime asset under the native Braxon path.".to_string(),
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:195:            .ok_or_else(|| format!("unknown offline task '{id}'"))?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:210:            .ok_or_else(|| format!("unknown offline task '{id}'"))?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:230:            .ok_or_else(|| format!("unknown offline task '{id}'"))?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:241:pub fn offline_agent_state_path(root: &Path) -> PathBuf {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:245:pub fn load_or_initialize_offline_agent_state(root: &Path) -> Result<OfflineAgentState, String> {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:246:    let path = offline_agent_state_path(root);
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:250:                "failed to read offline agent state '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:256:                "failed to parse offline agent state '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:262:        save_offline_agent_state(root, &state)?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:267:pub fn save_offline_agent_state(root: &Path, state: &OfflineAgentState) -> Result<(), String> {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:268:    let path = offline_agent_state_path(root);
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:272:                "failed to create offline agent state directory '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:279:        .map_err(|err| format!("failed to serialize offline agent state: {err}"))?;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:282:            "failed to write offline agent state '{}': {err}",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:295:        assert_eq!(state.tasks[0].id, "BRAXON_offline_agent_boot");
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:304:            .mark_status("BRAXON_offline_agent_boot", OfflineTaskStatus::Done)
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:317:                "BRAXON_offline_agent_boot",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:318:                "offline_agent",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/offline_agent.rs:322:        let task = state.task("BRAXON_offline_agent_boot").unwrap();
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:1:mod offline_agent;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:2:mod offline_models;
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:4:pub use offline_agent::{
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:5:    load_or_initialize_offline_agent_state, offline_agent_state_path, save_offline_agent_state,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:8:pub use offline_models::{
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:9:    load_or_initialize_offline_model_registry, offline_model_registry_path,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:10:    save_offline_model_registry, OfflineModelAssetRecord, OfflineModelRegistryState,
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:290:pub fn target_workspace_map() -> &'static [WorkspacePlacement] {
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:414:        recode_path: "add guile-specific ingress and projection rules in language-master surfaces",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:438:        recode_path: "add c++ projection and runtime interface bindings at boundary surfaces",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:446:        recode_path: "introduce csharp ingress/projection descriptors in stack surface registry and hooks",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:478:        recode_path: "add perl ingress and projection map in language-master and boundary configs",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:494:        recode_path: "add css document grammar intake to nsq-source with boundary-safe projection",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:686:        recode_path: "add sqlite query/project surface in nsq-query with canonical projection rules",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:726:        recode_path: "place wgpu lane for native graphics runtime projection under root stack",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:815:        scope: "root_entrance_and_target_map",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:936:            label: "target_map",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:956:            label: "offline_agent_state",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:958:                .join(offline_agent::OFFLINE_AGENT_STATE_RELATIVE_PATH)
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:962:            label: "offline_model_registry",
+/data/data/com.termux/files/home/Braxon/crates/Braxon-core/src/lib.rs:964:                .join(offline_models::OFFLINE_MODEL_REGISTRY_RELATIVE_PATH)
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:44:    pub flags: u8,
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:49:    pub target: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:319:            if let Some(v) = kv.get("flags") {
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:320:                out.push(":flags".into());
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:362:            let mut target = "release".to_string();
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:369:                    "target" | ":target" => target = toks[i + 1].clone(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:377:                "triple rust.crate.{} -> invokes -> rust.cmd.{} :layer 1 :plane 1 :anchor 900 :weight 50 :flags 1\nmembrane rust.target.{} :state sealed :flux 1 :gate 1 :phase 1",
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:378:                crate_name, command, target
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:384:                "triple rust.cargo -> invokes -> rust.cmd.{} :layer 1 :plane 1 :anchor 910 :weight 50 :flags 1",
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:394:                "triple rust.crate.{} -> family -> rust_substrate :layer 1 :plane 1 :anchor 920 :weight 50 :flags 1",
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:496:                let mut flags = 0u8;
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:505:                        ":flags" => flags = parse_u8_lossy(toks[i + 1]),
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:519:                    flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:530:                    edge.flags
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:538:                let target = toks[1].to_string();
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:539:                nodes.entry(target.clone()).or_insert(PrimeNode {
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:541:                    name: target.clone(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:562:                    target,
+/data/data/com.termux/files/home/Braxon/crates/nsq-source/src/lib.rs:570:                    st.target, st.state, st.flux, st.gate, st.phase
+/data/data/com.termux/files/home/Braxon/crates/nsq-profile/src/main.rs:62:                "{}/.cargo/target-cache/Braxon",
+/data/data/com.termux/files/home/Braxon/crates/nsq-pressure-bench/src/main.rs:270:        let flags = (rng.next_u64() & 0xff) as u8;
+/data/data/com.termux/files/home/Braxon/crates/nsq-pressure-bench/src/main.rs:278:        w.write_all(&[flags])?;
+/data/data/com.termux/files/home/Braxon/crates/nsq-pressure-bench/src/main.rs:379:                let flags = data[off];
+/data/data/com.termux/files/home/Braxon/crates/nsq-pressure-bench/src/main.rs:401:                    "triple subject={} relation={} object={} layer={} plane={} anchor={} weight={} flags={}",
+/data/data/com.termux/files/home/Braxon/crates/nsq-pressure-bench/src/main.rs:402:                    s, r, o, layer, plane, anchor, weight, flags
+/data/data/com.termux/files/home/Braxon/crates/nsq-compose/src/main.rs:11:        "triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0"
+/data/data/com.termux/files/home/Braxon/crates/nsq-compose/src/main.rs:13:        "triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0"
+/data/data/com.termux/files/home/Braxon/crates/nsq-compose/src/main.rs:15:        "triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0"
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/main.rs:19:    edges_left, edges_rel, edges_right, find_rel, find_symbol, neighbors, states_target,
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/main.rs:85:                if let Some(name) = arg.strip_prefix("target=") {
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/main.rs:86:                    return states_target(idx, name);
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/lib.rs:84:pub fn states_target(idx: &ArtifactIndex, name: &str) -> QueryResult {
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/lib.rs:86:        .target_to_states
+/data/data/com.termux/files/home/Braxon/crates/nsq-query/src/lib.rs:93:        command: format!("states target={}", name),
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:16:    targets: BTreeMap<String, usize>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:18:    target_family_counts: BTreeMap<String, usize>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:28:    anchor_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:29:    gain_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:30:    window_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:43:    target: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:84:    target_family_clusters: Vec<FamilyCluster>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:100:fn boundary_projection_for(n: usize, lane: &str) -> String {
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:108:    format!("{carrier}-{lane}-projection")
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:111:fn boundary_delta_projection_for(n: usize, lane: &str) -> String {
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:119:    format!("{carrier}-{lane}-delta-projection")
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:161:                    bump(&mut stats.targets, sym);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:162:                    bump(&mut stats.target_family_counts, &family_of(sym));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:185:                    bump(&mut stats.targets, subject);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:186:                    bump(&mut stats.target_family_counts, &family_of(subject));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:195:                    bump(&mut stats.targets, object);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:196:                    bump(&mut stats.target_family_counts, &family_of(object));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:212:                    bump(&mut stats.targets, cell);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:213:                    bump(&mut stats.target_family_counts, &family_of(cell));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:219:                        bump(&mut stats.targets, toks[i + 1]);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:220:                        bump(&mut stats.target_family_counts, &family_of(toks[i + 1]));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:227:                if let Some(target) = toks.get(1) {
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:228:                    stats.symbols.insert((*target).to_string());
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:229:                    bump(&mut stats.targets, target);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:230:                    bump(&mut stats.target_family_counts, &family_of(target));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:231:                    bump(&mut stats.relation_family_counts, &family_of(target));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:238:                            bump(&mut stats.targets, toks[i + 1]);
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:239:                            bump(&mut stats.target_family_counts, &family_of(toks[i + 1]));
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:287:    for (target, count) in &stats.targets {
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:290:                target: target.clone(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:308:    let mut target_family_clusters = stats
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:309:        .target_family_counts
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:316:    target_family_clusters
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:346:    let high_reuse_targets = expansion_suggestions.len() as i64;
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:357:        + 2 * high_reuse_targets
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:362:        + 2 * high_reuse_targets
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:392:            anchor_boundary_projection: boundary_delta_projection_for(stats.max_anchor, "anchor"),
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:393:            gain_boundary_projection: boundary_projection_for(stats.max_gain, "gain"),
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:394:            window_boundary_projection: boundary_projection_for(stats.max_window, "window"),
+/data/data/com.termux/files/home/Braxon/crates/nsq-optimize/src/main.rs:399:        target_family_clusters,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:30:    anchor_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:31:    gain_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:32:    window_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:45:    target: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:64:    hot_targets: Vec<String>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:75:    anchor_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:76:    gain_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:77:    window_boundary_projection: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:107:    let hot_targets = rep
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:110:        .map(|e| e.target)
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:130:        hot_targets,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:136:            anchor_boundary_projection: rep.range_inference.anchor_boundary_projection,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:137:            gain_boundary_projection: rep.range_inference.gain_boundary_projection,
+/data/data/com.termux/files/home/Braxon/crates/nsq-calibrate/src/main.rs:138:            window_boundary_projection: rep.range_inference.window_boundary_projection,
+/data/data/com.termux/files/home/Braxon/crates/nsq-real-bench/src/main.rs:80:fn build_packed(derived_transport_bytes: &[u8], readable_projection_text: &str) -> PackedNsq {
+/data/data/com.termux/files/home/Braxon/crates/nsq-real-bench/src/main.rs:81:    let toks = tokenize(readable_projection_text);
+/data/data/com.termux/files/home/Braxon/crates/nsq-real-bench/src/main.rs:111:        lines: line_count(readable_projection_text),
+/data/data/com.termux/files/home/Braxon/crates/nsq-lint/src/main.rs:160:                let mut saw_flags = false;
+/data/data/com.termux/files/home/Braxon/crates/nsq-lint/src/main.rs:205:                        ":flags" => {
+/data/data/com.termux/files/home/Braxon/crates/nsq-lint/src/main.rs:206:                            saw_flags = true;
+/data/data/com.termux/files/home/Braxon/crates/nsq-lint/src/main.rs:211:                                    message: "triple :flags invalid".into(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-lint/src/main.rs:225:                    (saw_flags, "triple missing :flags"),
+/data/data/com.termux/files/home/Braxon/crates/nsq-generate/src/main.rs:117:        let flags = ((i + cluster) % 8) as u8;
+/data/data/com.termux/files/home/Braxon/crates/nsq-generate/src/main.rs:120:            "triple {s1} -> {rel} -> {s2} :layer {layer} :plane {plane} :anchor {anchor} :weight {weight} :flags {flags}\n"
+/data/data/com.termux/files/home/Braxon/crates/nsq-generate/src/main.rs:141:                "triple {s2} -> {rel} -> {s3} :layer {} :plane {} :anchor {} :weight {} :flags {}\n",
+/data/data/com.termux/files/home/Braxon/crates/nsq-generate/src/main.rs:146:                (flags + 1) % 8
+/data/data/com.termux/files/home/Braxon/crates/Braxon-kingdom-generate/src/main.rs:426:                "target_identity".into(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:20://!                                           u8 layer, u8 plane, u32 anchor, u16 weight, u8 flags
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:21://!            state table:  for each state:  u16 target_id, u16 state_sym_id, u16 flux, u8 gate, u8 phase
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:47:    pub flags: u8,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:52:    pub target: String,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:82:    pub target_to_states: HashMap<String, Vec<u32>>,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:156:                let (mut layer, mut plane, mut anchor, mut weight, mut flags) =
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:165:                        ":flags" => flags = parse_u8_lossy(toks[i + 1]),
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:178:                    flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:182:                    e.left, e.rel, e.right, e.layer, e.plane, e.anchor, e.weight, e.flags
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:190:                let target = toks[1].to_string();
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:191:                symbols.insert(target.clone());
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:206:                    target,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:214:                    st.target, st.state, st.flux, st.gate, st.phase
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:237:            &a.left, &a.rel, &a.right, a.layer, a.plane, a.anchor, a.weight, a.flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:240:                &b.left, &b.rel, &b.right, b.layer, b.plane, b.anchor, b.weight, b.flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:244:        (&a.target, &a.state, a.flux, a.gate, a.phase)
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:245:            .cmp(&(&b.target, &b.state, b.flux, b.gate, b.phase))
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:258:    let mut target_to_states = HashMap::<String, Vec<u32>>::new();
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:271:        target_to_states
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:272:            .entry(s.target.clone())
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:284:        target_to_states,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:324://                               layer[1] + plane[1] + anchor[4] + weight[2] + flags[1]) = 15 bytes
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:325://   state table:  state_count × (target_id[2] + state_sym_id[2] + flux[2] + gate[1] + phase[1]) = 8 bytes
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:397:        buf.push(e.flags);
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:402:        let target_id = idx
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:404:            .get(&s.target)
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:412:        put_transport_u16(&mut buf, target_id);
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:516:        let flags = {
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:529:            flags,
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:536:        let target_id = get_transport_u16(&mut cur).map_err(|e| e.to_string())? as usize;
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:550:            target: id_to_symbol.get(target_id).cloned().unwrap_or_default(),
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:595:    let mut target_to_states = HashMap::<String, Vec<u32>>::new();
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:607:        target_to_states
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:608:            .entry(s.target.clone())
+/data/data/com.termux/files/home/Braxon/crates/nsq-index/src/lib.rs:620:        target_to_states,

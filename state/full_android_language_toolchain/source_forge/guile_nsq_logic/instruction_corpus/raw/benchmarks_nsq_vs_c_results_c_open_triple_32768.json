@@ -1,0 +1,1 @@
+{\n  "system": "c",\n  "family": "triple",\n  "scale": 32768,\n  "parse_ms": 0.000,\n  "build_ms": 0.404,\n  "decode_ms": 1.309,\n  "artifact_bytes": 524288,\n  "decoded_bytes": 524288,\n  "decoded_records": 32768,\n  "replay_hash": "274744bfd691fe29",\n  "deterministic_repeat_match": true,\n  "semantic_coverage": 0.3333333333,\n  "failure_mode": null\n}\n

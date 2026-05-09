@@ -1,0 +1,7 @@
+== Braxon terminal provenance reseat ==
+stamp=20260508_172033
+root=/data/data/com.termux/files/home/Braxon
+
+== run verifier ==
+== verify Braxon terminal provenance ==
+root=/data/data/com.termux/files/home/Braxon

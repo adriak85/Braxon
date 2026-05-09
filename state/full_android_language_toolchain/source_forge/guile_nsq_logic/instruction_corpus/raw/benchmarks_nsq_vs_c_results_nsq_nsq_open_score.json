@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "rows": [
+    {
+      "system": "nsq",
+      "family": "noise_large",
+      "scale": "mixed_scales",
+      "parse_ms": null,
+      "build_ms": 2109.7269614983816,
+      "decode_ms": null,
+      "artifact_bytes": 200010.0,
+      "decoded_bytes": 1060369.5,
+      "decoded_records": 15360.0,
+      "replay_hash": null,
+      "deterministic_repeat_match": false,
+      "semantic_coverage": 1.0,
+      "failure_mode": "partial_null_outputs:2",
+      "successes": 10,
+      "failures": 2
+    },
+    {
+      "system": "nsq",
+      "family": "structured_large",
+      "scale": "mixed_scales",
+      "parse_ms": null,
+      "build_ms": 2344.173230987508,
+      "decode_ms": null,
+      "artifact_bytes": 393579,
+      "decoded_bytes": 2807052,
+      "decoded_records": 24576,
+      "replay_hash": null,
+      "deterministic_repeat_match": false,
+      "semantic_coverage": 1.0,
+      "failure_mode": "partial_null_outputs:1",
+      "successes": 11,
+      "failures": 1
+    },
+    {
+      "system": "nsq",
+      "family": "membrane_large",
+      "scale": "mixed_scales",
+      "parse_ms": null,
+      "build_ms": 1875.2806920092553,
+      "decode_ms": null,
+      "artifact_bytes": 101575,
+      "decoded_bytes": 663572,
+      "decoded_records": 11264,
+      "replay_hash": null,
+      "deterministic_repeat_match": false,
+      "semantic_coverage": 1.0,
+      "failure_mode": "partial_null_outputs:3",
+      "successes": 9,
+      "failures": 3
+    }
+  ]
+}

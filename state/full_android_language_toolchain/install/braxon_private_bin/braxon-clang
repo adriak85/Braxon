@@ -1,0 +1,9 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+OVERLAY="${BRAXON_ANDROID_OVERLAY:?BRAXON_ANDROID_OVERLAY not set}"
+
+exec clang \
+  -isystem "$OVERLAY/include" \
+  -L"$OVERLAY/lib" \
+  "$@"

@@ -1,0 +1,400 @@
+{
+  "flattened": false,
+  "hook_module_count_o8": "14",
+  "hook_modules": {
+    "arrest": {
+      "hook_count_o8": "2",
+      "hooks": [
+        "review_authority",
+        "release_path"
+      ]
+    },
+    "calibrate": {
+      "hook_count_o8": "3",
+      "hooks": [
+        "selected_profile",
+        "archon_mode",
+        "rebalance_priority_zone"
+      ]
+    },
+    "compile": {
+      "hook_count_o8": "52",
+      "hooks": [
+        "calibration_lock",
+        "compile_manifest",
+        "court_mode",
+        "source_dialect",
+        "spine_lines",
+        "internal_only_lowering",
+        "source_dialect_detect",
+        "internal_family_lowering",
+        "sexpr_family",
+        "lua_shape_family",
+        "python_shape_family",
+        "canonical_projection",
+        "rust_native_ingress_family",
+        "rust_substrate_dispatch",
+        "prime_representation",
+        "prime_dispatch_surface",
+        "runtime_spine_alignment",
+        "prime_install_dispatch",
+        "prime_repo_export_dispatch",
+        "prime_pack_dispatch",
+        "prime_container_dispatch",
+        "normalization_pass",
+        "comment_strip_canonical",
+        "bench_profile_matrix",
+        "scale_corpus_generation",
+        "hard_bench_results",
+        "hardened_index_surface",
+        "hardened_query_surface",
+        "hardened_profile_surface",
+        "deterministic_normalization",
+        "public_neutral_task_contract",
+        "interned_symbol_ids",
+        "integer_adjacency_tables",
+        "anchor_binary_search_windows",
+        "structured_phase_counters",
+        "compact_index_surface",
+        "neutral_public_task_contract",
+        "hashmap_hot_lookup",
+        "binary_anchor_search",
+        "compact_index_serialization",
+        "membrane_dense_bench",
+        "query_hotpath_optimization"
+      ]
+    },
+    "hound_dispatch": {
+      "hook_count_o8": "3",
+      "hooks": [
+        "call_phrase",
+        "class",
+        "target_kind"
+      ]
+    },
+    "inspect": {
+      "hook_count_o8": "30",
+      "hooks": [
+        "decoded_surface",
+        "parity_view",
+        "source_dialect_view",
+        "spine_projection_view",
+        "rust_dispatch_view",
+        "prime_node_view",
+        "prime_edge_view",
+        "prime_state_view",
+        "prime_dispatch_view",
+        "prime_ops_view",
+        "normalized_prime_view",
+        "bench_curve_view",
+        "artifact_growth_view",
+        "hardened_index_view",
+        "query_result_view",
+        "phase_profile_view",
+        "debug_trace_view",
+        "phase_counter_view",
+        "anchor_window_view",
+        "query_path_view",
+        "index_density_view",
+        "index_size_delta_view",
+        "anchor_bounds_view",
+        "membrane_density_view"
+      ]
+    },
+    "linter": {
+      "hook_count_o8": "3",
+      "hooks": [
+        "macro_heads_up",
+        "continuity_warning",
+        "court_notice"
+      ]
+    },
+    "optimize": {
+      "hook_count_o8": "3",
+      "hooks": [
+        "pressure_model",
+        "relation_family_cluster",
+        "inline_macro_site"
+      ]
+    },
+    "picker": {
+      "hook_count_o8": "3",
+      "hooks": [
+        "court_mode",
+        "archon_pressure",
+        "continuity_bias"
+      ]
+    },
+    "proclaim": {
+      "hook_count_o8": "1",
+      "hooks": [
+        "state_publication"
+      ]
+    },
+    "proof": {
+      "hook_count_o8": "26",
+      "hooks": [
+        "density_score",
+        "parity_score",
+        "replay_sha256",
+        "cross_dialect_identity",
+        "rust_native_ingress_parity",
+        "prime_spine_parity",
+        "prime_dispatch_parity",
+        "prime_ops_parity",
+        "prime_ops_replay",
+        "repeated_run_parity",
+        "symbol_growth_parity",
+        "native_bytes_curve",
+        "stable_sort_parity",
+        "artifact_index_parity",
+        "public_task_isolation",
+        "stable_integer_interning_parity",
+        "anchor_window_parity",
+        "query_repeatability_parity",
+        "index_serialization_parity",
+        "stable_runtime_to_serialized_parity",
+        "compact_vs_pretty_index_parity",
+        "binary_anchor_query_parity"
+      ]
+    },
+    "seize": {
+      "hook_count_o8": "4",
+      "hooks": [
+        "target_identity",
+        "cause",
+        "custodian",
+        "ticket_id"
+      ]
+    },
+    "source": {
+      "hook_count_o8": "5",
+      "hooks": [
+        "dialect_detect",
+        "sexpr_lower",
+        "lua_shape_lower",
+        "python_shape_lower",
+        "internal_only_lowering"
+      ]
+    }
+  },
+  "hook_total_o8": "163",
+  "hound_authority_matrix": [
+    {
+      "authority_count_o8": "0",
+      "authority_domain": [],
+      "hound_index_o8": "0"
+    },
+    {
+      "authority_count_o8": "0",
+      "authority_domain": [],
+      "hound_index_o8": "1"
+    },
+    {
+      "authority_count_o8": "0",
+      "authority_domain": [],
+      "hound_index_o8": "2"
+    },
+    {
+      "authority_count_o8": "0",
+      "authority_domain": [],
+      "hound_index_o8": "3"
+    },
+    {
+      "authority_count_o8": "0",
+      "authority_domain": [],
+      "hound_index_o8": "4"
+    }
+  ],
+  "hound_authority_total_o8": "0",
+  "hound_count_o8": "5",
+  "seat_alias_matrix": [
+    {
+      "alias_count_o8": "2",
+      "aliases": [
+        "compositor",
+        "composer"
+      ],
+      "seat_index_o8": "0"
+    },
+    {
+      "alias_count_o8": "3",
+      "aliases": [
+        "queen",
+        "linter",
+        "linter"
+      ],
+      "seat_index_o8": "1"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "bard"
+      ],
+      "seat_index_o8": "2"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "jack"
+      ],
+      "seat_index_o8": "3"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "ace"
+      ],
+      "seat_index_o8": "4"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "keeper"
+      ],
+      "seat_index_o8": "5"
+    },
+    {
+      "alias_count_o8": "2",
+      "aliases": [
+        "archon_gates",
+        "archon gates"
+      ],
+      "seat_index_o8": "6"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "guard"
+      ],
+      "seat_index_o8": "7"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "ticketmaster"
+      ],
+      "seat_index_o8": "10"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "manager"
+      ],
+      "seat_index_o8": "11"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "director"
+      ],
+      "seat_index_o8": "12"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "detective"
+      ],
+      "seat_index_o8": "13"
+    },
+    {
+      "alias_count_o8": "2",
+      "aliases": [
+        "keymaster",
+        "key master"
+      ],
+      "seat_index_o8": "14"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "locksmith"
+      ],
+      "seat_index_o8": "15"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "healer"
+      ],
+      "seat_index_o8": "16"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "tank"
+      ],
+      "seat_index_o8": "17"
+    },
+    {
+      "alias_count_o8": "2",
+      "aliases": [
+        "arcmage",
+        "archmage"
+      ],
+      "seat_index_o8": "20"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "conjurer"
+      ],
+      "seat_index_o8": "21"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "rook"
+      ],
+      "seat_index_o8": "22"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "knight"
+      ],
+      "seat_index_o8": "23"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "bishop"
+      ],
+      "seat_index_o8": "24"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "crier"
+      ],
+      "seat_index_o8": "25"
+    },
+    {
+      "alias_count_o8": "4",
+      "aliases": [
+        "sees_all",
+        "sees all",
+        "SEES ALL",
+        "Sees All"
+      ],
+      "seat_index_o8": "26"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "seer"
+      ],
+      "seat_index_o8": "27"
+    },
+    {
+      "alias_count_o8": "1",
+      "aliases": [
+        "oracle"
+      ],
+      "seat_index_o8": "30"
+    }
+  ],
+  "seat_alias_total_o8": "42",
+  "seat_count_o8": "31",
+  "surface_family": "canonical_base8_kingdom_metrics"
+}

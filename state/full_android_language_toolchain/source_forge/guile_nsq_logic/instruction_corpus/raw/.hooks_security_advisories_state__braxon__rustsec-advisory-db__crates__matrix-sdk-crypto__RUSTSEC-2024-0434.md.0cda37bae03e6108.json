@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__matrix-sdk-crypto__RUSTSEC-2024-0434.md.0cda37bae03e6108.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.116051+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__matrix-sdk-crypto__RUSTSEC-2024-0434.md.0cda37bae03e6108.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/matrix-sdk-crypto/RUSTSEC-2024-0434.md",
+  "source_bytes": 841,
+  "source_sha256": "0cda37bae03e6108812e12c7d86b51066b7b51a3a3e88af2636b702b840cbb76",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__matrix-sdk-crypto__RUSTSEC-2024-0434.md.0cda37bae03e6108"
+}

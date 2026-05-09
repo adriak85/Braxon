@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__portaudio__RUSTSEC-2016-0003.md.1f1bfc5acf2cb866.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.654309+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__portaudio__RUSTSEC-2016-0003.md.1f1bfc5acf2cb866.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/portaudio/RUSTSEC-2016-0003.md",
+  "source_bytes": 556,
+  "source_sha256": "1f1bfc5acf2cb86602ca595e808da3e87c0a18d2235cf1b56d467edd96d37cae",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__portaudio__RUSTSEC-2016-0003.md.1f1bfc5acf2cb866"
+}

@@ -1,0 +1,1 @@
+{\n  "system": "c",\n  "family": "membrane",\n  "scale": 8192,\n  "parse_ms": 0.000,\n  "build_ms": 0.126,\n  "decode_ms": 0.400,\n  "artifact_bytes": 131072,\n  "decoded_bytes": 131072,\n  "decoded_records": 8192,\n  "replay_hash": "eaa0514809933a77",\n  "deterministic_repeat_match": true,\n  "semantic_coverage": 0.3333333333,\n  "failure_mode": null\n}\n

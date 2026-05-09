@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "document": "population_density_tables",
+  "date": "2026-03-26",
+  "total_survivor_population": 5000,
+  "note": "Named characters with full records exist in batch files 01-11 and the initial population pass. This document provides the census-level population accounting: named-minor characters (name + role only), and unnamed population by role-class. Together with the zone map and full character records, this completes the 5,000-person survivor civilization layer.",
+  "heartland_density": {
+    "zone_id": "zone::heartland",
+    "total": 2200,
+    "fully_recorded": 34,
+    "named_minor_characters": [
+      {
+        "name": "Vel'Thane Elda",
+        "role": "Resonance archive assistant — daytime",
+        "zone_notes": "Calevyn's daytime counterpart"
+      },
+      {
+        "name": "Vel'Thane Moran",
+        "role": "Resonance healing-center intake coordinator",
+        "zone_notes": "Feritha's administrative support"
+      },
+      {
+        "name": "Vel'Thane Resh",
+        "role": "Resonance library keeper — older archive wing",
+        "zone_notes": "Adjacent to Restricted Section"
+      },
+      {
+        "name": "Vel'Thane Ceth's spouse Andeth",
+        "role": "Meridian support staff — ceremony logistics",
+        "zone_notes": "Manages physical ceremony setup for Ceth"
+      },
+      {
+        "name": "Marso'len Iven",
+        "role": "Meridian junior healer",
+        "zone_notes": "Sorra's second rotation practitioner"
+      },
+      {
+        "name": "Marso'len Rael",
+        "role": "Meridian grief-ceremony assistant",
+        "zone_notes": "Caevyn's immediate peer; co-ceremony with Ceth"
+      },
+      {
+        "name": "On'Rylder Brev",
+        "role": "Iron Accord administrative recorder — Accord Hall",
+        "zone_notes": "Keth's records keeper"
+      },
+      {
+        "name": "On'Rylder Teth",
+        "role": "Iron Accord junior field operative",
+        "zone_notes": "Reval's immediate subordinate in Heartland context"
+      },
+      {
+        "name": "On'Rylder Lev",
+        "role": "Iron Accord youth cohort — third tier",
+        "zone_notes": "Selwyn's peer; part of the cohort Selwyn is managing"
+      },
+      {
+        "name": "On'Rylder Cael",
+        "role": "Iron Accord youth cohort — Kyrel's settlement peer",
+        "zone_notes": "In the Heartland during Kyrel's deployment there"
+      },
+      {
+        "name": "Gap resident Thoren",
+        "role": "Unaffiliated — skilled laborer, cross-faction",
+        "zone_notes": "Theven's most reliable resource in the Gap Districts"
+      },
+      {
+        "name": "Gap resident Vael",
+        "role": "Unaffiliated — food vendor",
+        "zone_notes": "Cross-faction commerce, Gap Districts"
+      },
+      {
+        "name": "Gap resident Sareth",
+        "role": "Unaffiliated — child caretaker, informal",
+        "zone_notes": "Lyren's Gap Districts classroom support"
+      },
+      {
+        "name": "Gap resident Breth",
+        "role": "Unaffiliated — message carrier independent",
+        "zone_notes": "Not in Verath On'Rylder's formal relay; informal only"
+      },
+      {
+        "name": "Ash'Koral Heartland liaison Deln",
+        "role": "Ash-Born minimal Heartland presence — supply agreement representative",
+        "zone_notes": "Toreth's counterpart in the Heartland"
+      },
+      {
+        "name": "Severed liaison Avel",
+        "role": "Severed Heartland presence — Caera's contact point",
+        "zone_notes": "Not named previously; the Severed's Heartland anchor"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "resonance_archive_workers": {
+        "count": 45,
+        "description": "Cataloguers, copiers, material handlers for the archive function"
+      },
+      "resonance_healing_practitioners": {
+        "count": 60,
+        "description": "Healers at various skill levels under Feritha and Sorra's direction"
+      },
+      "resonance_knowledge_researchers": {
+        "count": 35,
+        "description": "Working alongside Davan, Loreth, Ithren in research function"
+      },
+      "meridian_practitioners": {
+        "count": 55,
+        "description": "Healers and ethicists under Sorra's ethical framework"
+      },
+      "meridian_ceremony_support": {
+        "count": 20,
+        "description": "Ceth's ceremony support network"
+      },
+      "iron_accord_field_present": {
+        "count": 180,
+        "description": "Field operatives rotating through Heartland from Ironmarsh and other zones"
+      },
+      "iron_accord_administrative": {
+        "count": 120,
+        "description": "Accord Hall staff, logistics support for Pethran"
+      },
+      "iron_accord_youth_cohort_rotation": {
+        "count": 80,
+        "description": "Youth cohort members cycling through Heartland assignments"
+      },
+      "unaffiliated_general_labor": {
+        "count": 150,
+        "description": "Gap Districts residents doing various forms of cross-faction work"
+      },
+      "unaffiliated_independent_traders": {
+        "count": 60,
+        "description": "Cross-faction commerce in Gap Districts"
+      },
+      "unaffiliated_families_settled": {
+        "count": 130,
+        "description": "Families without faction affiliation using Gap Districts infrastructure"
+      },
+      "ash_born_minimal_presence": {
+        "count": 80,
+        "description": "Ash-Born with supply-agreement or liaison functions in Heartland"
+      },
+      "severed_scattered": {
+        "count": 60,
+        "description": "Severed individuals without formal Heartland settlement"
+      },
+      "children_all_affiliations": {
+        "count": 200,
+        "description": "Across all faction presences; concentrated in Soleth and Lyren classrooms"
+      },
+      "elders_all_affiliations": {
+        "count": 160,
+        "description": "Various elder presences; many in Neutral Quarter care"
+      },
+      "itinerant_visitors_average": {
+        "count": 30,
+        "description": "At any given time: Unbound visitors, zone-transit travelers"
+      }
+    }
+  },
+  "ashfields_density": {
+    "zone_id": "zone::ashfields",
+    "total": 1500,
+    "fully_recorded": 15,
+    "named_minor_characters": [
+      {
+        "name": "Ash'Koral Seva",
+        "role": "Forge Plateau — water and sanitation infrastructure",
+        "zone_notes": "Essential infrastructure no one acknowledges"
+      },
+      {
+        "name": "Ash'Koral Renn",
+        "role": "Ash-Born training coordinator — youth cohort physical",
+        "zone_notes": "Dravan and Kaeven's direct trainer"
+      },
+      {
+        "name": "Ash'Koral Deln",
+        "role": "Ash-Born perimeter watch — eastern line",
+        "zone_notes": "Kyrveth's counterpart on the eastern facing"
+      },
+      {
+        "name": "Ash'Koral Vel",
+        "role": "Ash-Born cultural gathering host",
+        "zone_notes": "Provides Ysolde her regular storytelling venue"
+      },
+      {
+        "name": "Ash'Koral Bren",
+        "role": "Ash-Born construction supervisor",
+        "zone_notes": "Built most of the Forge Plateau physical infrastructure; works with Parn cross-faction"
+      },
+      {
+        "name": "Ash'Koral Naven",
+        "role": "Ash-Born food distribution coordinator",
+        "zone_notes": "Manages internal Ash-Born food allocation from Renath's cross-faction agreements"
+      },
+      {
+        "name": "Ash'Koral Caern",
+        "role": "Ash-Born youth cohort — fourth generation peer",
+        "zone_notes": "Sael and Dravan's cohort, third notable member"
+      },
+      {
+        "name": "Ash'Koral Vel'thane-adjacent Thorn",
+        "role": "Ash-Born specialist — resonance-adjacent function",
+        "zone_notes": "Aleth's informal contact in the physical facility — knows Aleth's cross-faction connections"
+      },
+      {
+        "name": "Iron Accord liaison Meth",
+        "role": "Iron Accord supply-agreement representative on-site",
+        "zone_notes": "Pethran's Ashfields representative; interface with Toreth"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "ash_born_command_and_operations": {
+        "count": 120,
+        "description": "Under Halveth, Corveth, Selkara hierarchy"
+      },
+      "ash_born_watch_and_perimeter": {
+        "count": 200,
+        "description": "Perimeter watch across all watch lines; Leven's Thornridge contingent draws from this pool"
+      },
+      "ash_born_physical_labor_and_construction": {
+        "count": 180,
+        "description": "Settlement building and maintenance; Beln's workshop draws most technically skilled here"
+      },
+      "ash_born_food_production_internal": {
+        "count": 100,
+        "description": "Ashfield-zone agriculture — not as productive as the basin but supplemental"
+      },
+      "ash_born_cultural_community": {
+        "count": 200,
+        "description": "The social fabric; Ysolde and Neth's audience; Ivera's network; Careth's clients"
+      },
+      "ash_born_medical_function": {
+        "count": 40,
+        "description": "Under Maeren and Veth; small relative to population size — historically underfunded"
+      },
+      "ash_born_youth_under_training": {
+        "count": 200,
+        "description": "Dravan, Kaeven, Sael's cohort plus the younger cohort"
+      },
+      "ash_born_elders_and_advisory": {
+        "count": 80,
+        "description": "Neth, Thera, and unnamed elder generation"
+      },
+      "ash_born_resource_management": {
+        "count": 60,
+        "description": "Toreth's domain"
+      },
+      "iron_accord_supply_presence": {
+        "count": 80,
+        "description": "Personnel maintaining supply agreements; rotating through"
+      },
+      "unaffiliated_labor": {
+        "count": 60,
+        "description": "Reth and Parn model; working in Ashfields without affiliation"
+      },
+      "children": {
+        "count": 180,
+        "description": "No formal cross-faction classroom; Ysolde provides some educational function"
+      }
+    }
+  },
+  "still_water_basin_density": {
+    "zone_id": "zone::still_water_basin",
+    "total": 600,
+    "fully_recorded": 2,
+    "named_minor_characters": [
+      {
+        "name": "Basin resident Deven",
+        "role": "Agricultural labor — crop specialist",
+        "zone_notes": "Under Elven; specializes in flood-tolerant varieties she developed"
+      },
+      {
+        "name": "Basin resident Aerna",
+        "role": "Agricultural labor — irrigation maintenance",
+        "zone_notes": "Pelven's most trusted infrastructure person"
+      },
+      {
+        "name": "Basin resident Thev",
+        "role": "Cross-faction labor coordinator",
+        "zone_notes": "Manages the cross-faction workforce under Pelven's direction"
+      },
+      {
+        "name": "Resonance outpost Caeln's assistant Vel",
+        "role": "Outpost junior keeper",
+        "zone_notes": "Caeln's sole assistant; will take over the outpost eventually"
+      },
+      {
+        "name": "Meridian station Sora",
+        "role": "Basin healing station keeper",
+        "zone_notes": "Not Sorra — distinct character; the Meridian's basin medical presence"
+      },
+      {
+        "name": "Iron Accord liaison Reth",
+        "role": "Iron Accord basin administrative",
+        "zone_notes": "Pethran's basin representative; interface with Pelven"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "iron_accord_agricultural_supervisory": {
+        "count": 50,
+        "description": "Pelven's management tier"
+      },
+      "cross_faction_agricultural_labor": {
+        "count": 200,
+        "description": "The mixed-faction workforce that makes the basin cooperative"
+      },
+      "resonance_outpost_staff": {
+        "count": 20,
+        "description": "Caeln's small operation"
+      },
+      "meridian_station_staff": {
+        "count": 15,
+        "description": "Healing station"
+      },
+      "unaffiliated_basin_residents": {
+        "count": 100,
+        "description": "Primarily agricultural workers without faction affiliation"
+      },
+      "children_of_basin_workers": {
+        "count": 40,
+        "description": "No formal education in basin zone; children cycle to Heartland classrooms"
+      },
+      "elders": {
+        "count": 25,
+        "description": "Various; the basin's population skews younger due to agricultural work requirements"
+      }
+    }
+  },
+  "ironmarsh_density": {
+    "zone_id": "zone::ironmarsh",
+    "total": 400,
+    "fully_recorded": 4,
+    "named_minor_characters": [
+      {
+        "name": "On'Rylder Thal",
+        "role": "Navigation trainee — marsh routes",
+        "zone_notes": "Morn's primary trainee besides Cevyn"
+      },
+      {
+        "name": "On'Rylder Beven",
+        "role": "Firm Ground construction",
+        "zone_notes": "Built the elevated settlement structures; still maintains them"
+      },
+      {
+        "name": "On'Rylder Ren",
+        "role": "Ironmarsh elder — collapse memory",
+        "zone_notes": "Bael's peer; different angle on the pre-collapse marsh"
+      },
+      {
+        "name": "Iron Accord marsh community leader Drav",
+        "role": "Settlement community anchor",
+        "zone_notes": "Manages the non-tactical day-to-day of the Firm Ground settlement"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "iron_accord_navigators_and_guides": {
+        "count": 50,
+        "description": "Morn's navigation network; the tactical advantage of the Iron Accord"
+      },
+      "iron_accord_settled_families": {
+        "count": 180,
+        "description": "The settled Iron Accord population in the marsh; Kyrel and Aenwyn's origin community"
+      },
+      "iron_accord_construction_and_maintenance": {
+        "count": 50,
+        "description": "Maintaining the elevated settlement infrastructure"
+      },
+      "iron_accord_youth": {
+        "count": 80,
+        "description": "Cevyn's generation; marsh-born first generation"
+      },
+      "unaffiliated_marsh_residents": {
+        "count": 40,
+        "description": "Workers and residents without faction affiliation"
+      }
+    }
+  },
+  "thornridge_density": {
+    "zone_id": "zone::thornridge",
+    "total": 150,
+    "fully_recorded": 5,
+    "named_minor_characters": [
+      {
+        "name": "Ash-Born watch operative Ceth",
+        "role": "Watch station operator — Leven's detail",
+        "zone_notes": "Different from Ceth Marso'len; distinct character — same name, different lineage"
+      },
+      {
+        "name": "Severed operative Thorn (ridge)",
+        "role": "Severed intelligence gathering",
+        "zone_notes": "Lorne's immediate operational support"
+      },
+      {
+        "name": "Severed administrative Vel",
+        "role": "Severed ridge base staff",
+        "zone_notes": "Reva's direct support"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "ash_born_watch_personnel": {
+        "count": 70,
+        "description": "Leven's watch station command; rotating personnel from Ashfields"
+      },
+      "severed_operatives": {
+        "count": 40,
+        "description": "Verath's ridge operation personnel"
+      },
+      "unbound_transit_population": {
+        "count": 15,
+        "description": "Transient Unbound presence at any given time"
+      },
+      "unaffiliated_transient": {
+        "count": 25,
+        "description": "Zone-crossing travelers"
+      }
+    }
+  },
+  "deepwood_remnant_density": {
+    "zone_id": "zone::deepwood_remnant",
+    "total": 50,
+    "fully_recorded": 2,
+    "named_minor_characters": [
+      {
+        "name": "Deepwood resident Cael",
+        "role": "Long-term forest dweller — pre-collapse hermit who stayed",
+        "zone_notes": "Was there before the collapse; remains; knows the forest's pre-collapse state"
+      },
+      {
+        "name": "Deepwood resident Veth",
+        "role": "Unaffiliated forest resident — collapse-era arrival",
+        "zone_notes": "Arrived during collapse; never left; resource-gatherer for Unbound visitors"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "unbound_rest_population": {
+        "count": 25,
+        "description": "Drevyn's nomadic group and others using the Remnant as rest point"
+      },
+      "long_term_forest_residents": {
+        "count": 12,
+        "description": "Seren's category — people who chose the forest as primary residence"
+      },
+      "transient_visitors": {
+        "count": 13,
+        "description": "Various; average at any given time"
+      }
+    }
+  },
+  "outer_territories_density": {
+    "zone_id": "zone::outer_territories",
+    "total": 70,
+    "fully_recorded": 3,
+    "named_minor_characters": [
+      {
+        "name": "Outer group member Sael",
+        "role": "Meven's group — food gathering specialist",
+        "zone_notes": "Distinct from Sael Ash'Koral; outer territories survivor"
+      },
+      {
+        "name": "Outer group member Reth",
+        "role": "Meven's group — shelter construction",
+        "zone_notes": "Distinct from Reth Ash'Koral; outer territories survivor"
+      },
+      {
+        "name": "Unbound outer group Vel",
+        "role": "Arath's far-range Unbound group member",
+        "zone_notes": "Deep-range nomadic; rarely contacts settlements"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "unbound_deep_range_groups": {
+        "count": 35,
+        "description": "Arath's far-range Unbound; multiple small groups"
+      },
+      "isolated_survivor_groups": {
+        "count": 25,
+        "description": "Meven's group and similar collapse-era separated survivors"
+      },
+      "extreme_unaffiliated_outliers": {
+        "count": 10,
+        "description": "People who are surviving alone or in pairs; Brenath's category before he found the Deepwood margin"
+      }
+    }
+  },
+  "saltflat_crossing_density": {
+    "zone_id": "zone::saltflat_crossing",
+    "total": 30,
+    "fully_recorded": 0,
+    "named_minor_characters": [
+      {
+        "name": "Waypoint keeper Thael-appointed Bel",
+        "role": "Unbound waypoint maintenance",
+        "zone_notes": "Maintains the Saltflat Waypoint as Thael's designated caretaker between his circuits"
+      },
+      {
+        "name": "Transit traveler occasional Morn",
+        "role": "Ironmarsh navigator — extended route",
+        "zone_notes": "Morn's extended navigation circuit occasionally reaches the Saltflat"
+      }
+    ],
+    "unnamed_population_by_role": {
+      "unbound_waypoint_transient": {
+        "count": 20,
+        "description": "Unbound groups using the waypoint"
+      },
+      "zone_transit_travelers": {
+        "count": 10,
+        "description": "Various factions crossing between zones"
+      }
+    }
+  },
+  "population_summary": {
+    "total_accounted": 5000,
+    "fully_recorded_characters": 95,
+    "named_minor_characters": 60,
+    "unnamed_population_by_role_total": 4845,
+    "zone_breakdown": {
+      "heartland": 2200,
+      "ashfields": 1500,
+      "still_water_basin": 600,
+      "ironmarsh": 400,
+      "thornridge": 150,
+      "deepwood_remnant": 50,
+      "outer_territories": 70,
+      "saltflat_crossing": 30
+    },
+    "faction_breakdown": {
+      "The Ash-Born": 1400,
+      "The Iron Accord": 900,
+      "The Resonance": 800,
+      "The Severed": 600,
+      "The Meridian": 400,
+      "The Unbound": 350,
+      "The Veil-Walkers": 150,
+      "Unaffiliated": 400
+    },
+    "veil_walkers_note": "The Veil-Walkers (150 estimated) are not assigned to any zone in the current map because their zone positioning is blocked pending authorial decision on their function (UQ-06). Their population is accounted in the faction breakdown but not in the zone breakdown. The 150 are included in the 5,000 total."
+  }
+}

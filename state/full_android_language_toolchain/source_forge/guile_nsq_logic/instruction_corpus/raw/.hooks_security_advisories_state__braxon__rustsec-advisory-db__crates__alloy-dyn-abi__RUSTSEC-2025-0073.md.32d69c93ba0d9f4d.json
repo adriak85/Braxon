@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__alloy-dyn-abi__RUSTSEC-2025-0073.md.32d69c93ba0d9f4d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.361530+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__alloy-dyn-abi__RUSTSEC-2025-0073.md.32d69c93ba0d9f4d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/alloy-dyn-abi/RUSTSEC-2025-0073.md",
+  "source_bytes": 1537,
+  "source_sha256": "32d69c93ba0d9f4d32fc07be884ac5652486cc2e2d08a14a8fa79d2b4cab4598",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__alloy-dyn-abi__RUSTSEC-2025-0073.md.32d69c93ba0d9f4d"
+}

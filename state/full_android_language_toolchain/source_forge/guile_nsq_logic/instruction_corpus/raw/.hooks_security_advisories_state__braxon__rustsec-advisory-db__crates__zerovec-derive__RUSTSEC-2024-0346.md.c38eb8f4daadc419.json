@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__zerovec-derive__RUSTSEC-2024-0346.md.c38eb8f4daadc419.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:44.063748+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__zerovec-derive__RUSTSEC-2024-0346.md.c38eb8f4daadc419.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/zerovec-derive/RUSTSEC-2024-0346.md",
+  "source_bytes": 691,
+  "source_sha256": "c38eb8f4daadc419241bfecf39672007b0dff81dfe765a7ee93157a426088337",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__zerovec-derive__RUSTSEC-2024-0346.md.c38eb8f4daadc419"
+}

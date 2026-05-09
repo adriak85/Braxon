@@ -1,0 +1,200 @@
+{
+  "assets_ready": true,
+  "can_attempt_launch": true,
+  "evidence": {
+    "binding_file_present": true,
+    "expected_shard_count": 14,
+    "manifest_file_present": true,
+    "offline_registry_status_contains_stamp_bound_manifest_registered_core": true,
+    "present_shard_count": 14,
+    "required_assets": [
+      {
+        "bytes": 4134,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/config.json",
+        "present": true,
+        "sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c"
+      },
+      {
+        "bytes": 244,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/generation_config.json",
+        "present": true,
+        "sha256": "303aba891d66ab63908a7b3cc9163bcb835fdf8b9f6301c73216f3f1eb3992dd"
+      },
+      {
+        "bytes": 7032403,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json",
+        "present": true,
+        "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+      },
+      {
+        "bytes": 10868,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json",
+        "present": true,
+        "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+      },
+      {
+        "bytes": 3353259,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/merges.txt",
+        "present": true,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "bytes": 2776833,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/vocab.json",
+        "present": true,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      {
+        "bytes": 98934,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json",
+        "present": true,
+        "sha256": "6e2d38eb016a3403e6c657b1934e8c05b5ec17c082f90dcf1d48d69809facb9d"
+      },
+      {
+        "bytes": 664,
+        "path": "assets/braxon_core/model_config/config.json",
+        "present": true,
+        "sha256": "2c003fe40b13d2d1f372254d77177ed753176150f3d424d1b5ad22ff1d78a987"
+      },
+      {
+        "bytes": 181,
+        "path": "assets/braxon_core/model_config/generation_config.json",
+        "present": true,
+        "sha256": "72cbec1015da9ed03ad025483005cbf6481403abf947adfd54e504d1a66a2126"
+      },
+      {
+        "bytes": 428841,
+        "path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "present": true,
+        "sha256": "a77141838162faa585517193b68a30267ad5f0724c6e097d704a7d0e16e8769d"
+      },
+      {
+        "bytes": 10230,
+        "path": "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json",
+        "present": true,
+        "sha256": "f622e62498bb57100890eb34c685e9b0a830b0bcaacdfd0c874568975f723772"
+      },
+      {
+        "bytes": 4858,
+        "path": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
+        "present": true,
+        "sha256": "3af05376cc357a21f310821266a1e1fc2f490eeda50d87b198221852ee955b35"
+      },
+      {
+        "bytes": 1972,
+        "path": "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
+        "present": true,
+        "sha256": "b9d6985f63828ca2b14face778f021e0836b2d46b38ad842f818dfa36751d041"
+      },
+      {
+        "bytes": 4136,
+        "path": "state/braxon/offline_model_registry.json",
+        "present": true,
+        "sha256": "0ac6feaae10dfbbbc478ead28199c4d27424d1067b9d508cf405144d00bcab6c"
+      },
+      {
+        "bytes": 3567,
+        "path": "state/braxon/braxon_binding.json",
+        "present": true,
+        "sha256": "4f36f88d2d7899f7dda8cd93203e5953ff52ab2767235db774149f33f2ef04ea"
+      },
+      {
+        "bytes": 3667,
+        "path": "models/braxon/manifest.json",
+        "present": true,
+        "sha256": "1e261986f027da189452b6175bc7000631a462258e2920b2a4ed7f42ece8fa6b"
+      }
+    ],
+    "runtime_route_available_config": true,
+    "safetensors_shards": [
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00001-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00002-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00003-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00004-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00005-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00006-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00007-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00008-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00009-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00010-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00011-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00012-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00013-of-00014.safetensors",
+        "present": true
+      },
+      {
+        "bytes": 135,
+        "path": "assets/braxon_core/source_ingest/braxon_transport/model-00014-of-00014.safetensors",
+        "present": true
+      }
+    ]
+  },
+  "final_active_digest": null,
+  "final_active_digest_present": false,
+  "generated_at": "2026-04-24T14:47:11.318241+00:00",
+  "last_runtime_proof_at": "2026-04-24T14:58:07.972226+00:00",
+  "loaded_binding_proven": false,
+  "missing_for_full_launch": [
+    "runtime_route_proof",
+    "loaded_model_binding_proof",
+    "runtime_hot_live_proof",
+    "final_active_digest"
+  ],
+  "rule": "This gate may mark assets_ready and can_attempt_launch from local files, but must not mark runtime_route_proven, loaded_binding_proven, runtime_hot_live_proven, or final_active_digest_present without live proof.",
+  "runtime_hot_live_proven": false,
+  "runtime_proof_path": "state/braxon/runtime_proofs/20260424_095719/runtime_launch_route_execution_proof.json",
+  "runtime_route_available": true,
+  "runtime_route_proven": true,
+  "schema": "Braxon.model_launch_readiness.v1",
+  "status": "can_attempt_launch_runtime_proof_failed_or_partial"
+}

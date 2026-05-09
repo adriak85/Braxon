@@ -1,0 +1,22 @@
+{
+  "bench_status": "blocked",
+  "release_status": "blocked_until_native_self_rebuild_and_language_rehousing",
+  "required_before_benchmark": [
+    "nsq_source",
+    "nsq_ir",
+    "nsq_pack",
+    "nsq_decode",
+    "nsq_query",
+    "nsq_inspect",
+    "nsq_proof",
+    "native_source_lane_proof",
+    "offline_package_db",
+    "local_mirror_inventory",
+    "offline_install_build_test_proof"
+  ],
+  "notes": [
+    "benching remains blocked until native self-rebuild proof is real",
+    "foreign languages and platforms are internal semantic families, not external authorities",
+    "rust remains boundary carrier / operational dialect only until full self-rebuild closes"
+  ]
+}

@@ -1,0 +1,43 @@
+config.h:636:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:1639:/* Define to 1 if you have the 'qsort_r' function. */
+config.h:1640:/* #undef HAVE_QSORT_R */
+config.h:1693:/* Define to 1 if you have the <selinux/context.h> header file. */
+config.h:1694:/* #undef HAVE_SELINUX_CONTEXT_H */
+config.h:1696:/* Define to 1 if you have the <selinux/flask.h> header file. */
+config.h:1697:/* #undef HAVE_SELINUX_FLASK_H */
+config.h:1699:/* Define to 1 if you have the <selinux/label.h> header file. */
+config.h:1700:/* #undef HAVE_SELINUX_LABEL_H */
+config.h:1702:/* Define to 1 if you have the <selinux/selinux.h> header file. */
+config.h:1703:/* #undef HAVE_SELINUX_SELINUX_H */
+config.h:3416:/* Always use our fgetfilecon wrapper. */
+config.h:3417:/* #undef fgetfilecon */
+config.h:3419:/* Always use our fgetfilecon_raw wrapper. */
+config.h:3420:/* #undef fgetfilecon_raw */
+config.h:3440:/* Always use our getfilecon wrapper. */
+config.h:3441:/* #undef getfilecon */
+config.h:3443:/* Always use our getfilecon_raw wrapper. */
+config.h:3444:/* #undef getfilecon_raw */
+config.h:3474:/* Always use our lgetfilecon wrapper. */
+config.h:3475:/* #undef lgetfilecon */
+config.h:3477:/* Always use our lgetfilecon_raw wrapper. */
+config.h:3478:/* #undef lgetfilecon_raw */
+config.log:7:  $ ./configure --prefix=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/prefix --host=aarch64-linux-android --build=aarch64-linux-android --disable-nls --without-selinux
+config.log:523:configure:7794: checking for selinux/selinux.h
+config.log:1561:configure:10059: checking for qsort_r
+config.log:35862:configure:49771: checking for selinux/flask.h
+config.log:35864:conftest.c:504:10: fatal error: 'selinux/flask.h' file not found
+config.log:35865:  504 | #include <selinux/flask.h>
+config.log:36373:| #include <selinux/flask.h>
+config.log:56911:ac_cv_func_qsort_r='no'
+config.log:57089:ac_cv_header_selinux_context_h='no'
+config.log:57090:ac_cv_header_selinux_flask_h='no'
+config.log:57091:ac_cv_header_selinux_label_h='no'
+config.log:57092:ac_cv_header_selinux_selinux_h='no'
+config.log:57140:ac_cv_lib_selinux_setfilecon='no'
+config.log:57184:ac_cv_search_setfilecon='no'
+config.log:57364:gl_cv_func_qsort_r_signature='none'
+config.log:57365:gl_cv_func_qsort_r_works='no'
+config.log:59033:HAVE_QSORT_R='0'
+config.log:59057:HAVE_SELINUX_SELINUX_H='0'
+config.log:59800:SELINUX_CONTEXT_H='selinux/context.h'
+config.log:59801:SELINUX_LABEL_H='selinux/label.h'

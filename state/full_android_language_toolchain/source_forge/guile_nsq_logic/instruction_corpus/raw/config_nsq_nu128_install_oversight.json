@@ -1,0 +1,22 @@
+{
+  "model_lineage": "llama_4.2_604b_fp32_abliterated_800gb",
+  "canonical_semantics": "base8_switch_topology",
+  "parameter_management": "nu128",
+  "parameter_granule": 128,
+  "target_source_variant_gb": 800,
+  "nsq_storage_target_gb": "2.2",
+  "nsq_hot_memory_target_gb": "1.02",
+  "nsq_hot_residency_surface": "bus",
+  "chunk_order": "one_chunk_at_a_time",
+  "max_chunk_size_gb": 50,
+  "max_live_downloads": 1,
+  "allow_full_weight_presence": false,
+  "require_ingress_recode_before_next_chunk": true,
+  "android_first": true,
+  "whole_model_viable_only_after_nsq": true,
+  "runtime_authority_required": true,
+  "source_authority_lane": "assets/braxon_core/source_ingest/qwen_transport.partial.20260417_115546",
+  "ingest_control_path": "state/braxon/braxon_weight_ingest.control",
+  "ingest_status_path": "state/braxon/braxon_weight_ingest.status",
+  "pipeline_status_path": "state/braxon/braxon_nsq_pipeline.status"
+}

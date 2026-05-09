@@ -1,0 +1,15 @@
+{
+  "surface": "faiss_boundary_registry",
+  "canonical_truth": "nsq_base8_switch_topology",
+  "mode": "boundary_retrieval_only",
+  "indexes": [
+    {
+      "id": "semantic_runtime_memory",
+      "purpose": "vector retrieval for runtime-semantic support without replacing canonical NSQ meaning"
+    }
+  ],
+  "translation_rules": [
+    "faiss results remain boundary carriers until re-entered through explicit court-safe translation",
+    "faiss metadata must preserve provenance and source linkage"
+  ]
+}

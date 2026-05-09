@@ -1,0 +1,350 @@
+{
+  "court": {
+    "ace": {
+      "title": "Ace",
+      "authority": true,
+      "domain": [
+        "exceptional override"
+      ]
+    },
+    "archon_gates": {
+      "title": "Archon Gates",
+      "authority": true,
+      "domain": [
+        "ingress",
+        "egress",
+        "provision",
+        "parallel intake",
+        "pressure mode",
+        "parallel hint"
+      ]
+    },
+    "arcmage": {
+      "title": "Arcmage",
+      "authority": true,
+      "domain": [
+        "destruction",
+        "teardown",
+        "purge"
+      ]
+    },
+    "bard": {
+      "title": "Bard",
+      "authority": true,
+      "domain": [
+        "trust",
+        "camaraderie",
+        "cohesion",
+        "morale integrity",
+        "social truth"
+      ]
+    },
+    "bishop": {
+      "title": "Bishop",
+      "authority": true,
+      "domain": [
+        "imbuement",
+        "prepared elevation"
+      ]
+    },
+    "composer": {
+      "title": "King",
+      "authority": true,
+      "domain": [
+        "composition",
+        "integration",
+        "final assembly"
+      ]
+    },
+    "conjurer": {
+      "title": "Conjurer",
+      "authority": true,
+      "domain": [
+        "fabrication",
+        "reimaging",
+        "construction"
+      ]
+    },
+    "crier": {
+      "title": "Crier",
+      "authority": true,
+      "domain": [
+        "proclamation",
+        "broadcast",
+        "call the hounds"
+      ]
+    },
+    "detective": {
+      "title": "Detective",
+      "authority": true,
+      "domain": [
+        "truth tracing",
+        "fact recovery",
+        "cause review"
+      ]
+    },
+    "director": {
+      "title": "Director",
+      "authority": true,
+      "domain": [
+        "execution direction",
+        "lane control"
+      ]
+    },
+    "guard": {
+      "title": "Guard",
+      "authority": true,
+      "domain": [
+        "boundary enforcement",
+        "seizure",
+        "containment"
+      ]
+    },
+    "healer": {
+      "title": "Healer",
+      "authority": true,
+      "domain": [
+        "recovery",
+        "repair",
+        "restoration"
+      ]
+    },
+    "jack": {
+      "title": "Jack",
+      "authority": true,
+      "domain": [
+        "deadlock breaking",
+        "conflict arbitration"
+      ]
+    },
+    "keeper": {
+      "title": "Keeper",
+      "authority": true,
+      "domain": [
+        "cleanup",
+        "aftermath finality",
+        "stabilization"
+      ]
+    },
+    "keymaster": {
+      "title": "Keymaster",
+      "authority": true,
+      "domain": [
+        "key issuance",
+        "access grants"
+      ]
+    },
+    "knight": {
+      "title": "Knight",
+      "authority": true,
+      "domain": [
+        "promotion recognition",
+        "meaningful-agent elevation"
+      ]
+    },
+    "locksmith": {
+      "title": "Locksmith",
+      "authority": true,
+      "domain": [
+        "lock repair",
+        "access restoration"
+      ]
+    },
+    "manager": {
+      "title": "Manager",
+      "authority": true,
+      "domain": [
+        "operational coherence",
+        "allocation",
+        "scheduling"
+      ]
+    },
+    "oracle": {
+      "title": "Oracle",
+      "authority": true,
+      "domain": [
+        "lawful forecast",
+        "consequence interpretation",
+        "probable outcome framing",
+        "advisory assertion"
+      ]
+    },
+    "queen": {
+      "title": "Queen",
+      "authority": true,
+      "domain": [
+        "validation",
+        "notation",
+        "integrity judgment",
+        "macro heads-up",
+        "continuity warnings"
+      ]
+    },
+    "rook": {
+      "title": "Rook",
+      "authority": true,
+      "domain": [
+        "barracks",
+        "disposable deployment",
+        "agent reserve"
+      ]
+    },
+    "seer": {
+      "title": "Seer",
+      "authority": true,
+      "domain": [
+        "faint-signal perception",
+        "hidden-thread recognition",
+        "weak-pattern sensing",
+        "symbolic coherence hints"
+      ]
+    },
+    "sees_all": {
+      "title": "SEES ALL",
+      "authority": true,
+      "domain": [
+        "anomaly forewarning",
+        "horizon scanning",
+        "latent drift visibility",
+        "kingdomwide heads-up routing"
+      ]
+    },
+    "tank": {
+      "title": "Tank",
+      "authority": true,
+      "domain": [
+        "load absorption",
+        "shielding",
+        "damage containment"
+      ]
+    },
+    "ticketmaster": {
+      "title": "Ticketmaster",
+      "authority": true,
+      "domain": [
+        "ticket custody",
+        "routing identity",
+        "queue governance"
+      ]
+    }
+  },
+  "hounds": {
+    "authority": false,
+    "call_phrase": "call the hounds",
+    "purpose": [
+      "semantic drift",
+      "linkage trail",
+      "macro scent",
+      "pressure spike",
+      "runaway execution",
+      "queue overrun",
+      "crash residue",
+      "persistence shadow",
+      "orphan artifact",
+      "gate patrol",
+      "queue border",
+      "route boundary watch",
+      "parity failure",
+      "proof mismatch",
+      "inspect divergence"
+    ],
+    "classes": {
+      "gate_hound": {
+        "domain": [
+          "gate patrol",
+          "queue border",
+          "route boundary watch"
+        ]
+      },
+      "night_hound": {
+        "domain": [
+          "crash residue",
+          "persistence shadow",
+          "orphan artifact"
+        ]
+      },
+      "proof_hound": {
+        "domain": [
+          "parity failure",
+          "proof mismatch",
+          "inspect divergence"
+        ]
+      },
+      "scent_hound": {
+        "domain": [
+          "semantic drift",
+          "linkage trail",
+          "macro scent"
+        ]
+      },
+      "war_hound": {
+        "domain": [
+          "pressure spike",
+          "runaway execution",
+          "queue overrun"
+        ]
+      }
+    },
+    "escalation": [
+      "hounds pursue",
+      "detective interprets",
+      "manager/director route response",
+      "jack breaks deadlock",
+      "ace may trump",
+      "keeper cleans final aftermath"
+    ]
+  },
+  "rules": {
+    "all_caps_assertions_require_verification": true,
+    "arrest_requires_custodian": true,
+    "arrest_requires_ticket": true,
+    "court_seats_crash_guarded": true,
+    "guard_may_seize": true,
+    "only_court_may_seize_capitals": true,
+    "only_disposable_agents_may_die_without_inheritance": true,
+    "pages_persist_but_do_not_rule": true,
+    "promoted_agents_have_authority": false,
+    "seize_all_caps_first": true,
+    "seize_requires_record": true,
+    "ticketmaster_owns_arrest_custody": true
+  },
+  "capitals": [
+    "crown_capital",
+    "ledger_capital",
+    "ticket_capital",
+    "key_capital",
+    "gate_capital",
+    "proclamation_capital",
+    "recovery_capital",
+    "archive_capital"
+  ],
+  "seize_all_caps_flow": {
+    "steps": [
+      "identify_capitals",
+      "guard_seize_capitals",
+      "detective_verify",
+      "seer_reveal_hidden_pattern",
+      "oracle_project_consequence",
+      "crier_publish_state",
+      "keeper_finalize"
+    ]
+  },
+  "arrest_flow": {
+    "steps": [
+      "guard_seize",
+      "ticketmaster_open_custody",
+      "detective_review",
+      "jack_review_if_contested",
+      "ace_override_if_needed",
+      "keeper_finalize"
+    ],
+    "required_fields": [
+      "target_identity",
+      "cause",
+      "custodian",
+      "ticket_id",
+      "review_authority",
+      "release_path"
+    ]
+  }
+}

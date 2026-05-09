@@ -8,11 +8,11 @@ It uses alternating full binary anchors and multipositional levers.
 Court surfaces must preserve canonical base-8 semantics.
 
 Canonical switch shape:
-[0|1] | [1..1126] | [0|1] | [1..1126] | [0|1] | [1..1126] | [0|1] | [1..1126]
+[0|1] | [1..500000] | [0|1] | [1..500000] | [0|1] | [1..500000] | [0|1] | [1..500000]
 
 Interpretation:
 - each 0|1 position is a full-off / full-on anchor
-- each 1..1126 position is a multipositional lever
+- each 1..500000 position is a multipositional lever
 - lever position is resolved from applied hertz between 0 and 1
 - float-aware averaging is required for accurate positioning
 - full-off and full-on anchors are mandatory for fine-tune reading
@@ -309,4 +309,3 @@ Coverage summaries are not runtime incorporation.
 Primary immediate priority:
 implement real runtime lanes for the highest-priority required surfaces, starting with Python 3 and then continuing through the next highest-priority uncovered or partially covered surfaces.
 <!-- RUNTIME_OVER_REPORTING_BLOCK:END -->
-

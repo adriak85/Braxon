@@ -1,0 +1,54 @@
+=== Braxon root entry review, bounded fast pass ===
+Fri May  8 15:48:05 CDT 2026
+
+### ./--help
+-rw-------. 1 u0_a470 u0_a470 260 May  5 03:46 ./--help
+./--help: ASCII text
+174188f43c8fce704afd1239e17de6eb41cfc6748ca1d988f069462431ca6daa  ./--help
+--- full content, max 240 lines ---
+triple repo.core -> has -> nsq.source :layer 1 :plane 1 :anchor 10 :weight 1 :flags 0
+triple repo.core -> has -> nsq.compile :layer 1 :plane 1 :anchor 20 :weight 1 :flags 0
+triple repo.core -> has -> nsq.inspect :layer 1 :plane 1 :anchor 30 :weight 1 :flags 0
+--- bounded references by basename: --help ---
+./scripts/audit_nsq_commands_current.sh:22:    "$cmd" --help 2>&1 | sed -n '1,24p' || true
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Archive__Extract.translated.nsq:624:NSQ_SOURCE_LINE 00000614 "    ### bunzip2: For help, type: `bunzip2 --help'."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Bash.translated.nsq:812:NSQ_SOURCE_LINE 00000802 "   COMPREPLY=($( compgen -W '--help --verbose --version' -- $cur ) )"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Bash.translated.nsq:816:NSQ_SOURCE_LINE 00000806 " --help  --verbose  --version"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Bash.translated.nsq:829:NSQ_SOURCE_LINE 00000819 " my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Getopt__Long.translated.nsq:164:NSQ_SOURCE_LINE 00000154 "recognize `--help/-?` and `--version`, respectively."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Getopt__Long.translated.nsq:815:NSQ_SOURCE_LINE 00000805 "recognize C<--help/-?> and C<--version>, respectively."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Complete__Tcsh.translated.nsq:150:NSQ_SOURCE_LINE 00000140 " my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Getopt__Long__Util.translated.nsq:154:NSQ_SOURCE_LINE 00000144 "    help|h|?       ->  \"--help, -h, -?\""
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Getopt__Long__Util.translated.nsq:155:NSQ_SOURCE_LINE 00000145 "    help|h|?       ->  \"--help | -h | -?\"               # if you provide 'separator'"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Getopt__Long__Util.translated.nsq:658:NSQ_SOURCE_LINE 00000648 " help|h|?       ->  \"--help, -h, -?\""
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Getopt__Long__Util.translated.nsq:659:NSQ_SOURCE_LINE 00000649 " help|h|?       ->  \"--help | -h | -?\"               # if you provide 'separator'"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/DateTime__TimeZone.translated.nsq:896:NSQ_SOURCE_LINE 00000886 "tests_from_zdump.  Please run them with the --help flag to see what they can be"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Getopt__Long__Complete.translated.nsq:186:NSQ_SOURCE_LINE 00000176 " --force --help --noverbose --no-verbose --on-fail --user --verbose -h"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/nsq_bodies/Mojolicious.translated.nsq:732:NSQ_SOURCE_LINE 00000722 "L<Mojolicious::Commands/\"COMMANDS\">. Note that the options C<-h>/C<--help>, C<--home> and C<-m>/C<--mode>, which are"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Archive__Extract.source:614:    ### bunzip2: For help, type: `bunzip2 --help'.
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Bash.source:802:   COMPREPLY=($( compgen -W '--help --verbose --version' -- $cur ) )
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Bash.source:806: --help  --verbose  --version
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Bash.source:819: my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Getopt__Long.source:154:recognize `--help/-?` and `--version`, respectively.
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Getopt__Long.source:805:recognize C<--help/-?> and C<--version>, respectively.
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Complete__Tcsh.source:140: my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/DateTime__TimeZone.source:886:tests_from_zdump.  Please run them with the --help flag to see what they can be
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Getopt__Long__Complete.source:176: --force --help --noverbose --no-verbose --on-fail --user --verbose -h
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Getopt__Long__Util.source:144:    help|h|?       ->  "--help, -h, -?"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Getopt__Long__Util.source:145:    help|h|?       ->  "--help | -h | -?"               # if you provide 'separator'
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Getopt__Long__Util.source:648: help|h|?       ->  "--help, -h, -?"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Getopt__Long__Util.source:649: help|h|?       ->  "--help | -h | -?"               # if you provide 'separator'
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141348/source_capture/Mojolicious.source:722:L<Mojolicious::Commands/"COMMANDS">. Note that the options C<-h>/C<--help>, C<--home> and C<-m>/C<--mode>, which are
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Archive__Extract.translated.nsq:624:NSQ_SOURCE_LINE 00000614 "    ### bunzip2: For help, type: `bunzip2 --help'."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Bash.translated.nsq:812:NSQ_SOURCE_LINE 00000802 "   COMPREPLY=($( compgen -W '--help --verbose --version' -- $cur ) )"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Bash.translated.nsq:816:NSQ_SOURCE_LINE 00000806 " --help  --verbose  --version"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Bash.translated.nsq:829:NSQ_SOURCE_LINE 00000819 " my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Getopt__Long.translated.nsq:164:NSQ_SOURCE_LINE 00000154 "recognize `--help/-?` and `--version`, respectively."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Getopt__Long.translated.nsq:815:NSQ_SOURCE_LINE 00000805 "recognize C<--help/-?> and C<--version>, respectively."
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Complete__Tcsh.translated.nsq:150:NSQ_SOURCE_LINE 00000140 " my $res = complete_array_elem(array=>[qw/--help --verbose --version/], word=>$words->[$cword]);"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Getopt__Long__Complete.translated.nsq:186:NSQ_SOURCE_LINE 00000176 " --force --help --noverbose --no-verbose --on-fail --user --verbose -h"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Mojolicious.translated.nsq:732:NSQ_SOURCE_LINE 00000722 "L<Mojolicious::Commands/\"COMMANDS\">. Note that the options C<-h>/C<--help>, C<--home> and C<-m>/C<--mode>, which are"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/DateTime__TimeZone.translated.nsq:896:NSQ_SOURCE_LINE 00000886 "tests_from_zdump.  Please run them with the --help flag to see what they can be"
+./packaged/backbone-links/state_backbone/nsq/stamps/foreign_tool_absorption/20260428_141459/nsq_bodies/Getopt__Long__Util.translated.nsq:154:NSQ_SOURCE_LINE 00000144 "    help|h|?       ->  \"--help, -h, -?\""
+scripts/audit_nsq_commands_current.sh:22:    "$cmd" --help 2>&1 | sed -n '1,24p' || true
+--- bounded references by exact path token: ./--help ---

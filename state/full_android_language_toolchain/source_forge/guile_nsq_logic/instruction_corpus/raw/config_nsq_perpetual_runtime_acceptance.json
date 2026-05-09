@@ -1,0 +1,22 @@
+{
+  "schema": "nsq.perpetual_runtime.acceptance.v1",
+  "generated_at": "20260424_194654",
+  "authority": "NSQ_COURT",
+  "architecture_root": true,
+  "king": "compositor",
+  "queen": "linter",
+  "court_is_agents": false,
+  "route": "perpetual_runtime",
+  "route_owner": "NSQ_COURT",
+  "duplicate_task_systems_allowed": false,
+  "c_runner_used": false,
+  "c_reference_runner_storage": false,
+  "required_proofs": {
+    "nsqasm_tick_executed": true,
+    "watchdog_restart_test_passed": true,
+    "crash_resume_test_passed": true,
+    "journal_replay_test_passed": true,
+    "resource_ceiling_enforced": true,
+    "manual_stop_works": true
+  }
+}

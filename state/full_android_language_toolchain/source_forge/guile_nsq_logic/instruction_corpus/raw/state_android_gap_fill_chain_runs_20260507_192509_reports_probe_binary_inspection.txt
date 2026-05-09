@@ -1,0 +1,166 @@
+---- /data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_c ----
+/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_c: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x678
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          4296 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         25
+  Section header string table index: 23
+
+dynamic:
+Dynamic section at offset 0x830 contains 23 entries:
+  Tag                Type         Name/Value
+  0x000000000000001d (RUNPATH)    Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+  0x000000000000001e (FLAGS)      BIND_NOW 
+  0x000000006ffffffb (FLAGS_1)    NOW PIE 
+  0x0000000000000015 (DEBUG)      0x0
+  0x0000000000000007 (RELA)       0x460
+  0x0000000000000008 (RELASZ)     96 (bytes)
+  0x0000000000000009 (RELAENT)    24 (bytes)
+  0x000000006ffffff9 (RELACOUNT)  4
+  0x0000000000000017 (JMPREL)     0x4c0
+  0x0000000000000002 (PLTRELSZ)   96 (bytes)
+  0x0000000000000003 (PLTGOT)     0x49b8
+  0x0000000000000014 (PLTREL)     RELA
+  0x0000000000000006 (SYMTAB)     0x320
+  0x000000000000000b (SYMENT)     24 (bytes)
+  0x0000000000000005 (STRTAB)     0x3e4
+  0x000000000000000a (STRSZ)      123 (bytes)
+  0x000000006ffffef5 (GNU_HASH)   0x3c8
+  0x000000006ffffff0 (VERSYM)     0x398
+  0x000000006ffffffe (VERNEED)    0x3a4
+  0x000000006fffffff (VERNEEDNUM) 1
+  0x0000000000000000 (NULL)       0x0
+
+needed:
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+
+---- /data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_cpp ----
+/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_cpp: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x4930
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          83152 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         27
+  Section header string table index: 25
+
+dynamic:
+Dynamic section at offset 0xb600 contains 25 entries:
+  Tag                Type         Name/Value
+  0x000000000000001d (RUNPATH)    Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]
+  0x0000000000000001 (NEEDED)     Shared library: [libc++_shared.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libm.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+  0x000000000000001e (FLAGS)      BIND_NOW 
+  0x000000006ffffffb (FLAGS_1)    NOW PIE 
+  0x0000000000000015 (DEBUG)      0x0
+  0x0000000000000007 (RELA)       0xde8
+  0x0000000000000008 (RELASZ)     816 (bytes)
+  0x0000000000000009 (RELAENT)    24 (bytes)
+  0x000000006ffffff9 (RELACOUNT)  25
+  0x0000000000000017 (JMPREL)     0x1118
+  0x0000000000000002 (PLTRELSZ)   984 (bytes)
+  0x0000000000000003 (PLTGOT)     0xf7f0
+  0x0000000000000014 (PLTREL)     RELA
+  0x0000000000000006 (SYMTAB)     0x320
+  0x000000000000000b (SYMENT)     24 (bytes)
+  0x0000000000000005 (STRTAB)     0x8ac
+  0x000000000000000a (STRSZ)      1336 (bytes)
+  0x000000006ffffef5 (GNU_HASH)   0x890
+  0x000000006ffffff0 (VERSYM)     0x7e8
+  0x000000006ffffffe (VERNEED)    0x850
+  0x000000006fffffff (VERNEEDNUM) 2
+  0x0000000000000000 (NULL)       0x0
+
+needed:
+  0x0000000000000001 (NEEDED)     Shared library: [libc++_shared.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libm.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+
+---- /data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_rust ----
+/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260507_192509/probe_rust: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, for Android 24, built by NDK r29 (14206865), not stripped
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x14E54
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          525816 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         27
+  Section header string table index: 25
+
+dynamic:
+Dynamic section at offset 0x52288 contains 23 entries:
+  Tag                Type         Name/Value
+  0x000000000000001d (RUNPATH)    Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+  0x000000000000001e (FLAGS)      BIND_NOW 
+  0x000000006ffffffb (FLAGS_1)    NOW PIE 
+  0x0000000000000015 (DEBUG)      0x0
+  0x0000000000000007 (RELA)       0xb50
+  0x0000000000000008 (RELASZ)     9840 (bytes)
+  0x0000000000000009 (RELAENT)    24 (bytes)
+  0x000000006ffffff9 (RELACOUNT)  407
+  0x0000000000000017 (JMPREL)     0x31c0
+  0x0000000000000002 (PLTRELSZ)   1224 (bytes)
+  0x0000000000000003 (PLTGOT)     0x564e0
+  0x0000000000000014 (PLTREL)     RELA
+  0x0000000000000006 (SYMTAB)     0x320
+  0x000000000000000b (SYMENT)     24 (bytes)
+  0x0000000000000005 (STRTAB)     0x8e4
+  0x000000000000000a (STRSZ)      613 (bytes)
+  0x000000006ffffef5 (GNU_HASH)   0x8c8
+  0x000000006ffffff0 (VERSYM)     0x818
+  0x000000006ffffffe (VERNEED)    0x884
+  0x000000006fffffff (VERNEEDNUM) 2
+  0x0000000000000000 (NULL)       0x0
+
+needed:
+  0x0000000000000001 (NEEDED)     Shared library: [libdl.so]
+  0x0000000000000001 (NEEDED)     Shared library: [libc.so]
+

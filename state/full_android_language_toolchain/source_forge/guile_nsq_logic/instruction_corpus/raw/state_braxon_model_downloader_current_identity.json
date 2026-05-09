@@ -1,0 +1,12 @@
+{
+  "architecture_root": true,
+  "authority": "NSQ_COURT",
+  "court_is_agents": false,
+  "king": "compositor",
+  "local_dir": "assets/braxon_core/source_ingest/braxon_transport",
+  "queen": "linter",
+  "repo_id": "huihui-ai/Huihui-Qwen3-VL-32B-Instruct-abliterated",
+  "route": "BRAXON_model_downloader",
+  "schema": "Braxon.model_downloader.identity.v2",
+  "truth": "Downloader is court-owned. Download verification is not NSQ recode and not whole-core runtime readiness."
+}

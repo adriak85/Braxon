@@ -1,0 +1,703 @@
+{
+  "title": "Whispers of Willow and Stone",
+  "book": 1,
+  "book_title": "Death is Rebirth",
+  "target_word_count": 250000,
+  "chapters": 24,
+  "terminus_beat": "BEAT_FINAL_BLOOD_CELLO",
+  "cello_planted_at": "BASE_07_FOREST_BLEEDS",
+  "pov": "Third person limited — Pip unless beat specifies",
+  "tense": "Present tense",
+  "canon_rules": [
+    "Pip is 15 years old. Age cannot drift.",
+    "Daisy-May Majeski never speaks and is never sacrificed.",
+    "Mack communicates through physical sensation only — not language.",
+    "Xethrolund never explains how he knows things.",
+    "Rylos's abuse arc does NOT resolve in Book 1.",
+    "The last sentence of Chapter 24 contains no adjectives.",
+    "Blood Cello chapter max: 2,000 words.",
+    "ip_clean must be true for any character used in generation.",
+    "story_storydata_dump_tar.gz is quarantined — do not read.",
+    "corrected_character_registry.json contains IP pollution — do not use."
+  ],
+  "characters": {
+    "pip": {
+      "canonical_name": "Pip",
+      "true_name": "Indalwin Willowjayce",
+      "species": "Chipmunk",
+      "age": 15,
+      "role": "Protagonist",
+      "biological_father": "mack",
+      "biological_mother": "ursula",
+      "psych_arc": "Isolation → Belonging",
+      "arc_state_book1_open": 0.12,
+      "arc_state_book1_close": 0.8,
+      "arc_state_after_beat_10": 0.45,
+      "arc_state_after_beat_11": 0.65,
+      "ip_clean": true,
+      "locked": true
+    },
+    "mack": {
+      "canonical_name": "Mack",
+      "species": "WillowTree",
+      "role": "Guardian / Father",
+      "true_form": "Planet's hot ice core — crystalline, geological, pre-linguistic",
+      "true_form_revealed_beat": "BASE_12_THE_CORE",
+      "communicates_via": "40Hz resonance, root movement, temperature, geology",
+      "is_the_setting": true,
+      "ip_clean": true,
+      "locked": true
+    },
+    "ursula": {
+      "canonical_name": "Ursula",
+      "species": "Cosmic Deity",
+      "role": "Oracle / Mother",
+      "true_form": "Amethyst geode — hollow cosmos, star-field interior",
+      "true_form_revealed_beat": "BASE_13_GEODE_OPENS",
+      "revelation_trigger": "Pip speaks her true name 'Indalwin Willowjayce' aloud in grief",
+      "communicates_via": "Stone vibration, light-pressure, geothermal resonance",
+      "ip_clean": true,
+      "locked": true
+    },
+    "xethrolund": {
+      "canonical_name": "Xethrolund",
+      "aliases": [
+        "The P.A.P.I.",
+        "The Librarian"
+      ],
+      "species": "Librarian (category unto himself)",
+      "height": "7 feet",
+      "hair": "red",
+      "role": "Mentor",
+      "faction": "The Archive Consortium",
+      "papi_meaning": "Providential Archival and Preservation Intelligence",
+      "rule": "Never explains how he knows things. He simply knows.",
+      "ip_clean": true,
+      "locked": true
+    },
+    "rylos": {
+      "canonical_name": "Rylos",
+      "true_name": "Rylos Vayne Johnson",
+      "species": "Jackrabbit",
+      "role": "Foil",
+      "arc": "Psychological abuse perpetuation — NOT a cartoon villain. Handle with clinical precision.",
+      "arc_resolves_book1": false,
+      "book1_endpoint": "Fracture introduced at Beat 11. He is still on the hill at Blood Cello.",
+      "ip_clean": true,
+      "locked": true
+    },
+    "daisy_may_majiskii": {
+      "canonical_name": "Daisy-May Majeski",
+      "species": "Great Dane",
+      "role": "Anchor",
+      "function": "Pip's first healthy loyal bond",
+      "rules": [
+        "Never speaks",
+        "Never sacrificed",
+        "Never used as plot casualty",
+        "Her presence communicates everything"
+      ],
+      "first_appears": "BASE_05_DAISY_MAY_ARRIVES",
+      "ip_clean": true,
+      "locked": true
+    },
+    "solen_archvist": {
+      "canonical_name": "Solen",
+      "aliases": [
+        "The Quiet One"
+      ],
+      "species": "Human",
+      "age": 22,
+      "role": "Witness",
+      "faction": "The Archive Consortium",
+      "arc": "Invisibility → Being seen by Pip",
+      "function": "Documents Pip's presence in the Archive before Xethrolund does",
+      "ip_clean": true,
+      "locked": false,
+      "pending_canon_review": true
+    },
+    "elder_vasse": {
+      "canonical_name": "Elder Vasse",
+      "aliases": [
+        "The Stone Tender"
+      ],
+      "species": "Tortoise",
+      "age": 140,
+      "role": "Catalyst",
+      "arc": "140 years of unknowing service → one moment of understanding at Beat 13",
+      "function": "Points Pip toward the stone shelf without knowing why. Resolution at Geode Opens.",
+      "ip_clean": true,
+      "locked": false,
+      "pending_canon_review": true
+    }
+  },
+  "beat_spine": [
+    {
+      "index": 1,
+      "id": "BASE_01_FIRST_ROOT",
+      "title": "The First Root",
+      "chapter": 1,
+      "words": [
+        0,
+        4000
+      ],
+      "emotional_key": "Open G — unresolved suspension",
+      "tension": 0.15,
+      "foreground": [
+        "pip",
+        "mack"
+      ],
+      "cello_note": null
+    },
+    {
+      "index": 7,
+      "id": "BASE_02_STONE_WHISPERS",
+      "title": "The Stone Whispers",
+      "chapter": 3,
+      "words": [
+        18000,
+        22000
+      ],
+      "emotional_key": "D minor",
+      "tension": 0.3,
+      "foreground": [
+        "pip",
+        "ursula"
+      ],
+      "note": "Ursula offscreen but FOREGROUND in effect — stone is her voice"
+    },
+    {
+      "index": 13,
+      "id": "BASE_03_WRONG_NAME",
+      "title": "The Wrong Name",
+      "chapter": 5,
+      "words": [
+        35000,
+        39000
+      ],
+      "emotional_key": "B-flat tension",
+      "tension": 0.65,
+      "foreground": [
+        "pip",
+        "rylos"
+      ],
+      "note": "The horror is in what ISN'T said. Rylos is cheerful."
+    },
+    {
+      "index": 19,
+      "id": "BASE_04_PAPI_OPENS",
+      "title": "The P.A.P.I. Opens",
+      "chapter": 7,
+      "words": [
+        52000,
+        57000
+      ],
+      "emotional_key": "F major — unexpected warmth",
+      "tension": 0.4,
+      "foreground": [
+        "pip",
+        "xethrolund"
+      ]
+    },
+    {
+      "index": 23,
+      "id": "BASE_05_DAISY_MAY_ARRIVES",
+      "title": "Daisy-May Arrives",
+      "chapter": 8,
+      "words": [
+        62000,
+        66000
+      ],
+      "emotional_key": "G major — the only uncomplicated thing",
+      "tension": 0.15,
+      "foreground": [
+        "pip",
+        "daisy_may_majiskii"
+      ],
+      "note": "She walks up and sits down. Pip cries. Daisy-May does not make it weird."
+    },
+    {
+      "index": 29,
+      "id": "BASE_06_ABUSE_SURFACE",
+      "title": "The Abuse Surface",
+      "chapter": 10,
+      "words": [
+        80000,
+        86000
+      ],
+      "emotional_key": "C minor — slow, inevitable",
+      "tension": 0.75,
+      "foreground": [
+        "pip",
+        "daisy_may_majiskii",
+        "xethrolund"
+      ],
+      "note": "Pip writes the word 'engineering.' Xethrolund files it."
+    },
+    {
+      "index": 35,
+      "id": "BASE_07_FOREST_BLEEDS",
+      "title": "The Forest Bleeds",
+      "chapter": 12,
+      "words": [
+        98000,
+        104000
+      ],
+      "emotional_key": "A minor — THE CELLO ENTERS",
+      "tension": 0.88,
+      "foreground": [
+        "pip",
+        "mack",
+        "rylos"
+      ],
+      "cello_note": "CELLO FIRST APPEARANCE. 40Hz. Rylos goes pale. Plant this instrument here.",
+      "plant": "blood_cello_instrument"
+    },
+    {
+      "index": 41,
+      "id": "BASE_08_ARCHIVE_BURNS",
+      "title": "The Archive Burns",
+      "chapter": 14,
+      "words": [
+        115000,
+        122000
+      ],
+      "emotional_key": "F# minor — something permanently gone",
+      "tension": 0.82,
+      "foreground": [
+        "xethrolund",
+        "pip",
+        "daisy_may_majiskii"
+      ],
+      "note": "Xethrolund saves: Pip's paper. A specific book. Daisy-May's collar. Nothing else."
+    },
+    {
+      "index": 47,
+      "id": "BASE_09_URSULA_SPEAKS",
+      "title": "Ursula Speaks in Stone",
+      "chapter": 16,
+      "words": [
+        130000,
+        136000
+      ],
+      "emotional_key": "B minor — something ancient breathing",
+      "tension": 0.6,
+      "foreground": [
+        "pip",
+        "ursula"
+      ],
+      "neglect_warning": "Rylos at 4 beats absent, pressure 1.0 — MUST appear within 2 beats"
+    },
+    {
+      "index": 53,
+      "id": "BASE_10_ROOTS_REVEALED",
+      "title": "The Roots Revealed",
+      "chapter": 18,
+      "words": [
+        150000,
+        157000
+      ],
+      "emotional_key": "D major — unexpected light underground",
+      "tension": 0.7,
+      "foreground": [
+        "pip",
+        "mack"
+      ],
+      "arc_state_change": {
+        "pip_psych_arc": [
+          0.12,
+          0.45
+        ]
+      },
+      "note": "Her name was always in the bark."
+    },
+    {
+      "index": 57,
+      "id": "BASE_11_RYLOS_MIRROR",
+      "title": "Rylos's Mirror",
+      "chapter": 20,
+      "words": [
+        168000,
+        175000
+      ],
+      "emotional_key": "G minor — the character who almost isn't the villain",
+      "tension": 0.91,
+      "foreground": [
+        "pip",
+        "rylos"
+      ],
+      "arc_state_change": {
+        "pip_psych_arc": [
+          0.45,
+          0.65
+        ]
+      },
+      "note": "Pip looks at him without fear. Clarity without cruelty. Rylos arc: fractured, not resolved."
+    },
+    {
+      "index": 61,
+      "id": "BASE_12_THE_CORE",
+      "title": "The Core",
+      "chapter": 21,
+      "words": [
+        185000,
+        193000
+      ],
+      "emotional_key": "E minor — the deepest root note",
+      "tension": 0.95,
+      "foreground": [
+        "pip",
+        "mack"
+      ],
+      "note": "Seismic event. Hot ice geometry. Crystalline light. Pip is his daughter."
+    },
+    {
+      "index": 65,
+      "id": "BASE_13_GEODE_OPENS",
+      "title": "The Geode Opens",
+      "chapter": 22,
+      "words": [
+        205000,
+        214000
+      ],
+      "emotional_key": "A major — light that has never touched air",
+      "tension": 0.88,
+      "foreground": [
+        "pip",
+        "ursula"
+      ],
+      "note": "Pip speaks 'Indalwin Willowjayce.' Stone splits. A cosmos inside."
+    },
+    {
+      "index": 69,
+      "id": "BASE_14_DEATH_IS_REBIRTH",
+      "title": "Death Is Rebirth",
+      "chapter": 23,
+      "words": [
+        225000,
+        238000
+      ],
+      "emotional_key": "C major — holds all the minor keys",
+      "tension": 0.45,
+      "foreground": [
+        "pip",
+        "mack",
+        "daisy_may_majiskii"
+      ],
+      "note": "The title beat. Pip says 'I know what I am.' The root pulses once in answer."
+    },
+    {
+      "index": 72,
+      "id": "BEAT_FINAL_BLOOD_CELLO",
+      "title": "Blood Cello",
+      "chapter": 24,
+      "words": [
+        248000,
+        250000
+      ],
+      "emotional_key": "D minor — the cello closes what it opened",
+      "tension": 0.3,
+      "foreground": [
+        "pip",
+        "mack",
+        "daisy_may_majiskii"
+      ],
+      "kind": "TERMINUS",
+      "max_words": 2000,
+      "last_sentence_rule": "No adjectives. Subject-verb-object only.",
+      "cello_resolution": "40Hz rises to 42Hz. A minor third. The cello's lowest register.",
+      "final_image": "Pip and Daisy-May walk out of the forest. Willow branches close behind them. Not a curtain. A breath held.",
+      "boojay_status": "Still on the hill. Does not follow. Not yet.",
+      "note": "TERMINUS. The cello was planted in Beat 7. It resolves here. The last sentence has no adjectives."
+    }
+  ],
+  "chapter_map": [
+    {
+      "ch": 1,
+      "title": "The Willow and the Weight",
+      "beats": [
+        "BASE_01"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 2,
+      "title": "What the Ground Keeps",
+      "beats": [
+        "BASE_01→BASE_02"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 3,
+      "title": "The Stone Shelf",
+      "beats": [
+        "BASE_02"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 4,
+      "title": "Orbits",
+      "beats": [
+        "BASE_02→BASE_03"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 5,
+      "title": "The Wrong Name",
+      "beats": [
+        "BASE_03"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 6,
+      "title": "What the Archive Holds",
+      "beats": [
+        "BASE_03→BASE_04"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 7,
+      "title": "The P.A.P.I.",
+      "beats": [
+        "BASE_04"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 8,
+      "title": "The Great Dane",
+      "beats": [
+        "BASE_04→BASE_05"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 9,
+      "title": "The Weight of Being Followed",
+      "beats": [
+        "BASE_05→BASE_06"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 10,
+      "title": "Engineering",
+      "beats": [
+        "BASE_06"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 11,
+      "title": "Pressure",
+      "beats": [
+        "BASE_06→BASE_07"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 12,
+      "title": "The Forest Bleeds",
+      "beats": [
+        "BASE_07"
+      ],
+      "words": 10500,
+      "pov": "pip",
+      "note": "THE CELLO ENTERS HERE"
+    },
+    {
+      "ch": 13,
+      "title": "What Fire Finds",
+      "beats": [
+        "BASE_07→BASE_08"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 14,
+      "title": "Three Things",
+      "beats": [
+        "BASE_08"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 15,
+      "title": "The Quiet Between",
+      "beats": [
+        "BASE_08→BASE_09"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 16,
+      "title": "Ursula Speaks in Stone",
+      "beats": [
+        "BASE_09"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 17,
+      "title": "What Rylos Sees",
+      "beats": [
+        "BASE_09→BASE_10"
+      ],
+      "words": 10500,
+      "pov": "rylos",
+      "note": "POV SHIFT — Rylos's arc pressure is at critical. This is the relief valve."
+    },
+    {
+      "ch": 18,
+      "title": "The Roots Revealed",
+      "beats": [
+        "BASE_10"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 19,
+      "title": "Inheritance",
+      "beats": [
+        "BASE_10→BASE_11"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 20,
+      "title": "Rylos's Mirror",
+      "beats": [
+        "BASE_11"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 21,
+      "title": "The Core",
+      "beats": [
+        "BASE_12"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 22,
+      "title": "The Geode Opens",
+      "beats": [
+        "BASE_13"
+      ],
+      "words": 10500,
+      "pov": "pip"
+    },
+    {
+      "ch": 23,
+      "title": "Death Is Rebirth",
+      "beats": [
+        "BASE_14"
+      ],
+      "words": 15000,
+      "pov": "pip"
+    },
+    {
+      "ch": 24,
+      "title": "Blood Cello",
+      "beats": [
+        "TERMINUS"
+      ],
+      "words": 2000,
+      "pov": "pip",
+      "note": "TERMINUS CHAPTER — no new information, only resonance"
+    }
+  ],
+  "arc_registry": {
+    "pip_isolation": {
+      "opens": "BASE_01",
+      "closes": "BASE_14",
+      "book1_resolved": true
+    },
+    "pip_identity": {
+      "opens": "BASE_03",
+      "closes": "BASE_14",
+      "book1_resolved": true
+    },
+    "pip_parentage": {
+      "opens": "BASE_10",
+      "closes": "BASE_13",
+      "book1_resolved": true
+    },
+    "pip_first_bond": {
+      "opens": "BASE_05",
+      "closes": null,
+      "book1_resolved": false,
+      "note": "Permanent — never closes"
+    },
+    "mack_mystery": {
+      "opens": "BASE_01",
+      "closes": "BASE_12",
+      "book1_resolved": true
+    },
+    "mack_intervention": {
+      "opens": "BASE_07",
+      "closes": "BASE_12",
+      "book1_resolved": true
+    },
+    "ursula_contact": {
+      "opens": "BASE_02",
+      "closes": "BASE_13",
+      "book1_resolved": true
+    },
+    "xethrolund_mentor": {
+      "opens": "BASE_04",
+      "closes": null,
+      "book1_resolved": false,
+      "note": "Continues to Book 2"
+    },
+    "boojay_abuse": {
+      "opens": "BASE_03",
+      "closes": null,
+      "book1_resolved": false,
+      "note": "DELIBERATELY UNRESOLVED. Fracture at Beat 11. He is on the hill at terminus."
+    },
+    "the_cello": {
+      "opens": "BASE_07",
+      "closes": "TERMINUS",
+      "book1_resolved": true,
+      "note": "THE PRIMARY STRUCTURAL ARC. Planted Ch12, paid off Ch24."
+    },
+    "archive_as_sanctuary": {
+      "opens": "BASE_04",
+      "closes": "BASE_08",
+      "book1_resolved": true
+    }
+  },
+  "BRAXON_integration": {
+    "route_every_scene_through": "BRAXON_core::resolve_address()",
+    "output_path": "~/storage/shared/BRAXON_Novels/",
+    "release_gate": "0xDE7ACA60_0000_0000",
+    "terminus_address": "0xDE7ACA60_FFFF_FFFF_0000_0000_0000_0000",
+    "canon_path_env": "WOWAS_CANON_PATH"
+  }
+}

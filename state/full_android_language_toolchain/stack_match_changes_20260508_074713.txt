@@ -1,0 +1,1 @@
+Python/pystate.c: c_stack_hard_limit 0 -> 4194304

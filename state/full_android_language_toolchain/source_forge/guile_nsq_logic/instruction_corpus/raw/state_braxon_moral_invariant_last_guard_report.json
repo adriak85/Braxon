@@ -1,0 +1,11 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "generated_at": "2026-04-30T02:50:05.929251+00:00",
+  "missing_required_files": [],
+  "ok": true,
+  "protected_file": "specs/Braxon/BRAXON_PERSONAL_MORAL_INVARIANT.md",
+  "protected_sha256": "241b15f407bec4fe252bbcf8341d58b94e290766ab1c62f314aacc62ec1c4644",
+  "rule": "No other file may override, morph, invert, or translate against the moral invariant.",
+  "schema": "Braxon.moral_invariant_guard.report.v2"
+}

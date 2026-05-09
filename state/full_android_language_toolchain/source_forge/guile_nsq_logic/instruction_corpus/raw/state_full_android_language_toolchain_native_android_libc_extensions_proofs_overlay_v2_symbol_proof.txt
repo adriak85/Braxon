@@ -1,0 +1,35 @@
+schema=braxon.android.libc_contract_overlay_v2.symbol_proof
+date=2026-05-07T22:16:58-05:00
+overlay=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay
+
+sem_clockwait.o:
+0000000000000000 T sem_clockwait
+pthread_getname_np.o:
+0000000000000000 T pthread_getname_np
+close_range.o:
+0000000000000000 T close_range
+0000000000000264 T close_range
+00000000000003c4 T copy_file_range
+0000000000000424 T dup3
+0000000000000474 T fexecve
+00000000000006a8 T getloadavg
+00000000000004c8 T getlogin_r
+00000000000003fc T pipe2
+0000000000000570 T preadv2
+000000000000014c T pthread_getname_np
+000000000000060c T pwritev2
+0000000000000000 T sem_clockwait
+0000000000000370 T statx
+
+    27: 0000000000000e50   332 FUNC    LOCAL  HIDDEN     12 sem_clockwait
+    28: 0000000000000f9c   280 FUNC    LOCAL  HIDDEN     12 pthread_getname_np
+    29: 00000000000010b4   268 FUNC    LOCAL  HIDDEN     12 close_range
+    30: 00000000000011c0    84 FUNC    LOCAL  HIDDEN     12 statx
+    31: 0000000000001214    56 FUNC    LOCAL  HIDDEN     12 copy_file_range
+    32: 000000000000124c    40 FUNC    LOCAL  HIDDEN     12 pipe2
+    33: 0000000000001274    80 FUNC    LOCAL  HIDDEN     12 dup3
+    34: 00000000000012c4    84 FUNC    LOCAL  HIDDEN     12 fexecve
+    35: 0000000000001318   168 FUNC    LOCAL  HIDDEN     12 getlogin_r
+    36: 00000000000013c0   156 FUNC    LOCAL  HIDDEN     12 preadv2
+    37: 000000000000145c   156 FUNC    LOCAL  HIDDEN     12 pwritev2
+    38: 00000000000014f8   256 FUNC    LOCAL  HIDDEN     12 getloadavg

@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "is_court_component": false,
+  "watchers": [
+    { "name": "lexer_observer", "surface": "lexer", "exports": ["route_event", "trace_projection"] },
+    { "name": "parser_observer", "surface": "parser", "exports": ["route_event", "preservation_checkpoint"] },
+    { "name": "compiler_observer", "surface": "compiler", "exports": ["boundary_export_trace", "proof_execution_trace"] },
+    { "name": "router_observer", "surface": "router", "exports": ["route_event", "court_route_trace"] },
+    { "name": "scheduler_observer", "surface": "scheduler", "exports": ["route_event", "runtime_pressure_trace"] },
+    { "name": "inspector_observer", "surface": "inspector", "exports": ["artifact_manifest", "proof_execution_trace"] }
+  ]
+}

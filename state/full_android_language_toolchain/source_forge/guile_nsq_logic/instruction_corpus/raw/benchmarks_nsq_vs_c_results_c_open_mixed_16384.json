@@ -1,0 +1,1 @@
+{\n  "system": "c",\n  "family": "mixed",\n  "scale": 16384,\n  "parse_ms": 0.000,\n  "build_ms": 0.193,\n  "decode_ms": 0.600,\n  "artifact_bytes": 262144,\n  "decoded_bytes": 262144,\n  "decoded_records": 16384,\n  "replay_hash": "445bb5194e3c39ad",\n  "deterministic_repeat_match": true,\n  "semantic_coverage": 0.3333333333,\n  "failure_mode": null\n}\n

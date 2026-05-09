@@ -1,0 +1,9 @@
+{
+  "elapsed_ms": 0.767,
+  "readable_output_bytes": 47194,
+  "readable_output_lines": 2034,
+  "structural_nodes": 328,
+  "relation_edges": 210,
+  "deterministic_repeat_match": true,
+  "failure_mode": null
+}

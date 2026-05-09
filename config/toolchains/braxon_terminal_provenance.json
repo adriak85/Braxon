@@ -1,0 +1,44 @@
+{
+  "schema": "braxon.terminal.provenance.v1",
+  "identity": "Braxon",
+  "authority": "NSQ_COURT",
+  "nsq_is_bus": true,
+  "court_is_compositor": true,
+  "generated_at": "20260508_172033",
+  "truth_label": "absorbed_terminal_and_alien_build_knowledge_available_not_hot_live_execution_proof",
+  "foreign_tool_absorption_root": "state/nsq/stamps/foreign_tool_absorption",
+  "absorbed_build_surfaces": {
+    "Alien::Build": false,
+    "Alien::Libxml2": false,
+    "cargo": false,
+    "rustc": false
+  },
+  "absorbed_terminal_surfaces": {
+    "IPC::Run": false,
+    "IO::Interactive": false,
+    "Complete::Bash": false,
+    "Encode::Locale": false,
+    "Data::Printer": false,
+    "Color::ANSI::Util": false,
+    "FFI::CheckLib": false,
+    "Net::Telnet": false
+  },
+  "semantic_evidence": {
+    "alienfile_and_alien_build_root_lines_present": false,
+    "pseudo_terminal_lines_present": false,
+    "terminal_color_lines_present": false,
+    "terminal_width_height_lines_present": false
+  },
+  "execution_boundary": {
+    "absorbed_source_is_runtime_execution_proof": false,
+    "translated_nsq_body_is_hot_live_proof": false,
+    "terminal_wrapper_install_may_use_this_as_guidance": true,
+    "hot_live_requires_wake_dispatch_or_runtime_route_proof": true
+  },
+  "safe_install_intent": {
+    "no_pull": true,
+    "no_reset": true,
+    "no_force_push": true,
+    "phone_transfer_ready_after_verifier_passes": true
+  }
+}

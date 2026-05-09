@@ -1,0 +1,90 @@
+{
+  "schema": "braxon.android_gap_fill.staged_runtime_files.v1",
+  "note": "These are staged verified runtime surfaces from the active Android/Termux toolchain. They are not claimed as source truth.",
+  "copied": [
+    {
+      "group": "crt_objects",
+      "name": "crtbegin_dynamic.o",
+      "src": "/data/data/com.termux/files/usr/lib/crtbegin_dynamic.o",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/crtbegin_dynamic.o"
+    },
+    {
+      "group": "crt_objects",
+      "name": "crtbegin_static.o",
+      "src": "/data/data/com.termux/files/usr/lib/crtbegin_static.o",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/crtbegin_static.o"
+    },
+    {
+      "group": "crt_objects",
+      "name": "crtbegin_so.o",
+      "src": "/data/data/com.termux/files/usr/lib/crtbegin_so.o",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/crtbegin_so.o"
+    },
+    {
+      "group": "crt_objects",
+      "name": "crtend_android.o",
+      "src": "/data/data/com.termux/files/usr/lib/crtend_android.o",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/crtend_android.o"
+    },
+    {
+      "group": "crt_objects",
+      "name": "crtend_so.o",
+      "src": "/data/data/com.termux/files/usr/lib/crtend_so.o",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/crtend_so.o"
+    },
+    {
+      "group": "compiler_rt",
+      "name": "libclang_rt.builtins-aarch64-android.a",
+      "src": "/data/data/com.termux/files/usr/lib/clang/21/lib/linux/libclang_rt.builtins-aarch64-android.a",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libclang_rt.builtins-aarch64-android.a"
+    },
+    {
+      "group": "unwind",
+      "name": "libunwind.a",
+      "src": "/data/data/com.termux/files/usr/lib/libunwind.a",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libunwind.a"
+    },
+    {
+      "group": "unwind",
+      "name": "libunwind.so",
+      "src": "/data/data/com.termux/files/usr/glibc/lib/libunwind.so",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libunwind.so"
+    },
+    {
+      "group": "libcxx",
+      "name": "libc++_shared.so",
+      "src": "/data/data/com.termux/files/usr/lib/libc++_shared.so",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libc++_shared.so"
+    },
+    {
+      "group": "system_libs",
+      "name": "libc.so",
+      "src": "/data/data/com.termux/files/usr/glibc/lib/libc.so",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libc.so"
+    },
+    {
+      "group": "system_libs",
+      "name": "libm.so",
+      "src": "/data/data/com.termux/files/usr/glibc/lib/libm.so",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libm.so"
+    },
+    {
+      "group": "headers",
+      "name": "stdint.h",
+      "src": "/data/data/com.termux/files/usr/glibc/include/stdint.h",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/stdint.h"
+    },
+    {
+      "group": "headers",
+      "name": "stdio.h",
+      "src": "/data/data/com.termux/files/usr/glibc/include/bits/stdio.h",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/stdio.h"
+    },
+    {
+      "group": "headers",
+      "name": "unwind.h",
+      "src": "/data/data/com.termux/files/usr/glibc/include/unwind.h",
+      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/unwind.h"
+    }
+  ]
+}

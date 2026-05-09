@@ -1,0 +1,11 @@
+479:test_too_large_blob (test.test_sqlite3.test_types.SqliteTypeTests.test_too_large_blob) ... skipped 'not enough memory: 6.0G minimum needed'
+481:test_too_large_string (test.test_sqlite3.test_types.SqliteTypeTests.test_too_large_string) ... skipped 'not enough memory: 8.0G minimum needed'
+537:test_func_return_too_large_blob (test.test_sqlite3.test_userfunctions.FunctionTests.test_func_return_too_large_blob) ... skipped 'not enough memory: 4.0G minimum needed'
+539:test_func_return_too_large_text (test.test_sqlite3.test_userfunctions.FunctionTests.test_func_return_too_large_text) ... skipped 'not enough memory: 6.0G minimum needed'
+561:OK (skipped=4)
+673:test_locale_caching (test.test_re.ReTests.test_locale_caching) ... skipped 'test needs en_US.iso88591 locale'
+674:test_locale_compiled (test.test_re.ReTests.test_locale_compiled) ... skipped 'test needs en_US.iso88591 locale'
+681:test_memory_leaks (test.test_re.ReTests.test_memory_leaks) ... skipped 'requires debug build'
+717:test_search_anchor_at_beginning (test.test_re.ReTests.test_search_anchor_at_beginning) ... skipped "resource 'cpu' is not enabled"
+765:FAILED (errors=1, skipped=4)
+777:Total tests: run=678 skipped=8

@@ -1,0 +1,197 @@
+=== FASTEST BRAXON ACTIONABLE DEMO ===
+root=/data/data/com.termux/files/home/Braxon
+stamp=20260508_174218
+goal=offline_actionable_braxon_before_terminal_polish
+j_pref=7
+
+=== 0. preserve local state, no destructive git sync ===
+
+>>> git status --short
+ M .gitignore
+ M crates/braxon-core/src/lib.rs
+ M crates/braxon-core/src/wowas_rescue.rs
+ M crates/braxon-ingest/src/lib.rs
+ M crates/nsqasm-stamp-db/src/main.rs
+ D packaged/bake-over/BAXON_SOURCE_BAKE_OVER_PLAN.md
+ M packaged/manifests/package_file_list.txt
+ M packaged/manifests/package_manifest.sha256
+ M scripts/toolchains/stage_android_runtime_gap_surfaces.sh
+ M state/android_gap_fill_chain/release_stage/current/ANDROID_GAP_FILL_RELEASE_STAGE.json
+ D state/android_gap_fill_chain/release_stage/current/SHA256SUMS
+ M state/android_gap_fill_chain/release_stage/current/proofs/no_libc_direct_start_proof.txt
+ D state/android_gap_fill_chain/runs/20260507_192850/reports/release_probe_output.txt
+ D state/android_gap_fill_chain/runs/20260507_192952/reports/release_probe_output.txt
+?? audit_findutils_no_to_contract_matrix.sh
+?? audit_reseat_braxon_rust_nightly.sh
+?? boost_braxon_forge_environment.sh
+?? braxon-cargo
+?? braxon-forge-env
+?? braxon-python
+?? braxon-rust-env
+?? braxon-rustc
+?? braxon-terminal
+?? braxon-text-env
+?? build_braxon_cpython_android_adoption_full.sh
+?? build_braxon_decimal_tk_native.sh
+?? build_braxon_tkinter_native.sh
+?? build_guile_instruction_corpus.sh
+?? build_or_repair_fc_match.sh
+?? build_source_guile_nsq_lane.sh.before_hardlink_fix_20260508_142558
+?? clean_braxon_warning_noise.sh
+?? config/toolchains/android_build_tools_release_lane.json
+?? config/toolchains/android_builtin_libc_extensions.json
+?? config/toolchains/android_builtin_libc_extensions_overlay.json
+?? config/toolchains/braxon_terminal_provenance.json
+?? config/toolchains/cpython_android_native_contract_resolve.json
+?? config/toolchains/full_android_language_toolchain.json
+?? config/toolchains/full_android_language_toolchain_visible.json
+?? create_braxon_terminal.sh
+?? diagnose_braxon_python_startup_imports.sh
+?? docs/braxon/BRAXON_TERMINAL_PROVENANCE.md
+?? explore_braxon_perl_native.sh
+?? export_full_braxon_system_state.sh
+?? fastest_braxon_actionable_demo.sh
+?? fastest_status
+?? final_braxon_cpython_android_adoption_build.sh
+?? finalize_source_backbone_stage.sh
+?? fix_braxon_cpython_extension_link.sh
+?? fix_braxon_python_native_lock.sh
+?? fix_cpython_decimal_tk_detect.sh
+?? fix_findutils_contract_first_android.sh
+?? fix_findutils_selinux_android_boundary.sh
+?? fix_lazy_import_startup_contract.sh
+?? fix_lazy_import_startup_contract_v2.sh
+?? fix_lazy_import_startup_contract_v3.sh
+?? fix_pgo_pwd_adoption_header.sh
+?? fix_source_packaging_stage.sh
+?? fix_verify_braxon_rust_workspace.sh
+?? forge_braxon_terminal_forge_lane.sh
+?? forge_braxon_zig_text_stack.sh
+?? go_gold_alien_findutils_lane.sh
+?? install_braxon_missing_dev_text_packages.sh
+?? link_braxon_cpython_deep.sh
+?? link_source_package_to_backbone.sh
+?? lock_and_extend_braxon_dev_stack.sh
+?? lock_braxon_python_native.sh
+?? lock_braxon_python_pkg_safe.sh
+?? machine_lazy_import_contract_adapter.sh
+?? mend_rustup_toolchain_lane.sh
+?? packaged/bake-over/BRAXON_SOURCE_BAKE_OVER_PLAN.md
+?? packaged/identity/
+?? packaged/manifests/backbone_symlink_map.txt
+?? packaged/tarballs/
+?? prime_source_first_forge_lane.sh
+?? probe_braxon_android_posix_caps.sh
+?? probe_cpython_optional_decimal_tk.sh
+?? rebuild_braxon_cpython_stack_matched.sh
+?? relink_braxon_cpython_freeze.sh
+?? repair_and_deepen_full_report.sh
+?? repair_import_helper_lazy_contract.sh
+?? resume_findutils_contract_completion.sh
+?? scripts/reseat_braxon_python_native.sh
+?? scripts/toolchains/clean_android_gap_stage_and_ignore_generated.sh
+?? scripts/toolchains/dedup_braxon_android_libc_extensions.sh
+?? scripts/toolchains/extend_android_libc_extension_close_range.sh
+?? scripts/toolchains/fix_android_libc_contract_overlay_v2.sh
+?? scripts/toolchains/fix_android_pwd_contract_overlay_v1.sh
+?? scripts/toolchains/fix_pwd_contract_private_overlay_v2.sh
+?? scripts/toolchains/fix_remote_debug_contracts_v1.sh
+?? scripts/toolchains/force_braxon_android_contract_headers.sh
+?? scripts/toolchains/install_braxon_private_cc_overlay.sh
+?? scripts/toolchains/install_builtin_sem_clockwait_overlay_and_resume.sh
+?? scripts/toolchains/install_builtin_sem_clockwait_sysroot_and_resume.sh
+?? scripts/toolchains/promote_android_libc_extension_by_symlink.sh
+?? scripts/toolchains/rebuild_braxon_libc_extensions_whitelist.sh
+?? scripts/toolchains/rebuild_full_android_language_toolchain.sh
+?? scripts/toolchains/rebuild_full_android_language_toolchain_visible.sh
+?? scripts/toolchains/resolve_cpython_android_native_contracts_full.sh
+?? scripts/toolchains/start_android_build_tools_release_lane.sh
+?? scripts/toolchains/unified_android_libc_contract_overlay.sh
+?? scripts/verify_braxon_guile_nsq_doc_logic_lane.sh
+?? scripts/verify_braxon_python_native.sh
+?? scripts/verify_braxon_source_first_forge_lane.sh
+?? scripts/verify_braxon_source_first_nsq_forge_lane.sh
+?? scripts/verify_braxon_terminal.sh
+?? scripts/verify_braxon_terminal_provenance.sh
+?? scripts/verify_braxon_zig_text_stack.sh
+?? setup_braxton_systems_packaged.sh
+?? stage_guile_nsq_doc_logic_lane.sh
+?? state/android_build_tools_release_lane/
+?? state/android_gap_fill_chain/runs/20260507_193420/
+?? state/full_android_language_toolchain/
+?? state/reports/alien_build_coverage_and_terminal_specs_20260508_170215.txt
+?? state/reports/braxon_boundary_ledger_20260508_155930.md
+?? state/reports/braxon_bus_reconstruction_handle_review_20260508_160211.txt
+?? state/reports/braxon_need_it_all_inventory_20260508_155240.txt
+?? state/reports/braxon_reconstruction_route_gate_20260508_163844.txt
+?? state/reports/braxon_root_and_findutils_review_20260508_154917.txt
+?? state/reports/braxon_terminal_bx_archive_candidates_20260508_165908.txt
+?? state/reports/braxon_terminal_bx_archive_snippets_20260508_165908.txt
+?? state/reports/braxon_terminal_provenance_reseat_20260508_172033.txt
+?? state/reports/braxon_terminal_specs_from_bx_archive_20260508_165908.txt
+?? state/reports/citadel699_emotion_route_boundary_20260508_164459.txt
+?? state/reports/citadel699_reconstruction_route_gate_20260508_165026.txt
+?? state/reports/fastest_braxon_actionable_demo_20260508_174218.txt
+?? state/reports/push_phone_everything_20260508_165622.txt
+?? state/reports/root_entry_review_20260508_154305.txt
+?? state/reports/root_entry_review_fast_20260508_154805.txt
+?? state/tools/
+?? strengthen_source_first_nsq_forge_lane.sh
+?? trace_braxon_startup_os_import.sh
+?? unlock_braxon_rustup_nightly3.sh
+?? upgrade_termux_interactive_shell_and_patch_export.sh
+
+>>> git branch --show-current
+phone/citadel699-route-gates-20260508_165115
+
+=== 1. ensure Council Ten NSQ surface exists ===
+
+=== 2. ensure Council Ten JSON config exists ===
+
+=== 3. create missing Citadel699 current inputs if absent ===
+
+=== 4. patch common REPL lever compile mismatch if present ===
+
+=== 5. run Citadel699 rebuild/materialization ===
+
+>>> tools/citadel699_nsq_request_return_rebuild.sh /data/data/com.termux/files/home/Braxon
+citadel699_rebuild_status=0
+rebuild_dir=state/nsq/citadel699/rebuilds/20260508_174220
+rebuild_surface=state/nsq/citadel699/rebuilds/20260508_174220/council_ten.rebuild.nsq
+proof=state/nsq/proofs/citadel699_current_rebuild.json
+rebuild_sha256=59e1e8f17391d48b14525fbfd1c5ad9dbd83737c1dd04226d04b581f68af4416
+
+=== 6. verify Citadel route gates ===
+
+>>> scripts/verify_citadel699_reconstruction_route_gate.sh /data/data/com.termux/files/home/Braxon
+== verify Citadel699 reconstruction route gate ==
+root=/data/data/com.termux/files/home/Braxon
+PASS: JSON route gate is coherent
+PASS: bus and docs carry the reconstruction route gate
+PASS: Citadel699 reconstruction route gate verified
+
+>>> scripts/verify_citadel699_emotion_route_boundary.sh /data/data/com.termux/files/home/Braxon
+== verify Citadel699 uncensored emotion-routing boundary ==
+root=/data/data/com.termux/files/home/Braxon
+PASS: JSON boundary is coherent
+PASS: bus and docs carry the boundary
+PASS: Citadel699 emotion-routing boundary verified
+
+=== 7. build/test the quickest proof surfaces ===
+
+>>> cargo test -p Braxon-core council_ten -- --nocapture
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running unittests src/lib.rs (/data/data/com.termux/files/home/.cargo/target-cache/dax/debug/deps/BRAXON_core-5feb8192b088837c)
+
+running 3 tests
+test council_ten::tests::fail_closed_produces_coherence_false ... ok
+test council_ten::tests::council_ten_wake_all_steps_pass ... ok
+test council_ten::tests::council_ten_wake_emits_ten_steps ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.00s
+
+
+>>> cargo test -p nsq-wake -- --nocapture
+error: package ID specification `nsq-wake` did not match any packages
+
+help: a package with a similar name exists: `nsq-core`

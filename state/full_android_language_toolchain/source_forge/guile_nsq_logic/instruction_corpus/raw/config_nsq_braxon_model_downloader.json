@@ -1,0 +1,41 @@
+{
+  "schema": "Braxon.model_downloader.config.v1",
+  "app": "BRAXON_model_downloader",
+  "default_target": "braxon_transport",
+  "storage": {
+    "primary_download_dir": "assets/braxon_core/source_ingest/braxon_transport",
+    "shared_download_dir": "$HOME/storage/shared/Download",
+    "state_dir": "state/braxon/model_downloader/current"
+  },
+  "targets": {
+    "braxon_transport": {
+      "kind": "huggingface_or_git_lfs_repo",
+      "repo_id": "huihui-ai/Huihui-Qwen3-VL-32B-Instruct-abliterated",
+      "local_dir": "assets/braxon_core/source_ingest/braxon_transport",
+      "allow_patterns": [
+        "config.json",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json",
+        "chat_template.jinja",
+        "merges.txt",
+        "vocab.json",
+        "model.safetensors.index.json",
+        "model-*.safetensors",
+        "*.safetensors"
+      ],
+      "required_minimum": [
+        "config.json",
+        "tokenizer.json"
+      ],
+      "materialized_payload_required": true
+    }
+  },
+  "truth_boundary": {
+    "download_complete_claim_requires_payload_verification": true,
+    "nsq_recode_complete": false,
+    "whole_core_runtime_ready": false,
+    "bare_metal_claim_allowed": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__openvpn-plugin-rs__RUSTSEC-2023-0119.md.759c1065a7c1ee7b.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.622602+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__openvpn-plugin-rs__RUSTSEC-2023-0119.md.759c1065a7c1ee7b.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/openvpn-plugin-rs/RUSTSEC-2023-0119.md",
+  "source_bytes": 645,
+  "source_sha256": "759c1065a7c1ee7b38ad0f5c76369018083bc4bf183c390ebced846eea59d2d0",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__openvpn-plugin-rs__RUSTSEC-2023-0119.md.759c1065a7c1ee7b"
+}

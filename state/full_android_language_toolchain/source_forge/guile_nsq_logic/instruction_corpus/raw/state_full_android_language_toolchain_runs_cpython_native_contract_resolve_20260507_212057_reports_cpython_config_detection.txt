@@ -1,0 +1,7 @@
+15535:configure:20681: checking for sem_clockwait
+41885:ac_cv_func_sem_clockwait='yes'
+14460:>>> did you mean: pthread_getname_np
+14787:configure:20561: checking for pthread_getname_np
+41862:ac_cv_func_pthread_getname_np='yes'
+1145:#define HAVE_SEM_CLOCKWAIT 1
+1031:#define HAVE_PTHREAD_GETNAME_NP 1

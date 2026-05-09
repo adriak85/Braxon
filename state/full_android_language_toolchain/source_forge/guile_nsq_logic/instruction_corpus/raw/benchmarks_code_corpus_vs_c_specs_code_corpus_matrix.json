@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "tiers": {
+    "small":   { "files": 8,  "functions_per_file": 8,  "depth": 3, "fanout": 3, "corruption": 0.00 },
+    "medium":  { "files": 16, "functions_per_file": 16, "depth": 4, "fanout": 4, "corruption": 0.02 },
+    "large":   { "files": 24, "functions_per_file": 24, "depth": 5, "fanout": 5, "corruption": 0.05 },
+    "stress":  { "files": 40, "functions_per_file": 32, "depth": 6, "fanout": 6, "corruption": 0.08 }
+  },
+  "repeats": 3
+}

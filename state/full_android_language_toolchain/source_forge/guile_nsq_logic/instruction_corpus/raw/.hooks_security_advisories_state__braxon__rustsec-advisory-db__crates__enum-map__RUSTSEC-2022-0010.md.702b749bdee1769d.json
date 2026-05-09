@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__enum-map__RUSTSEC-2022-0010.md.702b749bdee1769d.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.843067+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__enum-map__RUSTSEC-2022-0010.md.702b749bdee1769d.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/enum-map/RUSTSEC-2022-0010.md",
+  "source_bytes": 1702,
+  "source_sha256": "702b749bdee1769d247ceba2fd61760ad6b3842e4a9f182a7be7f529a0c1eb69",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__enum-map__RUSTSEC-2022-0010.md.702b749bdee1769d"
+}

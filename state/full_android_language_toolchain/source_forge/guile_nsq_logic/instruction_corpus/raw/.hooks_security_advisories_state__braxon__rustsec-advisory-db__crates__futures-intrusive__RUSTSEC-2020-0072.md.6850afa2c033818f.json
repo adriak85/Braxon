@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__futures-intrusive__RUSTSEC-2020-0072.md.6850afa2c033818f.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.408908+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__futures-intrusive__RUSTSEC-2020-0072.md.6850afa2c033818f.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/futures-intrusive/RUSTSEC-2020-0072.md",
+  "source_bytes": 1111,
+  "source_sha256": "6850afa2c033818f78eb1c3b031ff910a27010e2bb9947393f9bae2c46ddc46d",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__futures-intrusive__RUSTSEC-2020-0072.md.6850afa2c033818f"
+}

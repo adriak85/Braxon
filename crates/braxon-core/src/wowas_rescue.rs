@@ -1,6 +1,3 @@
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
-
 pub struct WoWaSRescue {
     pub scene_count: usize,
     pub character_count: usize,

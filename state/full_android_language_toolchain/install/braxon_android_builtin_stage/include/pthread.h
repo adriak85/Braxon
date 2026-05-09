@@ -1,0 +1,12 @@
+#ifndef BRAXON_ANDROID_PTHREAD_OVERLAY_V2_H
+#define BRAXON_ANDROID_PTHREAD_OVERLAY_V2_H
+#include_next <pthread.h>
+#include <stddef.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+int pthread_getname_np(pthread_t thread, char *name, size_t len);
+#ifdef __cplusplus
+}
+#endif
+#endif

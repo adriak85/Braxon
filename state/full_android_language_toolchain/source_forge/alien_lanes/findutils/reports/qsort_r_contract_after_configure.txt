@@ -1,0 +1,8 @@
+config.h:636:/* Define to 1 when the gnulib module qsort_r should be tested. */
+config.h:1639:/* Define to 1 if you have the 'qsort_r' function. */
+config.h:1640:/* #undef HAVE_QSORT_R */
+config.log:1570:configure:10059: checking for qsort_r
+config.log:57594:ac_cv_func_qsort_r='no'
+config.log:58046:gl_cv_func_qsort_r_signature='none'
+config.log:58047:gl_cv_func_qsort_r_works='no'
+config.log:59716:HAVE_QSORT_R='0'

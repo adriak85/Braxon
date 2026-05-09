@@ -31,6 +31,8 @@ members = [
     "crates/nsq-core",
     "crates/wowas-final-edition-v10",
     "crates/nsqasm-stamp-db",
+    "crates/nsq-grid",
+    "crates/nsq-wake",
 ]
 
 [workspace.package]

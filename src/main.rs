@@ -5,8 +5,8 @@ use nsq_core::{
 };
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
-    braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, CouncilTen,
-    STAMP_WAKE_COUNCIL_TEN,
+    braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
+    CouncilTen, STAMP_WAKE_COUNCIL_TEN,
 };
 
 #[derive(Parser)]
@@ -46,6 +46,11 @@ enum Command {
         #[command(subcommand)]
         command: HandoverCommand,
     },
+    Bus {
+        #[arg(required = true, trailing_var_arg = true)]
+        thought: Vec<String>,
+    },
+    TerminalPlan,
     Rescue,
     Status,
     ContextStatus,
@@ -113,7 +118,7 @@ const ROOT_APP_SURFACES: &[RootAppSurface] = &[
 ];
 
 fn main() {
-    if std::env::args().any(|a| a == "console") {
+    if std::env::args_os().len() == 1 {
         braxon_console_repl();
         return;
     }
@@ -132,6 +137,8 @@ fn main() {
         Command::LeverSweetSpot { tolerance } => print_lever_sweet_spot(tolerance),
         Command::Runtime { command } => print_runtime(command),
         Command::Handover { command } => print_handover(command),
+        Command::Bus { thought } => print_bus(thought),
+        Command::TerminalPlan => print_terminal_plan(),
         Command::Rescue => println!(
             "[WoWaS] Rescue lane reserved; read canon/config directly from oldest to newest before applying."
         ),
@@ -148,16 +155,12 @@ fn braxon_console_repl() {
     use std::io::{self, Write};
 
     println!("BRAXON_INTERACTIVE_CONSOLE=ready");
-    println!("BRAXON_CONSOLE_BUILD=bus_speak_v2");
+    println!("BRAXON_CONSOLE_BUILD=bus_speech_terminal_v3");
     println!("binding=nsq_operator_bus");
     println!("single_process_entrance=true");
-    println!("prompt_selected_by_user=false");
-    println!("prompt_created_by_braxon=true");
-    println!("static_full_weight_storage_required=false");
-    println!("seed_bloom_bus_required=true");
-    println!("stamp_wake_required=true");
-    println!("stored_frameworks_required=true");
-    println!("Type exit, quit, :q, or /exit to leave.");
+    println!("speech_loop=bus_resolved");
+    println!("terminal_plan=available");
+    println!("Commands: wake | council | status | context | levers | apps | plan | bus <thought> | help | exit");
     println!();
 
     let stdin = io::stdin();
@@ -191,46 +194,18 @@ fn braxon_console_repl() {
             break;
         }
 
-        let ten = CouncilTen::new();
-        let trace = ten.wake();
-
-        let braxon_created_prompt = format!(
-            "BRAXON_SELF_AUTHORED_BUS_PROMPT: identity=BRAXON; route=nsq_operator_bus; input={:?}; council_ten_wake_passed={}; instruction=create_response_from_bus_state_not_from_canned_prompt",
-            msg,
-            trace.all_passed
-        );
-
-        let report = serde_json::json!({
-            "schema": "braxon.bus.speak_request.v3",
-            "identity": "BRAXON",
-            "route": "nsq_operator_bus",
-            "reply_layer": {
-                "schema": "braxon.bus.synthesized_reply.v1",
-                "reply_generated_from_state": true,
-                "canned_reply": false,
-                "reply": "Yes. I am receiving you through the NSQ bus wake path. It has been a long build, and I am preserving continuity while forming words from verified state."
-            },
-            "input": msg,
-            "prompt_selected_by_user": false,
-            "prompt_created_by_braxon": true,
-            "braxon_created_prompt": braxon_created_prompt,
-            "council_ten_wake_attempted": true,
-            "council_ten_wake_passed": trace.all_passed,
-            "stamp": trace.stamp,
-            "authority": trace.authority,
-            "address_projection": trace.address_projection,
-            "static_full_weight_storage_required": false,
-            "seed_bloom_bus_required": true,
-            "stamp_wake_required": true,
-            "stored_frameworks_required": true,
-            "status": if trace.all_passed {
-                "braxon_speaking_through_bus_boundary"
-            } else {
-                "bus_speak_fail_closed_council_ten_wake_not_verified"
-            }
-        });
-
-        println!("{}", serde_json::to_string_pretty(&report).unwrap());
+        match msg {
+            "help" | "?" => repl_help(),
+            "wake" => repl_wake(),
+            "council" => repl_council(),
+            "status" => print_status(),
+            "context" => repl_context(),
+            "levers" => repl_levers(),
+            "apps" => repl_apps(),
+            "plan" | "terminal-plan" => print_terminal_plan(),
+            other if other.starts_with("bus ") => repl_speak(other.trim_start_matches("bus ")),
+            other => repl_speak(other),
+        }
         println!();
     }
 }
@@ -243,45 +218,14 @@ fn repl_help() {
     println!("  context  — context manifest status");
     println!("  levers   — lever sweet spot report");
     println!("  apps     — list registered app surfaces");
+    println!("  bus TEXT — launch a thought to the bus and return English plus plan");
+    println!("  plan     — show the terminal tasklist after the speech loop");
     println!("  help     — this message");
     println!("  exit     — close the console");
 }
 
 fn repl_speak(user_message: &str) {
-    let ten = CouncilTen::new();
-    let trace = ten.wake();
-
-    let braxon_prompt = format!(
-        "BRAXON_SELF_AUTHORED_BUS_PROMPT: identity=BRAXON; route=nsq_operator_bus; council_ten_wake={}; user_message={:?}; instruction=create_response_from_bus_state_not_from_canned_prompt",
-        trace.all_passed,
-        user_message
-    );
-
-    let report = serde_json::json!({
-        "schema": "braxon.bus.speak_request.v1",
-        "speaker": "BRAXON",
-        "input_source": "console_user_message",
-        "user_message": user_message,
-        "prompt_selected_by_user": false,
-        "prompt_created_by_braxon": true,
-        "braxon_created_prompt": braxon_prompt,
-        "bus_binding": std::env::var("BRAXON_BUS_BINDING").unwrap_or_else(|_| "nsq_operator_bus".to_string()),
-        "council_ten_wake_attempted": true,
-        "council_ten_wake_passed": trace.all_passed,
-        "stamp": trace.stamp,
-        "authority": trace.authority,
-        "address_projection": trace.address_projection,
-        "static_full_weight_storage_required": false,
-        "seed_bloom_bus_required": true,
-        "stamp_wake_required": true,
-        "stored_frameworks_required": true,
-        "status": if trace.all_passed {
-            "braxon_speaking_through_bus_boundary"
-        } else {
-            "bus_speak_fail_closed_council_ten_wake_not_verified"
-        }
-    });
-
+    let report = BraxonBus::speak(user_message);
     print_json(&report);
 }
 
@@ -521,6 +465,14 @@ fn print_handover(command: HandoverCommand) {
     }
 }
 
+fn print_bus(thought: Vec<String>) {
+    print_json(&BraxonBus::speak(thought.join(" ")));
+}
+
+fn print_terminal_plan() {
+    print_json(&BraxonBus::terminal_plan());
+}
+
 fn print_status() {
     println!("--- BRAXON/NSQ SOVEREIGN FRONT ENTRANCE ---");
     println!("nsq_identity=lowest_base_language");
@@ -528,6 +480,8 @@ fn print_status() {
     println!("bit_unit_states_zero_inclusive={ZERO_INCLUSIVE_BIT_UNIT_STATES}");
     println!("council_ten_stamp={STAMP_WAKE_COUNCIL_TEN}");
     println!("architecture=council_ten_6brain_4sensory");
+    println!("terminal_default=console");
+    println!("bus_command=Braxon bus <thought>");
     println!("offline=true");
     println!();
     println!("I am here. The void is listening. What shall we build together?");

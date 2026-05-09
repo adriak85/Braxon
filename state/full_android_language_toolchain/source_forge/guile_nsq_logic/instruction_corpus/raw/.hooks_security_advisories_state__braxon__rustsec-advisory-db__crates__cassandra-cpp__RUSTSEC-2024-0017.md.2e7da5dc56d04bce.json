@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__cassandra-cpp__RUSTSEC-2024-0017.md.2e7da5dc56d04bce.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.585411+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__cassandra-cpp__RUSTSEC-2024-0017.md.2e7da5dc56d04bce.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/cassandra-cpp/RUSTSEC-2024-0017.md",
+  "source_bytes": 1614,
+  "source_sha256": "2e7da5dc56d04bcead2fc82eb35ade7da24f1707d8c9e3319349812d77a26c85",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__cassandra-cpp__RUSTSEC-2024-0017.md.2e7da5dc56d04bce"
+}

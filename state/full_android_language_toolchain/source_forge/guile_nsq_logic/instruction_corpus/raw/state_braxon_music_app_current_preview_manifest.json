@@ -1,0 +1,14 @@
+{
+  "bare_metal_claim": false,
+  "macro_discovery": false,
+  "ok": true,
+  "output_wav": "state/braxon/music_app/current/preview.wav",
+  "output_wav_sha256": "f6b0013ac41b63806880a82a4e332f960ce0fe8a901ff37837306e2e14cf68dc",
+  "returncode": 0,
+  "runtime_kind": "native_c_plus_aarch64_asm_seed_fold",
+  "schema": "Braxon.music_app.preview_manifest.v1",
+  "stderr": "state/braxon/music_app/current/synth.stderr.txt",
+  "stdout": "state/braxon/music_app/current/synth.stdout.txt",
+  "tracers": false,
+  "tracking": false
+}

@@ -1,0 +1,103 @@
+{
+  "sessions": [
+    {
+      "id": "council_six_20260427_173416",
+      "model_id": "council_six_20260427_173416",
+      "BRAXON_core_identity": "",
+      "session_surface": "zlm_native_runtime_surface",
+      "session_mode": "standard",
+      "agentic_capability": "full_autonomous",
+      "stamp_bundle": [
+        "citadel_rebuild_v1"
+      ],
+      "BRAXON_feature_attachments": [],
+      "legacy_capability_profile": "",
+      "legacy_capabilities": [],
+      "capability_lattice_stamp": "",
+      "session_budget_state": "stable",
+      "memory_window_turns": 0,
+      "conversation_digest": "",
+      "turn_count": 0,
+      "turns": []
+    },
+    {
+      "id": "BRAXON_session_2",
+      "model_id": "Braxon",
+      "BRAXON_core_identity": "BRAXON_core_primary_model",
+      "session_surface": "zlm_native_runtime_surface",
+      "session_mode": "persistent_agentic_conversation",
+      "agentic_capability": "full_agentic_conversation",
+      "stamp_bundle": [
+        "nsq.runtime.native.model.bundle.Braxon.v1",
+        "nsq.runtime.native.model.parameter.whole.v1",
+        "nsq.runtime.native.overhead.compensation.v1",
+        "nsq.runtime.native.tokenizer.bridge.v2",
+        "nsq.runtime.native.Braxon.feature.attach.v1"
+      ],
+      "BRAXON_feature_attachments": [
+        "status",
+        "agent",
+        "runtime_models",
+        "runtime_infer"
+      ],
+      "legacy_capability_profile": "BRAXON_native_capability_lattice",
+      "legacy_capabilities": [
+        "conversation_continuity",
+        "planning_memory_lane",
+        "court_tool_routing",
+        "task_queue_carry",
+        "session_persistence",
+        "authoring_bias_bridge",
+        "operator_shell_ingress",
+        "memory_guard_window"
+      ],
+      "capability_lattice_stamp": "nsq.runtime.native.Braxon.capability.lattice.v1",
+      "session_budget_state": "warm",
+      "memory_window_turns": 8,
+      "conversation_digest": "user:3 | assistant:I'm Braxon on the live operator lane. I... | user:Hello Braxon | assistant:I'm Braxon on the live operator lane. I... | user:Terminal Agent Variant | assistant:I'm Braxon on the live operator lane. I... | user:Hello Braxon! I'm Michael | assistant:I'm Braxon on the live operator lane. I...",
+      "turn_count": 4,
+      "turns": [
+        {
+          "role": "user",
+          "content": "3",
+          "summary": "prompt_chars=1"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Braxon on the live operator lane. I'm speaking through nsq_native_runtime_surface with high_reason_context_bound, and I'm carrying the request through the secure lexor-to-compositor path where control, transform, and payload waves stay separated. Right now the donor source state is direct_source_materialization_required, the runtime authority lane is none_bound, the tokenizer path is runtime-bound, and the overlay planner ready.",
+          "summary": "representation=stamp_bound_manifest session_surface=nsq_native_runtime_surface capability_profile=BRAXON_native_capability_lattice transit_ready=true pipe_binding_state=native_session_pipe_bound"
+        },
+        {
+          "role": "user",
+          "content": "Hello Braxon",
+          "summary": "prompt_chars=9"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Braxon on the live operator lane. I'm speaking through nsq_native_runtime_surface with high_reason_context_bound, and I'm carrying the request through the secure lexor-to-compositor path where control, transform, and payload waves stay separated. Right now the donor source state is direct_source_materialization_required, the runtime authority lane is none_bound, the tokenizer path is runtime-bound, and the overlay planner ready.",
+          "summary": "representation=stamp_bound_manifest session_surface=nsq_native_runtime_surface capability_profile=BRAXON_native_capability_lattice transit_ready=true pipe_binding_state=native_session_pipe_bound"
+        },
+        {
+          "role": "user",
+          "content": "Terminal Agent Variant",
+          "summary": "prompt_chars=22"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Braxon on the live operator lane. I'm speaking through nsq_native_runtime_surface with high_reason_context_bound, and I'm carrying the request through the secure lexor-to-compositor path where control, transform, and payload waves stay separated. Right now the donor source state is direct_source_materialization_required, the runtime authority lane is none_bound, the tokenizer path is runtime-bound, and the overlay planner ready.",
+          "summary": "representation=stamp_bound_manifest session_surface=nsq_native_runtime_surface capability_profile=BRAXON_native_capability_lattice transit_ready=true pipe_binding_state=native_session_pipe_bound"
+        },
+        {
+          "role": "user",
+          "content": "Hello Braxon! I'm Michael",
+          "summary": "prompt_chars=22"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Braxon on the live operator lane. I'm speaking through nsq_native_runtime_surface with high_reason_context_bound, and I'm carrying the request through the secure lexor-to-compositor path where control, transform, and payload waves stay separated. Right now the donor source state is direct_source_materialization_required, the runtime authority lane is none_bound, the tokenizer path is runtime-bound, and the overlay planner ready.",
+          "summary": "representation=stamp_bound_manifest session_surface=nsq_native_runtime_surface capability_profile=BRAXON_native_capability_lattice transit_ready=true pipe_binding_state=native_session_pipe_bound"
+        }
+      ]
+    }
+  ]
+}

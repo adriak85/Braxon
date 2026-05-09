@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "system": "c",
+  "scale": 32768,
+  "alloc_fill_ms": 2.296,
+  "hash_ms": 6.489,
+  "artifact_bytes": 1310720,
+  "noise_hash": "21d113aa2e4c82e4",
+  "triple_hash": "b360b64067875923",
+  "membrane_hash": "4c3907d910aa8ae0"
+}

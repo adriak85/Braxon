@@ -1,0 +1,37 @@
+{
+  "schema": "braxon.android_gap_fill.initial_gap_report.v1",
+  "gaps": [
+    {
+      "name": "custom_rust_active",
+      "status": "pass",
+      "detail": "active rustc compiled and ran probe"
+    },
+    {
+      "name": "clang_c_active",
+      "status": "pass",
+      "detail": "clang compiled and ran C probe"
+    },
+    {
+      "name": "clang_cpp_active",
+      "status": "pass",
+      "detail": "clang++ compiled and ran C++ STL probe"
+    },
+    {
+      "name": "dynamic_link_surface",
+      "status": "observed",
+      "detail": "readelf dynamic dependency surface"
+    },
+    {
+      "name": "elf_surface",
+      "status": "pass",
+      "detail": "probe binaries are inspectable ELF artifacts"
+    }
+  ],
+  "next_build_targets": [
+    "build or verify crt objects",
+    "build or verify compiler-rt builtins",
+    "build or verify libunwind",
+    "build or verify libc++/libc++abi",
+    "bake source-built or verified-active toolchain into release lane"
+  ]
+}

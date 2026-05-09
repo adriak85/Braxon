@@ -1,0 +1,30 @@
+{
+  "component_status": {
+    "assets_ready": true,
+    "can_attempt_launch": true,
+    "final_active_digest_present": false,
+    "loaded_binding_proven": false,
+    "runtime_hot_live_proven": false,
+    "runtime_route_available": true,
+    "runtime_route_proven": true,
+    "stamp_bound_registry_status": true
+  },
+  "errors": [
+    "one or more live proof components failed"
+  ],
+  "generated_at": "2026-04-24T14:47:11.318241+00:00",
+  "last_runtime_proof_at": "2026-04-24T14:58:07.972226+00:00",
+  "llm_bus_launch_ready": false,
+  "missing_for_launch": [
+    "runtime_route_proven",
+    "loaded_binding_proven",
+    "runtime_hot_live_proven",
+    "final_active_digest_present"
+  ],
+  "runtime_proof_path": "state/braxon/runtime_proofs/20260424_095719/runtime_launch_route_execution_proof.json",
+  "schema": "Braxon.llm_bus_parameter_pressure_gate.v1",
+  "status": "bus_assets_present_runtime_proof_failed_or_partial",
+  "warnings": [
+    "runtime proof did not fully pass; inspect runtime_launch_route_execution_proof.json"
+  ]
+}

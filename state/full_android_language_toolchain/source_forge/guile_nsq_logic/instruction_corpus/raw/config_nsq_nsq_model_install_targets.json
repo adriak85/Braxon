@@ -1,0 +1,34 @@
+{
+  "schema": "nsq.model.install.targets.v2",
+  "canonical_rule": "model installation is local-manifest-bound and hash-verified; pointer stubs are not hot-live",
+  "models": [
+    {
+      "id": "braxon_core_primary_model",
+      "manifest": "models/braxon/manifest.json",
+      "registry": "state/braxon/offline_model_registry.json",
+      "binding": "state/braxon/braxon_binding.json",
+      "pipeline_status": "state/braxon/braxon_nsq_pipeline.status",
+      "source_directory": "assets/braxon_core/source_ingest/braxon_transport",
+      "weight_directory": "assets/braxon_core/weights/nsq",
+      "reconstruction_manifest": "state/nsq/model_reconstruction_manifest.json",
+      "required_small_targets": [
+        "models/braxon/manifest.json",
+        "state/braxon/offline_model_registry.json",
+        "state/braxon/braxon_binding.json"
+      ],
+      "optional_source_targets": [
+        "assets/braxon_core/model_config/config.json",
+        "assets/braxon_core/model_config/generation_config.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json"
+      ],
+      "hot_live_requires": [
+        "byte_count_match",
+        "sha256_match",
+        "blake3_match_when_available",
+        "nsq_semantic_digest_match",
+        "runtime_route_available"
+      ]
+    }
+  ]
+}

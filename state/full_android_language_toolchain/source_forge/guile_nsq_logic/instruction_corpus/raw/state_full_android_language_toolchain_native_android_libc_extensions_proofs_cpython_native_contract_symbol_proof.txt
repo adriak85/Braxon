@@ -1,0 +1,29 @@
+schema=braxon.android.native_contract.symbol_proof.v1
+date=2026-05-07T21:20:59-05:00
+stage=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage
+linkroot=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_active_links
+overlay=/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_overlay
+
+== archive symbols ==
+sem_clockwait.o:
+0000000000000000 T sem_clockwait
+pthread_getname_np.o:
+0000000000000000 T pthread_getname_np
+
+== shared exports ==
+    12: 000000000000089c   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+    13: 00000000000009b8   248 FUNC    GLOBAL DEFAULT    11 pthread_getname_np
+    22: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS sem_clockwait.c
+    26: 0000000000000000     0 FILE    LOCAL  DEFAULT   ABS pthread_getname_np.c
+    36: 000000000000089c   284 FUNC    GLOBAL DEFAULT    11 sem_clockwait
+    40: 00000000000009b8   248 FUNC    GLOBAL DEFAULT    11 pthread_getname_np
+
+== realpaths ==
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/semaphore.h
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/pthread.h
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.a
+/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.so
+
+== probe outputs ==
+BRAXON_NATIVE_CONTRACT_OK:symlink_native_
+BRAXON_NATIVE_CONTRACT_OK:overlay_native_

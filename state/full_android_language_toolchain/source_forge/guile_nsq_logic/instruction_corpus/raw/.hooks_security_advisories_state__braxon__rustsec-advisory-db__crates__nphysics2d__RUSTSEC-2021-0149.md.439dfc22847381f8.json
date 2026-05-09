@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__nphysics2d__RUSTSEC-2021-0149.md.439dfc22847381f8.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.607342+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__nphysics2d__RUSTSEC-2021-0149.md.439dfc22847381f8.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/nphysics2d/RUSTSEC-2021-0149.md",
+  "source_bytes": 382,
+  "source_sha256": "439dfc22847381f82f65b1227e4c68a240f7c6631161c459d87693d3b4ebcc6f",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__nphysics2d__RUSTSEC-2021-0149.md.439dfc22847381f8"
+}

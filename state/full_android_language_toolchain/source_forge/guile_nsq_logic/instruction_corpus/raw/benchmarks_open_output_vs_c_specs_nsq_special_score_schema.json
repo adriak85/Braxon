@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "required_top_level": [
+    "system",
+    "timed_phase",
+    "post_normalization",
+    "determinism",
+    "reuse",
+    "failure_mode"
+  ],
+  "timed_phase_required": [
+    "elapsed_ms",
+    "native_output_bytes",
+    "native_output_artifact_count",
+    "native_output_record_count"
+  ],
+  "post_normalization_required": [
+    "human_readable_bytes",
+    "human_readable_lines",
+    "structural_nodes",
+    "relation_edges",
+    "decoded_bytes_per_artifact_byte",
+    "artifact_compactness"
+  ],
+  "determinism_required": [
+    "replay_hash",
+    "deterministic_repeat_match"
+  ],
+  "reuse_required": [
+    "operator_reuse_value",
+    "queryable_after_run",
+    "transformable_after_run"
+  ]
+}

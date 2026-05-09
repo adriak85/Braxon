@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__monero-rpc-rs__RUSTSEC-2023-0112.md.ce556c0965ba5882.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.576749+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__monero-rpc-rs__RUSTSEC-2023-0112.md.ce556c0965ba5882.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/monero-rpc-rs/RUSTSEC-2023-0112.md",
+  "source_bytes": 626,
+  "source_sha256": "ce556c0965ba58821be4ce035818b03e967f9844e0f78f7b1ed8c892e3ea7084",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__monero-rpc-rs__RUSTSEC-2023-0112.md.ce556c0965ba5882"
+}

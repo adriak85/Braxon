@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "truth_source": "canonical_nsq_and_court_outputs",
+  "node_families": [
+    "canonical_surface",
+    "court_component",
+    "stack_surface",
+    "language_master",
+    "boundary_projection",
+    "runtime_observer_event",
+    "proof_artifact",
+    "calibration_lock"
+  ],
+  "edge_families": [
+    "routes_to",
+    "projects_to",
+    "derives_from",
+    "watches",
+    "calibrates",
+    "preserves",
+    "proves"
+  ]
+}

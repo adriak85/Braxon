@@ -1,0 +1,214 @@
+{
+  "schema": "nsq.asm.stamp.cipher.registry.v1",
+  "canonical_rule": "Any reusable code, especially ASM or hot runtime code, must be saved as a stamp before reuse. Stamps preserve exact source, canonical NSQ meaning, cipher abbreviation, hashes, expansion target, and court route.",
+  "stamp_storage": {
+    "registry": "state/nsq/stamps/stamp_registry.jsonl",
+    "source_dir": "state/nsq/stamps/sources",
+    "expanded_dir": "state/nsq/stamps/expanded"
+  },
+  "asm_is_builtin": true,
+  "asm_truth": "instruction semantics after parse and canonicalization",
+  "not_truth": [
+    "raw bytes alone",
+    "u8 alone",
+    "foreign assembler spelling alone"
+  ],
+  "supported_asm_surfaces": [
+    "asm",
+    "assembly",
+    "aarch64_asm",
+    "arm64_asm",
+    "armv7_asm",
+    "x86_64_asm",
+    "x86_asm",
+    "riscv64_asm",
+    "wasm_text",
+    "llvm_ir",
+    "gnu_as",
+    "nasm",
+    "masm",
+    "gas"
+  ],
+  "cipher_tokens": {
+    "FN": {
+      "meaning": "function/procedure boundary",
+      "asm_family": "all",
+      "template": "function label and return boundary"
+    },
+    "LBL": {
+      "meaning": "label",
+      "asm_family": "all",
+      "template": "named branch target"
+    },
+    "MOV": {
+      "meaning": "move/register transfer",
+      "asm_family": "all",
+      "template": "move destination source"
+    },
+    "LDR": {
+      "meaning": "load from memory",
+      "asm_family": "all",
+      "template": "load destination address"
+    },
+    "STR": {
+      "meaning": "store to memory",
+      "asm_family": "all",
+      "template": "store source address"
+    },
+    "LEA": {
+      "meaning": "load effective address",
+      "asm_family": "x86",
+      "template": "address calculation"
+    },
+    "ADD": {
+      "meaning": "addition",
+      "asm_family": "all",
+      "template": "add destination left right"
+    },
+    "SUB": {
+      "meaning": "subtraction",
+      "asm_family": "all",
+      "template": "subtract destination left right"
+    },
+    "MUL": {
+      "meaning": "multiply",
+      "asm_family": "all",
+      "template": "multiply destination left right"
+    },
+    "DIV": {
+      "meaning": "divide",
+      "asm_family": "all",
+      "template": "divide destination left right"
+    },
+    "AND": {
+      "meaning": "bitwise and",
+      "asm_family": "all",
+      "template": "and destination left right"
+    },
+    "ORR": {
+      "meaning": "bitwise or",
+      "asm_family": "all",
+      "template": "or destination left right"
+    },
+    "XOR": {
+      "meaning": "bitwise xor",
+      "asm_family": "all",
+      "template": "xor destination left right"
+    },
+    "SHL": {
+      "meaning": "shift left",
+      "asm_family": "all",
+      "template": "shift left destination source amount"
+    },
+    "SHR": {
+      "meaning": "shift right",
+      "asm_family": "all",
+      "template": "shift right destination source amount"
+    },
+    "CMP": {
+      "meaning": "compare",
+      "asm_family": "all",
+      "template": "compare left right"
+    },
+    "TST": {
+      "meaning": "test flags",
+      "asm_family": "all",
+      "template": "test value mask"
+    },
+    "B": {
+      "meaning": "branch",
+      "asm_family": "all",
+      "template": "branch label"
+    },
+    "BEQ": {
+      "meaning": "branch if equal",
+      "asm_family": "all",
+      "template": "branch equal label"
+    },
+    "BNE": {
+      "meaning": "branch if not equal",
+      "asm_family": "all",
+      "template": "branch not equal label"
+    },
+    "BL": {
+      "meaning": "call/branch with link",
+      "asm_family": "all",
+      "template": "call label"
+    },
+    "RET": {
+      "meaning": "return",
+      "asm_family": "all",
+      "template": "return from function"
+    },
+    "PUSH": {
+      "meaning": "push/save",
+      "asm_family": "all",
+      "template": "save register or value"
+    },
+    "POP": {
+      "meaning": "pop/restore",
+      "asm_family": "all",
+      "template": "restore register or value"
+    },
+    "FENCE": {
+      "meaning": "memory or ordering barrier",
+      "asm_family": "all",
+      "template": "ordering barrier"
+    },
+    "SYS": {
+      "meaning": "system call or platform call",
+      "asm_family": "all",
+      "template": "system call"
+    },
+    "VEC": {
+      "meaning": "vector/SIMD operation",
+      "asm_family": "all",
+      "template": "vector operation"
+    },
+    "HASH": {
+      "meaning": "digest/hash kernel",
+      "asm_family": "all",
+      "template": "hash block operation"
+    },
+    "SCAN": {
+      "meaning": "scan loop",
+      "asm_family": "all",
+      "template": "scan memory or canonical tokens"
+    },
+    "PARSE": {
+      "meaning": "parse kernel",
+      "asm_family": "all",
+      "template": "parse canonical unit"
+    },
+    "PACK": {
+      "meaning": "pack NSQ units",
+      "asm_family": "all",
+      "template": "pack anchor lever units"
+    },
+    "UNPACK": {
+      "meaning": "unpack NSQ units",
+      "asm_family": "all",
+      "template": "unpack anchor lever units"
+    }
+  },
+  "stamp_fields": [
+    "stamp_id",
+    "name",
+    "language_surface",
+    "dialect",
+    "family",
+    "cipher",
+    "canonical_meaning",
+    "source_path",
+    "expanded_path",
+    "source_sha256",
+    "source_blake3",
+    "blake_null_sha256",
+    "byte_count",
+    "created_at",
+    "reusable",
+    "court_route",
+    "dependencies",
+    "notes"
+  ]
+}

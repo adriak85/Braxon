@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__fehler__RUSTSEC-2023-0067.md.fb2b4d1301c0060c.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:42.861941+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__fehler__RUSTSEC-2023-0067.md.fb2b4d1301c0060c.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/fehler/RUSTSEC-2023-0067.md",
+  "source_bytes": 395,
+  "source_sha256": "fb2b4d1301c0060caad7ee3eb913740015fdfe5e4aded3537bfd57e0fc4ba20c",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__fehler__RUSTSEC-2023-0067.md.fb2b4d1301c0060c"
+}

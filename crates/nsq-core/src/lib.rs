@@ -7,27 +7,48 @@ pub type Nu16 = u64;
 pub type Nu64 = u64;
 pub type Nu128 = u128;
 
-pub const CANONICAL_LEVER_MAX_POSITION: Nu16 = 1126;
+pub const CANONICAL_LEVER_MAX_POSITION: Nu16 = 500_000;
 pub const LEVER_STATES_PER_CHARGE: Nu16 = CANONICAL_LEVER_MAX_POSITION;
-pub const ACTIVE_NONZERO_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION * 2;
-pub const ZERO_LEVER_STATES: Nu16 = 2;
-pub const ZERO_INCLUSIVE_LEVER_STATES: Nu16 = ACTIVE_NONZERO_LEVER_STATES + ZERO_LEVER_STATES;
+pub const ACTIVE_NONZERO_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION - 1;
+pub const ZERO_LEVER_STATES: Nu16 = 1;
+pub const ZERO_INCLUSIVE_LEVER_STATES: Nu16 = CANONICAL_LEVER_MAX_POSITION;
 pub const TOTAL_STATES_PER_LEVER: Nu16 = ZERO_INCLUSIVE_LEVER_STATES;
 
 pub const CANONICAL_BIT_UNIT_LEVERS: usize = 4;
 pub const CANONICAL_ANCHORS_PER_BIT_UNIT: usize = 4;
+pub const ANCHOR_STATES_PER_ANCHOR: Nu16 = 2;
 pub const CANONICAL_SWITCH_POSITIONS: usize =
     CANONICAL_BIT_UNIT_LEVERS + CANONICAL_ANCHORS_PER_BIT_UNIT;
 
-pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [2, 2, 2, 2, 2, 2, 2, 2];
+pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+    ANCHOR_STATES_PER_ANCHOR,
+];
 
 pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] =
-    [2, 1126, 2, 1126, 2, 1126, 2, 1126];
+    [
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+    ];
 
-pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 25_811_642_826_256;
+pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 62_500_000_000_000_000_000_000;
+pub const ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES: Nu128 =
+    1_000_000_000_000_000_000_000_000;
 
 pub const ZERO_INCLUSIVE_ELEVEN_STAMP_STATES: &str =
-    "3388224006628364777633391917977689907793577920420662611307405205212142590540076808411238765893904872234096561821097764151442331530670394585231917056";
+    "488281250000000000000000000000000000000000000000000000000000000";
 pub const CONVENTIONAL_BITS_PER_BYTE: f64 = 8.0;
 pub const MIN_PRODUCED_SYMBOLS_PER_BOUNDARY_BYTE: Nu16 = 3;
 pub const DENSE_PRODUCED_SYMBOLS_PER_BOUNDARY_BYTE: Nu16 = 12;
@@ -41,7 +62,7 @@ pub enum Charge {
 }
 
 impl Charge {
-    pub fn multiplier(self) -> i16 {
+    pub fn multiplier(self) -> i64 {
         match self {
             Self::Positive => 1,
             Self::Negative => -1,
@@ -147,8 +168,8 @@ impl NSQLever {
         Ok(Self { charge, position })
     }
 
-    pub fn machine_value(self) -> i16 {
-        self.charge.multiplier() * (self.position as i16)
+    pub fn machine_value(self) -> i64 {
+        self.charge.multiplier() * (self.position as i64)
     }
 
     pub fn to_nsq(self) -> String {
@@ -587,7 +608,7 @@ pub fn lever_spacing_sweet_spot_report(tolerance: f32) -> LeverSpacingSweetSpotR
                 .to_string(),
         bit_passthrough_basis: false,
         byte_measurement_scope:
-            "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8"
+            "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_500000_pow_4_over_8"
                 .to_string(),
         selection_rule:
             "choose the minimal spacing that preserves zero failed or missed through the largest resolved NSQ information processed"
@@ -667,7 +688,7 @@ fn spacing_load_reading(
         applied_hertz,
         return_to_off: (applied_hertz + synthetic_drift).clamp(0.0, 1.0),
         return_to_on: (1.0 - applied_hertz + synthetic_drift).clamp(0.0, 1.0),
-        sound_resonance: Some((applied_hertz + synthetic_drift * 0.5).clamp(0.0, 1.0)),
+        sound_resonance: Some(applied_hertz),
     };
     resolve_lever_position_from_return(sample, tolerance)
 }
@@ -709,10 +730,15 @@ mod tests {
 
     #[test]
     fn zero_inclusive_state_space_is_current_truth() {
-        assert_eq!(TOTAL_STATES_PER_LEVER, 2254);
+        assert_eq!(TOTAL_STATES_PER_LEVER, 500_000);
         assert_eq!(
             ZERO_INCLUSIVE_BIT_UNIT_STATES,
             (ZERO_INCLUSIVE_LEVER_STATES as u128).pow(CANONICAL_BIT_UNIT_LEVERS as u32)
+        );
+        assert_eq!(
+            ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES,
+            (ANCHOR_STATES_PER_ANCHOR as u128 * CANONICAL_LEVER_MAX_POSITION as u128)
+                .pow(CANONICAL_BIT_UNIT_LEVERS as u32)
         );
     }
 
@@ -753,14 +779,17 @@ mod tests {
             report.selected_information_processed,
             GLOBAL_LEVER_SWEET_SPOT_INFORMATION_PROCESSED
         );
-        assert_eq!(report.selected_nsq_states_per_bit_unit, 25_811_642_826_256);
-        assert_eq!(report.selected_boundary_bytes_equivalent, 6271);
-        assert_eq!(report.selected_produced_characters_floor, 18_813);
-        assert_eq!(report.selected_produced_characters_dense, 75_252);
-        assert_eq!(report.selected_stamp_information_accepted, 1126);
-        assert_eq!(report.selected_framework_stamp_payloads_accepted, 1126);
+        assert_eq!(
+            report.selected_nsq_states_per_bit_unit,
+            62_500_000_000_000_000_000_000
+        );
+        assert_eq!(report.selected_boundary_bytes_equivalent, 4_732_893);
+        assert_eq!(report.selected_produced_characters_floor, 14_198_679);
+        assert_eq!(report.selected_produced_characters_dense, 56_794_716);
+        assert_eq!(report.selected_stamp_information_accepted, 500_000);
+        assert_eq!(report.selected_framework_stamp_payloads_accepted, 500_000);
         assert_eq!(report.selected_noise_information_rejected, 0);
-        assert!(report.selected_nsq_state_log10 > 15_101.0);
+        assert!(report.selected_nsq_state_log10 > 11_397_940.0);
         assert_eq!(
             report.selected_stable_upper_position,
             CANONICAL_LEVER_MAX_POSITION
@@ -770,7 +799,7 @@ mod tests {
         assert!(!report.bit_passthrough_basis);
         assert_eq!(
             report.byte_measurement_scope,
-            "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_2254_pow_4_over_8"
+            "boundary_equivalent_bytes_only_ceil_processed_nsq_bit_units_log2_500000_pow_4_over_8"
         );
         assert!(report
             .measurement_methods

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "canonical_dialects": [
+    {
+      "name": "canonical",
+      "description": "Native NSQ line form",
+      "forms": ["noise", "triple", "membrane"]
+    },
+    {
+      "name": "sexpr",
+      "description": "S-expression source lowered internally to canonical NSQ"
+    },
+    {
+      "name": "lua_shape",
+      "description": "Lua-like key=value surface lowered internally to canonical NSQ"
+    },
+    {
+      "name": "python_shape",
+      "description": "Legacy Python-call-like source ingress lowered internally to canonical NSQ; not a runtime authority surface"
+    },
+    {
+      "name": "python3_shape",
+      "description": "Legacy Python 3 source ingress lowered internally to canonical NSQ; native runtime authority now belongs to python3_native_runtime_lane"
+    }
+  ],
+  "rule": "These dialects are source-ingress compatibility forms only. Native runtime authority belongs to court-routed nsq-runtime lanes."
+}

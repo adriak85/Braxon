@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "minimum_ports": 8,
+  "peer_writers_forbidden": true,
+  "authority_commit_single_path": true,
+  "ports": [
+    {"port": 0, "role": "query_index_read", "write_authority": false},
+    {"port": 1, "role": "unpack_packed_package", "write_authority": false},
+    {"port": 2, "role": "link_materialize_dependency_graph", "write_authority": false},
+    {"port": 3, "role": "cache_and_warm_plan_reuse", "write_authority": false},
+    {"port": 4, "role": "projection_translation", "write_authority": false},
+    {"port": 5, "role": "tokenizer_and_doc_emit", "write_authority": false},
+    {"port": 6, "role": "verify_replay_proof", "write_authority": false},
+    {"port": 7, "role": "authority_commit_registry_mutation", "write_authority": true}
+  ]
+}

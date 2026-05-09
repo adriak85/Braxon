@@ -1,0 +1,16 @@
+{
+  "asm_macro": "state/nsq/stamps/libraries/repo__state/asm/macros/state__braxon__rustsec-advisory-db__crates__matrix-sdk-sqlite__RUSTSEC-2025-0043.md.7cd27bce7319f722.s",
+  "external_recode_carrier_used": false,
+  "generated_at": "2026-04-24T18:09:43.554139+00:00",
+  "harm_hit_count": 0,
+  "library": "repo__state",
+  "local_repo_direct_native_path": true,
+  "metadata": "state/nsq/stamps/libraries/repo__state/metadata/state__braxon__rustsec-advisory-db__crates__matrix-sdk-sqlite__RUSTSEC-2025-0043.md.7cd27bce7319f722.json",
+  "other_language_surface_role": "translation_input_only",
+  "round": 2,
+  "schema": "nsq.asm.source_macro_stamp.v1",
+  "source": "state/braxon/rustsec-advisory-db/crates/matrix-sdk-sqlite/RUSTSEC-2025-0043.md",
+  "source_bytes": 798,
+  "source_sha256": "7cd27bce7319f722c920da1cd8f734c25c9539ac431a97ca74b264ad5c0a1389",
+  "stamp_id": "nsq.asm.repo__state.state__braxon__rustsec-advisory-db__crates__matrix-sdk-sqlite__RUSTSEC-2025-0043.md.7cd27bce7319f722"
+}
