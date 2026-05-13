@@ -1,23 +1,9 @@
 {
-  "version": "0.1.0",
+  "schema": "braxon.nsq.knowledge_graph.v1",
+  "authority": "NSQ_COURT",
+  "canonical_semantics": "base8_switch_topology",
   "truth_source": "canonical_nsq_and_court_outputs",
-  "node_families": [
-    "canonical_surface",
-    "court_component",
-    "stack_surface",
-    "language_master",
-    "boundary_projection",
-    "runtime_observer_event",
-    "proof_artifact",
-    "calibration_lock"
-  ],
-  "edge_families": [
-    "routes_to",
-    "projects_to",
-    "derives_from",
-    "watches",
-    "calibrates",
-    "preserves",
-    "proves"
-  ]
+  "derived_only": true,
+  "realworld_model": "live_research_verified",
+  "assumption_policy": "flag_unverified_regions"
 }

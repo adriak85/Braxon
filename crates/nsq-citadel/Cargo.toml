@@ -1,0 +1,23 @@
+[package]
+name = "nsq-citadel"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Citadel capital wire micro-systems for NSQ Council Ten pole routing and conversation."
+
+[lib]
+name = "nsq_citadel"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nsq-citadel-materialize"
+path = "src/bin/materialize.rs"
+
+[[bin]]
+name = "nsq-speak"
+path = "src/bin/speak.rs"
+
+[dependencies]
+nsq-core = { path = "../nsq-core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

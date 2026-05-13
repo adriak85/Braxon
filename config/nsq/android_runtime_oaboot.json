@@ -1,21 +1,12 @@
 {
-  "platform": "android",
-  "entry_surface": "root_workspace_binary",
-  "boot_mode": "android_operator_oaboot",
-  "boot_trigger": "operator_surface_attach",
-  "operator_surface": "android_native_operator_surface",
-  "default_target": "aarch64-linux-android",
-  "package_name": "com.Braxon.root",
-  "launch_package": "Braxon-universal",
-  "launch_bin": "Braxon",
-  "model_id": "Braxon",
-  "runtime_lane": "offline_model_native_runtime_lane",
-  "session_surface": "zlm_native_runtime_surface",
-  "package_db": "config/nsq/runtime_native/package_db/multiport_package_db.json",
-  "required_tools": [
-    "cargo-ndk",
-    "cargo-apk",
-    "sdkmanager",
-    "apksigner"
-  ]
+  "schema": "braxon.nsq.android_runtime_oaboot.v1",
+  "authority": "NSQ_COURT",
+  "canonical_semantics": "base8_switch_topology",
+  "platform": "android_arm64",
+  "runtime": "termux",
+  "device": "dimensity_6300",
+  "dotprod": true,
+  "i8mm": false,
+  "single_process_entrance": true,
+  "second_runtime_permitted": false
 }

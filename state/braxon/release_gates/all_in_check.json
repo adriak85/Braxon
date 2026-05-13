@@ -1,8 +1,7 @@
 {
-  "schema": "braxon.release_gate.all_in_check.v1",
+  "schema": "braxon.nsq_court.all_in_check_gate.v1",
   "authority": "NSQ_COURT",
   "canonical_semantics": "base8_switch_topology",
-  "validated_on": "2026-05-07",
   "nextest_release_passed": true,
   "check_release_passed": true,
   "clippy_release_passed": true,
@@ -13,16 +12,5 @@
   "reduced_intent_wire_contract_passed": true,
   "ten_surface_council_passed": true,
   "direct_xargs_pipeline_used": false,
-  "xargs_output_reinterpretation_allowed": false,
-  "phase_names": [
-    "release_nextest",
-    "release_check",
-    "release_clippy",
-    "release_build",
-    "metadata_format_version_1",
-    "update_aggressive",
-    "release_build_final",
-    "reduced_intent_wire_contract",
-    "ten_surface_council"
-  ]
+  "xargs_output_reinterpretation_allowed": false
 }

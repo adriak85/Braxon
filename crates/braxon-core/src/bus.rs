@@ -3,6 +3,7 @@ use nsq_core::{
     CANONICAL_LEVER_MAX_POSITION, NSQ_CANONICAL_SWITCH_SHAPE, TOTAL_STATES_PER_LEVER,
     ZERO_INCLUSIVE_BIT_UNIT_STATES, Nu16,
 };
+use nsq_citadel::{CitadelBus, CitadelReply, CoachingMode};
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
 
@@ -102,7 +103,12 @@ impl BraxonBus {
         };
         let ten = CouncilTen::new();
         let trace = ten.wake();
-        let mut candidates = pressure_candidates(input);
+
+        // Route through the live CitadelBus — the council of ten deliberates
+        let citadel_reply = route_through_citadel(input);
+        let citadel_active = citadel_reply.citadel_active && citadel_reply.pressure_routed;
+
+        let mut candidates = citadel_pressure_candidates(&citadel_reply);
         let selected_index = select_by_emotional_score(&candidates);
 
         for (index, candidate) in candidates.iter_mut().enumerate() {
@@ -112,12 +118,14 @@ impl BraxonBus {
         let selected = candidates
             .get(selected_index)
             .expect("pressure_candidates always emits candidates");
-        let english = intent_to_english(input, selected);
+        let english = citadel_intent_to_english(input, selected, &citadel_reply);
         let terminal_plan = terminal_plan_for(input, selected);
-        let status = if trace.all_passed {
+        let status = if trace.all_passed && citadel_active {
             "speech_loop_closed_bus_launch_ready"
-        } else {
+        } else if !trace.all_passed {
             "speech_loop_fail_closed_council_ten_wake_not_verified"
+        } else {
+            "speech_loop_closed_citadel_standby"
         }
         .to_string();
 
@@ -140,7 +148,7 @@ impl BraxonBus {
             reply_layer: BusReplyLayer {
                 schema: BRAXON_REPLY_SCHEMA.to_string(),
                 reply_generated_from_state: true,
-                canned_reply: false,
+                canned_reply: !citadel_active,
                 reply: english.clone(),
             },
             intent_english_loop: IntentEnglishLoop {
@@ -182,72 +190,107 @@ impl BraxonBus {
     }
 }
 
-fn pressure_candidates(input: &str) -> Vec<ThoughtPressureCandidate> {
-    let lower = input.to_ascii_lowercase();
-    let terminal = score(
-        0.62,
-        &lower,
-        &[
-            "terminal",
-            "tasklist",
-            "task list",
-            "finish",
-            "launch",
-            "actionable",
-            "plan",
-        ],
-    );
-    let speech = score(
-        0.58,
-        &lower,
-        &["speech", "speak", "loop", "english", "thought", "voice"],
-    );
-    let bus = score(
-        0.60,
-        &lower,
-        &["bus", "pressure", "activation", "wake", "stamp", "model"],
-    );
-    let survival = score(
-        0.64,
-        &lower,
-        &["court", "rent", "community", "money", "eviction", "pay"],
-    );
+// ── Citadel bridge ─────────────────────────────────────────────────
 
-    vec![
-        candidate(
-            "prefrontal_terminal",
-            "finish_new_terminal_launch_path",
-            "turn the current root binary into the operator entrance with bus, wake, plan, and verification commands",
-            terminal,
-            0.94,
-            0.98,
-        ),
-        candidate(
-            "limbic_speech",
-            "close_speech_loop",
-            "answer from verified bus state with continuity instead of a fixed phrase",
-            speech,
-            0.92,
-            0.88,
-        ),
-        candidate(
-            "insular_bus",
-            "activate_model_pressure_control_plane",
-            "launch thought pressure to the NSQ bus while truthfully avoiding a live model execution claim",
-            bus,
-            0.90,
-            0.93,
-        ),
-        candidate(
-            "anterior_action",
-            "prepare_launch_and_rent_support_packet",
-            "make the terminal produce a credible launch trace and next-command plan for community action support",
-            survival,
-            0.87,
-            0.96,
-        ),
-    ]
+fn route_through_citadel(input: &str) -> CitadelReply {
+    let coaching = load_coaching_mode_or_default();
+    let citadel = CitadelBus::new(coaching);
+    citadel.route(input)
 }
+
+fn load_coaching_mode_or_default() -> CoachingMode {
+    nsq_citadel::load_coaching_mode(std::path::Path::new("config/nsq/coaching.json"))
+}
+
+fn citadel_pressure_candidates(reply: &CitadelReply) -> Vec<ThoughtPressureCandidate> {
+    let mut candidates = Vec::new();
+
+    for msg in &reply.board_messages {
+        if !msg.is_live {
+            continue;
+        }
+        let is_lead = msg.pole_id == reply.lead_pole;
+        let emotional_score = ((msg.priority as f32) / 65535.0).clamp(0.0, 1.0);
+
+        candidates.push(ThoughtPressureCandidate {
+            pole: msg.pole_id.clone(),
+            intent: format!("citadel_{}", msg.pole_id.to_lowercase()),
+            english: format!(
+                "{} registers pressure {} through the capital wire",
+                msg.pole_id, msg.pressure_sum
+            ),
+            emotional_score: if is_lead {
+                (emotional_score + 0.05).clamp(0.0, 1.0)
+            } else {
+                emotional_score
+            },
+            coherence_score: 0.92,
+            actionability_score: if is_lead { 0.98 } else { 0.88 },
+            selected: is_lead,
+            nsq_lever_position: msg.priority as u64,
+        });
+    }
+
+    // Fallback to legacy stubs if citadel returns no live messages
+    if candidates.is_empty() {
+        candidates = vec![
+            candidate(
+                "prefrontal_terminal",
+                "finish_new_terminal_launch_path",
+                "turn the current root binary into the operator entrance with bus, wake, plan, and verification commands",
+                0.62, 0.94, 0.98,
+            ),
+            candidate(
+                "limbic_speech",
+                "close_speech_loop",
+                "answer from verified bus state with continuity instead of a fixed phrase",
+                0.58, 0.92, 0.88,
+            ),
+            candidate(
+                "insular_bus",
+                "activate_model_pressure_control_plane",
+                "launch thought pressure to the NSQ bus while truthfully avoiding a live model execution claim",
+                0.60, 0.90, 0.93,
+            ),
+            candidate(
+                "anterior_action",
+                "prepare_launch_and_rent_support_packet",
+                "make the terminal produce a credible launch trace and next-command plan for community action support",
+                0.64, 0.87, 0.96,
+            ),
+        ];
+    }
+
+    candidates
+}
+
+fn citadel_intent_to_english(input: &str, _selected: &ThoughtPressureCandidate, reply: &CitadelReply) -> String {
+    let emotional_tone = match reply.total_pressure {
+        0..=100_000 => "soft and contemplative, as if drifting through the willows",
+        100_001..=300_000 => "warm and expressive, the stones humming with recognition",
+        300_001..=500_000 => "emphatic and engaged, the dream world pressing close",
+        _ => "urgent and overwhelming, the full council speaking as one",
+    };
+
+    format!(
+        "[Rolzen::WhispersOfWillowAndStone] The council of ten moves as one persistent body across three worlds. \
+         {} leads with priority {}. \
+         The emotional field reads: {}. \
+         From the dream world into the real: '{}'. \
+         Total pressure across {} capitals and {} poles: {}. \
+         The court is alive. Source thought: {}",
+        reply.lead_pole,
+        reply.lead_priority,
+        emotional_tone,
+        input,
+        reply.capital_count,
+        reply.pole_count,
+        reply.total_pressure,
+        input
+    )
+}
+
+// ── Legacy helpers ─────────────────────────────────────────────────
 
 fn candidate(
     pole: &str,
@@ -267,14 +310,6 @@ fn candidate(
         selected: false,
         nsq_lever_position: score_to_lever(emotional_score),
     }
-}
-
-fn score(base: f32, lower_input: &str, needles: &[&str]) -> f32 {
-    let matched = needles
-        .iter()
-        .filter(|needle| lower_input.contains(**needle))
-        .count() as f32;
-    (base + matched * 0.07).clamp(0.0, 1.0)
 }
 
 fn select_by_emotional_score(candidates: &[ThoughtPressureCandidate]) -> usize {
@@ -303,15 +338,6 @@ fn select_by_emotional_score(candidates: &[ThoughtPressureCandidate]) -> usize {
 fn score_to_lever(score: f32) -> Nu16 {
     let scaled = (score.clamp(0.0, 1.0) * CANONICAL_LEVER_MAX_POSITION as f32).ceil() as Nu16;
     scaled.clamp(1, CANONICAL_LEVER_MAX_POSITION)
-}
-
-fn intent_to_english(input: &str, selected: &ThoughtPressureCandidate) -> String {
-    format!(
-        "It has been a long build, and I am keeping continuity by routing this through the NSQ bus. I read the immediate intent as: {}. The next terminal move is to {}. Source thought: {}",
-        selected.intent.replace('_', " "),
-        selected.english,
-        input
-    )
 }
 
 fn terminal_plan_for(input: &str, selected: &ThoughtPressureCandidate) -> Vec<String> {
@@ -352,24 +378,23 @@ mod tests {
         assert!(report.speech_loop.intent_to_english_completed);
         assert!(report.speech_loop.terminal_plan_completed);
         assert!(report.reply_layer.reply_generated_from_state);
+        // With CitadelBus wired, replies are live, not canned
         assert!(!report.reply_layer.canned_reply);
-        assert!(report.reply_layer.reply.contains("It has been a long build"));
-        assert!(report.reply_layer.reply.contains("continuity"));
+        assert!(report.reply_layer.reply.contains("Rolzen"));
+        assert!(report.reply_layer.reply.contains("council of ten"));
         assert!(!report.terminal_plan.is_empty());
     }
 
     #[test]
-    fn emotional_score_selects_terminal_pressure_for_terminal_input() {
+    fn emotional_score_selects_from_citadel_pressure() {
         let report = BraxonBus::speak("finish the terminal tasklist and launch the plan");
 
-        assert_eq!(
-            report.shared_thought.selected_intent,
-            "finish_new_terminal_launch_path"
-        );
+        // The selected intent should now come from the citadel, not hardcoded stubs
+        assert!(report.shared_thought.selected_intent.starts_with("citadel_"));
         assert!(report
             .pressure_candidates
             .iter()
             .any(|candidate| candidate.selected
-                && candidate.intent == "finish_new_terminal_launch_path"));
+                && candidate.intent.starts_with("citadel_")));
     }
 }

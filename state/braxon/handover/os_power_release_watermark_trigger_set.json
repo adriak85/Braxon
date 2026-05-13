@@ -2,7 +2,7 @@
   "all_in_check_validated": true,
   "authority": "NSQ_COURT",
   "completely_validated": true,
-  "full_release_complete": false,
+  "full_release_complete": true,
   "record_count": 23,
   "records": [
     {
@@ -14,155 +14,155 @@
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 44726,
+      "bytes": 42614,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "52d9cea93daad9722919b762440a026aaee5151fc004a0e41e1a65b2f0957578",
+      "sha256": "8ebe0696ec4b39d39e1abf3c4f6d2805080ff49a61a054175fc2e1b4b974f729",
       "trigger_role": "root_binary_handover_code"
     },
     {
-      "bytes": 34206,
+      "bytes": 34220,
       "link_required": true,
       "path": "crates/nsq-core/src/intent.rs",
       "present": true,
-      "sha256": "18520a4e0f47d09fa133925d8cdd8c12b71f2e253cfb2feca5d924ccc3a9a7d1",
+      "sha256": "dc60d1aa8c98cc77f4153522ba93ffa07038de51ee8cfad483687951c90af187",
       "trigger_role": "court_boot_clearance_law"
     },
     {
-      "bytes": 845,
+      "bytes": 557,
       "link_required": true,
       "path": "state/braxon/release_gates/all_in_check.json",
       "present": true,
-      "sha256": "ee88e6cc1a7ff67d912ecfbcb2b91d5bdb592a435a147a4dfe628568c69622ec",
+      "sha256": "d2691303b429e283b9edb08adac53a57ea9f319aa2ebb192249bf1e5c3bc8383",
       "trigger_role": "all_in_check_gate"
     },
     {
-      "bytes": 671,
+      "bytes": 325,
       "link_required": true,
       "path": "config/nsq/android_runtime_oaboot.json",
       "present": true,
-      "sha256": "4528eee9fbf9eceb4190b7715c7d4189d68f5bac1509bd708a105f9196bed185",
+      "sha256": "f0deb853bf748929fde4ab97048781816e3ddea566ad474fd74e65952da47aba",
       "trigger_role": "android_boot_profile"
-    },
-    {
-      "bytes": 2942,
-      "link_required": true,
-      "path": "config/nsq/braxon_council_ten_stack.json",
-      "present": true,
-      "sha256": "6fcd924cc7c2abefdc6777c9b68a637c4c1620aec444a99a782ff519a5147170",
-      "trigger_role": "ten_surface_stack_config"
-    },
-    {
-      "bytes": 1284,
-      "link_required": true,
-      "path": "apps/nsq/braxon_council_ten_stack.nsq",
-      "present": true,
-      "sha256": "a35f28da353cc6de6c883547861b52cad04d9a8bb5903b62470cd488b315c1f7",
-      "trigger_role": "ten_surface_stack_nsq"
-    },
-    {
-      "bytes": 4157,
-      "link_required": true,
-      "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
-      "present": true,
-      "sha256": "fde5c9a0168378c4ffd4f16b1ba6f0c1f332ef0acc980c64d156f38bef99f905",
-      "trigger_role": "semantic_7d_emotional_address_source"
-    },
-    {
-      "bytes": 443,
-      "link_required": true,
-      "path": "config/nsq/knowledge_graph.json",
-      "present": true,
-      "sha256": "298e82a57330b9626a5a42a54ef507c24a8d898f58576891ecea7122857d9c92",
-      "trigger_role": "realworld_knowledge_intent_source"
-    },
-    {
-      "bytes": 396,
-      "link_required": true,
-      "path": "config/nsq/vector_imprint.json",
-      "present": true,
-      "sha256": "c7c16beef555ee339b4ba1acb60f72b1fea57f39c3d4a5ce18aa96287fcf40ea",
-      "trigger_role": "semantic_recall_index_source"
-    },
-    {
-      "bytes": 11043,
-      "link_required": true,
-      "path": "crates/nsq-hot/src/lib.rs",
-      "present": true,
-      "sha256": "bace62fe05f3fa5a529125a3b96e16bee7aa2eefc9b237ac35e07f13d2911b4f",
-      "trigger_role": "parameter_address_window_code"
-    },
-    {
-      "bytes": 1818,
-      "link_required": true,
-      "path": "state/nsq/court/route_registry.json",
-      "present": true,
-      "sha256": "7c5f3a5b8ffccd48242c4db382468e7435ddabd0dd65acf63f2718ba827e7b05",
-      "trigger_role": "court_route_registry"
-    },
-    {
-      "bytes": 1228,
-      "link_required": true,
-      "path": "state/nsq/proofs/citadel699_current_rebuild.json",
-      "present": true,
-      "sha256": "c659a3f2af986e835d9224b349780f882b58151efa616e7c6f692c2ca2cf27e0",
-      "trigger_role": "citadel699_current_rebuild_proof"
     },
     {
       "bytes": 587,
       "link_required": true,
+      "path": "config/nsq/braxon_council_ten_stack.json",
+      "present": true,
+      "sha256": "ad79b26b7df8d0f81ee64bf711aade684e436f3312b74a018323b3e97c2cfe61",
+      "trigger_role": "ten_surface_stack_config"
+    },
+    {
+      "bytes": 553,
+      "link_required": true,
+      "path": "apps/nsq/braxon_council_ten_stack.nsq",
+      "present": true,
+      "sha256": "62adea2c2463da6d32e77c34407370d437fdf100cf4abedbf08f589e2e9dff46",
+      "trigger_role": "ten_surface_stack_nsq"
+    },
+    {
+      "bytes": 846,
+      "link_required": true,
+      "path": "config/nsq/braxon_indextts2_emotional_frequency_map.json",
+      "present": true,
+      "sha256": "05c52bf65dea753bd34a7ed7c4c6a2fd1eab0fcc48105ede9f085d0377b221f5",
+      "trigger_role": "semantic_7d_emotional_address_source"
+    },
+    {
+      "bytes": 300,
+      "link_required": true,
+      "path": "config/nsq/knowledge_graph.json",
+      "present": true,
+      "sha256": "c79063453cfb02944ce3ef0e9cf959361ace4890d082ee0967e084ce6f1d8f65",
+      "trigger_role": "realworld_knowledge_intent_source"
+    },
+    {
+      "bytes": 243,
+      "link_required": true,
+      "path": "config/nsq/vector_imprint.json",
+      "present": true,
+      "sha256": "5eeb260781a828ea380fae29c67b1c1a260150af09a8cebd5c02e2a520997a9e",
+      "trigger_role": "semantic_recall_index_source"
+    },
+    {
+      "bytes": 11074,
+      "link_required": true,
+      "path": "crates/nsq-hot/src/lib.rs",
+      "present": true,
+      "sha256": "30ee31aca09000bc636b4f52174d89447829f34a6ec99acd3f3c11eb46e3ba06",
+      "trigger_role": "parameter_address_window_code"
+    },
+    {
+      "bytes": 243,
+      "link_required": true,
+      "path": "state/nsq/court/route_registry.json",
+      "present": true,
+      "sha256": "fafd370e22dedefce62ca57167ec58f67656e31c0db302e7df911b5dc16648ca",
+      "trigger_role": "court_route_registry"
+    },
+    {
+      "bytes": 651,
+      "link_required": true,
+      "path": "state/nsq/proofs/citadel699_current_rebuild.json",
+      "present": true,
+      "sha256": "528ac1e47cef66877d8e569fde2e11f99315e4081499cf1b28ad0498b48ef9a8",
+      "trigger_role": "citadel699_current_rebuild_proof"
+    },
+    {
+      "bytes": 420,
+      "link_required": true,
       "path": "state/nsq/citadel699/current/request_capsule.json",
       "present": true,
-      "sha256": "581d8fb46ce4b168fa06c61aa78b735c54ba5602ff2d52f5fe6e50de9430bc31",
+      "sha256": "fa8a6112c2807140d0d9418d6a6aa003a142448f47678df0e29fe26f55b64141",
       "trigger_role": "citadel699_request_capsule"
     },
     {
-      "bytes": 606,
+      "bytes": 574,
       "link_required": true,
       "path": "state/nsq/citadel699/current/target_models.json",
       "present": true,
-      "sha256": "9e46570e69390fcc866112f1e063548a1a4c41d73f34bdf32dfdb3e4d5b9a742",
+      "sha256": "9812198753050a0a0c31f28077870bc76a78558508e0684fd62b778512db8dbb",
       "trigger_role": "citadel699_target_models"
     },
     {
-      "bytes": 1115,
+      "bytes": 295,
       "link_required": true,
       "path": "state/nsq/citadel699/current/council_ten.rebuild.nsq",
       "present": true,
-      "sha256": "59e1e8f17391d48b14525fbfd1c5ad9dbd83737c1dd04226d04b581f68af4416",
+      "sha256": "6c21d17826431ce2d914de2d97ec66e11a7b90688bdab517b5aeffe54c679ec0",
       "trigger_role": "citadel699_current_rebuild_link"
     },
     {
-      "bytes": 1421,
+      "bytes": 737,
       "link_required": true,
       "path": "state/nsq/citadel699/current/materialization.json",
       "present": true,
-      "sha256": "af9fbbdc734e8a03af86fc971433f00482351873beb69ddc81f39270e8ef5f9c",
+      "sha256": "cd92521f6046007487e8c5ceba59ffa0f2037ab10f631338ea8e4b5da8736522",
       "trigger_role": "citadel699_current_materialization_link"
     },
     {
-      "bytes": 1421,
+      "bytes": 737,
       "link_required": true,
       "path": "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json",
       "present": true,
-      "sha256": "913954b14c6870dda57f4f41ba910f5512f248b8fa610e3c87c5af2fdbf5c027",
+      "sha256": "cd92521f6046007487e8c5ceba59ffa0f2037ab10f631338ea8e4b5da8736522",
       "trigger_role": "citadel699_ten_materialization"
     },
     {
-      "bytes": 1190,
+      "bytes": 295,
       "link_required": true,
       "path": "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.rebuild.nsq",
       "present": true,
-      "sha256": "c4bb7f1e31f779ac774a28e210f9031f5787a8f9f45aff8ff4500d119b305ea4",
+      "sha256": "6c21d17826431ce2d914de2d97ec66e11a7b90688bdab517b5aeffe54c679ec0",
       "trigger_role": "citadel699_ten_rebuild_surface"
     },
     {
-      "bytes": 545,
+      "bytes": 146,
       "link_required": true,
       "path": "state/braxon/bus/citadel699/current.braxon",
       "present": true,
-      "sha256": "f71566a51c180a61e99eadb01df9f0ce86e6f4e874aed7614501133b2f91c446",
+      "sha256": "ae1830d36b4ab1949abc2e26028f4e2aaf410d74ad3b813137fae203735abfd8",
       "trigger_role": "citadel699_current_bus_link"
     },
     {
@@ -182,17 +182,17 @@
       "trigger_role": "handover_proof_test_surface"
     },
     {
-      "bytes": 1140,
+      "bytes": 1049,
       "path": "state/braxon/handover/os_power_release_response.json",
       "present": true,
-      "sha256": "d36cfd4645c9aae89ec6a710b16ad5296698f2b0c71bc745ca3a9803b88962c5",
+      "sha256": "2eca42a1fab2e4e99bb4ff699b194ead1f3f84a2569de9cb6f7b9d25decaf4ce",
       "trigger_role": "generated_handover_response"
     }
   ],
   "schema": "braxon.nsq_court.os_power_release_watermark_trigger_set.v1",
   "semantic_address_gate_completely_validated": true,
   "seven_suit_cycles_validated": true,
-  "ten_surface_bus_validated": false,
+  "ten_surface_bus_validated": true,
   "video_present": true,
   "voice_present": true,
   "watermark_trigger_set_completely_validated": true

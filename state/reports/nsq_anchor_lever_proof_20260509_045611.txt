@@ -1,0 +1,114 @@
+=== NSQ ANCHOR / LEVER SUBSTRATE PROOF ===
+STAMP: 20260509_045611
+
+--- 1. RUNTIME IDENTITY ---
+error: unexpected argument '--version' found
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+
+--- 2. NSQ TRACE MODE ---
+NSQ_TRACE=1 enabled
+
+--- 3. ANCHOR / LEVER STREAM TEST ---
+INPUT STREAM: '+1101 -1101 +1001 -1001'
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+
+--- 4. SWITCH POSITION PROGRESSION TEST ---
+---- POSITION TEST: 1 ----
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+
+---- POSITION TEST: 537 ----
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+
+---- POSITION TEST: 1126 ----
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+error: unrecognized subcommand 'nsq'
+
+Usage: Braxon [COMMAND]
+
+For more information, try '--help'.
+
+--- 5. ANCHOR/LEVER SEQUENCING ASSERTION ---
+EXPECTED PATTERN: A L A L A L (anchor then lever alternating)
+VERIFY TRACE OUTPUT ABOVE FOR STRICT INTERLEAVING
+
+--- 6. SUBSTRATE INTEGRITY CHECK ---
+crates/nsq-archon/Cargo.toml:1:[package]
+crates/nsq-archon/Cargo.toml.before_dead_edge_repair_20260506_000937:1:[package]
+crates/nsq-grid/src/lib.rs:5:    pub intent: u64,
+crates/nsq-grid/src/lib.rs:6:    pub function: u64,
+crates/nsq-grid/src/lib.rs:7:    pub state: u64,
+crates/nsq-grid/src/lib.rs:8:    pub emotion: u64,
+crates/nsq-grid/src/lib.rs:9:    pub consequence: u64,
+crates/nsq-grid/src/lib.rs:10:    pub proof: u64,
+crates/nsq-grid/src/lib.rs:11:    pub knowledge: u64,
+crates/nsq-grid/src/lib.rs:12:    pub action: u64,
+crates/nsq-grid/src/lib.rs:16:    pub fn centered(value: u64) -> Self {
+crates/nsq-grid/src/lib.rs:29:    pub fn drift_width(&self) -> u64 {
+crates/nsq-grid/src/lib.rs:45:    pub fn coherent_under(&self, limit: u64) -> bool {
+crates/nsq-grid/Cargo.toml:1:[package]
+crates/nsq-wake/src/lib.rs:7:    pub target_position: u64,
+crates/nsq-wake/src/lib.rs:15:    pub symbol_radius: u64,
+crates/nsq-wake/Cargo.toml:1:[package]
+crates/nsqasm-stamp-db/src/main.rs:24:    byte_count: usize,
+crates/nsqasm-stamp-db/src/main.rs:28:    reusable_score: u64,
+crates/nsqasm-stamp-db/src/main.rs:46:    wake_packet_required: bool,
+crates/nsqasm-stamp-db/src/main.rs:67:    wake_packet: StampWakePacket,
+crates/nsqasm-stamp-db/src/main.rs:72:struct StampWakePacket {
+crates/nsqasm-stamp-db/src/main.rs:74:    wake_packet_required: bool,
+crates/nsqasm-stamp-db/src/main.rs:184:                    wake_packet_required: true,
+crates/nsqasm-stamp-db/src/main.rs:283:        wake_packet: StampWakePacket {
+crates/nsqasm-stamp-db/src/main.rs:285:            wake_packet_required: record.wake_packet_required,
+crates/nsqasm-stamp-db/src/main.rs:319:    if !record.wake_packet_required {
+crates/nsqasm-stamp-db/src/main.rs:320:        anyhow::bail!("accepted stamp missing wake packet requirement");
+crates/nsqasm-stamp-db/src/main.rs:576:    let byte_count = trimmed.as_bytes().len();
+crates/nsqasm-stamp-db/src/main.rs:584:    let reusable_score = score_block(trimmed, line_count, byte_count);
+crates/nsqasm-stamp-db/src/main.rs:607:        byte_count,
+crates/nsqasm-stamp-db/src/main.rs:618:fn score_block(block: &str, line_count: usize, byte_count: usize) -> u64 {
+crates/nsqasm-stamp-db/src/main.rs:619:    let mut score = 0_u64;
+crates/nsqasm-stamp-db/src/main.rs:627:    if byte_count >= 256 {
+crates/nsqasm-stamp-db/src/main.rs:654:    candidate.reusable_score >= 32 && candidate.byte_count >= 128
+crates/nsqasm-stamp-db/src/main.rs:705:    h.update(input.as_bytes());
+crates/nsqasm-stamp-db/src/main.rs:756:            byte_count: 200,
+crates/nsqasm-stamp-db/src/main.rs:778:            byte_count: 30,
+crates/nsqasm-stamp-db/src/main.rs:809:                byte_count: 400,
+crates/nsqasm-stamp-db/src/main.rs:817:            wake_packet_required: true,
+crates/nsqasm-stamp-db/src/main.rs:829:        assert!(accepted.wake_packet_required);
+crates/nsqasm-stamp-db/src/main.rs:846:                byte_count: 400,
+crates/nsqasm-stamp-db/src/main.rs:854:            wake_packet_required: true,
+crates/nsqasm-stamp-db/src/main.rs:879:                byte_count: 400,
+crates/nsqasm-stamp-db/src/main.rs:887:            wake_packet_required: true,
+crates/nsqasm-stamp-db/Cargo.toml:1:[package]
+crates/nsq-calibrate/Cargo.toml:1:[package]
+crates/nsq-calibrate/Cargo.toml.before_dead_edge_repair_20260506_000937:1:[package]
+crates/nsq-cli/Cargo.toml:1:[package]
+crates/nsq-cli/Cargo.toml.before_dead_edge_repair_20260506_000937:1:[package]
+

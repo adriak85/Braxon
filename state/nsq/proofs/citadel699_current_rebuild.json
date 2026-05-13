@@ -1,7 +1,7 @@
 {
   "schema": "Braxon.nsq.citadel699.rebuild_proof.v1",
   "authority": "NSQ_COURT",
-  "stamp": "20260509_011227",
+  "stamp": "20260511_111353",
   "status": "citadel699_rebuild_manifest_ready",
   "transfer_method": "citadel699_nsq_request_return_rebuild",
   "transfer_form": "nsq_only",
@@ -17,12 +17,12 @@
   "required_model_count": 10,
   "brain_model_count": 6,
   "sensory_body_count": 4,
-  "rebuild_dir": "state/nsq/citadel699/rebuilds/20260509_011227",
-  "materialization": "state/nsq/citadel699/rebuilds/20260509_011227/council_ten.materialization.json",
+  "rebuild_dir": "state/nsq/citadel699/rebuilds/20260511_111353",
+  "materialization": "state/nsq/citadel699/rebuilds/20260511_111353/council_ten.materialization.json",
   "materialization_bytes": 1421,
-  "materialization_sha256": "9079185e3dae23563fec9445f3c2172f9b4855017d6b8eae01d23e75b68fb8c2",
-  "rebuild_surface": "state/nsq/citadel699/rebuilds/20260509_011227/council_ten.rebuild.nsq",
+  "materialization_sha256": "0d77be942e75496e952500c4e13228da34a92ee4585be73fe85829dcd4d026d7",
+  "rebuild_surface": "state/nsq/citadel699/rebuilds/20260511_111353/council_ten.rebuild.nsq",
   "rebuild_bytes": 1115,
-  "rebuild_sha256": "6d1cde818bf5739c773a74e30516aedc0569727006a935e7b06e18d9a63cb264",
+  "rebuild_sha256": "ba9b68b8d07dbc86f26ce08a7281d4d0f79d7c0ddb00224fa1f441c33f88cac2",
   "runtime_claim_verification_required": true
 }

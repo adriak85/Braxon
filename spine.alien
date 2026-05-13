@@ -1,0 +1,22 @@
+use 'Alien::Build::Plugin::Build::SearchDep';
+
+# Probe for your LLVM toolchain
+probe [ 'test -f /data/data/com.termux/files/usr/bin/clang' ];
+
+build {
+  my($build) = @_;
+  my @targets = qw(su sudo supersu busybox);
+  
+  foreach my $target (@targets) {
+    # Building each as a fresh, standalone binary
+    my $define = "-D" . uc($target);
+    $build->run('clang', '-O3', '-target', 'aarch64-linux-android', 
+                '-static', '-nostdlib', $define, 
+                '-o', $target, 'sovereign_core.c');
+  }
+};
+
+install {
+  my($build) = @_;
+  $build->install($_ => "bin/$_") for qw(su sudo supersu busybox);
+};

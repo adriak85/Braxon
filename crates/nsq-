@@ -1,0 +1,213 @@
+//! CitadelBit v2 — wire-resident instruction-cycling unit with emotional state.
+//!
+//! Each bit now carries:
+//! - Charge and Direction (4 quadrants per lever)
+//! - An 8-emotion IntentGradient
+//! - A refresh beacon for Bishop touch
+//! - A stability score tracking lever drift, charge fade, direction slip
+//!
+//! Mirrors NSQ machine law: the lever is one switch, not many bits.
+
+use nsq_core::{Charge, Dialect, NSQLever, NSQSlot, CANONICAL_LEVER_MAX_POSITION};
+use nsq_core::emotion::{Direction, EmotionState, IntentGradient};
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CitadelBitState {
+    Active,
+    Destabilizing,
+    Reapproaching,
+    Persistent,
+}
+
+impl CitadelBitState {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Self::Active        => "active",
+            Self::Destabilizing => "destabilizing",
+            Self::Reapproaching => "reapproaching",
+            Self::Persistent    => "persistent",
+        }
+    }
+}
+
+/// Stability tracking for Bishop refresh decisions.
+#[derive(Debug, Clone, Copy)]
+pub struct StabilityScore {
+    /// 0.0 = exact position, 1.0 = max drift from base
+    pub lever_drift: f32,
+    /// 0.0 = full charge, 1.0 = completely faded
+    pub charge_fade: f32,
+    /// 0.0 = stable direction, 1.0 = reverse creep
+    pub direction_slip: f32,
+    /// 0.0 = never agreed, 1.0 = always agreed in last N scans
+    pub consensus_agreement: f32,
+}
+
+impl StabilityScore {
+    pub fn neutral() -> Self {
+        Self {
+            lever_drift: 0.0,
+            charge_fade: 0.0,
+            direction_slip: 0.0,
+            consensus_agreement: 0.5,
+        }
+    }
+
+    pub fn is_unstable(&self) -> bool {
+        self.lever_drift > 0.15
+            || self.charge_fade > 0.20
+            || self.direction_slip > 0.10
+            || self.consensus_agreement < 0.30
+    }
+}
+
+/// One wire-resident instruction bit assigned to a single council pole lane.
+pub struct CitadelBit {
+    /// Pole lane index (1-indexed, 1..=10).
+    pub lane: u128,
+    pub state: CitadelBitState,
+    pub instructions: Vec<NSQSlot>,
+    /// Legacy priority — retained for backward compatibility during migration.
+    /// New code should read from `emotional_gradient` instead.
+    pub priority: u16,
+    /// Charge polarity for this bit's primary lever.
+    pub charge: Charge,
+    /// Direction for this bit's primary lever.
+    pub direction: Direction,
+    /// The 8-emotion intent gradient — this bit's current emotional state.
+    pub emotional_gradient: IntentGradient,
+    /// When true, the Bishop should refresh this bit on the next cycle.
+    pub refresh_beacon: bool,
+    /// Stability score — tracked across Perkinje consensus scans.
+    pub stability: StabilityScore,
+    /// Base lever position assigned to this pole (50K, 100K, ..., 500K).
+    pub base_lever: u32,
+}
+
+impl CitadelBit {
+    pub fn new(lane: u128, base_lever: u32) -> Self {
+        Self {
+            lane,
+            state: CitadelBitState::Persistent,
+            instructions: Vec::new(),
+            priority: 255,
+            charge: Charge::Positive,
+            direction: Direction::Forward,
+            emotional_gradient: IntentGradient::neutral(),
+            refresh_beacon: false,
+            stability: StabilityScore::neutral(),
+            base_lever: base_lever.clamp(1, 500_000),
+        }
+    }
+
+    /// Receive new instruction slots. Update emotional state from slot content.
+    /// If destabilizing, release and re-approach first.
+    pub fn check_in(&mut self, new_instructions: Vec<NSQSlot>) {
+        if self.state == CitadelBitState::Destabilizing {
+            self.release_and_reapproach();
+        }
+
+        // Absorb emotional content from incoming slots.
+        for slot in &new_instructions {
+            self.absorb_slot_emotion(slot);
+        }
+
+        self.instructions.extend(new_instructions);
+
+        if self.state == CitadelBitState::Persistent {
+            self.state = CitadelBitState::Active;
+        }
+    }
+
+    /// Absorb emotional charge and position from an NSQ slot.
+    /// Each lever in the slot body maps to one of the 8 emotions.
+    fn absorb_slot_emotion(&mut self, slot: &NSQSlot) {
+        // Map slot levers to emotions based on dialect.
+        // Intent dialect: lever 0->joy, 1->sorrow, 2->love, 3->hate,
+        //                 4->curiosity, 5->fear, 6->lust, 7->disgust
+        let emotions = [
+            &mut self.emotional_gradient.joy,
+            &mut self.emotional_gradient.sorrow,
+            &mut self.emotional_gradient.love,
+            &mut self.emotional_gradient.hate,
+            &mut self.emotional_gradient.curiosity,
+            &mut self.emotional_gradient.fear,
+            &mut self.emotional_gradient.lust,
+            &mut self.emotional_gradient.disgust,
+        ];
+
+        for (i, lever) in slot.body.iter().enumerate() {
+            if i >= emotions.len() {
+                break;
+            }
+            emotions[i].position = lever.position.clamp(1, 500_000);
+            emotions[i].charge = lever.charge;
+            // Direction is Forward by default for incoming slots;
+            // Reverse is set explicitly by the coaching mode or Bishop.
+        }
+    }
+
+    /// Release failing state and re-approach with a corrected intent slot.
+    fn release_and_reapproach(&mut self) {
+        self.state = CitadelBitState::Reapproaching;
+        self.instructions.clear();
+
+        // Re-approach: load a full-positive intent lever as corrected seed.
+        let corrected = NSQSlot::new(
+            Dialect::Intent,
+            vec![NSQLever::new(Charge::Positive, CANONICAL_LEVER_MAX_POSITION).unwrap()],
+        );
+        self.instructions.push(corrected);
+
+        // Reset emotional gradient to neutral-positive.
+        self.emotional_gradient = IntentGradient::neutral();
+        self.refresh_beacon = false;
+        self.stability = StabilityScore::neutral();
+
+        self.state = CitadelBitState::Active;
+    }
+
+    /// True if the bit has live instructions and is not destabilizing.
+    pub fn is_live(&self) -> bool {
+        !self.instructions.is_empty()
+            && self.state != CitadelBitState::Destabilizing
+    }
+
+    /// Total lever pressure across all instructions, weighted by emotional state.
+    /// This replaces the old positive-only sum with the resolved emotional magnitude.
+    pub fn pressure_sum(&self) -> u64 {
+        let emotional_pressure = self.emotional_gradient.to_levers()
+            .iter()
+            .map(|lever| lever.position)
+            .sum::<u32>() as u64;
+
+        let instruction_pressure = self.instructions
+            .iter()
+            .flat_map(|slot| slot.body.iter())
+            .map(|lever| lever.position)
+            .sum::<u32>() as u64;
+
+        // Emotional state contributes 60%, raw instruction pressure 40%.
+        (emotional_pressure * 6 + instruction_pressure * 4) / 10
+    }
+
+    /// Compute the emotional distance from another bit's gradient.
+    pub fn emotional_distance(&self, other: &CitadelBit) -> f32 {
+        IntentGradient::distance(&self.emotional_gradient, &other.emotional_gradient)
+    }
+
+    /// Mark this bit as needing Bishop refresh.
+    pub fn flag_for_refresh(&mut self) {
+        self.refresh_beacon = true;
+        self.stability.lever_drift += 0.05;
+    }
+
+    /// Bishop touch: verify and stabilize this bit without reconstructing.
+    pub fn bishop_touch(&mut self) {
+        self.stability.lever_drift = self.stability.lever_drift * 0.5;
+        self.stability.charge_fade = self.stability.charge_fade * 0.5;
+        self.stability.direction_slip = self.stability.direction_slip * 0.5;
+        self.refresh_beacon = false;
+        // Bit remains on the wire. Position verified, not reconstructed.
+    }
+}

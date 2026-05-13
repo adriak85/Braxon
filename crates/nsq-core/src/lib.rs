@@ -570,14 +570,16 @@ pub fn lever_spacing_sweet_spot_report(tolerance: f32) -> LeverSpacingSweetSpotR
 
     let selected = probes
         .iter()
-        .max_by(|left, right| {
-            left.max_zero_failure_information_processed
-                .cmp(&right.max_zero_failure_information_processed)
-                .then_with(|| {
-                    left.max_zero_failure_distance
-                        .cmp(&right.max_zero_failure_distance)
+        .filter(|p| p.full_lever_range_zero_failure)
+        .min_by_key(|p| p.spacing_units)
+        .or_else(|| {
+            probes
+                .iter()
+                .max_by(|left, right| {
+                    left.max_zero_failure_information_processed
+                        .cmp(&right.max_zero_failure_information_processed)
+                        .then_with(|| right.spacing_units.cmp(&left.spacing_units))
                 })
-                .then_with(|| right.spacing_units.cmp(&left.spacing_units))
         })
         .expect("spacing sweep always emits at least one probe");
 
@@ -1233,3 +1235,4 @@ impl BraxonCollapsedAuthorityState {
             && self.exterior_runtime_crates_removed
     }
 }
+pub mod emotion;

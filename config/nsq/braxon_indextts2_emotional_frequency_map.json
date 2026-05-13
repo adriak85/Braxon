@@ -1,120 +1,16 @@
 {
-  "schema": "Braxon.nsq.indextts2_emotional_frequency_map.v1",
+  "schema": "braxon.nsq.indextts2_emotional_frequency_map.v1",
   "authority": "NSQ_COURT",
-  "identity": "Braxon",
   "canonical_semantics": "base8_switch_topology",
   "model": "IndexTTS2",
-  "voice_body_semantic_id": "braxon.sensory_generation.voice_body",
-  "route": ["policer", "router", "nsq_voice_route", "scheduler", "inspector"],
-  "zero_shot_synthesis": true,
-  "nsq_state_law": {
-    "switch_shape": [2, 1126, 2, 1126, 2, 1126, 2, 1126],
-    "zero_inclusive_lever_states": 2254,
-    "anchor_choices": 2,
-    "lever_min": 1,
-    "lever_max": 1126,
-    "carrier_rule": "each acoustic channel is resolved through NSQ anchor plus lever state; host audio parameters are boundary projection only"
-  },
+  "channel_count": 7,
   "channels": [
-    {
-      "numeric_id": 1,
-      "numeric_id_base8": "1",
-      "semantic_id": "braxon.voice.emotion.valence",
-      "intent_axis": "valence",
-      "acoustic_target": "warmth_vs_coldness",
-      "anchor_pair": "positive_negative_affect",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "calibrate positive and negative affect against stable speaker identity"
-    },
-    {
-      "numeric_id": 2,
-      "numeric_id_base8": "2",
-      "semantic_id": "braxon.voice.emotion.arousal",
-      "intent_axis": "arousal",
-      "acoustic_target": "energy_and_activation",
-      "anchor_pair": "calm_active",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "map arousal to energy without clipping emotional nuance"
-    },
-    {
-      "numeric_id": 3,
-      "numeric_id_base8": "3",
-      "semantic_id": "braxon.voice.emotion.breath",
-      "intent_axis": "breath",
-      "acoustic_target": "breath_pressure_and_phrase_air",
-      "anchor_pair": "closed_open_breath",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "separate breath pressure from loudness"
-    },
-    {
-      "numeric_id": 4,
-      "numeric_id_base8": "4",
-      "semantic_id": "braxon.voice.emotion.tremor",
-      "intent_axis": "tremor",
-      "acoustic_target": "micro_shake_and_vulnerability",
-      "anchor_pair": "steady_tremor",
-      "lever_states": 2254,
-      "default_position": 1,
-      "todo": "guard tremor from becoming noise or artifact"
-    },
-    {
-      "numeric_id": 5,
-      "numeric_id_base8": "5",
-      "semantic_id": "braxon.voice.emotion.timbre",
-      "intent_axis": "timbre",
-      "acoustic_target": "color_grain_and_resonance",
-      "anchor_pair": "bright_dark",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "preserve speaker identity while moving timbre"
-    },
-    {
-      "numeric_id": 6,
-      "numeric_id_base8": "6",
-      "semantic_id": "braxon.voice.emotion.cadence",
-      "intent_axis": "cadence",
-      "acoustic_target": "pace_pause_and_phrase_shape",
-      "anchor_pair": "short_long_phrase",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "map cadence independently from semantic token timing"
-    },
-    {
-      "numeric_id": 7,
-      "numeric_id_base8": "7",
-      "semantic_id": "braxon.voice.emotion.emphasis",
-      "intent_axis": "emphasis",
-      "acoustic_target": "stress_focus_and_salience",
-      "anchor_pair": "soft_hard_stress",
-      "lever_states": 2254,
-      "default_position": 563,
-      "todo": "align emphasis with intent gradient salience"
-    }
-  ],
-  "todo": [
-    {
-      "numeric_id": 1,
-      "numeric_id_base8": "1",
-      "semantic_id": "braxon.todo.voice.frequency_calibration",
-      "priority": "next",
-      "task": "Calibrate each emotional channel against IndexTTS2 synthesis controls while preserving speaker identity."
-    },
-    {
-      "numeric_id": 2,
-      "numeric_id_base8": "2",
-      "semantic_id": "braxon.todo.voice.runtime_adapter",
-      "priority": "high",
-      "task": "Implement the NSQ voice-route runtime adapter that projects lever states into IndexTTS2 boundary controls."
-    },
-    {
-      "numeric_id": 3,
-      "numeric_id_base8": "3",
-      "semantic_id": "braxon.todo.voice.inspection_gate",
-      "priority": "required",
-      "task": "Add inspection to reject clipped, flattened, or identity-drifting emotional voice output."
-    }
+    { "id": "neutral",    "lever_default": 250000, "description": "baseline_presence" },
+    { "id": "calm",       "lever_default": 300000, "description": "settled_low_arousal" },
+    { "id": "expressive", "lever_default": 350000, "description": "engaged_mid_arousal" },
+    { "id": "emphatic",   "lever_default": 400000, "description": "high_focus_delivery" },
+    { "id": "soft",       "lever_default": 200000, "description": "gentle_low_pressure" },
+    { "id": "urgent",     "lever_default": 420000, "description": "high_urgency_signal" },
+    { "id": "warm",       "lever_default": 320000, "description": "affective_connection" }
   ]
 }
