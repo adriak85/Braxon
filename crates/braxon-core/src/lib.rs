@@ -9,6 +9,7 @@ pub mod offline_models;
 pub mod seed_citadel;
 pub mod wowas;
 pub mod wowas_rescue;
+pub mod wowas_seeded;
 
 use serde::{Deserialize, Serialize};
 use std::fs;
@@ -28,6 +29,7 @@ pub use seed_citadel::{
     TokenSection, UniversalToken, UniversalTokenizerSeed, CITadel_MATERIALIZATION_VERSION,
     UNIVERSAL_TOKENIZER_VERSION,
 };
+pub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct BRAXONIdentity {
