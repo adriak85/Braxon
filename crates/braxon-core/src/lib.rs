@@ -6,6 +6,7 @@ pub mod council_ten;
 pub mod greeting;
 pub mod offline_agent;
 pub mod offline_models;
+pub mod seed_citadel;
 pub mod wowas;
 pub mod wowas_rescue;
 
@@ -21,6 +22,11 @@ pub use bus::{
     BraxonBus, BraxonBusReport, BusReplyLayer, IntentEnglishLoop, SharedThought,
     SpeechLoopState, ThoughtPressureCandidate, BRAXON_BUS_ROUTE, BRAXON_BUS_SCHEMA,
     BRAXON_REPLY_SCHEMA,
+};
+pub use seed_citadel::{
+    build_seed_plan, materialize_window, CitadelState, SeedMaterializationPlan,
+    TokenSection, UniversalToken, UniversalTokenizerSeed, CITadel_MATERIALIZATION_VERSION,
+    UNIVERSAL_TOKENIZER_VERSION,
 };
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
