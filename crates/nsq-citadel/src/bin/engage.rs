@@ -6,7 +6,7 @@ fn main() {
     let seed = IntentSeed::new("braxon.citadel.seed.v1", input);
     let materialized = seed.materialize(0, 8);
     let reply = CitadelBus::new(CoachingMode::Balanced).route(input);
-    println!("intent={}");
+    println!("intent={}", input);
     println!("input_slots={}", reply.input_slot_count);
     println!("capitals={} poles={}", reply.capital_count, reply.pole_count);
     println!("lead_pole={} priority={}", reply.lead_pole, reply.lead_priority);
