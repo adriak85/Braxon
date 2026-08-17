@@ -1,0 +1,78 @@
+NSQ.SYSTEM Braxon.Unified {
+  VERSION 1;
+  ROOT repository;
+
+  SEMANTIC_LAYERS {
+    SOURCE      = observed_file;
+    SECTION     = bounded_source_segment;
+    INTENT      = extracted_behavior_or_contract;
+    NODE        = canonical_NSQ_unit;
+    EDGE        = semantic_dependency;
+    MODULE      = executable_or_contractual_cohesion;
+    EVIDENCE    = preserved_provenance;
+  }
+
+  INGEST {
+    FOR_EACH source IN repository {
+      HASH source;
+      IF source.size > SECTION_LIMIT {
+        SPLIT source INTO deterministic_sections;
+      } ELSE {
+        SPLIT source INTO one_section;
+      }
+      FOR_EACH section {
+        EXTRACT intent;
+        EXTRACT symbols;
+        EXTRACT contracts;
+        EXTRACT dependencies;
+        EXTRACT tests;
+        EXTRACT benchmarks;
+        EMIT source_record;
+      }
+    }
+  }
+
+  NORMALIZE {
+    MERGE equivalent_intents;
+    MERGE duplicate_historical_snapshots;
+    PRESERVE strongest_implementation;
+    PRESERVE provenance_for_every_merged_record;
+    RESOLVE conflicting_contracts_by_explicit_edge;
+    NEVER_DROP_UNRESOLVED_SOURCE;
+  }
+
+  CANONICAL_TREE {
+    foundation;
+    semantics;
+    intent;
+    state;
+    composition;
+    runtime;
+    interfaces;
+    verification;
+    benchmarks;
+    evidence;
+  }
+
+  PLACEMENT {
+    implementation -> foundation|semantics|state|composition|runtime|interfaces;
+    contract -> semantics|interfaces;
+    test -> verification;
+    benchmark -> benchmarks;
+    historical_snapshot -> evidence;
+    generated_artifact -> evidence;
+    unresolved -> evidence.pending;
+  }
+
+  INVARIANTS {
+    EVERY_SOURCE_HAS_RECORD;
+    EVERY_RECORD_HAS_SOURCE_PATH;
+    EVERY_RECORD_HAS_CONTENT_HASH;
+    EVERY_INTENT_HAS_CANONICAL_NODE;
+    EVERY_CANONICAL_NODE_HAS_PROVENANCE;
+    EVERY_DEPENDENCY_IS_EXPLICIT;
+    NO_FILENAME_BASED_LOSS;
+    NO_SIZE_BASED_LOSS;
+    NO_PREINSPECTION_GATE;
+  }
+}
