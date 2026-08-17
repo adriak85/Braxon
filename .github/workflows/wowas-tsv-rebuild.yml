@@ -1,7 +1,9 @@
 name: WOWAS TSV corpus rebuild
 on:
   push:
-    branches: [wowas-full-construction-20260816]
+    branches:
+      - reconstruction
+      - wowas-full-construction-20260816
   workflow_dispatch:
 jobs:
   rebuild:
