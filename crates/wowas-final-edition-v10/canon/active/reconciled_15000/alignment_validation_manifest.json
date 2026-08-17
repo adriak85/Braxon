@@ -1,0 +1,274 @@
+{
+  "alignment_status_counts": {
+    "patched_metadata": 28902,
+    "structured_candidate": 6071
+  },
+  "duplicate_policy": "all rows preserved; duplicate groups ledgered; no source selected merely by label",
+  "duplicate_scene_id_groups": 365,
+  "generated_prose_imported": false,
+  "main_scene_rows": 13889,
+  "patch_scene_additions": 13,
+  "patch_sources_recursive_inventory": [
+    {
+      "bytes": 3500,
+      "path": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v10.md",
+      "sha256": "9e1f0831c3c9dd3dde6bae9fc99935d3503a08343fbe3fd1aef6d1354561727d",
+      "version_rank": 10
+    },
+    {
+      "bytes": 622,
+      "path": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v11.md",
+      "sha256": "ccfe917cfee9f506c9bda26a4457ff49c396bf1b00508864175ad2d8f5ff6fc1",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6647,
+      "path": "crates/wowas-final-edition-v10/canon/WOWAS_CANON_AUTHORITY_v14.md",
+      "sha256": "0e91e7408cb8d9b25b39870c3f52fe3058d993d53dcd2e88b59334b465b01e00",
+      "version_rank": 10
+    },
+    {
+      "bytes": 833,
+      "path": "crates/wowas-final-edition-v10/canon/braxon_ready_manifest_v10.md",
+      "sha256": "d00e6d67bae43ae50b1db7899ced341b2718ed5949416ff6def445c8c3738201",
+      "version_rank": 10
+    },
+    {
+      "bytes": 791,
+      "path": "crates/wowas-final-edition-v10/canon/braxon_ready_manifest_v7.md",
+      "sha256": "cf42db777fd72d715784cb92161cf40e1c44644abb00e31e6fab93259723e49a",
+      "version_rank": 10
+    },
+    {
+      "bytes": 849,
+      "path": "crates/wowas-final-edition-v10/canon/braxon_ready_manifest_v8_addendum.md",
+      "sha256": "be3f7b13a19d6eb7ad4fcba7a8d412fc586fd96586802572ef9b945b8c66b1c5",
+      "version_rank": 10
+    },
+    {
+      "bytes": 235369,
+      "path": "crates/wowas-final-edition-v10/canon/diagnostics/scene_authority_audit_20260419_104619.txt",
+      "sha256": "6ee16e7fe58f1f88695064d2cffea4c16cbf5734a533446c4f0f5a6aa670353d",
+      "version_rank": 10
+    },
+    {
+      "bytes": 402,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/CURRENT_APPLY_ORDER_v10.md",
+      "sha256": "5aed1cffe5a183eabe9258284f912d8b10b3266f3818289865f30199483fe6cd",
+      "version_rank": 10
+    },
+    {
+      "bytes": 833,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/braxon_ready_manifest_v10.md",
+      "sha256": "d00e6d67bae43ae50b1db7899ced341b2718ed5949416ff6def445c8c3738201",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6754,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_anti_placeholder_expansion_patch_v10.md",
+      "sha256": "b268bfb139b9e8e99a1e08ab55445a0d28a6a1c493ad8bec08a15b345966cf97",
+      "version_rank": 10
+    },
+    {
+      "bytes": 10453,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_book_build_selection_order_patch_v10.md",
+      "sha256": "8bfa0161771dfd406943ab7ca022553e5f4a0ef62996ee28bd321420e4bdb53f",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6780,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_books_24_25_priority_override_patch_v10.md",
+      "sha256": "8e6ff8a52c186c96646368c0aec58fb9dc2aaa2814fde80774490041a072d095",
+      "version_rank": 10
+    },
+    {
+      "bytes": 2240,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_character_timeline_lattice_patch_v10.tsv",
+      "sha256": "28488d1f7dde5fb5188323f1f9daeccddb00d2aa705eecbde8e53850da38cfab",
+      "version_rank": 10
+    },
+    {
+      "bytes": 7841,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_dialogue_and_play_insertion_patch_v10.md",
+      "sha256": "9dea730b262f95f7c60638f348d75755a2133abb4bfa37f2f3f19408d82b0dfd",
+      "version_rank": 10
+    },
+    {
+      "bytes": 8979,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_final_canon_control_bundle_v10_addendum.md",
+      "sha256": "2a05dc6c59a8103551e5f130882f6aaa653b08c533a38cec1a5b34f2c7d4536e",
+      "version_rank": 10
+    },
+    {
+      "bytes": 1642,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_magic_system_patch_v10.md",
+      "sha256": "e3f4eeb19d587d881286b8487312c0171ea59e72e25166899e94b6d36294020d",
+      "version_rank": 10
+    },
+    {
+      "bytes": 802,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_orbit_patch_v10.tsv",
+      "sha256": "183f5056ce43cd4c618e79a3bf28e0e90ab930a224834ed8d4412a195aca33d8",
+      "version_rank": 10
+    },
+    {
+      "bytes": 1047,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_prose_and_tone_patch_v10.md",
+      "sha256": "9fa142d5de903583e3d906da5a5301b455d8d4b4e7e228ffda8b00f7960decc6",
+      "version_rank": 10
+    },
+    {
+      "bytes": 7918,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_scene_authority_cleanup_patch_v10.md",
+      "sha256": "e240e3fb5f6a6292f24ebf8d6fa84142d16150c424c88a05fac6893ee93cf75d",
+      "version_rank": 10
+    },
+    {
+      "bytes": 4036,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_scene_patch_v10.tsv",
+      "sha256": "6602ef3010dca2da59a216336e13e0644cd120eb57f06b358b79a80813cb425c",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6818,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v12/wowas_quality_romance_calendar_and_resonance_patch_v12.md",
+      "sha256": "7d6513045e442a55b3a49b9eaf65b6da9333516e4c6b74477ad19da11af36305",
+      "version_rank": 10
+    },
+    {
+      "bytes": 7192,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v12/wowas_recursive_tree_rewrite_manifest_v12.md",
+      "sha256": "d35cb8acf03e0c8dbc70a9484b24b689a3957f0cf799cfd0ec1c2d02217fd83f",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6734,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v12/wowas_scene_connector_cast_tracker_apply_patch_v12.md",
+      "sha256": "883a70def3040adc0ca2950e3a1f44a7a1cbbcb013cfe9021f3295498344de08",
+      "version_rank": 10
+    },
+    {
+      "bytes": 3766,
+      "path": "crates/wowas-final-edition-v10/canon/patches/v9/wowas_v8_polish/wowas_morph_description_patch_v9.tsv",
+      "sha256": "c141625b2fd63b8788326bc30ea10c703ceeea3f08bc6857462a0eefbfddb415",
+      "version_rank": 10
+    },
+    {
+      "bytes": 2240,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_patch_v10.tsv",
+      "sha256": "28488d1f7dde5fb5188323f1f9daeccddb00d2aa705eecbde8e53850da38cfab",
+      "version_rank": 10
+    },
+    {
+      "bytes": 2650,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_patch_v6.tsv",
+      "sha256": "34796cc176351ce07abae709fb0ae2540ff49d71e875ee4ecab63142f8f83a94",
+      "version_rank": 10
+    },
+    {
+      "bytes": 70101,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_corridor_encounter_pressure_patch_v8.tsv",
+      "sha256": "31a0611e372adfc7ecd1941638d2035eaf7083d61dddb967f10e5039e937fde5",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6141,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_county_creature_patch_v6.tsv",
+      "sha256": "d7d2b6db49830eb3c59b07263e592e53b45aa72f092c6a079fc651213ef6baf8",
+      "version_rank": 10
+    },
+    {
+      "bytes": 4579,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_final_authority_manifest_v13.json",
+      "sha256": "f394d74689f0e7b2dad846cdce183cf7a70f4b571922ec44ebc5a5f51cbf1b00",
+      "version_rank": 10
+    },
+    {
+      "bytes": 12900,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_final_authority_system_v13.md",
+      "sha256": "85082e17dbf83fadcf4a68f5aafad7783f3204edc19a82beb6eef6173e726826",
+      "version_rank": 10
+    },
+    {
+      "bytes": 8979,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v10_addendum.md",
+      "sha256": "2a05dc6c59a8103551e5f130882f6aaa653b08c533a38cec1a5b34f2c7d4536e",
+      "version_rank": 10
+    },
+    {
+      "bytes": 6058,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v11_addendum.md",
+      "sha256": "de4e2dfc79628000a5d5a0daead7ff2a807d6cf0d17b489f40fa6c41a3730e3e",
+      "version_rank": 10
+    },
+    {
+      "bytes": 3016,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_final_canon_control_bundle_v8_addendum.md",
+      "sha256": "25389ee29292c77825d8426b0ea8d91be98b20493898cfbcabf33f651cf7a790",
+      "version_rank": 10
+    },
+    {
+      "bytes": 1642,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_magic_system_patch_v10.md",
+      "sha256": "e3f4eeb19d587d881286b8487312c0171ea59e72e25166899e94b6d36294020d",
+      "version_rank": 10
+    },
+    {
+      "bytes": 802,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_orbit_patch_v10.tsv",
+      "sha256": "183f5056ce43cd4c618e79a3bf28e0e90ab930a224834ed8d4412a195aca33d8",
+      "version_rank": 10
+    },
+    {
+      "bytes": 1437,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_orbit_patch_v6.tsv",
+      "sha256": "11476be227e7f0cd437af52d8eedf54330bb7758713c594c340eae6977eabe20",
+      "version_rank": 10
+    },
+    {
+      "bytes": 5983,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_patch_absorption_registry_v13.md",
+      "sha256": "cb4320c4ba9db509f0a623d114fcc37cc2592ff4997a06b4abc40e699db94dd3",
+      "version_rank": 10
+    },
+    {
+      "bytes": 4036,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v10.tsv",
+      "sha256": "6602ef3010dca2da59a216336e13e0644cd120eb57f06b358b79a80813cb425c",
+      "version_rank": 10
+    },
+    {
+      "bytes": 1471,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v11.tsv",
+      "sha256": "c86529a4d26c4ec0bd7fc68885a961ec61ca905d56da670bbad93774270aba59",
+      "version_rank": 10
+    },
+    {
+      "bytes": 15051,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v6.tsv",
+      "sha256": "af3e641dbafd55e03d37068449767aebd24d70e9a45184eff37bf690c59df47b",
+      "version_rank": 10
+    },
+    {
+      "bytes": 2972,
+      "path": "crates/wowas-final-edition-v10/reconstruction/AUTHORITY_CONFLICT_LEDGER.md",
+      "sha256": "b69f6fd3a87b9ca4ef260b005c506e0259bf53cbe39d825f81b36601c8043001",
+      "version_rank": 10
+    }
+  ],
+  "record_kind_counts": {
+    "beat_candidate": 821,
+    "character_candidate": 5000,
+    "encounter_candidate": 100,
+    "main_scene": 13889,
+    "patch_scene_addition": 13,
+    "recovered_15000_candidate": 15000,
+    "world_population_candidate": 150
+  },
+  "recovered_15000_candidate_rows": 15000,
+  "required_next_gate": "All patch instructions must resolve to applied metadata or explicit unresolved ledger entries; no prose is generated or imported.",
+  "schema": "wowas.original.15000.alignment.v1",
+  "source": "main historical exact 15000-row artifact",
+  "structured_candidate_rows": 6071,
+  "total_rows": 34973
+}

@@ -1,0 +1,81 @@
+{
+  "alignment_status_counts": {
+    "patched_metadata": 28902,
+    "structured_candidate": 6071
+  },
+  "base_rows": 13889,
+  "base_source": "origin/main active scene index; reconstruction-only exact 15000-row object retained as candidate layer",
+  "duplicate_scene_ids": 365,
+  "main_base_rows": 13889,
+  "main_source_hash": "373313080ae6b66cd435f44fb892766f8adc68d15bd5572e37c905df61217163",
+  "output_sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e",
+  "patch_apply_order": [
+    {
+      "order": 1,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v6.tsv",
+      "rows": 13,
+      "sha256": "af3e641dbafd55e03d37068449767aebd24d70e9a45184eff37bf690c59df47b",
+      "version": "v6"
+    },
+    {
+      "order": 2,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v10.tsv",
+      "rows": 14,
+      "sha256": "6602ef3010dca2da59a216336e13e0644cd120eb57f06b358b79a80813cb425c",
+      "version": "v10"
+    },
+    {
+      "order": 3,
+      "path": "crates/wowas-final-edition-v10/canon/wowas_scene_patch_v11.tsv",
+      "rows": 8,
+      "sha256": "c86529a4d26c4ec0bd7fc68885a961ec61ca905d56da670bbad93774270aba59",
+      "version": "v11"
+    },
+    {
+      "order": 4,
+      "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_characters_5000.tsv",
+      "prose_imported": false,
+      "rows": 5000,
+      "sha256": "44e11fc28fd1c2a53395c3a2e63f3af3acb9bc16bcba99bd8c413ba7faa3810c",
+      "version": "structured"
+    },
+    {
+      "order": 5,
+      "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_character_encounters.tsv",
+      "prose_imported": false,
+      "rows": 821,
+      "sha256": "fb8bed15d5ecd360d4b4300b2e0b8a58d8f33099906f7a1bd7c3c6a36197d3b2",
+      "version": "structured"
+    },
+    {
+      "order": 6,
+      "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_wildlife_encounters.tsv",
+      "prose_imported": false,
+      "rows": 100,
+      "sha256": "9331749b6e762737b4658a7944aef2cc6b47129f4201c2e8a0e0ccb5d3ad9e18",
+      "version": "structured"
+    },
+    {
+      "order": 7,
+      "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_desert_population.tsv",
+      "prose_imported": false,
+      "rows": 150,
+      "sha256": "416085648b1d148e4cc522d7b0ded4eb817a7e82a430ea9c154e5109ddab3edb",
+      "version": "structured"
+    }
+  ],
+  "prose_policy": "Generated prose is excluded. Structured candidates and beats are metadata only and must not count as authored prose or complete manuscript scenes.",
+  "record_kind_counts": {
+    "beat_candidate": 821,
+    "character_candidate": 5000,
+    "encounter_candidate": 100,
+    "main_scene": 13889,
+    "patch_scene_addition": 13,
+    "recovered_15000_candidate": 15000,
+    "world_population_candidate": 150
+  },
+  "recovered_15000_candidate_rows": 15000,
+  "recovered_candidate_hash": "e11ab643fb0aaadd64bee3c4b44ba714c2a921ec17d98371fe818e331e6f4dc1",
+  "schema": "wowas.reconciled.scene.metadata.v1",
+  "total_rows": 34973
+}
