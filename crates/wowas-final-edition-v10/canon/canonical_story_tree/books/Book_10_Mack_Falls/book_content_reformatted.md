@@ -1,0 +1,281 @@
+# WOWAS Book 10 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B10_OP0001` | `BEAT-SCENE-a8da7334220e` | quest_revision | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B10_OP0002` | `BEAT-SCENE-5736895b7f6f` | certainty_trade | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_10_Mack_Falls
+
+# Book_10_Mack_Falls
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 10 — Falling = Abandonment
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_10_Mack_Falls
+
+- B10_000 — The Discard
+- B10_001 — Mack Spends Everything
+- B10_002 — The Portal He Cuts Open
+- B10_003 — The Cockatrice Strikes
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+## merged from generated candidates
+
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/final_audit/wowas_knowledge_split.txt
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/SPECIFICATIONS.md:62:- **Canon lock (time):** time spent in-portal after escaping cursed Mack is **400 years**. Other figures (e.g., 336) are treated as draft variance unless explicitly canonized.
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/codex_nodes.json:53:      "summary": "Pip and Xethrolund experience 400 years in-portal after escaping cursed Mack. The experience is described as a short span of perceived time due to hyper-awareness from the perfection of their union (explicitly not time dilation). Any 336-year figure is treated as draft variance unless canonized.",
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/timeline_scope.json:6:      "Canon lock: time spent in-portal after escaping cursed Mack is 400 years.",
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/consistency_report.json:36:        "canon_lock": "time in-portal after escaping cursed Mack = 400 years",
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/consistency_report.json:39:          "Treat '400 years' as either: (a) total saga span, and/or (b) in-portal subjective span after escaping cursed Mack (canon-locked).",
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/consistency_report.json:73:        "canon_lock": "time in-portal after escaping cursed Mack = 400 years",
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/archetype_synthesis_master_prompt.md:14:- Canon lock: time in-portal after escaping cursed Mack is **400 years**.
+  candidate: /data/data/com.termux/files/home/Braxon/crates/wowas-engine/canon/data/cohesion_review_report.md:12:- Canon lock: **400-year in-portal** after escaping cursed Mack.
+- source: /data/data/com.termux/files/home/Braxon/freeze_manifest/hard_rake/wowas_knowledge_crossref.txt
+  candidate: crates/wowas-engine/canon/SPECIFICATIONS.md:62:- **Canon lock (time):** time spent in-portal after escaping cursed Mack is **400 years**. Other figures (e.g., 336) are treated as draft variance unless explicitly canonized.
+  candidate: crates/wowas-engine/canon/data/codex_nodes.json:53:      "summary": "Pip and Xethrolund experience 400 years in-portal after escaping cursed Mack. The experience is described as a short span of perceived time due to hyper-awareness from the perfection of their union (explicitly not time dilation). Any 336-year figure is treated as draft variance unless canonized.",
+  candidate: crates/wowas-engine/canon/data/timeline_scope.json:6:      "Canon lock: time spent in-portal after escaping cursed Mack is 400 years.",
+  candidate: crates/wowas-engine/canon/data/consistency_report.json:36:        "canon_lock": "time in-portal after escaping cursed Mack = 400 years",
+  candidate: crates/wowas-engine/canon/data/consistency_report.json:39:          "Treat '400 years' as either: (a) total saga span, and/or (b) in-portal subjective span after escaping cursed Mack (canon-locked).",
+  candidate: crates/wowas-engine/canon/data/consistency_report.json:73:        "canon_lock": "time in-portal after escaping cursed Mack = 400 years",
+  candidate: crates/wowas-engine/canon/data/archetype_synthesis_master_prompt.md:14:- Canon lock: time in-portal after escaping cursed Mack is **400 years**.
+  candidate: crates/wowas-engine/canon/data/cohesion_review_report.md:12:- Canon lock: **400-year in-portal** after escaping cursed Mack.
+
+### 03_time_map.md
+
+# time map — Book_10_Mack_Falls
+
+## B10_000 — The Discard
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B10_001 — Mack Spends Everything
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B10_002 — The Portal He Cuts Open
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B10_003 — The Cockatrice Strikes
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# Mack Falls Scene Spine
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 10 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: Mack Falls
+
+## B10.01 — The Fall Is Felt Before It Is Seen
+target_scenes: 12
+
+S001 The-Book-Opens-on-an-Absence-in-the-Land-Itself — The first sign of Mack's fall is environmental, not verbal.
+S002 Pip-Feels-the-Sanctuary-Lose-Some-Part-of-Its-Living-Balance — Home shudders at a bodily level.
+S003 Rylos-Vayne-Johnson-Reads-the-Field-As-Deity-Damage — He knows this is not ordinary collapse.
+S004 Mack-Booming-Voice-Comes-Distorted-Through-Branch-and-Stone — The vast willow is still himself, but strained.
+S005 The-Ground-Forms-Wrong-Beneath-Them — Pathways and alcoves do not answer as cleanly as before.
+S006 Pip-Understands-That-Mack-Is-Not-Just-In-Danger-He-Is-The-Danger-Site — Representation stays correct.
+S007 Rylos-Refuses-to-Let-the-Moment-Be-Flattened-Into-Rescue-Cliche — The scale remains enormous.
+S008 Daisy-May-and-Majeski-Feel-the-Shift-and-Hold-Close — Great Dane truth remains steady.
+S009 The-Sanctuary-Shows-That-Its-Guardian-Body-Is-Wounded — The world-state of home changes visibly.
+S010 Pip-Does-Not-Fantasize-an-Easy-Fix — Determination remains honest.
+S011 Mack-Names-the-Damage-As-Cost-Not-Ending — His voice still anchors the field.
+S012 The-Beat-Ends-with-the-Fall-Classified-As-Real — Book 10 begins in true guardian crisis.
+
+## B10.02 — A Vast Being Can Still Be Hurt
+target_scenes: 12
+
+S013 Pip-Confronts-the-Scale-of-Mack-Vulnerability — Deity-class does not mean untouchable.
+S014 Rylos-Reads-Which-Parts-of-the-Land-Are-Failing-With-Him — Practical discernment remains load-bearing.
+S015 Mack-Lowers-Soft-Needled-Branches-to-Steady-Them-Even-Now — Care continues through damage.
+S016 Velvet-Barked-Supports-Rise-Unevenly-From-the-Ground — His life magic still works, but under strain.
+S017 The-Sanctuary-Feels-Like-a-Wounded-Body-Trying-to-Protect-Its-Own-Heart — Setting truth deepens.
+S018 Pip-Hates-the-Sight-of-Mack-Forced-Into-Limit — Emotional severity lands.
+S019 Rylos-Keeps-Him-From-Confusing-Love-With-Panic — Bond remains corrective.
+S020 Daisy-May-Rests-Silent-Near-the-Root-Line — Her presence remains unspeaking and central.
+S021 Majeski-Holds-the-Outer-Read — Great Dane household logic remains intact.
+S022 Mack-Rejects-Collapse-as-Identity — He is wounded, not diminished into passivity.
+S023 The-Land-Itself-Tries-to-Stay-Functional-For-Them — Home keeps answering despite damage.
+S024 The-Beat-Ends-with-Vastness-and-Injury-Held-Together — Book law strengthens.
+
+## B10.03 — Pip Trains While the Guardian Weakens
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Out-of-Desperation-and-Love — His persistence remains core.
+S026 He-Hides-the-Practice-Because-He-Will-Not-Perform-His-Limit — Private failure stays canonically true.
+S027 Mack-Creates-a-Small-Still-Root-Chamber-For-Him-Despite-His-Own-Strain — Support remains character-true.
+S028 The-First-Attempt-Fails-Almost-Immediately — No easy power drift.
+S029 The-Second-Attempt-Catches-a-Hairline-Vibration-and-Loses-It — Tiny progress only.
+S030 Pip-Feels-Smaller-Than-the-Crisis-and-Trains-Anyway — Determination, not machine-coldness.
+S031 He-Does-Not-Claim-Heroic-Suffering-From-It — Anti-martyr safeguard holds.
+S032 Rylos-Senses-the-Training-Afterward-and-Understands-Why — Bond sensitivity continues.
+S033 Mack-Knows-and-Does-Not-Humiliate-Him-By-Naming-It-Aloud — Sanctuary keeps dignity.
+S034 Sonomancy-Remains-Rare-Hard-and-Non-Saving — Core truth reinforced.
+S035 Pip-Leaves-With-Better-Will-Not-Better-Control — Honest development.
+S036 The-Beat-Ends-with-Private-Failure-Still-Part-of-His-Path — Canon stays on track.
+
+## B10.04 — The Household Learns to Carry Mack
+target_scenes: 12
+
+S037 The-Crisis-Forces-a-Reversal-of-Protection-Flow — Those sheltered by Mack must now help hold him.
+S038 Pip-Struggles-with-the-Idea-of-Guarding-the-Guardian — Emotional inversion deepens.
+S039 Rylos-Frames-the-Task-As-Response-Not-Presumption — Mature clarity matters.
+S040 The-Land-Offers-Partial-Cooperation-Through-Residual-Life-Magic — Mack's will still moves through ground and root.
+S041 Daisy-May-and-Majeski-Reorient-the-Household-Around-His-Wounded-Presence — Great Dane truth remains practical.
+S042 Pip-Understands-That-Care-Can-Be-Large-Enough-to-Answer-Large-Beings — Growth continues.
+S043 Rylos-Reads-Where-the-Strain-Is-Worst — He remains essential.
+S044 Mack-Still-Speaks-in-That-Big-Booming-Voice-But-with-Cost-Under-It — Representation remains corrected.
+S045 The-Sanctuary-Becomes-More-Deliberate-and-Less-Automatic — Home loses ease.
+S046 Pip-Does-Not-Break-Into-Naivete-About-Their-Odds — He knows the severity.
+S047 The-Household-Finds-a-New-Working-Formation — Family architecture adapts.
+S048 The-Beat-Ends-with-Care-Recast-As-Mutual-Bearing — Book 10 deepens.
+
+## B10.05 — Ursula Is Felt Through the Wound
+target_scenes: 12
+
+S049 Mack-Damage-Stirs-the-Core-Amethyst-Presence-Again — Ursula's truth presses closer through crisis.
+S050 Pip-Feels-the-Planetary-Core-As-Sorrow-and-Pressure — World-state and deity truth braid.
+S051 Rylos-Reads-the-Connection-Between-Guardian-Fall-and-Core-Binding — Discernment continues load-bearing.
+S052 Mack-Speaks-of-Ursula-As-Deity-and-Half-Existence-Not-Ordinary-Cast — Correction remains embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Under-Root-Pressure — Symbol and state unite.
+S054 Pip-Understands-More-Clearly-That-the-Planet-Itself-Is-Wounded-By-What-It-Holds — Stakes widen.
+S055 Rylos-Keeps-the-Moment-From-Turning-Mythic-and-Vague — Accuracy matters.
+S056 Daisy-May-and-Majeski-Remain-Present-As-Living-Household-Truth-Within-Cosmic-Discussion — Species truth holds.
+S057 Mack-Frames-His-Fall-As-Part-of-a-Wider-Wound-Pattern — Deity reading deepens.
+S058 The-Sanctuary-Feels-Like-It-Is-Listening-Downward-Into-the-Planet — Setting truth sharpens.
+S059 Pip-Hates-How-Much-He-Cannot-Fix — Honest limitation lands.
+S060 The-Beat-Ends-with-Ursulas-Core-Pressure-Made-More-Active — Book 10 widens correctly.
+
+## B10.06 — Rylos Refuses Despair
+target_scenes: 12
+
+S061 The-Guardian-Crisis-Pushes-Everyone-Toward-Hopelessness — Emotional field narrows.
+S062 Pip-Feels-the-Pull-and-Does-Not-Give-In — Determination stays real.
+S063 Rylos-Refuses-to-Let-the-Household-Go-Doom-Dramatic — Mature counterforce.
+S064 Mack-Supports-That-Refusal-With-What-Life-Magic-He-Can-Still-Muster — Living reinforcement remains.
+S065 Daisy-May-Holds-Steady-Without-Words — Her silence remains active strength.
+S066 Majeski-Does-Too — The pair stay intact and load-bearing.
+S067 Pip-Realizes-That-Steadiness-Is-Not-the-Same-as-Denial — Important growth note.
+S068 Rylos-Names-What-Can-Still-Be-Done-Cleanly — Practical hope enters.
+S069 The-Sanctuary-Shapes-a-Functional-Space-For-Response — Mack's terrain answers the moral turn.
+S070 Despair-Fails-to-Become-Identity — Anti-collapse law enters.
+S071 The-Household-Begins-Moving-Again-From-Action — Crisis becomes work.
+S072 The-Beat-Ends-with-Despair-Refused-Without-Easy-Comfort — Honest resilience locks in.
+
+## B10.07 — Mack Falls Further
+target_scenes: 12
+
+S073 The-Crisis-Deepens-Beyond-the-First-Estimate — The fall continues.
+S074 Branches-Drop-Lower-and-Paths-Falter-More-Harshly — Environmental damage intensifies.
+S075 Pip-Sees-How-Vast-a-Being-Can-Fall-Without-Ceasing-to-Be-Himself — Representation remains correct.
+S076 Rylos-Reads-the-New-Limits-Faster-Than-Panic-Can — Essential clarity.
+S077 Mack-Reorders-the-Ground-One-More-Time-to-Protect-Them — Deity-class effort under damage.
+S078 Daisy-May-and-Majeski-Move-Through-the-Shift-As-Family-Not-Symbols — Species truth stays intact.
+S079 Pip-Does-Not-Try-to-Solve-It-With-Easy-Sonomancy — Limit remains honest.
+S080 He-Acts-With-What-He-Actually-Has — Determination stays grounded.
+S081 Rylos-Stays-Beside-Him-And-Beside-Mack — Bond and household hold together.
+S082 The-Sanctuarys-Beauty-Turns-Severe-Not-Gone — Tone deepens.
+S083 Mack-Booming-Voice-Refuses-Smallness-Even-Now — Character truth remains.
+S084 The-Beat-Ends-with-the-Fall-No-Longer-Partial — Book 10 hardens.
+
+## B10.08 — Daisy-May Holds the Hurt House
+target_scenes: 12
+
+S085 Daisy-May-Becomes-Central-to-Household-Stability-Without-Speaking — Her canon is actively protected.
+S086 Majeski-Answers-Her-Lead — The pair remain Great Danes and relationally true.
+S087 Pip-Finds-His-Breath-By-Staying-Near-Them — Household truth strengthens him.
+S088 Rylos-Recognizes-That-Their-Silence-Is-One-of-the-Things-Keeping-the-World-From-Going-False — Important refinement.
+S089 Mack-Grows-a-Sheltered-Low-Grotto-for-the-Household-Even-While-Falling — Life magic remains active.
+S090 The-Hurt-House-Becomes-a-Place-of-Quiet-Work-Not-Performance — Tone stays clean.
+S091 Daisy-May-Is-Never-Humanized-and-Never-Made-Sacrificial — Polluted shorthand is resisted directly.
+S092 Majeski-Remains-Son-and-Household-Force — Character truth holds.
+S093 Pip-Relearns-that-Love-Does-Not-Always-Sound-Like-Words — Emotional growth continues.
+S094 Rylos-Does-Too — Bond and household deepen.
+S095 The-Sanctuary-Holds-Because-the-Household-Holds — Family architecture becomes visible.
+S096 The-Beat-Ends-with-Silence-Made-Structural-Again — Book 10 stays accurate.
+
+## B10.09 — The Cost of Bearing a World
+target_scenes: 12
+
+S097 Mack-Makes-Clear-What-It-Means-to-Bear-So-Much-Life — His scale and burden become explicit.
+S098 Pip-Understands-That-Guardianship-Is-Not-Poetry-It-Is-Weight — Major maturation.
+S099 Rylos-Keeps-the-Lesson-From-Becoming-Self-Destructive-For-Pip — Anti-martyr correction remains active.
+S100 The-Land-Shows-How-Much-of-It-Has-Been-Held-by-Mack-Will — World-state truth deepens.
+S101 Ursula's-Core-Binding-and-Mack-Fall-Start-to-Look-Like-Adjacent-Wounds — Deity-scale pattern strengthens.
+S102 Daisy-May-and-Majeski-Remain-Present-Within-the-Lesson-As-Living-Household-Truth — Species truth continues.
+S103 Pip-Does-Not-Claim-He-Can-Replace-Mack — Honest limitation.
+S104 He-Does-Claim-He-Will-Answer-What-He-Can — Determination remains core.
+S105 Rylos-Stands-With-Him-In-That-Cleaner-Shape — Bond matures.
+S106 Mack-Booming-Voice-Blesses-Work-Not-Fantasy — Character remains true.
+S107 The-Household-Takes-the-Lesson-Into-Action — Emotional truth becomes route.
+S108 The-Beat-Ends-with-Bearing-Recast-As-Real-Cost — Book 10 deepens lawfully.
+
+## B10.10 — Book Ten Locks Its First Guardian-Fall Law
+target_scenes: 12
+
+S109 Fall-Household-Deity-Core-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Crisis — Core correction holds.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Body-Booming-Voice-and-Terrain-Magic-Remain-Central-Even-in-Fall — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-World-Character — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Guardian-Crisis — Canon actively protected.
+S115 The-Sanctuary-Is-Recast-As-a-Wounded-Living-Body — Setting truth locks.
+S116 Sonomancy-Remains-Rare-Hard-and-Inadequate-As-Easy-Salvation — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Under-Mack-Fall — Pair refinement continues.
+S118 The-Book-Finds-Its-Guardian-Fall-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Portal-Scale-Consequences — Book 11 loads forward.
+S120 The-Beat-Ends-with-Mack-Still-Falling-and-Still-Mack — Book 10 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

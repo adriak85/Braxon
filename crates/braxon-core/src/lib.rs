@@ -11,6 +11,8 @@ pub mod offline_agent;
 pub mod offline_models;
 pub mod piston_memory;
 pub mod nsq_native;
+pub mod native_bus;
+pub mod native_stack;
 pub mod seed_citadel;
 pub mod target_field;
 pub mod wowas;
@@ -26,6 +28,8 @@ pub use ghost_memory::{FireDecision, FireReport, FiringLease, GhostMemoryBus, Pa
 pub use kinetic_reflexor::{BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass, ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY};
 pub use piston_memory::{MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory, RegionKind, Residency, PistonPhase as MemoryPistonPhase, PISTON_MEMORY_SCHEMA};
 pub use nsq_native::{AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision, NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA};
+pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
+pub use native_stack::NativeNsqStack;
 pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
 
 pub use seed_citadel::{

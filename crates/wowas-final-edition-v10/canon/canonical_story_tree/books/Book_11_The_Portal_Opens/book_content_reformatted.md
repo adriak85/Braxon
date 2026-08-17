@@ -1,0 +1,269 @@
+# WOWAS Book 11 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B11_OP0001` | `BEAT-SCENE-25574da1b14a` | certainty_trade | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B11_OP0002` | `BEAT-SCENE-a550ac84e992` | creature_signal | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_11_The_Portal_Opens
+
+# Book_11_The_Portal_Opens
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 11 — Hope = Passage
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_11_The_Portal_Opens
+
+- B11_000 — A Glimmer Of Hope
+- B11_001 — Xethrolund Crosses Through
+- B11_002 — He Ran He Came He Arrived
+- B11_003 — The Love Bomb
+- B11_004 — An Illogical Desire
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_11_The_Portal_Opens
+
+## B11_000 — A Glimmer Of Hope
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B11_001 — Xethrolund Crosses Through
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B11_002 — He Ran He Came He Arrived
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B11_003 — The Love Bomb
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B11_004 — An Illogical Desire
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# The Portal Opens Scene Spine
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 11 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Portal Opens
+
+## B11.01 — The Opening Is Prepared by Damage
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-Threshold-Made-Possible-by-Everything-That-Has-Broken — The portal is consequence, not convenience.
+S002 Pip-Feels-the-World-Thinning-At-a-Specific-Point — Transition becomes bodily real.
+S003 Rylos-Vayne-Johnson-Reads-the-Opening-As-Field-Event-Not-Miracle — Discernment remains practical.
+S004 Mack-Booming-Voice-Carves-Order-Into-the-Moment — The vast willow still shapes response through land and speech.
+S005 Root-Arches-and-Living-Platforms-Rise-Toward-the-Threshold — Terraformed preparation remains active.
+S006 Pip-Understands-That-Openings-Can-Be-as-Dangerous-as-Cages — Growth stays mature.
+S007 Rylos-Refuses-to-Let-Hope-Become-Sloppiness — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Approach-As-Silent-Great-Dane-Presence — Canon stays intact.
+S009 The-Sanctuary-Acts-Like-a-Living-Launch-Site — Home becomes transition architecture.
+S010 Pip-Does-Not-Assume-Sonomancy-Will-Suddenly-Make-Him-Ready — Limit remains honest.
+S011 Mack-Frames-the-Portal-As-Answer-and-Test — Deity-scale reading enters.
+S012 The-Beat-Ends-with-the-Threshold-Classified-Correctly — Book 11 begins under transition law.
+
+## B11.02 — A Door Is Not a Promise
+target_scenes: 12
+
+S013 The-Opening-Stabilizes-Enough-to-Be-Seen-Clearly — The portal becomes undeniable.
+S014 Pip-Feels-Drawn-and-Warned-at-Once — Hope and danger stay braided.
+S015 Rylos-Reads-Which-Parts-of-the-Portal-Are-True-and-Which-Are-Hazard — He remains essential.
+S016 Mack-Grows-a-Layered-Approach-of-Roots-Stone-and-Lighted-Grottos — Environment becomes tutorial and defense.
+S017 The-Sanctuary-Teaches-By-Shaping-the-Walk-Toward-the-Door — Mack's land magic stays cognitive.
+S018 Daisy-May-Rests-Silent-at-a-Critical-Bend-in-the-Approach — Great Dane truth remains load-bearing.
+S019 Majeski-Holds-the-Wider-Perimeter — The pair remain themselves.
+S020 Pip-Understands-That-An-Open-Door-Does-Not-Mean-Safe-Passage — Important maturity note.
+S021 Rylos-Confirms-It — Clarity deepens trust.
+S022 Mack-Rejects-Any-Reading-of-the-Portal-as-Clean-Escape — Serious tonal law.
+S023 The-Land-Itself-Behaves-Like-It-Is-Listening-to-the-Threshold — World-state deepens.
+S024 The-Beat-Ends-with-the-Door-Recast-As-Challenge — Book 11 tightens properly.
+
+## B11.03 — Pip Trains Against Crossing
+target_scenes: 12
+
+S025 Pip-Retreats-to-Private-Sonomancy-Training-Again — Threshold pressure drives him back to effort.
+S026 He-Practices-Alone-Because-He-Will-Not-Stage-His-Need — Private truth remains intact.
+S027 Mack-Provides-a-Hushed-Low-Chamber-of-Roots-and-Amethyst-Lit-Stillness — Support remains character-true.
+S028 The-First-Attempt-Fails-Harder-Than-He-Wanted — No easy magic drift.
+S029 The-Second-Attempt-Catches-a-Faint-Pattern-and-Breaks — Tiny progress only.
+S030 Pip-Feels-the-Door-Answer-Slightly-and-Loses-It — Honest frustration.
+S031 He-Does-Not-Turn-That-Into-Secret-Mastery-Fantasy — Safeguard holds.
+S032 Rylos-Senses-the-Wear-In-Him-Afterward — Bond sensitivity continues.
+S033 Mack-Knows-and-Protects-His-Dignity-Again — Sanctuary remains protective.
+S034 Sonomancy-Stays-Rare-Hard-and-Not-Public — Canon remains intact.
+S035 Pip-Leaves-More-Resolved-Than-Empowered — Honest growth.
+S036 The-Beat-Ends-with-Crossing-Still-Beyond-His-Control — Book law stays true.
+
+## B11.04 — What Must Cross and What Must Stay
+target_scenes: 12
+
+S037 The-Household-Has-to-Face-the-Question-of-Passage — Not everyone or everything can move the same way.
+S038 Pip-Hates-the-Dividing-Logic-of-Thresholds — Emotional cost sharpens.
+S039 Rylos-Reads-the-Portal-As-Selective-and-Demanding — Practical truth enters.
+S040 Mack-Shapes-Multiple-Waiting-Spaces-From-the-Ground-to-Hold-the-Conversation — Grottoes and terraces rise as needed.
+S041 The-Sanctuary-Becomes-a-Map-of-Possibilities-and-Limits — Setting remains active intelligence.
+S042 Daisy-May-and-Majeski-Make-Clear-Through-Presence-That-Household-Truth-Cannot-Be-Reduced-to-Transport-Logic — Great Dane canon remains load-bearing.
+S043 Pip-Realizes-Crossing-Is-Not-The-Same-As-Leaving-Love-Behind — Growth deepens.
+S044 Rylos-Keeps-the-Moment-From-Turning-Into-Self-Torment — Anti-martyr safeguard stays active.
+S045 Mack-Frames-Staying-and-Crossing-As-Different-Forms-of-Faithfulness — Deity-scale teaching.
+S046 The-Portal-Pulses-As-If-It-Recognizes-What-Is-At-Stake — Threshold intelligence rises.
+S047 The-Household-Understands-More-Than-It-Wants-To — Cost becomes explicit.
+S048 The-Beat-Ends-with-Threshold-Logic-Accepted-But-Not-Liked — Honest maturity.
+
+## B11.05 — Ursula Is Nearer on the Other Side
+target_scenes: 12
+
+S049 The-Open-Portal-Makes-the-Core-Amethyst-Presence-Feel-Closer — Ursula's half-existence presses nearer.
+S050 Pip-Feels-Her-As-Pressure-Not-Presence-in-a-Room — Correction remains intact.
+S051 Rylos-Reads-the-Threshold-As-Connected-to-Core-Binding — Discernment stays essential.
+S052 Mack-Speaks-of-Ursula-As-Deity-Bound-Below-Not-Ordinary-Cast-Above — Canon is re-embedded.
+S053 The-Land-Shows-Amethyst-Veins-Under-the-Approach — Symbol and world-state remain joined.
+S054 Pip-Understands-the-Portal-Is-Not-Separate-From-Planetary-Wound — Stakes deepen.
+S055 Rylos-Prevents-the-Moment-From-Becoming-Vague-Cosmic-Language — Accuracy matters.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Cosmic-Field — Great Dane truth holds.
+S057 Mack-Frames-the-Opening-As-Part-of-a-Larger-Wound-Answer-Pattern — Deity reading deepens.
+S058 The-Sanctuary-Feels-Like-It-Is-Reaching-Down-and-Out-at-Once — Setting truth sharpens.
+S059 Pip-Hates-How-Little-He-Can-Control-and-Stays-Present — Determination stays real.
+S060 The-Beat-Ends-with-Ursulas-Nearness-Recast-Correctly — Book 11 stays aligned.
+
+## B11.06 — Rylos Keeps the Threshold Honest
+target_scenes: 12
+
+S061 The-Portal-Creates-a-Pressure-to-Idealize-or-Demonize-What-Comes-Next — Binary thinking threatens clarity.
+S062 Pip-Feels-the-Pull-Toward-Both-Extremes — Emotional strain intensifies.
+S063 Rylos-Refuses-Both — He remains load-bearing reader and partner.
+S064 Mack-Supports-Him-With-True-Weight-and-Living-Form — The ground itself answers to his stance.
+S065 Daisy-May-Holds-Silent-at-the-Inner-Threshold — Presence remains powerful.
+S066 Majeski-Holds-the-Outer-One — The pair remain household architecture.
+S067 Pip-Learns-That-Honest-Crossing-Requires-Accurate-Seeing-More-Than-Courage-Alone — Major growth note.
+S068 Rylos-Makes-Cleaner-Language-Possible-Again — The bond refines truth.
+S069 Mack-Rejects-Cheap-Destiny-Talk — No hollow prophecy drift.
+S070 The-Portal-Stabilizes-Under-Better-Reading — Practical effect follows moral clarity.
+S071 The-Household-Feels-More-Ready-Without-Feeling-Safe — Honest tone.
+S072 The-Beat-Ends-with-the-Threshold-Held-Honestly — Book 11 deepens its law.
+
+## B11.07 — Daisy-May and Majeski Do Not Become Symbols
+target_scenes: 12
+
+S073 The-Portal-Moment-Could-Easily-Flatten-the-Dogs-Into-Meaning-Tokens-and-Does-Not — Canon is actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth holds.
+S075 Majeski-Remains-Her-Son-and-Living-Presence — Relationship truth stays intact.
+S076 Pip-Feels-the-Household-More-Clearly-Because-Thresholds-Threaten-It — Emotional clarity deepens.
+S077 Rylos-Understands-That-Them-Remaining-Themselves-Is-Part-of-What-Must-Be-Saved — Important refinement.
+S078 Mack-Grows-a-Safe-Low-Approach-for-Them-Without-Humanizing-Them — Representation stays accurate.
+S079 The-Sanctuary-Uses-Space-Not-Speech-to-Honor-Them — Good setting truth.
+S080 Daisy-May-Never-Speaks — Canon remains explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon remains explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Finds-Strength-in-Not-Lying-About-Who-Anyone-Is — Theme sharpens.
+S084 The-Beat-Ends-with-Species-and-Relation-Truth-Held-Firm — Book 11 stays clean.
+
+## B11.08 — The Crossing Attempt
+target_scenes: 12
+
+S085 The-First-True-Move-Toward-the-Portal-Begins — Tension converts into action.
+S086 Pip-Feels-the-Field-Push-Back-On-Him — Threshold pressure becomes bodily.
+S087 Rylos-Reads-How-to-Adjust-the-Approach-in-Real-Time — Discernment remains essential.
+S088 Mack-Reorders-the-Living-Approach-Path-Under-Them — Terraforming remains active crisis response.
+S089 The-Portal-Does-Not-Welcome-Them-It-Tests-Them — Tone remains honest.
+S090 Pip-Does-Not-Reach-for-Easy-Sonomancy-and-Save-the-Day — Crucial safeguard holds.
+S091 He-Acts-With-Will-and-Limited-Tools-Instead — Character truth remains intact.
+S092 Rylos-Stays-With-Him-As-Partner-Not-Shadow — Canon correction remains active.
+S093 Daisy-May-and-Majeski-Hold-the-Household-Side-of-the-Threshold — Great Dane truth remains central.
+S094 Mack's-Booming-Voice-Keeps-the-Moment-From-Shattering — Deity-scale support remains.
+S095 The-Attempt-Works-Partially-and-Costs-Immediately — Honest progress.
+S096 The-Beat-Ends-with-Crossing-Recast-As-Real-Work — Book 11 moves forward.
+
+## B11.09 — What Opens Also Separates
+target_scenes: 12
+
+S097 The-Portal-Changes-Distance-and-Presence-All-at-Once — Threshold law sharpens.
+S098 Pip-Feels-the-Cost-of-Opening-As-Separation-Pressure — Emotional severity lands.
+S099 Rylos-Keeps-Him-From-Misreading-That-Cost-As-Abandonment — Important correction.
+S100 Mack-Shapes-Waiting-Places-and-Return-Paths-From-the-Earth — Sanctuary remains active support.
+S101 Daisy-May-and-Majeski-Keep-the-Household-Coherent-During-Threshold-Strain — Canon continues to matter.
+S102 Ursula's-Core-Presence-Feels-Stronger-Through-the-Open-Path — Planetary wound deepens.
+S103 Pip-Understands-That-Some-Doors-Open-By-Making-New-Kinds-of-Distance — Mature realization.
+S104 He-Does-Not-Turn-That-Into-Doom-Identity — Anti-martyr safeguard holds.
+S105 Rylos-Stays-Close-Enough-to-Keep-the-Reading-True — Bond remains load-bearing.
+S106 The-Sanctuary-Proves-It-Can-Remain-Home-Even-When-It-Becomes-Threshold — Excellent setting truth.
+S107 The-Opening-Forces-Everyone-to-Relearn-Position — Household reshapes.
+S108 The-Beat-Ends-with-Opening-and-Separation-Braided — Book 11 deepens correctly.
+
+## B11.10 — Book Eleven Locks Its First Threshold Law
+target_scenes: 12
+
+S109 Portal-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-At-the-Threshold — Core correction holds.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-at-the-Opening — Naming and function remain corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-the-Portal-Book — Representation stays right.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-World-Character — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-at-the-Threshold — Canon actively protected.
+S115 The-Portal-Is-Recast-As-Answer-Test-and-Separation-Mechanism — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Unable-to-Shortcut-Threshold-Reality — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Under-Opening-Pressure — Pair refinement continues.
+S118 The-Book-Finds-Its-Threshold-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Stasis-Scale-Consequences — Book 12 loads forward.
+S120 The-Beat-Ends-with-the-Portal-Truly-Open — Book 11 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

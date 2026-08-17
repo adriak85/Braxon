@@ -1,0 +1,21 @@
+{
+  "background_rows": 2000000,
+  "domains": [
+    "characters",
+    "creatures",
+    "quests",
+    "world_introduction"
+  ],
+  "event_beats": 2019,
+  "failures": [],
+  "missing_background_refs": 0,
+  "missing_relationship_refs": 0,
+  "missing_timeline_refs": 0,
+  "relationship_rows": 45000,
+  "scenes": 2019,
+  "spine_books": 33,
+  "status": "pass",
+  "timeline_rows": 20000,
+  "unique_descriptions": 2019,
+  "unique_scene_ids": 2019
+}

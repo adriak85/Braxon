@@ -3,6 +3,17 @@ use std::fmt;
 
 pub mod preserve;
 pub mod seating;
+pub mod native_runtime;
+pub mod native_reflexor;
+pub mod native_target;
+pub mod blaixe;
+pub mod blaixe_bus;
+pub use native_runtime::{NativeNsqGhostWindow, NativeNsqMachine, NativeNsqOwnership, NativeNsqRuntime, NsqActuationReceipt, NsqActuator, NsqAddress, NsqGhostReceipt, NsqInstruction, NsqIntentDecision, NsqIntentFrame, NsqIntentOutcome, NsqLease, NsqLeasePhase, NsqProvenance, NSQ_NATIVE_RUNTIME_SCHEMA};
+pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
+pub use native_target::NativeNsqTargetField;
+pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
+pub use blaixe_bus::BlaixeBus;
+
 pub type Nu16 = u64;
 pub type Nu64 = u64;
 pub type Nu128 = u128;
@@ -53,7 +64,7 @@ pub const DENSE_PRODUCED_SYMBOLS_PER_BOUNDARY_BYTE: Nu16 = 12;
 pub const GLOBAL_LEVER_SWEET_SPOT_SPACING_UNITS: Nu16 = 2;
 pub const GLOBAL_LEVER_SWEET_SPOT_INFORMATION_PROCESSED: Nu16 = CANONICAL_LEVER_MAX_POSITION;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub enum Charge {
     Positive,
     Negative,
@@ -150,7 +161,7 @@ impl MultipositionalLever {
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub struct NSQLever {
     pub charge: Charge,
     pub position: Nu16,
@@ -175,7 +186,7 @@ impl NSQLever {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 pub struct NSQBitUnit {
     pub levers: [NSQLever; CANONICAL_BIT_UNIT_LEVERS],
 }
@@ -186,7 +197,7 @@ impl NSQBitUnit {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub enum Dialect {
     Numeric = 1,
     Alphabetic = 2,
@@ -198,7 +209,7 @@ pub enum Dialect {
     Audio = 8,
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 pub struct NSQSlot {
     pub dialect: Dialect,
     pub body: Vec<NSQLever>,

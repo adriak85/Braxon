@@ -1,0 +1,6 @@
+schema=wowas.background_population.v2
+records=2000000
+sha256=19f63844768a5169c6646b4128df744fe6b7a58f8c744643c139ad6ef5d52430
+resident_records=0
+provenance=canonical_seed_to_scene_beat
+quality_status=deterministic_seeded_requires_batch_review

@@ -1,0 +1,283 @@
+# WOWAS Book 14 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B14_OP0001` | `BEAT-SCENE-0211f15320e9` | choice_pressure | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B14_OP0002` | `BEAT-SCENE-a38adefba6f9` | relationship_obligation | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_14_The_Long_Reorientation
+
+# Book_14_The_Long_Reorientation
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 14 — Silence ≠ Peace
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_14_The_Long_Reorientation
+
+- none placed yet
+- B14_101 — Routine = Mercy
+- B14_102 — Care = Clarity
+- B14_103 — Changed ≠ Healed
+- B14_104 — Nearness ≠ Repair
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_14_The_Long_Reorientation
+
+- no mapped beats yet
+
+## B14_101 — Routine = Mercy
+
+## B14_102 — Care = Clarity
+
+## B14_103 — Changed ≠ Healed
+
+## B14_104 — Nearness ≠ Repair
+
+### 04_scene_spine.md
+
+# The Long Reorientation Scene Spine
+
+### 16_salvage_beats.md
+
+# Book 14 — The Long Reorientation — Salvage Beats
+
+Status: additive completion pass
+Authority: character salvage integration
+
+## B14_101 — Routine = Mercy
+Function:
+Pip relearns daily life after stasis through Daisy May's steady physical rhythm. She becomes the first stable clock of the reoriented world.
+
+Required truths:
+- Daisy organizes motion without speech
+- Pip still looks young, but carries ancient weight in his reactions
+- Mack is absent as body but present as remembered method
+- Ursula is not yet a speaker here; only one impossible warmth-in-stone cue may register
+
+## B14_102 — Care = Clarity
+Function:
+Xethrolund practices non-expository care through object order, food, rest boundaries, and exact attention rather than speeches.
+
+Required truths:
+- Pip's thousand-year inner age shows as patience, precision, and controlled restraint
+- Xethrolund helps without taking over
+- the care must feel earned, not romantic shortcut
+
+## B14_103 — Changed ≠ Healed
+Function:
+FaithFixer / Solvaenkyr returns from the Lucent/Silence line visibly changed. He is useful, calm, and not reset.
+
+Required truths:
+- he can still help, but not in an ordinary way
+- someone notices he pauses at thresholds like he is listening elsewhere
+- the group understands change before they understand cost
+
+## B14_104 — Nearness ≠ Repair
+Function:
+Boojay appears as damaged after-presence rather than full controlling center. Pip sees him without falling fully back under the old pattern.
+
+Required truths:
+- memory pressure remains
+- tenderness and danger coexist
+- no false reconciliation
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 14 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Long Reorientation
+
+## B14.01 — Reorientation Becomes a Way of Living
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-World-That-Will-Not-Go-Back — Reorientation is no longer transition-only but life condition.
+S002 Pip-Feels-the-Length-of-What-Has-to-Be-Relearned — The scale of adaptation lands.
+S003 Rylos-Vayne-Johnson-Reads-the-New-World-State-As-Ongoing-Not-Temporary — Practical clarity remains essential.
+S004 Mack-Booming-Voice-Rolls-Through-a-Sanctuary-That-Has-Grown-Into-New-Forms — The vast willow continues reshaping home in response.
+S005 Rootways-Terraces-and-Low-Grottos-Appear-as-Daily-Architecture-Now — Life magic becomes lived structure.
+S006 Pip-Understands-That-Long-Reorientation-Is-Harder-Than-Crisis — Maturity deepens.
+S007 Rylos-Refuses-to-Let-Him-Romanticize-Endurance — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Center-In-Silence — Great Dane truth remains structural.
+S009 The-Sanctuary-Feels-Like-a-Living-World-Rebuilt-While-Still-Wounded — Setting truth sharpens.
+S010 Pip-Does-Not-Expect-Sonomancy-to-Solve-a-Long-Phase — Safeguard remains intact.
+S011 Mack-Frames-Reorientation-As-a-Form-of-World-Truth — Deity-scale reading enters.
+S012 The-Beat-Ends-with-Long-Reorientation-Classified-Correctly — Book 14 begins under sustained adaptation law.
+
+## B14.02 — What Cannot Be Recovered Must Be Rebuilt
+target_scenes: 12
+
+S013 The-Household-Faces-What-Is-Gone-For-Good — Recovery limits become explicit.
+S014 Pip-Feels-the-Grief-of-Non-Restoration — Honest emotional pressure deepens.
+S015 Rylos-Reads-Which-Losses-Can-Be-Worked-Around-and-Which-Must-Be-Mourned — Practical clarity remains load-bearing.
+S016 Mack-Grows-New-Shelters-Out-of-the-Ground-In-Places-Old-Patterns-No-Longer-Fit — Terraforming remains central.
+S017 The-Sanctuary-Shows-Rebuilding-As-Living-Craft-Not-Wishfulness — Setting remains active intelligence.
+S018 Daisy-May-Rests-Silent-In-the-Middle-of-Remaking — Her truth remains powerful.
+S019 Majeski-Holds-the-Perimeter-of-the-New-Form — The pair remain themselves.
+S020 Pip-Learns-That-Rebuilding-Is-Not-Betrayal-of-What-Was-Lost — Serious growth note.
+S021 Rylos-Confirms-It-With-Cleaner-Language-Than-Pip-Could-Have-Made-Alone — Bond remains corrective.
+S022 Mack-Rejects-Nostalgia-As-Blueprint — Tonal law remains serious.
+S023 The-Land-Itself-Feels-More-Willing-When-Read-Cleanly — World-state mirrors truth.
+S024 The-Beat-Ends-with-Rebuilding-Recast-As-Faithful-Work — Book 14 deepens properly.
+
+## B14.03 — Pip Trains for a World That Keeps Changing
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-He-Still-Cannot-Let-Go-of-Trying — His persistence remains real.
+S026 He-Practices-Alone-In-a-Chamber-Mack-Grows-for-Focus-and-Privacy — Private discipline continues.
+S027 The-Changed-Field-Makes-Every-Attempt-Unstable — Difficulty remains severe.
+S028 The-First-Attempt-Fails-Before-He-Can-Hold-the-Pattern — No easy power drift.
+S029 The-Second-Attempt-Gives-a-Faint-Response-and-Collapses — Tiny progress only.
+S030 Pip-Hates-How-Far-His-Will-Outruns-His-Skill — Honest emotional truth.
+S031 He-Does-Not-Turn-That-Into-Secret-Specialness — Safeguard remains intact.
+S032 Rylos-Senses-the-Strain-Again-Afterward — Bond sensitivity remains active.
+S033 Mack-Knows-and-Keeps-It-Private-Again — Sanctuary protects dignity.
+S034 Sonomancy-Stays-Rare-Hard-and-Non-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Discipline-Not-Mastery — Honest development.
+S036 The-Beat-Ends-with-Training-Still-Part-of-His-Private-Real-Work — Book law stays true.
+
+## B14.04 — The Orbit of the Household Changes
+target_scenes: 12
+
+S037 Reorientation-Begins-Shifting-Who-Collects-Around-Whom — Household orbit changes become visible.
+S038 Pip-Feels-the-New-Gravity-of-Mack-Rylos-and-the-Dogs-Differently — Emotional geometry deepens.
+S039 Rylos-Reads-That-Orbit-Is-Not-Only-Feeling-But-Function — Practical relationship truth enters.
+S040 Mack-Grows-Curved-Paths-and-Wider-Nodes-of-Gathering-from-the-Earth — The land becomes orbit architecture.
+S041 The-Sanctuary-Acts-Like-a-Living-Lattice-of-Relation — Setting truth sharpens.
+S042 Daisy-May-and-Majeski-Hold-Silent-Constancy-Within-the-New-Pattern — Great Dane truth remains central.
+S043 Pip-Realizes-That-Love-Requires-New-Shapes-When-World-State-Changes — Mature growth continues.
+S044 Rylos-Keeps-Him-From-Making-the-Shift-Too-Tragic — Bond remains corrective.
+S045 Mack-Frames-Orbit-Change-As-Healthy-If-Read-Well — Deity teaching deepens.
+S046 The-Land-Feels-More-Stable-When-Relation-Is-Accurate — World-state mirrors truth.
+S047 The-Household-Finds-a-New-Balance-Point — Family architecture adjusts.
+S048 The-Beat-Ends-with-Orbit-Recast-As-Workable-Truth — Book 14 stays accurate.
+
+## B14.05 — Ursula Remains Below Every Adjustment
+target_scenes: 12
+
+S049 Even-As-Life-Reorients-Ursulas-Core-Bound-Half-Existence-Remains-Unresolved — Deity truth stays central.
+S050 Pip-Feels-the-Planetary-Amethyst-Core-As-a-Continuing-Wound — Emotional stakes deepen.
+S051 Rylos-Reads-That-No-Surface-Reorientation-Erases-Core-Binding — Practical clarity matters.
+S052 Mack-Speaks-of-Ursula-As-Deity-Bound-Below-Not-Ordinary-World-Character-Again — Correction stays embedded.
+S053 The-Ground-Answers-With-Faint-Amethyst-Lines-Under-Rootwork — Symbol and state remain joined.
+S054 Pip-Understands-That-Building-Life-Above-Does-Not-End-Pain-Below — Serious maturity note.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague cosmic drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Larger-Wound — Great Dane truth holds.
+S057 Mack-Frames-Reorientation-As-Partial-Answer-Not-Total-Redemption — Deity reading sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Living-Over-a-Heart-It-Cannot-Fully-Heal — Setting truth deepens.
+S059 Pip-Hates-That-Truth-and-Stays-Present-to-It — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Binding-Integrated-Into-the-Long-Reorientation-Book — Book 14 stays aligned.
+
+## B14.06 — Rylos Keeps the Future From Going False
+target_scenes: 12
+
+S061 The-Long-Phase-Creates-Pressure-to-Fake-Stability — Tonal danger sharpens.
+S062 Pip-Feels-the-Temptation-to-Call-Anything-Better-a-Solution — Emotional realism continues.
+S063 Rylos-Refuses-That-Early-Closure — Mature love remains corrective.
+S064 Mack-Supports-Truth-With-Living-Space-Shaped-for-Real-Work — Terrain reinforces moral clarity.
+S065 Daisy-May-Lies-Silent-in-the-Center-and-Keeps-the-Moment-Honest — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Edge-of-the-Conversation — Pair truth continues.
+S067 Pip-Learns-That-Forward-Motion-Needs-Accurate-Naming-Or-It-Will-Rot — Serious growth deepens.
+S068 Rylos-Gives-Him-that-Cleaner-Language — Bond remains refined.
+S069 Mack-Rejects-Cheap-Future-Talk — Deity teaching stays serious.
+S070 The-Land-Feels-Less-Strained-When-No-One-Lies-About-Its-State — Setting mirrors truth.
+S071 Pip-Stays-Real-Under-Pressure-to-Call-the-Work-Done — Important internal victory.
+S072 The-Beat-Ends-with-False-Future-Refused — Book 14 deepens correctly.
+
+## B14.07 — Daisy-May and Majeski Remain Anchor Truth
+target_scenes: 12
+
+S073 The-Long-Phase-Could-Flatten-the-Dogs-Into-Background-Rhythm-and-Does-Not — Canon remains actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Living-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-Constancy-Is-Carried-by-Beings-Who-Simply-Keep-Being-Themselves — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Continuity-Is-Part-of-Why-the-Household-Can-Endure-Long-Phases — Important insight.
+S078 Mack-Grows-Sheltered-Resting-Hollows-and-Runways-For-Them-Without-Humanizing-Them — Representation stays correct.
+S079 The-Sanctuary-Honors-Them-With-Space-Not-Speech — Setting truth remains good.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Feels-More-True-When-No-One-Is-Flattened — Theme sharpens.
+S084 The-Beat-Ends-with-Species-and-Relation-Truth-Held-through-Long-Reorientation — Book 14 stays clean.
+
+## B14.08 — A New Daily Route
+target_scenes: 12
+
+S085 The-Household-Finally-Builds-a-Daily-Path-That-Belongs-to-the-New-World-State — Reorientation becomes routine.
+S086 Pip-Feels-the-Relief-and-Grief-of-Having-a-New-Normal — Emotional realism deepens.
+S087 Rylos-Reads-That-Routine-Is-Not-Small-When-It-Is-Hard-Won — Practical truth remains load-bearing.
+S088 Mack-Raises-the-Path-From-the-Earth-in-a-Curve-That-Fits-the-New-Orbit — Terraforming remains central.
+S089 The-Sanctuary-Acts-Like-a-Living-City-of-Relation — Setting truth sharpens.
+S090 Pip-Does-Not-Mistake-New-Routine-for-End-of-Story — Honesty remains intact.
+S091 He-Does-Choose-It — Determination remains core.
+S092 Daisy-May-and-Majeski-Move-Within-It-As-Silent-Great-Dane-Truth — Canon continues to matter.
+S093 Ursula's-Core-Presence-Remains-Low-and-Unresolved-Beneath-It — Deity stakes remain active.
+S094 Rylos-Keeps-the-Choice-Clean-From-Fantasy — Bond remains corrective.
+S095 The-World-Feels-More-Livable-and-More-Demanding-at-Once — Tone remains honest.
+S096 The-Beat-Ends-with-Reorientation-Made-Habitable — Book 14 gains stable motion.
+
+## B14.09 — What Long Work Makes Possible
+target_scenes: 12
+
+S097 The-Sustained-Phase-Begins-Producing-Real-Change — Long work starts paying honest dividends.
+S098 Pip-Feels-How-Different-This-Is-From-Crisis-Wins — Emotional understanding deepens.
+S099 Rylos-Frames-Endurance-As-Something-That-Builds-Range — Mature clarity remains.
+S100 Mack-Grows-a-Wider-Meeting-Space-From-Root-and-Stone-for-the-Shared-Recognition-of-What-Has-Changed — The land becomes acknowledgment-space.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Center-As-That-Truth-Is-Felt — Great Dane truth remains central.
+S102 Ursula's-Binding-Makes-Every-Gain-Feel-Incomplete-and-Still-Worth-Making — Deity stakes deepen.
+S103 Pip-Does-Not-Turn-Progress-Into-Heroic-Identity — Anti-martyr safeguard remains.
+S104 He-Does-Take-It-Seriously — Determination remains real.
+S105 Rylos-Stands-With-Him-In-That-Cleaner-Recognition — Pair refinement continues.
+S106 Mack-Blesses-Long-Work-Not-Sudden-Myth — Character remains true.
+S107 The-Sanctuary-Proves-It-Can-Grow-a-Future-Incrementally — Setting truth shines.
+S108 The-Beat-Ends-with-Long-Work-Recast-As-World-Making — Book 14 deepens honestly.
+
+## B14.10 — Book Fourteen Locks Its First Reorientation Law
+target_scenes: 12
+
+S109 Reorientation-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Through-Long-Adaptation — Core correction remains intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-New-Rhythm — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-Long-Reorientation — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Long-Work — Canon actively protected.
+S115 Long-Reorientation-Is-Recast-As-Life-Building-Not-Temporary-Repair — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Adaptation-Tool — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Within-New-Daily-Life — Pair refinement continues.
+S118 The-Book-Finds-Its-Reorientation-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Second-Descent-Scale-Consequences — Book 15 loads forward.
+S120 The-Beat-Ends-with-the-Long-Work-Fully-Underway — Book 14 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

@@ -1,0 +1,271 @@
+# WOWAS Book 16 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B16_OP0001` | `BEAT-SCENE-75a5b21cdb8c` | ecology_response | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B16_OP0002` | `BEAT-SCENE-7cc2cf3184a6` | world_cost | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_16_The_Deepening_World
+
+# Book_16_The_Deepening_World
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 16 — Beauty ≠ Freedom
+
+## Working local time span
+weeks to months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_16_The_Deepening_World
+
+- none placed yet
+- B16_101 — Stone ≈ Mother
+- B16_102 — Systems = Witness
+- B16_103 — Archive = Burden
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_16_The_Deepening_World
+
+- no mapped beats yet
+
+## B16_101 — Stone ≈ Mother
+
+## B16_102 — Systems = Witness
+
+## B16_103 — Archive = Burden
+
+### 04_scene_spine.md
+
+# The Deepening World Scene Spine
+
+### 16_salvage_beats.md
+
+# Book 16 — The Deepening World — Salvage Beats
+
+Status: additive completion pass
+Authority: character salvage integration
+
+## B16_101 — Stone ≈ Mother
+Function:
+The world starts matching Ursula's presence before anyone can safely name it.
+
+Required truths:
+- temperature shifts in mineral places
+- amethyst or geode-adjacent cues recur
+- Pip feels recognition without certainty
+- Ursula is effect first, not explanation
+
+## B16_102 — Systems = Witness
+Function:
+FaithFixer / Solvaenkyr takes on a systems or perimeter role that proves he still matters materially, not only symbolically.
+
+Required truths:
+- he notices what others miss
+- his altered state helps in one narrow way
+- the cost of that altered perception is visible
+
+## B16_103 — Archive = Burden
+Function:
+Xethrolund and the archive/world expansion line become concrete under consequence.
+
+Required truths:
+- knowledge storage has physical weight
+- what is preserved or moved matters
+- deepening the world also deepens danger
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 16 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: The Deepening World
+
+## B16.01 — The World Gets Larger Than Their Current Shape
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-World-That-Has-Grown-More-Complex-Than-Their-Current-Habits — Expansion becomes pressure.
+S002 Pip-Feels-the-Scale-Increase-As-Burden-Not-Wonder-Alone — Maturity continues.
+S003 Rylos-Vayne-Johnson-Reads-the-Deepening-As-Structural-Not-Decorative — Discernment remains load-bearing.
+S004 Mack-Booming-Voice-Rolls-Across-Newly-Shaped-Distances-in-the-Sanctuary — The vast willow remains present through scaled terrain.
+S005 Rootways-Grottos-Paths-and-Lifted-Ridges-Now-Span-More-Than-Before — Life magic expands with world-state.
+S006 Pip-Understands-That-A-Deeper-World-Requires-Deeper-Reading — Serious growth note.
+S007 Rylos-Refuses-to-Let-Him-Treat-Scale-As-Only-Adventure — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Center-In-Silent-Great-Dane-Truth — Canon remains central.
+S009 The-Sanctuary-Feels-Like-a-Living-Province-Not-Only-a-Shelter-Now — Setting truth deepens.
+S010 Pip-Does-Not-Expect-Sonomancy-to-Catch-Up-Fast-Enough-to-Match-the-Expansion — Safeguard remains intact.
+S011 Mack-Frames-Deepening-As-Responsibility — Deity-scale reading enters.
+S012 The-Beat-Ends-with-the-Worlds-Deepening-Classified-Correctly — Book 16 begins under expansion law.
+
+## B16.02 — More World Means More Consequence
+target_scenes: 12
+
+S013 The-Expanded-Field-Reveals-New-Layers-of-Interdependence — Stakes widen.
+S014 Pip-Feels-How-Much-More-Can-Be-Harmed-Now — Emotional pressure deepens.
+S015 Rylos-Reads-Which-New-Layers-Matter-Most-First — Practical clarity remains essential.
+S016 Mack-Grows-New-Lanes-And-Wide-Observation-Perches-Out-of-the-Earth — Terrain becomes world-reading apparatus.
+S017 The-Sanctuary-Uses-Living-Form-to-Teach-Scale — Setting remains active intelligence.
+S018 Daisy-May-Rests-Silent-Within-the-Larger-Pattern — Great Dane truth remains powerful.
+S019 Majeski-Holds-the-Outer-Readiness-of-the-Household — The pair remain themselves.
+S020 Pip-Understands-That-Complexity-Makes-Care-Harder-Not-Less-Necessary — Serious maturity note.
+S021 Rylos-Confirms-It-Cleanly — Bond remains refined.
+S022 Mack-Rejects-Surface-Level-Readings-of-an-Expanded-World — Tonal law stays serious.
+S023 The-Land-Itself-Feels-More-Alive-and-More-Demanding — World-state texture sharpens.
+S024 The-Beat-Ends-with-Consequence-Recast-at-Larger-Scale — Book 16 deepens properly.
+
+## B16.03 — Pip Trains Against Scale
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-the-World-Is-Outgrowing-His-Tools — Persistence remains core.
+S026 He-Practices-Alone-In-a-Larger-Chamber-Mack-Grows-for-Focus-and-Containment — Private discipline continues.
+S027 The-First-Attempt-Fails-Because-the-Expanded-Field-Is-Harder-to-Hold — Difficulty remains severe.
+S028 The-Second-Attempt-Catches-a-Thread-and-Loses-It — Tiny progress only.
+S029 Pip-Feels-How-Small-His-Skill-Set-Is-Against-a-Deepening-World — Honest emotional truth.
+S030 He-Does-Not-Convert-That-Into-False-Heroics — Safeguard remains intact.
+S031 He-Stays-a-Determined-Real-Being-Failing-in-Private — Character truth remains stable.
+S032 Rylos-Senses-the-Strain-Afterward-Again — Bond sensitivity continues.
+S033 Mack-Knows-and-Keeps-It-Private-Again — Sanctuary protects dignity.
+S034 Sonomancy-Stays-Rare-Hard-and-Non-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Humility-and-Discipline-Not-Mastery — Honest development.
+S036 The-Beat-Ends-with-Scale-Still-Ahead-of-His-Magic — Book law stays true.
+
+## B16.04 — The Household Needs a Larger Shape
+target_scenes: 12
+
+S037 The-Expanded-World-Forces-the-Household-to-Reorganize-Again — Domestic structure must evolve.
+S038 Pip-Feels-How-Insufficient-the-Old-Habits-Are — Emotional realism deepens.
+S039 Rylos-Reads-Where-Expansion-Requires-New-Role-Distribution — Practical clarity remains crucial.
+S040 Mack-Grows-New-Gathering-Spaces-Wayside-Hollows-and-Connecting-Paths — Life magic remains central and relational.
+S041 The-Sanctuary-Becomes-a-Living-Network-Not-Only-a-Hearth — Setting truth deepens.
+S042 Daisy-May-and-Majeski-Hold-the-Household-Center-As-the-Edges-Expand — Great Dane truth remains structural.
+S043 Pip-Learns-That-Growth-Requires-Form-Not-Only-Feeling — Serious growth note.
+S044 Rylos-Keeps-the-Moment-From-Turning-Into-Overwhelm — Bond remains corrective.
+S045 Mack-Frames-Larger-Shape-As-Healthy-If-Built-Cleanly — Deity teaching deepens.
+S046 The-Land-Feels-More-Stable-When-Structure-Matches-Scale — World-state mirrors truth.
+S047 The-Household-Begins-To-Fit-the-New-World-Better — Family architecture adjusts.
+S048 The-Beat-Ends-with-Larger-Shape-Recast-As-Necessary — Book 16 remains accurate.
+
+## B16.05 — Ursula Beneath the Deepening
+target_scenes: 12
+
+S049 The-More-the-World-Deepens-the-More-Ursulas-Core-Bound-Half-Existence-Matters — Deity truth remains central.
+S050 Pip-Feels-the-Planetary-Amethyst-Core-As-a-Deeper-Anchor-of-Pain — Emotional stakes deepen.
+S051 Rylos-Reads-That-Expansion-Above-Does-Not-Reduce-Binding-Below — Practical clarity matters.
+S052 Mack-Speaks-of-Ursula-As-Core-Bound-Deity-Again-Without-Flattening-Her — Canon stays embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Running-Below-New-Rootwork — Symbol and state remain joined.
+S054 Pip-Understands-That-A-Deeper-World-Reveals-Deeper-Wounds — Serious maturity note.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague cosmic drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Larger-Wound — Great Dane truth holds.
+S057 Mack-Frames-Deepening-As-Revelation-Not-Relief — Deity reading sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Growing-Over-Layers-It-Cannot-Fully-Heal — Setting truth deepens.
+S059 Pip-Hates-That-Truth-and-Stays-Present-to-It — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Deepening-Book — Book 16 stays aligned.
+
+## B16.06 — Rylos Keeps Expansion Honest
+target_scenes: 12
+
+S061 The-Bigger-World-Invites-Bigger-Fantasies — Tonal risk sharpens.
+S062 Pip-Feels-the-Temptation-to-Think-Bigness-Means-Readiness — Emotional realism continues.
+S063 Rylos-Refuses-That-Shortcut — Mature love remains corrective.
+S064 Mack-Supports-Truth-With-Land-Shaped-for-Work-and-Observation — Terrain reinforces moral clarity.
+S065 Daisy-May-Lies-Silent-at-the-Center-and-Makes-the-Moment-Harder-to-Fake — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Perimeter-of-the-Conversation — Pair truth continues.
+S067 Pip-Learns-That-Scale-Without-Discipline-Is-Just-New-Confusion — Serious growth deepens.
+S068 Rylos-Gives-Him-Cleaner-Language-for-It — Bond remains refined.
+S069 Mack-Rejects-Cheap-Grandiosity — Deity teaching remains sharp.
+S070 The-Land-Feels-Less-Wild-When-Scale-Is-Read-Correctly — Setting mirrors truth.
+S071 Pip-Stays-Real-Under-Pressure-to-Grow-Faster-Than-He-Can — Internal victory.
+S072 The-Beat-Ends-with-False-Scale-Refused — Book 16 deepens correctly.
+
+## B16.07 — Daisy-May and Majeski Remain True in the Larger Field
+target_scenes: 12
+
+S073 Expansion-Could-Easily-Flatten-the-Dogs-Into-Background-and-Does-Not — Canon remains actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Living-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-Truth-Is-Carried-By-Beings-Who-Remain-Themselves-Even-As-Worlds-Expand — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Continuity-Is-Part-of-What-Keeps-Scale-From-Becoming-Abstraction — Important insight.
+S078 Mack-Grows-Wider-Runs-and-Resting-Hollows-for-Them-Without-Humanizing-Them — Representation stays correct.
+S079 The-Sanctuary-Honors-Them-With-Space-Not-Speech — Setting truth remains good.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Feels-More-True-When-Species-and-Relation-Truth-Are-Kept-Clean — Theme sharpens.
+S084 The-Beat-Ends-with-Daisy-May-and-Majeski-Held-Firm-In-the-Larger-Field — Book 16 stays clean.
+
+## B16.08 — The First Major Outer Reach
+target_scenes: 12
+
+S085 The-Household-Makes-Its-First-Meaningful-Reach-Into-the-Deepened-World — Expansion becomes action.
+S086 Pip-Feels-the-Fear-and-Necessity-of-It-Together — Emotional realism deepens.
+S087 Rylos-Reads-the-Line-They-Can-Actually-Hold — Practical clarity remains crucial.
+S088 Mack-Raises-Longer-Pathways-And-Wider-Land-Bridges-From-the-Earth — Terraforming remains central.
+S089 The-Sanctuary-Acts-Like-a-Living-Origin-Point-for-Exploration — Setting truth sharpens.
+S090 Pip-Does-Not-Assume-Outer-Reach-Means-Control — Honesty remains intact.
+S091 He-Does-Choose-It — Determination remains core.
+S092 Daisy-May-and-Majeski-Move-Within-the-Household-Pattern-As-Silent-Great-Dane-Truth — Canon continues to matter.
+S093 Ursula's-Core-Presence-Remains-Low-and-Relevant-Beneath-the-New-Reach — Deity stakes remain active.
+S094 Rylos-Keeps-the-Choice-Clean-From-Fantasy — Bond remains corrective.
+S095 The-World-Feels-Bigger-and-More-Claiming-than-Before — Tone remains honest.
+S096 The-Beat-Ends-with-the-Outer-Reach-Underway — Book 16 gains forward motion.
+
+## B16.09 — What Deepening Demands of Love
+target_scenes: 12
+
+S097 The-Larger-World-Forces-the-Pair-to-Reckon-With-Broader-Forms-of-Loyalty — Relational stakes deepen.
+S098 Pip-Feels-How-Scale-Changes-What-It-Means-to-Stay-With-Someone — Emotional growth continues.
+S099 Rylos-Frames-Love-As-Something-That-Must-Scale-Cleanly-Or-Break — Mature clarity remains.
+S100 Mack-Grows-a-Wide-Low-Glen-for-the-Conversation — The land becomes relational space again.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Center-As-That-Truth-Is-Spoken — Great Dane truth remains central.
+S102 Ursula's-Binding-Makes-Every-Conversation-About-Love-Feel-Larger-and-Sadder — Deity stakes deepen.
+S103 Pip-Does-Not-Turn-Love-Into-Self-Sacrifice-Theater — Anti-martyr safeguard remains intact.
+S104 He-Does-Take-Its-Scale-Seriously — Determination remains real.
+S105 Rylos-Stands-With-Him-In-the-Cleaner-Version-of-That-Truth — Pair refinement continues.
+S106 Mack-Blesses-Accurate-Love-Not-Vague-Devotion — Character remains true.
+S107 The-Sanctuary-Proves-That-Scale-and-Intimacy-Can-Coexist-If-Built-Well — Setting truth shines.
+S108 The-Beat-Ends-with-Love-Recast-for-a-Deeper-World — Book 16 deepens honestly.
+
+## B16.10 — Book Sixteen Locks Its First Deepening Law
+target_scenes: 12
+
+S109 Deepening-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Scale-Pressure — Core correction remains intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-Deepened-World — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-the-Deepening-Book — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Expansion — Canon actively protected.
+S115 Deepening-Is-Recast-As-Responsibility-Not-Only-Wonder — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Scale-Tool — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-In-a-Larger-World — Pair refinement continues.
+S118 The-Book-Finds-Its-Deepening-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Black-Heart-Scar-Scale-Consequences — Book 17 loads forward.
+S120 The-Beat-Ends-with-the-World-Truly-Deeper-Than-Before — Book 16 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

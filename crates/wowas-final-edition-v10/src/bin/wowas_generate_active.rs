@@ -149,6 +149,30 @@ fn item<'a>(items: &'a [&str], idx: usize, salt: usize) -> &'a str {
     items[(idx * 37 + salt * 11) % items.len()]
 }
 
+fn identity_for(i: usize) -> (&'static str, &'static str, &'static str) {
+    match i % 100 {
+        0..=44 => ("gay_male", "he/him", "gay male identity is ordinary life context"),
+        45..=54 => ("bisexual_male", "he/him", "bisexual identity is ordinary life context"),
+        55..=62 => ("pansexual_male", "he/they", "pansexual identity is ordinary life context"),
+        63..=69 => ("trans_gay_male", "he/him", "trans gay male identity is ordinary life context"),
+        70..=77 => ("lesbian", "she/her", "lesbian identity is ordinary life context"),
+        78..=84 => ("bisexual", "she/they", "bisexual identity is ordinary life context"),
+        85..=89 => ("queer_nonbinary", "they/them", "queer nonbinary identity is ordinary life context"),
+        _ => ("straight_ally", "varied", "sexuality is not narratively exceptional"),
+    }
+}
+
+fn adult_role_for(identity: &str, i: usize) -> (&'static str, &'static str) {
+    if !matches!(identity, "gay_male" | "bisexual_male" | "pansexual_male" | "trans_gay_male") {
+        return ("not_specified", "adult role is not required for this record");
+    }
+    match i % 100 {
+        0..=69 => ("top_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
+        70..=89 => ("versatile_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
+        _ => ("bottom_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
+    }
+}
+
 fn reviewed_name(
     seed: &str,
     pressure: &str,
@@ -183,7 +207,7 @@ fn main() -> std::io::Result<()> {
     let summary_path = generated.join("generation_summary.tsv");
 
     let mut char_lines: Vec<String> = Vec::with_capacity(CHARACTER_TARGET + 1);
-    char_lines.push("character_id\tname\ttier\tvolume\tbook_anchor\trole\thouse_pressure\tregion\tsource_anchor\tcandidate_draws\tselection_score\tstory_background_law\tvisual_status".to_string());
+    char_lines.push("character_id\tname\ttier\tvolume\tbook_anchor\trole\thouse_pressure\tregion\tsource_anchor\tcandidate_draws\tselection_score\tstory_background_law\tvisual_spec\tvisual_status\tidentity_profile\tpronouns\tage_band\tadult_role_eligibility\tadult_role_profile\tprose_treatment\trole_prose_treatment\tcontent_rating\tidentity_serial".to_string());
     let mut used_names = BTreeSet::new();
     for i in 1..=CHARACTER_TARGET {
         let role = item(ROLES, i, 1);
@@ -206,13 +230,16 @@ fn main() -> std::io::Result<()> {
             name = format!("{}{}", name, i);
             score = score.saturating_sub(1);
         }
+        let (identity, pronouns, prose) = identity_for(i);
+        let (adult_role, role_prose) = adult_role_for(identity, i);
+        let identity_serial = format!("ID-{i:05}-{identity}-{adult_role}");
         char_lines.push(format!(
-            "WC{i:05}\t{name}\t{tier}\tV{volume}\tB{book:02}\t{role}\t{pressure}\t{region}\t{source}\t90\t{score}\taveraged_background_story_orbit_aesthetic_origin_distance\tpending_art_reference"
+            "WC{i:05}\t{name}\t{tier}\tV{volume}\tB{book:02}\t{role}\t{pressure}\t{region}\t{source}\t90\t{score}\taveraged_background_story_orbit_aesthetic_origin_distance\tprocedural-character-{tier}-{role}-{region}\tprocedural_visual_spec_v1\t{identity}\t{pronouns}\tyoung_adult_18_plus\teligible_18_plus_only\t{adult_role}\t{prose}\t{role_prose}\tyoung_adult_non_graphic\t{identity_serial}"
         ));
     }
 
     let mut creature_lines: Vec<String> = Vec::with_capacity(CREATURE_TARGET + 1);
-    creature_lines.push("creature_id\tspecies_name\tbase_form\tprimary_trait\tsecondary_trait\tbiome\tdanger_band\tecology_role\tcandidate_draws\tselection_score\tgeneration_law\tvisual_status".to_string());
+    creature_lines.push("creature_id\tspecies_name\tbase_form\tprimary_trait\tsecondary_trait\tbiome\tdanger_band\tecology_role\tcandidate_draws\tselection_score\tgeneration_law\tvisual_spec\tvisual_status".to_string());
     let mut used_creatures = BTreeSet::new();
     for i in 1..=CREATURE_TARGET {
         let form = item(CREATURE_FORMS, i, 1);
@@ -244,7 +271,7 @@ fn main() -> std::io::Result<()> {
             score = score.saturating_sub(1);
         }
         creature_lines.push(format!(
-            "WR{i:05}\t{name}\t{form}\t{primary}\t{secondary}\t{biome}\t{danger}\t{ecology}\t90\t{score}\tmutative_post_diamond_5000_creature_registry\tpending_art_reference"
+            "WR{i:05}\t{name}\t{form}\t{primary}\t{secondary}\t{biome}\t{danger}\t{ecology}\t90\t{score}\tmutative_post_diamond_5000_creature_registry\tprocedural-creature-{form}-{primary}-{biome}\tprocedural_visual_spec_v1"
         ));
     }
 
@@ -260,7 +287,7 @@ fn main() -> std::io::Result<()> {
             format!("creatures\t{CREATURE_TARGET}"),
             "candidate_draws_per_entry\t90".to_string(),
             "selection_law\taveraged_background_story_orbit_aesthetic_origin_distance".to_string(),
-            "picture_status\tpending_art_reference".to_string(),
+            "picture_status\tprocedural_visual_spec_v1".to_string(),
         ],
     )?;
 

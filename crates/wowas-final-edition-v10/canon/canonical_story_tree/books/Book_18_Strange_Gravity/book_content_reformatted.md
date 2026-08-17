@@ -1,0 +1,270 @@
+# WOWAS Book 18 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B18_OP0001` | `BEAT-SCENE-73c9e6f65b2d` | quest_revision | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B18_OP0002` | `BEAT-SCENE-fb6ccd8438b5` | certainty_trade | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_18_Strange_Gravity
+
+# Book_18_Strange_Gravity
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 18 — Breaking = Revelation
+
+## Working local time span
+weeks to months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_18_The_Shattered_Road
+
+- none placed yet
+- B18_101 — Archive ≠ Safe
+- B18_102 — Broken = Witnessed
+- B18_103 — Altered = Useful
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_18_The_Shattered_Road
+
+- no mapped beats yet
+
+## B18_101 — Archive ≠ Safe
+
+## B18_102 — Broken = Witnessed
+
+## B18_103 — Altered = Useful
+
+### 04_scene_spine.md
+
+# Strange Gravity Scene Spine
+
+### 16_salvage_beats.md
+
+# Book 18 — The Shattered Road — Salvage Beats
+
+Status: additive completion pass
+Authority: character salvage integration
+
+## B18_101 — Archive ≠ Safe
+Function:
+Archive relocation or burn consequence lands as a real break in continuity.
+
+Required truths:
+- what burns or is lost matters personally
+- Ursula pressure can appear as geothermal or mineral instability
+- Xethrolund's priorities become legible through what he saves first
+
+## B18_102 — Broken = Witnessed
+Function:
+Boojay's and Cockatrice-linked damage become visible through broken routes, failed paths, or corrupted continuity.
+
+Required truths:
+- Boojay is not reset to simple villain repetition
+- Cockatrice damage survives inside system fractures
+- witness pressure matters more than speechifying
+
+## B18_103 — Altered = Useful
+Function:
+FaithFixer / Solvaenkyr's altered state becomes materially relevant under shattered-road conditions.
+
+Required truths:
+- he can perceive a wrongness others cannot
+- using that perception costs him
+- the group has to rely on someone they cannot wholly trust to remain unchanged
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 18 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: Strange Gravity
+
+## B18.01 — Gravity Changes Before Anyone Admits It
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-Shift-in-Pull-Not-Yet-Fully-Named — The world is tugging at bodies bonds and choices differently.
+S002 Pip-Feels-the-New-Weight-As-Emotional-and-Physical-Disorientation — The altered field enters him immediately.
+S003 Rylos-Vayne-Johnson-Reads-the-Change-As-Systemic-Not-Random — Discernment remains load-bearing.
+S004 Mack-Booming-Voice-Rolls-Through-a-Sanctuary-Whose-Paths-Now-Curve-Strangely — The vast willow responds in terrain.
+S005 Rootways-Tilt-Rise-and-Drop-As-If-the-Land-Is-Learning-a-New-Pull — Life magic mirrors altered gravity.
+S006 Pip-Understands-That-This-Is-Not-Only-a-Travel-Problem — Serious growth note.
+S007 Rylos-Refuses-to-Let-Him-Flatten-the-Change-Into-Only-Visual-Weirdness — Bond remains corrective.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Center-In-Silent-Great-Dane-Truth — Canon remains central.
+S009 The-Sanctuary-Feels-Like-a-Living-Body-Adjusting-to-a-New-Center-of-Mass — Setting truth deepens.
+S010 Pip-Does-Not-Imagine-Sonomancy-Will-Suddenly-Master-Field-Distortion — Safeguard remains intact.
+S011 Mack-Frames-Strange-Gravity-As-a-Reordering-of-Relation-and-Route — Deity-scale reading enters.
+S012 The-Beat-Ends-with-the-Gravity-Shift-Classified-Correctly — Book 18 begins under altered-pull law.
+
+## B18.02 — What Pulls Hardest Is Not Always Visible
+target_scenes: 12
+
+S013 The-Household-Starts-Feeling-Invisible-Weights-Change-their-Behavior — The field acts before it is fully mapped.
+S014 Pip-Feels-How-Desire-Fear-and-Route-Now-Interfere-With-Each-Other — Emotional realism deepens.
+S015 Rylos-Reads-Which-Pulls-Are-Environmental-and-Which-Are-Relational — Practical clarity remains essential.
+S016 Mack-Grows-Low-Anchor-Ridges-and-Cross-Braced-Paths-Out-of-the-Earth — Terrain becomes counterweight architecture.
+S017 The-Sanctuary-Uses-Living-Form-to-Teach-Balance-Under-Strain — Setting remains active intelligence.
+S018 Daisy-May-Rests-Silent-At-a-Point-Where-the-Field-Wants-them-to-Misstep — Great Dane truth remains powerful.
+S019 Majeski-Holds-the-Outer-Line-of-the-Household — The pair remain themselves.
+S020 Pip-Understands-That-Attraction-and-Danger-Can-Share-Geometry — Serious maturity note.
+S021 Rylos-Confirms-It-Cleanly — Bond remains refined.
+S022 Mack-Rejects-Cheap-Mystification-of-the-New-Field — Tonal law remains serious.
+S023 The-Land-Itself-Feels-More-Honest-When-Read-As-Relational-Physics — World-state sharpens.
+S024 The-Beat-Ends-with-Invisible-Pull-Recast-As-Primary-Problem — Book 18 deepens properly.
+
+## B18.03 — Pip Trains in a Field That Won't Hold Still
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-He-Hates-Being-Outmatched-by-a-World-He-Can-Feel-but-Not-Read — Persistence remains core.
+S026 He-Practices-Alone-In-a-Chamber-Mack-Grows-With-Weighted-Quiet-and-Stable-Footing — Private discipline continues.
+S027 The-First-Attempt-Fails-Because-the-Field-Won't-Hold-a-Clean-Center — Difficulty remains severe.
+S028 The-Second-Attempt-Catches-a-Faint-Harmonic-and-Slips — Tiny progress only.
+S029 Pip-Feels-How-Field-Distortion-Exposes-His-Limitations — Honest emotional truth deepens.
+S030 He-Does-Not-Convert-That-Into-False-Chosen-One-Pain — Safeguard remains intact.
+S031 He-Stays-a-Determined-Real-Being-Failing-in-Private — Character truth remains stable.
+S032 Rylos-Senses-the-Strain-Afterward-Again — Bond sensitivity continues.
+S033 Mack-Knows-and-Keeps-It-Private-Again — Sanctuary protects dignity.
+S034 Sonomancy-Stays-Rare-Hard-and-Non-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Discipline-Under-Instability-Not-Mastery — Honest development.
+S036 The-Beat-Ends-with-the-Field-Still-Ahead-of-His-Magic — Book law stays true.
+
+## B18.04 — The Household Has to Rebalance
+target_scenes: 12
+
+S037 Altered-Gravity-Forces-the-Household-to-Relearn-Movement-and-Presence — Domestic structure must adapt again.
+S038 Pip-Feels-How-Easily-Old-Habits-Now-Throw-Him-Off — Emotional realism deepens.
+S039 Rylos-Reads-Where-Rebalancing-Is-Most-Urgent — Practical clarity remains crucial.
+S040 Mack-Grows-Broader-Footed-Paths-Seated-Niches-and-Bracing-Roots — Life magic remains central and relational.
+S041 The-Sanctuary-Becomes-a-Living-Balance-Training-Ground — Setting truth deepens.
+S042 Daisy-May-and-Majeski-Hold-the-Household-Center-As-the-Edges-Shift — Great Dane truth remains structural.
+S043 Pip-Learns-That-Balance-Is-Not-Neutrality-But-Active-Relation — Serious growth note.
+S044 Rylos-Keeps-the-Moment-From-Turning-Into-Only-Fear-of-Falling — Bond remains corrective.
+S045 Mack-Frames-Rebalancing-As-a-Wisdom-Problem-Not-Only-a-Body-Problem — Deity teaching deepens.
+S046 The-Land-Feels-More-Stable-When-Their-Relations-Are-Cleaner — World-state mirrors truth.
+S047 The-Household-Begins-To-Fit-the-New-Pull-Better — Family architecture adjusts.
+S048 The-Beat-Ends-with-Rebalance-Recast-As-Necessary-Work — Book 18 remains accurate.
+
+## B18.05 — Ursula Beneath the Pull
+target_scenes: 12
+
+S049 The-Strange-Gravity-Makes-Ursulas-Core-Bound-Half-Existence-Feel-Like-the-Planet's-Deepest-Center-of-Sorrow — Deity truth remains central.
+S050 Pip-Feels-the-Amethyst-Core-As-Weight-Below-All-Other-Weights — Emotional stakes deepen.
+S051 Rylos-Reads-That-Deep-Pull-and-Surface-Field-Distortion-Are-Not-Unrelated — Practical clarity matters.
+S052 Mack-Speaks-of-Ursula-As-Core-Bound-Deity-Again-Without-Flattening-Her — Canon stays embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Running-Beneath-the-Rebalanced-Rootwork — Symbol and state remain joined.
+S054 Pip-Understands-That-Some-Gravity-Is-Grief-Made-World-Scale — Serious maturity note.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague cosmic drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Larger-Wound — Great Dane truth holds.
+S057 Mack-Frames-Strange-Gravity-As-One-More-Sign-of-a-World-Organized-Around-Unhealed-Centers — Deity reading sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Growing-Over-a-Core-It-Can-Feel-Pulling-Downward — Setting truth deepens.
+S059 Pip-Hates-That-Truth-and-Stays-Present-to-It — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Gravity-Book — Book 18 stays aligned.
+
+## B18.06 — Rylos Refuses False Centers
+target_scenes: 12
+
+S061 The-Changed-Field-Invites-Bad-Centers-Bad-Loyalties-and-Bad-Readings — Tonal and moral risk sharpens.
+S062 Pip-Feels-the-Temptation-to-Let-Whatever-Pulls-Hardest-Define-Him — Emotional realism continues.
+S063 Rylos-Refuses-That-Surrender-Cleanly — Mature love remains corrective.
+S064 Mack-Supports-the-Moment-With-Land-Shaped-for-Standing-True-Not-Sliding-Easy — Terrain reinforces moral clarity.
+S065 Daisy-May-Lies-Silent-at-the-Center-and-Keeps-the-Resistance-Honest — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Outer-Readiness-of-the-Household — Pair truth continues.
+S067 Pip-Learns-That-Not-Every-Center-Is-Worthy-of-Being-Oriented-Around — Serious growth deepens.
+S068 Rylos-Gives-Him-Cleaner-Language-for-Choosing-True-Centers — Bond remains refined.
+S069 Mack-Rejects-Cheap-Surrender-to-Field-Pressure — Deity teaching remains sharp.
+S070 The-Land-Feels-Less-Treacherous-When-False-Centers-Are-Rejected — Setting mirrors truth.
+S071 Pip-Stays-Real-Under-Pressure-to-Be-Rearranged-Wrongly — Internal victory.
+S072 The-Beat-Ends-with-False-Centers-Refused — Book 18 deepens correctly.
+
+## B18.07 — Daisy-May and Majeski Remain Steady Mass
+target_scenes: 12
+
+S073 The-Gravity-Book-Could-Easily-Use-the-Dogs-As-Cute-Stabilizers-and-Does-Not — Canon remains actively protected.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Living-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-Steadiness-Is-Carried-by-Beings-Who-Do-Not-Need-to-Explain-Themselves — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Truthful-Presence-Is-Part-of-What-Keeps-the-Household-from-Orbiting-Wrong — Important insight.
+S078 Mack-Grows-Broader-Resting-Hollows-and-Gripped-Paths-for-Them-Without-Humanizing-Them — Representation stays correct.
+S079 The-Sanctuary-Honors-Them-With-Space-Not-Speech — Setting truth remains good.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Feels-More-True-When-Species-and-Relational-Truth-Are-Kept-Clean — Theme sharpens.
+S084 The-Beat-Ends-with-Daisy-May-and-Majeski-Held-Firm-As-Steady-Mass — Book 18 stays clean.
+
+## B18.08 — The First Major Drift Event
+target_scenes: 12
+
+S085 The-Household-Encounters-a-Moment-Where-the-Field-Trying-to-Rearrange-Them-Becomes-Immediate — Escalation turns physical.
+S086 Pip-Feels-the-Pull-In-His-Body-Before-He-Can-Think-It — Emotional realism deepens.
+S087 Rylos-Reads-the-Line-They-Can-Still-Hold-In-Real-Time — Practical clarity remains crucial.
+S088 Mack-Raises-Anchor-Roots-and-Counterweighted-Land-Bridges-From-the-Earth — Terraforming remains central.
+S089 The-Sanctuary-Acts-Like-a-Living-System-of-Resistance — Setting truth sharpens.
+S090 Pip-Does-Not-Assume-Willpower-Alone-Will-Solve-It — Honesty remains intact.
+S091 He-Does-Still-Choose-Correctly-Within-His-Limits — Determination remains core.
+S092 Daisy-May-and-Majeski-Move-Within-the-Household-Pattern-As-Silent-Great-Dane-Truth — Canon continues to matter.
+S093 Ursula's-Core-Presence-Feels-Deeper-Beneath-the-Drift — Deity stakes remain active.
+S094 Rylos-Keeps-the-Choice-Clean-From-Panic-Fantasy — Bond remains corrective.
+S095 The-World-Feels-More-Alien-and-More-Intimate-than-Before — Tone remains honest.
+S096 The-Beat-Ends-with-Drift-Contact-Underway — Book 18 gains forward motion.
+
+## B18.09 — What Gravity Does to Love
+target_scenes: 12
+
+S097 The-Changed-Field-Forces-the-Pair-to-Reckon-With-Attraction-Dependence-and-Orientation-More-Directly — Relational stakes deepen.
+S098 Pip-Feels-How-Easy-It-Is-to-Be-Pulled-By-Love-In-Ways-That-Are-Not-Yet-Wise — Emotional insight sharpens.
+S099 Rylos-Frames-Love-As-Something-That-Must-Learn-Its-True-Weight — Mature clarity remains.
+S100 Mack-Grows-a-Low-Wide-Curve-of-Earth-for-the-Conversation — The land becomes relational truth space again.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Center-As-That-Truth-Is-Spoken — Great Dane truth remains central.
+S102 Ursula's-Binding-Makes-All-Centers-and-Attractions-Feel-Bigger-and-Sadder — Deity stakes deepen.
+S103 Pip-Does-Not-Turn-Love-Into-Self-Undoing-Purity — Anti-martyr safeguard remains intact.
+S104 He-Does-Take-Its-Weight-Seriously — Determination remains real.
+S105 Rylos-Stands-With-Him-In-the-Cleaner-Version-of-That-Truth — Pair refinement continues.
+S106 Mack-Blesses-Accurate-Orbit-Not-Blind-Fall — Character remains true.
+S107 The-Sanctuary-Proves-That-Love-and-Balance-Can-Coexist-If-Read-Well — Setting truth shines.
+S108 The-Beat-Ends-with-Love-Recast-Under-Strange-Gravity — Book 18 deepens honestly.
+
+## B18.10 — Book Eighteen Locks Its First Gravity Law
+target_scenes: 12
+
+S109 Gravity-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Field-Distortion — Core correction remains intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-Changed-Pull — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-to-the-Strange-Gravity-Book — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Through-Field-Shift — Canon actively protected.
+S115 Strange-Gravity-Is-Recast-As-Relational-Physics-Not-Only-Spectacle — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Field-Solution — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Under-Altered-Pull — Pair refinement continues.
+S118 The-Book-Finds-Its-Gravity-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Cracking-Core-Scale-Consequences — Book 19 loads forward.
+S120 The-Beat-Ends-with-the-World-Truly-Reordered-Around-New-Pull — Book 18 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

@@ -1,0 +1,251 @@
+# WOWAS Book 12 Beat-Reconciled Edition
+
+> Status: existing prose reformatted from reconciled beat index.
+
+## Reconciled beat map
+
+| Slot | Scene | Beat serial | Beat kind | Characters | Relationships | Domains | Quest |
+|---:|---|---|---|---|---:|---|---|
+| 1 | `B12_OP0001` | `BEAT-SCENE-1cf1b29dd662` | creature_signal | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+| 2 | `B12_OP0002` | `BEAT-SCENE-6c4e0dfefb61` | consequence_record | spine::characters | 0 | artifact|culture|economy|faction|hazard|location|magic|population|quest|route|structure | generated operational row; not promoted as full prose |
+
+## Source content
+
+# Book_12_Stasis
+
+# Book_12_Stasis
+
+## Structural Spine
+
+### 00_book.md
+
+# Book 12 — Stasis ≠ Death
+
+## Working local time span
+months
+
+## Purpose
+TBD by review.
+
+## Notes
+This file is the book-level anchor only.
+
+### 01_contained_beats.md
+
+# contained beats — Book_12_Stasis
+
+- B12_001 — The Stasis Cast
+- B12_002 — The Frozen Hand
+- B12_003 — The Calculation Of Worth
+
+### 02_unplaced_candidates.md
+
+# Unplaced Candidates For This Book
+
+Use this file to park beats that seem to belong here but are not confirmed yet.
+
+### 03_time_map.md
+
+# time map — Book_12_Stasis
+
+## B12_001 — The Stasis Cast
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B12_002 — The Frozen Hand
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+## B12_003 — The Calculation Of Worth
+
+- sequence_position: TBD
+- absolute_era: TBD
+- local_time_span: TBD
+- linked_locations: TBD
+- notes: TBD
+
+### 04_scene_spine.md
+
+# Stasis Scene Spine
+
+## Scene Expansion
+
+### 06_scene_expansion_part1.md
+
+# Book 12 Scene Expansion — Part 1
+# Covers Beats 01–10
+# Book: Stasis
+
+## B12.01 — Motion Stops Without Becoming Peace
+target_scenes: 12
+
+S001 The-Book-Opens-on-a-Halt-That-Is-Not-Rest — Stasis arrives as pressure-frozen motion, not relief.
+S002 Pip-Feels-Time-Drag-Against-His-Skin — The threshold aftermath becomes bodily and unbearable.
+S003 Rylos-Vayne-Johnson-Reads-the-Stillness-As-Engineered-State — He knows this is not calm but held strain.
+S004 Mack-Booming-Voice-Comes-Through-a-Landscape-Holding-Itself-Too-Tightly — The vast willow remains present through constrained terrain.
+S005 The-Ground-Rises-Into-Waiting-Forms-But-Stops-Halfway — Life magic itself feels partially arrested.
+S006 Pip-Understands-Stasis-As-a-Kind-of-Cage — Maturity continues.
+S007 Rylos-Refuses-to-Let-the-Quiet-Be-Misread-As-Safety — Discernment stays active.
+S008 Daisy-May-and-Majeski-Hold-the-Household-Line-In-Silence — Great Dane truth remains central.
+S009 The-Sanctuary-Feels-Like-a-Breath-Held-Too-Long — Setting truth deepens.
+S010 Pip-Does-Not-Imagine-a-Clean-Magical-Breakout — Sonomancy remains limited and difficult.
+S011 Mack-Names-Stasis-As-Dangerous-Because-It-Pretends-to-Be-Mercy — Deity-scale reading sharpens.
+S012 The-Beat-Ends-with-Stasis-Classified-Correctly — Book 12 begins under suspended pressure.
+
+## B12.02 — What Stasis Preserves and What It Prevents
+target_scenes: 12
+
+S013 The-Household-Has-to-Confront-What-Is-Being-Held-In-Place — Stasis carries selective cruelty.
+S014 Pip-Feels-How-It-Protects-and-Entraps-at-Once — Complexity rises.
+S015 Rylos-Reads-Which-Things-Are-Being-Saved-and-Which-Are-Being-Denied — Practical understanding remains load-bearing.
+S016 Mack-Grows-Low-Seated-Root-Rings-and-Quiet-Alcoves-for-the-Conversation — Terraforming remains active even under strain.
+S017 The-Sanctuary-Uses-Living-Form-to-Make-Stagnation-Visible — Setting remains cognitive.
+S018 Daisy-May-Rests-Silent-Within-the-Held-Field — Her quiet truth remains powerful.
+S019 Majeski-Mirrors-Her-Stability — The pair stay intact.
+S020 Pip-Understands-That-Not-Moving-Can-Still-Damage-the-Future — Mature insight deepens.
+S021 Rylos-Confirms-It-With-Hard-Clearness — Bond remains corrective.
+S022 Mack-Rejects-the-Idea-that-Heldness-Is-Healing-by-Default — Serious tonal law.
+S023 The-Land-Itself-Seems-Torn-Between-Holding-and-Releasing — World-state texture sharpens.
+S024 The-Beat-Ends-with-Stasis-Recast-As-Moral-and-Structural-Problem — Book 12 tightens.
+
+## B12.03 — Pip Trains Inside a Frozen Field
+target_scenes: 12
+
+S025 Pip-Returns-to-Private-Sonomancy-Training-Because-Stillness-Makes-His-Limits-Louder — His persistence remains true.
+S026 He-Practices-Alone-In-a-Held-Chamber-of-Roots-and-Muted-Amethyst-Light — Private discipline continues.
+S027 Mack-Provides-the-Space-But-Not-the-Miracle — Sanctuary protects dignity without false solution.
+S028 The-First-Attempt-Fails-Against-the-Held-Field — Difficulty intensifies under stasis.
+S029 The-Second-Attempt-Almost-Catches-the-Shape-of-Release-and-Loses-It — Tiny progress only.
+S030 Pip-Hates-How-the-Worlds-Frozen-State-Makes-Him-Feel-Smaller — Honest emotional cost.
+S031 He-Does-Not-Convert-Frustration-Into-Martyr-Identity — Safeguard remains intact.
+S032 Rylos-Senses-the-Aftermath-Without-Being-Told-the-Whole-of-It — Bond sensitivity stays present.
+S033 Mack-Knows-and-Keeps-It-Private — Character truth remains clean.
+S034 Sonomancy-Stays-Rare-Hard-and-Not-Public — Canon remains intact.
+S035 Pip-Leaves-With-Better-Endurance-Not-Better-Control — Honest development.
+S036 The-Beat-Ends-with-Stasis-Still-Holding-Faster-Than-His-Skill-Can-Break-It — Book law stays true.
+
+## B12.04 — The Household Learns the Cost of Waiting
+target_scenes: 12
+
+S037 The-Held-State-Begins-Wearing-on-Everyday-Love — Stasis reaches domestic life.
+S038 Pip-Feels-How-Waiting-Can-Corrode-Will-If-It-Is-Not-Made-Meaningful — Emotional realism sharpens.
+S039 Rylos-Reads-Where-Impatience-Would-Make-It-Worse — Practical clarity remains essential.
+S040 Mack-Grows-Grottos-Paths-and-Low-Tables-For-Work-Within-Waiting — The land is shaped for endurance.
+S041 The-Sanctuary-Becomes-a-Living-Workshop-for-Patience — Setting continues as active intelligence.
+S042 Daisy-May-and-Majeski-Hold-the-Household-Shape-Without-Words — Great Dane truth remains structural.
+S043 Pip-Relearns-That-Not-Every-Correct-Action-Looks-Like-Movement — Mature growth continues.
+S044 Rylos-Keeps-That-Insight-From-Turning-Into-Passivity — Bond remains corrective.
+S045 Mack-Frames-Waiting-As-Discipline-Not-Surrender — Deity teaching remains large.
+S046 The-Land-Shows-Small-Signs-of-Strain-Under-Prolonged-Heldness — World-state deepens.
+S047 The-Household-Adapts-Without-Lying-About-Cost — Tone remains honest.
+S048 The-Beat-Ends-with-Waiting-Recast-As-Work — Book 12 stays accurate.
+
+## B12.05 — Ursula in Suspension
+target_scenes: 12
+
+S049 The-Stasis-State-Makes-Ursulas-Core-Bound-Half-Existence-Feel-Horribly-Relevant — Her correction becomes more active.
+S050 Pip-Feels-Her-As-Presence-Caught-Below-Time — Deity truth remains accurate.
+S051 Rylos-Reads-the-Parallel-Between-Stasis-and-Binding — Discernment continues to matter.
+S052 Mack-Speaks-of-Ursula-As-Core-Bound-Deity-Not-Ordinary-Cast-Again — Canon is re-embedded.
+S053 The-Ground-Shows-Amethyst-Lines-Held-In-Strange-Stillness — World-state and symbol deepen together.
+S054 Pip-Understands-That-Suspension-Can-Be-Its-Own-Form-of-Torture — Serious insight lands.
+S055 Rylos-Keeps-the-Moment-Clear-and-Embodied — No vague myth drift.
+S056 Daisy-May-and-Majeski-Remain-Silent-Household-Truth-Within-the-Cosmic-Weight — Great Dane truth holds.
+S057 Mack-Frames-Stasis-As-Something-the-World-Should-Not-Accept-As-Final — Deity law sharpens.
+S058 The-Sanctuary-Feels-Like-It-Is-Listening-Downward-Through-Held-Layers — Setting truth deepens.
+S059 Pip-Hates-What-He-Cannot-Reach-and-Stays-Present — Determination remains real.
+S060 The-Beat-Ends-with-Ursulas-Bound-State-Integrated-Into-the-Stasis-Book — Book 12 stays aligned.
+
+## B12.06 — Rylos Keeps Pip From Freezing Wrong
+target_scenes: 12
+
+S061 The-Held-Field-Invites-Emotional-Numbing — Stasis threatens inner life too.
+S062 Pip-Feels-the-Pull-Toward-Going-Blank-to-Endure-It — Honest psychological pressure.
+S063 Rylos-Refuses-That-Path-for-Him — Mature love remains active.
+S064 Mack-Supports-the-Intervention-With-Living-Space-Shaped-for-Contact-Not-Isolation — Terrain reinforces relation.
+S065 Daisy-May-Lies-Beside-Them-in-Silent-Steadiness — Her presence remains load-bearing.
+S066 Majeski-Holds-the-Outer-Restlessness-At-Bay — The pair continue as household structure.
+S067 Pip-Learns-That-Endurance-Is-Not-the-Same-As-Emotional-Ice — Core character clarification deepens.
+S068 Rylos-Makes-Him-Stay-Real-Without-Forcing-False-Softness — Bond stays accurate.
+S069 Mack-Rejects-Survival-By-Self-Erasure — Deity teaching sharpens.
+S070 The-Held-Land-Feels-Less-Hostile-When-Relation-Is-Preserved — Setting mirrors moral truth.
+S071 Pip-Stays-Himself-Under-Pressure — Important victory.
+S072 The-Beat-Ends-with-False-Freezing-Refused — Book 12 deepens correctly.
+
+## B12.07 — Daisy-May and Majeski Remain Living Truth
+target_scenes: 12
+
+S073 The-Stillness-Could-Flatten-the-Dogs-Into-Background-and-Does-Not — Canon is actively protected again.
+S074 Daisy-May-Remains-Silent-Great-Dane-Mother-and-Household-Force — Her truth stays explicit.
+S075 Majeski-Remains-Her-Son-and-Fellow-Presence — Relationship truth remains intact.
+S076 Pip-Feels-How-Much-Household-Reality-Is-Carried-By-Beings-Who-Do-Not-Explain-Themselves — Emotional growth continues.
+S077 Rylos-Understands-That-Their-Continuing-Themselves-Is-Part-of-What-Keeps-Stasis-From-Winning — Important insight.
+S078 Mack-Grows-a-Sheltered-Root-Hollow-That-Honors-Them-Without-Humanizing-Them — Representation remains correct.
+S079 The-Sanctuary-Uses-Space-Not-Speech-to-Make-Their-Meaning-Felt — Good setting truth.
+S080 Daisy-May-Never-Speaks — Canon stays explicit.
+S081 Daisy-May-Is-Never-Sacrificed — Canon stays explicit again.
+S082 Majeski-Remains-With-Her — Their pair truth remains protected.
+S083 The-Household-Finds-Steadiness-By-Not-Lying-About-Who-Anyone-Is — Theme sharpens.
+S084 The-Beat-Ends-with-Species-and-Relation-Truth-Held-Firm-Through-Stasis — Book 12 stays clean.
+
+## B12.08 — A Hairline Shift in the Held Field
+target_scenes: 12
+
+S085 Something-Within-Stasis-Moves-a-Fraction — The first meaningful deviation appears.
+S086 Pip-Feels-It-Immediately-and-Dares-Not-Trust-It-Fully — Maturity remains.
+S087 Rylos-Reads-That-the-Shift-Is-Real-But-Not-Yet-Reliable — Practical clarity continues.
+S088 Mack-Reorders-a-Few-Living-Paths-in-Answer — Terraforming reflects real change.
+S089 The-Sanctuary-Responds-Like-a-Body-Testing-Its-Limbs-Again — Setting truth deepens.
+S090 Pip-Does-Not-Turn-the-Moment-Into-Easy-Hope — Tone remains honest.
+S091 He-Also-Does-Not-Dismiss-It-Out-of-Fear — Growth stays balanced.
+S092 Daisy-May-and-Majeski-React-Subtly-But-Clearly — Great Dane presence remains meaningful.
+S093 Ursula's-Core-Pressure-Feels-Different-For-a-Breath — Deity pattern deepens.
+S094 Rylos-Keeps-the-Household-Focused-On-Reading-Not-Fantasy — Bond remains corrective.
+S095 The-Held-State-Proves-Not-Absolute-After-All — Stakes shift.
+S096 The-Beat-Ends-with-the-First-Hairline-Possibility-of-Release — Book 12 gains forward motion.
+
+## B12.09 — What Must Be Ready Before Motion Returns
+target_scenes: 12
+
+S097 The-Household-Understands-That-Release-Will-Be-Its-Own-Crisis — Honest preparation begins.
+S098 Pip-Feels-the-Strain-of-Having-to-Be-Ready-Without-Being-Ready — Emotional realism continues.
+S099 Rylos-Frames-Preparation-As-Cleaner-Than-Panic — Mature clarity remains essential.
+S100 Mack-Grows-Functional-Spaces-for-Readiness-Out-of-Root-and-Stone — Life magic becomes preparation architecture.
+S101 Daisy-May-and-Majeski-Hold-the-Household-Balance-As-It-Reorients — Great Dane truth remains central.
+S102 Ursula's-Binding-Looms-Under-the-Question-of-Release — Deity stakes deepen.
+S103 Pip-Does-Not-Imagine-He-Will-Suddenly-Master-Sonomancy-For-the-Moment — Safeguard remains intact.
+S104 He-Commits-to-the-Work-He-Can-Actually-Do — Character truth stays real.
+S105 Rylos-Stands-With-Him-In-That-Cleaner-Shape — Pair refinement continues.
+S106 Mack-Blesses-Preparation-Not-Fantasy — Character remains true.
+S107 The-Sanctuary-Proves-That-Readiness-Is-Its-Own-Form-of-Love — Excellent setting truth.
+S108 The-Beat-Ends-with-the-Household-Poised-Without-False-Confidence — Book 12 deepens honestly.
+
+## B12.10 — Book Twelve Locks Its First Stasis Law
+target_scenes: 12
+
+S109 Stasis-Core-Household-Deity-and-Bond-Finally-Align — The first major weave becomes clear.
+S110 Pip-Remains-Determined-Limited-and-Non-Machinic-Under-Suspension — Core correction stays intact.
+S111 Rylos-Remains-Canonical-Partner-and-Clear-Reader-In-the-Held-Field — Naming and function stay corrected.
+S112 Mack's-Vast-Willow-Embodiment-Booming-Voice-and-Terrain-Magic-Remain-Central-Even-When-World-Motion-Is-Held — Representation stays correct.
+S113 Ursula-Remains-Core-Bound-Deity-Half-Existence-Not-Ordinary-Cast — Important correction holds.
+S114 Daisy-May-and-Majeski-Remain-Silent-Great-Dane-Household-Truth-Throughout-Stasis — Canon actively protected.
+S115 Stasis-Is-Recast-As-Held-Pressure-Not-Peace — Structural law deepens.
+S116 Sonomancy-Stays-Rare-Hard-and-Inadequate-As-Easy-Release-Tool — Safeguard remains intact.
+S117 Pip-and-Rylos-Move-Forward-More-Accurately-Bound-Even-Without-Motion — Pair refinement continues.
+S118 The-Book-Finds-Its-Stasis-Law — Tone and structure lock.
+S119 The-Next-Layer-Promises-Afterwake-Scale-Consequences — Book 13 loads forward.
+S120 The-Beat-Ends-with-Stasis-Holding-but-Not-Forever — Book 12 is properly underway.
+
+
+
+## Bottom-footnote serial rule
+
+Each beat serial is the final provenance item for the corresponding scene record and is cross-linked through the SERIEL index.

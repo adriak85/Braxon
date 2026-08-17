@@ -1,34 +1,34 @@
 book_num	title	content_path	prose_content_present	operational_index_rows	source_status
-1	Choices Make World	canon/canonical_story_tree/books/Book_01_Choices_Make_World	true	348	prose_validated
-2	The Diary and the Blue Light	canon/canonical_story_tree/books/Book_02_The_Diary_And_The_Blue_Light	true	428	prose_validated
-3	The First Thread	canon/canonical_story_tree/books/Book_03_The_First_Thread	true	528	prose_validated
-4	Crocodile Smile	canon/canonical_story_tree/books/Book_04_Crocodile_Smile	true	528	prose_validated
-5	Runes and Wound	canon/canonical_story_tree/books/Book_05_Runes_And_Wound	true	568	prose_validated
-6	The Refusal and the Wound	canon/canonical_story_tree/books/Book_06_The_Refusal_And_The_Wound	true	508	prose_validated
-7	The Rift Widens	canon/canonical_story_tree/books/Book_07_The_Rift_Widens	true	488	prose_validated
-8	The Trap Tightens	canon/canonical_story_tree/books/Book_08_The_Trap_Tightens	true	628	prose_validated
-9	The Diamond Breaks	canon/canonical_story_tree/books/Book_09_The_Diamond_Breaks	true	658	prose_validated
-10	Mack Falls	canon/canonical_story_tree/books/Book_10_Mack_Falls	true	748	prose_validated
-11	The Portal Opens	canon/canonical_story_tree/books/Book_11_The_Portal_Opens	true	628	prose_validated
-12	Stasis	canon/canonical_story_tree/books/Book_12_Stasis	true	388	prose_validated
-13	The Afterwake	canon/canonical_story_tree/books/Book_13_The_Afterwake	true	468	prose_validated
-14	The Long Reorientation	canon/canonical_story_tree/books/Book_14_The_Long_Reorientation	true	568	prose_validated
-15	Suffocating in Silence	canon/canonical_story_tree/books/Book_15_Suffocating_In_Silence	true	688	prose_validated
-16	The Deepening World	canon/canonical_story_tree/books/Book_16_The_Deepening_World	true	572	prose_validated
-17	Black Heart Scar	canon/canonical_story_tree/books/Book_17_Black_Heart_Scar	true	733	prose_validated
-18	Strange Gravity	canon/canonical_story_tree/books/Book_18_Strange_Gravity	true	648	prose_validated
-19	The Cracking Core	canon/canonical_story_tree/books/Book_19_The_Cracking_Core	true	627	prose_validated
-20	The Beforemath	canon/canonical_story_tree/books/Book_20_The_Beforemath	true	507	prose_validated
-21	The Final Descent	canon/canonical_story_tree/books/Book_21_The_Final_Descent	true	667	prose_validated
-22	The Last Open Gate	canon/canonical_story_tree/books/Book_22_The_Last_Open_Gate	true	628	prose_validated
-23	The Final Resonance	canon/canonical_story_tree/books/Book_23_The_Final_Resonance	true	708	prose_validated
-24	Born to Die	canon/canonical_story_tree/books/Book_24_Born_To_Die	true	768	prose_validated
-25	Death Is Rebirth	canon/canonical_story_tree/books/Book_25_Death_Is_Rebirth	true	908	prose_validated
-26	The Held Fragment		false	8	spine_contract_only_pending_prose
-27	The Four-Dad Impossible		false	8	spine_contract_only_pending_prose
-28	The New Ground Sings		false	8	spine_contract_only_pending_prose
-29	Neith Returns Changed		false	8	spine_contract_only_pending_prose
-30	The Creature Census		false	8	spine_contract_only_pending_prose
-31	The Two-Million Lives		false	8	spine_contract_only_pending_prose
-32	The Last Accounting		false	8	spine_contract_only_pending_prose
-33	Willow and Stone		false	8	spine_contract_only_pending_prose
+1	Choices Make World	canon/canonical_story_tree/books/Book_01_Choices_Make_World	true	322	prose_validated
+2	The Diary and the Blue Light	canon/canonical_story_tree/books/Book_02_The_Diary_And_The_Blue_Light	true	407	prose_validated
+3	The First Thread	canon/canonical_story_tree/books/Book_03_The_First_Thread	true	516	prose_validated
+4	Crocodile Smile	canon/canonical_story_tree/books/Book_04_Crocodile_Smile	true	512	prose_validated
+5	Runes and Wound	canon/canonical_story_tree/books/Book_05_Runes_And_Wound	true	207	prose_validated
+6	The Refusal and the Wound	canon/canonical_story_tree/books/Book_06_The_Refusal_And_The_Wound	true	2	prose_validated
+7	The Rift Widens	canon/canonical_story_tree/books/Book_07_The_Rift_Widens	true	1	prose_validated
+8	The Trap Tightens	canon/canonical_story_tree/books/Book_08_The_Trap_Tightens	true	2	prose_validated
+9	The Diamond Breaks	canon/canonical_story_tree/books/Book_09_The_Diamond_Breaks	true	2	prose_validated
+10	Mack Falls	canon/canonical_story_tree/books/Book_10_Mack_Falls	true	2	prose_validated
+11	The Portal Opens	canon/canonical_story_tree/books/Book_11_The_Portal_Opens	true	2	prose_validated
+12	Stasis	canon/canonical_story_tree/books/Book_12_Stasis	true	2	prose_validated
+13	The Afterwake	canon/canonical_story_tree/books/Book_13_The_Afterwake	true	2	prose_validated
+14	The Long Reorientation	canon/canonical_story_tree/books/Book_14_The_Long_Reorientation	true	2	prose_validated
+15	Suffocating in Silence	canon/canonical_story_tree/books/Book_15_Suffocating_In_Silence	true	2	prose_validated
+16	The Deepening World	canon/canonical_story_tree/books/Book_16_The_Deepening_World	true	2	prose_validated
+17	Black Heart Scar	canon/canonical_story_tree/books/Book_17_Black_Heart_Scar	true	2	prose_validated
+18	Strange Gravity	canon/canonical_story_tree/books/Book_18_Strange_Gravity	true	2	prose_validated
+19	The Cracking Core	canon/canonical_story_tree/books/Book_19_The_Cracking_Core	true	2	prose_validated
+20	The Beforemath	canon/canonical_story_tree/books/Book_20_The_Beforemath	true	2	prose_validated
+21	The Final Descent	canon/canonical_story_tree/books/Book_21_The_Final_Descent	true	2	prose_validated
+22	The Last Open Gate	canon/canonical_story_tree/books/Book_22_The_Last_Open_Gate	true	2	prose_validated
+23	The Final Resonance	canon/canonical_story_tree/books/Book_23_The_Final_Resonance	true	2	prose_validated
+24	Born to Die	canon/canonical_story_tree/books/Book_24_Born_To_Die	true	2	prose_validated
+25	Death Is Rebirth	canon/canonical_story_tree/books/Book_25_Death_Is_Rebirth	true	2	prose_validated
+26	The Held Fragment	canon/canonical_story_tree/books/Book_26_reconstructed_contract	false	2	spine_contract_only_pending_prose
+27	The Four-Dad Impossible	canon/canonical_story_tree/books/Book_27_reconstructed_contract	false	2	spine_contract_only_pending_prose
+28	The New Ground Sings	canon/canonical_story_tree/books/Book_28_reconstructed_contract	false	2	spine_contract_only_pending_prose
+29	Neith Returns Changed	canon/canonical_story_tree/books/Book_29_reconstructed_contract	false	2	spine_contract_only_pending_prose
+30	The Creature Census	canon/canonical_story_tree/books/Book_30_reconstructed_contract	false	2	spine_contract_only_pending_prose
+31	The Two-Million Lives	canon/canonical_story_tree/books/Book_31_reconstructed_contract	false	2	spine_contract_only_pending_prose
+32	The Last Accounting	canon/canonical_story_tree/books/Book_32_reconstructed_contract	false	2	spine_contract_only_pending_prose
+33	Willow and Stone	canon/canonical_story_tree/books/Book_33_reconstructed_contract	false	2	spine_contract_only_pending_prose

@@ -1,0 +1,34 @@
+serial	book_num	title	arc_band	function	physical_content	prose_status	required_next
+MAP-BOOK-0e25362cc531	B01	Choices Make World	origin_diamond_world	origin; Mack prophecy; 40Hz; Xeth first contact; Dervish correction	true	prose_validated	linked_to_canon_content
+MAP-BOOK-36dea452bfe7	B02	The Diary and the Blue Light	origin_diamond_world	Daisy May and Majiskii entrusted; blue-light thread; early Rylos pressure quarantined against Boojay naming	true	prose_validated	linked_to_canon_content
+MAP-BOOK-7c5d11a451cd	B03	The First Thread	origin_diamond_world	Xeth reveal; true-name recognition; first deep thread logic	true	prose_validated	linked_to_canon_content
+MAP-BOOK-ee59b16f9fd4	B04	Crocodile Smile	origin_diamond_world	cockatrice flight; Rylos branch pressure; pocket sanctuary seed	true	prose_validated	linked_to_canon_content
+MAP-BOOK-f26b7c441a15	B05	Runes and Wound	forge_wound	Glass Forge opens here; idealization begins; control economy begins	true	prose_validated	linked_to_canon_content
+MAP-BOOK-078cac5bfabe	B06	The Refusal and the Wound	forge_wound	Xeth refusal/misread; Solvaenkyr threshold; revelation chord	true	prose_validated	linked_to_canon_content
+MAP-BOOK-edd9ba1e78d6	B07	The Rift Widens	forge_wound	rift expansion; relationship pressure; world fracture broadens	true	prose_validated	linked_to_canon_content
+MAP-BOOK-c0091deabc07	B08	The Trap Tightens	forge_wound	trap pressure; late concealment; betrayal must not telegraph too early	true	prose_validated	linked_to_canon_content
+MAP-BOOK-5c0900cc0d9d	B09	The Diamond Breaks	diamond_break	Diamond Break; Rylos betrayal close to break; Pip transition path begins	true	prose_validated	linked_to_canon_content
+MAP-BOOK-add4127aa37a	B10	Mack Falls	diamond_break	Mack sacrifice/fall branch; bone-rock/tree-zombie cost logic	true	prose_validated	linked_to_canon_content
+MAP-BOOK-18c8a2d32412	B11	The Portal Opens	diamond_break	portal route opens; setup for Xethrolund war/stasis	true	prose_validated	linked_to_canon_content
+MAP-BOOK-e776d2e85d14	B12	Stasis	portal_stasis	400-year Pip/Xethrolund portal war/stasis; glyph/code magic pressure	true	prose_validated	linked_to_canon_content
+MAP-BOOK-783047a747aa	B13	The Afterwake	portal_stasis	post-stasis afterwake; reorientation shock begins	true	prose_validated	linked_to_canon_content
+MAP-BOOK-c68f868e9c07	B14	The Long Reorientation	portal_stasis	long-scale return; overcorrection and fear of codependence	true	prose_validated	linked_to_canon_content
+MAP-BOOK-c6c382463d68	B15	Suffocating in Silence	post_stasis_world	silence pressure; hidden sonomancy discipline; private practice logic	true	prose_validated	linked_to_canon_content
+MAP-BOOK-8dda9f6573d6	B16	The Deepening World	post_stasis_world	world systems deepen; atlas and faction pressure expands	true	prose_validated	linked_to_canon_content
+MAP-BOOK-5938cb88e742	B17	Black Heart Scar	post_stasis_world	black-heart scar arc; damage visible without early Rylos darkness drift	true	prose_validated	linked_to_canon_content
+MAP-BOOK-f1675b8c9d55	B18	Strange Gravity	post_stasis_world	gravity/relational distortion; Rolzen route preparation	true	prose_validated	linked_to_canon_content
+MAP-BOOK-33ef2b1150d5	B19	The Cracking Core	post_stasis_world	core cracking; pre-endgame systemic fracture	true	prose_validated	linked_to_canon_content
+MAP-BOOK-912bc2686765	B20	The Beforemath	pre_endgame	beforemath staging; triad pressure and consequence inventory	true	prose_validated	linked_to_canon_content
+MAP-BOOK-58fe8103fcf5	B21	The Final Descent	pre_endgame	descent into terminal crisis; hard casualty curve begins	true	prose_validated	linked_to_canon_content
+MAP-BOOK-a813f314a3f6	B22	The Last Open Gate	pre_endgame	last open gate; final passage and access logic	true	prose_validated	linked_to_canon_content
+MAP-BOOK-6ca6b41ddccc	B23	The Final Resonance	endgame_resonance	final resonance pressure; sonomancy remains rare before Blood Cello scale	true	prose_validated	linked_to_canon_content
+MAP-BOOK-fa5646c7b5d6	B24	Born to Die	endgame_resonance	mass death pressure; joy against despair; wrong mutations worsen crisis	true	prose_validated	linked_to_canon_content
+MAP-BOOK-1f44056115ec	B25	Death Is Rebirth	endgame_resonance	Blood Cello transformation; Dervish/Mack/Neith return; rebirth world begins	true	prose_validated	linked_to_canon_content
+MAP-BOOK-9bd29e9018fb	B26	The Held Fragment	rebirth_aftermath	fallout from rebirth; held-fragment quest hooks; accountability figures begin	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-f375dd562be9	B27	The Four-Dad Impossible	rebirth_aftermath	post-Blood-Cello bond-gestation aftermath; healer confirmation; serious metaphysical consequence	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-47735a9a12c3	B28	The New Ground Sings	rebirth_aftermath	Mack planet-making and condensed dark-matter ground; resurrected populations stabilize	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-0edc4f9651c5	B29	Neith Returns Changed	rebirth_aftermath	Neith transformation and accountability; villains as change figures without erasure	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-da53fb541575	B30	The Creature Census	new_world_expansion	5,000-creature integration and ecology pressure across the remade world	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-3e7ac52261c4	B31	The Two-Million Lives	new_world_expansion	ancillary population/game-world realism; atlas lives and background economies	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-d4d3e267fe41	B32	The Last Accounting	new_world_expansion	90% mortality accounting; memorial compensation; moral consequence closure	true	spine_contract_only_pending_prose	linked_to_canon_content
+MAP-BOOK-2f2a837d8051	B33	Willow and Stone	final_integration	final integrated world-state; joy as vow; no unreconciled deprecated branch left active	true	spine_contract_only_pending_prose	linked_to_canon_content

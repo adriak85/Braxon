@@ -1,0 +1,124 @@
+schema_status= pass schema_files= 10 schema_rows= 2082519
+reasonable_window_status= pass scenes= 2019 event_beats= 2019 missing_timeline_refs= 0 missing_relationship_refs= 0 missing_background_refs= 0
+git_status_entries=
+ [31mM[m audit/wowas_completion.py
+ [31mM[m crates/braxon-core/src/lib.rs
+ [31mM[m crates/nsq-core/src/lib.rs
+ [31mM[m crates/wowas-final-edition-v10/canon/active/character_timeline_lattice_v14_33.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/creature_registry_target_5000.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/generated/generation_summary.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_characters_5000.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_creatures_5000.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/novel_manifest_33.tsv
+ [31mM[m crates/wowas-final-edition-v10/canon/active/scene_index_reasonable_window.tsv
+ [31mM[m crates/wowas-final-edition-v10/src/bin/wowas_generate_active.rs
+ [31mM[m reconstruction/WOWAS_COMPLETION_REPORT.md
+[31m??[m audit/__pycache__/
+[31m??[m audit/debug_background_bad.py
+[31m??[m audit/generate_population_stream.py
+[31m??[m audit/validate_background_population.py
+[31m??[m audit/validate_real_world_converter.py
+[31m??[m audit/wowas_adversarial_validation.py
+[31m??[m audit/wowas_beat_reformatter.py
+[31m??[m audit/wowas_character_attention.py
+[31m??[m audit/wowas_character_timeline_scheduler.py
+[31m??[m audit/wowas_identity_integration.py
+[31m??[m audit/wowas_materialize_background.py
+[31m??[m audit/wowas_missing_maps.py
+[31m??[m audit/wowas_originality.py
+[31m??[m audit/wowas_originality_diagnostics.py
+[31m??[m audit/wowas_real_world_converter.py
+[31m??[m audit/wowas_reasonable_window_validation.py
+[31m??[m audit/wowas_resolve_attention.py
+[31m??[m audit/wowas_scene_compactor.py
+[31m??[m audit/wowas_schema_gate.py
+[31m??[m audit/wowas_seriel_crosswalk.py
+[31m??[m audit/wowas_world_domain_generators.py
+[31m??[m crates/braxon-core/src/native_bus.rs
+[31m??[m crates/braxon-core/src/native_stack.rs
+[31m??[m crates/nsq-core/examples/
+[31m??[m crates/nsq-core/src/blaixe.rs
+[31m??[m crates/nsq-core/src/blaixe_bus.rs
+[31m??[m crates/nsq-core/src/native_reflexor.rs
+[31m??[m crates/nsq-core/src/native_runtime.rs
+[31m??[m crates/nsq-core/src/native_target.rs
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_artifact_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_background_population_2000000.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_background_population_2000000.tsv.summary
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_book_contract_map_33.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_character_attention_projection.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_character_timeline_schedule.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_character_world_role_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_creature_scene_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_culture_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_economy_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_faction_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_hazard_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_location_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_magic_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_population_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_quest_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_real_world_domain_alignment.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_real_world_source_registry.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_real_world_wowas_alignment.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_relationship_ledger.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_resolved_user_projection.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_route_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_scene_character_group_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_scene_layer_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_structure_domain_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_timeline_event_map.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/generated/wowas_user_preference_profile.template.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/scene_index_reasonable_window.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/scene_index_reasonable_window.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/scene_index_reasonable_window.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/active/wowas_merged_plot_beats.tsv
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_01_Choices_Make_World/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_02_The_Diary_And_The_Blue_Light/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_03_The_First_Thread/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_04_Crocodile_Smile/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_05_Runes_And_Wound/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_06_The_Refusal_And_The_Wound/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_07_The_Rift_Widens/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_08_The_Trap_Tightens/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_09_The_Diamond_Breaks/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_10_Mack_Falls/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_11_The_Portal_Opens/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_12_Stasis/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_13_The_Afterwake/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_14_The_Long_Reorientation/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_15_Suffocating_In_Silence/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_16_The_Deepening_World/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_17_Black_Heart_Scar/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_18_Strange_Gravity/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_19_The_Cracking_Core/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_20_The_Beforemath/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_21_The_Final_Descent/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_22_The_Last_Open_Gate/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_23_The_Final_Resonance/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_24_Born_To_Die/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_25_Death_Is_Rebirth/book_content_reformatted.md
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_26_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_27_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_28_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_29_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_30_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_31_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_32_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_33_reconstructed_contract/
+[31m??[m crates/wowas-final-edition-v10/reconstruction/SERIEL_CROSSWALK.tsv
+[31m??[m crates/wowas-final-edition-v10/reconstruction/SERIEL_FOOTNOTES.md
+[31m??[m reconstruction/ANDROID16_EXTERNAL_RESEARCH.md
+[31m??[m reconstruction/BLAIXE_ADDRESSING_POLICY.md
+[31m??[m reconstruction/NSQ_DEPENDENCY_STATUS.md
+[31m??[m reconstruction/NSQ_LEGACY_CLASSIFICATION_EVIDENCE.md
+[31m??[m reconstruction/NSQ_NATIVE_FOUNDATION_AUDIT.md
+[31m??[m reconstruction/REAL_WORLD_CONVERTER_POLICY.md
+[31m??[m reconstruction/REAL_WORLD_CONVERTER_VALIDATION.md
+[31m??[m reconstruction/REAL_WORLD_SOURCE_FINDINGS.md
+[31m??[m reconstruction/WOWAS_BACKGROUND_POPULATION_VALIDATION.md
+[31m??[m reconstruction/WOWAS_DIGITAL_VARIANCE_POLICY.md
+[31m??[m reconstruction/WOWAS_REASONABLE_WINDOW_VALIDATION.json
+[31m??[m reconstruction/WOWAS_RELEASE_EVIDENCE.txt
+[31m??[m reconstruction/WOWAS_SCHEMA_CACHE_MANIFEST.json
+[31m??[m reconstruction/WOWAS_SCHEMA_MIGRATION_REPORT.md

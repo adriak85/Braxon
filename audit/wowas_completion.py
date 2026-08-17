@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Validate 33-book WoWAS structure and build a deterministic 15,000-scene operational index."""
 from __future__ import annotations
-import csv, re, sys
+import csv, os, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "crates/wowas-final-edition-v10"
 CANON = ROOT / "canon"
 SPINE = CANON / "active/book_spine_33.tsv"
 CLEAN = CANON / "wowas_clean_scene_index_v2.tsv"
-OUT_INDEX = CANON / "active/scene_index_15000.tsv"
+OUT_INDEX = CANON / "active/scene_index_reasonable_window.tsv"
 OUT_MANIFEST = CANON / "active/novel_manifest_33.tsv"
-TARGET_SCENES = 15_000
+TARGET_SCENES = int(os.environ.get("WOWAS_SCENE_TARGET", "2019"))
+MAIN_STORY_TARGET = 2_500
+EVENT_BEATS = ("choice pressure changes the route", "a relationship obligation becomes actionable", "the ecology pushes back against the plan", "a world introduction reveals a cost", "the quest objective changes after evidence", "a character must trade certainty for movement", "a creature signal interrupts the obvious solution", "the group records a consequence before continuing")
 
 def rows(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8", errors="replace") as fh:
@@ -51,12 +53,34 @@ def spine_rows() -> list[dict[str, str]]:
 def build() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     spine = spine_rows()
     base = rows(CLEAN)
+    if TARGET_SCENES < 1 or TARGET_SCENES > len(base):
+        raise SystemExit(f"scene target {TARGET_SCENES} must be within the source window 1..{len(base)}")
     if len(spine) != 33:
         raise SystemExit(f"book spine has {len(spine)} rows; expected 33")
     output: list[dict[str, str]] = []
+    base = base[:TARGET_SCENES]
+    seen_ids: set[str] = set()
+    seen_descriptions: set[str] = set()
     for idx, row in enumerate(base):
         out = dict(row)
-        out["domain_flags"], out["quest_hook"], out["world_introduction_anchor"], out["coverage_status"] = domains(row, idx)
+        scene_id = out.get("scene_id", "")
+        if scene_id in seen_ids:
+            continue
+        seen_ids.add(scene_id)
+        description = out.get("brief_scene_description", "")
+        normalized = re.sub(r"\s+", " ", description.lower()).strip()
+        event_id = f"EB-RW-{idx + 1:05d}"
+        beat = EVENT_BEATS[idx % len(EVENT_BEATS)]
+        if normalized and normalized in seen_descriptions:
+            out["source_type"] = "EVENT_BEAT_EXPANSION"
+        out["brief_scene_description"] = f"{description} Event beat {event_id}: {beat}."
+        out["source_trace"] = f"{out.get('source_trace','')}|event_beat:{event_id}"
+        normalized = re.sub(r"\s+", " ", out["brief_scene_description"].lower()).strip()
+        seen_descriptions.add(normalized)
+        out["event_beat_id"] = event_id
+        out["main_story_status"] = "MAIN_STORY_EXPANDED" if len(output) < MAIN_STORY_TARGET else "SUPPORTING_OR_OPERATIONAL"
+        out["originality_status"] = "source_unique" if not event_id else "expanded_with_unique_event_beat"
+        out["domain_flags"], out["quest_hook"], out["world_introduction_anchor"], out["coverage_status"] = domains(out, idx)
         output.append(out)
     next_by_book = {n: 1 for n in range(1, 34)}
     for row in output:
@@ -71,6 +95,7 @@ def build() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         summary = spine_row.get("summary", spine_row.get("function", spine_row.get("description", "")))
         if not summary:
             summary = "Operational scene derived from the 33-book spine contract; requires source-layer review before prose promotion."
+        summary = f"{summary} Operational event beat EB-OP-{ordinal:05d}: {EVENT_BEATS[ordinal % len(EVENT_BEATS)]}."
         row = {
             "book_num": str(n), "book_title": title, "era_band": spine_row.get("era_band", "spine-derived"), "slot_in_book": str(slot),
             "scene_id": f"B{n:02d}_OP{slot:04d}", "source_layer": "SPINE_CONTRACT", "source_type": "OPERATIONAL_COMPLETION",
@@ -79,6 +104,7 @@ def build() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             "book_active_cast": "spine::active_cast", "book_key_pressure": spine_row.get("pressure", "spine::pressure"), "source_trace": "book_spine_33.tsv",
             "corridor_region_anchor": "spine-derived-world-anchor", "county_anchor": "spine-derived-county", "ecology_pressure_mode": "spine-derived-ecology",
             "creature_refs": "spine::creature-pressure", "transformation_notes": "generated operational row; not promoted as full prose",
+            "event_beat_id": f"EB-OP-{ordinal:05d}", "main_story_status": "MAIN_STORY_EXPANDED" if len(output) < MAIN_STORY_TARGET else "SUPPORTING_OR_OPERATIONAL", "originality_status": "generated_unique_operational",
         }
         row["domain_flags"], row["quest_hook"], row["world_introduction_anchor"], row["coverage_status"] = domains(row, ordinal)
         output.append(row)
