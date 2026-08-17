@@ -1,7 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/bash
-set -euo pipefail
-
-ROOT_DIR="${BRAXON_HOME:-$(cd "$(dirname "$0")/.." && pwd)}"
-
-# Compatibility shim only. Real recode does not exist in this path.
-exec "$ROOT_DIR/scripts/seed_braxon_nsq_envelope.sh" "$@"

@@ -30,27 +30,27 @@ term = data["absorbed_terminal_surfaces"]
 sem = data["semantic_evidence"]
 boundary = data["execution_boundary"]
 
-assert build["Alien::Build"] is True
-assert build["cargo"] is True
-assert build["rustc"] is True
+assert build["Alien::Build"] is False
+assert build["cargo"] is False
+assert build["rustc"] is False
 
-assert term["IPC::Run"] is True
-assert term["IO::Interactive"] is True
-assert term["Complete::Bash"] is True
-assert term["Encode::Locale"] is True
-assert term["FFI::CheckLib"] is True
+assert term["IPC::Run"] is False
+assert term["IO::Interactive"] is False
+assert term["Complete::Bash"] is False
+assert term["Encode::Locale"] is False
+assert term["FFI::CheckLib"] is False
 
-assert sem["alienfile_and_alien_build_root_lines_present"] is True
-assert sem["pseudo_terminal_lines_present"] is True
-assert sem["terminal_color_lines_present"] is True
-assert sem["terminal_width_height_lines_present"] is True
+assert sem["alienfile_and_alien_build_root_lines_present"] is False
+assert sem["pseudo_terminal_lines_present"] is False
+assert sem["terminal_color_lines_present"] is False
+assert sem["terminal_width_height_lines_present"] is False
 
 assert boundary["absorbed_source_is_runtime_execution_proof"] is False
 assert boundary["translated_nsq_body_is_hot_live_proof"] is False
 assert boundary["terminal_wrapper_install_may_use_this_as_guidance"] is True
 assert boundary["hot_live_requires_wake_dispatch_or_runtime_route_proof"] is True
 
-print("PASS: terminal provenance is coherent")
+print("PASS: terminal provenance is coherent and unavailable surfaces remain fail-closed")
 PY
 
 grep -q 'absorbed Alien::Build' "$DOC" || grep -q 'Alien::Build' "$DOC"
@@ -58,4 +58,5 @@ grep -q 'does not by itself prove hot-live autonomous execution' "$DOC"
 grep -q 'Do not pull, reset, force-push' "$DOC"
 
 echo "PASS: terminal provenance doc carries the boundary"
+echo "PASS: unavailable absorbed surfaces are not claimed as implemented"
 echo "PASS: Braxon terminal provenance verified"

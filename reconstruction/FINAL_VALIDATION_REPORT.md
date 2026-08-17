@@ -16,6 +16,14 @@ WoWAS narrative records are separated from real-world fact records. Narrative re
 
 The Rust 1.96 workspace command `cargo test --workspace --all-targets` completed successfully with no failed tests. Focused tests for `NsqNativeBus`, Target Field persistence, narrative/fact separation, and daydream yielding also passed. Root CLI checks and live examples for `bus`, `content narrative`, `content fact`, and `content daydream` passed.
 
+## Final-tree cleanup
+
+The finalization pass removed **73 explicitly identified backup/recovery artifacts** from the branch tip after recording every path in `audit/final_backup_removal_manifest.tsv`. Legitimate upstream files whose names merely contain `deprecated`, `old`, or `backup` as part of test/source content were not removed. Large generated audit archives remain outside the published tip under the local final-audit area with their manifest, because GitHub transfer limits prevented storing those raw blobs in the branch.
+
+Two stale verification entrypoints were repaired rather than bypassed. The terminal provenance verifier now matches the repository’s truthful fail-closed configuration, and the stamp runtime verifier now checks the existing `state/nsq/stamps/stamp_execution_topology.json` artifact instead of a nonexistent legacy path.
+
+After cleanup, `rustup run 1.96.0 cargo test --workspace --all-targets`, the NSQ substrate scan, terminal provenance verification, and stamp runtime verification all passed.
+
 ## Explicit limits
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.

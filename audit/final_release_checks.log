@@ -1,0 +1,93 @@
+===== scripts/codex/verify_eight_dimensional_gradient.sh =====
+
+== VERIFYING EIGHT DIMENSIONAL GRADIENT CONTINUITY ==
+
+
+EIGHT DIMENSIONAL GRADIENT VERIFIED
+
+exit=0
+===== scripts/codex/verify_gradient_contract.sh =====
+
+== VERIFYING EIGHT DIMENSIONAL GRADIENT CONTRACT ==
+
+
+EIGHT DIMENSIONAL GRADIENT CONTRACT VERIFIED
+
+exit=0
+===== scripts/codex/verify_stamp_execution_behavior.sh =====
+
+== VERIFYING STAMP EXECUTION BEHAVIOR ==
+
+
+STAMP EXECUTION CONTRACT VERIFIED
+
+exit=0
+===== scripts/codex/verify_stamp_runtime_contract.sh =====
+
+== VERIFYING STAMP RUNTIME CONTRACT ==
+
+exit=1
+===== scripts/codex/verify_watermark_behavior.sh =====
+
+== VERIFYING WATERMARK EXECUTION CONTINUITY ==
+
+
+WATERMARK EXECUTION CONTINUITY VERIFIED
+
+exit=0
+===== scripts/nsq/verify_nsqasm_stamp_build_chain.sh =====
+== verify NSQASM stamp build chain ==
+date=2026-08-17T07:42:27+00:00
+root=/home/ubuntu/Braxon
+head=9a6fc429daf4409c9296b60025935f40c53713f3
+
+== required files ==
+PASS: config and spec exist
+
+== stamp execution meaning ==
+PASS: stamp meaning matches runtime contract
+
+== court role placement ==
+PASS: Queen/Bishop/King placement exists
+
+== cross-project database ==
+PASS: shared stamp database paths exist
+
+== generated artifact policy ==
+PASS: generated binary policy is explicit
+
+== proof source alignment ==
+PASS: spec states court chain
+
+Report: state/nsq/stamp_build_chain/verify_20260817_074227.txt
+exit=0
+===== scripts/nsq/verify_nsqasm_stamp_db_records.sh =====
+== verify NSQASM stamp DB records ==
+schema=braxon.nsqasm.stamp_database_record_verify.v1
+authority=NSQ_COURT
+candidate_records=24953
+accepted_records=6185
+candidate_unique_keys=24953
+accepted_unique_keys=6185
+duplicate_candidates=0
+duplicate_accepted=0
+failures=0
+
+
+PASS: accepted stamp DB records verified
+Report: state/nsq/stamp_build_chain/verify_records_20260817_074227.txt
+exit=0
+===== scripts/verify_citadel699_emotion_route_boundary.sh =====
+== verify Citadel699 uncensored emotion-routing boundary ==
+root=/home/ubuntu/Braxon
+PASS: JSON boundary is coherent
+PASS: bus and docs carry the boundary
+PASS: Citadel699 emotion-routing boundary verified
+exit=0
+===== scripts/verify_citadel699_reconstruction_route_gate.sh =====
+== verify Citadel699 reconstruction route gate ==
+root=/home/ubuntu/Braxon
+PASS: JSON route gate is coherent
+PASS: bus and docs carry the reconstruction route gate
+PASS: Citadel699 reconstruction route gate verified
+exit=0
