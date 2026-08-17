@@ -1,0 +1,47 @@
+name: NSQ system validation
+
+on:
+  push:
+    branches:
+      - reconstruction-final-20260816
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete stack
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+
+      - name: Workspace format gate
+        run: cargo fmt --all -- --check
+
+      - name: Workspace compile gate
+        run: cargo check --workspace --all-targets
+
+      - name: Workspace test gate
+        run: cargo test --workspace --all-targets --locked
+
+      - name: NSQ executable smoke gate
+        run: |
+          cargo run --quiet -- status
+          cargo run --quiet -- apps verify
+          cargo run --quiet -- seating-verify
+          cargo run --quiet -- max-stable-scan
+          cargo run --quiet -- lever-sweet-spot
+          cargo run --quiet -- wake
+
+      - name: Repository integrity gate
+        run: |
+          test -f RECONSTRUCTION_PROTOCOL.md
+          test -f RECONSTRUCTION_STATE.json
+          test -f Cargo.toml
+          test -d crates/nsq-core
+          test -d crates/braxon-core
