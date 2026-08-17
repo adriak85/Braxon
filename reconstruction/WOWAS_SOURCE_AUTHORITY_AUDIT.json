@@ -1,0 +1,142 @@
+{
+  "authority_policy": "Only accepted_tier1_or_2 records are eligible for canonical authority; all other rows require explicit prose realization or remain non-authoritative.",
+  "by_book": {
+    "1": {
+      "accepted_tier1_or_2": 23,
+      "rejected_scaffold_tier4": 154,
+      "requires_prose_realization_tier2": 163
+    },
+    "10": {
+      "accepted_tier1_or_2": 15,
+      "rejected_scaffold_tier4": 651,
+      "requires_prose_realization_tier2": 74
+    },
+    "11": {
+      "accepted_tier1_or_2": 18,
+      "rejected_scaffold_tier4": 527,
+      "requires_prose_realization_tier2": 75
+    },
+    "12": {
+      "accepted_tier1_or_2": 16,
+      "rejected_scaffold_tier4": 287,
+      "requires_prose_realization_tier2": 77
+    },
+    "13": {
+      "accepted_tier1_or_2": 17,
+      "rejected_scaffold_tier4": 367,
+      "requires_prose_realization_tier2": 76
+    },
+    "14": {
+      "accepted_tier1_or_2": 18,
+      "rejected_scaffold_tier4": 462,
+      "requires_prose_realization_tier2": 80
+    },
+    "15": {
+      "accepted_tier1_or_2": 22,
+      "rejected_scaffold_tier4": 575,
+      "requires_prose_realization_tier2": 83
+    },
+    "16": {
+      "accepted_tier1_or_2": 14,
+      "rejected_scaffold_tier4": 465,
+      "requires_prose_realization_tier2": 81,
+      "unresolved_source_classification": 4
+    },
+    "17": {
+      "accepted_tier1_or_2": 21,
+      "rejected_scaffold_tier4": 617,
+      "requires_prose_realization_tier2": 82,
+      "unresolved_source_classification": 5
+    },
+    "18": {
+      "accepted_tier1_or_2": 21,
+      "rejected_scaffold_tier4": 537,
+      "requires_prose_realization_tier2": 82
+    },
+    "19": {
+      "accepted_tier1_or_2": 17,
+      "rejected_scaffold_tier4": 521,
+      "requires_prose_realization_tier2": 82
+    },
+    "2": {
+      "accepted_tier1_or_2": 18,
+      "rejected_scaffold_tier4": 238,
+      "requires_prose_realization_tier2": 164
+    },
+    "20": {
+      "accepted_tier1_or_2": 17,
+      "rejected_scaffold_tier4": 401,
+      "requires_prose_realization_tier2": 82
+    },
+    "21": {
+      "accepted_tier1_or_2": 16,
+      "rejected_scaffold_tier4": 562,
+      "requires_prose_realization_tier2": 82
+    },
+    "22": {
+      "accepted_tier1_or_2": 17,
+      "rejected_scaffold_tier4": 521,
+      "requires_prose_realization_tier2": 82
+    },
+    "23": {
+      "accepted_tier1_or_2": 17,
+      "rejected_scaffold_tier4": 601,
+      "requires_prose_realization_tier2": 82
+    },
+    "24": {
+      "accepted_tier1_or_2": 19,
+      "rejected_scaffold_tier4": 660,
+      "requires_prose_realization_tier2": 81
+    },
+    "25": {
+      "accepted_tier1_or_2": 14,
+      "rejected_scaffold_tier4": 808,
+      "requires_prose_realization_tier2": 78
+    },
+    "3": {
+      "accepted_tier1_or_2": 10,
+      "rejected_scaffold_tier4": 84,
+      "requires_prose_realization_tier2": 426
+    },
+    "4": {
+      "accepted_tier1_or_2": 16,
+      "rejected_scaffold_tier4": 79,
+      "requires_prose_realization_tier2": 425
+    },
+    "5": {
+      "accepted_tier1_or_2": 24,
+      "rejected_scaffold_tier4": 520,
+      "requires_prose_realization_tier2": 16
+    },
+    "6": {
+      "accepted_tier1_or_2": 15,
+      "rejected_scaffold_tier4": 478,
+      "requires_prose_realization_tier2": 7
+    },
+    "7": {
+      "accepted_tier1_or_2": 11,
+      "rejected_scaffold_tier4": 459,
+      "requires_prose_realization_tier2": 10
+    },
+    "8": {
+      "accepted_tier1_or_2": 5,
+      "rejected_scaffold_tier4": 553,
+      "requires_prose_realization_tier2": 62
+    },
+    "9": {
+      "accepted_tier1_or_2": 7,
+      "rejected_scaffold_tier4": 583,
+      "requires_prose_realization_tier2": 60
+    }
+  },
+  "classification_counts": {
+    "accepted_tier1_or_2": 408,
+    "rejected_scaffold_tier4": 11710,
+    "requires_prose_realization_tier2": 2612,
+    "unresolved_source_classification": 9
+  },
+  "rows": 14739,
+  "rules_source": "canon/patches/v10/wowas_scene_authority_cleanup_patch_v10.md",
+  "source_file": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
+  "unique_scene_ids": 14435
+}

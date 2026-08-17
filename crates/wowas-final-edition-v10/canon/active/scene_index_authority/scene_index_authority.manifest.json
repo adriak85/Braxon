@@ -1,0 +1,16 @@
+{
+  "accepted_bytes": 314019,
+  "accepted_file": "scene_index_accepted.tsv",
+  "accepted_sha256": "1644198f15767b1b6a5acf2fe7999281ef635034dcd78cd8dd72c4cd3cb3dfc9",
+  "authority": "evidence_backed_only",
+  "counts": {
+    "accepted_rows": 408,
+    "prose_realization_debt_rows": 2612,
+    "rejected_scaffold_rows": 11710,
+    "source_rows": 14739,
+    "unresolved_rows": 9
+  },
+  "promotion_rule": "Only accepted_tier1_or_2 rows are materialized. Debt, rejected, and unresolved rows are not written as canonical scene authority.",
+  "rules_source": "canon/patches/v10/wowas_scene_authority_cleanup_patch_v10.md",
+  "schema": "wowas.scene_index.authority.v2"
+}
