@@ -1,0 +1,103 @@
+# Canonical NSQ intent extracted from the repository corpus.
+# Authority: source evidence at ced6af253888bf194375692de86d0678dc70d847
+
+node canon.intent :kind root :status reconstruction
+
+node intent.foundation :kind architecture
+node intent.semantic_spine :kind architecture
+node intent.substrate :kind architecture
+node intent.ingress :kind architecture
+node intent.runtime :kind architecture
+node intent.proof :kind architecture
+node intent.benchmark :kind evidence
+node intent.tooling :kind support
+node intent.interface :kind support
+node intent.historical :kind archive
+
+edge canon.intent -> contains -> intent.foundation
+edge canon.intent -> contains -> intent.semantic_spine
+edge canon.intent -> contains -> intent.substrate
+edge canon.intent -> contains -> intent.ingress
+edge canon.intent -> contains -> intent.runtime
+edge canon.intent -> contains -> intent.proof
+edge canon.intent -> contains -> intent.benchmark
+edge canon.intent -> contains -> intent.tooling
+edge canon.intent -> contains -> intent.interface
+edge canon.intent -> contains -> intent.historical
+
+# Foundation / specification surfaces
+triple intent.foundation -> source -> /ARCHITECTURE.md :authority design
+triple intent.foundation -> source -> /specs :authority contract
+triple intent.foundation -> source -> /config :authority configuration
+triple intent.foundation -> source -> /docs :authority documentation
+
+# Existing NSQ semantic spine
+triple intent.semantic_spine -> source -> /nsq/spine/prime_spine.nsq :authority canonical_candidate
+triple intent.semantic_spine -> source -> /nsq/language_capture_tree :authority ingress_inventory
+triple intent.semantic_spine -> source -> /nsq/write_nsq :authority serialization_workflow
+triple intent.semantic_spine -> source -> /nsq/ops :authority operations
+triple intent.semantic_spine -> source -> /nsq/proof :authority proof
+triple intent.semantic_spine -> source -> /nsq/proofs :authority proof
+
+# Native / executable substrate
+triple intent.substrate -> source -> /src :authority implementation_evidence
+triple intent.substrate -> source -> /crates :authority implementation_evidence
+triple intent.substrate -> source -> /asm :authority low_level_evidence
+triple intent.substrate -> source -> /config/substrate :authority toolchain_evidence
+triple intent.substrate -> source -> /config/toolchains :authority toolchain_evidence
+triple intent.substrate -> source -> /state/substrate :authority runtime_evidence
+
+# Ingress and semantic capture
+triple intent.ingress -> source -> /apps :authority surface_evidence
+triple intent.ingress -> source -> /models :authority model_surface
+triple intent.ingress -> source -> /prompts :authority prompt_surface
+triple intent.ingress -> source -> /assets :authority semantic_assets
+triple intent.ingress -> source -> /nsq/language_capture_tree :authority language_inventory
+
+# Runtime and command surfaces
+triple intent.runtime -> source -> /bin :authority command_surface
+triple intent.runtime -> source -> /scripts :authority operational_surface
+triple intent.runtime -> source -> /tools :authority tooling_surface
+triple intent.runtime -> source -> /nsq/runtime_native :authority runtime_evidence
+triple intent.runtime -> source -> /nsq/spine :authority runtime_spine
+
+# Proof and verification
+triple intent.proof -> source -> /benchmarks :authority empirical_evidence
+triple intent.proof -> source -> /tests :authority regression_evidence
+triple intent.proof -> source -> /hounds :authority proof_scanners
+triple intent.proof -> source -> /artifacts :authority measured_artifacts
+triple intent.proof -> source -> /NSQ_PROOF_PLAN.md :authority proof_plan
+triple intent.proof -> source -> /NSQ_DAMAGE_REPORT_V3.md :authority damage_history
+
+# Benchmark corpus is evidence, not decoration.
+triple intent.benchmark -> source -> /benchmarks/nsq_vs_c :authority comparison
+triple intent.benchmark -> source -> /benchmarks/code_corpus_vs_c :authority comparison
+triple intent.benchmark -> source -> /benchmarks/info_vs_c :authority comparison
+triple intent.benchmark -> source -> /benchmarks/open_output_vs_c :authority comparison
+triple intent.benchmark -> source -> /benchmarks/repo_reality_vs_c :authority comparison
+triple intent.benchmark -> source -> /artifacts/nsq_compare :authority comparison_artifacts
+triple intent.benchmark -> source -> /artifacts/native_pressure_bench :authority pressure_measurement
+
+# Interface / human-facing surfaces
+triple intent.interface -> source -> /tests/braxon_conversation_surface.rs :authority interface_contract
+triple intent.interface -> source -> /tests/braxon_runtime_surface.rs :authority interface_contract
+triple intent.interface -> source -> /tests/braxon_apps_surface.rs :authority interface_contract
+triple intent.interface -> source -> /tests/braxon_speech_surface.rs :authority interface_contract
+
+# Generated material is evidence/indexing support, never the semantic authority.
+triple intent.historical -> source -> /generated :authority generated_support
+triple intent.historical -> source -> /reviewed_dropin_20260417 :authority historical_dropin
+triple intent.historical -> source -> /state :authority historical_runtime_state
+triple intent.historical -> source -> /Cargo.toml.before_ultimate_cleanup_20260506_000757 :authority snapshot
+triple intent.historical -> source -> /Cargo.toml.before_architecture_now_20260506_014334 :authority snapshot
+triple intent.historical -> source -> /Cargo.toml.before_dead_edge_repair_20260506_000937 :authority snapshot
+triple intent.historical -> source -> /Cargo.toml.before_fix_workspace_dependencies_20260505_234851 :authority snapshot
+
+# Existing prime spine intent promoted into the canonical map.
+triple spine.prime -> owns -> dialect_intake :layer 1 :plane 1 :anchor 100 :weight 100 :flags 1
+triple spine.prime -> owns -> canonical_lowering :layer 1 :plane 1 :anchor 110 :weight 100 :flags 1
+triple spine.prime -> owns -> prime_ir :layer 1 :plane 1 :anchor 120 :weight 100 :flags 1
+triple spine.prime -> owns -> substrate_dispatch :layer 1 :plane 1 :anchor 130 :weight 100 :flags 1
+triple spine.prime -> owns -> proof_replay :layer 1 :plane 1 :anchor 140 :weight 100 :flags 1
+
+membrane canon.intent :state sealed :flux 9 :gate 1 :phase 1
