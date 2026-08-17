@@ -2,7 +2,7 @@
 
 ## Published state
 
-The `reconstruction` branch is published at commit `176edee74` on `https://github.com/adriak85/Braxon/tree/reconstruction`. The branch contains the executable NSQ-native runtime additions, Target Field implementation, narrative/fact/daydream contracts, root CLI integration, audit evidence, and invalid-material disposition.
+The `reconstruction` branch is published at final-tree commit `246d92986` on `https://github.com/adriak85/Braxon/tree/reconstruction`. The local worktree is clean and the remote branch resolves to the same commit. The branch contains the executable NSQ-native runtime additions, Target Field implementation, narrative/fact/daydream contracts, root CLI integration, audit evidence, and invalid-material disposition.
 
 ## Executable features completed
 
@@ -18,7 +18,7 @@ The Rust 1.96 workspace command `cargo test --workspace --all-targets` completed
 
 ## Final-tree cleanup
 
-The finalization pass removed **73 explicitly identified backup/recovery artifacts** from the branch tip after recording every path in `audit/final_backup_removal_manifest.tsv`. Legitimate upstream files whose names merely contain `deprecated`, `old`, or `backup` as part of test/source content were not removed. Large generated audit archives remain outside the published tip under the local final-audit area with their manifest, because GitHub transfer limits prevented storing those raw blobs in the branch.
+The finalization pass removed **73 explicitly identified backup/recovery artifacts** from the branch tip after recording every path in `audit/final_backup_removal_manifest.tsv`. Legitimate upstream files whose names merely contain `deprecated`, `old`, or `backup` as part of test/source content were not removed. Large generated audit archives remain outside the published tip under the local `/home/ubuntu/Braxon-final-audit/` area with their manifest, because GitHub transfer limits prevented storing those raw blobs in the branch.
 
 Two stale verification entrypoints were repaired rather than bypassed. The terminal provenance verifier now matches the repository’s truthful fail-closed configuration, and the stamp runtime verifier now checks the existing `state/nsq/stamps/stamp_execution_topology.json` artifact instead of a nonexistent legacy path.
 
@@ -28,7 +28,7 @@ After cleanup, `rustup run 1.96.0 cargo test --workspace --all-targets`, the NSQ
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.
 
-The largest audit records exceeded ordinary GitHub transfer limits. Their exact contents remain in the local absolute tree as gzip archives under `audit/expanded/compressed/`, with `MANIFEST.tsv` mapping each archive to its original path and Git blob identity. The published branch contains the compact audit records and manifest; no audit conclusion depends on silently discarding the oversized content.
+The largest audit records exceeded ordinary GitHub transfer limits. Their exact contents remain in the local final-audit area as gzip archives, with `MANIFEST.tsv` mapping each archive to its original path and Git blob identity. The published branch contains the compact audit records and manifest; no audit conclusion depends on silently discarding the oversized content.
 
 ## Truth boundary
 
