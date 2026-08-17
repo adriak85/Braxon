@@ -29,6 +29,7 @@ members = [
     "crates/nsq-compose",
     "crates/nsq-compress",
     "crates/nsq-core",
+    "crates/nsq-citadel",
     "crates/nsq-system",
     "crates/wowas-final-edition-v10",
     "crates/nsqasm-stamp-db",

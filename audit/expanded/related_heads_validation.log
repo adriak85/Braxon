@@ -1,0 +1,316 @@
+=== 0 ===
+remote=https://github.com/adriak85/0.git
+head=07a64aa98e3e3f8d8a7c6f10ace7764880e26e68
+status=0
+[1m[32m    Updating[0m crates.io index
+[1m[32m     Locking[0m 70 packages to latest compatible versions
+[1m[36m      Adding[0m cargo-platform v0.1.9 [1m[31m(requires Rust 1.78)[0m
+[1m[36m      Adding[0m cargo_metadata v0.19.2 [1m[31m(requires Rust 1.78.0)[0m
+[1m[36m      Adding[0m clap v4.6.6 [1m[31m(requires Rust 1.85)[0m
+[1m[36m      Adding[0m clap_builder v4.6.6 [1m[31m(requires Rust 1.85)[0m
+[1m[36m      Adding[0m clap_derive v4.6.4 [1m[31m(requires Rust 1.85)[0m
+[1m[36m      Adding[0m clap_lex v1.1.0 [1m[31m(requires Rust 1.85)[0m
+[1m[36m      Adding[0m constant_time_eq v0.4.2 [1m[31m(requires Rust 1.85.0)[0m
+[1m[36m      Adding[0m cpufeatures v0.3.0 [1m[31m(requires Rust 1.85)[0m
+[1m[36m      Adding[0m generic-array v0.14.7 [1m[33m(available: v0.14.9)[0m
+[1m[36m      Adding[0m ndarray v0.15.6 [1m[33m(available: v0.17.2)[0m
+[1m[36m      Adding[0m phf v0.11.3 [1m[33m(available: v0.13.1)[0m
+[1m[36m      Adding[0m safetensors v0.4.5 [1m[33m(available: v0.5.3)[0m
+[1m[36m      Adding[0m sha2 v0.10.9 (available: v0.11.0, requires Rust 1.85)
+[1m[32m Downloading[0m crates ...
+[1m[32m  Downloaded[0m phf_shared v0.11.3
+[1m[32m  Downloaded[0m phf_generator v0.11.3
+[1m[32m  Downloaded[0m rawpointer v0.2.1
+[1m[32m  Downloaded[0m siphasher v1.0.3
+[1m[32m  Downloaded[0m num-complex v0.4.6
+[1m[32m  Downloaded[0m num-integer v0.1.47
+[1m[32m  Downloaded[0m autocfg v1.5.1
+[1m[32m  Downloaded[0m phf_macros v0.11.3
+[1m[32m  Downloaded[0m safetensors v0.4.5
+[1m[32m  Downloaded[0m phf v0.11.3
+[1m[32m  Downloaded[0m matrixmultiply v0.3.11
+[1m[32m  Downloaded[0m rand_core v0.6.4
+[1m[32m  Downloaded[0m memmap2 v0.9.11
+[1m[32m  Downloaded[0m bitflags v2.13.1
+[1m[32m  Downloaded[0m num-traits v0.2.19
+[1m[32m  Downloaded[0m rand v0.8.7
+[1m[32m  Downloaded[0m ndarray v0.15.6
+[1m[32m  Downloaded[0m syn v2.0.119
+[1m[32m  Downloaded[0m libc v0.2.189
+[1m[31merror[0m[1m:[0m rustc 1.75.0 is not supported by the following packages:
+  cargo-platform@0.1.9 requires rustc 1.78
+  cargo_metadata@0.19.2 requires rustc 1.78.0
+  clap@4.6.6 requires rustc 1.85
+  clap_builder@4.6.6 requires rustc 1.85
+  clap_derive@4.6.4 requires rustc 1.85
+  clap_lex@1.1.0 requires rustc 1.85
+  constant_time_eq@0.4.2 requires rustc 1.85.0
+  cpufeatures@0.3.0 requires rustc 1.85
+  dax-cli@0.1.0 requires rustc 1.96
+  dax-cli@0.1.0 requires rustc 1.96
+  dax-cli@0.1.0 requires rustc 1.96
+  dax-core@0.1.0 requires rustc 1.96
+  dax-core@0.1.0 requires rustc 1.96
+  dax-core@0.1.0 requires rustc 1.96
+  dax-court@0.1.0 requires rustc 1.96
+  dax-ingest@0.1.0 requires rustc 1.96
+  dax-ingest@0.1.0 requires rustc 1.96
+  dax-ingest@0.1.0 requires rustc 1.96
+  dax-ingest@0.1.0 requires rustc 1.96
+  dax-kingdom-generate@0.1.0 requires rustc 1.96
+  dax-showdown@0.1.0 requires rustc 1.96
+  dax-universal@0.1.0 requires rustc 1.96
+  dax-universal@0.1.0 requires rustc 1.96
+  dax-universal@0.1.0 requires rustc 1.96
+  dax-universal@0.1.0 requires rustc 1.96
+  nsq-archon@0.1.0 requires rustc 1.96
+  nsq-bench@0.1.0 requires rustc 1.96
+  nsq-bench-compare@0.1.0 requires rustc 1.96
+  nsq-bench-split@0.1.0 requires rustc 1.96
+  nsq-calibrate@0.2.0 requires rustc 1.96
+  nsq-cli@0.1.0 requires rustc 1.96
+  nsq-cli@0.1.0 requires rustc 1.96
+  nsq-cli@0.1.0 requires rustc 1.96
+  nsq-compile@0.2.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compose@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-compress@0.1.0 requires rustc 1.96
+  nsq-core@0.1.0 requires rustc 1.96
+  nsq-core@0.1.0 requires rustc 1.96
+  nsq-core@0.1.0 requires rustc 1.96
+  nsq-court@0.1.0 requires rustc 1.96
+  nsq-debug@0.1.0 requires rustc 1.96
+  nsq-decode@0.1.0 requires rustc 1.96
+  nsq-generate@0.2.0 requires rustc 1.96
+  nsq-index@0.1.0 requires rustc 1.96
+  nsq-index@0.1.0 requires rustc 1.96
+  nsq-index@0.1.0 requires rustc 1.96
+  nsq-index@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-inspect@0.1.0 requires rustc 1.96
+  nsq-lint@0.1.0 requires rustc 1.96
+  nsq-native-bench@0.1.0 requires rustc 1.96
+  nsq-optimize@0.2.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-pack@0.1.0 requires rustc 1.96
+  nsq-preserve@0.1.0 requires rustc 1.96
+  nsq-pressure-bench@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-prime@0.1.0 requires rustc 1.96
+  nsq-profile@0.1.0 requires rustc 1.96
+  nsq-proof@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-query@0.1.0 requires rustc 1.96
+  nsq-real-bench@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-runtime@0.1.0 requires rustc 1.96
+  nsq-source@0.1.0 requires rustc 1.96
+  nsq-source@0.1.0 requires rustc 1.96
+  nsq-source@0.1.0 requires rustc 1.96
+  nsq-source@0.1.0 requires rustc 1.96
+
+cargo_test_exit=101
+python_compileall_exit=0
+go_test=SKIPPED(no go.mod)
+=== DAX-FULL ===
+remote=https://github.com/adriak85/DAX-FULL.git
+head=c6a10388a4359aebfe3be1ea73688a5014078441
+status=0
+[1m[32m    Updating[0m git repository `https://github.com/gfx-rs/wgpu`
+[1m[31merror[0m[1m:[0m failed to load source for dependency `naga`
+
+Caused by:
+  Unable to update https://github.com/gfx-rs/wgpu?branch=trunk#d0c9044e
+
+Caused by:
+  failed to clone into: /home/ubuntu/.cargo/git/db/wgpu-045f9a3b3e40a5c0
+
+Caused by:
+  revision d0c9044e427c5cb2f63f96736489f39e65a04e57 not found
+
+Caused by:
+  invalid version 0 on git_proxy_options; class=Invalid (3)
+cargo_test_exit=101
+*** Error compiling './dax_final_core.py'...
+  File "./dax_final_core.py", line 1
+    kimport os
+            ^^
+SyntaxError: invalid syntax
+
+python_compileall_exit=1
+go_test=SKIPPED(no go.mod)
+=== Dax ===
+remote=https://github.com/adriak85/Dax.git
+head=6ef895e97454e59a3ecd1ce8ad5192f50c052176
+status=0
+[1m[91merror[0m: [1minvalid inline table
+expected `}`[0m
+   [1m[94m-->[0m Cargo.toml:278:57
+    [1m[94m|[0m
+[1m[94m278 |[0m wgpu        = { version = "28", default-features = false,
+    [1m[94m|[0m                                                         [1m[91m^[0m
+    [1m[94m|[0m
+cargo_test_exit=101
+*** Error compiling './dax_sovereign_orchestrator.py'...
+  File "./dax_sovereign_orchestrator.py", line 96
+    global HAS_NUMPY
+    ^^^^^^^^^^^^^^^^
+SyntaxError: name 'HAS_NUMPY' is used prior to global declaration
+
+*** Error compiling './ns_c_universe.py'...
+  File "./ns_c_universe.py", line 105
+    return "
+           ^
+SyntaxError: unterminated string literal (detected at line 105)
+
+python_compileall_exit=1
+go_test=SKIPPED(no go.mod)
+=== Dax-Autonomous-System ===
+remote=https://github.com/adriak85/Dax-Autonomous-System.git
+head=9e2b0cc3d7b1f402fd22403369915fa35bab6c0e
+status=0
+[1m[31merror[0m[1m:[0m multiple workspace roots found in the same workspace:
+  /home/ubuntu/related/Dax-Autonomous-System/rust_engine
+  /home/ubuntu/related/Dax-Autonomous-System
+cargo_test_exit=101
+*** Error compiling './DAX_SUPER_AGENT.py'...
+Sorry: IndentationError: unexpected indent (DAX_SUPER_AGENT.py, line 29)
+*** Error compiling './generated_assets/python/cloud_sync_service.py'...
+  File "./generated_assets/python/cloud_sync_service.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/enterprise_features.py'...
+  File "./generated_assets/python/enterprise_features.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/payment_processor.py'...
+  File "./generated_assets/python/payment_processor.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/predictive_action_bar.py'...
+  File "./generated_assets/python/predictive_action_bar.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/semantic_memory_viz.py'...
+  File "./generated_assets/python/semantic_memory_viz.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/stripe_integration.py'...
+  File "./generated_assets/python/stripe_integration.py", line 4
+    Purpose: Handle premium subscriptions, one-time payments, and billing
+                    ^^^^^^^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/voice_interface.py'...
+  File "./generated_assets/python/voice_interface.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/websocket_server.py'...
+  File "./generated_assets/python/websocket_server.py", line 4
+    Description: WebSocket server for real-time agent activity updates to dashboard
+                           ^^^^^^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/python/workflow_marketplace.py'...
+  File "./generated_assets/python/workflow_marketplace.py", line 4
+    Description:
+                ^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/tests/test_agent_monitor.py'...
+  File "./generated_assets/tests/test_agent_monitor.py", line 4
+    Functions to test: log_activity, get_top_contributors, get_system_health, generate_dashboard_html
+              ^^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/tests/test_premium_specializations.py'...
+  File "./generated_assets/tests/test_premium_specializations.py", line 4
+    Functions to test: unlock_specialization, get_user_specializations, get_specialized_agents, generate_pricing_page_html
+              ^^
+SyntaxError: invalid syntax
+
+*** Error compiling './generated_assets/tests/test_voice_interface.py'...
+  File "./generated_assets/tests/test_voice_interface.py", line 4
+    Functions to test: listen, speak, detect_emotion, conversational_loop
+              ^^
+SyntaxError: invalid syntax
+
+*** Error compiling './initiate_full_build.py'...
+  File "./initiate_full_build.py", line 25
+    print("  export ANDROID_HOME=\\"/path/to/your/android/sdk\\"")
+                                                              ^
+SyntaxError: unexpected character after line continuation character
+
+python_compileall_exit=1
+go_test=SKIPPED(no go.mod)
+=== PAPI ===
+remote=https://github.com/adriak85/PAPI.git
+head=926d2eb7fb5fe0369225bda44c716f8b4e4f6ca2
+status=0
+cargo_test=SKIPPED(no Cargo.toml)
+python_compileall=SKIPPED(no Python files)
+go_test=SKIPPED(no go.mod)
+=== f1ux-service ===
+remote=https://github.com/adriak85/f1ux-service.git
+head=4eac6b3e5b694bcbe022242298efc9be77b91b20
+status=0
+cargo_test=SKIPPED(no Cargo.toml)
+python_compileall_exit=0
+go_test=SKIPPED(no go.mod)
+=== fastapi-llm-bot ===
+remote=https://github.com/adriak85/fastapi-llm-bot.git
+head=07541c8a75183bba7333643f9cf84fe6d807fdf9
+status=0
+cargo_test=SKIPPED(no Cargo.toml)
+python_compileall_exit=0
+go_test=SKIPPED(no go.mod)
+=== termux-packages ===
+remote=https://github.com/adriak85/termux-packages.git
+head=24a20bcd2d717a160d711f2e8487e7f565096507
+status=0
+cargo_test=SKIPPED(no Cargo.toml)
+python_compileall_exit=0
+go_test=SKIPPED(no go.mod)

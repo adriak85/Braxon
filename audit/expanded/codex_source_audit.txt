@@ -1,0 +1,94 @@
+=== function and test inventory ===
+audit/expanded/codex_sources/seed_citadel.rs:42:    pub fn canonical() -> Self {
+audit/expanded/codex_sources/seed_citadel.rs:75:    pub fn synchronize(&self, canonical: &str) -> UniversalToken {
+audit/expanded/codex_sources/seed_citadel.rs:110:pub fn build_seed_plan(seed_id: &str, logical_parameter_bits: u128, logical_state_bits: u128) -> SeedMaterializationPlan {
+audit/expanded/codex_sources/seed_citadel.rs:121:pub fn materialize_window(plan: &SeedMaterializationPlan, start: u128, bits: u64) -> CitadelState {
+audit/expanded/codex_sources/seed_citadel.rs:139:fn stable_id(value: &str) -> u64 {
+audit/expanded/codex_sources/seed_citadel.rs:145:#[cfg(test)]
+audit/expanded/codex_sources/seed_citadel.rs:149:    #[test]
+audit/expanded/codex_sources/seed_citadel.rs:150:    fn seed_builds_logically_complete_citadel_without_full_residency() {
+audit/expanded/codex_sources/seed_citadel.rs:158:    #[test]
+audit/expanded/codex_sources/seed_citadel.rs:159:    fn universal_token_is_shared_across_all_sections() {
+audit/expanded/codex_sources/wowas_seeded.rs:42:    pub fn from_seed(seed: WorldSeed) -> Self {
+audit/expanded/codex_sources/wowas_seeded.rs:69:    pub fn play(&mut self, utterance: &str) -> WorldFrame {
+audit/expanded/codex_sources/wowas_seeded.rs:86:fn stable(value: &str) -> u64 {
+audit/expanded/codex_sources/wowas_seeded.rs:93:#[cfg(test)]
+audit/expanded/codex_sources/wowas_seeded.rs:97:    #[test]
+audit/expanded/codex_sources/wowas_seeded.rs:98:    fn world_reconstructs_from_compact_seed() {
+audit/expanded/codex_sources/wowas_seeded.rs:109:    #[test]
+audit/expanded/codex_sources/wowas_seeded.rs:110:    fn world_advances_without_rebuilding_the_world() {
+audit/expanded/codex_sources/seed.rs:10: pub fn new(identity:&str,intent:&str)->Self{let coordinates=coordinate_intent(intent);Self{identity:identity.into(),intent:intent.into(),coordinates,sections:vec!["language".into(),"symbol".into(),"intent".into(),"world".into()]}}
+audit/expanded/codex_sources/seed.rs:11: pub fn materialize(&self,start:usize,count:usize)->MaterializedState{let slots=self.coordinates.iter().map(|p|NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,*p).unwrap()])).collect::<Vec<_>>();let end=(start+count).min(slots.len());MaterializedState{logical_complete:true,resident_begin:start.min(slots.len()),resident_end:end,slots:slots.into_iter().skip(start.min(end)).take(end.saturating_sub(start)).collect()}}
+audit/expanded/codex_sources/seed.rs:13:pub fn coordinate_intent(text:&str)->Vec<u64>{text.split_whitespace().map(|w|{let h=w.bytes().fold(2166136261u64,|a,b|a.wrapping_mul(16777619)^b as u64);1+(h%CANONICAL_LEVER_MAX_POSITION)}).collect()}
+audit/expanded/codex_sources/seed.rs:14:pub fn synchronize(canonical:&str,sections:&[&str])->UniversalToken{UniversalToken{canonical:canonical.into(),sections:sections.iter().map(|s|(*s).into()).collect(),universal:format!("nsq.intent.v1::{canonical}")}}
+audit/expanded/codex_sources/seed.rs:16:#[cfg(test)] mod tests{use super::*;
+audit/expanded/codex_sources/seed.rs:17: #[test] fn seed_is_logically_complete_with_partial_residency(){let s=IntentSeed::new("test","willow stone remembers");let m=s.materialize(0,1);assert!(m.logical_complete);assert_eq!(m.slots.len(),1);assert!(s.coordinates.len()>1);}
+audit/expanded/codex_sources/seed.rs:18: #[test] fn synchronization_has_one_universal_identity(){let t=synchronize("remember",&["language","image","world"]);assert_eq!(t.universal,"nsq.intent.v1::remember");assert_eq!(t.sections.len(),3);}
+audit/expanded/codex_sources/seed.rs:19: #[test] fn coordinates_are_deterministic(){assert_eq!(coordinate_intent("stone willow"),coordinate_intent("stone willow"));}
+audit/expanded/codex_sources/bit.rs:9:    pub fn new(lane:u128)->Self{Self{lane,state:CitadelBitState::Persistent,instructions:Vec::new(),priority:255}}
+audit/expanded/codex_sources/bit.rs:10:    pub fn check_in(&mut self, input:Vec<NSQSlot>){ if self.state==CitadelBitState::Destabilizing{self.release_and_reapproach();} self.instructions.extend(input); if self.state==CitadelBitState::Persistent{self.state=CitadelBitState::Active;} }
+audit/expanded/codex_sources/bit.rs:11:    fn release_and_reapproach(&mut self){self.state=CitadelBitState::Reapproaching;self.instructions.clear();self.instructions.push(NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,CANONICAL_LEVER_MAX_POSITION).unwrap()]));self.state=CitadelBitState::Active;}
+audit/expanded/codex_sources/bit.rs:12:    pub fn is_live(&self)->bool{!self.instructions.is_empty()&&self.state!=CitadelBitState::Destabilizing}
+audit/expanded/codex_sources/bit.rs:13:    pub fn pressure_sum(&self)->u64{self.instructions.iter().flat_map(|s|s.body.iter()).filter(|l|l.charge==Charge::Positive).map(|l|l.position).sum()}
+audit/expanded/codex_sources/capital.rs:8: pub fn new(id:usize,cluster:[(usize,&'static str);2],coaching:CoachingMode)->Self{Self{id,cluster,board:Vec::new(),coaching}}
+audit/expanded/codex_sources/capital.rs:9: pub fn dispatch(&mut self,slots:Vec<NSQSlot>)->[CitadelBit;2]{let p=self.coaching.pole_priorities(self.cluster[0].1,self.cluster[1].1);let mut a=CitadelBit::new(self.cluster[0].0 as u128);let mut b=CitadelBit::new(self.cluster[1].0 as u128);a.priority=p[0];b.priority=p[1];a.check_in(slots.clone());b.check_in(slots);self.board.push(msg(self.id,self.cluster[0],&a));self.board.push(msg(self.id,self.cluster[1],&b));[a,b]}
+audit/expanded/codex_sources/capital.rs:10: pub fn drain_board(&mut self)->Vec<BoardMessage>{std::mem::take(&mut self.board)}
+audit/expanded/codex_sources/capital.rs:12:fn msg(id:usize,c:(usize,&'static str),b:&CitadelBit)->BoardMessage{BoardMessage{capital_id:id,pole_lane:c.0,pole_id:c.1.to_string(),slot_count:b.instructions.len(),priority:b.priority,state:b.state.as_str().into(),pressure_sum:b.pressure_sum(),is_live:b.is_live()}}
+audit/expanded/codex_sources/capital.rs:13:pub fn build_capitals(coaching:CoachingMode)->[Capital;5]{[
+audit/expanded/codex_sources/coaching.rs:7:    pub fn from_str(s:&str)->Self{match s.to_ascii_lowercase().as_str(){"logical"=>Self::Logical,"artistic"=>Self::Artistic,_=>Self::Balanced}}
+audit/expanded/codex_sources/coaching.rs:8:    pub fn as_str(self)->&'static str{match self{Self::Balanced=>"balanced",Self::Logical=>"logical",Self::Artistic=>"artistic"}}
+audit/expanded/codex_sources/coaching.rs:9:    pub fn pole_priorities(&self,a:&str,b:&str)->[u16;2]{[self.weight(a),self.weight(b)]}
+audit/expanded/codex_sources/coaching.rs:10:    fn weight(&self,p:&str)->u16{match self{Self::Balanced=>200,Self::Logical=>match p{"maverick"|"analyzer"|"arbiter"=>255,"support"=>200,"qwen"|"limbic"=>150,_=>128},Self::Artistic=>match p{"qwen"|"limbic"|"voice"|"image"=>255,"support"=>220,"maverick"|"analyzer"=>150,_=>180}}}
+audit/expanded/codex_sources/wire.rs:6: pub fn route(&self,input:&str)->CitadelReply{let slots=text_to_intent_slots(input);let mut caps=build_capitals(self.coaching);let mut board=Vec::new();for c in caps.iter_mut(){c.dispatch(slots.clone());board.extend(c.drain_board());}let total=board.iter().map(|m|m.pressure_sum).sum();let lead=board.iter().filter(|m|m.is_live).max_by_key(|m|m.priority).map(|m|(m.pole_id.clone(),m.priority)).unwrap_or(("none".into(),0));CitadelReply{input_slot_count:slots.len(),capital_count:5,pole_count:10,board_messages:board,total_pressure:total,lead_pole:lead.0,lead_priority:lead.1}}
+audit/expanded/codex_sources/wire.rs:8:pub fn text_to_intent_slots(input:&str)->Vec<NSQSlot>{let words:Vec<_>=input.split_whitespace().collect();if words.is_empty(){return vec![intent_slot(CANONICAL_LEVER_MAX_POSITION/2)]}words.into_iter().map(|w|intent_slot((w.chars().count() as u64*(CANONICAL_LEVER_MAX_POSITION/64)).clamp(1,CANONICAL_LEVER_MAX_POSITION))).collect()}
+audit/expanded/codex_sources/wire.rs:9:fn intent_slot(position:u64)->NSQSlot{NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,position).unwrap()])}
+audit/expanded/codex_sources/engage.rs:3:fn main() {
+=== imports and dependencies ===
+audit/expanded/codex_sources/seed_citadel.rs:13:use serde::{Deserialize, Serialize};
+audit/expanded/codex_sources/seed_citadel.rs:14:use std::collections::BTreeMap;
+audit/expanded/codex_sources/seed_citadel.rs:15:use std::hash::{Hash, Hasher};
+audit/expanded/codex_sources/seed_citadel.rs:124:    let mut h = std::collections::hash_map::DefaultHasher::new();
+audit/expanded/codex_sources/seed_citadel.rs:140:    let mut h = std::collections::hash_map::DefaultHasher::new();
+audit/expanded/codex_sources/wowas_seeded.rs:8:use crate::seed_citadel::{build_seed_plan, materialize_window, UniversalTokenizerSeed};
+audit/expanded/codex_sources/wowas_seeded.rs:9:use serde::{Deserialize, Serialize};
+audit/expanded/codex_sources/wowas_seeded.rs:88:    let mut h = std::collections::hash_map::DefaultHasher::new();
+audit/expanded/codex_sources/Cargo.toml:2:name = "nsq-citadel"
+audit/expanded/codex_sources/Cargo.toml:3:version = "0.1.0"
+audit/expanded/codex_sources/Cargo.toml:4:edition = "2021"
+audit/expanded/codex_sources/Cargo.toml:5:publish = false
+audit/expanded/codex_sources/Cargo.toml:6:description = "NSQ-native Citadel seed reconstruction and Council Ten routing."
+audit/expanded/codex_sources/Cargo.toml:9:name = "nsq_citadel"
+audit/expanded/codex_sources/Cargo.toml:10:path = "src/lib.rs"
+audit/expanded/codex_sources/Cargo.toml:12:[dependencies]
+audit/expanded/codex_sources/Cargo.toml:13:nsq-core = { path = "../nsq-core" }
+audit/expanded/codex_sources/Cargo.toml:14:serde = { version = "1", features = ["derive"] }
+audit/expanded/codex_sources/Cargo.toml:15:serde_json = "1"
+audit/expanded/codex_sources/lib.rs:7:pub use capital::{build_capitals, BoardMessage, Capital, CAPITAL_COUNT, POLES_PER_CAPITAL};
+audit/expanded/codex_sources/lib.rs:8:pub use coaching::CoachingMode;
+audit/expanded/codex_sources/lib.rs:9:pub use seed::{coordinate_intent, synchronize, IntentSeed, MaterializedState, UniversalToken};
+audit/expanded/codex_sources/lib.rs:10:pub use wire::{CitadelBus, CitadelReply};
+audit/expanded/codex_sources/seed.rs:2:use serde::{Deserialize,Serialize};
+audit/expanded/codex_sources/seed.rs:3:use nsq_core::{Charge,Dialect,NSQLever,NSQSlot,CANONICAL_LEVER_MAX_POSITION};
+audit/expanded/codex_sources/seed.rs:11: pub fn materialize(&self,start:usize,count:usize)->MaterializedState{let slots=self.coordinates.iter().map(|p|NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,*p).unwrap()])).collect::<Vec<_>>();let end=(start+count).min(slots.len());MaterializedState{logical_complete:true,resident_begin:start.min(slots.len()),resident_end:end,slots:slots.into_iter().skip(start.min(end)).take(end.saturating_sub(start)).collect()}}
+audit/expanded/codex_sources/bit.rs:1:use nsq_core::{Charge, Dialect, NSQLever, NSQSlot, CANONICAL_LEVER_MAX_POSITION};
+audit/expanded/codex_sources/bit.rs:11:    fn release_and_reapproach(&mut self){self.state=CitadelBitState::Reapproaching;self.instructions.clear();self.instructions.push(NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,CANONICAL_LEVER_MAX_POSITION).unwrap()]));self.state=CitadelBitState::Active;}
+audit/expanded/codex_sources/capital.rs:1:use nsq_core::NSQSlot;
+audit/expanded/codex_sources/capital.rs:2:use crate::{bit::CitadelBit, coaching::CoachingMode};
+audit/expanded/codex_sources/coaching.rs:1:use serde::{Deserialize, Serialize};
+audit/expanded/codex_sources/wire.rs:1:use nsq_core::{Charge,Dialect,NSQLever,NSQSlot,CANONICAL_LEVER_MAX_POSITION};
+audit/expanded/codex_sources/wire.rs:2:use crate::{capital::{build_capitals,BoardMessage},coaching::CoachingMode};
+audit/expanded/codex_sources/wire.rs:9:fn intent_slot(position:u64)->NSQSlot{NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,position).unwrap()])}
+audit/expanded/codex_sources/engage.rs:1:use nsq_citadel::{CitadelBus, CoachingMode, IntentSeed};
+=== workspace manifest diff ===
+[1mdiff --git a/Cargo.toml b/Cargo.toml[m
+[1mindex 0a98b4d79..074f02f4e 100644[m
+[1m--- a/Cargo.toml[m
+[1m+++ b/Cargo.toml[m
+[36m@@ -29,6 +29,7 @@[m [mmembers = [[m
+     "crates/nsq-compose",[m
+     "crates/nsq-compress",[m
+     "crates/nsq-core",[m
+[32m+[m[32m    "crates/nsq-citadel",[m
+     "crates/wowas-final-edition-v10",[m
+     "crates/nsqasm-stamp-db",[m
+     "crates/nsq-grid",[m

@@ -1,7 +1,7 @@
 use crate::council_ten::CouncilTen;
 use nsq_core::{
-    CANONICAL_LEVER_MAX_POSITION, NSQ_CANONICAL_SWITCH_SHAPE, TOTAL_STATES_PER_LEVER,
-    ZERO_INCLUSIVE_BIT_UNIT_STATES, Nu16,
+    Nu16, CANONICAL_LEVER_MAX_POSITION, NSQ_CANONICAL_SWITCH_SHAPE, TOTAL_STATES_PER_LEVER,
+    ZERO_INCLUSIVE_BIT_UNIT_STATES,
 };
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
@@ -155,8 +155,8 @@ impl BraxonBus {
                 route: BRAXON_BUS_ROUTE.to_string(),
                 selected_intent: selected.intent.clone(),
                 selected_english: english,
-                emotional_score_rule:
-                    "highest_emotional_score_then_coherence_then_actionability".to_string(),
+                emotional_score_rule: "highest_emotional_score_then_coherence_then_actionability"
+                    .to_string(),
                 selected_emotional_score: selected.emotional_score,
                 selected_nsq_lever_position: selected.nsq_lever_position,
                 all_candidates_shared: true,
@@ -353,7 +353,10 @@ mod tests {
         assert!(report.speech_loop.terminal_plan_completed);
         assert!(report.reply_layer.reply_generated_from_state);
         assert!(!report.reply_layer.canned_reply);
-        assert!(report.reply_layer.reply.contains("It has been a long build"));
+        assert!(report
+            .reply_layer
+            .reply
+            .contains("It has been a long build"));
         assert!(report.reply_layer.reply.contains("continuity"));
         assert!(!report.terminal_plan.is_empty());
     }

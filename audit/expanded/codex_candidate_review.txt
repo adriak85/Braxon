@@ -1,0 +1,636 @@
+=== codex candidate meaningful diff ===
+ .../reconstruction/DAX_FULL_INTENT_EXTRACTION.md   | 117 [32m+++++++++++++++[m
+ .codex/reconstruction/NSQ_ARCHAEOLOGY_20260816.md  |  86 [32m+++++++++++[m
+ .../NSQ_CONTRADICTIONS_AND_VARIANTS_20260816.md    | 106 [32m+++++++++++++[m
+ .../NSQ_INVENTORY_PASS_01_20260816.md              | 157 [32m++++++++++++++++++++[m
+ Cargo.toml                                         |   1 [32m+[m
+ crates/braxon-core/src/lib.rs                      |   8 [32m+[m
+ crates/braxon-core/src/seed_citadel.rs             | 165 [32m+++++++++++++++++++++[m
+ crates/braxon-core/src/wowas_seeded.rs             | 121 [32m+++++++++++++++[m
+ crates/nsq-citadel/Cargo.toml                      |  15 [32m++[m
+ crates/nsq-citadel/src/bin/engage.rs               |  15 [32m++[m
+ crates/nsq-citadel/src/bit.rs                      |  14 [32m++[m
+ crates/nsq-citadel/src/capital.rs                  |  14 [32m++[m
+ crates/nsq-citadel/src/coaching.rs                 |  11 [32m++[m
+ crates/nsq-citadel/src/lib.rs                      |  10 [32m++[m
+ crates/nsq-citadel/src/seed.rs                     |  20 [32m+++[m
+ crates/nsq-citadel/src/wire.rs                     |   9 [32m++[m
+ docs/reconstruction/operating-charter.md           |  46 [32m++++++[m
+ nsq-unified/NSQ_UNIFIED.nsq                        |  78 [31m----------[m
+ nsq-unified/README.md                              |  13 [31m--[m
+ nsq-unified/src/ingest.rs                          |  90 [31m-----------[m
+ reconstruction/wowas-world/README.md               |  35 [31m-----[m
+ scripts/autonomous_validation.sh                   |  66 [32m+++++++++[m
+ 22 files changed, 981 insertions(+), 216 deletions(-)
+=== codex candidate paths ===
+A	.codex/reconstruction/DAX_FULL_INTENT_EXTRACTION.md
+A	.codex/reconstruction/NSQ_ARCHAEOLOGY_20260816.md
+A	.codex/reconstruction/NSQ_CONTRADICTIONS_AND_VARIANTS_20260816.md
+A	.codex/reconstruction/NSQ_INVENTORY_PASS_01_20260816.md
+M	Cargo.toml
+M	crates/braxon-core/src/lib.rs
+A	crates/braxon-core/src/seed_citadel.rs
+A	crates/braxon-core/src/wowas_seeded.rs
+A	crates/nsq-citadel/Cargo.toml
+A	crates/nsq-citadel/src/bin/engage.rs
+A	crates/nsq-citadel/src/bit.rs
+A	crates/nsq-citadel/src/capital.rs
+A	crates/nsq-citadel/src/coaching.rs
+A	crates/nsq-citadel/src/lib.rs
+A	crates/nsq-citadel/src/seed.rs
+A	crates/nsq-citadel/src/wire.rs
+A	docs/reconstruction/operating-charter.md
+D	nsq-unified/NSQ_UNIFIED.nsq
+D	nsq-unified/README.md
+D	nsq-unified/src/ingest.rs
+D	reconstruction/wowas-world/README.md
+A	scripts/autonomous_validation.sh
+=== codex candidate source changes ===
+[1mdiff --git a/crates/braxon-core/src/lib.rs b/crates/braxon-core/src/lib.rs[m
+[1mindex 0620dc66f..685a3c984 100644[m
+[1m--- a/crates/braxon-core/src/lib.rs[m
+[1m+++ b/crates/braxon-core/src/lib.rs[m
+[36m@@ -1,49 +1,57 @@[m
+ #![allow(non_snake_case)][m
+ pub mod bus;[m
+ pub mod context_manifest;[m
+ pub mod council;[m
+ pub mod council_ten;[m
+ pub mod greeting;[m
+ pub mod offline_agent;[m
+ pub mod offline_models;[m
+[32m+[m[32mpub mod seed_citadel;[m
+ pub mod wowas;[m
+ pub mod wowas_rescue;[m
+[32m+[m[32mpub mod wowas_seeded;[m
+ [m
+ use serde::{Deserialize, Serialize};[m
+ use std::fs;[m
+ use std::path::Path;[m
+ [m
+ pub use council_ten::{[m
+     CouncilTen, CouncilTenWakeTrace, WakeStep, WakeStepResult, COUNCIL_TEN_AUTHORITY,[m
+     STAMP_WAKE_COUNCIL_TEN,[m
+ };[m
+ pub use bus::{[m
+     BraxonBus, BraxonBusReport, BusReplyLayer, IntentEnglishLoop, SharedThought,[m
+     SpeechLoopState, ThoughtPressureCandidate, BRAXON_BUS_ROUTE, BRAXON_BUS_SCHEMA,[m
+     BRAXON_REPLY_SCHEMA,[m
+ };[m
+[32m+[m[32mpub use seed_citadel::{[m
+[32m+[m[32m    build_seed_plan, materialize_window, CitadelState, SeedMaterializationPlan,[m
+[32m+[m[32m    TokenSection, UniversalToken, UniversalTokenizerSeed, CITadel_MATERIALIZATION_VERSION,[m
+[32m+[m[32m    UNIVERSAL_TOKENIZER_VERSION,[m
+[32m+[m[32m};[m
+[32m+[m[32mpub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};[m
+ [m
+ #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)][m
+ pub struct BRAXONIdentity {[m
+     pub name: String,[m
+     pub version: String,[m
+     pub canonical_semantics: String,[m
+ }[m
+ [m
+ impl BRAXONIdentity {[m
+     pub fn current() -> Self {[m
+         Self {[m
+             name: "Braxon".to_string(),[m
+             version: env!("CARGO_PKG_VERSION").to_string(),[m
+             canonical_semantics: "base8_switch_topology".to_string(),[m
+         }[m
+     }[m
+ }[m
+ [m
+ #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)][m
+ pub struct Nu128InstallOversightStatus {[m
+     pub model_lineage: String,[m
+     pub canonical_semantics: String,[m
+     pub target_source_variant_gb: u64,[m
+     pub nsq_storage_target_gb: String,[m
+     pub nsq_hot_memory_target_gb: String,[m
+[1mdiff --git a/crates/braxon-core/src/seed_citadel.rs b/crates/braxon-core/src/seed_citadel.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..015b2feb3[m
+[1m--- /dev/null[m
+[1m+++ b/crates/braxon-core/src/seed_citadel.rs[m
+[36m@@ -0,0 +1,165 @@[m
+[32m+[m[32m//! Seed-first materialization for the NSQ cognitive substrate.[m
+[32m+[m[32m//![m
+[32m+[m[32m//! This module deliberately separates logical completeness from physical[m
+[32m+[m[32m//! residency. A seed describes the canonical sections and deterministic[m
+[32m+[m[32m//! expansion rules; a citadel records the complete logical parameter/state[m
+[32m+[m[32m//! domain while only an active window needs to be resident on the bus.[m
+[32m+[m[32m//![m
+[32m+[m[32m//! It is a construction primitive, not a claim that neural weights can be[m
+[32m+[m[32m//! reconstructed from arbitrary text. Real learned weights still require a[m
+[32m+[m[32m//! cryptographic seed/artifact whose reconstruction contract is defined by[m
+[32m+[m[32m//! the producer.[m
+[32m+[m
+[32m+[m[32muse serde::{Deserialize, Serialize};[m
+[32m+[m[32muse std::collections::BTreeMap;[m
+[32m+[m[32muse std::hash::{Hash, Hasher};[m
+[32m+[m
+[32m+[m[32mpub const UNIVERSAL_TOKENIZER_VERSION: &str = "nsq.universal.token.sync.v1";[m
+[32m+[m[32mpub const CITadel_MATERIALIZATION_VERSION: &str = "nsq.citadel.seed.materialization.v1";[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct TokenSection {[m
+[32m+[m[32m    pub section: String,[m
+[32m+[m[32m    pub namespace: u16,[m
+[32m+[m[32m    pub symbols: Vec<String>,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct UniversalToken {[m
+[32m+[m[32m    pub universal_id: u64,[m
+[32m+[m[32m    pub canonical: String,[m
+[32m+[m[32m    pub projections: BTreeMap<String, u32>,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct UniversalTokenizerSeed {[m
+[32m+[m[32m    pub version: String,[m
+[32m+[m[32m    pub universal: TokenSection,[m
+[32m+[m[32m    pub sections: Vec<TokenSection>,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mimpl UniversalTokenizerSeed {[m
+[32m+[m[32m    pub fn canonical() -> Self {[m
+[32m+[m[32m        let names = [[m
+[32m+[m[32m            "maverick_logic",[m
+[32m+[m[32m            "qwen_synthesis",[m
+[32m+[m[32m            "devstral_arbiter",[m
+[32m+[m[32m            "deepseek_analyzer",[m
+[32m+[m[32m            "gemma_limbic",[m
+[32m+[m[32m            "llama_reasoner",[m
+[32m+[m[32m            "image_body",[m
+[32m+[m[32m            "voice_body",[m
+[32m+[m[32m            "video_body",[m
+[32m+[m[32m            "spatial_body",[m
+[32m+[m[32m        ];[m
+[32m+[m[32m        let sections = names[m
+[32m+[m[32m            .iter()[m
+[32m+[m[32m            .enumerate()[m
+[32m+[m[32m            .map(|(i, name)| TokenSection {[m
+[32m+[m[32m                section: (*name).to_string(),[m
+[32m+[m[32m                namespace: (i + 1) as u16,[m
+[32m+[m[32m                symbols: Vec::new(),[m
+[32m+[m[32m            })[m
+[32m+[m[32m            .collect();[m
+[32m+[m[32m        Self {[m
+[32m+[m[32m            version: UNIVERSAL_TOKENIZER_VERSION.to_string(),[m
+[32m+[m[32m            universal: TokenSection {[m
+[32m+[m[32m                section: "universal".to_string(),[m
+[32m+[m[32m                namespace: 0,[m
+[32m+[m[32m                symbols: vec!["<bos>".into(), "<eos>".into(), "<intent>".into(), "<state>".into()],[m
+[32m+[m[32m            },[m
+[32m+[m[32m            sections,[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    pub fn synchronize(&self, canonical: &str) -> UniversalToken {[m
+[32m+[m[32m        let universal_id = stable_id(canonical);[m
+[32m+[m[32m        let projections = self[m
+[32m+[m[32m            .sections[m
+[32m+[m[32m            .iter()[m
+[32m+[m[32m            .map(|section| (section.section.clone(), (universal_id % 4_294_967_291) as u32))[m
+[32m+[m[32m            .collect();[m
+[32m+[m[32m        UniversalToken {[m
+[32m+[m[32m            universal_id,[m
+[32m+[m[32m            canonical: canonical.to_string(),[m
+[32m+[m[32m            projections,[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct SeedMaterializationPlan {[m
+[32m+[m[32m    pub version: String,[m
+[32m+[m[32m    pub seed_id: String,[m
+[32m+[m[32m    pub logical_parameter_bits: u128,[m
+[32m+[m[32m    pub logical_state_bits: u128,[m
+[32m+[m[32m    pub active_window_bits: u64,[m
+[32m+[m[32m    pub tokenizer: UniversalTokenizerSeed,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct CitadelState {[m
+[32m+[m[32m    pub seed_id: String,[m
+[32m+[m[32m    pub logical_complete: bool,[m
+[32m+[m[32m    pub materialized_window_start: u128,[m
+[32m+[m[32m    pub materialized_window_bits: u64,[m
+[32m+[m[32m    pub parameter_digest: u64,[m
+[32m+[m[32m    pub tokenizer_version: String,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mpub fn build_seed_plan(seed_id: &str, logical_parameter_bits: u128, logical_state_bits: u128) -> SeedMaterializationPlan {[m
+[32m+[m[32m    SeedMaterializationPlan {[m
+[32m+[m[32m        version: CITadel_MATERIALIZATION_VERSION.to_string(),[m
+[32m+[m[32m        seed_id: seed_id.to_string(),[m
+[32m+[m[32m        logical_parameter_bits,[m
+[32m+[m[32m        logical_state_bits,[m
+[32m+[m[32m        active_window_bits: 1 << 20,[m
+[32m+[m[32m        tokenizer: UniversalTokenizerSeed::canonical(),[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mpub fn materialize_window(plan: &SeedMaterializationPlan, start: u128, bits: u64) -> CitadelState {[m
+[32m+[m[32m    let available = plan.logical_parameter_bits.saturating_sub(start);[m
+[32m+[m[32m    let resident = available.min(bits as u128) as u64;[m
+[32m+[m[32m    let mut h = std::collections::hash_map::DefaultHasher::new();[m
+[32m+[m[32m    plan.seed_id.hash(&mut h);[m
+[32m+[m[32m    start.hash(&mut h);[m
+[32m+[m[32m    resident.hash(&mut h);[m
+[32m+[m[32m    plan.tokenizer.version.hash(&mut h);[m
+[32m+[m[32m    CitadelState {[m
+[32m+[m[32m        seed_id: plan.seed_id.clone(),[m
+[32m+[m[32m        logical_complete: start.saturating_add(resident as u128) <= plan.logical_parameter_bits,[m
+[32m+[m[32m        materialized_window_start: start,[m
+[32m+[m[32m        materialized_window_bits: resident,[m
+[32m+[m[32m        parameter_digest: h.finish(),[m
+[32m+[m[32m        tokenizer_version: plan.tokenizer.version.clone(),[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfn stable_id(value: &str) -> u64 {[m
+[32m+[m[32m    let mut h = std::collections::hash_map::DefaultHasher::new();[m
+[32m+[m[32m    value.hash(&mut h);[m
+[32m+[m[32m    h.finish()[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[cfg(test)][m
+[32m+[m[32mmod tests {[m
+[32m+[m[32m    use super::*;[m
+[32m+[m
+[32m+[m[32m    #[test][m
+[32m+[m[32m    fn seed_builds_logically_complete_citadel_without_full_residency() {[m
+[32m+[m[32m        let plan = build_seed_plan("demo-citadel", 1 << 40, 1 << 24);[m
+[32m+[m[32m        let state = materialize_window(&plan, 0, plan.active_window_bits);[m
+[32m+[m[32m        assert!(state.logical_complete);[m
+[32m+[m[32m        assert_eq!(state.materialized_window_bits, plan.active_window_bits);[m
+[32m+[m[32m        assert!((state.materialized_window_bits as u128) < plan.logical_parameter_bits);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    #[test][m
+[32m+[m[32m    fn universal_token_is_shared_across_all_sections() {[m
+[32m+[m[32m        let tokenizer = UniversalTokenizerSeed::canonical();[m
+[32m+[m[32m        let token = tokenizer.synchronize("willow");[m
+[32m+[m[32m        assert_eq!(token.projections.len(), tokenizer.sections.len());[m
+[32m+[m[32m        assert!(token.universal_id != 0);[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/braxon-core/src/wowas_seeded.rs b/crates/braxon-core/src/wowas_seeded.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..4a67a5bf5[m
+[1m--- /dev/null[m
+[1m+++ b/crates/braxon-core/src/wowas_seeded.rs[m
+[36m@@ -0,0 +1,121 @@[m
+[32m+[m[32m//! Seed-first construction surface for Whispers of Willow and Stone.[m
+[32m+[m[32m//![m
+[32m+[m[32m//! This is intentionally deterministic and lightweight: it proves that a[m
+[32m+[m[32m//! world can be reconstructed from a compact seed and advanced without[m
+[32m+[m[32m//! shipping a giant pre-expanded world. It is a world-construction test lane,[m
+[32m+[m[32m//! not a substitute for the native cognitive runtime.[m
+[32m+[m
+[32m+[m[32muse crate::seed_citadel::{build_seed_plan, materialize_window, UniversalTokenizerSeed};[m
+[32m+[m[32muse serde::{Deserialize, Serialize};[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct WorldSeed {[m
+[32m+[m[32m    pub seed_id: String,[m
+[32m+[m[32m    pub world_name: String,[m
+[32m+[m[32m    pub universe_name: String,[m
+[32m+[m[32m    pub epoch: u64,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct WorldEntity {[m
+[32m+[m[32m    pub id: u64,[m
+[32m+[m[32m    pub name: String,[m
+[32m+[m[32m    pub archetype: String,[m
+[32m+[m[32m    pub location: String,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)][m
+[32m+[m[32mpub struct WorldFrame {[m
+[32m+[m[32m    pub tick: u64,[m
+[32m+[m[32m    pub entities: Vec<WorldEntity>,[m
+[32m+[m[32m    pub narration: String,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone)][m
+[32m+[m[32mpub struct WhispersWorld {[m
+[32m+[m[32m    pub seed: WorldSeed,[m
+[32m+[m[32m    pub tokenizer: UniversalTokenizerSeed,[m
+[32m+[m[32m    pub frame: WorldFrame,[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mimpl WhispersWorld {[m
+[32m+[m[32m    pub fn from_seed(seed: WorldSeed) -> Self {[m
+[32m+[m[32m        let tokenizer = UniversalTokenizerSeed::canonical();[m
+[32m+[m[32m        let plan = build_seed_plan(&seed.seed_id, 1 << 44, 1 << 28);[m
+[32m+[m[32m        let _citadel = materialize_window(&plan, 0, plan.active_window_bits);[m
+[32m+[m[32m        let willow = WorldEntity {[m
+[32m+[m[32m            id: stable("willow"),[m
+[32m+[m[32m            name: "Willow".into(),[m
+[32m+[m[32m            archetype: "keeper_of_the_well".into(),[m
+[32m+[m[32m            location: "The First Clearing".into(),[m
+[32m+[m[32m        };[m
+[32m+[m[32m        let stone = WorldEntity {[m
+[32m+[m[32m            id: stable("stone"),[m
+[32m+[m[32m            name: "Stone".into(),[m
+[32m+[m[32m            archetype: "memory_bearer".into(),[m
+[32m+[m[32m            location: "The First Clearing".into(),[m
+[32m+[m[32m        };[m
+[32m+[m[32m        Self {[m
+[32m+[m[32m            seed,[m
+[32m+[m[32m            tokenizer,[m
+[32m+[m[32m            frame: WorldFrame {[m
+[32m+[m[32m                tick: 0,[m
+[32m+[m[32m                entities: vec![willow, stone],[m
+[32m+[m[32m                narration: "At the edge of the first clearing, the willow remembers the wind and the stone remembers the rain.".into(),[m
+[32m+[m[32m            },[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    pub fn play(&mut self, utterance: &str) -> WorldFrame {[m
+[32m+[m[32m        let token = self.tokenizer.synchronize(utterance);[m
+[32m+[m[32m        self.frame.tick += 1;[m
+[32m+[m[32m        let direction = match self.frame.tick % 4 {[m
+[32m+[m[32m            0 => "north toward the old river",[m
+[32m+[m[32m            1 => "east beneath the willow",[m
+[32m+[m[32m            2 => "south where the stone path descends",[m
+[32m+[m[32m            _ => "west toward the sleeping hills",[m
+[32m+[m[32m        };[m
+[32m+[m[32m        self.frame.narration = format!([m
+[32m+[m[32m            "The world hears '{}'. Willow and Stone share the universal semantic mark {} and turn {}.",[m
+[32m+[m[32m            utterance, token.universal_id, direction[m
+[32m+[m[32m        );[m
+[32m+[m[32m        self.frame.clone()[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfn stable(value: &str) -> u64 {[m
+[32m+[m[32m    use std::hash::{Hash, Hasher};[m
+[32m+[m[32m    let mut h = std::collections::hash_map::DefaultHasher::new();[m
+[32m+[m[32m    value.hash(&mut h);[m
+[32m+[m[32m    h.finish()[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[cfg(test)][m
+[32m+[m[32mmod tests {[m
+[32m+[m[32m    use super::*;[m
+[32m+[m
+[32m+[m[32m    #[test][m
+[32m+[m[32m    fn world_reconstructs_from_compact_seed() {[m
+[32m+[m[32m        let world = WhispersWorld::from_seed(WorldSeed {[m
+[32m+[m[32m            seed_id: "whispers-seed-v1".into(),[m
+[32m+[m[32m            world_name: "Whispers of Willow and Stone".into(),[m
+[32m+[m[32m            universe_name: "The Willowstone Continuum".into(),[m
+[32m+[m[32m            epoch: 1,[m
+[32m+[m[32m        });[m
+[32m+[m[32m        assert_eq!(world.frame.entities.len(), 2);[m
+[32m+[m[32m        assert_eq!(world.frame.tick, 0);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    #[test][m
+[32m+[m[32m    fn world_advances_without_rebuilding_the_world() {[m
+[32m+[m[32m        let mut world = WhispersWorld::from_seed(WorldSeed {[m
+[32m+[m[32m            seed_id: "whispers-seed-v1".into(),[m
+[32m+[m[32m            world_name: "Whispers of Willow and Stone".into(),[m
+[32m+[m[32m            universe_name: "The Willowstone Continuum".into(),[m
+[32m+[m[32m            epoch: 1,[m
+[32m+[m[32m        });[m
+[32m+[m[32m        let frame = world.play("follow the whisper beyond the stones");[m
+[32m+[m[32m        assert_eq!(frame.tick, 1);[m
+[32m+[m[32m        assert!(frame.narration.contains("universal semantic mark"));[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/nsq-citadel/Cargo.toml b/crates/nsq-citadel/Cargo.toml[m
+[1mnew file mode 100644[m
+[1mindex 000000000..67577368a[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/Cargo.toml[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m[package][m
+[32m+[m[32mname = "nsq-citadel"[m
+[32m+[m[32mversion = "0.1.0"[m
+[32m+[m[32medition = "2021"[m
+[32m+[m[32mpublish = false[m
+[32m+[m[32mdescription = "NSQ-native Citadel seed reconstruction and Council Ten routing."[m
+[32m+[m
+[32m+[m[32m[lib][m
+[32m+[m[32mname = "nsq_citadel"[m
+[32m+[m[32mpath = "src/lib.rs"[m
+[32m+[m
+[32m+[m[32m[dependencies][m
+[32m+[m[32mnsq-core = { path = "../nsq-core" }[m
+[32m+[m[32mserde = { version = "1", features = ["derive"] }[m
+[32m+[m[32mserde_json = "1"[m
+[1mdiff --git a/crates/nsq-citadel/src/bin/engage.rs b/crates/nsq-citadel/src/bin/engage.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..71fae4701[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/bin/engage.rs[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32muse nsq_citadel::{CitadelBus, CoachingMode, IntentSeed};[m
+[32m+[m
+[32m+[m[32mfn main() {[m
+[32m+[m[32m    let input = std::env::args().skip(1).collect::<Vec<_>>().join(" ");[m
+[32m+[m[32m    let input = if input.trim().is_empty() { "What has not been seen yet?" } else { input.as_str() };[m
+[32m+[m[32m    let seed = IntentSeed::new("braxon.citadel.seed.v1", input);[m
+[32m+[m[32m    let materialized = seed.materialize(0, 8);[m
+[32m+[m[32m    let reply = CitadelBus::new(CoachingMode::Balanced).route(input);[m
+[32m+[m[32m    println!("intent={}", input);[m
+[32m+[m[32m    println!("input_slots={}", reply.input_slot_count);[m
+[32m+[m[32m    println!("capitals={} poles={}", reply.capital_count, reply.pole_count);[m
+[32m+[m[32m    println!("lead_pole={} priority={}", reply.lead_pole, reply.lead_priority);[m
+[32m+[m[32m    println!("pressure={}", reply.total_pressure);[m
+[32m+[m[32m    println!("logical_complete={} resident_slots={}", materialized.logical_complete, materialized.slots.len());[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/nsq-citadel/src/bit.rs b/crates/nsq-citadel/src/bit.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..4bdd7bec4[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/bit.rs[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32muse nsq_core::{Charge, Dialect, NSQLever, NSQSlot, CANONICAL_LEVER_MAX_POSITION};[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Copy, PartialEq, Eq)][m
+[32m+[m[32mpub enum CitadelBitState { Active, Destabilizing, Reapproaching, Persistent }[m
+[32m+[m[32mimpl CitadelBitState { pub fn as_str(self) -> &'static str { match self { Self::Active=>"active", Self::Destabilizing=>"destabilizing", Self::Reapproaching=>"reapproaching", Self::Persistent=>"persistent" } } }[m
+[32m+[m
+[32m+[m[32mpub struct CitadelBit { pub lane:u128, pub state:CitadelBitState, pub instructions:Vec<NSQSlot>, pub priority:u16 }[m
+[32m+[m[32mimpl CitadelBit {[m
+[32m+[m[32m    pub fn new(lane:u128)->Self{Self{lane,state:CitadelBitState::Persistent,instructions:Vec::new(),priority:255}}[m
+[32m+[m[32m    pub fn check_in(&mut self, input:Vec<NSQSlot>){ if self.state==CitadelBitState::Destabilizing{self.release_and_reapproach();} self.instructions.extend(input); if self.state==CitadelBitState::Persistent{self.state=CitadelBitState::Active;} }[m
+[32m+[m[32m    fn release_and_reapproach(&mut self){self.state=CitadelBitState::Reapproaching;self.instructions.clear();self.instructions.push(NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,CANONICAL_LEVER_MAX_POSITION).unwrap()]));self.state=CitadelBitState::Active;}[m
+[32m+[m[32m    pub fn is_live(&self)->bool{!self.instructions.is_empty()&&self.state!=CitadelBitState::Destabilizing}[m
+[32m+[m[32m    pub fn pressure_sum(&self)->u64{self.instructions.iter().flat_map(|s|s.body.iter()).filter(|l|l.charge==Charge::Positive).map(|l|l.position).sum()}[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/nsq-citadel/src/capital.rs b/crates/nsq-citadel/src/capital.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..d2681a31f[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/capital.rs[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32muse nsq_core::NSQSlot;[m
+[32m+[m[32muse crate::{bit::CitadelBit, coaching::CoachingMode};[m
+[32m+[m
+[32m+[m[32mpub const CAPITAL_COUNT:usize=5; pub const POLES_PER_CAPITAL:usize=2;[m
+[32m+[m[32m#[derive(Debug,Clone)] pub struct BoardMessage{pub capital_id:usize,pub pole_lane:usize,pub pole_id:String,pub slot_count:usize,pub priority:u16,pub state:String,pub pressure_sum:u64,pub is_live:bool}[m
+[32m+[m[32mpub struct Capital{pub id:usize,pub cluster:[(usize,&'static str);2],pub board:Vec<BoardMessage>,pub coaching:CoachingMode}[m
+[32m+[m[32mimpl Capital{[m
+[32m+[m[32m pub fn new(id:usize,cluster:[(usize,&'static str);2],coaching:CoachingMode)->Self{Self{id,cluster,board:Vec::new(),coaching}}[m
+[32m+[m[32m pub fn dispatch(&mut self,slots:Vec<NSQSlot>)->[CitadelBit;2]{let p=self.coaching.pole_priorities(self.cluster[0].1,self.cluster[1].1);let mut a=CitadelBit::new(self.cluster[0].0 as u128);let mut b=CitadelBit::new(self.cluster[1].0 as u128);a.priority=p[0];b.priority=p[1];a.check_in(slots.clone());b.check_in(slots);self.board.push(msg(self.id,self.cluster[0],&a));self.board.push(msg(self.id,self.cluster[1],&b));[a,b]}[m
+[32m+[m[32m pub fn drain_board(&mut self)->Vec<BoardMessage>{std::mem::take(&mut self.board)}[m
+[32m+[m[32m}[m
+[32m+[m[32mfn msg(id:usize,c:(usize,&'static str),b:&CitadelBit)->BoardMessage{BoardMessage{capital_id:id,pole_lane:c.0,pole_id:c.1.to_string(),slot_count:b.instructions.len(),priority:b.priority,state:b.state.as_str().into(),pressure_sum:b.pressure_sum(),is_live:b.is_live()}}[m
+[32m+[m[32mpub fn build_capitals(coaching:CoachingMode)->[Capital;5]{[[m
+[32m+[m[32m Capital::new(1,[(1,"maverick"),(2,"qwen")],coaching),Capital::new(2,[(3,"arbiter"),(4,"analyzer")],coaching),Capital::new(3,[(5,"limbic"),(6,"support")],coaching),Capital::new(4,[(7,"voice"),(8,"image")],coaching),Capital::new(5,[(9,"video"),(10,"world")],coaching)]}[m
+[1mdiff --git a/crates/nsq-citadel/src/coaching.rs b/crates/nsq-citadel/src/coaching.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..4c96ab49e[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/coaching.rs[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32muse serde::{Deserialize, Serialize};[m
+[32m+[m
+[32m+[m[32m#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)][m
+[32m+[m[32m#[serde(rename_all="lowercase")][m
+[32m+[m[32mpub enum CoachingMode { Balanced, Logical, Artistic }[m
+[32m+[m[32mimpl CoachingMode {[m
+[32m+[m[32m    pub fn from_str(s:&str)->Self{match s.to_ascii_lowercase().as_str(){"logical"=>Self::Logical,"artistic"=>Self::Artistic,_=>Self::Balanced}}[m
+[32m+[m[32m    pub fn as_str(self)->&'static str{match self{Self::Balanced=>"balanced",Self::Logical=>"logical",Self::Artistic=>"artistic"}}[m
+[32m+[m[32m    pub fn pole_priorities(&self,a:&str,b:&str)->[u16;2]{[self.weight(a),self.weight(b)]}[m
+[32m+[m[32m    fn weight(&self,p:&str)->u16{match self{Self::Balanced=>200,Self::Logical=>match p{"maverick"|"analyzer"|"arbiter"=>255,"support"=>200,"qwen"|"limbic"=>150,_=>128},Self::Artistic=>match p{"qwen"|"limbic"|"voice"|"image"=>255,"support"=>220,"maverick"|"analyzer"=>150,_=>180}}}[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/nsq-citadel/src/lib.rs b/crates/nsq-citadel/src/lib.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..0981b9239[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/lib.rs[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32mpub mod bit;[m
+[32m+[m[32mpub mod capital;[m
+[32m+[m[32mpub mod coaching;[m
+[32m+[m[32mpub mod seed;[m
+[32m+[m[32mpub mod wire;[m
+[32m+[m
+[32m+[m[32mpub use capital::{build_capitals, BoardMessage, Capital, CAPITAL_COUNT, POLES_PER_CAPITAL};[m
+[32m+[m[32mpub use coaching::CoachingMode;[m
+[32m+[m[32mpub use seed::{coordinate_intent, synchronize, IntentSeed, MaterializedState, UniversalToken};[m
+[32m+[m[32mpub use wire::{CitadelBus, CitadelReply};[m
+[1mdiff --git a/crates/nsq-citadel/src/seed.rs b/crates/nsq-citadel/src/seed.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..1bd6fe5ea[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/seed.rs[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m//! Seed-first reconstruction: intent is canonical, residency is materialization.[m
+[32m+[m[32muse serde::{Deserialize,Serialize};[m
+[32m+[m[32muse nsq_core::{Charge,Dialect,NSQLever,NSQSlot,CANONICAL_LEVER_MAX_POSITION};[m
+[32m+[m
+[32m+[m[32m#[derive(Debug,Clone,Serialize,Deserialize)] pub struct IntentSeed{pub identity:String,pub intent:String,pub coordinates:Vec<u64>,pub sections:Vec<String>}[m
+[32m+[m[32m#[derive(Debug,Clone,Serialize,Deserialize)] pub struct MaterializedState{pub logical_complete:bool,pub resident_begin:usize,pub resident_end:usize,pub slots:Vec<NSQSlot>}[m
+[32m+[m[32m#[derive(Debug,Clone,Serialize,Deserialize)] pub struct UniversalToken{pub canonical:String,pub sections:Vec<String>,pub universal:String}[m
+[32m+[m
+[32m+[m[32mimpl IntentSeed{[m
+[32m+[m[32m pub fn new(identity:&str,intent:&str)->Self{let coordinates=coordinate_intent(intent);Self{identity:identity.into(),intent:intent.into(),coordinates,sections:vec!["language".into(),"symbol".into(),"intent".into(),"world".into()]}}[m
+[32m+[m[32m pub fn materialize(&self,start:usize,count:usize)->MaterializedState{let slots=self.coordinates.iter().map(|p|NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,*p).unwrap()])).collect::<Vec<_>>();let end=(start+count).min(slots.len());MaterializedState{logical_complete:true,resident_begin:start.min(slots.len()),resident_end:end,slots:slots.into_iter().skip(start.min(end)).take(end.saturating_sub(start)).collect()}}[m
+[32m+[m[32m}[m
+[32m+[m[32mpub fn coordinate_intent(text:&str)->Vec<u64>{text.split_whitespace().map(|w|{let h=w.bytes().fold(2166136261u64,|a,b|a.wrapping_mul(16777619)^b as u64);1+(h%CANONICAL_LEVER_MAX_POSITION)}).collect()}[m
+[32m+[m[32mpub fn synchronize(canonical:&str,sections:&[&str])->UniversalToken{UniversalToken{canonical:canonical.into(),sections:sections.iter().map(|s|(*s).into()).collect(),universal:format!("nsq.intent.v1::{canonical}")}}[m
+[32m+[m
+[32m+[m[32m#[cfg(test)] mod tests{use super::*;[m
+[32m+[m[32m #[test] fn seed_is_logically_complete_with_partial_residency(){let s=IntentSeed::new("test","willow stone remembers");let m=s.materialize(0,1);assert!(m.logical_complete);assert_eq!(m.slots.len(),1);assert!(s.coordinates.len()>1);}[m
+[32m+[m[32m #[test] fn synchronization_has_one_universal_identity(){let t=synchronize("remember",&["language","image","world"]);assert_eq!(t.universal,"nsq.intent.v1::remember");assert_eq!(t.sections.len(),3);}[m
+[32m+[m[32m #[test] fn coordinates_are_deterministic(){assert_eq!(coordinate_intent("stone willow"),coordinate_intent("stone willow"));}[m
+[32m+[m[32m}[m
+[1mdiff --git a/crates/nsq-citadel/src/wire.rs b/crates/nsq-citadel/src/wire.rs[m
+[1mnew file mode 100644[m
+[1mindex 000000000..157d59cb2[m
+[1m--- /dev/null[m
+[1m+++ b/crates/nsq-citadel/src/wire.rs[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32muse nsq_core::{Charge,Dialect,NSQLever,NSQSlot,CANONICAL_LEVER_MAX_POSITION};[m
+[32m+[m[32muse crate::{capital::{build_capitals,BoardMessage},coaching::CoachingMode};[m
+[32m+[m[32m#[derive(Debug)] pub struct CitadelReply{pub input_slot_count:usize,pub capital_count:usize,pub pole_count:usize,pub board_messages:Vec<BoardMessage>,pub total_pressure:u64,pub lead_pole:String,pub lead_priority:u16}[m
+[32m+[m[32mpub struct CitadelBus{pub coaching:CoachingMode}[m
+[32m+[m[32mimpl CitadelBus{pub fn new(coaching:CoachingMode)->Self{Self{coaching}}[m
+[32m+[m[32m pub fn route(&self,input:&str)->CitadelReply{let slots=text_to_intent_slots(input);let mut caps=build_capitals(self.coaching);let mut board=Vec::new();for c in caps.iter_mut(){c.dispatch(slots.clone());board.extend(c.drain_board());}let total=board.iter().map(|m|m.pressure_sum).sum();let lead=board.iter().filter(|m|m.is_live).max_by_key(|m|m.priority).map(|m|(m.pole_id.clone(),m.priority)).unwrap_or(("none".into(),0));CitadelReply{input_slot_count:slots.len(),capital_count:5,pole_count:10,board_messages:board,total_pressure:total,lead_pole:lead.0,lead_priority:lead.1}}[m
+[32m+[m[32m}[m
+[32m+[m[32mpub fn text_to_intent_slots(input:&str)->Vec<NSQSlot>{let words:Vec<_>=input.split_whitespace().collect();if words.is_empty(){return vec![intent_slot(CANONICAL_LEVER_MAX_POSITION/2)]}words.into_iter().map(|w|intent_slot((w.chars().count() as u64*(CANONICAL_LEVER_MAX_POSITION/64)).clamp(1,CANONICAL_LEVER_MAX_POSITION))).collect()}[m
+[32m+[m[32mfn intent_slot(position:u64)->NSQSlot{NSQSlot::new(Dialect::Intent,vec![NSQLever::new(Charge::Positive,position).unwrap()])}[m
+[1mdiff --git a/scripts/autonomous_validation.sh b/scripts/autonomous_validation.sh[m
+[1mnew file mode 100644[m
+[1mindex 000000000..a07db96b4[m
+[1m--- /dev/null[m
+[1m+++ b/scripts/autonomous_validation.sh[m
+[36m@@ -0,0 +1,66 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32mset -euo pipefail[m
+[32m+[m
+[32m+[m[32mROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"[m
+[32m+[m[32mcd "$ROOT"[m
+[32m+[m
+[32m+[m[32mJOBS="${BRAXON_JOBS:-1}"[m
+[32m+[m[32mROUNDS="${BRAXON_VALIDATION_ROUNDS:-3000}"[m
+[32m+[m
+[32m+[m[32mprintf '%s\n' '[1/3] workspace tests'[m
+[32m+[m[32mcargo test --workspace --all-targets --jobs "$JOBS"[m
+[32m+[m
+[32m+[m[32mprintf '%s\n' '[2/3] deterministic engagement smoke tests'[m
+[32m+[m[32mquestions=([m
+[32m+[m[32m  "What has not been seen yet?"[m
+[32m+[m[32m  "Explain the strongest contradiction in the current state."[m
+[32m+[m[32m  "What should be preserved before changing direction?"[m
+[32m+[m[32m  "Find the smallest useful next action."[m
+[32m+[m[32m  "Compare two competing interpretations."[m
+[32m+[m[32m  "What evidence would change the conclusion?"[m
+[32m+[m[32m  "Explore the boundary of this intent."[m
+[32m+[m[32m  "Return to the earliest unresolved assumption."[m
+[32m+[m[32m)[m
+[32m+[m[32mfor q in "${questions[@]}"; do[m
+[32m+[m[32m  cargo run -q -p nsq-citadel --bin engage -- "$q" >/dev/null[m
+[32m+[m[32mdone[m
+[32m+[m
+[32m+[m[32mprintf '%s\n' '[3/3] thousands-of-operations deterministic corpus'[m
+[32m+[m[32mpython3 - "$ROUNDS" <<'PY'[m
+[32m+[m[32mimport hashlib[m
+[32m+[m[32mimport json[m
+[32m+[m[32mimport subprocess[m
+[32m+[m[32mimport sys[m
+[32m+[m
+[32m+[m[32mrounds = int(sys.argv[1])[m
+[32m+[m[32moperations = [][m
+[32m+[m[32mfor i in range(rounds):[m
+[32m+[m[32m    operations.append(f"operation {i}: inspect intent, route through Council Ten, preserve invariants, and identify the next useful state")[m
+[32m+[m
+[32m+[m[32mfailures = [][m
+[32m+[m[32mfor i, op in enumerate(operations):[m
+[32m+[m[32m    p = subprocess.run([m
+[32m+[m[32m        ["cargo", "run", "-q", "-p", "nsq-citadel", "--bin", "engage", "--", op],[m
+[32m+[m[32m        text=True, capture_output=True,[m
+[32m+[m[32m    )[m
+[32m+[m[32m    if p.returncode:[m
+[32m+[m[32m        failures.append({"index": i, "operation": op, "stderr": p.stderr[-2000:]})[m
+[32m+[m[32m        break[m
+[32m+[m[32m    required = ("input_slots=", "capitals=", "poles=", "lead_pole=", "pressure=", "logical_complete=")[m
+[32m+[m[32m    if not all(x in p.stdout for x in required):[m
+[32m+[m[32m        failures.append({"index": i, "operation": op, "reason": "missing routing invariant"})[m
+[32m+[m[32m        break[m
+[32m+[m
+[32m+[m[32mresult = {[m
+[32m+[m[32m    "rounds_requested": rounds,[m
+[32m+[m[32m    "rounds_completed": rounds if not failures else failures[0]["index"],[m
+[32m+[m[32m    "passed": not failures,[m
+[32m+[m[32m    "corpus_digest": hashlib.sha256("\n".join(operations).encode()).hexdigest(),[m
+[32m+[m[32m    "failures": failures,[m
+[32m+[m[32m}[m
+[32m+[m[32mprint(json.dumps(result, indent=2))[m
+[32m+[m[32mif failures:[m
+[32m+[m[32m    raise SystemExit(1)[m
+[32m+[m[32mPY[m
+[32m+[m
+[32m+[m[32mprintf '%s\n' 'AUTONOMOUS VALIDATION COMPLETE'[m

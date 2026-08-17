@@ -2,9 +2,24 @@ use std::io::Write;
 use std::process::{Command, Stdio};
 
 fn braxon_bin() -> String {
-    std::env::var("CARGO_BIN_EXE_Braxon")
-        .or_else(|_| std::env::var("CARGO_BIN_EXE_BRAXON"))
-        .expect("Cargo did not provide a Braxon binary path")
+    if let Ok(path) = std::env::var("CARGO_BIN_EXE_Braxon") {
+        return path;
+    }
+    if let Ok(path) = std::env::var("CARGO_BIN_EXE_BRAXON") {
+        return path;
+    }
+    let test_binary = std::env::current_exe().expect("test executable path unavailable");
+    let fallback = test_binary
+        .parent()
+        .and_then(|deps| deps.parent())
+        .map(|debug| debug.join("Braxon"))
+        .expect("Cargo test executable has no target directory");
+    assert!(
+        fallback.is_file(),
+        "Braxon binary missing at {}",
+        fallback.display()
+    );
+    fallback.to_string_lossy().into_owned()
 }
 
 fn run_transcript(lines: &[&str]) -> (bool, String, String) {

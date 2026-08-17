@@ -1,32 +1,32 @@
 {
   "all_in_check_validated": true,
   "authority": "NSQ_COURT",
-  "completely_validated": true,
+  "completely_validated": false,
   "full_release_complete": false,
   "record_count": 23,
   "records": [
     {
-      "bytes": 1408,
+      "bytes": 1531,
       "link_required": true,
       "path": "Cargo.toml",
       "present": true,
-      "sha256": "750c9112c31fe1afeb6c04518bbe456864b0a66e89199fb500e66ee190029462",
+      "sha256": "0efe0a25a37ba56ecf0981ce0f9b42025deb2d48214da259e1771677e2bf931f",
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 44726,
+      "bytes": 42614,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "52d9cea93daad9722919b762440a026aaee5151fc004a0e41e1a65b2f0957578",
+      "sha256": "8ebe0696ec4b39d39e1abf3c4f6d2805080ff49a61a054175fc2e1b4b974f729",
       "trigger_role": "root_binary_handover_code"
     },
     {
-      "bytes": 34206,
+      "bytes": 34220,
       "link_required": true,
       "path": "crates/nsq-core/src/intent.rs",
       "present": true,
-      "sha256": "18520a4e0f47d09fa133925d8cdd8c12b71f2e253cfb2feca5d924ccc3a9a7d1",
+      "sha256": "dc60d1aa8c98cc77f4153522ba93ffa07038de51ee8cfad483687951c90af187",
       "trigger_role": "court_boot_clearance_law"
     },
     {
@@ -86,11 +86,11 @@
       "trigger_role": "semantic_recall_index_source"
     },
     {
-      "bytes": 11043,
+      "bytes": 11074,
       "link_required": true,
       "path": "crates/nsq-hot/src/lib.rs",
       "present": true,
-      "sha256": "bace62fe05f3fa5a529125a3b96e16bee7aa2eefc9b237ac35e07f13d2911b4f",
+      "sha256": "30ee31aca09000bc636b4f52174d89447829f34a6ec99acd3f3c11eb46e3ba06",
       "trigger_role": "parameter_address_window_code"
     },
     {
@@ -106,23 +106,21 @@
       "link_required": true,
       "path": "state/nsq/proofs/citadel699_current_rebuild.json",
       "present": true,
-      "sha256": "c659a3f2af986e835d9224b349780f882b58151efa616e7c6f692c2ca2cf27e0",
+      "sha256": "0e116dd83a0f883c33ef0897f689d69cd82021f34595107119f68975ee36f7e1",
       "trigger_role": "citadel699_current_rebuild_proof"
     },
     {
-      "bytes": 587,
+      "error": "No such file or directory (os error 2)",
       "link_required": true,
       "path": "state/nsq/citadel699/current/request_capsule.json",
-      "present": true,
-      "sha256": "581d8fb46ce4b168fa06c61aa78b735c54ba5602ff2d52f5fe6e50de9430bc31",
+      "present": false,
       "trigger_role": "citadel699_request_capsule"
     },
     {
-      "bytes": 606,
+      "error": "No such file or directory (os error 2)",
       "link_required": true,
       "path": "state/nsq/citadel699/current/target_models.json",
-      "present": true,
-      "sha256": "9e46570e69390fcc866112f1e063548a1a4c41d73f34bdf32dfdb3e4d5b9a742",
+      "present": false,
       "trigger_role": "citadel699_target_models"
     },
     {
@@ -130,15 +128,14 @@
       "link_required": true,
       "path": "state/nsq/citadel699/current/council_ten.rebuild.nsq",
       "present": true,
-      "sha256": "59e1e8f17391d48b14525fbfd1c5ad9dbd83737c1dd04226d04b581f68af4416",
+      "sha256": "6d1cde818bf5739c773a74e30516aedc0569727006a935e7b06e18d9a63cb264",
       "trigger_role": "citadel699_current_rebuild_link"
     },
     {
-      "bytes": 1421,
+      "error": "No such file or directory (os error 2)",
       "link_required": true,
       "path": "state/nsq/citadel699/current/materialization.json",
-      "present": true,
-      "sha256": "af9fbbdc734e8a03af86fc971433f00482351873beb69ddc81f39270e8ef5f9c",
+      "present": false,
       "trigger_role": "citadel699_current_materialization_link"
     },
     {
@@ -174,18 +171,18 @@
       "trigger_role": "citadel699_environment_bus"
     },
     {
-      "bytes": 2701,
+      "bytes": 3304,
       "link_required": true,
       "path": "tests/braxon_runtime_surface.rs",
       "present": true,
-      "sha256": "3f71b1ce7997e2fce79ed00611c3eab8bf7aeb41f58ab930340b0ae8fd6a49bb",
+      "sha256": "2571d936259bf1d7d1c1e970dd4d619208e0e4ee951e4ff6cc771e172e3f8817",
       "trigger_role": "handover_proof_test_surface"
     },
     {
-      "bytes": 1140,
+      "bytes": 1363,
       "path": "state/braxon/handover/os_power_release_response.json",
       "present": true,
-      "sha256": "d36cfd4645c9aae89ec6a710b16ad5296698f2b0c71bc745ca3a9803b88962c5",
+      "sha256": "2df0c286b903ea2b9cccccf8c50fd1b55bcbc531a934b5ebaacfbc0e0c7c2116",
       "trigger_role": "generated_handover_response"
     }
   ],
@@ -195,5 +192,5 @@
   "ten_surface_bus_validated": false,
   "video_present": true,
   "voice_present": true,
-  "watermark_trigger_set_completely_validated": true
+  "watermark_trigger_set_completely_validated": false
 }

@@ -1,0 +1,15 @@
+[package]
+name = "nsq-citadel"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "NSQ-native Citadel seed reconstruction and Council Ten routing."
+
+[lib]
+name = "nsq_citadel"
+path = "src/lib.rs"
+
+[dependencies]
+nsq-core = { path = "../nsq-core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

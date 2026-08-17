@@ -1,0 +1,22 @@
+[1m[32m   Compiling[0m nsq-core v0.1.0 (/home/ubuntu/Braxon/crates/nsq-core)
+[1m[32m    Finished[0m `test` profile [unoptimized + debuginfo] target(s) in 0.96s
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_core-9dca3ff87341e14c)
+
+running 1 test
+test tests::spacing_sweep_selects_by_resolved_information_processed ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.68s
+
+[1m[32m   Compiling[0m nsq-core v0.1.0 (/home/ubuntu/Braxon/crates/nsq-core)
+[1m[32m   Compiling[0m Braxon-core v0.1.0 (/home/ubuntu/Braxon/crates/braxon-core)
+[1m[32m   Compiling[0m nsq-system v0.1.0 (/home/ubuntu/Braxon/crates/nsq-system)
+[1m[32m   Compiling[0m Braxon v0.1.0 (/home/ubuntu/Braxon)
+[1m[32m    Finished[0m `test` profile [unoptimized + debuginfo] target(s) in 2.05s
+[1m[32m     Running[0m tests/braxon_runtime_surface.rs (target/debug/deps/braxon_runtime_surface-f654467a97a1f099)
+
+running 2 tests
+test root_runtime_python3_records_ingress_without_runtime_claim ... ok
+test root_handover_reports_blocked_release_without_disconnect ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

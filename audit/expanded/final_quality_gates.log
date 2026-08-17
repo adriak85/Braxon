@@ -1,0 +1,494 @@
+=== cargo fmt check ===
+[1m[31merror[0m[1m:[0m no such command: `fmt`
+
+	Did you mean `fix`?
+
+	View all installed commands with `cargo --list`
+	Find a package to install `fmt` with `cargo search cargo-fmt`
+fmt_exit=101
+=== cargo check workspace ===
+[1m[32m    Checking[0m nsq-core v0.1.0 (/home/ubuntu/Braxon/crates/nsq-core)
+[0m[1m[33mwarning[0m[0m[1m: unused import: `read_dir`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:3:31[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse std::fs::{create_dir_all, read_dir, read_to_string, File};[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m                               [0m[0m[1m[33m^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: fields `origin`, `light`, `shadow`, `reimagine`, and `system` are never read[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:65:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SourceProfile {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12mfields in this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    origin: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    function: String,[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    light: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    shadow: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    reimagine: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^^^[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    system: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `SourceProfile` has derived impls for the traits `Default`, `Clone`, and `Debug`, but these are intentionally ignored during dead code analysis[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: fields `form`, `primary`, and `secondary` are never read[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:104:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct Creature {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12mfields in this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    form: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    primary: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    secondary: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `Creature` has derived impls for the traits `Default`, `Clone`, and `Debug`, but these are intentionally ignored during dead code analysis[0m
+
+[0m[1m[33mwarning[0m[0m[1m: function `name_generation_law` is never used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/../namegen.rs:198:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m198[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub fn name_generation_law() -> &'static str {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_encounters") generated 3 warnings (run `cargo fix --bin "wowas_generate_encounters"` to apply 1 suggestion)
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_active") generated 1 warning
+[0m[1m[33mwarning[0m[0m[1m: variable `BRAXON_core` should have a snake case name[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/nsq-cli/src/main.rs:111:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let BRAXON_core = Path::new("crates/braxon-core").exists();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `braxon_core`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: variable `BRAXON_cfg` should have a snake case name[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/braxon-kingdom-generate/src/main.rs:315:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m315[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let BRAXON_cfg = BRAXONCourtConfig {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `braxon_cfg`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[1m[33mwarning[0m[1m:[0m `nsq-cli` (bin "nsq-cli") generated 1 warning
+[1m[33mwarning[0m[1m:[0m `Braxon-kingdom-generate` (bin "Braxon-kingdom-generate") generated 1 warning
+[1m[32m    Checking[0m Braxon-core v0.1.0 (/home/ubuntu/Braxon/crates/braxon-core)
+[1m[32m    Checking[0m nsq-system v0.1.0 (/home/ubuntu/Braxon/crates/nsq-system)
+[1m[32m    Checking[0m nsq-grid v0.1.0 (/home/ubuntu/Braxon/crates/nsq-grid)
+[1m[32m    Checking[0m nsq-citadel v0.1.0 (/home/ubuntu/Braxon/crates/nsq-citadel)
+[1m[32m    Checking[0m nsq-wake v0.1.0 (/home/ubuntu/Braxon/crates/nsq-wake)
+[1m[32m    Checking[0m Braxon-ingest v0.1.0 (/home/ubuntu/Braxon/crates/braxon-ingest)
+[1m[32m    Checking[0m Braxon-cli v0.1.0 (/home/ubuntu/Braxon/crates/braxon-cli)
+[1m[32m    Checking[0m Braxon v0.1.0 (/home/ubuntu/Braxon)
+[1m[32m    Finished[0m `dev` profile [unoptimized + debuginfo] target(s) in 1.75s
+check_exit=0
+=== cargo test workspace ===
+[0m[1m[33mwarning[0m[0m[1m: function `name_generation_law` is never used[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/../namegen.rs:198:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m198[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub fn name_generation_law() -> &'static str {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_active") generated 1 warning
+[0m[1m[33mwarning[0m[0m[1m: unused import: `read_dir`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:3:31[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m3[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse std::fs::{create_dir_all, read_dir, read_to_string, File};[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m                               [0m[0m[1m[33m^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: fields `origin`, `light`, `shadow`, `reimagine`, and `system` are never read[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:65:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SourceProfile {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12mfields in this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    origin: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    function: String,[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    light: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    shadow: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    reimagine: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^^^[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    system: String,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `SourceProfile` has derived impls for the traits `Default`, `Clone`, and `Debug`, but these are intentionally ignored during dead code analysis[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(dead_code)]` on by default[0m
+
+[0m[1m[33mwarning[0m[0m[1m: fields `form`, `primary`, and `secondary` are never read[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/wowas-final-edition-v10/src/bin/wowas_generate_encounters.rs:104:5[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct Creature {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;12m--------[0m[0m [0m[0m[1m[38;5;12mfields in this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m104[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    form: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    primary: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    secondary: String,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[33m^^^^^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `Creature` has derived impls for the traits `Default`, `Clone`, and `Debug`, but these are intentionally ignored during dead code analysis[0m
+
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_encounters" test) generated 3 warnings (run `cargo fix --bin "wowas_generate_encounters" --tests` to apply 1 suggestion)
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_encounters") generated 3 warnings (3 duplicates)
+[1m[33mwarning[0m[1m:[0m `wowas-final-edition-v10` (bin "wowas_generate_active" test) generated 1 warning (1 duplicate)
+[0m[1m[33mwarning[0m[0m[1m: variable `BRAXON_core` should have a snake case name[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/nsq-cli/src/main.rs:111:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let BRAXON_core = Path::new("crates/braxon-core").exists();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `braxon_core`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[1m[33mwarning[0m[1m:[0m `nsq-cli` (bin "nsq-cli" test) generated 1 warning
+[1m[33mwarning[0m[1m:[0m `nsq-cli` (bin "nsq-cli") generated 1 warning (1 duplicate)
+[0m[1m[33mwarning[0m[0m[1m: variable `BRAXON_cfg` should have a snake case name[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0mcrates/braxon-kingdom-generate/src/main.rs:315:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m315[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let BRAXON_cfg = BRAXONCourtConfig {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m         [0m[0m[1m[33m^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: convert the identifier to snake case: `braxon_cfg`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[1m[33mwarning[0m[1m:[0m `Braxon-kingdom-generate` (bin "Braxon-kingdom-generate" test) generated 1 warning
+[1m[32m    Finished[0m `test` profile [unoptimized + debuginfo] target(s) in 0.08s
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon-31e9e3444ab024cc)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/braxon_apps_surface.rs (target/debug/deps/braxon_apps_surface-c3eee587dcc60bdd)
+
+running 3 tests
+test apps_list_includes_expected_workspace_bins ... ok
+test apps_verify_reports_validated_root_launch_coverage ... ok
+test apps_show_reports_root_launchable_details ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+[1m[32m     Running[0m tests/braxon_conversation_surface.rs (target/debug/deps/braxon_conversation_surface-551faee088abfe7f)
+
+running 2 tests
+test natural_chat_must_not_render_machine_accounting_as_the_reply ... ok
+test natural_chat_must_not_emit_internal_placeholder_tokens ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/braxon_runtime_surface.rs (target/debug/deps/braxon_runtime_surface-f654467a97a1f099)
+
+running 2 tests
+test root_runtime_python3_records_ingress_without_runtime_claim ... ok
+test root_handover_reports_blocked_release_without_disconnect ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+[1m[32m     Running[0m tests/braxon_speech_surface.rs (target/debug/deps/braxon_speech_surface-5f72e15f9166654a)
+
+running 1 test
+test console_generates_non_canned_state_reply ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon_cli-be46699dea3727bf)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/phase_one.rs (target/debug/deps/phase_one-2c445af559bb1161)
+
+running 1 test
+test status_surface_returns_braxon_identity ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/BRAXON_core-7a74d01260173518)
+
+running 23 tests
+test bus::tests::emotional_score_selects_terminal_pressure_for_terminal_input ... ok
+test bus::tests::speech_loop_launches_to_bus_and_returns_english ... ok
+test council::tests::index_tts2_emotional_frequency_map_uses_seven_nsq_lever_channels ... ok
+test council::tests::all_six_models_are_internal_brain_regions ... ok
+test council::tests::sensory_generation_roster_adds_four_bodies_with_50_unit_footprint ... ok
+test council::tests::unified_pressure_uses_intent_gradient_semantic_language ... ok
+test council_ten::tests::council_ten_wake_all_steps_pass ... ok
+test council_ten::tests::council_ten_wake_emits_ten_steps ... ok
+test council_ten::tests::fail_closed_produces_coherence_false ... ok
+test offline_agent::tests::default_mission_starts_with_phase_one_boot_tasks ... ok
+test offline_agent::tests::next_actionable_skips_completed_items ... ok
+test offline_agent::tests::record_success_preserves_verification_summary ... ok
+test offline_models::tests::correct_pole_models_in_canonical_roster ... ok
+test offline_models::tests::empty_registry_builds_empty_seating ... ok
+test offline_models::tests::registry_initializes_all_ten_poles ... ok
+test seed_citadel::tests::seed_builds_logically_complete_citadel_without_full_residency ... ok
+test seed_citadel::tests::universal_token_is_shared_across_all_sections ... ok
+test wowas_seeded::tests::world_advances_without_rebuilding_the_world ... ok
+test wowas_seeded::tests::world_reconstructs_from_compact_seed ... ok
+test offline_models::tests::no_feature_attachment_language_in_registry ... ok
+test context_manifest::tests::wake_report_is_empty_until_env_trigger_equivalent_is_enabled ... ok
+test context_manifest::tests::loaded_chain_db_skips_exit_wake_for_runtime_adjustment_lane ... ok
+test context_manifest::tests::context_manifest_calls_out_omissions_and_required_pointers ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon_court-66bc9b8c8a1bb518)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/BRAXON_ingest-863e2974f38aa7d7)
+
+running 1 test
+test tests::repo_status_keeps_604b_target_separate_from_the_qwen_donor_lane ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon_ingest-492be384f6531535)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon_kingdom_generate-7c6d976d2f1dff40)
+
+running 1 test
+test kingdom_surface_metrics_tests::base8_metrics_are_not_flattened ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/Braxon_showdown-f95131fcaa094d53)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsq_archon-69d74e1158f4ac5f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsq_calibrate-e89598f8b780a4e4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_citadel-6291ffeff0dcdc5a)
+
+running 3 tests
+test seed::tests::synchronization_has_one_universal_identity ... ok
+test seed::tests::seed_is_logically_complete_with_partial_residency ... ok
+test seed::tests::coordinates_are_deterministic ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/bin/engage.rs (target/debug/deps/engage-aebc7ab6d8a53b3c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsq_cli-9c0dfadc1ee06b2c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/phase_one.rs (target/debug/deps/phase_one-439018a2cc44e4d9)
+
+running 3 tests
+test status_surface_is_live ... ok
+test ingest_fails_closed_for_missing_path ... ok
+test doctor_surface_reports_environment ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_compose-c504c07d8f4b22fa)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsq_compose-a67a83e29c0ee655)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/phase_one.rs (target/debug/deps/phase_one-028e593761eec086)
+
+running 2 tests
+test compose_repo_surface_writes_expected_lines ... ok
+test binary_composes_sample_surface ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_compress-5f42023bb7e5f5b7)
+
+running 2 tests
+test tests::arch_headroom_is_stable ... ok
+test tests::manifest_verifier_flags_duplicate_stamp_ids ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsq_compress-4986cb2d5cffb257)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/phase_one.rs (target/debug/deps/phase_one-1309845d85d794cb)
+
+running 1 test
+test parse_architectures ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_core-ada171615fed783c)
+
+running 4 tests
+test tests::return_averaging_resolves_high_lever_position ... ok
+test tests::zero_inclusive_state_space_is_current_truth ... ok
+test tests::max_scan_reports_zero_failure_frontier ... ok
+test tests::spacing_sweep_selects_by_resolved_information_processed ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.69s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_grid-e855e250a2457bd0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_system-3c8cf5eb3c4459ea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/nsq_wake-dac98f4843f8436c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/main.rs (target/debug/deps/nsqasm_stamp_db-47658ac066e3a55c)
+
+running 7 tests
+test tests::court_route_uses_existing_positions ... ok
+test tests::accepted_candidates_require_real_runtime_semantics ... ok
+test tests::passive_stamp_only_mode_is_never_accepted ... ok
+test tests::stamp_id_hash_is_stable ... ok
+test tests::short_low_score_blocks_are_not_promoted ... ok
+test tests::verifier_accepts_court_seated_stamp_record ... ok
+test tests::verifier_rejects_passive_stamp_only_record ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/lib.rs (target/debug/deps/wowas_final_edition_v10-c271bc79284aac76)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/bin/wowas_generate_active.rs (target/debug/deps/wowas_generate_active-a962d63e136b4345)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m unittests src/bin/wowas_generate_encounters.rs (target/debug/deps/wowas_generate_encounters-33365675ce5a37c6)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m     Running[0m tests/authority_contract.rs (target/debug/deps/authority_contract-63fd2e85dbf6abeb)
+
+running 2 tests
+test crate_points_to_active_wowas_canon_control ... ok
+test required_wowas_control_surfaces_exist ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m BRAXON_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m BRAXON_ingest
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_citadel
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_compose
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_compress
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_grid
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_system
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m nsq_wake
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[1m[32m   Doc-tests[0m wowas_final_edition_v10
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+test_exit=0

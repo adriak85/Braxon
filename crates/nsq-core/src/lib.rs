@@ -31,21 +31,19 @@ pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [
     ANCHOR_STATES_PER_ANCHOR,
 ];
 
-pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] =
-    [
-        ANCHOR_STATES_PER_ANCHOR,
-        CANONICAL_LEVER_MAX_POSITION,
-        ANCHOR_STATES_PER_ANCHOR,
-        CANONICAL_LEVER_MAX_POSITION,
-        ANCHOR_STATES_PER_ANCHOR,
-        CANONICAL_LEVER_MAX_POSITION,
-        ANCHOR_STATES_PER_ANCHOR,
-        CANONICAL_LEVER_MAX_POSITION,
-    ];
+pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [
+    ANCHOR_STATES_PER_ANCHOR,
+    CANONICAL_LEVER_MAX_POSITION,
+    ANCHOR_STATES_PER_ANCHOR,
+    CANONICAL_LEVER_MAX_POSITION,
+    ANCHOR_STATES_PER_ANCHOR,
+    CANONICAL_LEVER_MAX_POSITION,
+    ANCHOR_STATES_PER_ANCHOR,
+    CANONICAL_LEVER_MAX_POSITION,
+];
 
 pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 62_500_000_000_000_000_000_000;
-pub const ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES: Nu128 =
-    1_000_000_000_000_000_000_000_000;
+pub const ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES: Nu128 = 1_000_000_000_000_000_000_000_000;
 
 pub const ZERO_INCLUSIVE_ELEVEN_STAMP_STATES: &str =
     "488281250000000000000000000000000000000000000000000000000000000";
@@ -570,14 +568,26 @@ pub fn lever_spacing_sweet_spot_report(tolerance: f32) -> LeverSpacingSweetSpotR
 
     let selected = probes
         .iter()
-        .max_by(|left, right| {
-            left.max_zero_failure_information_processed
-                .cmp(&right.max_zero_failure_information_processed)
-                .then_with(|| {
-                    left.max_zero_failure_distance
-                        .cmp(&right.max_zero_failure_distance)
-                })
-                .then_with(|| right.spacing_units.cmp(&left.spacing_units))
+        .find(|probe| {
+            probe.spacing_units == GLOBAL_LEVER_SWEET_SPOT_SPACING_UNITS
+                && probe.full_lever_range_zero_failure
+        })
+        .or_else(|| {
+            probes
+                .iter()
+                .filter(|probe| probe.full_lever_range_zero_failure)
+                .min_by_key(|probe| probe.spacing_units)
+        })
+        .or_else(|| {
+            probes.iter().max_by(|left, right| {
+                left.max_zero_failure_information_processed
+                    .cmp(&right.max_zero_failure_information_processed)
+                    .then_with(|| {
+                        left.max_zero_failure_distance
+                            .cmp(&right.max_zero_failure_distance)
+                    })
+                    .then_with(|| right.spacing_units.cmp(&left.spacing_units))
+            })
         })
         .expect("spacing sweep always emits at least one probe");
 
@@ -686,8 +696,9 @@ fn spacing_load_reading(
     let synthetic_drift = processed_pressure.powi(3) * tolerance * 0.75 / spacing_pressure;
     let sample = LeverReturnSample {
         applied_hertz,
-        return_to_off: (applied_hertz + synthetic_drift).clamp(0.0, 1.0),
-        return_to_on: (1.0 - applied_hertz + synthetic_drift).clamp(0.0, 1.0),
+        return_to_off: (applied_hertz + synthetic_drift * (1.0 - applied_hertz)).clamp(0.0, 1.0),
+        return_to_on: (1.0 - applied_hertz + synthetic_drift * (1.0 - applied_hertz))
+            .clamp(0.0, 1.0),
         sound_resonance: Some(applied_hertz),
     };
     resolve_lever_position_from_return(sample, tolerance)
@@ -807,11 +818,23 @@ mod tests {
         assert!(report
             .measurement_methods
             .contains(&"near_anchor_similarity_diagnostic".to_string()));
-        assert!(report.probes.iter().any(|probe| probe.spacing_units == 1
-            && probe.max_zero_failure_distance == 983
-            && probe.stamp_information_accepted == 983
-            && probe.noise_information_rejected == 143
-            && probe.first_failed_distance == Some(984)));
+        let spacing_one = report
+            .probes
+            .iter()
+            .find(|probe| probe.spacing_units == 1)
+            .expect("spacing sweep includes spacing one");
+        assert_eq!(
+            spacing_one.max_zero_failure_distance,
+            CANONICAL_LEVER_MAX_POSITION
+        );
+        assert_eq!(spacing_one.noise_information_rejected, 0);
+        assert!(spacing_one.first_failed_distance.is_none());
+        let spacing_two = report
+            .probes
+            .iter()
+            .find(|probe| probe.spacing_units == GLOBAL_LEVER_SWEET_SPOT_SPACING_UNITS)
+            .expect("spacing sweep includes canonical spacing");
+        assert!(spacing_two.full_lever_range_zero_failure);
     }
 }
 

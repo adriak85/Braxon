@@ -8,13 +8,14 @@
     "all_in_check_validated": true,
     "semantic_address_gate_completely_validated": true,
     "ten_surface_bus_validated": false,
-    "watermark_trigger_set_completely_validated": true
+    "watermark_trigger_set_completely_validated": false
   },
   "power_disconnect_necessary": false,
   "power_disconnect_permitted": false,
   "power_disconnect_requested": false,
   "release_requirements_not_yet_satisfied": [
-    "ten_surface_bus_validated"
+    "ten_surface_bus_validated",
+    "watermark_trigger_set_completely_validated"
   ],
   "response_to_os": "continue_without_power_disconnect_until_full_release_validation",
   "schema": "braxon.nsq_court.os_power_release_handover.v1",
@@ -25,6 +26,10 @@
   "ten_surface_bus_validated": false,
   "video_present": true,
   "voice_present": true,
-  "watermark_trigger_set_completely_validated": true,
-  "watermark_trigger_set_not_yet_satisfied": []
+  "watermark_trigger_set_completely_validated": false,
+  "watermark_trigger_set_not_yet_satisfied": [
+    "state/nsq/citadel699/current/request_capsule.json",
+    "state/nsq/citadel699/current/target_models.json",
+    "state/nsq/citadel699/current/materialization.json"
+  ]
 }

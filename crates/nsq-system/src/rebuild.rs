@@ -1,5 +1,5 @@
-use serde::{Deserialize, Serialize};
 use crate::{IntentDomain, IntentRecord, SourceTree};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct RebuildPlan {
@@ -16,21 +16,37 @@ impl RebuildPlanner {
     /// Historical files are retained as evidence, but do not become competing
     /// implementations. Active artifacts become canonical NSQ nodes.
     pub fn build(tree: &SourceTree) -> RebuildPlan {
-        let records: Vec<_> = tree.artifacts.iter().map(crate::intent::extract_intent).collect();
+        let records: Vec<_> = tree
+            .artifacts
+            .iter()
+            .map(crate::intent::extract_intent)
+            .collect();
         let canonical_count = records.iter().filter(|r| r.canonical).count();
         let historical_count = records.iter().filter(|r| !r.canonical).count();
-        RebuildPlan { source_count: records.len(), canonical_count, historical_count, records }
+        RebuildPlan {
+            source_count: records.len(),
+            canonical_count,
+            historical_count,
+            records,
+        }
     }
 
-    pub fn by_domain<'a>(plan: &'a RebuildPlan, domain: IntentDomain) -> impl Iterator<Item=&'a IntentRecord> {
+    pub fn by_domain<'a>(
+        plan: &'a RebuildPlan,
+        domain: IntentDomain,
+    ) -> impl Iterator<Item = &'a IntentRecord> {
         plan.records.iter().filter(move |r| r.domain == domain)
     }
 
     pub fn validate(plan: &RebuildPlan) -> Result<(), String> {
-        if plan.source_count != plan.records.len() { return Err("source/intent cardinality mismatch".into()); }
+        if plan.source_count != plan.records.len() {
+            return Err("source/intent cardinality mismatch".into());
+        }
         for r in &plan.records {
             let v = nsq_core::validate_intent_gradient_frame(&r.gradient);
-            if !v.positions_inside_final_tier { return Err(format!("invalid NSQ gradient for {}", r.path)); }
+            if !v.valid {
+                return Err(format!("invalid NSQ gradient for {}: {}", r.path, v.reason));
+            }
         }
         Ok(())
     }

@@ -13,8 +13,7 @@ pub const SENSORY_GENERATION_BODY_COUNT: usize = 4;
 pub const GRAPHICS_FOOTPRINT_ALLOWANCE_UNITS: u16 = 50;
 pub const NEXT_SENSORY_FOCUS: &str = "nsq_to_indextts2_emotional_frequency_mapping";
 pub const INDEXTTS2_EMOTIONAL_CHANNEL_COUNT: usize = 7;
-pub const NSQ_ZERO_INCLUSIVE_LEVER_STATES: nsq_core::Nu16 =
-    nsq_core::CANONICAL_LEVER_MAX_POSITION;
+pub const NSQ_ZERO_INCLUSIVE_LEVER_STATES: nsq_core::Nu16 = nsq_core::CANONICAL_LEVER_MAX_POSITION;
 pub const EMOTIONAL_DEFAULT_BALANCED_POSITION: nsq_core::Nu16 =
     nsq_core::CANONICAL_LEVER_MAX_POSITION / 2;
 
@@ -324,7 +323,8 @@ impl CouncilOfSix {
                 model: "IndexTTS2".to_string(),
                 role: "physical_left_brain_voice_with_emotional_variability".to_string(),
                 integration: "semantic_intent_pressure_to_emotional_acoustic_frequency".to_string(),
-                constraint: "anchored_to_500000_position_nsq_levers_for_zero_shot_synthesis".to_string(),
+                constraint: "anchored_to_500000_position_nsq_levers_for_zero_shot_synthesis"
+                    .to_string(),
                 nsq_route: vec![
                     "policer".to_string(),
                     "router".to_string(),
