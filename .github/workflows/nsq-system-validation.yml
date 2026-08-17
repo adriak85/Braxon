@@ -3,6 +3,7 @@ name: NSQ system validation
 on:
   push:
     branches:
+      - reconstruction
       - reconstruction-final-20260816
   workflow_dispatch:
 
