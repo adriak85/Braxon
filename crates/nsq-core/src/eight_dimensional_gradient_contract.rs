@@ -1,9 +1,16 @@
 use crate::intent::{
     generate_default_intent_gradient_frame, validate_intent_gradient_frame, CouncilPole,
-    IntentPressure, IntentSurface, NsqIntentVariable, NsqIntentScaleAnchor,
+    IntentPressure, IntentSurface, NsqIntentScaleAnchor, NsqIntentVariable,
     NSQ_INTENT_GRADIENT_VARIABLES, NSQ_INTENT_SCALE_ANCHORS,
 };
 use crate::{CANONICAL_LEVER_MAX_POSITION, ZERO_INCLUSIVE_BIT_UNIT_STATES};
+
+const ALL_SCALE_ANCHORS: [NsqIntentScaleAnchor; NSQ_INTENT_SCALE_ANCHORS] = [
+    NsqIntentScaleAnchor::SelfObjectScale,
+    NsqIntentScaleAnchor::RelationalGroupScale,
+    NsqIntentScaleAnchor::SystemWorldScale,
+    NsqIntentScaleAnchor::UniversalFieldScale,
+];
 
 /// Validate the complete eight-dimensional gradient contract against the
 /// executable NSQ types rather than returning unconditional booleans.
@@ -13,7 +20,7 @@ pub fn gradient_is_operational() -> bool {
     validation.all_variables_present
         && validation.positions_inside_final_tier
         && NsqIntentVariable::ALL.len() == NSQ_INTENT_GRADIENT_VARIABLES
-        && NsqIntentScaleAnchor::ALL.len() == NSQ_INTENT_SCALE_ANCHORS
+        && ALL_SCALE_ANCHORS.len() == NSQ_INTENT_SCALE_ANCHORS
 }
 
 /// The gradient participates in executable pressure construction and routing.
@@ -41,7 +48,7 @@ pub fn gradient_preserves_multidirectional_semantic_resolution() -> bool {
 }
 
 /// Pressure survives a round-trip through the routing API without losing
-/// polarity-independent gradient values or its semantic target.
+/// gradient values or its semantic target.
 pub fn gradient_preserves_inverse_semantic_continuity() -> bool {
     let mut pressure = IntentPressure::baseline(NsqIntentScaleAnchor::RelationalGroupScale);
     for variable in NsqIntentVariable::ALL {
@@ -65,8 +72,7 @@ pub fn gradient_supports_octillion_scale_traversal() -> bool {
 }
 
 /// Runtime weighting is meaningful only when all eight variables are legal
-/// final-tier positions; reject malformed frames rather than silently treating
-/// them as valid semantic pressure.
+/// final-tier positions; malformed frames must not silently pass validation.
 pub fn runtime_behavior_requires_semantic_gradient_weighting() -> bool {
     let frame = generate_default_intent_gradient_frame();
     let validation = validate_intent_gradient_frame(&frame);
