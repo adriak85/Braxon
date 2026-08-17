@@ -40,6 +40,14 @@ The unified ingestion package is now included in the root workspace as `nsq-unif
 
 The root workspace check now completes with no compiler warnings in the captured log. The full workspace test suite and `git diff --check` both pass after repairing warning-producing dead code, unused imports/fields, non-snake-case locals, the standalone ingestion package boundary, and the final whitespace defect.
 
+## Android 16 target
+
+A native Android 16 target is now implemented under `android/` as a normal unrooted `NativeActivity` targeting API 36. It owns a public `ANativeWindow`, receives touch events through the NDK, and has no privileged permissions, root calls, Java widget layer, Compose layer, browser layer, accessibility overlay, or private API dependency. `scripts/verify_android16_native_target.sh` passes the static contract checks. No physical Moto device or `adb` executable was available in this environment, so APK installation, first frame, touch, rotation/resume, and back-navigation remain device acceptance tests rather than falsely claimed host results.
+
+## WoWAS content execution
+
+Both WoWAS generator binaries were executed successfully. The deterministic completion validator confirms 33/33 book-spine entries and a generated 15,000-row operational scene index with character, creature/ecology, world-introduction, and quest-domain fields. The manifest confirms full prose content for books 1–25. Books 26–33 are structurally present in the 33-book spine and operational index but remain spine-contract-only; they are not falsely labeled as completed full novels. See `reconstruction/WOWAS_COMPLETION_REPORT.md` and `canon/active/novel_manifest_33.tsv`.
+
 ## Explicit limits
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.
