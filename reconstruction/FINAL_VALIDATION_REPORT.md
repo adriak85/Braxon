@@ -34,6 +34,12 @@ The Ghost Memory tests cover multi-page wire residency, rotation, same-space pro
 
 The three-phase `KineticReflexor` is implemented and exported through `braxon-core`. One shared Piston generation sequence drives `Publish -> Reconcile -> DeltaCommit -> Publish`: the bus receives typed parameter, weight, KV, and fact values; the system reconciles the bus against the last acknowledged hardware baseline; and only changed value hashes are offered to the hardware adapter. Watermarks carry the semantic family, generation, phase, and state hash. Stale acknowledgements, rejected writes, duplicate keys, empty snapshots, and mismatched delta keys fail closed. The commit tests passed for a complete refresh orbit and changed-value-only writes.
 
+## Executable provenance completion
+
+The unified ingestion package is now included in the root workspace as `nsq-unified`. Rust 1.96 compilation and a complete-tree execution processed **191,233 files**, **273,897 64 KiB sections**, and **6,588,496,837 bytes**, excluding only `.git` internals. The run produced `complete=true` in the sidecar coverage record. The function-surface auditor produced **321,699 records** across canonical and donor heads; its classifications and exact branch-reference counts are in `reconstruction/PROVENANCE_COVERAGE_REPORT.md` and the reproducible `audit/provenance_coverage.py` tool.
+
+The root workspace check now completes with no compiler warnings in the captured log. The full workspace test suite and `git diff --check` both pass after repairing warning-producing dead code, unused imports/fields, non-snake-case locals, the standalone ingestion package boundary, and the final whitespace defect.
+
 ## Explicit limits
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.

@@ -194,7 +194,3 @@ pub fn best_reviewed_name(req: &NameGenRequest<'_>) -> Option<NameCandidate> {
         .into_iter()
         .find(|c| !c.rejected)
 }
-
-pub fn name_generation_law() -> &'static str {
-    "minimum_30_draws; house_pressure_is_not_name_limit; preserved_terminal_letters; reject_source_similarity; average_story_background_aesthetic_orbit"
-}

@@ -35,6 +35,7 @@ members = [
     "crates/nsqasm-stamp-db",
     "crates/nsq-grid",
     "crates/nsq-wake",
+    "nsq-unified",
 ]
 
 [workspace.package]

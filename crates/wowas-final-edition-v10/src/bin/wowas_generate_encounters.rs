@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap, BTreeSet};
 use std::env;
-use std::fs::{create_dir_all, read_dir, read_to_string, File};
+use std::fs::{create_dir_all, read_to_string, File};
 use std::io::{BufWriter, Write};
 use std::path::{Path, PathBuf};
 
@@ -62,14 +62,9 @@ const DESERT_PRESSURES: &[&str] = &[
 struct SourceProfile {
     id: String,
     name: String,
-    origin: String,
     function: String,
-    light: String,
-    shadow: String,
     relationship: String,
     power: String,
-    reimagine: String,
-    system: String,
     anchor: String,
     dark_rule: String,
     obligation: String,
@@ -101,9 +96,6 @@ struct BookPlan {
 struct Creature {
     id: String,
     name: String,
-    form: String,
-    primary: String,
-    secondary: String,
     biome: String,
     danger: String,
     ecology: String,
@@ -183,14 +175,9 @@ fn read_source_profiles(path: &Path) -> Vec<SourceProfile> {
         let profile = SourceProfile {
             id: col(&cols, &idx, "source_id"),
             name: col(&cols, &idx, "source_name"),
-            origin: col(&cols, &idx, "franchise_or_origin"),
             function: col(&cols, &idx, "function_harvested"),
-            light: col(&cols, &idx, "light_side"),
-            shadow: col(&cols, &idx, "shadow_side"),
             relationship: col(&cols, &idx, "relationship_style"),
             power: col(&cols, &idx, "power_style"),
-            reimagine: col(&cols, &idx, "what_must_be_reimagined"),
-            system: col(&cols, &idx, "reimagination_system"),
             anchor: col(&cols, &idx, "primary_wowas_anchor"),
             dark_rule: col(&cols, &idx, "transient_dark_plot_rule"),
             obligation: col(&cols, &idx, "plot_thread_obligation"),
@@ -508,9 +495,6 @@ fn read_creatures(path: &Path) -> Vec<Creature> {
         out.push(Creature {
             id: col(&cols, &idx, "creature_id"),
             name,
-            form: col(&cols, &idx, "base_form"),
-            primary: col(&cols, &idx, "primary_trait"),
-            secondary: col(&cols, &idx, "secondary_trait"),
             biome: col(&cols, &idx, "biome"),
             danger: col(&cols, &idx, "danger_band"),
             ecology: col(&cols, &idx, "ecology_role"),

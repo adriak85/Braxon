@@ -108,11 +108,11 @@ fn cmd_doctor() {
     println!("cwd: {}", std::env::current_dir().unwrap().display());
 
     let cargo_toml = Path::new("Cargo.toml").exists();
-    let BRAXON_core = Path::new("crates/braxon-core").exists();
+    let braxon_core = Path::new("crates/braxon-core").exists();
     let nsq_cli = Path::new("crates/nsq-cli").exists();
 
     println!("check:cargo_toml={}", cargo_toml);
-    println!("check:BRAXON_core={}", BRAXON_core);
+    println!("check:BRAXON_core={}", braxon_core);
     println!("check:nsq_cli={}", nsq_cli);
 
     match std::process::Command::new("rustc")

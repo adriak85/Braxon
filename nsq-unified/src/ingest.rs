@@ -1,4 +1,4 @@
-use std::{env, fs, io, path::{Path, PathBuf}};
+use std::{env, fs, io::{self, BufWriter, Write}, path::{Path, PathBuf}};
 
 const SECTION_BYTES: usize = 64 * 1024;
 
@@ -143,10 +143,7 @@ fn excluded(rel: &Path, output: &Path) -> bool {
         return true;
     }
     rel.components().any(|component| {
-        matches!(
-            component.as_os_str().to_str(),
-            Some(".git" | "target" | "node_modules" | ".cache" | "build" | "dist")
-        )
+        matches!(component.as_os_str().to_str(), Some(".git"))
     })
 }
 
@@ -170,7 +167,21 @@ fn collect(root: &Path, dir: &Path, output: &Path, files: &mut Vec<PathBuf>) -> 
     Ok(())
 }
 
-fn emit_file(root: &Path, path: &Path, out: &mut impl io::Write) -> io::Result<()> {
+fn coverage_file(path: &Path) -> io::Result<(usize, u64)> {
+    let mut file = fs::File::open(path)?;
+    let mut buffer = [0_u8; SECTION_BYTES];
+    let mut bytes = 0_u64;
+    let mut sections = 0usize;
+    loop {
+        let read = io::Read::read(&mut file, &mut buffer)?;
+        if read == 0 { break; }
+        bytes = bytes.saturating_add(read as u64);
+        sections += 1;
+    }
+    Ok((sections.max(1), bytes))
+}
+
+fn emit_file(root: &Path, path: &Path, out: &mut impl io::Write) -> io::Result<(usize, u64)> {
     let bytes = fs::read(path)?;
     let rel = path
         .strip_prefix(root)
@@ -195,6 +206,7 @@ fn emit_file(root: &Path, path: &Path, out: &mut impl io::Write) -> io::Result<(
 
     let mut offset = 0usize;
     let mut section = 0usize;
+    let mut section_count = 0usize;
     while offset < bytes.len().max(1) {
         let end = (offset + SECTION_BYTES).min(bytes.len());
         let chunk = if bytes.is_empty() { &[][..] } else { &bytes[offset..end] };
@@ -211,13 +223,14 @@ fn emit_file(root: &Path, path: &Path, out: &mut impl io::Write) -> io::Result<(
         writeln!(out, "  LANGUAGE = {:?};", language(path))?;
         writeln!(out, "}}\n")?;
 
+        section_count += 1;
         if bytes.is_empty() {
             break;
         }
         offset = end;
         section += 1;
     }
-    Ok(())
+    Ok((section_count, bytes.len() as u64))
 }
 
 fn main() -> io::Result<()> {
@@ -242,12 +255,29 @@ fn main() -> io::Result<()> {
             .cmp(b.strip_prefix(&root).unwrap_or(b))
     });
 
-    let mut f = fs::File::create(&output_abs)?;
-    writeln!(f, "NSQ.SOURCE_STREAM {{ VERSION = 2; }}\n")?;
-    writeln!(f, "META {{ FILES = {}; }}\n", files.len())?;
+    let mut f = BufWriter::new(fs::File::create(&output_abs)?);
+    writeln!(f, "NSQ.SOURCE_STREAM {{ VERSION = 3; }}\n")?;
+    writeln!(f, "META {{ FILES = {}; EXCLUDED = \\\".git\\\"; COMPLETE = true; }}\n", files.len())?;
 
+    let file_count = files.len();
+    let coverage_only = env::var_os("NSQ_COVERAGE_ONLY").is_some();
+    let mut sections = 0usize;
+    let mut bytes = 0_u64;
     for path in files {
-        emit_file(&root, &path, &mut f)?;
+        let (file_sections, file_bytes) = if coverage_only {
+            coverage_file(&path)?
+        } else {
+            emit_file(&root, &path, &mut f)?
+        };
+        sections += file_sections;
+        bytes = bytes.saturating_add(file_bytes);
+    }
+    writeln!(f, "COVERAGE {{ FILES = {}; SECTIONS = {}; BYTES = {}; EXCLUDED = \\\".git\\\"; COMPLETE = true; }}\n", file_count, sections, bytes)?;
+    if let Some(summary_path) = env::var_os("NSQ_COVERAGE_SUMMARY") {
+        fs::write(summary_path, format!(
+            "schema=nsq.source.coverage.v1\nroot={}\nfiles={}\nsections={}\nbytes={}\nexcluded=.git\ncomplete=true\n",
+            root.display(), file_count, sections, bytes
+        ))?;
     }
     Ok(())
 }

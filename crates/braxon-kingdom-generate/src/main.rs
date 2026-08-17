@@ -312,7 +312,7 @@ fn main() {
         );
     }
 
-    let BRAXON_cfg = BRAXONCourtConfig {
+    let braxon_cfg = BRAXONCourtConfig {
         version: c.version,
         durability_classes: dur,
         offices,
@@ -325,7 +325,7 @@ fn main() {
     };
     write(
         &Path::new(&root).join("config/braxon_court.json"),
-        &serde_json::to_string_pretty(&BRAXON_cfg).unwrap(),
+        &serde_json::to_string_pretty(&braxon_cfg).unwrap(),
     );
 
     let mut roles = Vec::new();
