@@ -1,7 +1,7 @@
 {
   "all_in_check_validated": true,
   "authority": "NSQ_COURT",
-  "completely_validated": false,
+  "completely_validated": true,
   "full_release_complete": false,
   "record_count": 23,
   "records": [
@@ -14,11 +14,11 @@
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 42614,
+      "bytes": 45795,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "8ebe0696ec4b39d39e1abf3c4f6d2805080ff49a61a054175fc2e1b4b974f729",
+      "sha256": "944a4d5b22ff32923ce0cdfcd226c80fc7e872d423a1c8e99ed74b35a9efe6bc",
       "trigger_role": "root_binary_handover_code"
     },
     {
@@ -110,17 +110,19 @@
       "trigger_role": "citadel699_current_rebuild_proof"
     },
     {
-      "error": "No such file or directory (os error 2)",
+      "bytes": 1411,
       "link_required": true,
       "path": "state/nsq/citadel699/current/request_capsule.json",
-      "present": false,
+      "present": true,
+      "sha256": "c82afa1883f557529e35186dab4d43af0f2e0e87c66b9d3b9ebc3057bba28423",
       "trigger_role": "citadel699_request_capsule"
     },
     {
-      "error": "No such file or directory (os error 2)",
+      "bytes": 956,
       "link_required": true,
       "path": "state/nsq/citadel699/current/target_models.json",
-      "present": false,
+      "present": true,
+      "sha256": "1cba28e3f8a7c302e3dac33c6fe0b64ff6a644e52ee7a928b7f0dbe7a1259a2b",
       "trigger_role": "citadel699_target_models"
     },
     {
@@ -132,10 +134,11 @@
       "trigger_role": "citadel699_current_rebuild_link"
     },
     {
-      "error": "No such file or directory (os error 2)",
+      "bytes": 1421,
       "link_required": true,
       "path": "state/nsq/citadel699/current/materialization.json",
-      "present": false,
+      "present": true,
+      "sha256": "913954b14c6870dda57f4f41ba910f5512f248b8fa610e3c87c5af2fdbf5c027",
       "trigger_role": "citadel699_current_materialization_link"
     },
     {
@@ -171,18 +174,18 @@
       "trigger_role": "citadel699_environment_bus"
     },
     {
-      "bytes": 3304,
+      "bytes": 3307,
       "link_required": true,
       "path": "tests/braxon_runtime_surface.rs",
       "present": true,
-      "sha256": "2571d936259bf1d7d1c1e970dd4d619208e0e4ee951e4ff6cc771e172e3f8817",
+      "sha256": "13be38bef237618c909a62fdab6d1259da094ab07e4930c52ad2e00194b3ce16",
       "trigger_role": "handover_proof_test_surface"
     },
     {
-      "bytes": 1363,
+      "bytes": 2039,
       "path": "state/braxon/handover/os_power_release_response.json",
       "present": true,
-      "sha256": "2df0c286b903ea2b9cccccf8c50fd1b55bcbc531a934b5ebaacfbc0e0c7c2116",
+      "sha256": "8cfa0be4983be76058849ae07d4f8c41fb466756a9e49fd0bd90375e7418b584",
       "trigger_role": "generated_handover_response"
     }
   ],
@@ -192,5 +195,5 @@
   "ten_surface_bus_validated": false,
   "video_present": true,
   "voice_present": true,
-  "watermark_trigger_set_completely_validated": false
+  "watermark_trigger_set_completely_validated": true
 }

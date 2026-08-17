@@ -6,7 +6,8 @@ use nsq_core::{
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
-    CouncilTen, STAMP_WAKE_COUNCIL_TEN,
+    CouncilSurface, CouncilTen, NsqIntent, NsqNativeBus, TargetField, STAMP_WAKE_COUNCIL_TEN,
+    NSQ_NATIVE_INTENT_SCHEMA,
 };
 
 #[derive(Parser)]
@@ -42,6 +43,10 @@ enum Command {
         #[command(subcommand)]
         command: RuntimeCommand,
     },
+    Content {
+        #[command(subcommand)]
+        command: ContentCommand,
+    },
     Handover {
         #[command(subcommand)]
         command: HandoverCommand,
@@ -70,6 +75,13 @@ enum RuntimeCommand {
     Registry,
     Python3 { call: String },
     Infer { model: String, prompt: String },
+}
+
+#[derive(Subcommand)]
+enum ContentCommand {
+    Narrative { id: String, title: String, text: String },
+    Fact { id: String, statement: String, source_uri: String, retrieved_at: String, #[arg(long, default_value = "medium")] confidence: String },
+    Daydream { workload_id: String, prompt: String, #[arg(long, default_value_t = 0)] step: u32, #[arg(long)] system_intent_pending: bool },
 }
 
 #[derive(Subcommand)]
@@ -136,6 +148,7 @@ fn main() {
         Command::MaxStableScan { tolerance } => print_max_stable_scan(tolerance),
         Command::LeverSweetSpot { tolerance } => print_lever_sweet_spot(tolerance),
         Command::Runtime { command } => print_runtime(command),
+        Command::Content { command } => print_content(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
         Command::TerminalPlan => print_terminal_plan(),
@@ -443,6 +456,25 @@ fn print_runtime(command: RuntimeCommand) {
     }
 }
 
+fn print_content(command: ContentCommand) {
+    match command {
+        ContentCommand::Narrative { id, title, text } => {
+            let record = BRAXON_core::NarrativeRecord { schema: BRAXON_core::NARRATIVE_SCHEMA.to_string(), record_id: id, title, text, source: "wowas_narrative".to_string(), version: "1".to_string() };
+            if let Err(err) = record.validate() { eprintln!("narrative_validation_error={err}"); std::process::exit(1); }
+            print_json(&record);
+        }
+        ContentCommand::Fact { id, statement, source_uri, retrieved_at, confidence } => {
+            let record = BRAXON_core::FactRecord { schema: BRAXON_core::FACT_SCHEMA.to_string(), fact_id: id, statement, source_uri, retrieved_at, confidence, invalidated: false };
+            if let Err(err) = record.validate() { eprintln!("fact_validation_error={err}"); std::process::exit(1); }
+            print_json(&record);
+        }
+        ContentCommand::Daydream { workload_id, prompt, step, system_intent_pending } => match BRAXON_core::daydream_frame(&workload_id, step, &prompt, system_intent_pending) {
+            Ok(frame) => print_json(&frame),
+            Err(err) => { eprintln!("daydream_validation_error={err}"); std::process::exit(1); }
+        },
+    }
+}
+
 fn print_json<T: serde::Serialize>(value: &T) {
     match serde_json::to_string_pretty(value) {
         Ok(json) => println!("{json}"),
@@ -466,7 +498,34 @@ fn print_handover(command: HandoverCommand) {
 }
 
 fn print_bus(thought: Vec<String>) {
-    print_json(&BraxonBus::speak(thought.join(" ")));
+    let thought = thought.join(" ");
+    let mut nsq_bus = match NsqNativeBus::new((0..10).map(|index| CouncilSurface {
+        surface_id: format!("surface-{index}"),
+        role: if index < 6 { "brain".to_string() } else { "sensory".to_string() },
+        address_prefix: format!("council/{index}/"),
+        active: index == 0,
+    })) {
+        Ok(bus) => bus,
+        Err(err) => {
+            eprintln!("nsq_bus_init_error={err}");
+            std::process::exit(1);
+        }
+    };
+    let intent = NsqIntent {
+        schema: NSQ_NATIVE_INTENT_SCHEMA.to_string(),
+        intent_id: format!("operator-{}", Sha256::digest(thought.as_bytes())[0]),
+        source_surface: "operator_bus".to_string(),
+        capability: "user.intent".to_string(),
+        gradient: [0.0; 8],
+        target_addresses: vec!["council/0/operator".to_string()],
+        provenance: "operator".to_string(),
+        narrative: false,
+    };
+    let nsq_decision = nsq_bus.decide(&intent);
+    print_json(&serde_json::json!({
+        "nsq_decision": nsq_decision,
+        "braxon_bus": BraxonBus::speak(thought),
+    }));
 }
 
 fn print_terminal_plan() {
@@ -674,6 +733,8 @@ impl NsqCourtOfflineModelBoundary {
 
 fn build_os_power_release_handover() -> Result<serde_json::Value, String> {
     let root = std::env::current_dir().map_err(|err| err.to_string())?;
+    let target_field = TargetField::load_or_initialize(&root)?;
+    let target_field_actuation = target_field.actuation(target_field.coordinates)?;
     let watermark_input_records = handover_watermark_input_records(&root);
     let watermark_unsatisfied = watermark_input_records
         .iter()
@@ -740,6 +801,8 @@ fn build_os_power_release_handover() -> Result<serde_json::Value, String> {
         "authority": "NSQ_COURT",
         "emitter": "Braxon_root_binary",
         "surface": "host_os_power_release_boundary",
+        "target_field": target_field,
+        "target_field_actuation": target_field_actuation,
         "full_release_complete": full_release_complete,
         "all_in_check_validated": all_in_check_validated,
         "ten_surface_bus_validated": ten_surface_bus_validated,

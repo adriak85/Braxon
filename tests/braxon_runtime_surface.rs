@@ -67,11 +67,11 @@ fn root_handover_reports_blocked_release_without_disconnect() {
     assert!(stdout.contains("\"ten_surface_bus_validated\": false"));
     assert!(stdout.contains("\"voice_present\": true"));
     assert!(stdout.contains("\"video_present\": true"));
-    assert!(stdout.contains("\"watermark_trigger_set_completely_validated\": false"));
+    assert!(stdout.contains("\"watermark_trigger_set_completely_validated\": true"));
     assert!(stdout.contains("\"semantic_address_gate_completely_validated\": true"));
     assert!(stdout.contains("\"seven_suit_cycles_validated\": true"));
     assert!(stdout.contains("\"release_requirements_not_yet_satisfied\""));
-    assert!(stdout.contains("\"watermark_trigger_set_not_yet_satisfied\""));
+    assert!(stdout.contains("\"watermark_trigger_set_not_yet_satisfied\": []"));
 
     let lower = stdout.to_ascii_lowercase();
     assert!(!lower.contains("mock"));

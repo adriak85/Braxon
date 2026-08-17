@@ -1,0 +1,22 @@
+{
+  "schema": "braxon.target_field.v1",
+  "authority": "NSQ_COURT",
+  "canonical_semantics": "base8_switch_topology",
+  "coordinate_space": "eight_dimensional_intent_gradient",
+  "coordinates": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "target_size_class": "mb_scale",
+  "required_model_count": 10,
+  "brain_model_count": 6,
+  "sensory_body_count": 4,
+  "source_manifest": "config/nsq/braxon_council_ten_stack.json",
+  "status": "derived_from_validated_council_ten_manifest"
+}

@@ -2,11 +2,14 @@
 pub mod bus;
 pub mod context_manifest;
 pub mod council;
+pub mod content_surface;
 pub mod council_ten;
 pub mod greeting;
 pub mod offline_agent;
 pub mod offline_models;
+pub mod nsq_native;
 pub mod seed_citadel;
+pub mod target_field;
 pub mod wowas;
 pub mod wowas_rescue;
 pub mod wowas_seeded;
@@ -14,6 +17,10 @@ pub mod wowas_seeded;
 use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::Path;
+
+pub use content_surface::{daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA};
+pub use nsq_native::{AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision, NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA};
+pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
 
 pub use seed_citadel::{
     build_seed_plan, materialize_window, CitadelState, SeedMaterializationPlan, TokenSection,

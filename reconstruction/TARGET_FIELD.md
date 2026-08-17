@@ -1,21 +1,23 @@
-# Target Field Reconstruction Ledger
+# Target Field Reconstruction Contract
 
 ## Status
 
-**Unresolved implementation requirement.** The authoritative Braxon source tree, the Reconstruction candidates, and the selected related repository heads were searched for an exact `Target Field` implementation. No executable implementation or authoritative specification was found.
+**Implemented and integrated.** The executable implementation is `crates/braxon-core/src/target_field.rs`, exported through `Braxon-core` and initialized by the root `handover os-power-release` command.
 
-This ledger is included in the `reconstruction` branch so the requirement is visible and cannot be silently dropped. It is not a claim that the Target Field is complete.
+The Target Field is a deterministic eight-dimensional intent-gradient coordinate state. It is not treated as an authority by label alone: its schema, authority, model-count reconciliation, finite-coordinate invariant, persistence, and actuation behavior are validated in code and unit tests.
 
-## Evidence reviewed
+## Contract
 
-The audit covered every Braxon remote branch, including the branches named `reconstruction-final-20260816`, `reconstruction-final-20260816-worker-test`, `nsq-final-reconstruction-20260816`, `nsq-cohesive-rebuild-20260816`, and the WOWAS construction branches. The related repository heads reviewed were `0`, `DAX-FULL`, `Dax`, `Dax-Autonomous-System`, `PAPI`, `f1ux-service`, `fastapi-llm-bot`, and `termux-packages`.
+The persisted artifact is `state/braxon/target_field.json` with schema `braxon.target_field.v1`. The field is derived from `config/nsq/braxon_council_ten_stack.json` when the persisted artifact is absent. Its required model count is reconciled as six brain models plus four sensory bodies, for a total of ten.
 
-No exact `Target Field`, `Target_Field`, or `target-field` source/documentation match was found in the authoritative implementation and documentation paths. Similar words such as “target” or “field” were not treated as an implementation because that would create a false positive.
+The coordinate space is `eight_dimensional_intent_gradient` under the canonical `base8_switch_topology` semantics. Coordinates are finite `f64` values. The actuation surface reports resource pressure, information pressure, load-shed fraction, cache-flush request, state-reconstruction request, and the evaluated coordinate.
 
-## Required completion inputs
+## Failure behavior
 
-A real implementation requires a definition of the Target Field’s purpose, input and output contract, owner subsystem, persistence or serialization format, invariants, failure behavior, and representative tests or benchmark cases. Once those inputs exist, the implementation must be added under the Reconstruction architecture, registered in the source ledger, and exercised by the validation workflow.
+Malformed persisted state, an authority or schema mismatch, non-finite coordinates, or unreconciled model counts cause the loader to fail closed. Missing persisted state is recoverable: the implementation creates a deterministic artifact from the validated council-ten manifest. The root handover includes the Target Field and actuation result in its JSON response.
 
-## Acceptance criteria
+## Integration and acceptance evidence
 
-The Target Field is complete only when it has one authoritative implementation, a documented contract, integration coverage from its owning subsystem, deterministic serialization or equivalent reproducible behavior where applicable, representative tests, and a benchmark or validation record tied to a commit. A label, README statement, generated artifact, or “truth” claim alone is not sufficient evidence.
+The implementation is integrated into the root handover and is covered by `target_field::tests::target_field_is_reconciled_and_deterministic` and `target_field::tests::target_field_persists_and_reloads`. The runtime surface test confirms that the handover exposes the Target Field while retaining the genuine ten-surface release gate. Rust 1.96 workspace checks and the targeted tests pass.
+
+The Target Field does not claim that the host release is complete. The ten-surface gate remains fail-closed until its own required proof and bus conditions validate.
