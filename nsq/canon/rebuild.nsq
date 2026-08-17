@@ -1,0 +1,70 @@
+# Final reconstruction graph.
+# Historical source paths feed intent; only these canonical planes survive as architecture.
+
+node FINAL :kind nsq_system :status active
+
+node FINAL/00_identity :kind identity
+node FINAL/10_semantics :kind semantics
+node FINAL/20_intent :kind intent
+node FINAL/30_ir :kind ir
+node FINAL/40_substrate :kind substrate
+node FINAL/50_runtime :kind runtime
+node FINAL/60_proof :kind proof
+node FINAL/70_benchmark :kind evidence
+node FINAL/80_interfaces :kind interface
+node FINAL/90_tools :kind tooling
+node FINAL/99_archive :kind archive
+
+edge FINAL -> plane -> FINAL/00_identity
+edge FINAL -> plane -> FINAL/10_semantics
+edge FINAL -> plane -> FINAL/20_intent
+edge FINAL -> plane -> FINAL/30_ir
+edge FINAL -> plane -> FINAL/40_substrate
+edge FINAL -> plane -> FINAL/50_runtime
+edge FINAL -> plane -> FINAL/60_proof
+edge FINAL -> plane -> FINAL/70_benchmark
+edge FINAL -> plane -> FINAL/80_interfaces
+edge FINAL -> plane -> FINAL/90_tools
+edge FINAL -> plane -> FINAL/99_archive
+
+# Extraction rules from the corpus.
+map /nsq/spine -> FINAL/10_semantics :preserve_intent true
+map /nsq/language_capture_tree -> FINAL/20_intent :preserve_intent true
+map /nsq/write_nsq -> FINAL/30_ir :preserve_intent true
+map /nsq/runtime_native -> FINAL/50_runtime :preserve_intent true
+map /nsq/ops -> FINAL/50_runtime :preserve_intent true
+map /nsq/proof -> FINAL/60_proof :preserve_intent true
+map /nsq/proofs -> FINAL/60_proof :preserve_intent true
+map /benchmarks -> FINAL/70_benchmark :preserve_measurement true
+map /artifacts -> FINAL/70_benchmark :preserve_measurement true
+map /tests -> FINAL/60_proof :preserve_assertions true
+map /src -> FINAL/40_substrate :preserve_behavior true
+map /crates -> FINAL/40_substrate :preserve_behavior true
+map /asm -> FINAL/40_substrate :preserve_behavior true
+map /apps -> FINAL/80_interfaces :preserve_contract true
+map /models -> FINAL/80_interfaces :preserve_contract true
+map /prompts -> FINAL/80_interfaces :preserve_contract true
+map /scripts -> FINAL/90_tools :preserve_operation true
+map /tools -> FINAL/90_tools :preserve_operation true
+map /bin -> FINAL/90_tools :preserve_operation true
+map /generated -> FINAL/99_archive :generated_only true
+map /state -> FINAL/99_archive :historical_only true
+map /reviewed_dropin_20260417 -> FINAL/99_archive :historical_only true
+
+# Canonical dependency direction.
+edge FINAL/10_semantics -> depends_on -> FINAL/00_identity
+edge FINAL/20_intent -> depends_on -> FINAL/10_semantics
+edge FINAL/30_ir -> depends_on -> FINAL/20_intent
+edge FINAL/40_substrate -> depends_on -> FINAL/30_ir
+edge FINAL/50_runtime -> depends_on -> FINAL/40_substrate
+edge FINAL/60_proof -> observes -> FINAL/50_runtime
+edge FINAL/70_benchmark -> observes -> FINAL/60_proof
+edge FINAL/80_interfaces -> binds_to -> FINAL/50_runtime
+edge FINAL/90_tools -> operates -> FINAL/50_runtime
+
+# Small-hook rule: behavioral constraints belong at the smallest semantic boundary
+# capable of enforcing them; no global control layer is introduced merely for convenience.
+constraint small_hooks_local :scope smallest_valid_boundary :priority invariant
+constraint no_duplicate_authority :scope FINAL :priority invariant
+constraint benchmark_attached_to_capability :scope FINAL/70_benchmark :priority invariant
+constraint generated_never_authoritative :scope FINAL/99_archive :priority invariant

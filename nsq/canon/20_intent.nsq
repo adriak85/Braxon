@@ -1,0 +1,15 @@
+# Canonical intent plane
+node intent :kind root
+node intent.mapping :kind intent_map
+node intent.gradients :kind gradient_field
+node intent.routing :kind routing
+node intent.context :kind context
+
+edge intent -> owns -> intent.mapping
+edge intent -> owns -> intent.gradients
+edge intent -> owns -> intent.routing
+edge intent -> owns -> intent.context
+
+constraint every_intent_has_location :scope intent.routing
+constraint gradients_are_routing_evidence :scope intent.gradients
+constraint no_unmapped_terminal_intent :scope intent.mapping

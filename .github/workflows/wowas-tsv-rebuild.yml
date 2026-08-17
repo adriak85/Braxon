@@ -1,0 +1,20 @@
+name: WOWAS TSV corpus rebuild
+on:
+  push:
+    branches: [wowas-full-construction-20260816]
+  workflow_dispatch:
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Exhaustively segment TSV corpus
+        run: bash reconstruction/wowas-world/tools/rebuild_tsv_corpus.sh . reconstruction/wowas-world/build
+      - name: Preserve reconstruction reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: wowas-tsv-rebuild
+          path: reconstruction/wowas-world/build
+          if-no-files-found: error

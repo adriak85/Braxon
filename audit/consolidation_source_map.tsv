@@ -1,0 +1,7 @@
+target_path|source_branch|selection_reason
+entire repository|origin/main|complete 180365-file tree; candidate reconstruction branches are partial or historical snapshots
+Reconstruction implementation and validation delta|origin/reconstruction-final-20260816|newest reconstruction branch delta with implementation and validation changes
+crates/nsq-system and workspace registration|origin/nsq-cohesive-rebuild-20260816|unique cohesive scanner/planner implementation; applied without its truncated historical tree
+nsq/canon|origin/nsq-final-reconstruction-20260816|unique canonical NSQ artifacts; applied without its truncated historical tree
+WOWAS reconstruction artifacts|origin/wowas-full-construction-20260816|unique WOWAS construction artifacts; stage state explicitly records pending work
+Target Field|none found|no exact Target Field implementation found in authoritative source/documentation search; requires explicit implementation rather than assumption

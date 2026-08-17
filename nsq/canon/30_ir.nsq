@@ -1,0 +1,15 @@
+# Canonical IR plane
+node ir :kind root
+node ir.records :kind record_stream
+node ir.membrane :kind membrane
+node ir.levers :kind lever_state
+node ir.bit_units :kind bit_unit
+
+edge ir -> owns -> ir.records
+edge ir -> owns -> ir.membrane
+edge ir -> owns -> ir.levers
+edge ir -> owns -> ir.bit_units
+
+constraint record_stream_is_replayable :scope ir.records
+constraint membrane_state_is_explicit :scope ir.memembrane
+constraint lever_state_is_zero_inclusive :scope ir.levers

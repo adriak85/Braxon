@@ -1,0 +1,59 @@
+{
+  "source_commit": "ced6af253888bf194375692de86d0678dc70d847",
+  "comparison": "nsq_vs_c",
+  "verdict": {
+    "nsq_present": true,
+    "c_present": true,
+    "nsq_artifacts": true,
+    "nsq_determinism_ready": true,
+    "benchmark_state": "compare_now"
+  },
+  "observed_nsq": {
+    "semantic_coverage": 1.0,
+    "successes": 10,
+    "failures": 2,
+    "families": {
+      "noise_large": {
+        "build_ms": 2109.7269614983816,
+        "artifact_bytes": 200010.0,
+        "decoded_bytes": 1060369.5,
+        "decoded_records": 15360.0,
+        "successes": 10,
+        "failures": 2
+      },
+      "structured_large": {
+        "build_ms": 2344.173230987508,
+        "artifact_bytes": 393579,
+        "decoded_bytes": 2807052,
+        "decoded_records": 24576,
+        "successes": 11,
+        "failures": 1,
+        "decoded_bytes_per_artifact_byte": 7.00653832183073
+      },
+      "membrane_large": {
+        "build_ms": 1875.2806920092553,
+        "artifact_bytes": 101575,
+        "decoded_bytes": 663572,
+        "decoded_records": 11264,
+        "successes": 9,
+        "failures": 3,
+        "decoded_bytes_per_artifact_byte": 6.532827959635737
+      }
+    },
+    "replay": {
+      "small_membrane_repeat_1": {
+        "decoded_bytes_per_artifact_byte": 6.502760051677563,
+        "replay_hash_present": true
+      },
+      "small_noise_repeat_2": {
+        "decoded_bytes_per_artifact_byte": 5.205504314192205,
+        "replay_hash_present": true
+      },
+      "small_structured_repeat_2": {
+        "decoded_bytes_per_artifact_byte": 7.00653832183073,
+        "replay_hash_present": true
+      }
+    }
+  },
+  "canonical_use": "The strongest demonstrated semantic result is 1.0 semantic coverage. The strongest demonstrated density result in the inspected corpus is structured_large at approximately 7.01 decoded-bytes per artifact byte. These are evidence to preserve and reproduce, not claims that every failure has been eliminated."
+}

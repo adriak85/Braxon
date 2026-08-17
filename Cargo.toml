@@ -29,6 +29,7 @@ members = [
     "crates/nsq-compose",
     "crates/nsq-compress",
     "crates/nsq-core",
+    "crates/nsq-system",
     "crates/wowas-final-edition-v10",
     "crates/nsqasm-stamp-db",
     "crates/nsq-grid",
@@ -44,6 +45,7 @@ rust-version = "1.78"
 
 [workspace.dependencies]
 nsq-core = { path = "crates/nsq-core" }
+nsq-system = { path = "crates/nsq-system" }
 blake3 = "1.8.5"
 cargo_metadata = "0.19.2"
 clap = { version = "4.6.1", features = ["derive"] }
@@ -55,6 +57,7 @@ sha2 = "0.10.9"
 BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }
 clap.workspace = true
 nsq-core.workspace = true
+nsq-system.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 sha2.workspace = true

@@ -1,0 +1,83 @@
+{
+  "schema": "wowas.reconstruction.stage_state.v1",
+  "source_branch": "main",
+  "construction_branch": "wowas-full-construction-20260816",
+  "sequential_updates": [
+    {
+      "stage": 0,
+      "name": "corpus-discovery",
+      "status": "verified",
+      "evidence": [
+        "crates/wowas-final-edition-v10",
+        "state/nsq/stamps/libraries/crates__wowas-final-edition-v10"
+      ]
+    },
+    {
+      "stage": 1,
+      "name": "authority-parse",
+      "status": "verified",
+      "authority": "WOWAS_CANON_AUTHORITY_v14",
+      "load_order": "WOWAS_SOURCE_OF_TRUTH_REGISTRY_v14"
+    },
+    {
+      "stage": 2,
+      "name": "seriel-address-layer",
+      "status": "constructed",
+      "artifact": "SERIEL_LATTICE.md"
+    },
+    {
+      "stage": 3,
+      "name": "scene-character-creature-world-crosslink",
+      "status": "next-sequential-materialization",
+      "inputs": [
+        "wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+        "wowas_clean_scene_index_v2.tsv",
+        "wowas_monster_species_registry_v8.tsv",
+        "canonical_story_tree/characters/06_CHARACTER_REGISTRY.json",
+        "canonical_story_tree/world/wowas_world_zone_map.json"
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "generator-replay",
+      "status": "pending-execution-environment",
+      "requirement": "execute recovered generator instructions against reconstructed state"
+    },
+    {
+      "stage": 5,
+      "name": "world-materialization",
+      "status": "pending-stage-3-and-4",
+      "outputs": [
+        "narrative",
+        "characters",
+        "creatures",
+        "geography",
+        "physics",
+        "economy",
+        "graphics",
+        "game-state",
+        "transmedia-state"
+      ]
+    },
+    {
+      "stage": 6,
+      "name": "validation",
+      "status": "pending",
+      "rules": [
+        "validate against later authority",
+        "retain conflicting evidence",
+        "quality-review generated characters and creatures",
+        "check originality and remove derivative output only from the active materialization, never from source evidence"
+      ]
+    }
+  ],
+  "known_authority_scale": {
+    "books": 25,
+    "scene_index_entries": 14739,
+    "monster_species": 319,
+    "tracked_characters": "51+",
+    "expansion_character_target": 5000,
+    "ancillary_population_target": 2000000,
+    "creature_review_target": 5000
+  }
+}

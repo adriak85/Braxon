@@ -1,0 +1,14 @@
+# Canonical semantic plane
+node semantics :kind semantic_root
+node semantics.dialect_intake :kind intake
+node semantics.canonical_lowering :kind lowering
+node semantics.prime_ir :kind ir
+node semantics.dispatch :kind dispatch
+
+edge semantics -> owns -> semantics.dialect_intake
+edge semantics -> owns -> semantics.canonical_lowering
+edge semantics -> owns -> semantics.prime_ir
+edge semantics -> owns -> semantics.dispatch
+
+constraint semantic_authority_single :scope semantics
+constraint lowering_preserves_intent :scope semantics.canonical_lowering

@@ -1,0 +1,65 @@
+{
+  "schema": "wowas.semantic_reconstruction.index.v1",
+  "source": {
+    "repository": "adriak85/Braxon",
+    "branch": "main",
+    "active_crate": "crates/wowas-final-edition-v10",
+    "nsq_stamp": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10"
+  },
+  "preservation": {
+    "discard_nothing": true,
+    "copy_source_into_output": false,
+    "retain_provenance": true,
+    "retain_conflicts": true,
+    "retain_duplicates_as_provenance": true,
+    "historical_material_is_evidence": true
+  },
+  "authority": {
+    "current": "crates/wowas-final-edition-v10/canon/WOWAS_CANON_AUTHORITY_v14.md",
+    "cohesive_canon": "crates/wowas-final-edition-v10/canon/wowas_canon_v1.md",
+    "source_registry": "crates/wowas-final-edition-v10/canon/control/WOWAS_SOURCE_OF_TRUTH_REGISTRY_v14.md",
+    "story_tree": "crates/wowas-final-edition-v10/canon/canonical_story_tree",
+    "scene_index": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
+    "character_lattice": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+    "creature_registry": "crates/wowas-final-edition-v10/canon/wowas_monster_species_registry_v8.tsv",
+    "world_map": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_world_zone_map.json",
+    "character_registry": "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/06_CHARACTER_REGISTRY.json"
+  },
+  "historical": {
+    "apply_order_v10": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v10.md",
+    "apply_order_v11": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v11.md",
+    "backup_stamp_library": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata",
+    "backup_scene_hubs": [
+      "scene_index_hub.backup.20260417_043025",
+      "scene_index_hub.backup.20260417_043152"
+    ]
+  },
+  "observed_scale": {
+    "authority_scene_count": 14739,
+    "authority_monster_count": 319,
+    "authority_tracked_character_floor": 51,
+    "authority_book_count": 25,
+    "projection_spine_books": 33,
+    "large_scene_index_bytes": 11197269,
+    "character_lattice_bytes": 975592,
+    "creature_registry_bytes": 873645
+  },
+  "transmedia_targets": [
+    "printed_books",
+    "video_game",
+    "choose_your_own_adventure",
+    "persistent_mud_text_world"
+  ],
+  "stage_order": [
+    "inventory",
+    "parse",
+    "intent_extract",
+    "semantic_reconstruct",
+    "apply_sequential_authority",
+    "build_seriel_lattice",
+    "execute_required_generators",
+    "materialize_world",
+    "validate",
+    "finalize_active_canon"
+  ]
+}
