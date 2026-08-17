@@ -30,6 +30,10 @@ The Ghost Memory contract is implemented in `crates/braxon-core/src/ghost_memory
 
 The Ghost Memory tests cover multi-page wire residency, rotation, same-space protection, aperture pressure, rejection of ordinary CPU addresses as wire mappings, and the physical-resource boundary.
 
+## Kinetic semantic reflexor
+
+The three-phase `KineticReflexor` is implemented and exported through `braxon-core`. One shared Piston generation sequence drives `Publish -> Reconcile -> DeltaCommit -> Publish`: the bus receives typed parameter, weight, KV, and fact values; the system reconciles the bus against the last acknowledged hardware baseline; and only changed value hashes are offered to the hardware adapter. Watermarks carry the semantic family, generation, phase, and state hash. Stale acknowledgements, rejected writes, duplicate keys, empty snapshots, and mismatched delta keys fail closed. The commit tests passed for a complete refresh orbit and changed-value-only writes.
+
 ## Explicit limits
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.

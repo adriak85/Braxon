@@ -5,6 +5,7 @@ pub mod council;
 pub mod content_surface;
 pub mod council_ten;
 pub mod ghost_memory;
+pub mod kinetic_reflexor;
 pub mod greeting;
 pub mod offline_agent;
 pub mod offline_models;
@@ -22,6 +23,7 @@ use std::path::Path;
 
 pub use content_surface::{daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA};
 pub use ghost_memory::{FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage, DEFAULT_PAGE_BYTES, FIRING_WINDOW_BYTES, GHOST_MEMORY_SCHEMA, VIRTUAL_EXTENSION_BASE, VIRTUAL_EXTENSION_LIMIT};
+pub use kinetic_reflexor::{BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass, ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY};
 pub use piston_memory::{MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory, RegionKind, Residency, PistonPhase as MemoryPistonPhase, PISTON_MEMORY_SCHEMA};
 pub use nsq_native::{AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision, NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA};
 pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
