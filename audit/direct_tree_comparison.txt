@@ -1,0 +1,89 @@
+=== direct tree comparison against origin/main ===
+--- reconstruction-final-20260816 ---
+ 6 files changed, 410 insertions(+), 51 deletions(-)
+direct changed files=6
+missing from candidate=0
+candidate-only=4
+candidate-only paths:
+.github/workflows/nsq-system-validation.yml
+.tower/remote-worker/command-20260817-implementation-audit.json
+.tower/remote-worker/command.json
+RECONSTRUCTION_PROTOCOL.md
+--- reconstruction-final-20260816-worker-test ---
+ 4 files changed, 402 insertions(+), 51 deletions(-)
+direct changed files=4
+missing from candidate=0
+candidate-only=2
+candidate-only paths:
+.github/workflows/nsq-system-validation.yml
+RECONSTRUCTION_PROTOCOL.md
+--- nsq-final-reconstruction-20260816 ---
+ 168631 files changed, 598 insertions(+), 42129012 deletions(-)
+direct changed files=168631
+missing from candidate=168597
+candidate-only=11
+candidate-only paths:
+nsq/canon/10_semantics.nsq
+nsq/canon/20_intent.nsq
+nsq/canon/30_ir.nsq
+nsq/canon/README.md
+nsq/canon/benchmark_truth.json
+nsq/canon/intent_map.nsq
+nsq/canon/inventory.md
+nsq/canon/rebuild.nsq
+state/android_gap_fill_chain/release_stage/current/SHA256SUMS
+state/android_gap_fill_chain/runs/20260507_192850/reports/release_probe_output.txt
+state/android_gap_fill_chain/runs/20260507_192952/reports/release_probe_output.txt
+--- nsq-cohesive-rebuild-20260816 ---
+ 168629 files changed, 469 insertions(+), 42129012 deletions(-)
+direct changed files=168629
+missing from candidate=168597
+candidate-only=9
+candidate-only paths:
+crates/nsq-system/Cargo.toml
+crates/nsq-system/README.md
+crates/nsq-system/src/intent.rs
+crates/nsq-system/src/lib.rs
+crates/nsq-system/src/rebuild.rs
+crates/nsq-system/src/source.rs
+state/android_gap_fill_chain/release_stage/current/SHA256SUMS
+state/android_gap_fill_chain/runs/20260507_192850/reports/release_probe_output.txt
+state/android_gap_fill_chain/runs/20260507_192952/reports/release_probe_output.txt
+--- wowas-full-construction-20260816 ---
+ 15 files changed, 572 insertions(+), 181 deletions(-)
+direct changed files=15
+missing from candidate=3
+candidate-only=12
+candidate-only paths:
+.github/workflows/wowas-tsv-rebuild.yml
+crates/wowas-final-edition-v10/reconstruction/AUTHORITY_CONFLICT_LEDGER.md
+crates/wowas-final-edition-v10/reconstruction/QUALITY_AND_ORIGINALITY_GATE.md
+crates/wowas-final-edition-v10/reconstruction/SERIEL_GRAPH_SCHEMA.md
+crates/wowas-final-edition-v10/reconstruction/SERIEL_LATTICE_INDEX.tsv
+crates/wowas-final-edition-v10/reconstruction/SOURCE_LEDGER.md
+crates/wowas-final-edition-v10/reconstruction/WOWAS_EXECUTION_INDEX.md
+reconstruction/wowas-world/BUILD_STATE.md
+reconstruction/wowas-world/CORPUS_INDEX.json
+reconstruction/wowas-world/SERIEL_LATTICE.md
+reconstruction/wowas-world/STAGE_STATE.json
+reconstruction/wowas-world/tools/rebuild_tsv_corpus.sh
+--- wowas-full-construction ---
+ 3 files changed, 181 deletions(-)
+direct changed files=3
+missing from candidate=3
+candidate-only=0
+candidate-only paths:
+=== exact tree-equivalent branch groups ===
+06f7c9abe018aa5a14df4619fb4e0f64473773f0 origin/phone/citadel699-route-gates-20260508_165115
+0a6bfd1246b5d853600f535600c9638571d754f5 origin/wowas-full-construction,origin/wowas/full-construction-20260816
+2253f590dabee6de9f3aa20dbb04e5e041ae2863 origin/codex/seed-citadel-completion
+3108b021d6eb6ebc6b74b5c02c63b3b7e67248d0 origin,origin/Maine,origin/braxon-final-cohesive-stack-20260816,origin/main
+373fbba95919e618de0daa504f2ed9dda13f3905 origin/nsq-final-reconstruction-20260816
+56abe679e12b75badd7bd9a63c5d06353c9cdda8 origin/reconstruction-final-20260816
+7804fcdccba12f814941a80cd1e9c0c578d4f004 origin/audit/diversity-transmedia-2026-08-09
+92257c89b7bf034f2156f202b10ce8856ae0908e origin/braxon-dirty-preserve-20260507-172531
+b3741fabdac4c10f0ad7848c4e58594a6b58dac5 origin/reconstruction-final-20260816-worker-test,origin/worker-execution,origin/worker-execution-2,origin/worker-execution-3,origin/worker-execution-final,origin/worker-execution-live
+b5cbe4f01ae2f48d7467652d20d7a83278d2f379 origin/triage
+beb43df7ff02e870cc692acc998f4416bc3d5262 origin/wowas-full-construction-20260816
+ced6af253888bf194375692de86d0678dc70d847 origin/braxon-current-preserve-20260507-172011,origin/nsq-cohesion-rebuild-20260816
+e35e69729f4035aee59895345461cc0d2fd66c6a origin/nsq-cohesive-rebuild-20260816

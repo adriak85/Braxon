@@ -1,0 +1,739 @@
+=== root Cargo workspace ===
+[package]
+publish = false
+name = "Braxon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "Root Braxon command center and seating verification entrance."
+
+[[bin]]
+name = "Braxon"
+path = "src/main.rs"
+
+[workspace]
+resolver = "2"
+members = [
+    ".",
+    "crates/braxon-cli",
+    "crates/braxon-core",
+    "crates/braxon-court",
+    "crates/braxon-ingest",
+    "crates/braxon-kingdom-generate",
+    "crates/braxon-showdown",
+    "crates/nsq-archon",
+    "crates/nsq-calibrate",
+    "crates/nsq-cli",
+    "crates/nsq-compose",
+    "crates/nsq-compress",
+    "crates/nsq-core",
+    "crates/wowas-final-edition-v10",
+    "crates/nsqasm-stamp-db",
+    "crates/nsq-grid",
+    "crates/nsq-wake",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "LicenseRef-Private"
+authors = ["Braxon Project"]
+rust-version = "1.78"
+
+[workspace.dependencies]
+nsq-core = { path = "crates/nsq-core" }
+blake3 = "1.8.5"
+cargo_metadata = "0.19.2"
+clap = { version = "4.6.1", features = ["derive"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+sha2 = "0.10.9"
+
+[dependencies]
+BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }
+clap.workspace = true
+nsq-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+=== nsq-cohesive Cargo workspace change ===
+[1mdiff --git a/Cargo.toml b/Cargo.toml[m
+[1mindex 32c6ccfe8..62131efa0 100644[m
+[1m--- a/Cargo.toml[m
+[1m+++ b/Cargo.toml[m
+[36m@@ -29,6 +29,7 @@[m [mmembers = [[m
+     "crates/nsq-compose",[m
+     "crates/nsq-compress",[m
+     "crates/nsq-core",[m
+[32m+[m[32m    "crates/nsq-system",[m
+     "crates/wowas-final-edition-v10",[m
+     "crates/nsqasm-stamp-db",[m
+ ][m
+[36m@@ -42,6 +43,7 @@[m [mrust-version = "1.78"[m
+ [m
+ [workspace.dependencies][m
+ nsq-core = { path = "crates/nsq-core" }[m
+[32m+[m[32mnsq-system = { path = "crates/nsq-system" }[m
+ blake3 = "1.8.5"[m
+ cargo_metadata = "0.19.2"[m
+ clap = { version = "4.6.1", features = ["derive"] }[m
+[36m@@ -53,6 +55,7 @@[m [msha2 = "0.10.9"[m
+ BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }[m
+ clap.workspace = true[m
+ nsq-core.workspace = true[m
+[32m+[m[32mnsq-system.workspace = true[m
+ serde.workspace = true[m
+ serde_json.workspace = true[m
+ sha2.workspace = true[m
+=== reconstruction protocol ===
+# Braxon Final Reconstruction Protocol
+
+Status: ACTIVE
+Mode: exhaustive semantic reconstruction
+
+This repository is reconstructed as a finalized cohesive system, not as an archive of historical files.
+
+## Context-boundary law
+
+No reconstruction step may depend on the entire repository, a complete file, or a complete historical implementation fitting in one model context window.
+
+Every source unit is therefore processed through a resumable ledger. A source unit may be a repository, directory, file, file segment, implementation family, or cross-file dependency group.
+
+A unit is never considered processed merely because it was opened or summarized.
+
+## Source-unit lifecycle
+
+Each unit advances through these durable states:
+
+DISCOVERED -> SEGMENTED -> DIGESTED -> CLASSIFIED -> COMPARED -> MERGED_OR_RETAINED -> INTEGRATED -> VERIFIED
+
+Failure, context exhaustion, or tool interruption returns the active unit to the last durable state. The next worker/session resumes from that state rather than restarting or guessing.
+
+## Oversized-file rule
+
+If a file cannot fit safely in the available context, it MUST NOT be discarded, truncated into a lossy summary, or treated as unreadable.
+
+It is segmented at stable boundaries (module, item, declaration, function, impl block, test block, or deterministic byte/line ranges when structural boundaries are unavailable). Each segment receives:
+
+- source path
+- source revision/blob identity when available
+- byte/line range
+- segment ordinal
+- content hash
+- parent unit identity
+- discovered symbols/dependencies
+- semantic contribution
+- unresolved references
+- disposition
+
+Segments are individually digested and later recomposed through the ledger. Cross-segment conclusions are made only after all segments required for that conclusion have been processed.
+
+## No-loss rule
+
+A digest is not a substitute for implementation. The final system must contain the actual surviving behavior, rewritten and integrated where necessary. Summaries exist only as reconstruction metadata.
+
+## Duplicate-resolution rule
+
+When multiple implementations serve the same purpose, compare behavior, correctness, completeness, invariants, dependencies, performance characteristics, failure modes, and integration cost. Retain the strongest implementation or construct a deliberate hybrid when the implementations provide complementary capabilities.
+
+Historical names do not determine survival. Code quality and architectural fit do.
+
+## Integration rule
+
+Every retained capability must have exactly one authoritative home in the final architecture. Compatibility adapters are permitted only where they provide a real boundary; duplicate authorities are not.
+
+Every final source file must have a concrete purpose and an owner in the architecture. Empty shells, abandoned experiments, duplicate implementations, obsolete compatibility layers, and historical debris do not enter the finalized stack.
+
+## Verification rule
+
+A subsystem is not complete when it merely compiles. Its contracts, invariants, integration paths, error handling, and representative behavior must be exercised. The final workspace must build as one coherent stack.
+
+## Durable reconstruction ledger
+
+The ledger belongs in the repository and must be updated as work advances. It must record enough information for a new session to resume without relying on conversational memory:
+
+- current reconstruction revision
+- source inventory identity
+- completed units
+- active unit and exact segment
+- semantic classifications
+- implementation-family relationships
+- selected/rejected/merged implementations and rationale
+- unresolved dependencies
+- verification results
+- next executable unit
+
+## Context rollover
+
+When the current context becomes insufficient, stop at the last durable checkpoint, write the checkpoint, and continue with the next unit using the ledger. Never compress unfinished work into an unverified global summary merely to fit the response window.
+
+The reconstruction process is complete only when no source unit containing relevant functionality remains in an unprocessed state and every retained capability is integrated and verified in the final architecture.
+=== NSQ system implementation ===
+--- crates/nsq-system/Cargo.toml ---
+[package]
+name = "nsq-system"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+nsq-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+--- crates/nsq-system/src/lib.rs ---
+//! NSQ System — the cohesive reconstruction layer for the entire Braxon tree.
+//!
+//! The system does not copy the repository's historical fragments into another
+//! pile. It treats every repository file as a source artifact, extracts its
+//! role into the eight-dimensional NSQ intent gradient, and reduces duplicate
+//!/historical artifacts to one canonical intent node.
+
+pub mod intent;
+pub mod rebuild;
+pub mod source;
+
+pub use intent::{IntentDomain, IntentRecord};
+pub use rebuild::{RebuildPlan, RebuildPlanner};
+pub use source::{SourceArtifact, SourceKind, SourceTree};
+--- crates/nsq-system/src/intent.rs ---
+use nsq_core::{NsqFinalLeverPosition, NsqIntentGradientFrame, NsqIntentScaleAnchor, NsqIntentVariable};
+use serde::{Deserialize, Serialize};
+use std::path::Path;
+use crate::source::{SourceArtifact, SourceKind};
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+pub enum IntentDomain {
+    Foundation,
+    Intent,
+    Encoding,
+    Routing,
+    Execution,
+    Calibration,
+    Interface,
+    Documentation,
+    HistoricalEvidence,
+    BuildInfrastructure,
+    Other,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct IntentRecord {
+    pub path: String,
+    pub domain: IntentDomain,
+    pub canonical: bool,
+    pub source_kind: SourceKind,
+    pub gradient: NsqIntentGradientFrame,
+    pub rationale: String,
+}
+
+pub fn extract_intent(a: &SourceArtifact) -> IntentRecord {
+    let p = a.path.to_ascii_lowercase();
+    let domain = if a.historical { IntentDomain::HistoricalEvidence }
+    else if p.contains("intent") || p.contains("gradient") { IntentDomain::Intent }
+    else if p.contains("stamp") || p.contains("watermark") || p.contains("compress") { IntentDomain::Encoding }
+    else if p.contains("court") || p.contains("archon") || p.contains("kingdom") || p.contains("route") { IntentDomain::Routing }
+    else if p.contains("execute") || p.contains("runtime") || p.contains("showdown") { IntentDomain::Execution }
+    else if p.contains("calibr") || p.contains("bench") || p.contains("test") { IntentDomain::Calibration }
+    else if p.contains("cli") || p.contains("compose") || p.contains("ingest") { IntentDomain::Interface }
+    else if matches!(a.source_kind, SourceKind::Documentation) { IntentDomain::Documentation }
+    else if p.contains("build") || p.contains("tower") || p.contains("llvm") || p.contains("script") { IntentDomain::BuildInfrastructure }
+    else if p.contains("core") || p.ends_with("lib.rs") { IntentDomain::Foundation }
+    else { IntentDomain::Other };
+
+    let canonical = !a.historical;
+    let mut positions: [NsqFinalLeverPosition; 8] = [563; 8];
+    if a.historical { positions[NsqIntentVariable::Time.index()] = 200; positions[NsqIntentVariable::Truth.index()] = 900; }
+    if matches!(domain, IntentDomain::Foundation) { positions[NsqIntentVariable::Motive.index()] = 1000; positions[NsqIntentVariable::Form.index()] = 1000; }
+    if matches!(domain, IntentDomain::Intent) { positions[NsqIntentVariable::Motive.index()] = 950; positions[NsqIntentVariable::Truth.index()] = 950; }
+    if matches!(domain, IntentDomain::Execution) { positions[NsqIntentVariable::Force.index()] = 900; positions[NsqIntentVariable::Form.index()] = 900; }
+    if matches!(domain, IntentDomain::Calibration) { positions[NsqIntentVariable::Truth.index()] = 1000; positions[NsqIntentVariable::Time.index()] = 850; }
+    let frame = NsqIntentGradientFrame { variable_positions: positions, scale_anchors: [
+        NsqIntentScaleAnchor::SelfObjectScale,
+        NsqIntentScaleAnchor::RelationalGroupScale,
+        NsqIntentScaleAnchor::SystemWorldScale,
+        NsqIntentScaleAnchor::UniversalFieldScale,
+    ]};
+    let rationale = format!("{} → {:?}; canonical={}, source={:?}", Path::new(&a.path).display(), domain, canonical, a.source_kind);
+    IntentRecord { path: a.path.clone(), domain, canonical, source_kind: a.kind, gradient: frame, rationale }
+}
+--- crates/nsq-system/src/source.rs ---
+use serde::{Deserialize, Serialize};
+use std::fs;
+use std::path::{Path, PathBuf};
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+pub enum SourceKind {
+    Rust,
+    Manifest,
+    Documentation,
+    Script,
+    Data,
+    Generated,
+    HistoricalBackup,
+    Other,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SourceArtifact {
+    pub path: String,
+    pub kind: SourceKind,
+    pub bytes: u64,
+    pub historical: bool,
+    pub digest_hint: String,
+}
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+pub struct SourceTree {
+    pub root: String,
+    pub artifacts: Vec<SourceArtifact>,
+}
+
+impl SourceTree {
+    /// Walk the entire repository. Nothing is silently ignored except .git
+    /// internals and build output that is conventionally generated outside the
+    /// source tree (.git, target). Every source artifact becomes an NSQ node.
+    pub fn scan(root: impl AsRef<Path>) -> std::io::Result<Self> {
+        let root = root.as_ref().canonicalize()?;
+        let mut artifacts = Vec::new();
+        Self::walk(&root, &root, &mut artifacts)?;
+        artifacts.sort_by(|a, b| a.path.cmp(&b.path));
+        Ok(Self { root: root.display().to_string(), artifacts })
+    }
+
+    fn walk(root: &Path, dir: &Path, out: &mut Vec<SourceArtifact>) -> std::io::Result<()> {
+        for entry in fs::read_dir(dir)? {
+            let entry = entry?;
+            let path = entry.path();
+            let name = entry.file_name().to_string_lossy().to_string();
+            if path.is_dir() {
+                if name == ".git" || name == "target" { continue; }
+                Self::walk(root, &path, out)?;
+                continue;
+            }
+            let metadata = entry.metadata()?;
+            let rel = path.strip_prefix(root).unwrap_or(&path).display().to_string();
+            let lower = rel.to_ascii_lowercase();
+            let historical = lower.contains("before_") || lower.contains("backup") || lower.contains("archive") || lower.contains("old_");
+            let kind = if historical { SourceKind::HistoricalBackup }
+                else if lower.ends_with(".rs") { SourceKind::Rust }
+                else if lower.ends_with(".toml") || lower.ends_with(".lock") { SourceKind::Manifest }
+                else if lower.ends_with(".md") || lower.ends_with(".txt") { SourceKind::Documentation }
+                else if lower.ends_with(".sh") || lower.ends_with(".bash") { SourceKind::Script }
+                else if lower.ends_with(".json") || lower.ends_with(".csv") || lower.ends_with(".yaml") || lower.ends_with(".yml") { SourceKind::Data }
+                else if lower.contains("generated") { SourceKind::Generated }
+                else { SourceKind::Other };
+            let digest_hint = match fs::read(&path) {
+                Ok(bytes) => format!("len:{}", bytes.len()),
+                Err(_) => "unreadable".to_string(),
+            };
+            out.push(SourceArtifact { path: rel, kind, bytes: metadata.len(), historical, digest_hint });
+        }
+        Ok(())
+    }
+
+    pub fn rust_files(&self) -> impl Iterator<Item = &SourceArtifact> { self.artifacts.iter().filter(|a| a.kind == SourceKind::Rust) }
+    pub fn historical_files(&self) -> impl Iterator<Item = &SourceArtifact> { self.artifacts.iter().filter(|a| a.historical) }
+
+    pub fn absolute_path(&self, artifact: &SourceArtifact) -> PathBuf {
+        Path::new(&self.root).join(&artifact.path)
+    }
+}
+--- crates/nsq-system/src/rebuild.rs ---
+use serde::{Deserialize, Serialize};
+use crate::{IntentDomain, IntentRecord, SourceTree};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RebuildPlan {
+    pub source_count: usize,
+    pub canonical_count: usize,
+    pub historical_count: usize,
+    pub records: Vec<IntentRecord>,
+}
+
+pub struct RebuildPlanner;
+
+impl RebuildPlanner {
+    /// Convert the complete source tree into one intent-addressed plan.
+    /// Historical files are retained as evidence, but do not become competing
+    /// implementations. Active artifacts become canonical NSQ nodes.
+    pub fn build(tree: &SourceTree) -> RebuildPlan {
+        let records: Vec<_> = tree.artifacts.iter().map(crate::intent::extract_intent).collect();
+        let canonical_count = records.iter().filter(|r| r.canonical).count();
+        let historical_count = records.iter().filter(|r| !r.canonical).count();
+        RebuildPlan { source_count: records.len(), canonical_count, historical_count, records }
+    }
+
+    pub fn by_domain<'a>(plan: &'a RebuildPlan, domain: IntentDomain) -> impl Iterator<Item=&'a IntentRecord> {
+        plan.records.iter().filter(move |r| r.domain == domain)
+    }
+
+    pub fn validate(plan: &RebuildPlan) -> Result<(), String> {
+        if plan.source_count != plan.records.len() { return Err("source/intent cardinality mismatch".into()); }
+        for r in &plan.records {
+            let v = nsq_core::validate_intent_gradient_frame(&r.gradient);
+            if !v.positions_inside_final_tier { return Err(format!("invalid NSQ gradient for {}", r.path)); }
+        }
+        Ok(())
+    }
+}
+=== NSQ canon benchmark ===
+{
+  "source_commit": "ced6af253888bf194375692de86d0678dc70d847",
+  "comparison": "nsq_vs_c",
+  "verdict": {
+    "nsq_present": true,
+    "c_present": true,
+    "nsq_artifacts": true,
+    "nsq_determinism_ready": true,
+    "benchmark_state": "compare_now"
+  },
+  "observed_nsq": {
+    "semantic_coverage": 1.0,
+    "successes": 10,
+    "failures": 2,
+    "families": {
+      "noise_large": {
+        "build_ms": 2109.7269614983816,
+        "artifact_bytes": 200010.0,
+        "decoded_bytes": 1060369.5,
+        "decoded_records": 15360.0,
+        "successes": 10,
+        "failures": 2
+      },
+      "structured_large": {
+        "build_ms": 2344.173230987508,
+        "artifact_bytes": 393579,
+        "decoded_bytes": 2807052,
+        "decoded_records": 24576,
+        "successes": 11,
+        "failures": 1,
+        "decoded_bytes_per_artifact_byte": 7.00653832183073
+      },
+      "membrane_large": {
+        "build_ms": 1875.2806920092553,
+        "artifact_bytes": 101575,
+        "decoded_bytes": 663572,
+        "decoded_records": 11264,
+        "successes": 9,
+        "failures": 3,
+        "decoded_bytes_per_artifact_byte": 6.532827959635737
+      }
+    },
+    "replay": {
+      "small_membrane_repeat_1": {
+        "decoded_bytes_per_artifact_byte": 6.502760051677563,
+        "replay_hash_present": true
+      },
+      "small_noise_repeat_2": {
+        "decoded_bytes_per_artifact_byte": 5.205504314192205,
+        "replay_hash_present": true
+      },
+      "small_structured_repeat_2": {
+        "decoded_bytes_per_artifact_byte": 7.00653832183073,
+        "replay_hash_present": true
+      }
+    }
+  },
+  "canonical_use": "The strongest demonstrated semantic result is 1.0 semantic coverage. The strongest demonstrated density result in the inspected corpus is structured_large at approximately 7.01 decoded-bytes per artifact byte. These are evidence to preserve and reproduce, not claims that every failure has been eliminated."
+}
+=== WOWAS reconstruction state ===
+--- reconstruction/wowas-world/BUILD_STATE.md ---
+# WOWAS World Reconstruction — Sequential Build State
+
+Source of truth: `adriak85/Braxon` `main`.
+
+Primary authored corpus: `crates/wowas-final-edition-v10/`.
+NSQ stamped corpus: `state/nsq/stamps/libraries/crates__wowas-final-edition-v10/`.
+
+## Reconstruction contract
+
+This is a semantic rebuild, not a file copy. Every source artifact is evidence. Nothing is filtered because it is old, duplicated, generated-looking, metadata, TSV/CSV, a backup, or apparently upstream.
+
+Each stage consumes the previous reconstructed state and records provenance. Conflicts are preserved as competing evidence until reconciled by later evidence; source artifacts are never silently discarded.
+
+## Stage order
+
+1. Inventory every tree/blob and preserve path + blob SHA + size.
+2. Parse every artifact, using bounded line segments for oversized text (`sed`-compatible segmentation in the execution environment).
+3. Extract explicit and implicit instructions and intents from prose, code, tables, configuration, tests, generators, and generated material.
+4. Reconstruct canonical entities and relations without copying source files into the output model.
+5. Apply canonical transformations in the corpus-specified order, preserving every intermediate state.
+6. Build the SERIEL-backed graph/lattice and attach provenance to every node and edge.
+7. Execute recovered generators only at their prescribed stage; feed their results back through parsing rather than treating generated output as automatically authoritative.
+8. Materialize the cohesive world model: narrative, characters, creatures, geography, physics, economy, graphics/rendering, and interactive/game structures.
+9. Validate against tests, benchmarks, later variants, and contradictions.
+10. Emit the final reconstructed state plus a complete provenance/index manifest.
+
+## Corpus anchors verified on main
+
+The v10 crate contains `canon`, `src`, `tests`, `command_list.txt`, `README.md`, installation material, and the `.non_wowas_source_inspiration_lattice.file` artifact. The NSQ stamp library contains `asm` and `metadata`, including multiple apply-order generations and canonical story-tree indexes.
+
+The NSQ metadata explicitly records native local reconstruction paths and source SHA-256 identities for canonical inputs. Those identities are provenance, not replacement content.
+
+## No-completion shortcut
+
+A README, manifest, benchmark, generated stamp, or prior claim of completeness never closes a stage by itself. Completion requires the corresponding reconstructed state and validation evidence.
+--- reconstruction/wowas-world/CORPUS_INDEX.json ---
+{
+  "schema": "wowas.semantic_reconstruction.index.v1",
+  "source": {
+    "repository": "adriak85/Braxon",
+    "branch": "main",
+    "active_crate": "crates/wowas-final-edition-v10",
+    "nsq_stamp": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10"
+  },
+  "preservation": {
+    "discard_nothing": true,
+    "copy_source_into_output": false,
+    "retain_provenance": true,
+    "retain_conflicts": true,
+    "retain_duplicates_as_provenance": true,
+    "historical_material_is_evidence": true
+  },
+  "authority": {
+    "current": "crates/wowas-final-edition-v10/canon/WOWAS_CANON_AUTHORITY_v14.md",
+    "cohesive_canon": "crates/wowas-final-edition-v10/canon/wowas_canon_v1.md",
+    "source_registry": "crates/wowas-final-edition-v10/canon/control/WOWAS_SOURCE_OF_TRUTH_REGISTRY_v14.md",
+    "story_tree": "crates/wowas-final-edition-v10/canon/canonical_story_tree",
+    "scene_index": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
+    "character_lattice": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+    "creature_registry": "crates/wowas-final-edition-v10/canon/wowas_monster_species_registry_v8.tsv",
+    "world_map": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_world_zone_map.json",
+    "character_registry": "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/06_CHARACTER_REGISTRY.json"
+  },
+  "historical": {
+    "apply_order_v10": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v10.md",
+    "apply_order_v11": "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v11.md",
+    "backup_stamp_library": "state/nsq/stamps/libraries/crates__wowas-final-edition-v10/metadata",
+    "backup_scene_hubs": [
+      "scene_index_hub.backup.20260417_043025",
+      "scene_index_hub.backup.20260417_043152"
+    ]
+  },
+  "observed_scale": {
+    "authority_scene_count": 14739,
+    "authority_monster_count": 319,
+    "authority_tracked_character_floor": 51,
+    "authority_book_count": 25,
+    "projection_spine_books": 33,
+    "large_scene_index_bytes": 11197269,
+    "character_lattice_bytes": 975592,
+    "creature_registry_bytes": 873645
+  },
+  "transmedia_targets": [
+    "printed_books",
+    "video_game",
+    "choose_your_own_adventure",
+    "persistent_mud_text_world"
+  ],
+  "stage_order": [
+    "inventory",
+    "parse",
+    "intent_extract",
+    "semantic_reconstruct",
+    "apply_sequential_authority",
+    "build_seriel_lattice",
+    "execute_required_generators",
+    "materialize_world",
+    "validate",
+    "finalize_active_canon"
+  ]
+}
+--- reconstruction/wowas-world/STAGE_STATE.json ---
+{
+  "schema": "wowas.reconstruction.stage_state.v1",
+  "source_branch": "main",
+  "construction_branch": "wowas-full-construction-20260816",
+  "sequential_updates": [
+    {
+      "stage": 0,
+      "name": "corpus-discovery",
+      "status": "verified",
+      "evidence": [
+        "crates/wowas-final-edition-v10",
+        "state/nsq/stamps/libraries/crates__wowas-final-edition-v10"
+      ]
+    },
+    {
+      "stage": 1,
+      "name": "authority-parse",
+      "status": "verified",
+      "authority": "WOWAS_CANON_AUTHORITY_v14",
+      "load_order": "WOWAS_SOURCE_OF_TRUTH_REGISTRY_v14"
+    },
+    {
+      "stage": 2,
+      "name": "seriel-address-layer",
+      "status": "constructed",
+      "artifact": "SERIEL_LATTICE.md"
+    },
+    {
+      "stage": 3,
+      "name": "scene-character-creature-world-crosslink",
+      "status": "next-sequential-materialization",
+      "inputs": [
+        "wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+        "wowas_clean_scene_index_v2.tsv",
+        "wowas_monster_species_registry_v8.tsv",
+        "canonical_story_tree/characters/06_CHARACTER_REGISTRY.json",
+        "canonical_story_tree/world/wowas_world_zone_map.json"
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "generator-replay",
+      "status": "pending-execution-environment",
+      "requirement": "execute recovered generator instructions against reconstructed state"
+    },
+    {
+      "stage": 5,
+      "name": "world-materialization",
+      "status": "pending-stage-3-and-4",
+      "outputs": [
+        "narrative",
+        "characters",
+        "creatures",
+        "geography",
+        "physics",
+        "economy",
+        "graphics",
+        "game-state",
+        "transmedia-state"
+      ]
+    },
+    {
+      "stage": 6,
+      "name": "validation",
+      "status": "pending",
+      "rules": [
+        "validate against later authority",
+        "retain conflicting evidence",
+        "quality-review generated characters and creatures",
+        "check originality and remove derivative output only from the active materialization, never from source evidence"
+      ]
+    }
+  ],
+  "known_authority_scale": {
+    "books": 25,
+    "scene_index_entries": 14739,
+    "monster_species": 319,
+    "tracked_characters": "51+",
+    "expansion_character_target": 5000,
+    "ancillary_population_target": 2000000,
+    "creature_review_target": 5000
+  }
+}
+--- reconstruction/wowas-world/tools/rebuild_tsv_corpus.sh ---
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="${1:-.}"
+OUT="${2:-reconstruction/wowas-world/build}"
+mkdir -p "$OUT/segments" "$OUT/reports"
+: > "$OUT/tsv_manifest.tsv"
+: > "$OUT/segment_manifest.tsv"
+find "$ROOT" -type f -name '*.tsv' -print0 | sort -z | while IFS= read -r -d '' f; do
+  rel="${f#"$ROOT"/}"
+  safe=$(printf '%s' "$rel" | tr '/: ' '___')
+  lines=$(wc -l < "$f")
+  printf '%s\t%s\t%s\n' "$rel" "$lines" "$(sha256sum "$f" | awk '{print $1}')" >> "$OUT/tsv_manifest.tsv"
+  n=1; start=1
+  while [ "$start" -le "$lines" ]; do
+    end=$((start+999)); [ "$end" -gt "$lines" ] && end="$lines"
+    sed -n "${start},${end}p" "$f" > "$OUT/segments/${safe}.part${n}.tsv"
+    printf '%s\t%s\t%s\t%s\n' "$rel" "$n" "$start" "$end" >> "$OUT/segment_manifest.tsv"
+    start=$((end+1)); n=$((n+1))
+  done
+done
+rg -n -i --glob '*.tsv' '(chrono[ _-]?decay|aortic[ _-]?labyrinth|deprecated[ _-]?boojay|hidden[ _-]?old[ _-]?first[ _-]?book)' "$ROOT" > "$OUT/reports/contamination_matches.txt" || true
+printf 'TSV corpus segmentation complete\n' > "$OUT/reports/STATUS.txt"
+printf 'Every TSV discovered recursively; every file represented by contiguous sed ranges; no source TSV deleted or filtered.\n' >> "$OUT/reports/STATUS.txt"
+--- crates/wowas-final-edition-v10/reconstruction/QUALITY_AND_ORIGINALITY_GATE.md ---
+# WOWAS Quality / Originality Gate
+
+This gate is applied to generated characters and creatures before promotion into the reconstructed world.
+
+## Reject / rehash
+
+A generated object is not promoted when its identity depends on:
+
+- a recognizable existing fictional character;
+- a recognizable living/recorded performer, artist, public figure, or branded property used as a direct character template;
+- a copied franchise creature, location, terminology, or distinctive character combination;
+- a thin reskin whose defining identity is still the source property;
+- exploitative shock concepts or names specifically called out by the source authority as weak/tasteless.
+
+The source registry itself contains fields named `source_media_register_1` through `_4` and currently contains recognizable external character/property references. Those references are treated as **generation provenance/contamination signals**, not as canonical identity material.
+
+## Promotion standard
+
+A replacement must stand on its own through:
+
+1. original name and identity;
+2. original morphology;
+3. original behavior/ecology;
+4. original world relationship;
+5. original encounter/quest function;
+6. source-native geography or world-state relevance;
+7. no dependence on the recognizable source property.
+
+## Character review
+
+The same gate applies to the 5,000-character expansion. Background characters can be simple, but they must still be independently identifiable and useful to their atlas/orbit/world role rather than being disguised copies of recognizable characters.
+
+## Quality selection
+
+Prefer concrete, distinctive, internally coherent designs over quantity. Rehash weak candidates rather than padding counts. Do not promote a candidate merely because it fills a target slot.
+
+## Provenance
+
+Original source records are never silently erased. A rejected candidate remains auditable in the reconstruction ledger with its source path and reason for rejection; only its **active-world promotion** is removed.
+--- crates/wowas-final-edition-v10/reconstruction/AUTHORITY_CONFLICT_LEDGER.md ---
+# Authority Conflict Ledger
+
+These conflicts were found in the source itself and are preserved rather than silently resolved.
+
+## C01 — 25-book vs 33-book surface
+
+- v14 authority: active canonical saga = 25 books.
+- `canon/active/book_spine_33.tsv`: 33 rows; B26-B33 are explicitly marked `active_insert` / `inserted_capacity`.
+- v14 source-of-truth registry: 25-book structure remains active **unless cast density forces inserted books/volumes** and explicitly allows 33-book expansion.
+
+Resolution: retain the 33-book index as capacity/variant data while treating v14's 25-book core as the current authority until density forces promotion.
+
+## C02 — v14 absorbed patches vs v13 enduring patches
+
+- v14 source-of-truth registry says patch folders are law while ingested and then become history; final control files are the active home.
+- v13 authority router says placed patches remain enduring authority and must not be erased/demoted merely because v13 is a router.
+
+Resolution: preserve both statements as versioned authority. v14 controls current active-home routing; v13 remains an audit/router surface. Do not delete the patch files from the historical corpus.
+
+## C03 — v14 scene/character counts vs expanded generated surfaces
+
+- v14 authority reports 14,739 scenes and 51+ tracked characters.
+- v14 registry targets 5,000 story characters, 2,000,000 ancillary people, and 5,000 creatures.
+- Character registry reports 50 named characters and a tier distribution that totals the 2,000,000 population target.
+
+Resolution: distinguish current authoritative named-cast state from expansion capacity. Counts are not interchangeable.
+
+## C04 — character source contamination
+
+The character registry contains direct source-name lists such as Stitch, Tasslehoff, Barefoot, Asta, Yuno, Gray Fullbuster, Lucy Heartfilia, Drizzt, Menolly, Hermione Granger, F'nor, Erza Scarlet, Treebeard, Groot, Yggdrasil, and others.
+
+Resolution: these are treated as provenance/generation contamination signals. They must not be copied into the active-world identity layer. Replacement candidates require independent identity, morphology, behavior, and world function.
+
+## C05 — creature source contamination
+
+The monster registry has explicit `source_media_register_*` columns and observed records reference recognizable external characters/properties (for example Joey Tribbiani, Professor McGonagall, Nemesis, Kimmy Gibbler, Yuno, Lucy Heartfilia, Lacuna Coil, Bad Santa, and others).
+
+Resolution: retain the source record for audit, but reject the recognizable-source identity from active promotion and route it through originality rehash.
+
+## C06 — runtime retrieval law
+
+`src/lib.rs` and v14 authority both identify scene-level retrieval as the safe runtime mode rather than loading the entire corpus into context.
+
+Resolution: graph reconstruction uses source-addressable segments and SERIEL/index keys; it does not flatten the corpus into one prompt-sized artifact.

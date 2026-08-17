@@ -1,0 +1,17 @@
+=== Braxon main source/documentation Target Field matches ===
+=== candidate branch source/documentation Target Field matches ===
+--- reconstruction-final-20260816 ---
+--- nsq-final-reconstruction-20260816 ---
+--- nsq-cohesive-rebuild-20260816 ---
+--- wowas-full-construction-20260816 ---
+=== reconstruction operational metadata ===
+--- .tower/remote-worker/command.json ---
+{
+  "request_id": "full-workspace-check-20260817-01",
+  "operation": "check"
+}
+--- .tower/remote-worker/command-20260817-implementation-audit.json ---
+{
+  "request_id": "implementation-audit-20260817-01",
+  "operation": "check"
+}
