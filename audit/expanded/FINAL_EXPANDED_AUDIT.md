@@ -8,7 +8,7 @@
 
 The complete branch and repository review was extended to every cloned repository and every fetched remote branch. Candidate extraction was performed from all branch heads without executing branch-provided scripts. Only implementation-bearing changes that could be integrated coherently and validated against the current Braxon API were transferred into `reconstruction`.
 
-The consolidated Braxon workspace now passes the Rust 1.85 workspace compile check and the full workspace test suite. The final branch intentionally does **not** claim that the host handover is fully released: the runtime reports the missing ten-surface and watermark artifacts and keeps power disconnect disabled. This is the correct fail-closed behavior.
+The consolidated Braxon workspace now passes the Rust 1.96 workspace compile check and the full workspace test suite, including NSQ-native, Target Field, Ghost Memory, kinetic reflexor, and source-tree scanner tests. The final branch intentionally does **not** claim that the host handover is fully released: the runtime reports any missing ten-surface or watermark prerequisites and keeps power disconnect disabled. This is the correct fail-closed behavior.
 
 ## Repository and branch coverage
 
@@ -35,7 +35,7 @@ The seed implementation was hardened to use a stable FNV-1a digest rather than `
 
 `function_inventory.tsv` records source-file, function-declaration, test-marker, function-bearing-file, and test-bearing-file counts for the Reconstruction head and all related repository heads. The inventory is static coverage evidence; a historical branch cannot be proven executable merely because it contains a function declaration.
 
-The Reconstruction head contains Rust, Python, JavaScript, TypeScript, and Go source surfaces. The Rust workspace was executable under Rust/Cargo 1.85.1. The final workspace test run reported **zero failing targets**; all unit, integration, binary, and doc-test targets completed successfully.
+The Reconstruction head contains Rust, Python, JavaScript, TypeScript, and Go source surfaces. The Rust workspace was executable under Rust/Cargo 1.96.0. The final workspace test run reported **zero failing targets**; all unit, integration, binary, and doc-test targets completed successfully.
 
 The following Braxon executable surfaces were explicitly exercised: application listing, application inspection, application verification, natural conversation transcript, Python runtime ingress, OS-power handover reporting, speech surface, NSQ core benchmarks, NSQ Citadel seed behavior, NSQ stamp verification, NSQ compose, NSQ compress, NSQ doctor, WOWAS authority contracts, and the workspace’s remaining crate tests.
 
@@ -67,22 +67,22 @@ The `handover os-power-release` function now reports:
 - `watermark_trigger_set_completely_validated: false`
 - `power_disconnect_requested: false`
 
-The missing watermark inputs are `state/nsq/citadel699/current/request_capsule.json`, `target_models.json`, and `materialization.json`. The implementation reports these missing prerequisites instead of emitting a false “release complete” claim.
+The watermark inputs `state/nsq/citadel699/current/request_capsule.json`, `target_models.json`, and `materialization.json` have self-healing fallback behavior. If fallback prerequisites are still insufficient, the implementation reports the missing condition instead of emitting a false “release complete” claim.
 
-The Target Field requirement remains explicitly tracked in `reconstruction/TARGET_FIELD.md`; no actual Target Field implementation was found across the reviewed authoritative source paths.
+The Target Field requirement is implemented in `crates/braxon-core/src/target_field.rs` and documented in `reconstruction/TARGET_FIELD.md`, with persistence, validation, and actuation tests.
 
 ## Final quality gates
 
 | Gate | Result |
 |---|---|
-| `cargo check --workspace` with Rust 1.85.1 | PASS |
-| `cargo test --workspace --no-fail-fast` with Rust 1.85.1 | PASS |
+| `cargo check --workspace` with Rust 1.96.0 | PASS |
+| `cargo test --workspace --no-fail-fast` with Rust 1.96.0 | PASS |
 | Direct `rustfmt --check` on changed Rust and integration files | PASS |
 | Braxon application surface tests | PASS |
 | Braxon conversation surface tests | PASS |
 | Braxon runtime surface tests | PASS, including truthful blocked-release behavior |
 | NSQ core benchmark and invariant tests | PASS |
 | Related repository native validation | Mixed; blockers documented, not transferred |
-| Hidden/uncommon file traversal review | PASS for the selected NSQ source scanner; only `.git` excluded |
+| Hidden/uncommon file traversal review | PASS: only `.git` internals excluded; unreadable files fail the scan rather than becoming warnings |
 
 The working tree changes, audit evidence, branch metrics, candidate comparisons, function inventory, and native validation logs are retained under `audit/` and `audit/expanded/` for reproducibility.

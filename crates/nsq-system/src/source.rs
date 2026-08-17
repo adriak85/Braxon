@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::fs;
+use std::io::{self, Read};
 use std::path::{Path, PathBuf};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -63,10 +64,7 @@ impl SourceTree {
                 else if lower.ends_with(".json") || lower.ends_with(".csv") || lower.ends_with(".yaml") || lower.ends_with(".yml") { SourceKind::Data }
                 else if lower.contains("generated") { SourceKind::Generated }
                 else { SourceKind::Other };
-            let digest_hint = match fs::read(&path) {
-                Ok(bytes) => format!("len:{}", bytes.len()),
-                Err(_) => "unreadable".to_string(),
-            };
+            let digest_hint = digest_hint(&path)?;
             out.push(SourceArtifact { path: rel, kind, bytes: metadata.len(), historical, digest_hint });
         }
         Ok(())
@@ -77,5 +75,50 @@ impl SourceTree {
 
     pub fn absolute_path(&self, artifact: &SourceArtifact) -> PathBuf {
         Path::new(&self.root).join(&artifact.path)
+    }
+}
+
+fn digest_hint(path: &Path) -> io::Result<String> {
+    let mut file = fs::File::open(path)?;
+    let mut buffer = [0_u8; 64 * 1024];
+    let mut total = 0_u64;
+    let mut hash = 0xcbf29ce484222325_u64;
+    loop {
+        let read = file.read(&mut buffer)?;
+        if read == 0 { break; }
+        total = total.saturating_add(read as u64);
+        for byte in &buffer[..read] {
+            hash ^= *byte as u64;
+            hash = hash.wrapping_mul(0x100000001b3);
+        }
+    }
+    Ok(format!("len:{total}:fnv1a:{hash:016x}"))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::time::{SystemTime, UNIX_EPOCH};
+
+    #[test]
+    fn scan_includes_hidden_generated_backup_and_binary_files_but_excludes_only_git_internals() {
+        let suffix = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_nanos();
+        let root = std::env::temp_dir().join(format!("braxon-source-tree-{suffix}"));
+        fs::create_dir_all(root.join(".git/objects")).unwrap();
+        fs::create_dir_all(root.join("target/debug")).unwrap();
+        fs::create_dir_all(root.join("nested/.hidden")).unwrap();
+        fs::write(root.join(".env"), b"hidden").unwrap();
+        fs::write(root.join("target/debug/generated.bin"), [1_u8, 2, 3]).unwrap();
+        fs::write(root.join("nested/.hidden/backup.before_test"), b"backup").unwrap();
+        fs::write(root.join(".git/objects/ignored"), b"git internals").unwrap();
+
+        let tree = SourceTree::scan(&root).unwrap();
+        let paths: Vec<&str> = tree.artifacts.iter().map(|artifact| artifact.path.as_str()).collect();
+        assert!(paths.contains(&".env"));
+        assert!(paths.contains(&"target/debug/generated.bin"));
+        assert!(paths.contains(&"nested/.hidden/backup.before_test"));
+        assert!(!paths.iter().any(|path| path.starts_with(".git/")));
+        assert!(tree.artifacts.iter().all(|artifact| !artifact.digest_hint.contains("unreadable")));
+        fs::remove_dir_all(root).unwrap();
     }
 }
