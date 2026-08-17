@@ -24,6 +24,12 @@ Two stale verification entrypoints were repaired rather than bypassed. The termi
 
 After cleanup, `rustup run 1.96.0 cargo test --workspace --all-targets`, the NSQ substrate scan, terminal provenance verification, and stamp runtime verification all passed.
 
+## Ghost Memory Round Three
+
+The Ghost Memory contract is implemented in `crates/braxon-core/src/ghost_memory.rs` and exported through `braxon-core`. It keeps the large parameter and weight address space in an NSQ virtual wire namespace and rotates a single **15 MiB** software CPU aperture through Piston leases. `OnWire -> Firing -> Mapped -> OnWire` transitions are generation-owned, release-before-reuse is enforced, same-space overwrite is deferred, and aperture pressure fails closed. The implementation explicitly reports that it touches no physical CPU/CPS resources.
+
+The Ghost Memory tests cover multi-page wire residency, rotation, same-space protection, aperture pressure, rejection of ordinary CPU addresses as wire mappings, and the physical-resource boundary.
+
 ## Explicit limits
 
 A direct-X native GUI has not been falsely reported as complete: the current repository has a validated host-side CLI and runtime contract, but no physical X-server rendering acceptance test. Likewise, the non-rooted Moto G target is specified and guarded by platform boundaries, but Android-target builds and physical-device deployment were not run because the workspace validation policy forbids Android-target builds. Those are external acceptance gates, not hidden failures.
