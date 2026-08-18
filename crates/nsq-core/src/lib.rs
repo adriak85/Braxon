@@ -1,18 +1,28 @@
 use serde::{Deserialize, Serialize};
 use std::fmt;
 
-pub mod preserve;
-pub mod seating;
-pub mod native_runtime;
-pub mod native_reflexor;
-pub mod native_target;
 pub mod blaixe;
 pub mod blaixe_bus;
-pub use native_runtime::{NativeNsqGhostWindow, NativeNsqMachine, NativeNsqOwnership, NativeNsqRuntime, NsqActuationReceipt, NsqActuator, NsqAddress, NsqGhostReceipt, NsqInstruction, NsqIntentDecision, NsqIntentFrame, NsqIntentOutcome, NsqLease, NsqLeasePhase, NsqProvenance, NSQ_NATIVE_RUNTIME_SCHEMA};
-pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
-pub use native_target::NativeNsqTargetField;
+pub mod native_reflexor;
+pub mod native_runtime;
+pub mod native_target;
+pub mod preserve;
+pub mod raw_intent_engine;
+pub mod seating;
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
+pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
+pub use native_runtime::{
+    NativeNsqGhostWindow, NativeNsqMachine, NativeNsqOwnership, NativeNsqRuntime,
+    NsqActuationReceipt, NsqActuator, NsqAddress, NsqGhostReceipt, NsqInstruction,
+    NsqIntentDecision, NsqIntentFrame, NsqIntentOutcome, NsqLease, NsqLeasePhase, NsqProvenance,
+    NSQ_NATIVE_RUNTIME_SCHEMA,
+};
+pub use native_target::NativeNsqTargetField;
+pub use raw_intent_engine::{
+    register_reconstructed_tool_intents, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqIntent,
+    RawNsqOutcome,
+};
 
 pub type Nu16 = u64;
 pub type Nu64 = u64;

@@ -1,8 +1,9 @@
 use std::collections::BTreeMap;
 
 use nsq_core::{
-    BlaixeBus, NSQSlot, NativeNsqGhostWindow, NativeNsqMachine, NativeNsqReflexor,
-    NativeNsqRuntime, NativeNsqTargetField, NsqAddress, NsqInstruction,
+    register_reconstructed_tool_intents, BlaixeBus, NSQSlot, NativeNsqGhostWindow,
+    NativeNsqMachine, NativeNsqReflexor, NativeNsqRuntime, NativeNsqTargetField, NsqAddress,
+    NsqInstruction, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqOutcome,
 };
 
 use crate::NativeNsqBus;
@@ -15,6 +16,7 @@ pub struct NativeNsqStack {
     pub ghost: NativeNsqGhostWindow,
     pub reflexor: NativeNsqReflexor,
     pub target: NativeNsqTargetField,
+    pub raw_intent: RawNsqEngine,
 }
 
 impl NativeNsqStack {
@@ -25,6 +27,8 @@ impl NativeNsqStack {
         ghost_capacity: usize,
     ) -> Result<Self, String> {
         let council = council.into_iter().collect::<Vec<_>>();
+        let mut raw_intent = RawNsqEngine::default();
+        register_reconstructed_tool_intents(&mut raw_intent)?;
         Ok(Self {
             runtime: NativeNsqRuntime::new(NativeNsqMachine::default()),
             bus: NativeNsqBus::new(council.clone())?,
@@ -32,6 +36,7 @@ impl NativeNsqStack {
             ghost: NativeNsqGhostWindow::new(ghost_capacity)?,
             reflexor: NativeNsqReflexor::new(),
             target: NativeNsqTargetField::new(target, desired),
+            raw_intent,
         })
     }
 
@@ -51,6 +56,14 @@ impl NativeNsqStack {
         } else {
             Ok(false)
         }
+    }
+
+    pub fn discover_raw_capabilities(&self, query: &str) -> Vec<&RawNsqCapability> {
+        self.raw_intent.discover(query)
+    }
+
+    pub fn dispatch_raw_intent(&mut self, event: RawNsqEvent) -> RawNsqOutcome {
+        self.raw_intent.dispatch(event)
     }
 
     pub fn execute_reflex_delta(
@@ -90,6 +103,25 @@ mod tests {
     fn native_stack_routes_target_and_reflex_deltas_to_one_runtime() {
         let council = (1..=10).map(address).collect::<Vec<_>>();
         let mut stack = NativeNsqStack::new(council, address(20), slot(21), 1).unwrap();
+        assert_eq!(stack.discover_raw_capabilities("tree-sitter").len(), 1);
+        let mut raw_input = BTreeMap::new();
+        raw_input.insert("input".into(), "source-unit".into());
+        assert!(matches!(
+            stack.dispatch_raw_intent(nsq_core::RawNsqEvent::Invoke {
+                capability_id: "tree_sitter.parse".into(),
+                input: raw_input,
+            }),
+            nsq_core::RawNsqOutcome::Accepted { .. }
+        ));
+        assert!(matches!(
+            stack.dispatch_raw_intent(nsq_core::RawNsqEvent::Correct {
+                capability_id: "tree_sitter.parse".into(),
+                field: "input".into(),
+                expected: "source-unit-v2".into(),
+                observed: "source-unit".into(),
+            }),
+            nsq_core::RawNsqOutcome::Corrected { .. }
+        ));
         assert!(stack.execute_target(None).unwrap());
         assert!(!stack.execute_target(Some(&slot(21))).unwrap());
         let endpoint = address(1);
