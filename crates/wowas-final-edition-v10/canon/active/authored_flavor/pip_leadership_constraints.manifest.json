@@ -1,0 +1,16 @@
+{
+  "identity": "record_id is authoritative; scene_id is contextual and may duplicate",
+  "invariant": "iconic leader, not martyr; best available action under uncertainty; rebuild through love and life",
+  "leadership_modes": {
+    "builder_or_beneficiary": 4325,
+    "challenger_or_adversary": 6,
+    "peer_or_witness": 1435,
+    "world_pressure_witness": 8086
+  },
+  "pip_linked_rows": 13852,
+  "policy": "Every Pip-linked record receives a distinct response mode. No character is reduced to worship, dependence, or a copy of Pip.",
+  "prose_generated": false,
+  "schema": "wowas.pip.leadership.constraints.v1",
+  "source_metadata": "crates/wowas-final-edition-v10/canon/active/reconciled_15000/scene_index_reconciled_metadata.tsv",
+  "source_sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e"
+}
