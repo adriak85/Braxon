@@ -14,6 +14,7 @@ pub mod native_stack;
 pub mod nsq_native;
 pub mod offline_agent;
 pub mod offline_models;
+pub mod one_shot_objective_benchmark;
 pub mod piston_memory;
 pub mod riemann_semantic_reflexor;
 pub mod seed_citadel;
@@ -52,6 +53,10 @@ pub use native_stack::NativeNsqStack;
 pub use nsq_native::{
     AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision,
     NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA,
+};
+pub use one_shot_objective_benchmark::{
+    run_one_shot_objective_benchmark, OneShotObjectiveBenchmark, TrajectoryMetrics,
+    ONE_SHOT_BENCHMARK_SCHEMA,
 };
 pub use piston_memory::{
     MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,
