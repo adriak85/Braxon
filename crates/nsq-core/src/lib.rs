@@ -49,8 +49,8 @@ pub use native_runtime::{
 };
 pub use native_target::NativeNsqTargetField;
 pub use native_tensor::{
-    AuthoritativeTensorDescriptor, BoundedShardReader, NativeTensorError, NsqTensor,
-    NsqTensorStore, NSQ_TENSOR_SCHEMA,
+    AuthoritativeModelIndex, AuthoritativeTensorDescriptor, BoundedShardReader, NativeTensorError,
+    NsqTensor, NsqTensorStore, NSQ_TENSOR_SCHEMA,
 };
 pub use raw_intent_engine::{
     register_reconstructed_tool_intents, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqIntent,

@@ -63,6 +63,56 @@ impl From<io::Error> for NativeTensorError {
     }
 }
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AuthoritativeModelIndex {
+    pub weight_map: BTreeMap<String, String>,
+}
+
+impl AuthoritativeModelIndex {
+    pub fn from_path(path: impl AsRef<Path>) -> Result<Self, NativeTensorError> {
+        let path = path.as_ref();
+        let bytes = std::fs::read(path)?;
+        let index: Self = serde_json::from_slice(&bytes)
+            .map_err(|error| NativeTensorError::InvalidFormat(error.to_string()))?;
+        if index.weight_map.is_empty() {
+            return Err(NativeTensorError::InvalidFormat(
+                "model index has an empty weight_map".into(),
+            ));
+        }
+        Ok(index)
+    }
+
+    pub fn shard_for(&self, tensor_name: &str) -> Result<&str, NativeTensorError> {
+        self.weight_map
+            .get(tensor_name)
+            .map(String::as_str)
+            .ok_or_else(|| NativeTensorError::MissingTensor(tensor_name.to_owned()))
+    }
+
+    pub fn materialize_tensor(
+        &self,
+        index_path: impl AsRef<Path>,
+        tensor_name: &str,
+        window_bytes: usize,
+        generation: u64,
+    ) -> Result<NsqTensor, NativeTensorError> {
+        let index_path = index_path.as_ref();
+        let shard = self.shard_for(tensor_name)?;
+        let shard_path = index_path
+            .parent()
+            .unwrap_or_else(|| Path::new("."))
+            .join(shard);
+        if !shard_path.is_file() {
+            return Err(NativeTensorError::Io(io::Error::new(
+                io::ErrorKind::NotFound,
+                format!("authoritative shard is absent: {}", shard_path.display()),
+            )));
+        }
+        let mut reader = BoundedShardReader::open(shard_path, window_bytes)?;
+        reader.materialize(tensor_name, generation)
+    }
+}
+
 #[derive(Debug)]
 pub struct BoundedShardReader {
     path: PathBuf,
@@ -357,6 +407,24 @@ mod tests {
         assert_ne!(first, second);
         assert_eq!(store.get("weight").unwrap().generation, 2);
         std::fs::remove_file(path).unwrap();
+    }
+
+    #[test]
+    fn authoritative_index_fails_closed_when_declared_shard_is_absent() {
+        let root = std::env::temp_dir().join(format!("nsq-index-{}", std::process::id()));
+        std::fs::create_dir_all(&root).unwrap();
+        let index_path = root.join("model.safetensors.index.json");
+        std::fs::write(
+            &index_path,
+            r#"{"weight_map":{"weight":"model-00001-of-00001.safetensors"}}"#,
+        )
+        .unwrap();
+        let index = AuthoritativeModelIndex::from_path(&index_path).unwrap();
+        let error = index
+            .materialize_tensor(&index_path, "weight", 4, 1)
+            .unwrap_err();
+        assert!(error.to_string().contains("authoritative shard is absent"));
+        std::fs::remove_dir_all(root).unwrap();
     }
 
     #[test]
