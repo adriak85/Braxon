@@ -9,6 +9,7 @@ pub mod native_target;
 pub mod preserve;
 pub mod raw_intent_engine;
 pub mod seating;
+pub mod syntax_intent;
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
 pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
@@ -23,6 +24,7 @@ pub use raw_intent_engine::{
     register_reconstructed_tool_intents, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqIntent,
     RawNsqOutcome,
 };
+pub use syntax_intent::{NsqSyntaxNode, NsqSyntaxTree};
 
 pub type Nu16 = u64;
 pub type Nu64 = u64;
