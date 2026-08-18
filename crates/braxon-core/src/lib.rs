@@ -17,6 +17,7 @@ pub mod nsq_native;
 pub mod offline_agent;
 pub mod offline_models;
 pub mod one_shot_objective_benchmark;
+pub mod performance_surface_benchmark;
 pub mod piston_memory;
 pub mod riemann_semantic_reflexor;
 pub mod seed_citadel;
@@ -67,6 +68,9 @@ pub use nsq_native::{
 pub use one_shot_objective_benchmark::{
     run_one_shot_objective_benchmark, run_one_shot_scaling_matrix, OneShotObjectiveBenchmark,
     OneShotScalingReport, OneShotScalingRow, TrajectoryMetrics, ONE_SHOT_BENCHMARK_SCHEMA,
+};
+pub use performance_surface_benchmark::{
+    run_performance_surface, PerformanceSurfaceReport, SurfaceCell, PERFORMANCE_SURFACE_SCHEMA,
 };
 pub use piston_memory::{
     MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,
