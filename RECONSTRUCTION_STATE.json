@@ -1,0 +1,60 @@
+{
+  "schema": "braxon.reconstruction_state.v1",
+  "current_reconstruction_revision": "60bab88f39a1b14f810ef222ece5db854b747ebf",
+  "branch": "reconstruction",
+  "source_inventory": {
+    "tracked_file_count": 180623,
+    "tracked_path_list_sha256": "9c248091ac2d4df304923b3b280e5d722a40dc1206b25e42fde4cbd9a4e32b5d"
+  },
+  "completed_units": [
+    "native_nsq_engine_and_syntax",
+    "initiative_clusters_and_reflexor",
+    "dynamic_parameter_pipeline",
+    "full_council_federation_contract",
+    "bidirectional_algebraic_thought_experiment",
+    "rust_to_nsq_semantic_extraction",
+    "wowas_tsv_rebuild_and_manifest_generation",
+    "deprecated_documentation_pruning"
+  ],
+  "active_unit": {
+    "name": "full_reconstruction_verification",
+    "segment": "rust_1_96_nsq_and_wowas_2525_artifact_gates"
+  },
+  "semantic_classifications": {
+    "rust": "source_dialect_requires_nsq_projection",
+    "wowas": "canonical_narrative_and_generation_contracts",
+    "historical_audits": "provenance_only",
+    "model_artifacts": "full_artifact_federation_required",
+    "physical_device_acceptance": "external_gate"
+  },
+  "implementation_family_relationships": [
+    "raw_intent_to_nsq_native_execution",
+    "initiative_cluster_to_jit_piston_ghost_activation",
+    "forward_prediction_to_observation_and_backward_reconciliation",
+    "council_dialects_to_universal_intent_gradient"
+  ],
+  "selected_implementations": [
+    "reconstruction_branch_canonical_runtime",
+    "nsq_core_native_contracts",
+    "wowas_final_edition_v10_active_canon"
+  ],
+  "rejected_or_deprecated_implementations": [
+    "tiny_model_fixtures",
+    "manifest_only_hot_live_claims",
+    "1126_era_active_range_docs",
+    "deprecated_runtime_documentation"
+  ],
+  "unresolved_dependencies": [
+    "github_hosted_runner_billing_lock",
+    "physical_android_16_acceptance"
+  ],
+  "verification_results": {
+    "rust_toolchain": "1.96.0",
+    "cargo_lock_sha256": "7ba445da8b47e5c1cb182399e3338e2ea24aa3be7fc021f4d7c096e98140f1dbf",
+    "last_completed_local_workspace_validation": "rust_1_96_workspace_tests_passed",
+    "wowas_artifact_target": 2525,
+    "wowas_last_rebuild_status": "passed",
+    "github_hosted_ci_status": "blocked_before_job_start_by_account_billing_lock"
+  },
+  "next_executable_unit": "run_exact_nsq_and_wowas_verification_at_current_revision"
+}
