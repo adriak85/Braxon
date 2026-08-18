@@ -48,6 +48,6 @@
     {"id":42,"name":"Global WOWAS audit","status":"BLOCKED","evidence":["audit/compile_wowas_scene_payload.py"],"scope":"Payload/compiler controls exist; universal subsystem compliance is not completed."},
     {"id":43,"name":"Global semantic-authority audit","status":"MEASURED","evidence":["crates/nsq-core/src/dynamic_parameter.rs","crates/braxon-core/src/riemann_semantic_reflexor.rs"],"scope":"Native authority boundaries are tested in covered paths; universal audit remains incomplete."},
     {"id":44,"name":"Universal migration audit","status":"BLOCKED","evidence":["audit/expanded/overlap_classification.txt"],"scope":"Historical disposition inventory exists; every migration gate is not proven complete."},
-    {"id":45,"name":"Full-system clean-room build","status":"BLOCKED","evidence":[],"scope":"Fresh clone/build/package gate not executed in this campaign."}
+    {"id":45,"name":"Full-system clean-room build","status":"MEASURED","evidence":["audit/run_clean_room_validation.sh","audit/full_workspace_clean_room_result.json"],"scope":"Fresh sparse reconstruction clone under Rust 1.96.0; cargo test --workspace --all-targets passed 139 tests; release packaging and physical acceptance remain outside this gate."}
   ]
 }
