@@ -12,6 +12,8 @@ pub mod initiative_cluster_runtime;
 pub mod integrated_objective_benchmark;
 pub mod kinetic_reflexor;
 pub mod native_bus;
+pub mod native_equivalence_harness;
+pub mod native_model_substrate;
 pub mod native_stack;
 pub mod nsq_native;
 pub mod offline_agent;
@@ -60,6 +62,14 @@ pub use kinetic_reflexor::{
     ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY,
 };
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
+pub use native_equivalence_harness::{
+    run_native_fixture_equivalence, NativeEquivalenceReport, NATIVE_EQUIVALENCE_HARNESS_SCHEMA,
+};
+pub use native_model_substrate::{
+    run_native_training, NativeArtifactManifest, NativeDType, NativeInferenceReceipt,
+    NativeKvCache, NativeLinearModel, NativeTensorBlock, NativeTokenizer, NativeTrainingPath,
+    NativeTrainingReceipt, NativeTrainingSample, NATIVE_MODEL_SUBSTRATE_SCHEMA,
+};
 pub use native_stack::NativeNsqStack;
 pub use nsq_native::{
     AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision,

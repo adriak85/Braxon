@@ -1,0 +1,18 @@
+{
+  "schema": "braxon.nsq.native_equivalence_harness.v1",
+  "fixture": "native-linear",
+  "inference_replay_equivalent": true,
+  "training_path_equivalent": true,
+  "zero_prediction_accuracy_correct": true,
+  "inference_hash": "dc5a57a6166012be",
+  "dense_training_hash": "7d923f6a9c3276ee",
+  "reactive_training_hash": "7d923f6a9c3276ee",
+  "predictive_training_hash": "7d923f6a9c3276ee",
+  "predictive_corrections": 6,
+  "validation": {
+    "braxon_core_tests": 71,
+    "native_model_tests": 3,
+    "native_equivalence_tests": 1
+  },
+  "scope": "This proves a deterministic native fixture and oracle-like replay harness; it does not prove real external model inference or real training acceleration."
+}
