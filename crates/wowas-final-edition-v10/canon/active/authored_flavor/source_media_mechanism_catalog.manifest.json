@@ -1,0 +1,21 @@
+{
+  "generated_prose": false,
+  "mechanism_counts": {
+    "comic_relief_with_teeth": 1,
+    "embodied_place": 12,
+    "moral_pressure": 3,
+    "precision_memory": 4,
+    "protective_care": 7,
+    "relationship_ambivalence": 5,
+    "strategic_conflict": 3,
+    "threshold_wonder": 4,
+    "transformation_pressure": 3,
+    "unclassified_source_mechanism": 20,
+    "voice_restraint": 2
+  },
+  "policy": "Influence is converted into abstract craft mechanisms only. No source expression is copied or imported.",
+  "rows": 50,
+  "schema": "wowas.source.media.mechanisms.v1",
+  "source": "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/06_CHARACTER_REGISTRY.json",
+  "source_sha256": "69246bd4cf8299c5b93e6232ba60dcfa92140ecfee8b42b75ead0f9552860e42"
+}

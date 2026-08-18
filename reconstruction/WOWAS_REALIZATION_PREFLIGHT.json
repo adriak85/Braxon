@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "path": "crates/wowas-final-edition-v10/canon/active/reconciled_15000/scene_index_reconciled_metadata.tsv",
+      "sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e"
+    },
+    {
+      "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/generated_character_flavor_constraints.tsv",
+      "sha256": "d18367ac1ef0b1126674e7f03636a74082c6c8c628faaf6c41262c709f089c0d"
+    },
+    {
+      "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/source_media_mechanism_catalog.tsv",
+      "sha256": "179ba7976035927eb41ebc19dfbf22be17418210b0caa2e9e77a8fdb0511e549"
+    },
+    {
+      "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv",
+      "sha256": "011f2e24dfc0f2531a50b9a098e971ccfef74bb47f6e1f3438d5a7adc2a2a640"
+    },
+    {
+      "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv",
+      "sha256": "a36f8837497889f702d16a6c174ef089e9a4317baf3c99bda0d75ec6f702020b"
+    },
+    {
+      "name": "metadata_unique_record_id",
+      "value": 34973
+    },
+    {
+      "name": "generated_constraints_unique_id",
+      "value": 5000
+    },
+    {
+      "name": "authored_characters",
+      "value": 50
+    },
+    {
+      "name": "authored_dynamics",
+      "value": 94
+    },
+    {
+      "name": "source_mechanism_rows",
+      "value": 50
+    },
+    {
+      "name": "scene_id_duplicate_groups",
+      "value": 365
+    }
+  ],
+  "failure_mode": "fail_closed",
+  "failures": [],
+  "prose_generation_permitted": false,
+  "required_inputs": [
+    "reconciled metadata keyed by record_id",
+    "authored_character_flavor_lattice.tsv",
+    "authored_dynamics_lattice.tsv",
+    "source_media_mechanism_catalog.tsv",
+    "generated_character_flavor_constraints.tsv"
+  ],
+  "required_runtime_guards": [
+    "write only to staging first",
+    "tone/cadence/style/token gate before promotion",
+    "rolling state ledger across books",
+    "record_id for output identity; scene_id is non-unique context only",
+    "no direct copying from source media; abstract mechanisms only",
+    "unmapped anchors remain quarantined"
+  ],
+  "schema": "wowas.realization.preflight.v1",
+  "status": "pass",
+  "unmapped_anchor_policy": "unmapped anchors may not receive invented authored identity; they remain explicit until source-dispositioned"
+}
