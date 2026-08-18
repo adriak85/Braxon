@@ -1,4 +1,5 @@
 #![allow(non_snake_case)]
+pub mod adversarial_integrated_benchmark;
 pub mod bus;
 pub mod content_surface;
 pub mod context_manifest;
@@ -29,6 +30,10 @@ use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::Path;
 
+pub use adversarial_integrated_benchmark::{
+    run_adversarial_integrated_benchmark, AdversarialBenchmarkReport, AdversarialMetrics,
+    AdversarialWorkload, ADVERSARIAL_BENCHMARK_SCHEMA,
+};
 pub use content_surface::{
     daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA,
     NARRATIVE_SCHEMA,

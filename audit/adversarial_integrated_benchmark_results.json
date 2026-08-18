@@ -1,0 +1,14 @@
+{
+  "schema": "braxon.adversarial_integrated_benchmark.v1",
+  "objective": "adversarial objective",
+  "standard_steps": 10,
+  "long_steps": 100,
+  "rows": [
+    {"workload":"Sparse","steps":10,"external_interactions":1,"logical_parameters":4,"logical_expressions":30,"parameters_examined":10,"expressions_materialized":10,"expressions_unmaterialized":20,"materialization_ratio":0.3333333333333333,"correction_events":0,"prediction_correct_steps":10,"activation_receipts":11,"peak_aperture_bytes":8,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":3189352},
+    {"workload":"Dense","steps":10,"external_interactions":1,"logical_parameters":3,"logical_expressions":30,"parameters_examined":30,"expressions_materialized":30,"expressions_unmaterialized":0,"materialization_ratio":1.0,"correction_events":0,"prediction_correct_steps":10,"activation_receipts":11,"peak_aperture_bytes":24,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":3536456},
+    {"workload":"RandomDependency","steps":10,"external_interactions":1,"logical_parameters":4,"logical_expressions":30,"parameters_examined":10,"expressions_materialized":10,"expressions_unmaterialized":20,"materialization_ratio":0.3333333333333333,"correction_events":0,"prediction_correct_steps":10,"activation_receipts":11,"peak_aperture_bytes":8,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":3259670},
+    {"workload":"HighlyCorrelated","steps":10,"external_interactions":1,"logical_parameters":4,"logical_expressions":30,"parameters_examined":10,"expressions_materialized":10,"expressions_unmaterialized":20,"materialization_ratio":0.3333333333333333,"correction_events":0,"prediction_correct_steps":10,"activation_receipts":11,"peak_aperture_bytes":8,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":3052938},
+    {"workload":"PredictionHostile","steps":10,"external_interactions":1,"logical_parameters":4,"logical_expressions":30,"parameters_examined":10,"expressions_materialized":10,"expressions_unmaterialized":20,"materialization_ratio":0.3333333333333333,"correction_events":10,"prediction_correct_steps":0,"activation_receipts":11,"peak_aperture_bytes":8,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":2854595},
+    {"workload":"LongTrajectory","steps":100,"external_interactions":1,"logical_parameters":4,"logical_expressions":300,"parameters_examined":100,"expressions_materialized":100,"expressions_unmaterialized":200,"materialization_ratio":0.3333333333333333,"correction_events":0,"prediction_correct_steps":100,"activation_receipts":101,"peak_aperture_bytes":8,"peak_resident_bytes":0,"terminal_state":"Won","final_correctness":true,"time_to_terminal_nanos":30589487}
+  ]
+}
