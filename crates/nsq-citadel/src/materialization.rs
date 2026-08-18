@@ -10,6 +10,28 @@ use std::collections::{BTreeMap, BTreeSet};
 
 pub const CITADEL_MATERIALIZATION_SCHEMA: &str = "nsq.citadel.seed_materialization.v1";
 pub const CITADEL_INVENTORY_SCHEMA: &str = "nsq.citadel.inventory.v1";
+pub const CITADEL_DELTA_SCHEMA: &str = "nsq.citadel.delta.v1";
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct CitadelDelta {
+    pub schema: String,
+    pub identity: String,
+    pub target_tensor: String,
+    pub base_generation: u64,
+    pub delta_generation: u64,
+    pub parent_materialization_hash: String,
+    pub values: Vec<f32>,
+    pub integrity_hash: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct CitadelDeltaReceipt {
+    pub identity: String,
+    pub target_tensor: String,
+    pub generation: u64,
+    pub materialization_hash: String,
+    pub activated: bool,
+}
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct CitadelManifest {
@@ -91,6 +113,7 @@ pub enum CitadelMaterializationError {
     Ownership(String),
     Manifest(String),
     Reconciliation(String),
+    Delta(String),
 }
 
 impl std::fmt::Display for CitadelMaterializationError {
@@ -102,6 +125,7 @@ impl std::fmt::Display for CitadelMaterializationError {
             Self::Ownership(error) => write!(f, "Citadel ownership error: {error}"),
             Self::Manifest(error) => write!(f, "Citadel manifest error: {error}"),
             Self::Reconciliation(error) => write!(f, "Citadel reconciliation error: {error}"),
+            Self::Delta(error) => write!(f, "Citadel delta error: {error}"),
         }
     }
 }
@@ -120,6 +144,8 @@ pub struct CitadelNativeRuntime {
     pub runtime: NativeNsqRuntime<NativeNsqMachine>,
     pub ownership: NativeNsqOwnership,
     pub last_generation: u64,
+    pub applied_deltas: BTreeSet<String>,
+    pub active_delta_targets: BTreeMap<String, String>,
 }
 
 impl CitadelNativeRuntime {
@@ -130,7 +156,106 @@ impl CitadelNativeRuntime {
             runtime: NativeNsqRuntime::new(NativeNsqMachine::default()),
             ownership: NativeNsqOwnership::default(),
             last_generation: 0,
+            applied_deltas: BTreeSet::new(),
+            active_delta_targets: BTreeMap::new(),
         }
+    }
+
+    pub fn apply_delta(
+        &mut self,
+        delta: &CitadelDelta,
+    ) -> Result<CitadelDeltaReceipt, CitadelMaterializationError> {
+        if delta.schema != CITADEL_DELTA_SCHEMA {
+            return Err(CitadelMaterializationError::Delta(
+                "invalid delta schema".into(),
+            ));
+        }
+        if delta.identity.trim().is_empty() || delta.target_tensor.trim().is_empty() {
+            return Err(CitadelMaterializationError::Delta(
+                "delta identity and target are required".into(),
+            ));
+        }
+        if self.applied_deltas.contains(&delta.identity) {
+            let tensor = self.tensor_store.get(&delta.target_tensor)?;
+            return Ok(CitadelDeltaReceipt {
+                identity: delta.identity.clone(),
+                target_tensor: delta.target_tensor.clone(),
+                generation: tensor.generation,
+                materialization_hash: tensor.materialization_sha256.clone(),
+                activated: false,
+            });
+        }
+        if delta.base_generation != self.last_generation
+            || delta.delta_generation != delta.base_generation.saturating_add(1)
+        {
+            return Err(CitadelMaterializationError::Delta(
+                "delta generation does not match the live Citadel generation".into(),
+            ));
+        }
+        if self.active_delta_targets.contains_key(&delta.target_tensor) {
+            return Err(CitadelMaterializationError::Delta(
+                "conflicting delta target is already active".into(),
+            ));
+        }
+        let base = self.tensor_store.get(&delta.target_tensor)?.clone();
+        if base.generation != delta.base_generation
+            || base.materialization_sha256 != delta.parent_materialization_hash
+        {
+            return Err(CitadelMaterializationError::Delta(
+                "delta parent does not match the target tensor".into(),
+            ));
+        }
+        let encoded = delta
+            .values
+            .iter()
+            .flat_map(|value| value.to_le_bytes())
+            .collect::<Vec<_>>();
+        if hash_bytes(&encoded) != delta.integrity_hash {
+            return Err(CitadelMaterializationError::Delta(
+                "delta integrity hash mismatch".into(),
+            ));
+        }
+        let mut values = base
+            .bytes
+            .chunks_exact(4)
+            .map(|chunk| f32::from_le_bytes([chunk[0], chunk[1], chunk[2], chunk[3]]))
+            .collect::<Vec<_>>();
+        if values.len() != delta.values.len() {
+            return Err(CitadelMaterializationError::Delta(
+                "delta scope does not match tensor shape".into(),
+            ));
+        }
+        for (value, change) in values.iter_mut().zip(&delta.values) {
+            *value += change;
+        }
+        let bytes = values
+            .iter()
+            .flat_map(|value| value.to_le_bytes())
+            .collect::<Vec<_>>();
+        let next_hash = hash_bytes(&bytes);
+        let next = NsqTensor {
+            schema: NSQ_TENSOR_SCHEMA.into(),
+            name: base.name,
+            dtype: base.dtype,
+            shape: base.shape,
+            source_path: format!("delta://{}", delta.identity),
+            source_sha256: delta.integrity_hash.clone(),
+            materialization_sha256: next_hash.clone(),
+            generation: delta.delta_generation,
+            bytes,
+        };
+        self.tensor_store.insert(next)?;
+        self.last_generation = delta.delta_generation;
+        self.applied_deltas.insert(delta.identity.clone());
+        self.active_delta_targets
+            .insert(delta.target_tensor.clone(), delta.identity.clone());
+        Ok(CitadelDeltaReceipt {
+            identity: delta.identity.clone(),
+            target_tensor: delta.target_tensor.clone(),
+            generation: delta.delta_generation,
+            materialization_hash: next_hash,
+            activated: true,
+        })
     }
 
     pub fn materialize_manifest(
@@ -352,6 +477,32 @@ impl CitadelNativeRuntime {
     }
 }
 
+pub fn delta_for_tensor(
+    target_tensor: &NsqTensor,
+    identity: &str,
+    values: Vec<f32>,
+) -> Result<CitadelDelta, CitadelMaterializationError> {
+    if values.len() * 4 != target_tensor.bytes.len() {
+        return Err(CitadelMaterializationError::Delta(
+            "delta scope does not match tensor shape".into(),
+        ));
+    }
+    let encoded = values
+        .iter()
+        .flat_map(|value| value.to_le_bytes())
+        .collect::<Vec<_>>();
+    Ok(CitadelDelta {
+        schema: CITADEL_DELTA_SCHEMA.into(),
+        identity: identity.into(),
+        target_tensor: target_tensor.name.clone(),
+        base_generation: target_tensor.generation,
+        delta_generation: target_tensor.generation.saturating_add(1),
+        parent_materialization_hash: target_tensor.materialization_sha256.clone(),
+        values,
+        integrity_hash: hash_bytes(&encoded),
+    })
+}
+
 fn validate_manifest(manifest: &CitadelManifest) -> Result<(), CitadelMaterializationError> {
     if manifest.lanes.len() != 10 {
         return Err(CitadelMaterializationError::Manifest(
@@ -512,6 +663,59 @@ mod tests {
         assert!(matches!(
             runtime.reconcile_inventory(&inventory, &stale),
             Err(CitadelMaterializationError::Reconciliation(_))
+        ));
+    }
+
+    #[test]
+    fn delta_contract_applies_once_and_changes_tensor_computation() {
+        let mut runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let seed_result = runtime.materialize_seed(&seed("delta base"), 1).unwrap();
+        let target = seed_result.bodies[0].tensor_name.clone();
+        let before = runtime
+            .tensor_store
+            .parameter_dot(&target, &vec![1.0; 2])
+            .unwrap();
+        let base = runtime.tensor_store.get(&target).unwrap().clone();
+        let delta = delta_for_tensor(&base, "delta-1", vec![0.5; 2]).unwrap();
+        let receipt = runtime.apply_delta(&delta).unwrap();
+        let after = runtime
+            .tensor_store
+            .parameter_dot(&target, &vec![1.0; 2])
+            .unwrap();
+        assert!(receipt.activated);
+        assert_eq!(receipt.generation, 2);
+        assert_ne!(before, after);
+        let replay = runtime.apply_delta(&delta).unwrap();
+        assert!(!replay.activated);
+        assert_eq!(replay.materialization_hash, receipt.materialization_hash);
+    }
+
+    #[test]
+    fn delta_contract_rejects_stale_conflicting_and_corrupted_state() {
+        let mut runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let seed_result = runtime.materialize_seed(&seed("delta guards"), 1).unwrap();
+        let target = seed_result.bodies[0].tensor_name.clone();
+        let base = runtime.tensor_store.get(&target).unwrap().clone();
+        let delta = delta_for_tensor(&base, "delta-guard", vec![0.25; 2]).unwrap();
+        let mut corrupt = delta.clone();
+        corrupt.integrity_hash = "corrupt".into();
+        assert!(matches!(
+            runtime.apply_delta(&corrupt),
+            Err(CitadelMaterializationError::Delta(_))
+        ));
+        let mut stale = delta.clone();
+        stale.base_generation = 0;
+        stale.delta_generation = 1;
+        assert!(matches!(
+            runtime.apply_delta(&stale),
+            Err(CitadelMaterializationError::Delta(_))
+        ));
+        runtime.apply_delta(&delta).unwrap();
+        let next_base = runtime.tensor_store.get(&target).unwrap().clone();
+        let conflict = delta_for_tensor(&next_base, "delta-conflict", vec![0.5; 2]).unwrap();
+        assert!(matches!(
+            runtime.apply_delta(&conflict),
+            Err(CitadelMaterializationError::Delta(_))
         ));
     }
 
