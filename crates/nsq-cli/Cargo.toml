@@ -11,3 +11,5 @@ description = "Lightweight NSQ operator CLI and REPL."
 
 [dependencies]
 clap.workspace = true
+nsq-core = { path = "../nsq-core" }
+Braxon-core = { path = "../braxon-core" }

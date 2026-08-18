@@ -57,3 +57,70 @@ fn doctor_surface_reports_environment() {
     assert!(text.contains("NSQ doctor"));
     assert!(text.contains("check:cargo_toml=false"));
 }
+
+#[test]
+fn eval_surface_dispatches_to_native_intent_state() {
+    let out = Command::new(env!("CARGO_BIN_EXE_nsq-cli"))
+        .args(["eval", "agency relation truth"])
+        .output()
+        .unwrap();
+
+    assert!(out.status.success());
+    let text = String::from_utf8_lossy(&out.stdout);
+    assert!(text.contains("capability: guile.rebuild_intent"));
+    assert!(text.contains("result: language-intent-rebuilt"));
+    assert!(!text.contains("stub-ok"));
+}
+
+#[test]
+fn select_surface_discovers_native_capability() {
+    let out = Command::new(env!("CARGO_BIN_EXE_nsq-cli"))
+        .args(["select", "tree"])
+        .output()
+        .unwrap();
+
+    assert!(out.status.success());
+    let text = String::from_utf8_lossy(&out.stdout);
+    assert!(text.contains("capability: tree_sitter.parse"));
+    assert!(text.contains("native_entry: nsq-core::RawNsqEngine::parse"));
+}
+
+#[test]
+fn select_surface_fails_closed_for_unknown_capability() {
+    let out = Command::new(env!("CARGO_BIN_EXE_nsq-cli"))
+        .args(["select", "not-a-native-capability"])
+        .output()
+        .unwrap();
+
+    assert!(!out.status.success());
+    let text = String::from_utf8_lossy(&out.stderr);
+    assert!(text.contains("selection rejected: no native capability matches"));
+}
+
+#[test]
+fn fetch_surface_reads_repository_file_metadata() {
+    let workspace_cargo = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../Cargo.toml");
+    let out = Command::new(env!("CARGO_BIN_EXE_nsq-cli"))
+        .args(["fetch", workspace_cargo.to_str().unwrap()])
+        .output()
+        .unwrap();
+
+    assert!(out.status.success());
+    let text = String::from_utf8_lossy(&out.stdout);
+    assert!(text.contains("NSQ fetch"));
+    assert!(text.contains("kind: file"));
+    assert!(text.contains("bytes: "));
+    assert!(!text.contains("stub-ok"));
+}
+
+#[test]
+fn parse_surface_fails_closed_for_unbalanced_input() {
+    let out = Command::new(env!("CARGO_BIN_EXE_nsq-cli"))
+        .args(["parse", "("])
+        .output()
+        .unwrap();
+
+    assert!(!out.status.success());
+    let text = String::from_utf8_lossy(&out.stderr);
+    assert!(text.contains("parse error: unclosed delimiter"));
+}

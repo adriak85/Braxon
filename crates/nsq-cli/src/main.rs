@@ -1,7 +1,14 @@
 use clap::{Parser, Subcommand};
+use std::collections::BTreeMap;
 use std::fs;
 use std::io::{self, Write};
 use std::path::Path;
+
+use nsq_core::{
+    register_reconstructed_tool_intents, Charge, Dialect, NSQLever, NSQSlot, NsqAddress,
+    NsqSyntaxTree, RawNsqEngine, RawNsqEvent, RawNsqOutcome,
+};
+use BRAXON_core::NativeNsqStack;
 
 #[derive(Parser, Debug)]
 #[command(name = "nsq")]
@@ -50,19 +57,80 @@ fn cmd_status() {
 fn cmd_parse(input: &str) {
     println!("NSQ parse");
     println!("input: {}", input);
-    println!("tokens: {:?}", input.split_whitespace().collect::<Vec<_>>());
+    match NsqSyntaxTree::parse(input) {
+        Ok(tree) => {
+            println!("source_len: {}", tree.source_len);
+            println!("root: {:?}", tree.root);
+        }
+        Err(reason) => {
+            eprintln!("parse error: {reason}");
+            std::process::exit(2);
+        }
+    }
 }
 
 fn cmd_eval(input: &str) {
     println!("NSQ eval");
     println!("input: {}", input);
-    println!("result: stub-ok");
+    let mut stack = match native_stack() {
+        Ok(stack) => stack,
+        Err(reason) => {
+            eprintln!("eval setup error: {reason}");
+            std::process::exit(2);
+        }
+    };
+    let mut values = BTreeMap::new();
+    values.insert("input".to_string(), input.to_string());
+    let outcome = stack.dispatch_raw_intent(RawNsqEvent::Invoke {
+        capability_id: "guile.rebuild_intent".into(),
+        input: values,
+    });
+    match outcome {
+        RawNsqOutcome::Accepted {
+            capability_id,
+            state,
+        } => {
+            println!("capability: {capability_id}");
+            println!(
+                "result: {}",
+                state.get("result").map(String::as_str).unwrap_or("missing")
+            );
+            println!("state: {:?}", state);
+        }
+        RawNsqOutcome::Corrected {
+            capability_id,
+            state,
+        } => {
+            println!("capability: {capability_id}");
+            println!("result: corrected");
+            println!("state: {:?}", state);
+        }
+        RawNsqOutcome::Rejected { reason } => {
+            eprintln!("eval rejected: {reason}");
+            std::process::exit(2);
+        }
+    }
 }
 
 fn cmd_select(input: &str) {
     println!("NSQ select");
     println!("input: {}", input);
-    println!("selection: stub-ok");
+    let stack = match native_stack() {
+        Ok(stack) => stack,
+        Err(reason) => {
+            eprintln!("select setup error: {reason}");
+            std::process::exit(2);
+        }
+    };
+    let capabilities = stack.discover_raw_capabilities(input);
+    if capabilities.is_empty() {
+        eprintln!("selection rejected: no native capability matches '{input}'");
+        std::process::exit(2);
+    }
+    for capability in capabilities {
+        println!("capability: {}", capability.capability_id);
+        println!("native_entry: {}", capability.native_entry);
+    }
 }
 
 fn cmd_ingest(path: &str) {
@@ -94,8 +162,54 @@ fn cmd_ingest(path: &str) {
 
 fn cmd_fetch(target: &str) {
     println!("NSQ fetch");
+    let path = Path::new(target);
+    let metadata = match fs::metadata(path) {
+        Ok(metadata) => metadata,
+        Err(error) => {
+            eprintln!("fetch error: {error}");
+            std::process::exit(2);
+        }
+    };
     println!("target: {}", target);
-    println!("result: stub-ok");
+    println!("bytes: {}", metadata.len());
+    println!(
+        "kind: {}",
+        if metadata.is_dir() {
+            "directory"
+        } else {
+            "file"
+        }
+    );
+    if metadata.is_file() {
+        match fs::read_to_string(path) {
+            Ok(contents) => println!(
+                "content_preview: {}",
+                contents.chars().take(160).collect::<String>()
+            ),
+            Err(error) => println!("content_preview: unavailable ({error})"),
+        }
+    }
+}
+
+fn native_stack() -> Result<NativeNsqStack, String> {
+    let council = (1..=10).map(native_address).collect::<Vec<_>>();
+    let target = native_address(20);
+    let desired = NSQSlot::new(Dialect::Intent, vec![NSQLever::new(Charge::Positive, 21)?]);
+    NativeNsqStack::new(council, target, desired, 1)
+}
+
+fn native_address(position: u64) -> NsqAddress {
+    NsqAddress::root(NSQSlot::new(
+        Dialect::Control,
+        vec![NSQLever::new(Charge::Positive, position).expect("positive NSQ lever")],
+    ))
+}
+
+#[allow(dead_code)]
+fn native_engine() -> Result<RawNsqEngine, String> {
+    let mut engine = RawNsqEngine::default();
+    register_reconstructed_tool_intents(&mut engine)?;
+    Ok(engine)
 }
 
 fn cmd_wake() {
