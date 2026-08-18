@@ -17,27 +17,27 @@ jobs:
           fetch-depth: 0
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: stable
+          toolchain: 1.96.0
 
       - name: Workspace format gate
-        run: cargo fmt --all -- --check
+        run: cargo +1.96.0 fmt --all -- --check
 
       - name: Workspace compile gate
-        run: cargo check --workspace --all-targets
+        run: cargo +1.96.0 check --workspace --all-targets --locked
 
       - name: Workspace test gate
-        run: cargo test --workspace --all-targets --locked
+        run: cargo +1.96.0 test --workspace --all-targets --locked
 
       - name: NSQ executable smoke gate
         run: |
-          cargo run --quiet -- status
-          cargo run --quiet -- apps verify
-          cargo run --quiet -- seating-verify
-          cargo run --quiet -- max-stable-scan
-          cargo run --quiet -- lever-sweet-spot
-          cargo run --quiet -- wake
+          cargo +1.96.0 run --quiet -- status
+          cargo +1.96.0 run --quiet -- apps verify
+          cargo +1.96.0 run --quiet -- seating-verify
+          cargo +1.96.0 run --quiet -- max-stable-scan
+          cargo +1.96.0 run --quiet -- lever-sweet-spot
+          cargo +1.96.0 run --quiet -- wake
 
       - name: Repository integrity gate
         run: |
