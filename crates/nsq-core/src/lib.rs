@@ -4,6 +4,7 @@ use std::fmt;
 pub mod artifact_intent;
 pub mod blaixe;
 pub mod blaixe_bus;
+pub mod confined_execution;
 pub mod council_federation;
 pub mod dynamic_parameter;
 pub mod initiative_cluster;
@@ -24,6 +25,10 @@ pub use artifact_intent::{
 };
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
+pub use confined_execution::{
+    ConfinedBusBinding, ConfinedExecution, ConfinedExecutionError, ConfinedOperation,
+    ConfinedProgram, InitiativeExpression, CONFINED_EXECUTION_SCHEMA,
+};
 pub use council_federation::{
     CouncilFederation, FederationReport, HotInitiativeGroup, COUNCIL_FEDERATION_SCHEMA,
     COUNCIL_LANE_COUNT, REQUIRED_COUNCIL_LANES,
