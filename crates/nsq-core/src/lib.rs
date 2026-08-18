@@ -11,6 +11,7 @@ pub mod initiative_thought;
 pub mod native_reflexor;
 pub mod native_runtime;
 pub mod native_target;
+pub mod native_tensor;
 pub mod preserve;
 pub mod raw_intent_engine;
 pub mod rust_intent;
@@ -47,6 +48,10 @@ pub use native_runtime::{
     NSQ_NATIVE_RUNTIME_SCHEMA,
 };
 pub use native_target::NativeNsqTargetField;
+pub use native_tensor::{
+    AuthoritativeTensorDescriptor, BoundedShardReader, NativeTensorError, NsqTensor,
+    NsqTensorStore, NSQ_TENSOR_SCHEMA,
+};
 pub use raw_intent_engine::{
     register_reconstructed_tool_intents, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqIntent,
     RawNsqOutcome,
