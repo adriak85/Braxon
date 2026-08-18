@@ -27,6 +27,47 @@ pub struct ActivationReceipt {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub enum ProofState {
+    Unresolved,
+    Probable,
+    Certified,
+    IndependentlyReproduced,
+    Blocked,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub enum TerminalState {
+    Running,
+    Won,
+    LoopDetected,
+    ResourceBound,
+    AuthorityBlocked,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ProofAttempt {
+    pub record_id: String,
+    pub state: ProofState,
+    pub primary_source: String,
+    pub independent_source: String,
+    pub primary_certificate: bool,
+    pub independent_certificate: bool,
+    pub residual_nano: u64,
+    pub activation: ActivationReceipt,
+    pub reason: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct LearningRecord {
+    pub signature: String,
+    pub record_id: String,
+    pub proof_state: ProofState,
+    pub residual_nano: u64,
+    pub priority_delta: i64,
+    pub trusted: bool,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct ZeroRegionHypothesis {
     pub record_id: String,
     pub sigma_milli: i64,
@@ -63,6 +104,12 @@ pub struct RiemannSemanticReflexor {
     pub active_parameters: BTreeMap<String, u64>,
     pub active_capabilities: BTreeMap<String, u64>,
     pub activation_receipts: Vec<ActivationReceipt>,
+    pub proof_attempts: Vec<ProofAttempt>,
+    pub learning_records: Vec<LearningRecord>,
+    pub visited_signatures: BTreeMap<String, u64>,
+    pub terminal_state: TerminalState,
+    pub attempt_budget: u64,
+    pub attempts_used: u64,
     pub steps: Vec<ReflexorSearchStep>,
 }
 
@@ -96,6 +143,12 @@ impl RiemannSemanticReflexor {
             active_parameters: BTreeMap::new(),
             active_capabilities: BTreeMap::new(),
             activation_receipts: Vec::new(),
+            proof_attempts: Vec::new(),
+            learning_records: Vec::new(),
+            visited_signatures: BTreeMap::new(),
+            terminal_state: TerminalState::Running,
+            attempt_budget: u64::MAX,
+            attempts_used: 0,
             steps: Vec::new(),
         })
     }
@@ -112,34 +165,48 @@ impl RiemannSemanticReflexor {
             })
     }
 
-    pub fn activate_just_in_time(&mut self, request: ActivationRequest) -> Result<ActivationReceipt, String> {
+    pub fn activate_just_in_time(
+        &mut self,
+        request: ActivationRequest,
+    ) -> Result<ActivationReceipt, String> {
         if request.record_id.trim().is_empty() || request.provenance.trim().is_empty() {
             return Err("JIT activation requires record_id and provenance".into());
         }
         if request.required_parameters.is_empty() || request.required_capabilities.is_empty() {
             return Err("JIT activation requires parameters and capabilities".into());
         }
-        if request.required_parameters.iter().any(|parameter| parameter != "height" && parameter != "sigma") {
+        if request
+            .required_parameters
+            .iter()
+            .any(|parameter| parameter != "height" && parameter != "sigma")
+        {
             return Err("JIT activation rejected an unapproved parameter".into());
         }
-        if request.required_capabilities.iter().any(|capability| !capability.starts_with("zeta.")) {
+        if request
+            .required_capabilities
+            .iter()
+            .any(|capability| !capability.starts_with("zeta."))
+        {
             return Err("JIT activation rejected a capability outside the zeta authority".into());
         }
-        let bounded_window_bytes = (request.required_parameters.len() + request.required_capabilities.len()) as u64 * 8;
+        let bounded_window_bytes =
+            (request.required_parameters.len() + request.required_capabilities.len()) as u64 * 8;
         if bounded_window_bytes > MAX_JIT_ACTIVATION_BYTES {
             return Err("JIT activation exceeds the bounded firing window".into());
         }
         let mut activated_parameters = Vec::new();
         for parameter in &request.required_parameters {
             if !self.active_parameters.contains_key(parameter) {
-                self.active_parameters.insert(parameter.clone(), self.generation);
+                self.active_parameters
+                    .insert(parameter.clone(), self.generation);
                 activated_parameters.push(parameter.clone());
             }
         }
         let mut activated_capabilities = Vec::new();
         for capability in &request.required_capabilities {
             if !self.active_capabilities.contains_key(capability) {
-                self.active_capabilities.insert(capability.clone(), self.generation);
+                self.active_capabilities
+                    .insert(capability.clone(), self.generation);
                 activated_capabilities.push(capability.clone());
             }
         }
@@ -150,19 +217,26 @@ impl RiemannSemanticReflexor {
             bounded_window_bytes,
             retry_permitted: true,
             authorized: true,
-            reason: "required semantic parameters and capabilities activated for one bounded retry".into(),
+            reason: "required semantic parameters and capabilities activated for one bounded retry"
+                .into(),
         };
         self.activation_receipts.push(receipt.clone());
         Ok(receipt)
     }
 
-    pub fn execute_prediction(&mut self, record_id: &str) -> Result<DynamicPipelineReceipt, String> {
+    pub fn execute_prediction(
+        &mut self,
+        record_id: &str,
+    ) -> Result<DynamicPipelineReceipt, String> {
         let hypothesis = self
             .hypotheses
             .get(record_id)
             .ok_or_else(|| format!("unknown Riemann hypothesis region: {record_id}"))?
             .clone();
-        if !self.active_parameters.contains_key("height") || !self.active_parameters.contains_key("sigma") || !self.active_capabilities.contains_key("zeta.evaluate") {
+        if !self.active_parameters.contains_key("height")
+            || !self.active_parameters.contains_key("sigma")
+            || !self.active_capabilities.contains_key("zeta.evaluate")
+        {
             self.activate_just_in_time(ActivationRequest {
                 record_id: record_id.into(),
                 required_parameters: vec!["height".into(), "sigma".into()],
@@ -184,6 +258,136 @@ impl RiemannSemanticReflexor {
         )?;
         self.generation = self.generation.saturating_add(1);
         Ok(receipt)
+    }
+
+    pub fn begin_run(&mut self, attempt_budget: u64) -> Result<(), String> {
+        if attempt_budget == 0 {
+            return Err("self-directed run requires a positive attempt budget".into());
+        }
+        self.attempt_budget = attempt_budget;
+        self.attempts_used = 0;
+        self.terminal_state = TerminalState::Running;
+        Ok(())
+    }
+
+    pub fn terminal_state(&self) -> &TerminalState {
+        &self.terminal_state
+    }
+
+    pub fn self_prove(
+        &mut self,
+        record_id: &str,
+        residual_nano: u64,
+        primary_source: impl Into<String>,
+        independent_source: impl Into<String>,
+        primary_certificate: bool,
+        independent_certificate: bool,
+    ) -> Result<ProofAttempt, String> {
+        let primary_source = primary_source.into();
+        let independent_source = independent_source.into();
+        if primary_source.trim().is_empty() || independent_source.trim().is_empty() {
+            return Err("self-proof requires primary and independent sources".into());
+        }
+        let activation = self.activate_just_in_time(ActivationRequest {
+            record_id: record_id.into(),
+            required_parameters: vec!["height".into(), "sigma".into()],
+            required_capabilities: vec![
+                "zeta.lucas_lehmer".into(),
+                "zeta.independent_verify".into(),
+            ],
+            provenance: "self-proof-initiative".into(),
+        })?;
+        let state = if primary_certificate
+            && independent_certificate
+            && primary_source != independent_source
+        {
+            ProofState::IndependentlyReproduced
+        } else if residual_nano <= 10_000 {
+            ProofState::Probable
+        } else {
+            ProofState::Unresolved
+        };
+        let reason = match state {
+            ProofState::IndependentlyReproduced => {
+                "two distinct proof-grade sources supplied certificates".into()
+            }
+            ProofState::Probable => {
+                "small residual observed but complete independent proof evidence is absent".into()
+            }
+            _ => "self-proof attempt did not establish a certificate".into(),
+        };
+        let attempt = ProofAttempt {
+            record_id: record_id.into(),
+            state,
+            primary_source,
+            independent_source,
+            primary_certificate,
+            independent_certificate,
+            residual_nano,
+            activation,
+            reason,
+        };
+        self.proof_attempts.push(attempt.clone());
+        Ok(attempt)
+    }
+
+    pub fn learn_from_proof_attempt(
+        &mut self,
+        attempt: &ProofAttempt,
+    ) -> Result<TerminalState, String> {
+        if !self.hypotheses.contains_key(&attempt.record_id) {
+            return Err(format!(
+                "learning references unknown region: {}",
+                attempt.record_id
+            ));
+        }
+        if !matches!(self.terminal_state, TerminalState::Running) {
+            return Ok(self.terminal_state.clone());
+        }
+        let signature = format!(
+            "{}:{:?}:{}",
+            attempt.record_id, attempt.state, attempt.residual_nano
+        );
+        if self.visited_signatures.contains_key(&signature) {
+            self.terminal_state = TerminalState::LoopDetected;
+            return Ok(self.terminal_state.clone());
+        }
+        self.attempts_used = self.attempts_used.saturating_add(1);
+        self.visited_signatures
+            .insert(signature.clone(), self.attempts_used);
+        let (priority_delta, trusted) = match attempt.state {
+            ProofState::IndependentlyReproduced => (i64::MIN, true),
+            ProofState::Certified => (-1_000, true),
+            ProofState::Probable => (250, false),
+            ProofState::Blocked => (0, false),
+            ProofState::Unresolved => (500, false),
+        };
+        if let Some(hypothesis) = self.hypotheses.get_mut(&attempt.record_id) {
+            if priority_delta == i64::MIN {
+                hypothesis.priority = 0;
+            } else if priority_delta >= 0 {
+                hypothesis.priority = hypothesis.priority.saturating_add(priority_delta as u64);
+            } else {
+                hypothesis.priority = hypothesis
+                    .priority
+                    .saturating_sub(priority_delta.unsigned_abs());
+            }
+        }
+        self.learning_records.push(LearningRecord {
+            signature,
+            record_id: attempt.record_id.clone(),
+            proof_state: attempt.state.clone(),
+            residual_nano: attempt.residual_nano,
+            priority_delta,
+            trusted,
+        });
+        self.terminal_state = match attempt.state {
+            ProofState::IndependentlyReproduced => TerminalState::Won,
+            ProofState::Blocked => TerminalState::AuthorityBlocked,
+            _ if self.attempts_used >= self.attempt_budget => TerminalState::ResourceBound,
+            _ => TerminalState::Running,
+        };
+        Ok(self.terminal_state.clone())
     }
 
     pub fn reconcile_observation(
@@ -269,6 +473,37 @@ mod tests {
         });
         assert!(result.is_err());
         assert!(reflexor.activation_receipts.is_empty());
+    }
+
+    #[test]
+    fn self_directed_learning_stops_on_repeat_or_win() {
+        let mut reflexor = RiemannSemanticReflexor::seed(14_134, 1).unwrap();
+        reflexor.begin_run(3).unwrap();
+        let id = reflexor.predict_next().unwrap().record_id.clone();
+        let probable = reflexor
+            .self_prove(&id, 7, "primary", "independent", false, false)
+            .unwrap();
+        assert_eq!(
+            reflexor.learn_from_proof_attempt(&probable).unwrap(),
+            TerminalState::Running
+        );
+        assert_eq!(
+            reflexor.learn_from_proof_attempt(&probable).unwrap(),
+            TerminalState::LoopDetected
+        );
+        assert_eq!(reflexor.learning_records.len(), 1);
+
+        let mut winner = RiemannSemanticReflexor::seed(14_134, 1).unwrap();
+        winner.begin_run(3).unwrap();
+        let id = winner.predict_next().unwrap().record_id.clone();
+        let proof = winner
+            .self_prove(&id, 0, "primary", "independent", true, true)
+            .unwrap();
+        assert_eq!(
+            winner.learn_from_proof_attempt(&proof).unwrap(),
+            TerminalState::Won
+        );
+        assert_eq!(*winner.terminal_state(), TerminalState::Won);
     }
 
     #[test]
