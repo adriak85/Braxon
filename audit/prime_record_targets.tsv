@@ -1,0 +1,11 @@
+record_id	family	exponent	decimal_digits	candidate	status	proof_required	independent_verification_required
+prime-record-01	mersenne	136279879	41024332	2^136279879-1	pending	lucas-lehmer	yes
+prime-record-02	mersenne	136279901	41024339	2^136279901-1	pending	lucas-lehmer	yes
+prime-record-03	mersenne	136279919	41024344	2^136279919-1	pending	lucas-lehmer	yes
+prime-record-04	mersenne	136279933	41024348	2^136279933-1	pending	lucas-lehmer	yes
+prime-record-05	mersenne	136279967	41024358	2^136279967-1	pending	lucas-lehmer	yes
+prime-record-06	mersenne	136279981	41024363	2^136279981-1	pending	lucas-lehmer	yes
+prime-record-07	mersenne	136279987	41024364	2^136279987-1	pending	lucas-lehmer	yes
+prime-record-08	mersenne	136280003	41024369	2^136280003-1	pending	lucas-lehmer	yes
+prime-record-09	mersenne	136280009	41024371	2^136280009-1	pending	lucas-lehmer	yes
+prime-record-10	mersenne	136280051	41024384	2^136280051-1	pending	lucas-lehmer	yes
