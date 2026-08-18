@@ -15,6 +15,7 @@ pub mod nsq_native;
 pub mod offline_agent;
 pub mod offline_models;
 pub mod piston_memory;
+pub mod riemann_semantic_reflexor;
 pub mod seed_citadel;
 pub mod semantic_link;
 pub mod target_field;
@@ -55,6 +56,10 @@ pub use nsq_native::{
 pub use piston_memory::{
     MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,
     PistonPhase as MemoryPistonPhase, RegionKind, Residency, PISTON_MEMORY_SCHEMA,
+};
+pub use riemann_semantic_reflexor::{
+    ReflexorSearchStep, RiemannSemanticReflexor, ZeroObservation, ZeroRegionHypothesis,
+    RIEMANN_REFLEXOR_SCHEMA,
 };
 pub use semantic_link::{
     SemanticLinkReceipt, SemanticLinkRequest, SemanticLinkResolution, SemanticLinkSurface,
