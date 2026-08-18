@@ -2,7 +2,7 @@
   "checks": [
     {
       "path": "crates/wowas-final-edition-v10/canon/active/reconciled_15000/scene_index_reconciled_metadata.tsv",
-      "sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e"
+      "sha256": "1bcd41482fa97564ebbedc0db94155d9617d0f61e60e5b19bcc9a5edd02c210a"
     },
     {
       "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/generated_character_flavor_constraints.tsv",
@@ -14,11 +14,11 @@
     },
     {
       "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv",
-      "sha256": "011f2e24dfc0f2531a50b9a098e971ccfef74bb47f6e1f3438d5a7adc2a2a640"
+      "sha256": "b5638138be4821ce047714716f0de22608d5048bf9d9dd844ec477930ba6c5ac"
     },
     {
       "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv",
-      "sha256": "a36f8837497889f702d16a6c174ef089e9a4317baf3c99bda0d75ec6f702020b"
+      "sha256": "ab8f50ed073fc8df7300f425a1dd7fa0fefef6b827edad73a246bc8050fd9fa0"
     },
     {
       "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/pip_leadership_constraints.tsv",

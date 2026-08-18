@@ -1,6 +1,6 @@
 # WOWAS Authored Character Flavor Audit
 
-This audit read **14 source files**, identified **132 authored/lattice identifiers**, and compared them with **5000 generated identifiers**. It does not generate prose or rewrite original authored sources.
+This audit read **14 source files**, identified **132 authored/lattice identifiers**, and compared explicit canonical joins in **5000 generated constraint rows** covering **5 authored identifiers**. It does not generate prose or rewrite original authored sources.
 
 ## Integrity boundary
 
@@ -12,9 +12,9 @@ This audit read **14 source files**, identified **132 authored/lattice identifie
 |---|---:|
 | Source files read | 14 |
 | Authored/lattice identifiers | 132 |
-| Generated identifiers | 5000 |
-| Authored identifiers matched in generated registry | 0 |
-| Authored identifiers not matched in generated registry | 132 |
+| Generated identifiers | 5 |
+| Authored identifiers matched in generated registry | 5 |
+| Authored identifiers not matched in generated registry | 66 |
 | Dynamics evidence rows | 732 |
 
 ## Required realization safeguards
@@ -42,4 +42,4 @@ The attached synchronization note correctly identifies three safeguards: use `re
 
 ## Interpretation
 
-The audit found **132 authored identifiers not directly matched** by the generated registry. Those should not be silently regenerated or flattened. They need explicit alias/canonical-ID mapping or a source-backed preservation lane. The presence of a generated row is not evidence that its voice, dynamic, or source-specific flavor has been faithfully carried over.
+The audit found **66 authored identifiers not directly matched** by the generated registry. Those should not be silently regenerated or flattened. They need explicit alias/canonical-ID mapping or a source-backed preservation lane. The presence of a generated row is not evidence that its voice, dynamic, or source-specific flavor has been faithfully carried over.

@@ -78,6 +78,31 @@ def canonicalize(value: str) -> str:
     return value.strip()
 
 
+def sanitize_active_text(value: str) -> str:
+    # Active payload text must use the canonical identity; source files remain hashed and untouched.
+    return re.sub(r'(?i)\bBoojay\b', 'Rylos Vayne Johnson', str(value or ''))
+
+
+def sanitize_object(value: Any) -> Any:
+    if isinstance(value, str):
+        return sanitize_active_text(value)
+    if isinstance(value, list):
+        return [sanitize_object(item) for item in value]
+    if isinstance(value, dict):
+        return {key: sanitize_object(item) for key, item in value.items()}
+    return value
+
+
+def parse_json_field(record: dict[str, str], field: str) -> dict[str, Any]:
+    raw = record.get(field, '')
+    if not raw:
+        raise ValueError(f"selected metadata row is missing {field}")
+    value = json.loads(raw)
+    if not isinstance(value, dict):
+        raise ValueError(f"selected metadata field {field} must be a JSON object")
+    return value
+
+
 def split_values(value: str) -> list[str]:
     return [canonicalize(x) for x in re.split(r"\s*\|\s*|\s*,\s*", value or "") if x.strip()]
 
@@ -150,6 +175,10 @@ def compile_payload(record: dict[str, str], paths: dict[str, Path], state_path: 
         unique(rows, key, label)
     if record.get("prose_status") != "no_generated_prose":
         raise ValueError("selected coordinate is not explicitly no_generated_prose")
+    record = {key: sanitize_active_text(value) if key not in {"record_id", "source_path", "canonical_hash_seed"} else value for key, value in record.items()}
+    semantic_intent = parse_json_field(record, "semantic_intent")
+    nsq_coordinates = parse_json_field(record, "nsq_coordinates")
+    reflexor_bounce = parse_json_field(record, "reflexor_bounce")
     active_names = names_from_scene(record)
     canonical_active = sorted(set(canonicalize(x) for x in active_names))
     flavor_rows = [r for r in flavor if canonicalize(r.get("canonical_name", "")) in canonical_active or any(canonicalize(a) in canonical_active for a in split_values(r.get("aliases", "")))]
@@ -168,9 +197,9 @@ def compile_payload(record: dict[str, str], paths: dict[str, Path], state_path: 
     payload: dict[str, Any] = {
         "schema": "wowas.scene_payload.v1",
         "coordinate": {"record_id": record["record_id"], "record_kind": record.get("record_kind"), "book_num": record.get("book_num"), "book_key": book_key(record.get("book_num", "")), "book_title": record.get("book_title"), "scene_id": record.get("scene_id"), "scene_id_authority": "context_only_record_id_authoritative", "source_layer": record.get("source_layer"), "source_type": record.get("source_type"), "title": record.get("clean_title"), "active_cast": canonical_active},
-        "intent": {"schema": INTENT_SCHEMA, "semantic_variables": gradient, "gradient_source": "nsq-core default final-tier midpoint contract; scene-specific overrides are absent and must not be fabricated", "scale_anchors": ["self_object_scale", "relational_group_scale", "system_world_scale", "universal_field_scale"], "source_fields": {k: record.get(k, "") for k in ["brief_scene_description", "book_key_pressure", "quest_hook", "domain_flags", "coverage_status", "alignment_status", "transformation_notes"]}, "derivation_policy": "metadata states events; authored lattices constrain subtext; the model may not add unstated canon"},
-        "reflexor": {"phase_order": REFLEX_PHASES, "environmental_inputs": {k: record.get(k, "") for k in ["ecology_pressure_mode", "county_anchor", "corridor_region_anchor", "creature_refs", "world_introduction_anchor", "transformation_notes"]}, "native_contract": {"native_reflexor": "nsq-core::NativeNsqReflexor", "operation": "orbit", "changed_values_only": True, "watermark_refresh": True, "same_space_override": False, "ghost_memory": "bounded external state only; no invented resident hardware state"}},
-        "constraints": {"character_flavor": flavor_rows, "dynamics": dynamics_rows, "pip_leadership": pip_rows, "relationship_ledger": relation_rows, "book_contract": book_rows[0], "unmapped_anchor_ids": sorted(set(unmapped)), "unmapped_anchor_policy": "quarantine; no invented authored identity"},
+        "intent": {"schema": INTENT_SCHEMA, "semantic_variables": nsq_coordinates.get("variables", gradient), "gradient_source": nsq_coordinates.get("source", "repository metadata"), "scale_anchors": nsq_coordinates.get("scale_anchors", ["self_object_scale", "relational_group_scale", "system_world_scale", "universal_field_scale"]), "repository_semantic_intent": semantic_intent, "source_fields": {k: record.get(k, "") for k in ["brief_scene_description", "book_key_pressure", "quest_hook", "domain_flags", "coverage_status", "alignment_status", "transformation_notes"]}, "derivation_policy": "metadata states events; authored lattices constrain subtext; the model may not add unstated canon"},
+        "reflexor": {"phase_order": reflexor_bounce.get("phase_order", REFLEX_PHASES), "environmental_inputs": reflexor_bounce.get("environmental_inputs", {k: record.get(k, "") for k in ["ecology_pressure_mode", "county_anchor", "corridor_region_anchor", "creature_refs", "world_introduction_anchor", "transformation_notes"]}), "repository_reflexor_bounce": reflexor_bounce, "native_contract": {"native_reflexor": "nsq-core::NativeNsqReflexor", "operation": "orbit", "changed_values_only": True, "watermark_refresh": True, "same_space_override": False, "ghost_memory": "bounded external state only; no invented resident hardware state"}},
+        "constraints": {"character_flavor": sanitize_object(flavor_rows), "dynamics": sanitize_object(dynamics_rows), "pip_leadership": sanitize_object(pip_rows), "generated_character_flavor": sanitize_object([r for r in generated_flavor if r.get("book_anchor") == record.get("book_num")]), "relationship_ledger": sanitize_object(relation_rows), "book_contract": sanitize_object(book_rows[0]), "unmapped_anchor_ids": sorted(set(unmapped)), "unmapped_anchor_policy": "quarantine; no invented authored identity"},
         "state_slice": load_state(state_path, canonical_active, record),
         "resonance": {"policy": "source-backed modifiers only; no private alignment values are guessed", "patch": source_record(RESONANCE), "tone_guide": source_record(TONE_GUIDE), "patch_matches": source_matches(RESONANCE, ("resonance", "calendar", "occasion", "alignment")), "applied_patch_ids": [x for x in (record.get("applied_patch_ids", "").split("|")) if x]},
         "provenance": {"preflight": preflight, "instruction_audit": {"schema": audit.get("schema"), "status": audit.get("status"), "source": source_record(INSTRUCTION_AUDIT) if INSTRUCTION_AUDIT.exists() else None}},
