@@ -3,6 +3,7 @@ use std::fmt;
 
 pub mod blaixe;
 pub mod blaixe_bus;
+pub mod initiative_cluster;
 pub mod native_reflexor;
 pub mod native_runtime;
 pub mod native_target;
@@ -12,6 +13,10 @@ pub mod seating;
 pub mod syntax_intent;
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
+pub use initiative_cluster::{
+    ClusterDelta, ClusterSnapshot, Expression, ExpressionResult, InitiativeCluster, Parameter,
+    INITIATIVE_CLUSTER_SCHEMA,
+};
 pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
 pub use native_runtime::{
     NativeNsqGhostWindow, NativeNsqMachine, NativeNsqOwnership, NativeNsqRuntime,

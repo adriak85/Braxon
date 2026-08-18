@@ -6,6 +6,7 @@ pub mod council;
 pub mod council_ten;
 pub mod ghost_memory;
 pub mod greeting;
+pub mod initiative_cluster_runtime;
 pub mod kinetic_reflexor;
 pub mod native_bus;
 pub mod native_stack;
@@ -32,6 +33,9 @@ pub use ghost_memory::{
     FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage,
     DEFAULT_PAGE_BYTES, FIRING_WINDOW_BYTES, GHOST_MEMORY_SCHEMA, VIRTUAL_EXTENSION_BASE,
     VIRTUAL_EXTENSION_LIMIT,
+};
+pub use initiative_cluster_runtime::{
+    execute_through_reflexor, InitiativeClusterExecutionReceipt, INITIATIVE_CLUSTER_RUNTIME_SCHEMA,
 };
 pub use kinetic_reflexor::{
     BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass,
