@@ -6,11 +6,11 @@ This scorecard is generated from `validation_campaign_matrix.json`. It classifie
 |---|---:|
 | Campaign gates | 45 |
 | Proven | 1 |
-| Measured | 23 |
+| Measured | 24 |
 | Equivalent | 0 |
-| Blocked | 13 |
+| Blocked | 12 |
 | Theoretical | 8 |
-| Executed or evidenced gate coverage | 53.33% |
+| Executed or evidenced gate coverage | 55.56% |
 | Physical validation | BLOCKED |
 | Guile migration | BLOCKED |
 | Zig migration | BLOCKED |
@@ -57,7 +57,7 @@ The current repository evidence establishes a coherent native execution mechanis
 | 31 | Fault-injection benchmark | MEASURED | crates/braxon-core/src/riemann_semantic_reflexor.rs; crates/braxon-core/src/semantic_link.rs; crates/braxon-core/src/kinetic_reflexor.rs | Malformed, unauthorized, stale, and unresolved paths fail closed; full corruption matrix incomplete. |
 | 32 | Crash/recovery benchmark | THEORETICAL | crates/nsq-core/src/initiative_cluster.rs | Deterministic reconstruction is tested; process-kill recovery points are not. |
 | 33 | Determinism benchmark | MEASURED | crates/braxon-core/src/initiative_cluster_runtime.rs; crates/braxon-core/src/one_shot_objective_benchmark.rs | Deterministic replay and final-result equivalence tested in fixtures. |
-| 34 | Reproducibility benchmark | BLOCKED | — | Clean-room fresh-clone campaign not executed in this run. |
+| 34 | Reproducibility benchmark | MEASURED | audit/run_clean_room_validation.sh; audit/clean_room_validation_result.json | Fresh reconstruction clone under Rust 1.96.0 passed 72 Braxon-core library tests; full-system package and all-workspace acceptance remain outside this gate. |
 | 35 | Memory-pressure benchmark | MEASURED | crates/braxon-core/src/piston_memory.rs; crates/braxon-core/src/ghost_memory.rs | Bounded pressure and fail-closed aperture tests; not device telemetry. |
 | 36 | Thermal/resource benchmark | BLOCKED | — | Requires physical Android device telemetry. |
 | 37 | Android 16 acceptance | BLOCKED | — | No physical non-rooted Moto G acceptance run. |
@@ -75,5 +75,5 @@ The current repository evidence establishes a coherent native execution mechanis
 | Field | Value |
 |---|---|
 | Branch | reconstruction |
-| Commit | 56b12db669a2baf348cdfb6656f4779945a1ddc9 |
-| Origin commit | 56b12db669a2baf348cdfb6656f4779945a1ddc9 |
+| Commit | 07f83925be5e8e1287de3a6eb8f6c7c17341026a |
+| Origin commit | 07f83925be5e8e1287de3a6eb8f6c7c17341026a |
