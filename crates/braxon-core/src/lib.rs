@@ -1,19 +1,20 @@
 #![allow(non_snake_case)]
 pub mod bus;
+pub mod content_surface;
 pub mod context_manifest;
 pub mod council;
-pub mod content_surface;
 pub mod council_ten;
 pub mod ghost_memory;
-pub mod kinetic_reflexor;
 pub mod greeting;
+pub mod kinetic_reflexor;
+pub mod native_bus;
+pub mod native_stack;
+pub mod nsq_native;
 pub mod offline_agent;
 pub mod offline_models;
 pub mod piston_memory;
-pub mod nsq_native;
-pub mod native_bus;
-pub mod native_stack;
 pub mod seed_citadel;
+pub mod semantic_link;
 pub mod target_field;
 pub mod wowas;
 pub mod wowas_rescue;
@@ -23,13 +24,33 @@ use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::Path;
 
-pub use content_surface::{daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA};
-pub use ghost_memory::{FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage, DEFAULT_PAGE_BYTES, FIRING_WINDOW_BYTES, GHOST_MEMORY_SCHEMA, VIRTUAL_EXTENSION_BASE, VIRTUAL_EXTENSION_LIMIT};
-pub use kinetic_reflexor::{BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass, ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY};
-pub use piston_memory::{MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory, RegionKind, Residency, PistonPhase as MemoryPistonPhase, PISTON_MEMORY_SCHEMA};
-pub use nsq_native::{AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision, NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA};
+pub use content_surface::{
+    daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA,
+    NARRATIVE_SCHEMA,
+};
+pub use ghost_memory::{
+    FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage,
+    DEFAULT_PAGE_BYTES, FIRING_WINDOW_BYTES, GHOST_MEMORY_SCHEMA, VIRTUAL_EXTENSION_BASE,
+    VIRTUAL_EXTENSION_LIMIT,
+};
+pub use kinetic_reflexor::{
+    BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass,
+    ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY,
+};
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
 pub use native_stack::NativeNsqStack;
+pub use nsq_native::{
+    AddressLease, CouncilSurface, DaydreamWorkload, IntentOutcome, NsqIntent, NsqIntentDecision,
+    NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA,
+};
+pub use piston_memory::{
+    MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,
+    PistonPhase as MemoryPistonPhase, RegionKind, Residency, PISTON_MEMORY_SCHEMA,
+};
+pub use semantic_link::{
+    SemanticLinkReceipt, SemanticLinkRequest, SemanticLinkResolution, SemanticLinkSurface,
+    SEMANTIC_LINK_SCHEMA,
+};
 pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
 
 pub use seed_citadel::{
