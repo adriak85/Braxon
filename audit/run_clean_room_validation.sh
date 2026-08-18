@@ -13,7 +13,7 @@ START_REMOTE="$(git -C "$ROOT_DIR" rev-parse origin/reconstruction)"
 
 mkdir -p "$(dirname "$OUTPUT_PATH")"
 printf 'Cloning reconstruction branch into %s\n' "$REPO_DIR"
-gh repo clone adriak85/Braxon "$REPO_DIR" -- --single-branch --branch reconstruction --depth 1 >/dev/null
+gh repo clone adriak85/Braxon "$REPO_DIR" -- --filter=blob:none --no-checkout --single-branch --branch=reconstruction --depth=1 >/dev/null
 cd "$REPO_DIR"
 CLONED_COMMIT="$(git rev-parse HEAD)"
 if [[ "$CLONED_COMMIT" != "$START_COMMIT" || "$CLONED_COMMIT" != "$START_REMOTE" ]]; then
@@ -32,6 +32,10 @@ PY
   cat "$OUTPUT_PATH"
   exit 1
 fi
+
+git sparse-checkout init --cone >/dev/null
+git sparse-checkout set Cargo.toml Cargo.lock config crates nsq-unified state/braxon/context_chain_root >/dev/null
+git checkout --quiet "$CLONED_COMMIT"
 
 if [[ -f "$HOME/.cargo/env" ]]; then source "$HOME/.cargo/env"; fi
 TOOLCHAIN="1.96.0"
