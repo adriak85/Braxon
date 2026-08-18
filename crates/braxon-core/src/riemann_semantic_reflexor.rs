@@ -5,6 +5,26 @@ use serde::{Deserialize, Serialize};
 use crate::{execute_dynamic_parameter_pipeline, DynamicPipelineReceipt};
 
 pub const RIEMANN_REFLEXOR_SCHEMA: &str = "braxon.riemann.predictive_reflexor.v1";
+pub const MAX_JIT_ACTIVATION_BYTES: u64 = 15 * 1024 * 1024;
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ActivationRequest {
+    pub record_id: String,
+    pub required_parameters: Vec<String>,
+    pub required_capabilities: Vec<String>,
+    pub provenance: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ActivationReceipt {
+    pub request: ActivationRequest,
+    pub activated_parameters: Vec<String>,
+    pub activated_capabilities: Vec<String>,
+    pub bounded_window_bytes: u64,
+    pub retry_permitted: bool,
+    pub authorized: bool,
+    pub reason: String,
+}
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct ZeroRegionHypothesis {
@@ -40,6 +60,9 @@ pub struct RiemannSemanticReflexor {
     pub generation: u64,
     pub hypotheses: BTreeMap<String, ZeroRegionHypothesis>,
     pub observations: BTreeMap<String, ZeroObservation>,
+    pub active_parameters: BTreeMap<String, u64>,
+    pub active_capabilities: BTreeMap<String, u64>,
+    pub activation_receipts: Vec<ActivationReceipt>,
     pub steps: Vec<ReflexorSearchStep>,
 }
 
@@ -70,6 +93,9 @@ impl RiemannSemanticReflexor {
             generation: 0,
             hypotheses,
             observations: BTreeMap::new(),
+            active_parameters: BTreeMap::new(),
+            active_capabilities: BTreeMap::new(),
+            activation_receipts: Vec::new(),
             steps: Vec::new(),
         })
     }
@@ -86,15 +112,64 @@ impl RiemannSemanticReflexor {
             })
     }
 
-    pub fn execute_prediction(
-        &mut self,
-        record_id: &str,
-    ) -> Result<DynamicPipelineReceipt, String> {
+    pub fn activate_just_in_time(&mut self, request: ActivationRequest) -> Result<ActivationReceipt, String> {
+        if request.record_id.trim().is_empty() || request.provenance.trim().is_empty() {
+            return Err("JIT activation requires record_id and provenance".into());
+        }
+        if request.required_parameters.is_empty() || request.required_capabilities.is_empty() {
+            return Err("JIT activation requires parameters and capabilities".into());
+        }
+        if request.required_parameters.iter().any(|parameter| parameter != "height" && parameter != "sigma") {
+            return Err("JIT activation rejected an unapproved parameter".into());
+        }
+        if request.required_capabilities.iter().any(|capability| !capability.starts_with("zeta.")) {
+            return Err("JIT activation rejected a capability outside the zeta authority".into());
+        }
+        let bounded_window_bytes = (request.required_parameters.len() + request.required_capabilities.len()) as u64 * 8;
+        if bounded_window_bytes > MAX_JIT_ACTIVATION_BYTES {
+            return Err("JIT activation exceeds the bounded firing window".into());
+        }
+        let mut activated_parameters = Vec::new();
+        for parameter in &request.required_parameters {
+            if !self.active_parameters.contains_key(parameter) {
+                self.active_parameters.insert(parameter.clone(), self.generation);
+                activated_parameters.push(parameter.clone());
+            }
+        }
+        let mut activated_capabilities = Vec::new();
+        for capability in &request.required_capabilities {
+            if !self.active_capabilities.contains_key(capability) {
+                self.active_capabilities.insert(capability.clone(), self.generation);
+                activated_capabilities.push(capability.clone());
+            }
+        }
+        let receipt = ActivationReceipt {
+            request,
+            activated_parameters,
+            activated_capabilities,
+            bounded_window_bytes,
+            retry_permitted: true,
+            authorized: true,
+            reason: "required semantic parameters and capabilities activated for one bounded retry".into(),
+        };
+        self.activation_receipts.push(receipt.clone());
+        Ok(receipt)
+    }
+
+    pub fn execute_prediction(&mut self, record_id: &str) -> Result<DynamicPipelineReceipt, String> {
         let hypothesis = self
             .hypotheses
             .get(record_id)
             .ok_or_else(|| format!("unknown Riemann hypothesis region: {record_id}"))?
             .clone();
+        if !self.active_parameters.contains_key("height") || !self.active_parameters.contains_key("sigma") || !self.active_capabilities.contains_key("zeta.evaluate") {
+            self.activate_just_in_time(ActivationRequest {
+                record_id: record_id.into(),
+                required_parameters: vec!["height".into(), "sigma".into()],
+                required_capabilities: vec!["zeta.evaluate".into()],
+                provenance: "predictive-semantic-reflexor".into(),
+            })?;
+        }
         let output = format!(
             "semantic_identity=riemann-zero-region\nintent=probe\nconfidence_bps=1000\nparameter.height={}\nparameter.sigma={}\nexpression.zeta_residual.terms=height:1,sigma:1",
             hypothesis.t_start_milli,
@@ -169,6 +244,31 @@ mod tests {
         assert_eq!(reflexor.observations.len(), 1);
         assert_eq!(reflexor.steps[0].execution.peak_resident_bytes, 0);
         assert_eq!(reflexor.hypotheses[&next].status, "observed-unresolved");
+    }
+
+    #[test]
+    fn inactive_requirements_are_activated_before_retry() {
+        let mut reflexor = RiemannSemanticReflexor::seed(14_134, 1).unwrap();
+        let id = reflexor.predict_next().unwrap().record_id.clone();
+        let receipt = reflexor.execute_prediction(&id).unwrap();
+        assert_eq!(receipt.peak_resident_bytes, 0);
+        assert_eq!(reflexor.activation_receipts.len(), 1);
+        assert!(reflexor.active_parameters.contains_key("height"));
+        assert!(reflexor.active_capabilities.contains_key("zeta.evaluate"));
+        assert!(reflexor.activation_receipts[0].retry_permitted);
+    }
+
+    #[test]
+    fn unauthorized_capability_fails_closed() {
+        let mut reflexor = RiemannSemanticReflexor::seed(14_134, 1).unwrap();
+        let result = reflexor.activate_just_in_time(ActivationRequest {
+            record_id: "zeta-region-0000".into(),
+            required_parameters: vec!["height".into()],
+            required_capabilities: vec!["shell.execute".into()],
+            provenance: "test".into(),
+        });
+        assert!(result.is_err());
+        assert!(reflexor.activation_receipts.is_empty());
     }
 
     #[test]
