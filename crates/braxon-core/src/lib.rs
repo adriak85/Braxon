@@ -13,6 +13,7 @@ pub mod integrated_objective_benchmark;
 pub mod kinetic_reflexor;
 pub mod native_bus;
 pub mod native_equivalence_harness;
+pub mod native_fault_recovery;
 pub mod native_model_substrate;
 pub mod native_stack;
 pub mod nsq_native;
@@ -64,6 +65,10 @@ pub use kinetic_reflexor::{
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
 pub use native_equivalence_harness::{
     run_native_fixture_equivalence, NativeEquivalenceReport, NATIVE_EQUIVALENCE_HARNESS_SCHEMA,
+};
+pub use native_fault_recovery::{
+    run_native_fault_recovery, NativeFaultKind, NativeFaultResult, NativeRecoveryReport,
+    NATIVE_FAULT_RECOVERY_SCHEMA,
 };
 pub use native_model_substrate::{
     run_native_training, NativeArtifactManifest, NativeDType, NativeInferenceReceipt,

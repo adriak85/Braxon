@@ -1,0 +1,14 @@
+{
+  "schema": "braxon.nsq.native_fault_recovery.v1",
+  "checkpoints": 1,
+  "recovered_generation": 1,
+  "replay_equivalent": true,
+  "faults_rejected": [
+    "InvalidArtifact",
+    "MissingProvenance",
+    "KvPressure",
+    "UnknownCapability",
+    "StaleGeneration"
+  ],
+  "validation": "native_fault_recovery test passed"
+}
