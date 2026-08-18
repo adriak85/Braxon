@@ -4,6 +4,7 @@ pub mod content_surface;
 pub mod context_manifest;
 pub mod council;
 pub mod council_ten;
+pub mod dynamic_parameter_runtime;
 pub mod ghost_memory;
 pub mod greeting;
 pub mod initiative_cluster_runtime;
@@ -28,6 +29,10 @@ use std::path::Path;
 pub use content_surface::{
     daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA,
     NARRATIVE_SCHEMA,
+};
+pub use dynamic_parameter_runtime::{
+    execute_dynamic_parameter_pipeline, run_training_microbenchmark, DynamicPipelineReceipt,
+    TrainingBenchmarkReport, TrainingBenchmarkResult, DYNAMIC_PARAMETER_RUNTIME_SCHEMA,
 };
 pub use ghost_memory::{
     FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage,

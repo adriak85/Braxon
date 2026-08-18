@@ -11,3 +11,4 @@ description = "Canonical NSQ base-8 switch semantics and court surface types."
 
 [dependencies]
 serde.workspace = true
+serde_json.workspace = true

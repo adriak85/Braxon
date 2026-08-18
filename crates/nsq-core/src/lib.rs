@@ -3,6 +3,7 @@ use std::fmt;
 
 pub mod blaixe;
 pub mod blaixe_bus;
+pub mod dynamic_parameter;
 pub mod initiative_cluster;
 pub mod native_reflexor;
 pub mod native_runtime;
@@ -13,6 +14,11 @@ pub mod seating;
 pub mod syntax_intent;
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
+pub use dynamic_parameter::{
+    candidate_intent_size, dynamic_parameter_set_size, expression_bytes, CandidateIntent,
+    DynamicExpression, DynamicParameter, DynamicParameterSet, ReconciliationState,
+    CANDIDATE_INTENT_SCHEMA, DYNAMIC_PARAMETER_SCHEMA,
+};
 pub use initiative_cluster::{
     ClusterDelta, ClusterSnapshot, Expression, ExpressionResult, InitiativeCluster, Parameter,
     INITIATIVE_CLUSTER_SCHEMA,
