@@ -1,6 +1,6 @@
 {
   "schema": "braxon.reconstruction_state.v1",
-  "current_reconstruction_revision": "60bab88f39a1b14f810ef222ece5db854b747ebf",
+  "current_reconstruction_revision": "1b0af42d34413b2ee50803911fba70997b3cd904",
   "branch": "reconstruction",
   "source_inventory": {
     "tracked_file_count": 180623,
@@ -56,5 +56,5 @@
     "wowas_last_rebuild_status": "passed",
     "github_hosted_ci_status": "blocked_before_job_start_by_account_billing_lock"
   },
-  "next_executable_unit": "run_exact_nsq_and_wowas_verification_at_current_revision"
+  "next_executable_unit": "verify_post_ledger_checkpoint_and_remote_sync"
 }
