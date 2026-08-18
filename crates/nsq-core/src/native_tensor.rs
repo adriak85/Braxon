@@ -279,6 +279,10 @@ impl NsqTensorStore {
         Ok(())
     }
 
+    pub fn len(&self) -> usize {
+        self.tensors.len()
+    }
+
     pub fn get(&self, name: &str) -> Result<&NsqTensor, NativeTensorError> {
         self.tensors
             .get(name)
