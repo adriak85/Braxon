@@ -29,6 +29,7 @@ pub mod target_field;
 pub mod wowas;
 pub mod wowas_rescue;
 pub mod wowas_seeded;
+pub mod wowas_story_seed;
 
 use serde::{Deserialize, Serialize};
 use std::fs;
@@ -107,6 +108,7 @@ pub use seed_citadel::{
     UNIVERSAL_TOKENIZER_VERSION,
 };
 pub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};
+pub use wowas_story_seed::{WowasStorySeed, WowasStorySeedManifest, WOWAS_STORY_SEED_SCHEMA};
 
 pub use bus::{
     BraxonBus, BraxonBusReport, BusReplyLayer, IntentEnglishLoop, SharedThought, SpeechLoopState,

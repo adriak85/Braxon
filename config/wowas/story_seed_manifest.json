@@ -1,0 +1,9 @@
+{
+  "schema": "braxon.wowas.story_seed.v1",
+  "series": "Whispers of Willow and Stone",
+  "book_spine_path": "crates/wowas-final-edition-v10/canon/active/book_spine_33.tsv",
+  "scene_index_path": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
+  "character_timeline_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+  "world_map_path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_world_zone_map.json",
+  "entry_scene_id": "B01_C001"
+}
