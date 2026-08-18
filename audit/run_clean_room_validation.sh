@@ -34,7 +34,7 @@ PY
 fi
 
 git sparse-checkout init --cone >/dev/null
-git sparse-checkout set Cargo.toml Cargo.lock config crates nsq-unified state/braxon/context_chain_root >/dev/null
+git sparse-checkout set Cargo.toml Cargo.lock config config/nsq crates nsq-unified src tests apps state/braxon/context_chain_root state/braxon/release_gates state/braxon/bus/citadel699 state/nsq/court state/nsq/proofs state/nsq/citadel699 >/dev/null
 git checkout --quiet "$CLONED_COMMIT"
 
 if [[ -f "$HOME/.cargo/env" ]]; then source "$HOME/.cargo/env"; fi
@@ -45,21 +45,27 @@ export CARGO_HOME="$TMP_DIR/cargo-home"
 export CARGO_TARGET_DIR="$TMP_DIR/cargo-target"
 mkdir -p "$CARGO_HOME" "$CARGO_TARGET_DIR"
 
-TEST_LOG="$TMP_DIR/braxon_core_tests.log"
-if cargo +"$TOOLCHAIN" test -p Braxon-core --lib >"$TEST_LOG" 2>&1; then
+TEST_SCOPE="${VALIDATION_SCOPE:-braxon-core}"
+TEST_LOG="$TMP_DIR/${TEST_SCOPE}_tests.log"
+if [[ "$TEST_SCOPE" == "workspace" ]]; then
+  TEST_COMMAND=(cargo +"$TOOLCHAIN" test --workspace --all-targets)
+else
+  TEST_COMMAND=(cargo +"$TOOLCHAIN" test -p Braxon-core --lib)
+fi
+if "${TEST_COMMAND[@]}" >"$TEST_LOG" 2>&1; then
   TEST_STATUS="PASS"
 else
   TEST_STATUS="FAIL"
 fi
 
-TEST_COUNT="$(grep -Eo 'test result: ok\. [0-9]+ passed' "$TEST_LOG" | tail -1 | grep -Eo '[0-9]+' | head -1 || true)"
+TEST_COUNT="$(grep -Eo 'test result: ok\. [0-9]+ passed' "$TEST_LOG" | awk '{sum += $4} END {print sum+0}' || true)"
 if [[ -z "$TEST_COUNT" ]]; then TEST_COUNT="0"; fi
 
-python3 - "$OUTPUT_PATH" "$START_COMMIT" "$CLONED_COMMIT" "$TEST_STATUS" "$TEST_COUNT" "$TEST_LOG" "$RUSTC_VERSION" "$CARGO_VERSION" <<'PY'
+python3 - "$OUTPUT_PATH" "$START_COMMIT" "$CLONED_COMMIT" "$TEST_STATUS" "$TEST_COUNT" "$TEST_LOG" "$RUSTC_VERSION" "$CARGO_VERSION" "$TEST_SCOPE" <<'PY'
 import json
 import pathlib
 import sys
-out, source_commit, cloned_commit, status, count, log_path, rustc_version, cargo_version = sys.argv[1:]
+out, source_commit, cloned_commit, status, count, log_path, rustc_version, cargo_version, test_scope = sys.argv[1:]
 log_text = pathlib.Path(log_path).read_text(errors="replace")
 result = {
     "schema": "braxon.clean_room_validation.v1",
@@ -75,7 +81,8 @@ result = {
     "cargo_version": cargo_version,
     "test_log_sha256": __import__("hashlib").sha256(pathlib.Path(log_path).read_bytes()).hexdigest(),
     "test_log_tail": log_text[-12000:],
-    "scope": "Clean clone and Braxon-core library suite; no Android/device acceptance.",
+    "scope": "Clean clone and selected Rust 1.96 validation scope; no Android/device acceptance.",
+    "validation_scope": test_scope,
 }
 pathlib.Path(out).write_text(json.dumps(result, indent=2) + "\n")
 if status != "PASS" or not result["commit_match"]:

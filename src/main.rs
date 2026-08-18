@@ -733,6 +733,7 @@ impl NsqCourtOfflineModelBoundary {
 
 fn build_os_power_release_handover() -> Result<serde_json::Value, String> {
     let root = std::env::current_dir().map_err(|err| err.to_string())?;
+    ensure_citadel699_current_manifests(&root)?;
     let target_field = TargetField::load_or_initialize(&root)?;
     let target_field_actuation = target_field.actuation(target_field.coordinates)?;
     let watermark_input_records = handover_watermark_input_records(&root);
@@ -870,6 +871,110 @@ fn build_os_power_release_handover() -> Result<serde_json::Value, String> {
     let trigger_raw = serde_json::to_string_pretty(&trigger_set).map_err(|err| err.to_string())?;
     std::fs::write(&trigger_path, format!("{trigger_raw}\n")).map_err(|err| err.to_string())?;
     Ok(report)
+}
+
+fn ensure_citadel699_current_manifests(root: &std::path::Path) -> Result<(), String> {
+    let config = read_json_file(root, "config/nsq/braxon_council_ten_stack.json")
+        .ok_or("tracked council-ten stack configuration is missing")?;
+    let models = config
+        .get("default_stack")
+        .and_then(serde_json::Value::as_array)
+        .ok_or("council-ten default_stack is missing")?
+        .iter()
+        .map(|value| value.as_str().map(str::to_owned).ok_or("model name is not a string"))
+        .collect::<Result<Vec<_>, _>>()?;
+    if models.len() != 10 {
+        return Err(format!("council-ten default_stack must contain 10 models, got {}", models.len()));
+    }
+    let required_model_count = config
+        .get("required_model_count")
+        .and_then(serde_json::Value::as_u64)
+        .ok_or("required_model_count is missing")?;
+    let brain_model_count = config
+        .get("brain_model_count")
+        .and_then(serde_json::Value::as_u64)
+        .ok_or("brain_model_count is missing")?;
+    let sensory_body_count = config
+        .get("sensory_body_count")
+        .and_then(serde_json::Value::as_u64)
+        .ok_or("sensory_body_count is missing")?;
+    if (required_model_count, brain_model_count, sensory_body_count) != (10, 6, 4) {
+        return Err("tracked council-ten counts do not satisfy the native ten-surface contract".into());
+    }
+    let source_manifest = "config/nsq/braxon_council_ten_stack.json";
+    let nsq_surface = "apps/nsq/braxon_council_ten_stack.nsq";
+    let materialization = "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json";
+    let current_dir = root.join("state/nsq/citadel699/current");
+    std::fs::create_dir_all(&current_dir).map_err(|err| err.to_string())?;
+    let sensory_bodies = serde_json::json!({
+        "image_cortex": models[6],
+        "video_cortex": models[7],
+        "voice_body": models[8],
+        "world_body_3d": models[9],
+    });
+    let request_capsule = serde_json::json!({
+        "schema": "Braxon.nsq.citadel699.request_capsule.v1",
+        "authority": "NSQ_COURT",
+        "status": "reconstructed_from_tracked_council_ten_manifest",
+        "transfer_method": "citadel699_nsq_request_return_rebuild",
+        "transfer_form": "nsq_only",
+        "raw_fetch_allowed": false,
+        "raw_payload_transfer_allowed": false,
+        "pointer_setup_allowed": false,
+        "donor_transport_pointer_stub_allowed": false,
+        "separated_raw_shards_allowed": false,
+        "target_size_class": config.get("target_size_class").cloned().unwrap_or_else(|| serde_json::json!("mb_scale")),
+        "reconstruction_seed": "tiny_nsq_seed",
+        "nurabit_citadel_groups": config.get("nurabit_citadel_groups").cloned().unwrap_or_else(|| serde_json::json!(21)),
+        "nurabit_group_width_nsq_bit_units": config.get("nurabit_group_width_nsq_bit_units").cloned().unwrap_or_else(|| serde_json::json!(33)),
+        "nurabit_groups_communicate": config.get("nurabit_groups_communicate").cloned().unwrap_or_else(|| serde_json::json!(true)),
+        "required_model_count": required_model_count,
+        "brain_model_count": brain_model_count,
+        "sensory_body_count": sensory_body_count,
+        "models": models.clone(),
+        "sensory_bodies": ["image_cortex", "video_cortex", "voice_body", "world_body_3d"],
+        "source_manifest": source_manifest,
+        "source_materialization": materialization,
+        "nsq_surface": nsq_surface,
+        "rebuild_surface": "state/nsq/citadel699/current/council_ten.rebuild.nsq",
+        "whole_core_runtime_verification_required": true,
+    });
+    let target_models = serde_json::json!({
+        "schema": "Braxon.nsq.citadel699.target_models.v1",
+        "authority": "NSQ_COURT",
+        "status": "reconstructed_from_tracked_council_ten_manifest",
+        "required_model_count": required_model_count,
+        "brain_model_count": brain_model_count,
+        "sensory_body_count": sensory_body_count,
+        "brain_models": models[..6].to_vec(),
+        "sensory_bodies": sensory_bodies.clone(),
+        "default_stack": models,
+        "source_manifest": source_manifest,
+        "raw_weight_download_allowed": false,
+        "whole_core_runtime_verification_required": true,
+    });
+    write_json_if_changed(&current_dir.join("request_capsule.json"), &request_capsule)?;
+    write_json_if_changed(&current_dir.join("target_models.json"), &target_models)?;
+    let current_materialization = current_dir.join("materialization.json");
+    if !current_materialization.exists() {
+        #[cfg(unix)]
+        std::os::unix::fs::symlink("../rebuilds/20260428_065519/council_ten.materialization.json", &current_materialization)
+            .map_err(|err| err.to_string())?;
+        #[cfg(not(unix))]
+        std::fs::copy(root.join(materialization), &current_materialization)
+            .map(|_| ())
+            .map_err(|err| err.to_string())?;
+    }
+    Ok(())
+}
+
+fn write_json_if_changed(path: &std::path::Path, value: &serde_json::Value) -> Result<(), String> {
+    let rendered = serde_json::to_string_pretty(value).map_err(|err| err.to_string())? + "\n";
+    let unchanged = std::fs::read_to_string(path).map(|existing| existing == rendered).unwrap_or(false);
+    if !unchanged {
+        std::fs::write(path, rendered).map_err(|err| err.to_string())?;
+    }
+    Ok(())
 }
 
 fn handover_watermark_input_records(root: &std::path::Path) -> Vec<serde_json::Value> {
