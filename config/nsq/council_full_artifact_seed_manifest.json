@@ -1,0 +1,146 @@
+{
+  "schema": "braxon.council.full_artifact_seed.v1",
+  "policy": {
+    "full_artifact_required": true,
+    "tiny_fixture_allowed": false,
+    "partial_payload_is_failure": true,
+    "semantic_extraction_required": true,
+    "nsq_bus_binding_required": true,
+    "bounded_materialization_required": true,
+    "provenance_required": true
+  },
+  "acquisition": {
+    "provider": "huggingface",
+    "metadata_verified": "2026-08-18",
+    "payload_state": "not_acquired",
+    "reason": "Full expanded artifacts exceed the available sandbox storage and some repositories require access acceptance.",
+    "payloads_must_be_staged_outside_git": true
+  },
+  "lanes": [
+    {
+      "lane": "maverick_logic",
+      "model_id": "deepseek-v3-671b",
+      "source_repo": "deepseek-ai/DeepSeek-V3",
+      "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+      "artifact_family": "text-generation-moe",
+      "access": "public",
+      "bus_dialect": "intent",
+      "semantic_projection": "council.maverick.logic",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "qwen_creativity",
+      "model_id": "qwen3-235b-a22b",
+      "source_repo": "Qwen/Qwen3-235B-A22B",
+      "revision": "8efa61729e24bd65b1d152b5ab5409052aa80e65",
+      "artifact_family": "text-generation-moe",
+      "access": "public",
+      "bus_dialect": "symbolic",
+      "semantic_projection": "council.qwen.creativity",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "arbiter_judge",
+      "model_id": "qwen2.5-72b",
+      "source_repo": "Qwen/Qwen2.5-72B",
+      "revision": "efba10c8e54e91e0d9570ab5f7b51a958474d4cb",
+      "artifact_family": "text-generation-dense",
+      "access": "public",
+      "bus_dialect": "control",
+      "semantic_projection": "council.arbiter.judge",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "analyzer_auditor",
+      "model_id": "deepseek-v3-671b-analyzer",
+      "source_repo": "deepseek-ai/DeepSeek-V3",
+      "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+      "artifact_family": "role_projection",
+      "access": "public",
+      "bus_dialect": "numeric",
+      "semantic_projection": "council.analyzer.auditor",
+      "independent_payload_required": false,
+      "derivation": "independent semantic role projection over the verified DeepSeek-V3 artifact; not a fictitious Hugging Face repository"
+    },
+    {
+      "lane": "limbic_empath",
+      "model_id": "llama3.3-70b",
+      "source_repo": "meta-llama/Llama-3.3-70B-Instruct",
+      "revision": "6f6073b423013f6a7d4d9f39144961bfbfbc386b",
+      "artifact_family": "text-generation-dense",
+      "access": "manual_acceptance_required",
+      "bus_dialect": "audio",
+      "semantic_projection": "council.limbic.empath",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "support_memory",
+      "model_id": "gemma3-27b",
+      "source_repo": "google/gemma-3-27b-pt",
+      "revision": "9fe3c4ebc93fbadb14913801536d022054ef11cc",
+      "artifact_family": "multimodal-text-generation",
+      "access": "manual_acceptance_required",
+      "bus_dialect": "stamp",
+      "semantic_projection": "council.support.memory",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "image_cortex",
+      "model_id": "FLUX.1-dev",
+      "source_repo": "black-forest-labs/FLUX.1-dev",
+      "revision": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+      "artifact_family": "image-generation",
+      "access": "automatic_acceptance_required",
+      "bus_dialect": "graphics",
+      "semantic_projection": "council.image.cortex",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "video_cortex",
+      "model_id": "Wan2.1-T2V-14B",
+      "source_repo": "Wan-AI/Wan2.1-T2V-14B",
+      "revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4",
+      "artifact_family": "video-generation",
+      "access": "public",
+      "bus_dialect": "graphics",
+      "semantic_projection": "council.video.cortex",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "voice_body",
+      "model_id": "IndexTTS2",
+      "source_repo": "IndexTeam/IndexTTS-2",
+      "revision": "740dcaff396282ffb241903d150ac011cd4b1ede",
+      "artifact_family": "speech-generation",
+      "access": "public",
+      "bus_dialect": "audio",
+      "semantic_projection": "council.voice.body",
+      "independent_payload_required": true
+    },
+    {
+      "lane": "world_body_3d",
+      "model_id": "Hunyuan3D-2.1",
+      "source_repo": "tencent/Hunyuan3D-2.1",
+      "revision": "0b94677654c57bb9a6b6845cd7b704ccf551d327",
+      "artifact_family": "3d-generation",
+      "access": "public",
+      "bus_dialect": "graphics",
+      "semantic_projection": "council.world.body.3d",
+      "independent_payload_required": true
+    }
+  ],
+  "integration_contract": {
+    "per_lane": [
+      "authoritative model index or modality manifest",
+      "complete payload inventory and hashes",
+      "semantic artifact-intent projection",
+      "NSQ address allocation",
+      "bounded reader receipt",
+      "hot initiative-cluster registration",
+      "bus ownership and piston lease",
+      "parameter generation and rematerialization receipt",
+      "independent oracle comparison"
+    ],
+    "federation_barrier": "all ten lanes registered and callable; partial federation fails closed"
+  }
+}
