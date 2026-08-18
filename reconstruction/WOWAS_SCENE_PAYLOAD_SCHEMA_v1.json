@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "braxon://wowas/scene-payload/v1",
+  "title": "WOWAS Weaponized Scene Payload",
+  "description": "Bounded, reproducible, fail-closed input contract for prose realization. This artifact contains no generated prose.",
+  "type": "object",
+  "required": ["schema", "coordinate", "intent", "reflexor", "constraints", "state_slice", "resonance", "watermark", "execution_boundary"],
+  "properties": {
+    "schema": {"const": "wowas.scene_payload.v1"},
+    "coordinate": {
+      "type": "object",
+      "required": ["record_id", "book_num", "book_key", "scene_id", "scene_id_authority"],
+      "properties": {
+        "record_id": {"type": "string", "minLength": 1},
+        "book_num": {"type": "string", "pattern": "^(B[0-9]{2}|[0-9]{1,2})$"},
+        "book_key": {"type": "string", "pattern": "^B[0-9]{2}$"},
+        "scene_id": {"type": "string", "minLength": 1},
+        "scene_id_authority": {"const": "context_only_record_id_authoritative"}
+      }
+    },
+    "intent": {"type": "object", "required": ["semantic_variables", "source_fields", "derivation_policy"]},
+    "reflexor": {"type": "object", "required": ["phase_order", "environmental_inputs", "native_contract"]},
+    "constraints": {"type": "object", "required": ["character_flavor", "dynamics", "pip_leadership", "relationship_ledger"]},
+    "state_slice": {"type": "object", "required": ["policy", "characters", "bridges"]},
+    "resonance": {"type": "object", "required": ["policy", "patch", "tone_guide", "patch_matches"]},
+    "watermark": {"type": "object", "required": ["active_braxon_watermark", "algorithm", "input_hashes", "payload_hash"]},
+    "execution_boundary": {"type": "object", "required": ["prose_generation_permitted", "staging_required", "unmapped_anchor_policy", "no_generated_prose"]}
+  }
+}

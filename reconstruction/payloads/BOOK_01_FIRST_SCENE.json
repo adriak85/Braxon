@@ -1,0 +1,520 @@
+{
+  "constraints": {
+    "book_contract": {
+      "arc_band": "origin_diamond_world",
+      "book_num": "B01",
+      "function": "origin; Mack prophecy; 40Hz; Xeth first contact; Dervish correction",
+      "physical_content": "true",
+      "prose_status": "prose_validated",
+      "required_next": "linked_to_canon_content",
+      "serial": "MAP-BOOK-0e25362cc531",
+      "title": "Choices Make World"
+    },
+    "character_flavor": [
+      {
+        "age": "",
+        "aliases": "",
+        "canonical_id": "wowas::dervish_cosmic_entity",
+        "canonical_name": "Dervish",
+        "dynamic_function": "",
+        "faction": "none",
+        "first_book": "1",
+        "last_book": "25",
+        "locked_traits": "not good/evil | appears twice Book 01 | helps remake world Book 25",
+        "magic": "",
+        "pressure_response": "extreme",
+        "pronouns": "they/them",
+        "prose_policy": "metadata only; no generated prose",
+        "relationship_functions": "",
+        "role": "cosmic corrective force",
+        "shadow": "",
+        "source_registry": "06_CHARACTER_REGISTRY.json + wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+        "sources": "",
+        "species": "",
+        "tier": "0",
+        "timeline_fields": "{\"activity_mode\": \"active\", \"book_function_notes\": \"\", \"book_num\": \"25\", \"book_title\": \"Death Is Rebirth (Blood Cello terminus chapter)\", \"canonical_name\": \"Dervish\", \"character_code\": \"wowas::dervish_cosmic_entity\", \"dimension_overlay\": \"late_world_reconstitution\", \"faction\": \"none\", \"first_active_scene\": \"\", \"last_active_scene\": \"\", \"narrative_tier\": \"core\", \"peril_state\": \"extreme\", \"quest_role\": \"major_recurring\", \"region_code\": \"late_world_thresholds\", \"role_summary\": \"cosmic corrective force\", \"source_basis\": \"character_registry\", \"timeline_band_code\": \"B25\", \"transformation_state\": \"stable\"}",
+        "voice_constraint": "cosmic corrective force"
+      }
+    ],
+    "dynamics": [
+      {
+        "active_books": "",
+        "dynamic_id": "orbit:00002",
+        "first_book": "1",
+        "from_character": "Dervish",
+        "last_book": "25",
+        "orbit_scope": "books_1_25",
+        "polarity": "mythic",
+        "pressure_translation": "The Dervish acts as lattice-avatar and threshold-support, bearing resurrection ground at the end.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "lattice_avatar_support",
+        "source_basis": "canon_fix_manual",
+        "to_character": "Mack",
+        "wonder_fear_effect": "wonder_from_wreckage"
+      },
+      {
+        "active_books": "B01,B24",
+        "dynamic_id": "orbit:00008",
+        "first_book": "1",
+        "from_character": "Mack",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B01,B24",
+        "dynamic_id": "orbit:00012",
+        "first_book": "1",
+        "from_character": "Pip (Indalwin Willowjayce)",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B01",
+        "dynamic_id": "orbit:00021",
+        "first_book": "1",
+        "from_character": "Solvaenkyr",
+        "last_book": "1",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B01,B24",
+        "dynamic_id": "orbit:00023",
+        "first_book": "1",
+        "from_character": "Xethrolund",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00076",
+        "first_book": "24",
+        "from_character": "Daisy May",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00078",
+        "first_book": "24",
+        "from_character": "Dervish",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Ursula",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00080",
+        "first_book": "24",
+        "from_character": "Majiskii",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00083",
+        "first_book": "24",
+        "from_character": "Neith",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00090",
+        "first_book": "24",
+        "from_character": "Rolzen",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      },
+      {
+        "active_books": "B24",
+        "dynamic_id": "orbit:00092",
+        "first_book": "24",
+        "from_character": "Rylos (Rylos Vayne Johnson)",
+        "last_book": "24",
+        "orbit_scope": "book_co_presence",
+        "polarity": "mixed",
+        "pressure_translation": "Characters share active-page pressure in the same book and can influence world texture together.",
+        "prose_policy": "metadata only; no generated prose",
+        "relation_type": "book_copresence",
+        "source_basis": "02_CHARACTER_PLACEMENT_BY_BOOK.md",
+        "to_character": "Dervish",
+        "wonder_fear_effect": "unstable_mixed_field"
+      }
+    ],
+    "pip_leadership": [],
+    "relationship_ledger": [],
+    "unmapped_anchor_ids": [],
+    "unmapped_anchor_policy": "quarantine; no invented authored identity"
+  },
+  "coordinate": {
+    "active_cast": [
+      "Dervish",
+      "canonical_id"
+    ],
+    "book_key": "B01",
+    "book_num": "1",
+    "book_title": "Choices Make World",
+    "record_id": "beat_candidate:0033903:WE01_00001",
+    "record_kind": "beat_candidate",
+    "scene_id": "WE01_00001",
+    "scene_id_authority": "context_only_record_id_authoritative",
+    "source_layer": "BEAT_CANDIDATE",
+    "source_type": "BEAT_CANDIDATE",
+    "title": "small ridiculous task that reveals serious loyalty"
+  },
+  "execution_boundary": {
+    "generated_prose_field": null,
+    "no_generated_prose": true,
+    "promotion_requires_human_review": true,
+    "prose_generation_permitted": false,
+    "required_checks": [
+      "record_id uniqueness",
+      "source hash verification",
+      "authored constraint presence",
+      "tone/cadence/style gate",
+      "bounded rolling state",
+      "canonical watermark verification"
+    ],
+    "staging_required": true,
+    "unmapped_anchor_policy": "fail closed for realization; remain explicit in payload"
+  },
+  "intent": {
+    "derivation_policy": "metadata states events; authored lattices constrain subtext; the model may not add unstated canon",
+    "gradient_source": "nsq-core default final-tier midpoint contract; scene-specific overrides are absent and must not be fabricated",
+    "scale_anchors": [
+      "self_object_scale",
+      "relational_group_scale",
+      "system_world_scale",
+      "universal_field_scale"
+    ],
+    "schema": "braxon.nsq_native.intent.v1",
+    "semantic_variables": {
+      "agency": 220000,
+      "force": 220000,
+      "form": 220000,
+      "motive": 220000,
+      "relation": 220000,
+      "scope": 220000,
+      "time": 220000,
+      "truth": 220000
+    },
+    "source_fields": {
+      "alignment_status": "structured_candidate",
+      "book_key_pressure": "relationship, pressure, humor, and future obligation",
+      "brief_scene_description": "high-score satellite gets recurring callback seed",
+      "coverage_status": "candidate",
+      "domain_flags": "characters",
+      "quest_hook": "",
+      "transformation_notes": ""
+    }
+  },
+  "provenance": {
+    "instruction_audit": {
+      "schema": null,
+      "source": {
+        "path": "reconstruction/WOWAS_SOURCE_INSTRUCTION_AUDIT.json",
+        "sha256": "0b636988ab257f38b5193c5279eb59742a13d29c24ffd179bf3e67233e5d1db2"
+      },
+      "status": null
+    },
+    "preflight": {
+      "checks": [
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/reconciled_15000/scene_index_reconciled_metadata.tsv",
+          "sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/generated_character_flavor_constraints.tsv",
+          "sha256": "d18367ac1ef0b1126674e7f03636a74082c6c8c628faaf6c41262c709f089c0d"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/source_media_mechanism_catalog.tsv",
+          "sha256": "179ba7976035927eb41ebc19dfbf22be17418210b0caa2e9e77a8fdb0511e549"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv",
+          "sha256": "011f2e24dfc0f2531a50b9a098e971ccfef74bb47f6e1f3438d5a7adc2a2a640"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv",
+          "sha256": "a36f8837497889f702d16a6c174ef089e9a4317baf3c99bda0d75ec6f702020b"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/pip_leadership_constraints.tsv",
+          "sha256": "4d1fe7fa4405f0be6e081e1a3fd0d6e443b86166b80f5a3e624467d6c4cee16e"
+        },
+        {
+          "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/resurrection_viewpoint_matrix.tsv",
+          "sha256": "a13d7feab048bb610d8d0bb6801d8ca2b90f4db77b681b67a56ce989f1d84223"
+        },
+        {
+          "name": "metadata_unique_record_id",
+          "value": 34973
+        },
+        {
+          "name": "generated_constraints_unique_id",
+          "value": 5000
+        },
+        {
+          "name": "authored_characters",
+          "value": 50
+        },
+        {
+          "name": "authored_dynamics",
+          "value": 94
+        },
+        {
+          "name": "source_mechanism_rows",
+          "value": 50
+        },
+        {
+          "name": "pip_leadership_rows",
+          "value": 13852
+        },
+        {
+          "name": "pip_leadership_modes",
+          "value": 4
+        },
+        {
+          "name": "resurrection_viewpoint_rows",
+          "value": 100
+        },
+        {
+          "name": "resurrection_viewpoints",
+          "value": 10
+        },
+        {
+          "name": "scene_id_duplicate_groups",
+          "value": 365
+        }
+      ],
+      "failure_mode": "fail_closed",
+      "failures": [],
+      "prose_generation_permitted": false,
+      "required_inputs": [
+        "reconciled metadata keyed by record_id",
+        "authored_character_flavor_lattice.tsv",
+        "authored_dynamics_lattice.tsv",
+        "source_media_mechanism_catalog.tsv",
+        "generated_character_flavor_constraints.tsv",
+        "pip_leadership_constraints.tsv",
+        "resurrection_viewpoint_matrix.tsv"
+      ],
+      "required_runtime_guards": [
+        "write only to staging first",
+        "tone/cadence/style/token gate before promotion",
+        "rolling state ledger across books",
+        "record_id for output identity; scene_id is non-unique context only",
+        "no direct copying from source media; abstract mechanisms only",
+        "unmapped anchors remain quarantined"
+      ],
+      "schema": "wowas.realization.preflight.v1",
+      "status": "pass",
+      "unmapped_anchor_policy": "unmapped anchors may not receive invented authored identity; they remain explicit until source-dispositioned"
+    }
+  },
+  "reflexor": {
+    "environmental_inputs": {
+      "corridor_region_anchor": "",
+      "county_anchor": "",
+      "creature_refs": "",
+      "ecology_pressure_mode": "",
+      "transformation_notes": "",
+      "world_introduction_anchor": ""
+    },
+    "native_contract": {
+      "changed_values_only": true,
+      "ghost_memory": "bounded external state only; no invented resident hardware state",
+      "native_reflexor": "nsq-core::NativeNsqReflexor",
+      "operation": "orbit",
+      "same_space_override": false,
+      "watermark_refresh": true
+    },
+    "phase_order": [
+      "Publish",
+      "Reconcile",
+      "DeltaCommit"
+    ]
+  },
+  "resonance": {
+    "applied_patch_ids": [],
+    "patch": {
+      "path": "crates/wowas-final-edition-v10/canon/patches/v12/wowas_quality_romance_calendar_and_resonance_patch_v12.md",
+      "sha256": "7d6513045e442a55b3a49b9eaf65b6da9333516e4c6b74477ad19da11af36305"
+    },
+    "patch_matches": [
+      {
+        "line": 1,
+        "text": "# WoWaS Quality, Romance, Calendar, and Resonance Patch v12"
+      },
+      {
+        "line": 13,
+        "text": "- resonance shaping for the central bond structure"
+      },
+      {
+        "line": 183,
+        "text": "- whether the occasion changes the scene beyond calendar mention"
+      },
+      {
+        "line": 205,
+        "text": "## Rolzen and Xethrolund resonance directive"
+      },
+      {
+        "line": 206,
+        "text": "Rolzen and Xethrolund should be shaped as the strongest resonance matches to Pip from different vectors."
+      },
+      {
+        "line": 220,
+        "text": "- unnerving but right resonance"
+      },
+      {
+        "line": 228,
+        "text": "## Pip private resonance note"
+      },
+      {
+        "line": 229,
+        "text": "Pip may receive a private alignment pass based on outside personal source material, but exact identifying inputs should remain outside the public patch text."
+      },
+      {
+        "line": 232,
+        "text": "- preserve the resonance target"
+      },
+      {
+        "line": 233,
+        "text": "- do not falsely guess exact private alignment"
+      },
+      {
+        "line": 260,
+        "text": "- Rolzen and Xethrolund read as strong but different resonance matches to Pip"
+      }
+    ],
+    "policy": "source-backed modifiers only; no private alignment values are guessed",
+    "tone_guide": {
+      "path": "crates/wowas-final-edition-v10/canon/control/prose_and_tone_guide_v14.json",
+      "sha256": "9ccf72419edca7aca40c791cb78d30ddf3e43593a67ed4912cedb7edc6ea951a"
+    }
+  },
+  "schema": "wowas.scene_payload.v1",
+  "state_slice": {
+    "bridges": [],
+    "characters": [],
+    "excluded_reason": "No prior ledger is permitted to be invented for the first payload.",
+    "policy": "bounded_immediate_context_only",
+    "source": null,
+    "status": "initial_state_absent"
+  },
+  "watermark": {
+    "active_braxon_watermark": "BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1",
+    "algorithm": "SHA-256",
+    "input_hashes": {
+      "books": {
+        "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_book_contract_map_33.tsv",
+        "sha256": "b4686e784e9583c3c0178c68cab4f5191c4534962958a5b8c32395556fdd9db7"
+      },
+      "dynamics": {
+        "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv",
+        "sha256": "011f2e24dfc0f2531a50b9a098e971ccfef74bb47f6e1f3438d5a7adc2a2a640"
+      },
+      "flavor": {
+        "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv",
+        "sha256": "a36f8837497889f702d16a6c174ef089e9a4317baf3c99bda0d75ec6f702020b"
+      },
+      "generated_flavor": {
+        "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/generated_character_flavor_constraints.tsv",
+        "sha256": "d18367ac1ef0b1126674e7f03636a74082c6c8c628faaf6c41262c709f089c0d"
+      },
+      "metadata": {
+        "path": "crates/wowas-final-edition-v10/canon/active/reconciled_15000/scene_index_reconciled_metadata.tsv",
+        "sha256": "43c463c4494a1fbd84638f25da0126790c7175534f21b6d210e5a82c8a36ec6e"
+      },
+      "pip": {
+        "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/pip_leadership_constraints.tsv",
+        "sha256": "4d1fe7fa4405f0be6e081e1a3fd0d6e443b86166b80f5a3e624467d6c4cee16e"
+      },
+      "relationships": {
+        "path": "crates/wowas-final-edition-v10/canon/active/generated/wowas_relationship_ledger.tsv",
+        "sha256": "d548f2fb3d3004b6ba86dd8caea1793b56be88297f935dab1610344e3e6e338c"
+      },
+      "resonance": {
+        "path": "crates/wowas-final-edition-v10/canon/patches/v12/wowas_quality_romance_calendar_and_resonance_patch_v12.md",
+        "sha256": "7d6513045e442a55b3a49b9eaf65b6da9333516e4c6b74477ad19da11af36305"
+      },
+      "tone_guide": {
+        "path": "crates/wowas-final-edition-v10/canon/control/prose_and_tone_guide_v14.json",
+        "sha256": "9ccf72419edca7aca40c791cb78d30ddf3e43593a67ed4912cedb7edc6ea951a"
+      }
+    },
+    "payload_hash": "f47aaf978b4b8cb9c95064c951cfb4b36c95b21e839a0eb9a5a0a9e21ad0f67a",
+    "preflight_hash": {
+      "path": "reconstruction/WOWAS_REALIZATION_PREFLIGHT.json",
+      "sha256": "82f08241463e2d77120bfc3e7d2032b95cb25a71fc3bbfe486ebbe8681c500de"
+    },
+    "record_id": "beat_candidate:0033903:WE01_00001",
+    "schema_hash": {
+      "path": "reconstruction/WOWAS_SCENE_PAYLOAD_SCHEMA_v1.json",
+      "sha256": "f5d3f04d90324326bf183afe0c785965983d127490b18735bf5578aa88dd708b"
+    }
+  }
+}
