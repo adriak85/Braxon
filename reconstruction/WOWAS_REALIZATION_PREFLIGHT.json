@@ -25,6 +25,10 @@
       "sha256": "4d1fe7fa4405f0be6e081e1a3fd0d6e443b86166b80f5a3e624467d6c4cee16e"
     },
     {
+      "path": "crates/wowas-final-edition-v10/canon/active/authored_flavor/resurrection_viewpoint_matrix.tsv",
+      "sha256": "a13d7feab048bb610d8d0bb6801d8ca2b90f4db77b681b67a56ce989f1d84223"
+    },
+    {
       "name": "metadata_unique_record_id",
       "value": 34973
     },
@@ -53,6 +57,14 @@
       "value": 4
     },
     {
+      "name": "resurrection_viewpoint_rows",
+      "value": 100
+    },
+    {
+      "name": "resurrection_viewpoints",
+      "value": 10
+    },
+    {
       "name": "scene_id_duplicate_groups",
       "value": 365
     }
@@ -66,7 +78,8 @@
     "authored_dynamics_lattice.tsv",
     "source_media_mechanism_catalog.tsv",
     "generated_character_flavor_constraints.tsv",
-    "pip_leadership_constraints.tsv"
+    "pip_leadership_constraints.tsv",
+    "resurrection_viewpoint_matrix.tsv"
   ],
   "required_runtime_guards": [
     "write only to staging first",

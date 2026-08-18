@@ -1,0 +1,24 @@
+{
+  "book": "25",
+  "main_party_names": [
+    "Pip (Indalwin Willowjayce)",
+    "Mack",
+    "Xethrolund",
+    "Ursula",
+    "Neith",
+    "Rolzen",
+    "Rylos (Rylos Vayne Johnson)",
+    "Dervish",
+    "Daisy May",
+    "Majiskii"
+  ],
+  "other_targets_rule": "All other resurrection/survival outcomes require explicit final-book scene evidence; this matrix is a required coverage contract, not proof of prose realization.",
+  "prose_generated": false,
+  "rows": 100,
+  "rylos_rule": "Rylos Vayne Johnson is the only one of Pip’s lovers whose death is locked to the ending; no resurrection is inferred for him.",
+  "schema": "wowas.final.book.resurrection.viewpoint.matrix.v1",
+  "source_audit": "reconstruction/WOWAS_MAIN_PARTY_RESURRECTION_AUDIT.json",
+  "source_sha256": "3f61060d822a1dc7c8c2dbeaf685dd29abb781c726de7de6ee1bdaf16857966b",
+  "targets": 10,
+  "viewpoints": 10
+}

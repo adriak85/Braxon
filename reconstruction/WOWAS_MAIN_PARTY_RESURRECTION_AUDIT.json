@@ -1,0 +1,828 @@
+{
+  "core_main_party": [
+    {
+      "brief_description": "protagonist / sonomancer / world-maker; locked traits: he/him throughout; gay; ADHD+autistic; never truly redeemed by others — redeems the world; chipmunk form in Diamond time",
+      "canonical_id": "wowas::pip_indalwin_willowjayce",
+      "death_evidence_count": 2955,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 6,
+            "path": "crates/wowas-final-edition-v10/canon/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_undead_failure\tplay=true; undead_magic_used=yes\tundead_magic_used=no\tThose meant to be resurrected return undead and tear Pip apart.\tViolation of life/death law."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_stalled_collapse\tplay=true; song=love; alignment_off_path=yes\talignment_true=yes\tNeith walks away; Pip dies; the new world collapses for lack of right energy.\tHe did not stay true enough to the path."
+          },
+          {
+            "line": 6,
+            "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_undead_failure\tplay=true; undead_magic_used=yes\tundead_magic_used=no\tThose meant to be resurrected return undead and tear Pip apart.\tViolation of life/death law."
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 6,
+            "path": "crates/wowas-final-edition-v10/canon/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_undead_failure\tplay=true; undead_magic_used=yes\tundead_magic_used=no\tThose meant to be resurrected return undead and tear Pip apart.\tViolation of life/death law."
+          },
+          {
+            "line": 6,
+            "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_undead_failure\tplay=true; undead_magic_used=yes\tundead_magic_used=no\tThose meant to be resurrected return undead and tear Pip apart.\tViolation of life/death law."
+          },
+          {
+            "line": 3,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P901\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tPip returns drowning and humiliated with two rough stones embedded painfully in his back; healing, force, and extraction do not move them.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tstone command-pattern\tDelayed command, not ordinary wound or infection."
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P902\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tThree-day shell siege: the party defends the shell from ripper waves while shell-light ruins ripper eyes without harming the party.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tripper siege\tDogs are untroubled; transformation remains dangerous but not wrong."
+          },
+          {
+            "line": 13,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P906\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tRylos is dragged into his own shadow while Pip trances; the shadow turns glass so others witness but cannot immediately rescue him.\tRylos Vayne Johnson|Pip|Xethrolund|Rolzen\tshadow glass\tBuilds shadow autonomy without early betrayal flattening."
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "he/him throughout",
+        "gay",
+        "ADHD+autistic",
+        "never truly redeemed by others — redeems the world",
+        "chipmunk form in Diamond time"
+      ],
+      "magic": [
+        "sonomancy",
+        "void-fold",
+        "quantum field",
+        "flux field",
+        "chronomancy latency",
+        "superposition"
+      ],
+      "name": "Pip (Indalwin Willowjayce)",
+      "pronouns": "he/him",
+      "resurrection_evidence_count": 8687,
+      "role": "protagonist / sonomancer / world-maker",
+      "sources": [
+        "Stitch",
+        "Tasslehoff",
+        "Barefoot",
+        "Asta",
+        "Yuno",
+        "Gray Fullbuster",
+        "Lucy Heartfilia",
+        "Drizzt",
+        "Menolly",
+        "Hermione Granger",
+        "F'nor",
+        "Erza Scarlet"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 1844
+    },
+    {
+      "brief_description": "guardian / biological father / planetary anchor; locked traits: NEVER human language; 40Hz baseline; grotesque form Books 10-21; helps remake world Book 25",
+      "canonical_id": "wowas::mack_willow_father",
+      "death_evidence_count": 1549,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 786,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t134\tB03_L134\tDIRECT_SOURCE\tSCENE_LADDER\tXethrolund Replies in a Way That Steadies and Warms\tXethrolund Replies in a Way That Steadies and Warms\tkept\t\tXethrolund\twowas::xethrolund_papi\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L134\t\t\t\t\t"
+          },
+          {
+            "line": 800,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t148\tB03_L148\tDIRECT_SOURCE\tSCENE_LADDER\tMack Studies the Change in Him\tMack Studies the Change in Him\tkept\t\tMack\twowas::mack_willow_father\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L148\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 56,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t36\tB01_C036\tDIRECT_SOURCE\tAPPROVED_CHUNK\tStaying Becomes Its Own Kind of Risk\tStaying Becomes Its Own Kind of Risk\tkept\tPip’s testing of the refuge-space and the returning pressure from outside finally converge into a hard truth: the chamber that saved them cannot remain their whole strategy, and survival now demands movement rather than continued concealment.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_chunk5.sh:B01_C036\t\t\t\t\t"
+          },
+          {
+            "line": 59,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t39\tB01_C039\tDIRECT_SOURCE\tAPPROVED_CHUNK\tThe Refuge Opens Back into Danger\tThe Refuge Opens Back into Danger\tkept\tPip carefully unwinds or releases the impossible refuge-space, and the return of the outer world hits both of them with full sensory and emotional force after the compressed intimacy of the chamber.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_chunk5.sh:B01_C039\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 27,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t7\tB01_C007\tDIRECT_SOURCE\tAPPROVED_CHUNK\tThrough the Familiar Shelves One Last Time\tThrough the Familiar Shelves One Last Time\tkept\tPip moves through the known library first, letting the ordinary surfaces of study and memory frame what is about to change, so that the descent into the restricted levels feels like a real set-shift from safety into perilous maturity.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_next_chunk/01_beats_append.md:B01_C007; APPROVED_CHUNK:book1_next_chunk/apply_next_chunk.sh:B01_C007\t\t\t\t\t"
+          },
+          {
+            "line": 41,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t21\tB01_C021\tDIRECT_SOURCE\tAPPROVED_CHUNK\tPain Has a Voice in the New Chamber\tPain Has a Voice in the New Chamber\tkept\tThe first enclosed aftermath scene lets the rescue stop being only motion and become bodily reality, as Boojay’s injury, shock, sharpness, and aliveness enter the room fully and Pip must shift from battlefield improvisation into intimate emergency care.\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:next_book1_chunk.sh:B01_C021\t\t\t\t\t"
+          },
+          {
+            "line": 44,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t24\tB01_C024\tDIRECT_SOURCE\tAPPROVED_CHUNK\tHe Was Not Running from Nothing\tHe Was Not Running from Nothing\tkept\tPip learns that Boojay did not arrive as a random wounded stranger but as someone already caught in a larger violent pattern, and the revelation binds the rescue more tightly to the prophecy-bent world outside.\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:next_book1_chunk.sh:B01_C024\t\t\t\t\t"
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "NEVER human language",
+        "40Hz baseline",
+        "grotesque form Books 10-21",
+        "helps remake world Book 25"
+      ],
+      "magic": [
+        "geological resonance",
+        "portal-creation (sacrifice)",
+        "40Hz-42Hz cello frequency"
+      ],
+      "name": "Mack",
+      "pronouns": "he/him",
+      "resurrection_evidence_count": 3575,
+      "role": "guardian / biological father / planetary anchor",
+      "sources": [
+        "Treebeard",
+        "Groot",
+        "Yggdrasil"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 391
+    },
+    {
+      "brief_description": "librarian / guide / love interest; locked traits: 7ft red hair muscular; believes cannot feel — wrong; blue light = his frequency; He ran. He came. He arrived.",
+      "canonical_id": "wowas::xethrolund_papi",
+      "death_evidence_count": 2944,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 786,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t134\tB03_L134\tDIRECT_SOURCE\tSCENE_LADDER\tXethrolund Replies in a Way That Steadies and Warms\tXethrolund Replies in a Way That Steadies and Warms\tkept\t\tXethrolund\twowas::xethrolund_papi\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L134\t\t\t\t\t"
+          },
+          {
+            "line": 800,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t148\tB03_L148\tDIRECT_SOURCE\tSCENE_LADDER\tMack Studies the Change in Him\tMack Studies the Change in Him\tkept\t\tMack\twowas::mack_willow_father\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L148\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 3,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P901\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tPip returns drowning and humiliated with two rough stones embedded painfully in his back; healing, force, and extraction do not move them.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tstone command-pattern\tDelayed command, not ordinary wound or infection."
+          },
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 56,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t36\tB01_C036\tDIRECT_SOURCE\tAPPROVED_CHUNK\tStaying Becomes Its Own Kind of Risk\tStaying Becomes Its Own Kind of Risk\tkept\tPip’s testing of the refuge-space and the returning pressure from outside finally converge into a hard truth: the chamber that saved them cannot remain their whole strategy, and survival now demands movement rather than continued concealment.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_chunk5.sh:B01_C036\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P902\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tThree-day shell siege: the party defends the shell from ripper waves while shell-light ruins ripper eyes without harming the party.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tripper siege\tDogs are untroubled; transformation remains dangerous but not wrong."
+          },
+          {
+            "line": 13,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P906\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tRylos is dragged into his own shadow while Pip trances; the shadow turns glass so others witness but cannot immediately rescue him.\tRylos Vayne Johnson|Pip|Xethrolund|Rolzen\tshadow glass\tBuilds shadow autonomy without early betrayal flattening."
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "7ft red hair muscular",
+        "believes cannot feel — wrong",
+        "blue light = his frequency",
+        "He ran. He came. He arrived."
+      ],
+      "magic": [
+        "glyph-compiled / NSQ execution — deterministic NOT loose"
+      ],
+      "name": "Xethrolund",
+      "pronouns": "he/him",
+      "resurrection_evidence_count": 8049,
+      "role": "librarian / guide / love interest",
+      "sources": [
+        "Giles",
+        "Remus Lupin",
+        "Librarian/Pratchett"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 1834
+    },
+    {
+      "brief_description": "biological mother / cosmic anchor; locked traits: 'Find me' voice in Book 01 prophecy; amethyst geode true form; helps remake world Book 25",
+      "canonical_id": "wowas::ursula_cosmic_mother",
+      "death_evidence_count": 1636,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 20,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_ANGEL_AFTER\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tAfter angel-diamond compression, amethyst judges alignment, drains the old staff to inert twig, and returns weapon form based on alignment.\tPip|Ursula|Neith\talignment weapon form\tIntegrates story, game, and alignment law."
+          },
+          {
+            "line": 6795,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t13\tB15_S060\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tThe Beat Ends with Ursulas Binding Woven Cleanly Into the Silence Book\tUrsulas Binding Woven Cleanly Into the Silence Book\trewritten_beat_end\tBook 15 stays aligned.\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tSCENE_EXPANSION_EXTRACT:book.txt:B15_S060\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic"
+          },
+          {
+            "line": 6818,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t36\tB15_S060\tACTUAL_SOURCE\tS\tThe-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tThe-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tkept\t\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tbook.txt:1114\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic_intuition_pressu"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 20,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_ANGEL_AFTER\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tAfter angel-diamond compression, amethyst judges alignment, drains the old staff to inert twig, and returns weapon form based on alignment.\tPip|Ursula|Neith\talignment weapon form\tIntegrates story, game, and alignment law."
+          },
+          {
+            "line": 5571,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "12\tStasis\tEra III — Fall, Portal, and Silence\t9\tB12_S060\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tThe Beat Ends with Ursulas Bound State Integrated Into the Stasis Book\tUrsulas Bound State Integrated Into the Stasis Book\trewritten_beat_end\tBook 12 stays aligned.\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Mack\tStasis cast: blue light = same frequency as diary = same frequency as Blood Cello. Recognition. | Daisy May: reaches Pip's hand just before stasis locks. Frozen holding it. She is always at the return point. | 400-year portal time begins. Experienced as short span — perfection of presence. | Calculation of worth.\tSCENE_EXPANSION_EXTRACT:book.txt:B12_S060\t\t\t\t\t"
+          },
+          {
+            "line": 5588,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "12\tStasis\tEra III — Fall, Portal, and Silence\t26\tB12_S060\tACTUAL_SOURCE\tS\tThe-Beat-Ends-with-Ursulas-Bound-State-Integrated-Into-the-Stasis-Book — Book 12 stays aligned.\tThe-Beat-Ends-with-Ursulas-Bound-State-Integrated-Into-the-Stasis-Book — Book 12 stays aligned.\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Mack\tStasis cast: blue light = same frequency as diary = same frequency as Blood Cello. Recognition. | Daisy May: reaches Pip's hand just before stasis locks. Frozen holding it. She is always at the return point. | 400-year portal time begins. Experienced as short span — perfection of presence. | Calculation of worth.\tbook.txt:281\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 6795,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t13\tB15_S060\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tThe Beat Ends with Ursulas Binding Woven Cleanly Into the Silence Book\tUrsulas Binding Woven Cleanly Into the Silence Book\trewritten_beat_end\tBook 15 stays aligned.\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tSCENE_EXPANSION_EXTRACT:book.txt:B15_S060\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic"
+          },
+          {
+            "line": 6818,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t36\tB15_S060\tACTUAL_SOURCE\tS\tThe-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tThe-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tkept\t\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tbook.txt:1114\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic_intuition_pressu"
+          },
+          {
+            "line": 6841,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t119\tB15_R0014\tSOURCE_DERIVED_RECONSTRUCTION\tR\tReconstructed continuity scene 0014 — The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tReconstructed continuity scene 0014 — The-Beat-Ends-with-Ursulas-Binding-Woven-Cleanly-Into-the-Silence-Book — Book 15 stays aligned.\tkept\tFilled to target scene count using uploaded source anchors for Suffocating in Silence.\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails"
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "'Find me' voice in Book 01 prophecy",
+        "amethyst geode true form",
+        "helps remake world Book 25"
+      ],
+      "magic": [
+        "cosmic world-making"
+      ],
+      "name": "Ursula",
+      "pronouns": "she/her",
+      "resurrection_evidence_count": 1934,
+      "role": "biological mother / cosmic anchor",
+      "sources": [
+        "Galadriel",
+        "Lady of the Lake",
+        "Yennefer",
+        "Flemeth"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 151
+    },
+    {
+      "brief_description": "foundational architect villain / Rylos' mother; locked traits: created Diamond to harvest Pip+Rylos power; Rippers are her creatures; mortal wound to Rylos Book 24; heart breaks Book 25 — amplifies Pip — helps remake world",
+      "canonical_id": "wowas::neith_architect_mother",
+      "death_evidence_count": 1579,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_stalled_collapse\tplay=true; song=love; alignment_off_path=yes\talignment_true=yes\tNeith walks away; Pip dies; the new world collapses for lack of right energy.\tHe did not stay true enough to the path."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/patches/v10/wowas_endgame_judgment_matrix_v10.tsv",
+            "text": "blood_cello_stalled_collapse\tplay=true; song=love; alignment_off_path=yes\talignment_true=yes\tNeith walks away; Pip dies; the new world collapses for lack of right energy.\tHe did not stay true enough to the path."
+          },
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 20,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_ANGEL_AFTER\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tAfter angel-diamond compression, amethyst judges alignment, drains the old staff to inert twig, and returns weapon form based on alignment.\tPip|Ursula|Neith\talignment weapon form\tIntegrates story, game, and alignment law."
+          },
+          {
+            "line": 6283,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "14\tThe Long Reorientation\tEra III — Fall, Portal, and Silence\t1\tB14_001\tDIRECT_SOURCE\tPLACED_FILE\tThe World That Grew Without Him\tThe World That Grew Without Him\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Wrenath Vel'Thane Still-Water | Sorra Marso'len Thorn-Grace | Corveth Ash'Koral Dark-Current | Oswyn | Thorn Ash'Koral | Kyrel On'Rylder Iron-Song | Daevyn On'Rylder Iron-Song | Elven On'Rylder Stone-Hayne | Verath On'Rylder Ash-Cinder | Calla On'Rylder Willow-Jayce | Loreth Vel'Thane Dark-Current | Seth Vel'Thane Iron-Song | Ithren Vel'Thane Ash-Cinder | Tavan Vel'Thane Stone-Hayne | Pethran | Renath | Selwyn | Reval\tThorn Ash'Koral returns: Corveth's reckoning. | Sorra's unnamed casualty returns: protocol development begins. | Rippers identified: Neith's spider-humanoid creatures. | First trace of Rolzen's location. Pip moves toward him.\tPLACED_FILE:books/Book_14_The_Long_Reorientation/placed/B14_001__The_World_That_Grew_Without_Him.md:B14_001\toregon_co"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 6299,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "14\tThe Long Reorientation\tEra III — Fall, Portal, and Silence\t17\tB14_S119\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tThe Next Layer Promises Second Descent Scale Consequences\tBook 15 loads forward\trewritten_from_detail\tBook 15 loads forward.\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Wrenath Vel'Thane Still-Water | Sorra Marso'len Thorn-Grace | Corveth Ash'Koral Dark-Current | Oswyn | Thorn Ash'Koral | Kyrel On'Rylder Iron-Song | Daevyn On'Rylder Iron-Song | Elven On'Rylder Stone-Hayne | Verath On'Rylder Ash-Cinder | Calla On'Rylder Willow-Jayce | Loreth Vel'Thane Dark-Current | Seth Vel'Thane Iron-Song | Ithren Vel'Thane Ash-Cinder | Tavan Vel'Thane Stone-Hayne | Pethran | Renath | Selwyn | Reval\tThorn Ash'Koral returns: Corveth's reckoning. | Sorra's unnamed casualty returns: protocol development begins. | Rippers identified: Neith's spider-humanoid creatures. | First trace of Rolzen's location. Pip moves toward him.\tSCENE_EXPANSION_EXTRACT:book.txt:B14_S119\toregon"
+          },
+          {
+            "line": 6332,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "14\tThe Long Reorientation\tEra III — Fall, Portal, and Silence\t110\tB14_R0012\tSOURCE_DERIVED_RECONSTRUCTION\tR\tReconstructed continuity scene 0012 — The-Beat-Ends-with-Orbit-Recast-As-Workable-Truth — Book 14 stays accurate.\tFilled to target scene count using uploaded source anchors for The\trewritten_from_detail\tFilled to target scene count using uploaded source anchors for The Long Reorientation.\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Wrenath Vel'Thane Still-Water | Sorra Marso'len Thorn-Grace | Corveth Ash'Koral Dark-Current | Oswyn | Thorn Ash'Koral | Kyrel On'Rylder Iron-Song | Daevyn On'Rylder Iron-Song | Elven On'Rylder Stone-Hayne | Verath On'Rylder Ash-Cinder | Calla On'Rylder Willow-Jayce | Loreth Vel'Thane Dark-Current | Seth Vel'Thane Iron-Song | Ithren Vel'Thane Ash-Cinder | Tavan Vel'Thane Stone-Hayne | Pethran | Renath | Selwyn | Reval\tThorn Ash'Koral returns: Corveth's reckoning. | Sorra's unnamed casualty returns: protocol development begins. | "
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "created Diamond to harvest Pip+Rylos power",
+        "Rippers are her creatures",
+        "mortal wound to Rylos Book 24",
+        "heart breaks Book 25 — amplifies Pip — helps remake world"
+      ],
+      "magic": [
+        "world-architecture",
+        "Diamond-creation",
+        "Ripper-creation"
+      ],
+      "name": "Neith",
+      "pronouns": "she/her",
+      "resurrection_evidence_count": 3714,
+      "role": "foundational architect villain / Rylos' mother",
+      "sources": [
+        "Cersei Lannister",
+        "White Queen",
+        "Morgan le Fay"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 219
+    },
+    {
+      "brief_description": "warrior / healing arc / flux field teacher; locked traits: Rolzen NOT Rosen; captured ~50yr before Pip returns; hog-tied by Pip — loves him from that moment; throws Pip over shoulder when protective; tucks Pip under arm when excited",
+      "canonical_id": "wowas::rolzen_warrior_anchor",
+      "death_evidence_count": 2810,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 6783,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t1\tB15_001\tDIRECT_SOURCE\tPLACED_FILE\tEscape But Not Free\tEscape But Not Free\tkept\t\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tPLACED_FILE:books/Book_15_Suffocating_In_Silence/placed/B15_001__Escape_But_Not_Free.md:B15_001\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic_intuition_pressure\twowas::county_lincoln_spider_001 | wowas::county_polk_beave"
+          },
+          {
+            "line": 6784,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "15\tSuffocating in Silence\tEra III — Fall, Portal, and Silence\t2\tB15_002\tDIRECT_SOURCE\tPLACED_FILE\tThe Silence Descends\tThe Silence Descends\tkept\t\t\t\tPip (Indalwin Willowjayce) | Rolzen | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii | Drawn entities | Unnamed Warden Friend (dies Book 15) | Wrenath Vel'Thane Still-Water\tPip finds Rolzen in feral mutilated state. Mistakes him for a ripper. | Ripper attack: Pip recreates diamond spell in their cell. Fights. Hog-ties Rolzen with whip. Raises diamond shield. Rolzen loves him from this moment. | Silence descends: absolute dark. Thick black. | ROLZEN = SANTA HATA: Drawn relocate feature to forehead. Jock fails. Bandana rises autonomously. Santa hat stays. He commits with full absurd dignity.\tPLACED_FILE:books/Book_15_Suffocating_In_Silence/placed/B15_002__The_Silence_Descends.md:B15_002\toregon_coast_return\tLincoln County, OR -> Polk County, OR\toceanic_intuition_pressure\twowas::county_lincoln_spider_001 | wowas::county_polk_be"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 3,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P901\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tPip returns drowning and humiliated with two rough stones embedded painfully in his back; healing, force, and extraction do not move them.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tstone command-pattern\tDelayed command, not ordinary wound or infection."
+          },
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 6283,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "14\tThe Long Reorientation\tEra III — Fall, Portal, and Silence\t1\tB14_001\tDIRECT_SOURCE\tPLACED_FILE\tThe World That Grew Without Him\tThe World That Grew Without Him\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Daisy May | Majiskii | Wrenath Vel'Thane Still-Water | Sorra Marso'len Thorn-Grace | Corveth Ash'Koral Dark-Current | Oswyn | Thorn Ash'Koral | Kyrel On'Rylder Iron-Song | Daevyn On'Rylder Iron-Song | Elven On'Rylder Stone-Hayne | Verath On'Rylder Ash-Cinder | Calla On'Rylder Willow-Jayce | Loreth Vel'Thane Dark-Current | Seth Vel'Thane Iron-Song | Ithren Vel'Thane Ash-Cinder | Tavan Vel'Thane Stone-Hayne | Pethran | Renath | Selwyn | Reval\tThorn Ash'Koral returns: Corveth's reckoning. | Sorra's unnamed casualty returns: protocol development begins. | Rippers identified: Neith's spider-humanoid creatures. | First trace of Rolzen's location. Pip moves toward him.\tPLACED_FILE:books/Book_14_The_Long_Reorientation/placed/B14_001__The_World_That_Grew_Without_Him.md:B14_001\toregon_co"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P902\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tThree-day shell siege: the party defends the shell from ripper waves while shell-light ruins ripper eyes without harming the party.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tripper siege\tDogs are untroubled; transformation remains dangerous but not wrong."
+          },
+          {
+            "line": 13,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P906\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tRylos is dragged into his own shadow while Pip trances; the shadow turns glass so others witness but cannot immediately rescue him.\tRylos Vayne Johnson|Pip|Xethrolund|Rolzen\tshadow glass\tBuilds shadow autonomy without early betrayal flattening."
+          }
+        ]
+      },
+      "first_book": 14,
+      "last_book": 25,
+      "locked_traits": [
+        "Rolzen NOT Rosen",
+        "captured ~50yr before Pip returns",
+        "hog-tied by Pip — loves him from that moment",
+        "throws Pip over shoulder when protective",
+        "tucks Pip under arm when excited",
+        "decade after restoration before Pip allows connection",
+        "extremely persistent/horndog toward Pip"
+      ],
+      "magic": [
+        "flux field (teaches Pip)",
+        "fire-forward combat",
+        "physical force"
+      ],
+      "name": "Rolzen",
+      "pronouns": "he/him",
+      "resurrection_evidence_count": 6540,
+      "role": "warrior / healing arc / flux field teacher",
+      "sources": [
+        "Jason Stackhouse",
+        "Charmy",
+        "Natsu",
+        "Noelle Silva"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 1626
+    },
+    {
+      "brief_description": "primary antagonist / accountability arc / Xeth love interest; locked traits: accountability NOT redemption; toxic codependence with Pip; Strange Gravity with Xethrolund Book 18; mortal wound Book 24; superpositioned with Pip to defeat Neith",
+      "canonical_id": "wowas::rylos_vayne_johnson",
+      "death_evidence_count": 2846,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 786,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t134\tB03_L134\tDIRECT_SOURCE\tSCENE_LADDER\tXethrolund Replies in a Way That Steadies and Warms\tXethrolund Replies in a Way That Steadies and Warms\tkept\t\tXethrolund\twowas::xethrolund_papi\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L134\t\t\t\t\t"
+          },
+          {
+            "line": 800,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "3\tThe First Thread\tEra I — Contact and First Threads\t148\tB03_L148\tDIRECT_SOURCE\tSCENE_LADDER\tMack Studies the Change in Him\tMack Studies the Change in Him\tkept\t\tMack\twowas::mack_willow_father\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson)\t\"Xethrolund reveals himself. 7 feet. Red hair. Muscular librarian. P.A.P.I. | True name recognition: Indalwin Willowjayce. | \"\"You are not what was done to you.\"\" — canon locked line. | Clarity anchor established.\"\tSCENE_LADDER:books/Book_03_The_First_Thread/placed/B03_SCENE_LADDER.md:B03_L148\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 371,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t79\tB02_L079\tDIRECT_SOURCE\tSCENE_LADDER\tHe Cannot Return to Simpler Naming\tHe Cannot Return to Simpler Naming\tkept\t\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_LADDER:books/Book_02_The_Diary_And_The_Blue_Light/placed/B02_SCENE_LADDER.md:B02_L079\t\t\t\t\t"
+          },
+          {
+            "line": 385,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t93\tB02_S010\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tBook Two Opens on Changed Home Law\tBook Two Opens on Changed Home Law\tkept\tThe new book starts with home transformed, not restored.\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_EXPANSION_EXTRACT:book.txt:B02_S010; SCENE_EXPANSION_EXTRACT:book.txt:B02_S010\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 13,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P906\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tRylos is dragged into his own shadow while Pip trances; the shadow turns glass so others witness but cannot immediately rescue him.\tRylos Vayne Johnson|Pip|Xethrolund|Rolzen\tshadow glass\tBuilds shadow autonomy without early betrayal flattening."
+          },
+          {
+            "line": 18,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B24_RYLOS_MORTAL_WOUND\tBook_24_Born_To_Die\tactive\twowas_scene_patch_v10.tsv\tPip pulls Rylos back from wrongful shadow-threshold draw; the Cockatrice-ripper runs Rylos through in that instant.\tPip|Rylos Vayne Johnson|Vaedric Maldor Obstineth\tshadow threshold / Cockatrice-ripper\tPays off Rylos/Cockatrice line personally."
+          },
+          {
+            "line": 41,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t21\tB01_C021\tDIRECT_SOURCE\tAPPROVED_CHUNK\tPain Has a Voice in the New Chamber\tPain Has a Voice in the New Chamber\tkept\tThe first enclosed aftermath scene lets the rescue stop being only motion and become bodily reality, as Boojay’s injury, shock, sharpness, and aliveness enter the room fully and Pip must shift from battlefield improvisation into intimate emergency care.\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:next_book1_chunk.sh:B01_C021\t\t\t\t\t"
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "accountability NOT redemption",
+        "toxic codependence with Pip",
+        "Strange Gravity with Xethrolund Book 18",
+        "mortal wound Book 24",
+        "superpositioned with Pip to defeat Neith"
+      ],
+      "magic": [
+        "transmutation — changes what things ARE, not just overpowers"
+      ],
+      "name": "Rylos (Rylos Vayne Johnson)",
+      "pronouns": "he/him",
+      "resurrection_evidence_count": 5636,
+      "role": "primary antagonist / accountability arc / Xeth love interest",
+      "sources": [
+        "Ares (VERY VERY primary)",
+        "Queen of the Damned",
+        "Uncle Jesse",
+        "Professor McGonagall (transmutation)",
+        "Yuno (secondary)"
+      ],
+      "tier": 0,
+      "viewpoint_evidence_count": 1727
+    },
+    {
+      "brief_description": "cosmic corrective force; locked traits: not good/evil; appears twice Book 01; helps remake world Book 25",
+      "canonical_id": "wowas::dervish_cosmic_entity",
+      "death_evidence_count": 1473,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 11952,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "24\tBorn To Die\tEra V — Final Resonance and Rebirth\t1\tB24_001\tDIRECT_SOURCE\tPLACED_FILE\tNeiths Full Revelation\tNeiths Full Revelation\tkept\t\t\t\tPip (Indalwin Willowjayce) | Rylos (Rylos Vayne Johnson) | Neith | Xethrolund | Rolzen | Daisy May | Majiskii | Mack | Dervish | Ursula\tNeith fully revealed: created Diamond to harvest Pip and Rylos. | Rylos/Pip final reckoning: accountability named, not redemption. | Neith delivers mortal wound to Rylos. | Pip superpositions himself and Rylos. Defeats Neith. Was not supposed to be possible.\tPLACED_FILE:books/Book_24_Born_To_Die/placed/B24_001__Neiths_Full_Revelation.md:B24_001\t\t\t\t\t"
+          },
+          {
+            "line": 11953,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "24\tBorn To Die\tEra V — Final Resonance and Rebirth\t2\tB24_002\tDIRECT_SOURCE\tPLACED_FILE\tRylos And Pip Final Reckoning\tRylos And Pip Final Reckoning\tkept\t\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Rylos (Rylos Vayne Johnson) | Neith | Xethrolund | Rolzen | Daisy May | Majiskii | Mack | Dervish | Ursula\tNeith fully revealed: created Diamond to harvest Pip and Rylos. | Rylos/Pip final reckoning: accountability named, not redemption. | Neith delivers mortal wound to Rylos. | Pip superpositions himself and Rylos. Defeats Neith. Was not supposed to be possible.\tPLACED_FILE:books/Book_24_Born_To_Die/placed/B24_002__Rylos_And_Pip_Final_Reckoning.md:B24_002\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 19,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B25_BLOOD_CELLO_JUDGMENT\tBook_25_Death_Is_Rebirth\tactive\twowas_scene_patch_v10.tsv\tBlood Cello judgment matrix includes no-song world-stasis, love song with support/world-remake, lonely love blackout, mockery corruption, old-man marionette-cello ending, undead punishment, and false-victory total fatality.\tPip|Mack|Rolzen|Xethrolund|Rylos Vayne Johnson|Neith|Dervish\tendgame moral resonance audit\tTurns endgame into judgment by resonance, support, mockery, and love."
+          },
+          {
+            "line": 56,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t36\tB01_C036\tDIRECT_SOURCE\tAPPROVED_CHUNK\tStaying Becomes Its Own Kind of Risk\tStaying Becomes Its Own Kind of Risk\tkept\tPip’s testing of the refuge-space and the returning pressure from outside finally converge into a hard truth: the chamber that saved them cannot remain their whole strategy, and survival now demands movement rather than continued concealment.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_chunk5.sh:B01_C036\t\t\t\t\t"
+          },
+          {
+            "line": 59,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t39\tB01_C039\tDIRECT_SOURCE\tAPPROVED_CHUNK\tThe Refuge Opens Back into Danger\tThe Refuge Opens Back into Danger\tkept\tPip carefully unwinds or releases the impossible refuge-space, and the return of the outer world hits both of them with full sensory and emotional force after the compressed intimacy of the chamber.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_chunk5.sh:B01_C039\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 27,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t7\tB01_C007\tDIRECT_SOURCE\tAPPROVED_CHUNK\tThrough the Familiar Shelves One Last Time\tThrough the Familiar Shelves One Last Time\tkept\tPip moves through the known library first, letting the ordinary surfaces of study and memory frame what is about to change, so that the descent into the restricted levels feels like a real set-shift from safety into perilous maturity.\tPip (Indalwin Willowjayce)\twowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:book1_next_chunk/01_beats_append.md:B01_C007; APPROVED_CHUNK:book1_next_chunk/apply_next_chunk.sh:B01_C007\t\t\t\t\t"
+          },
+          {
+            "line": 41,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t21\tB01_C021\tDIRECT_SOURCE\tAPPROVED_CHUNK\tPain Has a Voice in the New Chamber\tPain Has a Voice in the New Chamber\tkept\tThe first enclosed aftermath scene lets the rescue stop being only motion and become bodily reality, as Boojay’s injury, shock, sharpness, and aliveness enter the room fully and Pip must shift from battlefield improvisation into intimate emergency care.\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:next_book1_chunk.sh:B01_C021\t\t\t\t\t"
+          },
+          {
+            "line": 44,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "1\tChoices Make World\tEra I — Contact and First Threads\t24\tB01_C024\tDIRECT_SOURCE\tAPPROVED_CHUNK\tHe Was Not Running from Nothing\tHe Was Not Running from Nothing\tkept\tPip learns that Boojay did not arrive as a random wounded stranger but as someone already caught in a larger violent pattern, and the revelation binds the rescue more tightly to the prophecy-bent world outside.\tRylos (Rylos Vayne Johnson) | Pip (Indalwin Willowjayce)\twowas::rylos_vayne_johnson | wowas::pip_indalwin_willowjayce\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Solvaenkyr | Dervish\tMack confirms prophecy. 40Hz established. | Xethrolund: first telepathic contact. Blue light = his frequency. | Dervish: corrects time spell, creates silver second sun, leaves Cloak of Aetherion and three Gems. Departs. | Solvaenkyr: first refusal of help. Pattern established.\tAPPROVED_CHUNK:next_book1_chunk.sh:B01_C024\t\t\t\t\t"
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "not good/evil",
+        "appears twice Book 01",
+        "helps remake world Book 25"
+      ],
+      "magic": [],
+      "name": "Dervish",
+      "pronouns": "they/them",
+      "resurrection_evidence_count": 743,
+      "role": "cosmic corrective force",
+      "sources": [],
+      "tier": 0,
+      "viewpoint_evidence_count": 123
+    },
+    {
+      "brief_description": "unconditional anchor; locked traits: never speaks; never sacrificed; frozen holding Pip's hand at stasis; always at the return point",
+      "canonical_id": "wowas::daisy_may_great_dane",
+      "death_evidence_count": 2882,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 1264,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t152\tB04_L152\tDIRECT_SOURCE\tSCENE_LADDER\tEmbodied Tension Intensifies the Scene\tEmbodied Tension Intensifies the Scene\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L152\t\t\t\t\t"
+          },
+          {
+            "line": 1337,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t225\tB04_L225\tDIRECT_SOURCE\tSCENE_LADDER\tXethrolund Steadies Without Erasing the Pain\tXethrolund Steadies Without Erasing the Pain\tkept\t\tXethrolund\twowas::xethrolund_papi\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L225\t\t\t\t\t"
+          },
+          {
+            "line": 1514,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t402\tB04_L402\tDIRECT_SOURCE\tSCENE_LADDER\tThe World's Deeper Wrongness Is Now Relationally Embodied\tThe World's Deeper Wrongness Is Now Relationally Embodied\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L402\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 3,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P901\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tPip returns drowning and humiliated with two rough stones embedded painfully in his back; healing, force, and extraction do not move them.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tstone command-pattern\tDelayed command, not ordinary wound or infection."
+          },
+          {
+            "line": 371,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t79\tB02_L079\tDIRECT_SOURCE\tSCENE_LADDER\tHe Cannot Return to Simpler Naming\tHe Cannot Return to Simpler Naming\tkept\t\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_LADDER:books/Book_02_The_Diary_And_The_Blue_Light/placed/B02_SCENE_LADDER.md:B02_L079\t\t\t\t\t"
+          },
+          {
+            "line": 385,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t93\tB02_S010\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tBook Two Opens on Changed Home Law\tBook Two Opens on Changed Home Law\tkept\tThe new book starts with home transformed, not restored.\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_EXPANSION_EXTRACT:book.txt:B02_S010; SCENE_EXPANSION_EXTRACT:book.txt:B02_S010\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P902\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tThree-day shell siege: the party defends the shell from ripper waves while shell-light ruins ripper eyes without harming the party.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tripper siege\tDogs are untroubled; transformation remains dangerous but not wrong."
+          },
+          {
+            "line": 315,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t23\tB02_L023\tDIRECT_SOURCE\tSCENE_LADDER\tMack Calls from the Other Room\tMack Calls from the Other Room\tkept\t\tMack\twowas::mack_willow_father\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_LADDER:books/Book_02_The_Diary_And_The_Blue_Light/placed/B02_SCENE_LADDER.md:B02_L023\t\t\t\t\t"
+          }
+        ]
+      },
+      "first_book": 1,
+      "last_book": 25,
+      "locked_traits": [
+        "never speaks",
+        "never sacrificed",
+        "frozen holding Pip's hand at stasis",
+        "always at the return point"
+      ],
+      "magic": [],
+      "name": "Daisy May",
+      "pronouns": "she/her",
+      "resurrection_evidence_count": 5406,
+      "role": "unconditional anchor",
+      "sources": [],
+      "tier": 0,
+      "viewpoint_evidence_count": 1644
+    },
+    {
+      "brief_description": "anchor / receives 'Null is Everything' from Pip; locked traits: daughter of Daisy May; present at Blood Cello",
+      "canonical_id": "wowas::majiskii_great_dane",
+      "death_evidence_count": 2776,
+      "evidence_samples": {
+        "death": [
+          {
+            "line": 1264,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t152\tB04_L152\tDIRECT_SOURCE\tSCENE_LADDER\tEmbodied Tension Intensifies the Scene\tEmbodied Tension Intensifies the Scene\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L152\t\t\t\t\t"
+          },
+          {
+            "line": 1337,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t225\tB04_L225\tDIRECT_SOURCE\tSCENE_LADDER\tXethrolund Steadies Without Erasing the Pain\tXethrolund Steadies Without Erasing the Pain\tkept\t\tXethrolund\twowas::xethrolund_papi\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L225\t\t\t\t\t"
+          },
+          {
+            "line": 1514,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "4\tCrocodile Smile\tEra I — Contact and First Threads\t402\tB04_L402\tDIRECT_SOURCE\tSCENE_LADDER\tThe World's Deeper Wrongness Is Now Relationally Embodied\tThe World's Deeper Wrongness Is Now Relationally Embodied\tkept\t\t\t\tPip (Indalwin Willowjayce) | Xethrolund | Mack | Rylos (Rylos Vayne Johnson) | Daisy May | Majiskii\tThe smile across the crowd. First physical Boojay encounter. | Fleeing the Cockatrice. Boojay diagnoses Pip's magic correctly. | Pocket sanctuary (Void-Fold). Week of golden light. Trauma bond seeds. | Xethrolund as counterweight — real clarity vs manipulative reading.\tSCENE_LADDER:books/Book_04_Crocodile_Smile/placed/B04_SCENE_LADDER.md:B04_L402\t\t\t\t\t"
+          }
+        ],
+        "resurrection": [
+          {
+            "line": 3,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P901\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tPip returns drowning and humiliated with two rough stones embedded painfully in his back; healing, force, and extraction do not move them.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tstone command-pattern\tDelayed command, not ordinary wound or infection."
+          },
+          {
+            "line": 371,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t79\tB02_L079\tDIRECT_SOURCE\tSCENE_LADDER\tHe Cannot Return to Simpler Naming\tHe Cannot Return to Simpler Naming\tkept\t\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_LADDER:books/Book_02_The_Diary_And_The_Blue_Light/placed/B02_SCENE_LADDER.md:B02_L079\t\t\t\t\t"
+          },
+          {
+            "line": 385,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t93\tB02_S010\tDIRECT_SOURCE\tSCENE_EXPANSION_EXTRACT\tBook Two Opens on Changed Home Law\tBook Two Opens on Changed Home Law\tkept\tThe new book starts with home transformed, not restored.\t\t\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_EXPANSION_EXTRACT:book.txt:B02_S010; SCENE_EXPANSION_EXTRACT:book.txt:B02_S010\t\t\t\t\t"
+          }
+        ],
+        "viewpoint": [
+          {
+            "line": 2,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B18_P900\tBook_18_Strange_Gravity\tactive\twowas_scene_patch_v6.tsv\tAfter Neith realm, the party reaches the Oregon coast through Pip's ocean dream; the sea takes only Pip while the others witness the pull.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tocean command-pattern\tPlaced into Book 18 active index. Not an oracle; grounded through route pressure."
+          },
+          {
+            "line": 9,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "B19_P902\tBook_19_The_Cracking_Core\tactive\twowas_scene_patch_v6.tsv\tThree-day shell siege: the party defends the shell from ripper waves while shell-light ruins ripper eyes without harming the party.\tPip|Rolzen|Xethrolund|Daisy May|Majiskii\tripper siege\tDogs are untroubled; transformation remains dangerous but not wrong."
+          },
+          {
+            "line": 315,
+            "path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/_scene_index.tsv",
+            "text": "2\tThe Diary and the Blue Light\tEra I — Contact and First Threads\t23\tB02_L023\tDIRECT_SOURCE\tSCENE_LADDER\tMack Calls from the Other Room\tMack Calls from the Other Room\tkept\t\tMack\twowas::mack_willow_father\tPip (Indalwin Willowjayce) | Mack | Xethrolund | Rylos (Rylos Vayne Johnson) | Daisy May | Alex | Majiskii\t\"Alex entrusts Daisy May and Majiskii to Pip at the floating market. | Boojay: wounded jackrabbit in the market. Healing that does not hold. | Boojay: first sign of trouble — cold cruelty flash. | Xethrolund diary: identity questions, \"\"You are not what was done to you.\"\" (Book 03 territory but seeded here)\"\tSCENE_LADDER:books/Book_02_The_Diary_And_The_Blue_Light/placed/B02_SCENE_LADDER.md:B02_L023\t\t\t\t\t"
+          }
+        ]
+      },
+      "first_book": 7,
+      "last_book": 25,
+      "locked_traits": [
+        "daughter of Daisy May",
+        "present at Blood Cello"
+      ],
+      "magic": [],
+      "name": "Majiskii",
+      "pronouns": "she/her",
+      "resurrection_evidence_count": 5116,
+      "role": "anchor / receives 'Null is Everything' from Pip",
+      "sources": [],
+      "tier": 0,
+      "viewpoint_evidence_count": 1646
+    }
+  ],
+  "core_main_party_count": 10,
+  "pip_related_named_count": 4,
+  "pip_related_named_ids": [
+    "wowas::sorra_marsoLen_thorngrace",
+    "wowas::calla_onrylder_willowjayce",
+    "wowas::resonance_elder_maev",
+    "wowas::alex_market_guardian"
+  ],
+  "resurrection_requirements": {
+    "death_and_resurrection_parity": "each resurrection must carry comparable emotional, relational, and world-state consequence to the death; a mention alone is insufficient",
+    "fate_rule": "Rylos is the only one of Pip’s lovers who dies, at the end, per user-specified lock; all other survival/death rules require explicit final-book source evidence",
+    "identity_rule": "Rylos Vayne Johnson is canonical; Pip is Indalwin On’Rylder Willowjayce; Pip is his nickname",
+    "prose_generated": false,
+    "viewpoint_requirement": "resurrection must be witnessed/understood from distinct viewpoints in the main party; no single-viewpoint collapse"
+  },
+  "schema": "wowas.main.party.resurrection.audit.v1",
+  "source_hash": "69246bd4cf8299c5b93e6232ba60dcfa92140ecfee8b42b75ead0f9552860e42"
+}

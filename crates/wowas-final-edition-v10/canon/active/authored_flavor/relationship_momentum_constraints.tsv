@@ -1,0 +1,95 @@
+momentum_id	dynamic_id	from_character	to_character	relation_type	polarity	first_book	last_book	momentum_level	required_state_change	required_emotional_consequence	required_counteragency	required_lattice_carry_forward	prose_status	source_policy
+momentum:00001	orbit:00001	Daisy May	Majiskii	pack_lineage	healing	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00002	orbit:00002	Dervish	Mack	lattice_avatar_support	mythic	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00003	orbit:00003	Indalwin Willowjayce	Mack	guardian_anchor	protective	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00004	orbit:00004	Indalwin Willowjayce	Rylos (Rylos Vayne Johnson)	trust_bond_to_betrayal	corrosive	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00005	orbit:00005	Indalwin Willowjayce	Solvaenkyr	attempted_reciprocal_support	healing	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00006	orbit:00006	Indalwin Willowjayce	Ursula	biological_parent	mythic	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00007	orbit:00007	Indalwin Willowjayce	Xethrolund	distant_counsel_to_soulmate	healing	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00008	orbit:00008	Mack	Dervish	book_copresence	mixed	1	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00009	orbit:00009	Mack	Solvaenkyr	book_copresence	mixed	1	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00010	orbit:00010	Mack	Xethrolund	book_copresence	mixed	1	10	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00011	orbit:00011	Pip (Indalwin Willowjayce)	Daisy May	healthy_loyal_bond	protective	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00012	orbit:00012	Pip (Indalwin Willowjayce)	Dervish	book_copresence	mixed	1	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00013	orbit:00013	Pip (Indalwin Willowjayce)	Mack	book_copresence	mixed	1	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00014	orbit:00014	Pip (Indalwin Willowjayce)	Majiskii	pack_bond	protective	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00015	orbit:00015	Pip (Indalwin Willowjayce)	Rolzen	unshakable_interdependence	healing	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00016	orbit:00016	Pip (Indalwin Willowjayce)	Solvaenkyr	book_copresence	mixed	1	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00017	orbit:00017	Pip (Indalwin Willowjayce)	Xethrolund	book_copresence	mixed	1	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00018	orbit:00018	Rolzen	Xethrolund	co_protector	mixed	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00019	orbit:00019	Rylos (Rylos Vayne Johnson)	Neith	mother_harvester	corrosive	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00020	orbit:00020	Rylos Vane	King of the Cockatrice	damaged_devotion	parasitic	1	25	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00021	orbit:00021	Solvaenkyr	Dervish	book_copresence	mixed	1	1	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00022	orbit:00022	Solvaenkyr	Indalwin Willowjayce	companion_support_loop	mixed	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00023	orbit:00023	Xethrolund	Dervish	book_copresence	mixed	1	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00024	orbit:00024	Xethrolund	Rylos (Rylos Vayne Johnson)	strange_gravity_to_late_love	mixed	1	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00025	orbit:00025	Xethrolund	Solvaenkyr	book_copresence	mixed	1	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00026	orbit:00026	Daisy May	Majiskii	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00027	orbit:00027	Mack	Daisy May	book_copresence	mixed	2	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00028	orbit:00028	Mack	Majiskii	book_copresence	mixed	2	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00029	orbit:00029	Mack	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	2	10	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00030	orbit:00030	Pip (Indalwin Willowjayce)	Daisy May	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00031	orbit:00031	Pip (Indalwin Willowjayce)	Majiskii	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00032	orbit:00032	Pip (Indalwin Willowjayce)	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00033	orbit:00033	Rylos (Rylos Vayne Johnson)	Daisy May	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00034	orbit:00034	Rylos (Rylos Vayne Johnson)	Majiskii	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00035	orbit:00035	Xethrolund	Daisy May	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00036	orbit:00036	Xethrolund	Majiskii	book_copresence	mixed	2	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00037	orbit:00037	Xethrolund	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	2	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00038	orbit:00038	Xethrolund	Mack	book_copresence	mixed	3	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00039	orbit:00039	Rylos (Rylos Vayne Johnson)	Mack	book_copresence	mixed	5	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00040	orbit:00040	Rylos (Rylos Vayne Johnson)	Xethrolund	book_copresence	mixed	5	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00041	orbit:00041	Rylos (Rylos Vayne Johnson)	Solvaenkyr	book_copresence	mixed	6	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00042	orbit:00042	Solvaenkyr	Daisy May	book_copresence	mixed	6	6	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00043	orbit:00043	Daisy May	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	8	8	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00044	orbit:00044	Majiskii	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	8	8	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00045	orbit:00045	Daisy May	Solvaenkyr	book_copresence	mixed	9	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00046	orbit:00046	Majiskii	Solvaenkyr	book_copresence	mixed	9	9	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00047	orbit:00047	Daisy May	Mack	book_copresence	mixed	12	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00048	orbit:00048	Majiskii	Mack	book_copresence	mixed	12	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00049	orbit:00049	Pip (Indalwin Willowjayce)	Lincoln County Coast	intuitive_geographic_bond	mythic	14	16	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00050	orbit:00050	Pip (Indalwin Willowjayce)	Rolzen	book_copresence	mixed	15	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00051	orbit:00051	Rolzen	Daisy May	book_copresence	mixed	15	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00052	orbit:00052	Rolzen	Majiskii	book_copresence	mixed	15	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00053	orbit:00053	Rolzen	Rylos (Rylos Vayne Johnson)	book_copresence	mixed	15	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00054	orbit:00054	Rolzen	Xethrolund	book_copresence	mixed	15	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00055	orbit:00055	Pip (Indalwin Willowjayce)	Ada/Bannock Idaho corridor	dream_to_document_proof	healing	16	17	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00056	orbit:00056	Pip (Indalwin Willowjayce)	Zaz	revelatory_companion	mixed	16	25	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00057	orbit:00057	Daisy May	Pip (Indalwin Willowjayce)	calm_witness_to_transformation	protective	17	18	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00058	orbit:00058	Majiskii	Pip (Indalwin Willowjayce)	uncanny_witness_to_transformation	mixed	17	18	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00059	orbit:00059	Pip (Indalwin Willowjayce)	Onondaga geode shell	forced_metamorphosis	mythic	17	18	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00060	orbit:00060	Rolzen	Pip (Indalwin Willowjayce)	protective_response_to_transformation	protective	17	19	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00061	orbit:00061	Rylos (Rylos Vayne Johnson)	Pip (Indalwin Willowjayce)	mirror_pressure_under_transformation	mixed	17	19	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00062	orbit:00062	Xethrolund	Pip (Indalwin Willowjayce)	coded_witness_to_transformation	protective	17	19	high	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00063	orbit:00063	Rylos (Rylos Vayne Johnson)	Pip (Indalwin Willowjayce)	book_copresence	mixed	18	18	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00064	orbit:00064	Rylos (Rylos Vayne Johnson)	Rolzen	book_copresence	mixed	18	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00065	orbit:00065	Xethrolund	Pip (Indalwin Willowjayce)	book_copresence	mixed	18	18	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00066	orbit:00066	Xethrolund	Rolzen	book_copresence	mixed	18	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00067	orbit:00067	Daisy May	Neith	book_copresence	mixed	19	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00068	orbit:00068	Mack	Neith	book_copresence	mixed	19	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00069	orbit:00069	Majiskii	Neith	book_copresence	mixed	19	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00070	orbit:00070	Pip (Indalwin Willowjayce)	Neith	book_copresence	mixed	19	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00071	orbit:00071	Pip (Indalwin Willowjayce)	Oklahoma City corridor	return_pressure	mixed	19	20	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00072	orbit:00072	Rolzen	Mack	book_copresence	mixed	19	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00073	orbit:00073	Rolzen	Neith	book_copresence	mixed	19	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00074	orbit:00074	Rylos (Rylos Vayne Johnson)	Neith	book_copresence	mixed	19	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00075	orbit:00075	Xethrolund	Neith	book_copresence	mixed	19	19	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00076	orbit:00076	Daisy May	Dervish	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00077	orbit:00077	Daisy May	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00078	orbit:00078	Dervish	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00079	orbit:00079	Mack	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00080	orbit:00080	Majiskii	Dervish	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00081	orbit:00081	Majiskii	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00082	orbit:00082	Neith	Daisy May	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00083	orbit:00083	Neith	Dervish	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00084	orbit:00084	Neith	Mack	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00085	orbit:00085	Neith	Majiskii	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00086	orbit:00086	Neith	Rolzen	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00087	orbit:00087	Neith	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00088	orbit:00088	Neith	Xethrolund	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00089	orbit:00089	Pip (Indalwin Willowjayce)	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00090	orbit:00090	Rolzen	Dervish	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00091	orbit:00091	Rolzen	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00092	orbit:00092	Rylos (Rylos Vayne Johnson)	Dervish	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00093	orbit:00093	Rylos (Rylos Vayne Johnson)	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate
+momentum:00094	orbit:00094	Xethrolund	Ursula	book_copresence	mixed	24	24	medium	yes	yes	yes	yes	no_generated_prose	source-backed relationship function only; no invented fate

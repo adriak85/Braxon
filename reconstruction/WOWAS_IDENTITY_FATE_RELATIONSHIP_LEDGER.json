@@ -1,0 +1,49 @@
+{
+  "character_issues": [],
+  "fate_policy": {
+    "pip_lovers_rule": "Only Rylos Vayne Johnson among Pip\u2019s lovers dies, and that death occurs at the end; all other fates require explicit source evidence.",
+    "survivors": "must be read from final-book/source rules, not guessed",
+    "universal_mortality_inference": "forbidden"
+  },
+  "identity_locks": {
+    "pip": {
+      "canonical_id": "wowas::pip_indalwin_willowjayce",
+      "canonical_name": "Indalwin On\u2019Rylder Willowjayce",
+      "deprecated_variants": [
+        "Pip-no-path",
+        "any synthetic replacement not explicitly source-mapped"
+      ],
+      "invariants": [
+        "iconic leader, not martyr",
+        "best available action under uncertainty",
+        "rebuild through love and life"
+      ],
+      "nickname": "Pip"
+    },
+    "rylos": {
+      "canonical_id": "wowas::rylos_vayne_johnson",
+      "canonical_name": "Rylos Vayne Johnson",
+      "deprecated_variants": [
+        "Riledge",
+        "Boojay",
+        "any spelling or alias not explicitly retained as historical evidence"
+      ],
+      "invariants": [
+        "accountability never redemption",
+        "Pip lover whose death occurs at the end under the explicit endgame rule"
+      ]
+    }
+  },
+  "named_character_count": 50,
+  "relationship_count": 94,
+  "relationship_policy": [
+    "Every major relationship must alter state, carry emotional consequence, retain counter-agency, and persist through the rolling ledger.",
+    "Momentous does not mean uniformly tragic; consequence may be care, refusal, repair, betrayal, revelation, or changed world practice.",
+    "No generated prose is created by this ledger."
+  ],
+  "schema": "wowas.identity.fate.relationship.ledger.v1",
+  "source_hashes": {
+    "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv": "a36f8837497889f702d16a6c174ef089e9a4317baf3c99bda0d75ec6f702020b",
+    "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv": "011f2e24dfc0f2531a50b9a098e971ccfef74bb47f6e1f3438d5a7adc2a2a640"
+  }
+}
