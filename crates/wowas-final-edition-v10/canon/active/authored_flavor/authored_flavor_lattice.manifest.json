@@ -1,0 +1,25 @@
+{
+  "character_rows": 50,
+  "dynamic_rows": 94,
+  "invariants": [
+    "canonical IDs remain stable",
+    "aliases remain explicit",
+    "voice/pressure/dynamic fields are separate from identity",
+    "relationship rows do not overwrite character rows",
+    "no generated prose is present"
+  ],
+  "policy": "Original authored character identity and flavor are preserved. Generated registries may consume this lattice as constraints, but this stage does not generate prose or rewrite originals.",
+  "schema": "wowas.authored.flavor.dynamics.lattice.v1",
+  "source_files": [
+    "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/06_CHARACTER_REGISTRY.json",
+    "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
+    "crates/wowas-final-edition-v10/canon/wowas_orbit_file_v2.tsv",
+    "crates/wowas-final-edition-v10/canon/wowas_protected_support_cast_v7.tsv"
+  ],
+  "source_hashes": {
+    "crates/wowas-final-edition-v10/canon/canonical_story_tree/characters/06_CHARACTER_REGISTRY.json": "69246bd4cf8299c5b93e6232ba60dcfa92140ecfee8b42b75ead0f9552860e42",
+    "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv": "3af7c2304985cfa25728f0975853f3639d5add779461756dca4a8c6ab425b4ab",
+    "crates/wowas-final-edition-v10/canon/wowas_orbit_file_v2.tsv": "e8a5d677babe50968769699bdc910a79a3d6a59994d17e560b5f7719633abcc9",
+    "crates/wowas-final-edition-v10/canon/wowas_protected_support_cast_v7.tsv": "201bf2a03dfffefa436951b5b3e10f0617c7878605574556473c6c2976065d67"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "diversity_policy": "Repeated procedural roles are not treated as distinct authored personalities. Scene realization must vary behavior using source-backed voice, pressure, relationship, book state, and event context; no prose is emitted here.",
+  "identity_policy": "Generated rows retain generated IDs; authored canonical IDs are constraints only.",
+  "prose_created": false,
+  "required_checks": [
+    "record_id over scene_id for output naming",
+    "tone/style gate before prose promotion",
+    "rolling state ledger across books",
+    "no identity overwrite",
+    "no generated prose"
+  ],
+  "role_counts": {
+    "bookbinder": 250,
+    "bridge keeper": 250,
+    "cavern farmer": 250,
+    "cellar cook": 250,
+    "corridor child": 250,
+    "faction runner": 250,
+    "field healer": 250,
+    "garden watcher": 250,
+    "glass forge worker": 250,
+    "glyph apprentice": 250,
+    "map seller": 250,
+    "market singer": 250,
+    "orchard guard": 250,
+    "ripper survivor": 250,
+    "sonomancy listener": 250,
+    "stone archivist": 250,
+    "threshold mason": 250,
+    "triage helper": 250,
+    "tunnel witness": 250,
+    "wolf-road scout": 250
+  },
+  "rows": 5000,
+  "schema": "wowas.generated.character.flavor.constraints.v1",
+  "source_authored_lattice": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_character_flavor_lattice.tsv",
+  "source_dynamics_lattice": "crates/wowas-final-edition-v10/canon/active/authored_flavor/authored_dynamics_lattice.tsv",
+  "source_generated_registry": "crates/wowas-final-edition-v10/canon/active/generated/wowas_generated_characters_5000.tsv",
+  "unmapped_source_anchor_rows": 2915
+}
