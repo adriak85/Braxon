@@ -1,17 +1,17 @@
 {
   "schema": "braxon.validation_campaign_scorecard.v1",
   "branch": "reconstruction",
-  "commit": "0fc2434fecc6bc94bb5c4a2782ffd380539b7c56",
-  "origin_reconstruction": "0fc2434fecc6bc94bb5c4a2782ffd380539b7c56",
+  "commit": "e752803d0e701b56d6a1d1a8308904407056b539",
+  "origin_reconstruction": "e752803d0e701b56d6a1d1a8308904407056b539",
   "gate_count": 45,
   "status_counts": {
-    "MEASURED": 24,
+    "MEASURED": 25,
     "THEORETICAL": 8,
     "PROVEN": 1,
-    "BLOCKED": 12
+    "BLOCKED": 11
   },
-  "executed_or_evidenced_gate_count": 25,
-  "benchmark_coverage_percent": 55.56,
+  "executed_or_evidenced_gate_count": 26,
+  "benchmark_coverage_percent": 57.78,
   "architecture_completeness_percent": null,
   "native_semantic_coverage_percent": null,
   "execution_coverage_percent": null,
@@ -33,8 +33,7 @@
     39,
     40,
     42,
-    44,
-    45
+    44
   ],
   "remaining_theoretical_gate_ids": [
     6,

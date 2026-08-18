@@ -6,11 +6,11 @@ This scorecard is generated from `validation_campaign_matrix.json`. It classifie
 |---|---:|
 | Campaign gates | 45 |
 | Proven | 1 |
-| Measured | 24 |
+| Measured | 25 |
 | Equivalent | 0 |
-| Blocked | 12 |
+| Blocked | 11 |
 | Theoretical | 8 |
-| Executed or evidenced gate coverage | 55.56% |
+| Executed or evidenced gate coverage | 57.78% |
 | Physical validation | BLOCKED |
 | Guile migration | BLOCKED |
 | Zig migration | BLOCKED |
@@ -68,12 +68,12 @@ The current repository evidence establishes a coherent native execution mechanis
 | 42 | Global WOWAS audit | BLOCKED | audit/compile_wowas_scene_payload.py | Payload/compiler controls exist; universal subsystem compliance is not completed. |
 | 43 | Global semantic-authority audit | MEASURED | crates/nsq-core/src/dynamic_parameter.rs; crates/braxon-core/src/riemann_semantic_reflexor.rs | Native authority boundaries are tested in covered paths; universal audit remains incomplete. |
 | 44 | Universal migration audit | BLOCKED | audit/expanded/overlap_classification.txt | Historical disposition inventory exists; every migration gate is not proven complete. |
-| 45 | Full-system clean-room build | BLOCKED | — | Fresh clone/build/package gate not executed in this campaign. |
+| 45 | Full-system clean-room build | MEASURED | audit/run_clean_room_validation.sh; audit/full_workspace_clean_room_result.json | Fresh sparse reconstruction clone under Rust 1.96.0; cargo test --workspace --all-targets passed 139 tests; release packaging and physical acceptance remain outside this gate. |
 
 ## Reproducibility
 
 | Field | Value |
 |---|---|
 | Branch | reconstruction |
-| Commit | 0fc2434fecc6bc94bb5c4a2782ffd380539b7c56 |
-| Origin commit | 0fc2434fecc6bc94bb5c4a2782ffd380539b7c56 |
+| Commit | e752803d0e701b56d6a1d1a8308904407056b539 |
+| Origin commit | e752803d0e701b56d6a1d1a8308904407056b539 |
