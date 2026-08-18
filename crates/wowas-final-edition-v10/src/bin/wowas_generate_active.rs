@@ -151,25 +151,72 @@ fn item<'a>(items: &'a [&str], idx: usize, salt: usize) -> &'a str {
 
 fn identity_for(i: usize) -> (&'static str, &'static str, &'static str) {
     match i % 100 {
-        0..=44 => ("gay_male", "he/him", "gay male identity is ordinary life context"),
-        45..=54 => ("bisexual_male", "he/him", "bisexual identity is ordinary life context"),
-        55..=62 => ("pansexual_male", "he/they", "pansexual identity is ordinary life context"),
-        63..=69 => ("trans_gay_male", "he/him", "trans gay male identity is ordinary life context"),
-        70..=77 => ("lesbian", "she/her", "lesbian identity is ordinary life context"),
-        78..=84 => ("bisexual", "she/they", "bisexual identity is ordinary life context"),
-        85..=89 => ("queer_nonbinary", "they/them", "queer nonbinary identity is ordinary life context"),
-        _ => ("straight_ally", "varied", "sexuality is not narratively exceptional"),
+        0..=44 => (
+            "gay_male",
+            "he/him",
+            "gay male identity is ordinary life context",
+        ),
+        45..=54 => (
+            "bisexual_male",
+            "he/him",
+            "bisexual identity is ordinary life context",
+        ),
+        55..=62 => (
+            "pansexual_male",
+            "he/they",
+            "pansexual identity is ordinary life context",
+        ),
+        63..=69 => (
+            "trans_gay_male",
+            "he/him",
+            "trans gay male identity is ordinary life context",
+        ),
+        70..=77 => (
+            "lesbian",
+            "she/her",
+            "lesbian identity is ordinary life context",
+        ),
+        78..=84 => (
+            "bisexual",
+            "she/they",
+            "bisexual identity is ordinary life context",
+        ),
+        85..=89 => (
+            "queer_nonbinary",
+            "they/them",
+            "queer nonbinary identity is ordinary life context",
+        ),
+        _ => (
+            "straight_ally",
+            "varied",
+            "sexuality is not narratively exceptional",
+        ),
     }
 }
 
 fn adult_role_for(identity: &str, i: usize) -> (&'static str, &'static str) {
-    if !matches!(identity, "gay_male" | "bisexual_male" | "pansexual_male" | "trans_gay_male") {
-        return ("not_specified", "adult role is not required for this record");
+    if !matches!(
+        identity,
+        "gay_male" | "bisexual_male" | "pansexual_male" | "trans_gay_male"
+    ) {
+        return (
+            "not_specified",
+            "adult role is not required for this record",
+        );
     }
     match i % 100 {
-        0..=69 => ("top_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
-        70..=89 => ("versatile_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
-        _ => ("bottom_role_preference", "adult role preference is ordinary private context and is not unusual in prose"),
+        0..=69 => (
+            "top_role_preference",
+            "adult role preference is ordinary private context and is not unusual in prose",
+        ),
+        70..=89 => (
+            "versatile_role_preference",
+            "adult role preference is ordinary private context and is not unusual in prose",
+        ),
+        _ => (
+            "bottom_role_preference",
+            "adult role preference is ordinary private context and is not unusual in prose",
+        ),
     }
 }
 

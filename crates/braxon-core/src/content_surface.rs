@@ -53,7 +53,10 @@ impl FactRecord {
         if self.schema != FACT_SCHEMA {
             return Err("fact schema mismatch".to_string());
         }
-        if self.fact_id.trim().is_empty() || self.statement.trim().is_empty() || self.source_uri.trim().is_empty() {
+        if self.fact_id.trim().is_empty()
+            || self.statement.trim().is_empty()
+            || self.source_uri.trim().is_empty()
+        {
             return Err("fact requires an id, statement, and source URI".to_string());
         }
         if self.invalidated {
@@ -70,7 +73,12 @@ impl FactRecord {
     }
 }
 
-pub fn daydream_frame(workload_id: &str, step: u32, prompt: &str, system_intent_pending: bool) -> Result<DaydreamFrame, String> {
+pub fn daydream_frame(
+    workload_id: &str,
+    step: u32,
+    prompt: &str,
+    system_intent_pending: bool,
+) -> Result<DaydreamFrame, String> {
     if workload_id.trim().is_empty() || prompt.trim().is_empty() {
         return Err("daydream frame requires a workload id and prompt".to_string());
     }
@@ -91,14 +99,29 @@ mod tests {
 
     #[test]
     fn narrative_is_not_a_fact() {
-        let narrative = NarrativeRecord { schema: NARRATIVE_SCHEMA.to_string(), record_id: "willow-1".to_string(), title: "A river remembers".to_string(), text: "A fictional image".to_string(), source: "wowas_narrative".to_string(), version: "1".to_string() };
+        let narrative = NarrativeRecord {
+            schema: NARRATIVE_SCHEMA.to_string(),
+            record_id: "willow-1".to_string(),
+            title: "A river remembers".to_string(),
+            text: "A fictional image".to_string(),
+            source: "wowas_narrative".to_string(),
+            version: "1".to_string(),
+        };
         narrative.validate().unwrap();
         assert!(FactRecord::from_narrative(&narrative).is_err());
     }
 
     #[test]
     fn valid_fact_requires_provenance() {
-        let fact = FactRecord { schema: FACT_SCHEMA.to_string(), fact_id: "rust-version".to_string(), statement: "The workspace declares a Rust toolchain".to_string(), source_uri: "file:///home/ubuntu/Braxon/rust-toolchain.toml".to_string(), retrieved_at: "2026-08-17".to_string(), confidence: "high".to_string(), invalidated: false };
+        let fact = FactRecord {
+            schema: FACT_SCHEMA.to_string(),
+            fact_id: "rust-version".to_string(),
+            statement: "The workspace declares a Rust toolchain".to_string(),
+            source_uri: "file:///home/ubuntu/Braxon/rust-toolchain.toml".to_string(),
+            retrieved_at: "2026-08-17".to_string(),
+            confidence: "high".to_string(),
+            invalidated: false,
+        };
         assert!(fact.validate().is_ok());
     }
 

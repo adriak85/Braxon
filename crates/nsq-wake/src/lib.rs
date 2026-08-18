@@ -24,7 +24,11 @@ pub struct WakeDispatch {
 }
 
 impl WakeDispatch {
-    pub fn build(stamp: WakeStamp, framework: WakeFramework, hydrated_symbols: Vec<String>) -> Self {
+    pub fn build(
+        stamp: WakeStamp,
+        framework: WakeFramework,
+        hydrated_symbols: Vec<String>,
+    ) -> Self {
         let ready = framework.precompiled && !hydrated_symbols.is_empty();
         Self {
             stamp,

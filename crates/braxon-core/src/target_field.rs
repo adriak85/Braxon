@@ -128,7 +128,8 @@ impl TargetField {
             / self.coordinates.len() as f64;
         let resource_pressure = gradient[0].clamp(0.0, 1.0);
         let information_pressure = gradient[1].clamp(0.0, 1.0);
-        let load_shed_fraction = (resource_pressure.max(information_pressure) * distance).clamp(0.0, 1.0);
+        let load_shed_fraction =
+            (resource_pressure.max(information_pressure) * distance).clamp(0.0, 1.0);
         Ok(TargetFieldActuation {
             resource_pressure,
             information_pressure,
@@ -156,7 +157,10 @@ mod tests {
 
     #[test]
     fn target_field_persists_and_reloads() {
-        let suffix = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_nanos();
+        let suffix = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
         let root = std::env::temp_dir().join(format!("braxon-target-field-{suffix}"));
         let field = TargetField::default();
         field.persist(&root).unwrap();

@@ -77,24 +77,47 @@ pub struct KineticReflexor {
 }
 
 impl Default for ReflexorPhase {
-    fn default() -> Self { Self::Publish }
+    fn default() -> Self {
+        Self::Publish
+    }
 }
 
 impl Default for Watermark {
-    fn default() -> Self { Self { family: WATERMARK_FAMILY.to_string(), generation: 0, phase: ReflexorPhase::Publish, state_hash: stable_hash(&[]) } }
+    fn default() -> Self {
+        Self {
+            family: WATERMARK_FAMILY.to_string(),
+            generation: 0,
+            phase: ReflexorPhase::Publish,
+            state_hash: stable_hash(&[]),
+        }
+    }
 }
 
 impl KineticReflexor {
-    pub fn new() -> Self { Self::default() }
+    pub fn new() -> Self {
+        Self::default()
+    }
 
-    pub fn publish(&mut self, values: impl IntoIterator<Item = BusValue>) -> Result<ReflexorReport, String> {
+    pub fn publish(
+        &mut self,
+        values: impl IntoIterator<Item = BusValue>,
+    ) -> Result<ReflexorReport, String> {
         self.require_phase(ReflexorPhase::Publish)?;
         let mut next = BTreeMap::new();
         for value in values {
-            if value.key.trim().is_empty() || value.value_hash.trim().is_empty() || value.byte_len == 0 { return Err("bus values require key, hash, and nonzero byte length".to_string()); }
-            if next.insert(value.key.clone(), value).is_some() { return Err("duplicate bus value key".to_string()); }
+            if value.key.trim().is_empty()
+                || value.value_hash.trim().is_empty()
+                || value.byte_len == 0
+            {
+                return Err("bus values require key, hash, and nonzero byte length".to_string());
+            }
+            if next.insert(value.key.clone(), value).is_some() {
+                return Err("duplicate bus value key".to_string());
+            }
         }
-        if next.is_empty() { return Err("publish requires at least one bus value".to_string()); }
+        if next.is_empty() {
+            return Err("publish requires at least one bus value".to_string());
+        }
         self.bus = next;
         self.generation = self.generation.saturating_add(1);
         self.phase = ReflexorPhase::Reconcile;
@@ -104,59 +127,172 @@ impl KineticReflexor {
 
     pub fn reconcile(&mut self) -> Result<ReflexorReport, String> {
         self.require_phase(ReflexorPhase::Reconcile)?;
-        if self.bus.is_empty() { return Err("cannot reconcile an empty bus".to_string()); }
+        if self.bus.is_empty() {
+            return Err("cannot reconcile an empty bus".to_string());
+        }
         self.reconciled = self.bus.clone();
-        self.pending_delta = self.reconciled.values().map(|value| ValueDelta { key: value.key.clone(), class: value.class, previous_hash: self.local_hardware.get(&value.key).map(|old| old.value_hash.clone()), next_hash: value.value_hash.clone(), byte_len: value.byte_len }).filter(|delta| delta.previous_hash.as_deref() != Some(delta.next_hash.as_str())).collect();
+        self.pending_delta = self
+            .reconciled
+            .values()
+            .map(|value| ValueDelta {
+                key: value.key.clone(),
+                class: value.class,
+                previous_hash: self
+                    .local_hardware
+                    .get(&value.key)
+                    .map(|old| old.value_hash.clone()),
+                next_hash: value.value_hash.clone(),
+                byte_len: value.byte_len,
+            })
+            .filter(|delta| delta.previous_hash.as_deref() != Some(delta.next_hash.as_str()))
+            .collect();
         self.phase = ReflexorPhase::DeltaCommit;
-        self.watermark = self.make_watermark(ReflexorPhase::DeltaCommit, map_hash(&self.reconciled));
+        self.watermark =
+            self.make_watermark(ReflexorPhase::DeltaCommit, map_hash(&self.reconciled));
         Ok(self.report(false, "reconciled bus state into the system view"))
     }
 
-    pub fn pending_delta(&self) -> &[ValueDelta] { &self.pending_delta }
+    pub fn pending_delta(&self) -> &[ValueDelta] {
+        &self.pending_delta
+    }
 
     pub fn commit_hardware(&mut self, ack: HardwareWriteAck) -> Result<ReflexorReport, String> {
         self.require_phase(ReflexorPhase::DeltaCommit)?;
-        if ack.adapter_id.trim().is_empty() { return Err("hardware adapter identity is required".to_string()); }
-        if ack.generation != self.generation { return Err("stale hardware acknowledgement rejected by watermark".to_string()); }
-        let expected: Vec<String> = self.pending_delta.iter().map(|delta| delta.key.clone()).collect();
-        if ack.accepted && ack.written_keys != expected { return Err("hardware acknowledgement does not match the pending delta".to_string()); }
-        if !ack.accepted { return Err("hardware adapter rejected the delta; refresh cycle remains blocked".to_string()); }
-        for delta in &self.pending_delta { if let Some(value) = self.reconciled.get(&delta.key) { self.local_hardware.insert(delta.key.clone(), value.clone()); } }
+        if ack.adapter_id.trim().is_empty() {
+            return Err("hardware adapter identity is required".to_string());
+        }
+        if ack.generation != self.generation {
+            return Err("stale hardware acknowledgement rejected by watermark".to_string());
+        }
+        let expected: Vec<String> = self
+            .pending_delta
+            .iter()
+            .map(|delta| delta.key.clone())
+            .collect();
+        if ack.accepted && ack.written_keys != expected {
+            return Err("hardware acknowledgement does not match the pending delta".to_string());
+        }
+        if !ack.accepted {
+            return Err(
+                "hardware adapter rejected the delta; refresh cycle remains blocked".to_string(),
+            );
+        }
+        for delta in &self.pending_delta {
+            if let Some(value) = self.reconciled.get(&delta.key) {
+                self.local_hardware.insert(delta.key.clone(), value.clone());
+            }
+        }
         self.pending_delta.clear();
         self.phase = ReflexorPhase::Publish;
         self.generation = self.generation.saturating_add(1);
-        self.watermark = self.make_watermark(ReflexorPhase::Publish, map_hash(&self.local_hardware));
-        Ok(self.report(true, "hardware delta acknowledged; committed state is the next refresh baseline"))
+        self.watermark =
+            self.make_watermark(ReflexorPhase::Publish, map_hash(&self.local_hardware));
+        Ok(self.report(
+            true,
+            "hardware delta acknowledged; committed state is the next refresh baseline",
+        ))
     }
 
-    pub fn phase(&self) -> ReflexorPhase { self.phase }
-    pub fn generation(&self) -> u64 { self.generation }
-    pub fn watermark(&self) -> &Watermark { &self.watermark }
+    pub fn phase(&self) -> ReflexorPhase {
+        self.phase
+    }
+    pub fn generation(&self) -> u64 {
+        self.generation
+    }
+    pub fn watermark(&self) -> &Watermark {
+        &self.watermark
+    }
 
-    fn require_phase(&self, expected: ReflexorPhase) -> Result<(), String> { if self.phase == expected { Ok(()) } else { Err(format!("reflexor phase mismatch: expected {expected:?}, actual {:?}", self.phase)) } }
-    fn make_watermark(&self, phase: ReflexorPhase, state_hash: String) -> Watermark { Watermark { family: WATERMARK_FAMILY.to_string(), generation: self.generation, phase, state_hash } }
-    fn report(&self, acknowledged: bool, reason: &str) -> ReflexorReport { ReflexorReport { schema: KINETIC_REFLEXOR_SCHEMA.to_string(), phase: self.phase, generation: self.generation, watermark: self.watermark.clone(), bus_values: self.bus.len(), reconciled_values: self.reconciled.len(), delta_values: self.pending_delta.len(), hardware_write_acknowledged: acknowledged, reason: reason.to_string() } }
+    fn require_phase(&self, expected: ReflexorPhase) -> Result<(), String> {
+        if self.phase == expected {
+            Ok(())
+        } else {
+            Err(format!(
+                "reflexor phase mismatch: expected {expected:?}, actual {:?}",
+                self.phase
+            ))
+        }
+    }
+    fn make_watermark(&self, phase: ReflexorPhase, state_hash: String) -> Watermark {
+        Watermark {
+            family: WATERMARK_FAMILY.to_string(),
+            generation: self.generation,
+            phase,
+            state_hash,
+        }
+    }
+    fn report(&self, acknowledged: bool, reason: &str) -> ReflexorReport {
+        ReflexorReport {
+            schema: KINETIC_REFLEXOR_SCHEMA.to_string(),
+            phase: self.phase,
+            generation: self.generation,
+            watermark: self.watermark.clone(),
+            bus_values: self.bus.len(),
+            reconciled_values: self.reconciled.len(),
+            delta_values: self.pending_delta.len(),
+            hardware_write_acknowledged: acknowledged,
+            reason: reason.to_string(),
+        }
+    }
 }
 
-fn map_hash(values: &BTreeMap<String, BusValue>) -> String { stable_hash(&values.values().flat_map(|value| [value.key.as_str(), value.value_hash.as_str()]).collect::<Vec<_>>()) }
-fn stable_hash(parts: &[&str]) -> String { let mut acc = 0xcbf29ce484222325_u128; for part in parts { for byte in part.as_bytes() { acc ^= *byte as u128; acc = acc.wrapping_mul(0x100000001b3); } } format!("{acc:032x}") }
+fn map_hash(values: &BTreeMap<String, BusValue>) -> String {
+    stable_hash(
+        &values
+            .values()
+            .flat_map(|value| [value.key.as_str(), value.value_hash.as_str()])
+            .collect::<Vec<_>>(),
+    )
+}
+fn stable_hash(parts: &[&str]) -> String {
+    let mut acc = 0xcbf29ce484222325_u128;
+    for part in parts {
+        for byte in part.as_bytes() {
+            acc ^= *byte as u128;
+            acc = acc.wrapping_mul(0x100000001b3);
+        }
+    }
+    format!("{acc:032x}")
+}
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    fn value(key: &str, hash: &str, class: ValueClass) -> BusValue { BusValue { key: key.to_string(), class, value_hash: hash.to_string(), byte_len: 64 } }
+    fn value(key: &str, hash: &str, class: ValueClass) -> BusValue {
+        BusValue {
+            key: key.to_string(),
+            class,
+            value_hash: hash.to_string(),
+            byte_len: 64,
+        }
+    }
 
     #[test]
     fn three_phase_cycle_commits_only_changed_values_and_refreshes() {
         let mut reflexor = KineticReflexor::new();
-        reflexor.publish([value("layer.0", "a", ValueClass::Parameter), value("kv.0", "k1", ValueClass::KvCache)]).unwrap();
+        reflexor
+            .publish([
+                value("layer.0", "a", ValueClass::Parameter),
+                value("kv.0", "k1", ValueClass::KvCache),
+            ])
+            .unwrap();
         reflexor.reconcile().unwrap();
         assert_eq!(reflexor.pending_delta().len(), 2);
-        let ack = HardwareWriteAck { adapter_id: "approved-test-adapter".to_string(), generation: reflexor.generation(), accepted: true, written_keys: vec!["kv.0".to_string(), "layer.0".to_string()] };
+        let ack = HardwareWriteAck {
+            adapter_id: "approved-test-adapter".to_string(),
+            generation: reflexor.generation(),
+            accepted: true,
+            written_keys: vec!["kv.0".to_string(), "layer.0".to_string()],
+        };
         reflexor.commit_hardware(ack).unwrap();
         assert_eq!(reflexor.phase(), ReflexorPhase::Publish);
-        reflexor.publish([value("layer.0", "a", ValueClass::Parameter), value("kv.0", "k2", ValueClass::KvCache)]).unwrap();
+        reflexor
+            .publish([
+                value("layer.0", "a", ValueClass::Parameter),
+                value("kv.0", "k2", ValueClass::KvCache),
+            ])
+            .unwrap();
         reflexor.reconcile().unwrap();
         assert_eq!(reflexor.pending_delta().len(), 1);
         assert_eq!(reflexor.pending_delta()[0].key, "kv.0");
@@ -165,11 +301,23 @@ mod tests {
     #[test]
     fn stale_or_unacknowledged_hardware_writes_fail_closed() {
         let mut reflexor = KineticReflexor::new();
-        reflexor.publish([value("fact.0", "f1", ValueClass::Fact)]).unwrap();
+        reflexor
+            .publish([value("fact.0", "f1", ValueClass::Fact)])
+            .unwrap();
         reflexor.reconcile().unwrap();
-        let stale = HardwareWriteAck { adapter_id: "adapter".to_string(), generation: 0, accepted: true, written_keys: vec!["fact.0".to_string()] };
+        let stale = HardwareWriteAck {
+            adapter_id: "adapter".to_string(),
+            generation: 0,
+            accepted: true,
+            written_keys: vec!["fact.0".to_string()],
+        };
         assert!(reflexor.commit_hardware(stale).is_err());
-        let rejected = HardwareWriteAck { adapter_id: "adapter".to_string(), generation: reflexor.generation(), accepted: false, written_keys: vec![] };
+        let rejected = HardwareWriteAck {
+            adapter_id: "adapter".to_string(),
+            generation: reflexor.generation(),
+            accepted: false,
+            written_keys: vec![],
+        };
         assert!(reflexor.commit_hardware(rejected).is_err());
         assert_eq!(reflexor.phase(), ReflexorPhase::DeltaCommit);
     }
@@ -177,6 +325,11 @@ mod tests {
     #[test]
     fn duplicate_publish_keys_are_rejected() {
         let mut reflexor = KineticReflexor::new();
-        assert!(reflexor.publish([value("x", "a", ValueClass::Weight), value("x", "b", ValueClass::Weight)]).is_err());
+        assert!(reflexor
+            .publish([
+                value("x", "a", ValueClass::Weight),
+                value("x", "b", ValueClass::Weight)
+            ])
+            .is_err());
     }
 }

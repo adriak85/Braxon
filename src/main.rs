@@ -6,8 +6,8 @@ use nsq_core::{
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
-    CouncilSurface, CouncilTen, NsqIntent, NsqNativeBus, TargetField, STAMP_WAKE_COUNCIL_TEN,
-    NSQ_NATIVE_INTENT_SCHEMA,
+    CouncilSurface, CouncilTen, NsqIntent, NsqNativeBus, TargetField, NSQ_NATIVE_INTENT_SCHEMA,
+    STAMP_WAKE_COUNCIL_TEN,
 };
 
 #[derive(Parser)]
@@ -79,9 +79,27 @@ enum RuntimeCommand {
 
 #[derive(Subcommand)]
 enum ContentCommand {
-    Narrative { id: String, title: String, text: String },
-    Fact { id: String, statement: String, source_uri: String, retrieved_at: String, #[arg(long, default_value = "medium")] confidence: String },
-    Daydream { workload_id: String, prompt: String, #[arg(long, default_value_t = 0)] step: u32, #[arg(long)] system_intent_pending: bool },
+    Narrative {
+        id: String,
+        title: String,
+        text: String,
+    },
+    Fact {
+        id: String,
+        statement: String,
+        source_uri: String,
+        retrieved_at: String,
+        #[arg(long, default_value = "medium")]
+        confidence: String,
+    },
+    Daydream {
+        workload_id: String,
+        prompt: String,
+        #[arg(long, default_value_t = 0)]
+        step: u32,
+        #[arg(long)]
+        system_intent_pending: bool,
+    },
 }
 
 #[derive(Subcommand)]
@@ -459,19 +477,56 @@ fn print_runtime(command: RuntimeCommand) {
 fn print_content(command: ContentCommand) {
     match command {
         ContentCommand::Narrative { id, title, text } => {
-            let record = BRAXON_core::NarrativeRecord { schema: BRAXON_core::NARRATIVE_SCHEMA.to_string(), record_id: id, title, text, source: "wowas_narrative".to_string(), version: "1".to_string() };
-            if let Err(err) = record.validate() { eprintln!("narrative_validation_error={err}"); std::process::exit(1); }
+            let record = BRAXON_core::NarrativeRecord {
+                schema: BRAXON_core::NARRATIVE_SCHEMA.to_string(),
+                record_id: id,
+                title,
+                text,
+                source: "wowas_narrative".to_string(),
+                version: "1".to_string(),
+            };
+            if let Err(err) = record.validate() {
+                eprintln!("narrative_validation_error={err}");
+                std::process::exit(1);
+            }
             print_json(&record);
         }
-        ContentCommand::Fact { id, statement, source_uri, retrieved_at, confidence } => {
-            let record = BRAXON_core::FactRecord { schema: BRAXON_core::FACT_SCHEMA.to_string(), fact_id: id, statement, source_uri, retrieved_at, confidence, invalidated: false };
-            if let Err(err) = record.validate() { eprintln!("fact_validation_error={err}"); std::process::exit(1); }
+        ContentCommand::Fact {
+            id,
+            statement,
+            source_uri,
+            retrieved_at,
+            confidence,
+        } => {
+            let record = BRAXON_core::FactRecord {
+                schema: BRAXON_core::FACT_SCHEMA.to_string(),
+                fact_id: id,
+                statement,
+                source_uri,
+                retrieved_at,
+                confidence,
+                invalidated: false,
+            };
+            if let Err(err) = record.validate() {
+                eprintln!("fact_validation_error={err}");
+                std::process::exit(1);
+            }
             print_json(&record);
         }
-        ContentCommand::Daydream { workload_id, prompt, step, system_intent_pending } => match BRAXON_core::daydream_frame(&workload_id, step, &prompt, system_intent_pending) {
-            Ok(frame) => print_json(&frame),
-            Err(err) => { eprintln!("daydream_validation_error={err}"); std::process::exit(1); }
-        },
+        ContentCommand::Daydream {
+            workload_id,
+            prompt,
+            step,
+            system_intent_pending,
+        } => {
+            match BRAXON_core::daydream_frame(&workload_id, step, &prompt, system_intent_pending) {
+                Ok(frame) => print_json(&frame),
+                Err(err) => {
+                    eprintln!("daydream_validation_error={err}");
+                    std::process::exit(1);
+                }
+            }
+        }
     }
 }
 
@@ -501,7 +556,11 @@ fn print_bus(thought: Vec<String>) {
     let thought = thought.join(" ");
     let mut nsq_bus = match NsqNativeBus::new((0..10).map(|index| CouncilSurface {
         surface_id: format!("surface-{index}"),
-        role: if index < 6 { "brain".to_string() } else { "sensory".to_string() },
+        role: if index < 6 {
+            "brain".to_string()
+        } else {
+            "sensory".to_string()
+        },
         address_prefix: format!("council/{index}/"),
         active: index == 0,
     })) {
@@ -881,10 +940,18 @@ fn ensure_citadel699_current_manifests(root: &std::path::Path) -> Result<(), Str
         .and_then(serde_json::Value::as_array)
         .ok_or("council-ten default_stack is missing")?
         .iter()
-        .map(|value| value.as_str().map(str::to_owned).ok_or("model name is not a string"))
+        .map(|value| {
+            value
+                .as_str()
+                .map(str::to_owned)
+                .ok_or("model name is not a string")
+        })
         .collect::<Result<Vec<_>, _>>()?;
     if models.len() != 10 {
-        return Err(format!("council-ten default_stack must contain 10 models, got {}", models.len()));
+        return Err(format!(
+            "council-ten default_stack must contain 10 models, got {}",
+            models.len()
+        ));
     }
     let required_model_count = config
         .get("required_model_count")
@@ -899,11 +966,14 @@ fn ensure_citadel699_current_manifests(root: &std::path::Path) -> Result<(), Str
         .and_then(serde_json::Value::as_u64)
         .ok_or("sensory_body_count is missing")?;
     if (required_model_count, brain_model_count, sensory_body_count) != (10, 6, 4) {
-        return Err("tracked council-ten counts do not satisfy the native ten-surface contract".into());
+        return Err(
+            "tracked council-ten counts do not satisfy the native ten-surface contract".into(),
+        );
     }
     let source_manifest = "config/nsq/braxon_council_ten_stack.json";
     let nsq_surface = "apps/nsq/braxon_council_ten_stack.nsq";
-    let materialization = "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json";
+    let materialization =
+        "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json";
     let current_dir = root.join("state/nsq/citadel699/current");
     std::fs::create_dir_all(&current_dir).map_err(|err| err.to_string())?;
     let sensory_bodies = serde_json::json!({
@@ -958,8 +1028,11 @@ fn ensure_citadel699_current_manifests(root: &std::path::Path) -> Result<(), Str
     let current_materialization = current_dir.join("materialization.json");
     if !current_materialization.exists() {
         #[cfg(unix)]
-        std::os::unix::fs::symlink("../rebuilds/20260428_065519/council_ten.materialization.json", &current_materialization)
-            .map_err(|err| err.to_string())?;
+        std::os::unix::fs::symlink(
+            "../rebuilds/20260428_065519/council_ten.materialization.json",
+            &current_materialization,
+        )
+        .map_err(|err| err.to_string())?;
         #[cfg(not(unix))]
         std::fs::copy(root.join(materialization), &current_materialization)
             .map(|_| ())
@@ -970,7 +1043,9 @@ fn ensure_citadel699_current_manifests(root: &std::path::Path) -> Result<(), Str
 
 fn write_json_if_changed(path: &std::path::Path, value: &serde_json::Value) -> Result<(), String> {
     let rendered = serde_json::to_string_pretty(value).map_err(|err| err.to_string())? + "\n";
-    let unchanged = std::fs::read_to_string(path).map(|existing| existing == rendered).unwrap_or(false);
+    let unchanged = std::fs::read_to_string(path)
+        .map(|existing| existing == rendered)
+        .unwrap_or(false);
     if !unchanged {
         std::fs::write(path, rendered).map_err(|err| err.to_string())?;
     }

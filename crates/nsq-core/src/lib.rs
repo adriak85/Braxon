@@ -1,19 +1,32 @@
 use serde::{Deserialize, Serialize};
 use std::fmt;
 
+pub mod artifact_intent;
 pub mod blaixe;
 pub mod blaixe_bus;
+pub mod council_federation;
 pub mod dynamic_parameter;
 pub mod initiative_cluster;
+pub mod initiative_thought;
 pub mod native_reflexor;
 pub mod native_runtime;
 pub mod native_target;
 pub mod preserve;
 pub mod raw_intent_engine;
+pub mod rust_intent;
 pub mod seating;
 pub mod syntax_intent;
+pub use artifact_intent::{
+    artifact_record_id, extract_gguf_intent, ArtifactDelta, ArtifactIntentRecord,
+    ArtifactProvenance, CouncilAlignment, CouncilSurface, DialectProjection, SemanticGradient,
+    ARTIFACT_INTENT_SCHEMA, COUNCIL_SYNC_SCHEMA,
+};
 pub use blaixe::{DirectBusAddress, BLAIXE_ADDRESSING_POLICY};
 pub use blaixe_bus::BlaixeBus;
+pub use council_federation::{
+    CouncilFederation, FederationReport, HotInitiativeGroup, COUNCIL_FEDERATION_SCHEMA,
+    COUNCIL_LANE_COUNT, REQUIRED_COUNCIL_LANES,
+};
 pub use dynamic_parameter::{
     candidate_intent_size, dynamic_parameter_set_size, expression_bytes, CandidateIntent,
     DynamicExpression, DynamicParameter, DynamicParameterSet, ReconciliationState,
@@ -22,6 +35,9 @@ pub use dynamic_parameter::{
 pub use initiative_cluster::{
     ClusterDelta, ClusterSnapshot, Expression, ExpressionResult, InitiativeCluster, Parameter,
     INITIATIVE_CLUSTER_SCHEMA,
+};
+pub use initiative_thought::{
+    ThoughtDirection, ThoughtExperiment, ThoughtExperimentResult, INITIATIVE_THOUGHT_SCHEMA,
 };
 pub use native_reflexor::{NativeNsqReflexor, NsqReflexPhase, NsqReflexReport};
 pub use native_runtime::{
@@ -34,6 +50,9 @@ pub use native_target::NativeNsqTargetField;
 pub use raw_intent_engine::{
     register_reconstructed_tool_intents, RawNsqCapability, RawNsqEngine, RawNsqEvent, RawNsqIntent,
     RawNsqOutcome,
+};
+pub use rust_intent::{
+    extract_rust_intent, extract_rust_tree, RustSemanticRecord, RUST_INTENT_SCHEMA,
 };
 pub use syntax_intent::{NsqSyntaxNode, NsqSyntaxTree};
 

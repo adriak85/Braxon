@@ -218,7 +218,7 @@ impl NativeNsqGhostWindow {
 
 pub trait NsqActuator {
     fn set(&mut self, address: &NsqAddress, value: &NSQSlot, generation: u64)
-    -> Result<(), String>;
+        -> Result<(), String>;
     fn release(&mut self, address: &NsqAddress, generation: u64) -> Result<(), String>;
     fn fire(&mut self, address: &NsqAddress, generation: u64) -> Result<(), String>;
     fn snapshot(&self) -> BTreeMap<NsqAddress, NSQSlot>;
@@ -412,11 +412,9 @@ mod tests {
         let address = NsqAddress::root(test_slot(8));
         let mut runtime = NativeNsqRuntime::new(NativeNsqMachine::default());
         assert!(runtime.execute(&[]).is_err());
-        assert!(
-            runtime
-                .execute(&[NsqInstruction::Fire { address }])
-                .is_err()
-        );
+        assert!(runtime
+            .execute(&[NsqInstruction::Fire { address }])
+            .is_err());
     }
 
     #[test]
@@ -432,17 +430,15 @@ mod tests {
             }])
             .unwrap();
         let before = runtime.actuator().snapshot();
-        assert!(
-            runtime
-                .execute(&[
-                    NsqInstruction::Set {
-                        address: address.clone(),
-                        value: test_slot(61)
-                    },
-                    NsqInstruction::Fire { address: missing },
-                ])
-                .is_err()
-        );
+        assert!(runtime
+            .execute(&[
+                NsqInstruction::Set {
+                    address: address.clone(),
+                    value: test_slot(61)
+                },
+                NsqInstruction::Fire { address: missing },
+            ])
+            .is_err());
         assert_eq!(runtime.actuator().snapshot(), before);
     }
 
@@ -458,11 +454,9 @@ mod tests {
                 .unwrap(),
             1
         );
-        assert!(
-            ownership
-                .acquire(owner_b.clone(), std::slice::from_ref(&target))
-                .is_err()
-        );
+        assert!(ownership
+            .acquire(owner_b.clone(), std::slice::from_ref(&target))
+            .is_err());
         ownership.advance(&owner_a, NsqLeasePhase::Release).unwrap();
         assert_eq!(
             ownership
