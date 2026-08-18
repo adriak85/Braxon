@@ -8,6 +8,7 @@ pub mod dynamic_parameter_runtime;
 pub mod ghost_memory;
 pub mod greeting;
 pub mod initiative_cluster_runtime;
+pub mod integrated_objective_benchmark;
 pub mod kinetic_reflexor;
 pub mod native_bus;
 pub mod native_stack;
@@ -43,6 +44,10 @@ pub use ghost_memory::{
 };
 pub use initiative_cluster_runtime::{
     execute_through_reflexor, InitiativeClusterExecutionReceipt, INITIATIVE_CLUSTER_RUNTIME_SCHEMA,
+};
+pub use integrated_objective_benchmark::{
+    run_integrated_objective_benchmark, IntegratedTrajectoryMetrics,
+    INTEGRATED_OBJECTIVE_BENCHMARK_SCHEMA,
 };
 pub use kinetic_reflexor::{
     BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass,
