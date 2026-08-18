@@ -55,8 +55,8 @@ pub use nsq_native::{
     NsqNativeBus, PistonPhase, NSQ_NATIVE_BUS_SCHEMA, NSQ_NATIVE_INTENT_SCHEMA,
 };
 pub use one_shot_objective_benchmark::{
-    run_one_shot_objective_benchmark, OneShotObjectiveBenchmark, TrajectoryMetrics,
-    ONE_SHOT_BENCHMARK_SCHEMA,
+    run_one_shot_objective_benchmark, run_one_shot_scaling_matrix, OneShotObjectiveBenchmark,
+    OneShotScalingReport, OneShotScalingRow, TrajectoryMetrics, ONE_SHOT_BENCHMARK_SCHEMA,
 };
 pub use piston_memory::{
     MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,

@@ -30,6 +30,46 @@ pub struct OneShotObjectiveBenchmark {
     pub interactive: TrajectoryMetrics,
 }
 
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct OneShotScalingRow {
+    pub internal_steps: u64,
+    pub one_shot: TrajectoryMetrics,
+    pub interactive: TrajectoryMetrics,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct OneShotScalingReport {
+    pub schema: String,
+    pub objective: String,
+    pub external_interactions_per_one_shot_run: u64,
+    pub rows: Vec<OneShotScalingRow>,
+}
+
+pub fn run_one_shot_scaling_matrix(
+    objective: impl Into<String>,
+    step_matrix: &[u64],
+) -> Result<OneShotScalingReport, String> {
+    if step_matrix.is_empty() {
+        return Err("scaling matrix cannot be empty".into());
+    }
+    let objective = objective.into();
+    let mut rows = Vec::with_capacity(step_matrix.len());
+    for &internal_steps in step_matrix {
+        let benchmark = run_one_shot_objective_benchmark(objective.clone(), internal_steps)?;
+        rows.push(OneShotScalingRow {
+            internal_steps,
+            one_shot: benchmark.one_shot,
+            interactive: benchmark.interactive,
+        });
+    }
+    Ok(OneShotScalingReport {
+        schema: "braxon.one_shot_scaling.v1".into(),
+        objective,
+        external_interactions_per_one_shot_run: 1,
+        rows,
+    })
+}
+
 pub fn run_one_shot_objective_benchmark(
     objective: impl Into<String>,
     internal_steps: u64,
@@ -161,6 +201,26 @@ mod tests {
         assert_eq!(benchmark.one_shot.terminal_state, TerminalState::Won);
         assert!(benchmark.interactive.repeated_work > 0);
         assert!(benchmark.one_shot.persistent_state_bytes > 0);
+    }
+
+    #[test]
+    fn scaling_matrix_keeps_one_external_objective() {
+        let report =
+            run_one_shot_scaling_matrix("scale objective", &[5, 10, 100, 1_000, 10_000]).unwrap();
+        println!("{}", serde_json::to_string(&report).unwrap());
+        assert_eq!(report.external_interactions_per_one_shot_run, 1);
+        assert_eq!(report.rows.len(), 5);
+        for row in &report.rows {
+            assert_eq!(row.one_shot.external_interactions, 1);
+            assert_eq!(row.one_shot.internal_execution_steps, row.internal_steps);
+            assert_eq!(row.interactive.external_interactions, row.internal_steps);
+            assert_eq!(row.interactive.internal_execution_steps, row.internal_steps);
+            assert_eq!(
+                row.one_shot.final_correctness,
+                row.interactive.final_correctness
+            );
+            assert_eq!(row.one_shot.terminal_state, TerminalState::Won);
+        }
     }
 
     #[test]
