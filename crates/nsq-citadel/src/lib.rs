@@ -8,8 +8,9 @@ pub mod wire;
 pub use capital::{build_capitals, BoardMessage, Capital, CAPITAL_COUNT, POLES_PER_CAPITAL};
 pub use coaching::CoachingMode;
 pub use materialization::{
+    CitadelInventory, CitadelInventoryEntry, CitadelManifest, CitadelManifestLane,
     CitadelMaterialization, CitadelMaterializationError, CitadelNativeRuntime, CitadelTensorBody,
-    CITADEL_MATERIALIZATION_SCHEMA,
+    NsqAddressRecord, CITADEL_INVENTORY_SCHEMA, CITADEL_MATERIALIZATION_SCHEMA,
 };
 pub use seed::{coordinate_intent, synchronize, IntentSeed, MaterializedState, UniversalToken};
 pub use wire::{CitadelBus, CitadelReply};

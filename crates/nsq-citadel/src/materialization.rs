@@ -4,10 +4,57 @@ use nsq_core::{
     NsqActuationReceipt, NsqAddress, NsqInstruction, NsqLeasePhase, NsqTensor, NsqTensorStore,
     CANONICAL_LEVER_MAX_POSITION, NSQ_TENSOR_SCHEMA,
 };
+use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 pub const CITADEL_MATERIALIZATION_SCHEMA: &str = "nsq.citadel.seed_materialization.v1";
+pub const CITADEL_INVENTORY_SCHEMA: &str = "nsq.citadel.inventory.v1";
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct CitadelManifest {
+    pub schema: String,
+    pub lanes: Vec<CitadelManifestLane>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct CitadelManifestLane {
+    pub lane: String,
+    pub model_id: String,
+    pub source_repo: String,
+    pub revision: String,
+    pub artifact_family: String,
+    pub bus_dialect: String,
+    pub semantic_projection: String,
+    #[serde(default)]
+    pub independent_payload_required: bool,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct CitadelInventoryEntry {
+    pub lane: String,
+    pub pole_id: String,
+    pub tensor_name: String,
+    pub address: NsqAddressRecord,
+    pub owner: NsqAddressRecord,
+    pub source_seed_hash: String,
+    pub materialization_hash: String,
+    pub generation: u64,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct NsqAddressRecord {
+    pub slots: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct CitadelInventory {
+    pub schema: String,
+    pub manifest_hash: String,
+    pub generation: u64,
+    pub entries: Vec<CitadelInventoryEntry>,
+    pub inventory_hash: String,
+}
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct CitadelTensorBody {
@@ -42,6 +89,8 @@ pub enum CitadelMaterializationError {
     Tensor(nsq_core::NativeTensorError),
     Runtime(String),
     Ownership(String),
+    Manifest(String),
+    Reconciliation(String),
 }
 
 impl std::fmt::Display for CitadelMaterializationError {
@@ -51,6 +100,8 @@ impl std::fmt::Display for CitadelMaterializationError {
             Self::Tensor(error) => write!(f, "Citadel tensor error: {error}"),
             Self::Runtime(error) => write!(f, "Citadel runtime error: {error}"),
             Self::Ownership(error) => write!(f, "Citadel ownership error: {error}"),
+            Self::Manifest(error) => write!(f, "Citadel manifest error: {error}"),
+            Self::Reconciliation(error) => write!(f, "Citadel reconciliation error: {error}"),
         }
     }
 }
@@ -80,6 +131,106 @@ impl CitadelNativeRuntime {
             ownership: NativeNsqOwnership::default(),
             last_generation: 0,
         }
+    }
+
+    pub fn materialize_manifest(
+        &mut self,
+        manifest_json: &str,
+    ) -> Result<(CitadelInventory, CitadelMaterialization), CitadelMaterializationError> {
+        let manifest: CitadelManifest = serde_json::from_str(manifest_json)
+            .map_err(|error| CitadelMaterializationError::Manifest(error.to_string()))?;
+        validate_manifest(&manifest)?;
+        let canonical = manifest
+            .lanes
+            .iter()
+            .map(|lane| {
+                format!(
+                    "{}|{}|{}|{}",
+                    lane.lane, lane.model_id, lane.revision, lane.semantic_projection
+                )
+            })
+            .collect::<Vec<_>>()
+            .join("\n");
+        let manifest_hash = hash_bytes(canonical.as_bytes());
+        let intent = manifest
+            .lanes
+            .iter()
+            .map(|lane| format!("{} {}", lane.lane, lane.model_id))
+            .collect::<Vec<_>>()
+            .join(" ");
+        let seed = IntentSeed::new(&format!("citadel-manifest-{manifest_hash}"), &intent);
+        let materialization = self.materialize_seed(&seed, 1)?;
+        let mut by_pole = BTreeMap::new();
+        for body in &materialization.bodies {
+            if by_pole.insert(body.pole_id.clone(), body).is_some() {
+                return Err(CitadelMaterializationError::Reconciliation(
+                    "duplicate materialized pole".into(),
+                ));
+            }
+        }
+        let mut entries = Vec::with_capacity(manifest.lanes.len());
+        for lane in &manifest.lanes {
+            let pole_id = lane.lane.split('_').next().unwrap_or(&lane.lane);
+            let body = by_pole.get(pole_id).ok_or_else(|| {
+                CitadelMaterializationError::Reconciliation(format!(
+                    "missing body for lane {}",
+                    lane.lane
+                ))
+            })?;
+            entries.push(CitadelInventoryEntry {
+                lane: lane.lane.clone(),
+                pole_id: body.pole_id.clone(),
+                tensor_name: body.tensor_name.clone(),
+                address: address_record(&body.address),
+                owner: address_record(&body.owner),
+                source_seed_hash: body.source_seed_hash.clone(),
+                materialization_hash: body.materialization_hash.clone(),
+                generation: body.generation,
+            });
+        }
+        let inventory_hash = hash_bytes(
+            serde_json::to_string(&entries)
+                .map_err(|error| CitadelMaterializationError::Reconciliation(error.to_string()))?
+                .as_bytes(),
+        );
+        Ok((
+            CitadelInventory {
+                schema: CITADEL_INVENTORY_SCHEMA.into(),
+                manifest_hash,
+                generation: materialization.generation,
+                entries,
+                inventory_hash,
+            },
+            materialization,
+        ))
+    }
+
+    pub fn reconcile_inventory(
+        &self,
+        previous: &CitadelInventory,
+        next: &CitadelInventory,
+    ) -> Result<(), CitadelMaterializationError> {
+        if previous.schema != CITADEL_INVENTORY_SCHEMA || next.schema != CITADEL_INVENTORY_SCHEMA {
+            return Err(CitadelMaterializationError::Reconciliation(
+                "invalid inventory schema".into(),
+            ));
+        }
+        if next.entries.len() != 10 || unique_lanes(&next.entries) != 10 {
+            return Err(CitadelMaterializationError::Reconciliation(
+                "inventory is incomplete or duplicated".into(),
+            ));
+        }
+        if previous.manifest_hash != next.manifest_hash {
+            return Err(CitadelMaterializationError::Reconciliation(
+                "manifest identity changed".into(),
+            ));
+        }
+        if next.generation < previous.generation {
+            return Err(CitadelMaterializationError::Reconciliation(
+                "generation moved backwards".into(),
+            ));
+        }
+        Ok(())
     }
 
     pub fn materialize_seed(
@@ -201,6 +352,50 @@ impl CitadelNativeRuntime {
     }
 }
 
+fn validate_manifest(manifest: &CitadelManifest) -> Result<(), CitadelMaterializationError> {
+    if manifest.lanes.len() != 10 {
+        return Err(CitadelMaterializationError::Manifest(
+            "Council manifest must contain exactly ten lanes".into(),
+        ));
+    }
+    let mut lanes = BTreeSet::new();
+    for lane in &manifest.lanes {
+        if lane.lane.trim().is_empty()
+            || lane.model_id.trim().is_empty()
+            || lane.revision.trim().is_empty()
+        {
+            return Err(CitadelMaterializationError::Manifest(
+                "lane identity is incomplete".into(),
+            ));
+        }
+        if !lanes.insert(lane.lane.clone()) {
+            return Err(CitadelMaterializationError::Manifest(format!(
+                "duplicate lane {}",
+                lane.lane
+            )));
+        }
+    }
+    Ok(())
+}
+
+fn unique_lanes(entries: &[CitadelInventoryEntry]) -> usize {
+    entries
+        .iter()
+        .map(|entry| entry.lane.as_str())
+        .collect::<BTreeSet<_>>()
+        .len()
+}
+
+fn address_record(address: &NsqAddress) -> NsqAddressRecord {
+    NsqAddressRecord {
+        slots: address
+            .path
+            .iter()
+            .map(|slot| format!("{:?}", slot))
+            .collect(),
+    }
+}
+
 fn address_for(lane: usize, owner: bool) -> NsqAddress {
     let base = if owner { 50_000 } else { 25_000 };
     let position = (base + lane as u64).min(CANONICAL_LEVER_MAX_POSITION);
@@ -266,6 +461,58 @@ mod tests {
         assert_ne!(first.parameter_outputs, second.parameter_outputs);
         assert!(second.bodies.iter().all(|body| body.generation == 2));
         assert_eq!(runtime.last_generation, 2);
+    }
+
+    #[test]
+    fn manifest_materializes_complete_deterministic_inventory() {
+        let manifest = include_str!("../../../config/nsq/council_full_artifact_seed_manifest.json");
+        let mut first_runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let mut second_runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let (first_inventory, first_materialization) =
+            first_runtime.materialize_manifest(manifest).unwrap();
+        let (second_inventory, second_materialization) =
+            second_runtime.materialize_manifest(manifest).unwrap();
+        assert_eq!(first_inventory, second_inventory);
+        assert_eq!(first_materialization, second_materialization);
+        assert_eq!(first_inventory.entries.len(), 10);
+        assert_eq!(unique_lanes(&first_inventory.entries), 10);
+        assert_eq!(first_inventory.generation, 1);
+        assert!(first_inventory
+            .entries
+            .iter()
+            .all(|entry| !entry.materialization_hash.is_empty()));
+    }
+
+    #[test]
+    fn manifest_failures_close_without_partial_inventory() {
+        let manifest = include_str!("../../../config/nsq/council_full_artifact_seed_manifest.json");
+        let mut value: serde_json::Value = serde_json::from_str(manifest).unwrap();
+        value["lanes"][0]["lane"] = value["lanes"][1]["lane"].clone();
+        let mut runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        assert!(matches!(
+            runtime.materialize_manifest(&value.to_string()),
+            Err(CitadelMaterializationError::Manifest(_))
+        ));
+        assert_eq!(runtime.tensor_store.len(), 0);
+    }
+
+    #[test]
+    fn inventory_reconciliation_rejects_stale_and_incomplete_state() {
+        let manifest = include_str!("../../../config/nsq/council_full_artifact_seed_manifest.json");
+        let mut runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let (inventory, _) = runtime.materialize_manifest(manifest).unwrap();
+        let mut incomplete = inventory.clone();
+        incomplete.entries.pop();
+        assert!(matches!(
+            runtime.reconcile_inventory(&inventory, &incomplete),
+            Err(CitadelMaterializationError::Reconciliation(_))
+        ));
+        let mut stale = inventory.clone();
+        stale.generation = 0;
+        assert!(matches!(
+            runtime.reconcile_inventory(&inventory, &stale),
+            Err(CitadelMaterializationError::Reconciliation(_))
+        ));
     }
 
     #[test]
