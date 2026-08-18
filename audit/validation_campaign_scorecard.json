@@ -1,0 +1,51 @@
+{
+  "schema": "braxon.validation_campaign_scorecard.v1",
+  "branch": "reconstruction",
+  "commit": "56b12db669a2baf348cdfb6656f4779945a1ddc9",
+  "origin_reconstruction": "56b12db669a2baf348cdfb6656f4779945a1ddc9",
+  "gate_count": 45,
+  "status_counts": {
+    "MEASURED": 23,
+    "THEORETICAL": 8,
+    "PROVEN": 1,
+    "BLOCKED": 13
+  },
+  "executed_or_evidenced_gate_count": 24,
+  "benchmark_coverage_percent": 53.33,
+  "architecture_completeness_percent": null,
+  "native_semantic_coverage_percent": null,
+  "execution_coverage_percent": null,
+  "equivalence_coverage_percent": null,
+  "physical_validation": "BLOCKED",
+  "guile_migration": "BLOCKED",
+  "zig_migration": "BLOCKED",
+  "android_acceptance": "BLOCKED",
+  "wowas_universal_global_compliance": "BLOCKED",
+  "training_advantage": "NOT_ESTABLISHED",
+  "remaining_blocker_gate_ids": [
+    23,
+    24,
+    25,
+    26,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    42,
+    44,
+    45
+  ],
+  "remaining_theoretical_gate_ids": [
+    6,
+    9,
+    11,
+    21,
+    28,
+    29,
+    30,
+    32
+  ],
+  "policy": "Null percentages are intentional where no defensible denominator exists. Statuses are evidence classifications, not marketing scores."
+}
