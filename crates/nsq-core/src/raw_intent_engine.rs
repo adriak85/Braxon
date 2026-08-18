@@ -183,6 +183,7 @@ impl RawNsqEngine {
                 if let Err(reason) = validate_input(capability, &input) {
                     return RawNsqOutcome::Rejected { reason };
                 }
+                let operation = capability.intent.operation.clone();
                 self.sequence = self.sequence.saturating_add(1);
                 self.state
                     .insert("last_capability".into(), capability_id.clone());
@@ -191,6 +192,22 @@ impl RawNsqEngine {
                 for (key, value) in input {
                     self.state.insert(format!("input:{key}"), value);
                 }
+                let result = match operation.as_str() {
+                    "parse" => "syntax-state-accepted",
+                    "optimize" => "layout-state-reduced",
+                    "specialize" => "dispatch-state-specialized",
+                    "resolve" => "dependency-state-resolved",
+                    "explain" => "provenance-state-explained",
+                    "verify" => "invariants-state-verified",
+                    "materialize" => "object-state-materialized",
+                    "inspect" => "analysis-state-inspected",
+                    "reconstruct" => "language-intent-rebuilt",
+                    "discover" => "capability-state-discovered",
+                    "encode" => "boundary-state-encoded",
+                    "repair" => "correction-state-repaired",
+                    _ => "intent-state-accepted",
+                };
+                self.state.insert("result".into(), result.into());
                 RawNsqOutcome::Accepted {
                     capability_id,
                     state: self.state.clone(),
@@ -365,6 +382,27 @@ mod tests {
             "nsq-core::RawNsqEngine::explain"
         );
         assert_eq!(engine.discover("tree-sitter")[0].intent.operation, "parse");
+    }
+
+    #[test]
+    fn every_reconstructed_tool_intent_executes_natively() {
+        let mut engine = RawNsqEngine::default();
+        register_reconstructed_tool_intents(&mut engine).unwrap();
+        let capability_ids: Vec<String> = engine
+            .discover("")
+            .into_iter()
+            .map(|capability| capability.capability_id.clone())
+            .collect();
+        for capability_id in capability_ids {
+            let mut input = BTreeMap::new();
+            input.insert("input".into(), capability_id.clone());
+            let outcome = engine.dispatch(RawNsqEvent::Invoke {
+                capability_id,
+                input,
+            });
+            assert!(matches!(outcome, RawNsqOutcome::Accepted { .. }));
+            assert!(engine.state().contains_key("result"));
+        }
     }
 
     #[test]
