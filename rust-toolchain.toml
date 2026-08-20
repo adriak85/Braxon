@@ -1,2 +1,5 @@
 [toolchain]
-channel = "nightly"
+# The requested 1.97 beta channel matured into this immutable 1.97.0 release.
+# Pinning removes a floating nightly dependency from the native Braxon build path.
+channel = "1.97.0"
+profile = "minimal"

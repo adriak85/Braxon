@@ -2,31 +2,31 @@
   "all_in_check_validated": true,
   "authority": "NSQ_COURT",
   "completely_validated": true,
-  "full_release_complete": false,
+  "full_release_complete": true,
   "record_count": 23,
   "records": [
     {
-      "bytes": 1408,
+      "bytes": 1535,
       "link_required": true,
       "path": "Cargo.toml",
       "present": true,
-      "sha256": "750c9112c31fe1afeb6c04518bbe456864b0a66e89199fb500e66ee190029462",
+      "sha256": "b0a21d3f76a6db63a2e1fff878c5a3bce7e68490082b89a90910ba4228b35402",
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 44726,
+      "bytes": 49786,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "52d9cea93daad9722919b762440a026aaee5151fc004a0e41e1a65b2f0957578",
+      "sha256": "9e30a14699d297bff1a9e8e705484956553aba5f24a4f004ddd1c201a1ba98f4",
       "trigger_role": "root_binary_handover_code"
     },
     {
-      "bytes": 34206,
+      "bytes": 34220,
       "link_required": true,
       "path": "crates/nsq-core/src/intent.rs",
       "present": true,
-      "sha256": "18520a4e0f47d09fa133925d8cdd8c12b71f2e253cfb2feca5d924ccc3a9a7d1",
+      "sha256": "dc60d1aa8c98cc77f4153522ba93ffa07038de51ee8cfad483687951c90af187",
       "trigger_role": "court_boot_clearance_law"
     },
     {
@@ -86,11 +86,11 @@
       "trigger_role": "semantic_recall_index_source"
     },
     {
-      "bytes": 11043,
+      "bytes": 11074,
       "link_required": true,
       "path": "crates/nsq-hot/src/lib.rs",
       "present": true,
-      "sha256": "bace62fe05f3fa5a529125a3b96e16bee7aa2eefc9b237ac35e07f13d2911b4f",
+      "sha256": "30ee31aca09000bc636b4f52174d89447829f34a6ec99acd3f3c11eb46e3ba06",
       "trigger_role": "parameter_address_window_code"
     },
     {
@@ -106,23 +106,23 @@
       "link_required": true,
       "path": "state/nsq/proofs/citadel699_current_rebuild.json",
       "present": true,
-      "sha256": "c659a3f2af986e835d9224b349780f882b58151efa616e7c6f692c2ca2cf27e0",
+      "sha256": "0e116dd83a0f883c33ef0897f689d69cd82021f34595107119f68975ee36f7e1",
       "trigger_role": "citadel699_current_rebuild_proof"
     },
     {
-      "bytes": 587,
+      "bytes": 643,
       "link_required": true,
       "path": "state/nsq/citadel699/current/request_capsule.json",
       "present": true,
-      "sha256": "581d8fb46ce4b168fa06c61aa78b735c54ba5602ff2d52f5fe6e50de9430bc31",
+      "sha256": "616ffdefbd43d267c1a72196e21017bf28c0ec437ed892785c30125a001e754d",
       "trigger_role": "citadel699_request_capsule"
     },
     {
-      "bytes": 606,
+      "bytes": 679,
       "link_required": true,
       "path": "state/nsq/citadel699/current/target_models.json",
       "present": true,
-      "sha256": "9e46570e69390fcc866112f1e063548a1a4c41d73f34bdf32dfdb3e4d5b9a742",
+      "sha256": "1196690274952c0b590532334795ee4a9b6fe3ee860bf7351a96cecf3aebdade",
       "trigger_role": "citadel699_target_models"
     },
     {
@@ -130,7 +130,7 @@
       "link_required": true,
       "path": "state/nsq/citadel699/current/council_ten.rebuild.nsq",
       "present": true,
-      "sha256": "59e1e8f17391d48b14525fbfd1c5ad9dbd83737c1dd04226d04b581f68af4416",
+      "sha256": "6d1cde818bf5739c773a74e30516aedc0569727006a935e7b06e18d9a63cb264",
       "trigger_role": "citadel699_current_rebuild_link"
     },
     {
@@ -138,7 +138,7 @@
       "link_required": true,
       "path": "state/nsq/citadel699/current/materialization.json",
       "present": true,
-      "sha256": "af9fbbdc734e8a03af86fc971433f00482351873beb69ddc81f39270e8ef5f9c",
+      "sha256": "9079185e3dae23563fec9445f3c2172f9b4855017d6b8eae01d23e75b68fb8c2",
       "trigger_role": "citadel699_current_materialization_link"
     },
     {
@@ -182,17 +182,17 @@
       "trigger_role": "handover_proof_test_surface"
     },
     {
-      "bytes": 1140,
+      "bytes": 1049,
       "path": "state/braxon/handover/os_power_release_response.json",
       "present": true,
-      "sha256": "d36cfd4645c9aae89ec6a710b16ad5296698f2b0c71bc745ca3a9803b88962c5",
+      "sha256": "2eca42a1fab2e4e99bb4ff699b194ead1f3f84a2569de9cb6f7b9d25decaf4ce",
       "trigger_role": "generated_handover_response"
     }
   ],
   "schema": "braxon.nsq_court.os_power_release_watermark_trigger_set.v1",
   "semantic_address_gate_completely_validated": true,
   "seven_suit_cycles_validated": true,
-  "ten_surface_bus_validated": false,
+  "ten_surface_bus_validated": true,
   "video_present": true,
   "voice_present": true,
   "watermark_trigger_set_completely_validated": true

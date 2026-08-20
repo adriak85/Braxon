@@ -1,0 +1,24 @@
+[package]
+publish = false
+name = "nsq-reflexor"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+description = "On-demand NSQ kinetic semantic capability discovery, routing, and verification."
+
+[lib]
+name = "nsq_reflexor"
+path = "src/lib.rs"
+
+[dependencies]
+cargo_metadata.workspace = true
+nsq-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
