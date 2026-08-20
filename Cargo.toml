@@ -44,7 +44,7 @@ members = [
 version = "0.1.0"
 edition = "2021"
 license = "LicenseRef-Braxon-Private"
-authors = ["Braxon Project"]
+authors = ["Michael David Norris (Braxon Project)"]
 rust-version = "1.97.0"
 
 [workspace.dependencies]
