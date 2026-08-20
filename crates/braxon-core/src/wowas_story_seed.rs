@@ -1,7 +1,7 @@
 use crate::content_surface::{NarrativeRecord, NARRATIVE_SCHEMA};
-use nsq_citadel::{
-    CitadelInventory, CitadelMaterialization, CitadelNativeRuntime, CoachingMode, IntentSeed,
-};
+#[cfg(test)]
+use nsq_citadel::CoachingMode;
+use nsq_citadel::{CitadelInventory, CitadelMaterialization, CitadelNativeRuntime, IntentSeed};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
 use std::fs;
