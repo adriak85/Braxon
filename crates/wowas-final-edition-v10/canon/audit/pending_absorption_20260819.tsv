@@ -1,0 +1,10 @@
+record_id	source_path	scope	status	required_target	blocker
+V10_DIAMOND_POWER_LAW	wowas_scene_patch_v10.tsv	B02-B03	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Direct Book 02-03 carrier rows must be absorbed before promotion.
+V10_VAEDRIC_SEED	wowas_scene_patch_v10.tsv	B08-B09	partially_absorbed	canon/wowas_clean_scene_index_v2.tsv	Character profile is active; seed scenes still require direct carrier absorption.
+V10_URSULA_CORE_REVEAL	wowas_scene_patch_v10.tsv	B14-B17	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Profile is active; core reveal requires direct scene placement.
+V10_NEAR_REWIND	wowas_scene_patch_v10.tsv	B17-B18	pending_scene_absorption	canon/wowas_clean_scene_index_v2.tsv	Near-rewind law requires a canonical scene row and carrier placement.
+V11_ROLZEN_DISCOVERY	wowas_scene_patch_v11.tsv	Book_17_Black_Heart_Scar	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Direct Book 17 placement required.
+V11_DAISY_MAJISKII_AFTER_ESCAPE	wowas_scene_patch_v11.tsv	Book_17_Black_Heart_Scar	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Direct Book 17 placement required.
+V11_EGG_ROOM_LINE	wowas_scene_patch_v11.tsv	Book_17_Black_Heart_Scar	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Direct Book 17 placement required.
+V11_ESCAPE_GAUNTLET	wowas_scene_patch_v11.tsv	Book_17_Black_Heart_Scar	pending_book_carrier_absorption	canon/wowas_clean_scene_index_v2.tsv	Direct Book 17 placement required.
+V11_ROLZEN_BACKSTORY	wowas_scene_patch_v11.tsv	Book_17_Black_Heart_Scar	pending_book_carrier_absorption	canon/active/character_profile_scores.tsv	Profile is active; prose placement remains required.
