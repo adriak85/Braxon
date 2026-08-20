@@ -10,7 +10,9 @@
     "minimum_integration_registry": "nsq/runtime_native/databases/minimum_integration_registry.db",
     "multiport_package_db": "config/nsq/runtime_native/package_db/multiport_package_db.json",
     "language_master_seed": "config/nsq/language_master_seed.json",
-    "minimum_integration_matrix": "config/nsq/runtime_native/minimum_integration_matrix.json"
+    "minimum_integration_matrix": "config/nsq/runtime_native/minimum_integration_matrix.json",
+    "court_seed": "config/nsq/council_full_artifact_seed_manifest.json",
+    "court_canonical": "config/nsq/braxon_council_ten_stack.json"
   },
   "write_nsq": {
     "authoring_registry": "nsq/write_nsq/databases/authoring_registry.db",
@@ -42,7 +44,7 @@
       "tokenizer_bridge_registry",
       "human_machine_doc_registry",
       "multiport_package_db",
-      "write_nsq_package_db_binding",
+      "package_db_binding_registry",
       "translation_priority_registry"
     ],
     "nsq-court": [

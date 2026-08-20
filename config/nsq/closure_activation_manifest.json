@@ -1,0 +1,156 @@
+{
+  "schema": "braxon.nsq.closure_activation_manifest.v1",
+  "version": "1",
+  "entries": [
+    {
+      "id": "seed",
+      "class": "seed",
+      "source": "crates/braxon-core/src/seed_citadel.rs",
+      "identity": "braxon.seed.citadel",
+      "address": "wake/seed/1",
+      "object_type": "seed_materialization",
+      "version": "nsq.citadel.seed.materialization.v1",
+      "dependencies": []
+    },
+    {
+      "id": "system_parameters",
+      "class": "system_parameters",
+      "source": "crates/braxon-core/src/dynamic_parameter_runtime.rs",
+      "identity": "braxon.parameter.system",
+      "address": "wake/parameters/system/2",
+      "object_type": "parameter_runtime",
+      "version": "braxon.nsq.dynamic_parameter_runtime.v1",
+      "dependencies": ["seed"]
+    },
+    {
+      "id": "individual_model_parameters",
+      "class": "individual_model_parameters",
+      "source": "crates/braxon-core/src/offline_models.rs",
+      "identity": "braxon.parameter.model_bands",
+      "address": "wake/parameters/model/3",
+      "object_type": "model_registry",
+      "version": "nsq.court.model_registry.v1",
+      "dependencies": ["system_parameters"]
+    },
+    {
+      "id": "native_tokenizer_bands",
+      "class": "tokenizer_bands",
+      "source": "config/nsq/tokenizer_band_registry.json",
+      "identity": "braxon.tokenizer.native_bands",
+      "address": "wake/tokenizer/native/4",
+      "object_type": "tokenizer_band_registry",
+      "version": "braxon.nsq.tokenizer_band_registry.v1",
+      "dependencies": ["individual_model_parameters"]
+    },
+    {
+      "id": "universal_translator",
+      "class": "universal_translator",
+      "source": "crates/braxon-core/src/seed_citadel.rs",
+      "identity": "braxon.tokenizer.universal_translation",
+      "address": "wake/tokenizer/universal/5",
+      "object_type": "universal_tokenizer_seed",
+      "version": "nsq.universal.token.sync.v1",
+      "dependencies": ["native_tokenizer_bands"]
+    },
+    {
+      "id": "documentation",
+      "class": "documentation",
+      "source": "docs/NSQ_LANGUAGE_CONTRACT_INDEX.md",
+      "identity": "braxon.documentation.index",
+      "address": "wake/documentation/6",
+      "object_type": "documentation_index",
+      "version": "1",
+      "dependencies": ["universal_translator"]
+    },
+    {
+      "id": "guile",
+      "class": "guile",
+      "source": "crates/nsq-core/src/raw_intent_engine.rs",
+      "identity": "braxon.guile.contract",
+      "address": "wake/language/guile/7",
+      "object_type": "capability_contract",
+      "version": "1",
+      "dependencies": ["documentation"]
+    },
+    {
+      "id": "apropos",
+      "class": "apropos",
+      "source": "crates/nsq-core/src/raw_intent_engine.rs",
+      "identity": "braxon.apropos.contract",
+      "address": "wake/language/apropos/8",
+      "object_type": "capability_contract",
+      "version": "1",
+      "dependencies": ["documentation"]
+    },
+    {
+      "id": "tree_sitter",
+      "class": "tree_sitter",
+      "source": "crates/nsq-core/src/raw_intent_engine.rs",
+      "identity": "braxon.tree_sitter.contract",
+      "address": "wake/language/tree_sitter/9",
+      "object_type": "capability_contract",
+      "version": "1",
+      "dependencies": ["documentation"]
+    },
+    {
+      "id": "ast",
+      "class": "ast",
+      "source": "crates/nsq-core/src/syntax_intent.rs",
+      "identity": "braxon.ast.contract",
+      "address": "wake/language/ast/10",
+      "object_type": "syntax_contract",
+      "version": "1",
+      "dependencies": ["tree_sitter"]
+    },
+    {
+      "id": "place_world",
+      "class": "place_world",
+      "source": "crates/braxon-core/src/wowas_realization.rs",
+      "identity": "braxon.place_world.realization",
+      "address": "wake/world/11",
+      "object_type": "world_state_contract",
+      "version": "braxon.wowas.realization.v1",
+      "dependencies": ["documentation"]
+    },
+    {
+      "id": "address_bindings",
+      "class": "address_bindings",
+      "source": "state/braxon/context_chain_root/chain_wake_registry.json",
+      "identity": "braxon.address.bindings",
+      "address": "wake/address/12",
+      "object_type": "chain_root_registry",
+      "version": "braxon.context.chain_root.v1",
+      "dependencies": ["documentation", "guile", "apropos", "tree_sitter", "ast"]
+    },
+    {
+      "id": "runtime_capabilities",
+      "class": "runtime_capabilities",
+      "source": "crates/nsq-core/src/raw_intent_engine.rs",
+      "identity": "braxon.runtime.capabilities",
+      "address": "wake/runtime/13",
+      "object_type": "raw_intent_capability_catalog",
+      "version": "1",
+      "dependencies": ["address_bindings"]
+    },
+    {
+      "id": "collective_self_state",
+      "class": "collective_self_state",
+      "source": "crates/braxon-core/src/collective_state.rs",
+      "identity": "braxon.collective.self_state",
+      "address": "wake/state/14",
+      "object_type": "collective_state_contract",
+      "version": "braxon.nsq.collective_state.v1",
+      "dependencies": ["runtime_capabilities"]
+    },
+    {
+      "id": "bus",
+      "class": "bus",
+      "source": "crates/braxon-core/src/bus.rs",
+      "identity": "braxon.operator.bus",
+      "address": "wake/bus/15",
+      "object_type": "operator_bus",
+      "version": "braxon.bus.measurement_request.v4",
+      "dependencies": ["collective_self_state"]
+    }
+  ]
+}

@@ -165,6 +165,62 @@
       "required": true,
       "relationship": "Whispers of Willow and Stone canon, scene, and character generation system",
       "route": ["policer", "lexer", "parser", "router", "inspector"]
+    },
+    {
+      "id": "documentation_index",
+      "kind": "documentation_index",
+      "path": "docs/NSQ_LANGUAGE_CONTRACT_INDEX.md",
+      "required": true,
+      "relationship": "authoritative repository index for language and documentation capability contracts",
+      "route": ["documentation.index", "inspector"]
+    },
+    {
+      "id": "guile_contract",
+      "kind": "guile_contract",
+      "path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "required": true,
+      "relationship": "Guile rebuild capability contract under NSQ authority",
+      "route": ["guile.rebuild_intent", "inspector"]
+    },
+    {
+      "id": "apropos_contract",
+      "kind": "apropos_contract",
+      "path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "required": true,
+      "relationship": "Apropos discovery capability contract under NSQ authority",
+      "route": ["apropos.discover", "inspector"]
+    },
+    {
+      "id": "tree_sitter_contract",
+      "kind": "tree_sitter_contract",
+      "path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "required": true,
+      "relationship": "tree-sitter syntax parsing capability contract under NSQ authority",
+      "route": ["tree_sitter.parse", "inspector"]
+    },
+    {
+      "id": "ast_contract",
+      "kind": "ast_contract",
+      "path": "crates/nsq-core/src/syntax_intent.rs",
+      "required": true,
+      "relationship": "structured syntax-intent authority for AST relation checks",
+      "route": ["tree_sitter.parse", "inspector"]
+    },
+    {
+      "id": "tokenizer_band_registry",
+      "kind": "tokenizer_registry",
+      "path": "config/nsq/tokenizer_band_registry.json",
+      "required": true,
+      "relationship": "native-band tokenizer inventories and their universal translation contract",
+      "route": ["tokenizer.boundary", "inspector"]
+    },
+    {
+      "id": "language_artifact_index",
+      "kind": "language_artifact_index",
+      "path": "config/nsq/language_artifact_index.json",
+      "required": true,
+      "relationship": "symbol, AST, documentation, tokenizer, address, and runtime capability traversal index",
+      "route": ["documentation.index", "inspector"]
     }
   ],
   "known_left_out": [

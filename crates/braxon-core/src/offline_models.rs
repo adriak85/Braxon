@@ -60,6 +60,48 @@ pub const ZLM_SESSION_SURFACE: &str = "zlm_native_runtime_surface";
 pub const PERSISTENT_SESSION_MODE: &str = "persistent_agentic_conversation";
 pub const FULL_AGENTIC_CAPABILITY: &str = "full_agentic_conversation";
 
+/// The exact model-execution truth for one model band. These states are intentionally
+/// independent from pipeline position and court seating: a configured or even seated
+/// metadata record is not evidence of a loaded or executing model.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ModelExecutionState {
+    pub configured: bool,
+    pub available: bool,
+    pub loaded: bool,
+    pub initialized: bool,
+    pub executing: bool,
+}
+
+impl Default for ModelExecutionState {
+    fn default() -> Self {
+        Self {
+            configured: false,
+            available: false,
+            loaded: false,
+            initialized: false,
+            executing: false,
+        }
+    }
+}
+
+impl ModelExecutionState {
+    pub fn validate(&self) -> Result<(), String> {
+        if self.executing && !self.initialized {
+            return Err("executing model must be initialized".into());
+        }
+        if self.initialized && !self.loaded {
+            return Err("initialized model must be loaded".into());
+        }
+        if self.loaded && !self.available {
+            return Err("loaded model must be available".into());
+        }
+        if self.available && !self.configured {
+            return Err("available model must be configured".into());
+        }
+        Ok(())
+    }
+}
+
 /// Record of a model asset as it moves through the ingest pipeline.
 /// This is a pipeline tracking record, not a capability registry.
 /// Capability is determined by court seating, not by this record.
@@ -85,6 +127,9 @@ pub struct ModelAssetRecord {
     pub tokenizer_bridge_stamp: String,
     /// Whole parameter stamp — confirms full parameter set is present.
     pub whole_parameter_stamp: String,
+    /// Five independent runtime facts; defaulted for backward-compatible registry loading.
+    #[serde(default)]
+    pub execution: ModelExecutionState,
 }
 
 /// The pipeline stage for a model asset.
@@ -158,6 +203,10 @@ impl ModelRegistry {
                 pole_seated: false,
                 tokenizer_bridge_stamp: String::new(),
                 whole_parameter_stamp: String::new(),
+                execution: ModelExecutionState {
+                    configured: true,
+                    ..ModelExecutionState::default()
+                },
             })
             .collect();
 
@@ -179,6 +228,22 @@ impl ModelRegistry {
     /// How many of the ten poles are seated?
     pub fn seated_count(&self) -> usize {
         self.assets.iter().filter(|a| a.pole_seated).count()
+    }
+
+    /// Return the execution-truth matrix in canonical pole order.
+    pub fn execution_matrix(&self) -> Vec<(String, String, ModelExecutionState)> {
+        CouncilPole::ALL
+            .iter()
+            .filter_map(|pole| {
+                self.asset_for_pole(*pole).map(|asset| {
+                    (
+                        asset.target_pole.clone(),
+                        asset.model_id.clone(),
+                        asset.execution.clone(),
+                    )
+                })
+            })
+            .collect()
     }
 
     /// Get the asset record for a specific pole.
@@ -243,6 +308,12 @@ mod tests {
         for asset in &registry.assets {
             assert_eq!(asset.pipeline_stage, PipelineStage::SourceMissing);
             assert!(!asset.pole_seated);
+            assert!(asset.execution.configured);
+            assert!(!asset.execution.available);
+            assert!(!asset.execution.loaded);
+            assert!(!asset.execution.initialized);
+            assert!(!asset.execution.executing);
+            asset.execution.validate().unwrap();
         }
     }
 
@@ -255,6 +326,23 @@ mod tests {
         assert!(!json.contains("BRAXON_feature"));
         assert!(!json.contains("capability_lattice"));
         assert!(!json.contains("dax_os_boot"));
+    }
+
+    #[test]
+    fn model_execution_truth_is_not_collapsed_into_pipeline_stage() {
+        let registry = ModelRegistry::new();
+        let matrix = registry.execution_matrix();
+        assert_eq!(matrix.len(), 10);
+        assert!(matrix.iter().all(|(_, _, state)| state.configured));
+        assert!(matrix.iter().all(|(_, _, state)| !state.available
+            && !state.loaded
+            && !state.initialized
+            && !state.executing));
+        let invalid = ModelExecutionState {
+            executing: true,
+            ..ModelExecutionState::default()
+        };
+        assert!(invalid.validate().is_err());
     }
 
     #[test]

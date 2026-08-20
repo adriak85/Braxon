@@ -1,6 +1,8 @@
 #![allow(non_snake_case)]
 pub mod adversarial_integrated_benchmark;
 pub mod bus;
+pub mod closure_audit;
+pub mod collective_state;
 pub mod content_surface;
 pub mod context_manifest;
 pub mod council;
@@ -11,6 +13,7 @@ pub mod greeting;
 pub mod initiative_cluster_runtime;
 pub mod integrated_objective_benchmark;
 pub mod kinetic_reflexor;
+pub mod language_artifact_context;
 pub mod native_bus;
 pub mod native_equivalence_harness;
 pub mod native_fault_recovery;
@@ -27,6 +30,7 @@ pub mod riemann_semantic_reflexor;
 pub mod seed_citadel;
 pub mod semantic_link;
 pub mod target_field;
+pub mod tokenizer_bridge;
 pub mod wowas;
 pub mod wowas_generation;
 pub mod wowas_realization;
@@ -42,9 +46,16 @@ pub use adversarial_integrated_benchmark::{
     run_adversarial_integrated_benchmark, AdversarialBenchmarkReport, AdversarialMetrics,
     AdversarialWorkload, ADVERSARIAL_BENCHMARK_SCHEMA,
 };
+pub use closure_audit::{
+    address_integrity_audit, closure_audit, full_wake, model_execution_truth,
+    tokenizer_verification, AddressIntegrityReport, ClosureAuditReport, ClosureGate,
+    FullWakeReport, ModelExecutionTruth, TokenizerBandVerification, TokenizerVerificationReport,
+    WakeActivationEntryReport, CLOSURE_AUDIT_SCHEMA,
+};
+pub use collective_state::{OrganPerspective, UnifiedSelfState, COLLECTIVE_STATE_SCHEMA};
 pub use content_surface::{
-    daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, DAYDREAM_SCHEMA, FACT_SCHEMA,
-    NARRATIVE_SCHEMA,
+    daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, OutputClassification,
+    DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA,
 };
 pub use dynamic_parameter_runtime::{
     execute_dynamic_parameter_pipeline, run_training_microbenchmark, DynamicPipelineReceipt,
@@ -65,6 +76,10 @@ pub use integrated_objective_benchmark::{
 pub use kinetic_reflexor::{
     BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass,
     ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY,
+};
+pub use language_artifact_context::{
+    verify_language_artifact_context, LanguageArtifactContextReport, LanguageArtifactTraversal,
+    LANGUAGE_ARTIFACT_CONTEXT_SCHEMA,
 };
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
 pub use native_equivalence_harness::{
@@ -108,6 +123,9 @@ pub use semantic_link::{
     SEMANTIC_LINK_SCHEMA,
 };
 pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
+pub use tokenizer_bridge::{
+    NativeTokenProjection, TokenizerBridge, TokenizerBridgeReceipt, TOKENIZER_BRIDGE_SCHEMA,
+};
 
 pub use seed_citadel::{
     build_seed_plan, materialize_window, CitadelState, SeedMaterializationPlan, TokenSection,
@@ -127,7 +145,7 @@ pub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};
 pub use wowas_story_seed::{WowasStorySeed, WowasStorySeedManifest, WOWAS_STORY_SEED_SCHEMA};
 
 pub use bus::{
-    BraxonBus, BraxonBusReport, BusReplyLayer, IntentEnglishLoop, SharedThought, SpeechLoopState,
+    BraxonBus, BraxonBusReport, BusProcessingState, BusReplyLayer, IntentEnglishLoop,
     ThoughtPressureCandidate, BRAXON_BUS_ROUTE, BRAXON_BUS_SCHEMA, BRAXON_REPLY_SCHEMA,
 };
 pub use council_ten::{
@@ -196,7 +214,8 @@ pub use offline_agent::{
     OfflineTaskAction, OfflineTaskCounts, OfflineTaskStatus,
 };
 pub use offline_models::{
-    load_or_initialize_model_registry, save_model_registry, ModelAssetRecord, ModelRegistry,
+    load_or_initialize_model_registry, save_model_registry, ModelAssetRecord, ModelExecutionState,
+    ModelRegistry,
 };
 
 pub use offline_models::load_or_initialize_model_registry as load_or_initialize_offline_model_registry;

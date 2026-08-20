@@ -1,0 +1,117 @@
+{
+  "schema": "braxon.nsq.tokenizer_band_registry.v1",
+  "universal_translation_version": "nsq.universal.token.sync.v1",
+  "address_namespace": "nsq.address.token",
+  "bands": [
+    {
+      "band_id": "braxon_native",
+      "model_id": "Braxon",
+      "active": true,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "representation": "json_vocab",
+      "provenance": "committed_braxon_native_tokenizer",
+      "expected_model_execution": "configured_only"
+    },
+    {
+      "band_id": "maverick_logic",
+      "model_id": "MaverickLogic",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/maverick_logic/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "qwen_creativity",
+      "model_id": "QwenCreativity",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/qwen_creativity/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "devstral_arbiter",
+      "model_id": "DevstralArbiter",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/devstral_arbiter/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "deepseek_analyzer",
+      "model_id": "DeepSeekAnalyzer",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/deepseek_analyzer/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "gemma_limbic",
+      "model_id": "GemmaLimbic",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/gemma_limbic/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "llama_continuity",
+      "model_id": "LlamaContinuity",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/llama_continuity/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "image_cortex",
+      "model_id": "ImageCortex",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/image_cortex/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "video_cortex",
+      "model_id": "VideoCortex",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/video_cortex/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "voice_body",
+      "model_id": "VoiceBody",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/voice_body/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    },
+    {
+      "band_id": "world_body_3d",
+      "model_id": "WorldBody3D",
+      "active": false,
+      "required": true,
+      "tokenizer_path": "assets/braxon_core/models/world_body_3d/tokenizer.json",
+      "representation": "model_native_json_vocab",
+      "provenance": "required_per_model_artifact_not_present",
+      "expected_model_execution": "not_available"
+    }
+  ]
+}

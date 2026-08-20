@@ -10,8 +10,10 @@ use nsq_reflexor::{
 };
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
-    braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
-    CouncilSurface, CouncilTen, NsqIntent, NsqNativeBus, TargetField, NSQ_NATIVE_INTENT_SCHEMA,
+    address_integrity_audit, braxon_context_manifest_status,
+    braxon_wake_linked_change_report_from_env, closure_audit, full_wake, model_execution_truth,
+    tokenizer_verification, verify_language_artifact_context, BraxonBus, CouncilSurface,
+    CouncilTen, NsqIntent, NsqNativeBus, TargetField, NSQ_NATIVE_INTENT_SCHEMA,
     STAMP_WAKE_COUNCIL_TEN,
 };
 
@@ -70,6 +72,26 @@ enum Command {
     ContextStatus,
     ContextWake,
     Wake,
+    Closure {
+        #[command(subcommand)]
+        command: ClosureCommand,
+    },
+}
+
+#[derive(Subcommand)]
+enum ClosureCommand {
+    /// Run every executable closure gate and emit a machine-readable report.
+    Verify,
+    /// Run the full activation manifest behind Wake.
+    Wake,
+    /// Audit canonical addresses, chain records, and runtime bindings.
+    Address,
+    /// Verify active native tokenizer bands and universal translation evidence.
+    Tokenizers,
+    /// Print the configured/available/loaded/initialized/executing truth matrix.
+    Models,
+    /// Traverse language artifacts through documentation, tokens, addresses, and released runtime lookup.
+    Language,
 }
 
 #[derive(Subcommand)]
@@ -208,6 +230,7 @@ fn main() {
         Command::ContextStatus => print_context_status(),
         Command::ContextWake => print_context_wake(),
         Command::Wake => print_wake(),
+        Command::Closure { command } => print_closure(command),
     }
 }
 
@@ -424,12 +447,42 @@ fn repl_apps() {
 // ── SUBCOMMANDS ───────────────────────────────────────────────────────────────
 
 fn print_wake() {
-    let ten = CouncilTen::new();
-    let trace = ten.wake();
-    match serde_json::to_string_pretty(&trace) {
-        Ok(json) => println!("{json}"),
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let council_ten = CouncilTen::new().wake();
+    match full_wake(&root) {
+        Ok(full_activation) => print_json(&serde_json::json!({
+            "council_ten": council_ten,
+            "full_activation": full_activation,
+        })),
         Err(err) => {
-            eprintln!("wake_render_error={err}");
+            eprintln!("wake_activation_error={err}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn print_closure(command: ClosureCommand) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = match command {
+        ClosureCommand::Verify => closure_audit(&root)
+            .and_then(|report| serde_json::to_value(report).map_err(|error| error.to_string())),
+        ClosureCommand::Wake => full_wake(&root)
+            .and_then(|report| serde_json::to_value(report).map_err(|error| error.to_string())),
+        ClosureCommand::Address => address_integrity_audit(&root)
+            .and_then(|report| serde_json::to_value(report).map_err(|error| error.to_string())),
+        ClosureCommand::Tokenizers => tokenizer_verification(&root)
+            .and_then(|report| serde_json::to_value(report).map_err(|error| error.to_string())),
+        ClosureCommand::Models => Ok(serde_json::json!({
+            "schema": "braxon.nsq.model_execution_truth.v1",
+            "models": model_execution_truth(&root),
+        })),
+        ClosureCommand::Language => verify_language_artifact_context(&root)
+            .and_then(|report| serde_json::to_value(report).map_err(|error| error.to_string())),
+    };
+    match result {
+        Ok(report) => print_json(&report),
+        Err(err) => {
+            eprintln!("closure_error={err}");
             std::process::exit(1);
         }
     }

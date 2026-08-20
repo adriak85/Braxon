@@ -1,0 +1,51 @@
+{
+  "schema": "braxon.nsq.language_artifact_index.v1",
+  "documentation_path": "docs/NSQ_LANGUAGE_CONTRACT_INDEX.md",
+  "records": [
+    {
+      "id": "documentation_index",
+      "pointer_id": "documentation_index",
+      "symbol": "braxon.documentation.index",
+      "source_path": "docs/NSQ_LANGUAGE_CONTRACT_INDEX.md",
+      "ast_identity": "markdown_contract_index",
+      "token": "d",
+      "capability": "documentation.index"
+    },
+    {
+      "id": "guile_contract",
+      "pointer_id": "guile_contract",
+      "symbol": "guile.rebuild_intent",
+      "source_path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "ast_identity": "rust_raw_intent_catalog",
+      "token": "g",
+      "capability": "guile.rebuild_intent"
+    },
+    {
+      "id": "apropos_contract",
+      "pointer_id": "apropos_contract",
+      "symbol": "apropos.discover",
+      "source_path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "ast_identity": "rust_raw_intent_catalog",
+      "token": "a",
+      "capability": "apropos.discover"
+    },
+    {
+      "id": "tree_sitter_contract",
+      "pointer_id": "tree_sitter_contract",
+      "symbol": "tree_sitter.parse",
+      "source_path": "crates/nsq-core/src/raw_intent_engine.rs",
+      "ast_identity": "rust_raw_intent_catalog",
+      "token": "t",
+      "capability": "tree_sitter.parse"
+    },
+    {
+      "id": "ast_contract",
+      "pointer_id": "ast_contract",
+      "symbol": "NsqSyntaxTree",
+      "source_path": "crates/nsq-core/src/syntax_intent.rs",
+      "ast_identity": "rust_syntax_intent_structure",
+      "token": "s",
+      "capability": "tree_sitter.parse"
+    }
+  ]
+}

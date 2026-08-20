@@ -266,6 +266,12 @@ pub fn register_reconstructed_tool_intents(engine: &mut RawNsqEngine) -> Result<
         ("archer.inspect", "analysis", "inspect", "Archer"),
         ("guile.rebuild_intent", "language", "reconstruct", "Guile"),
         ("apropos.discover", "discovery", "discover", "apropos"),
+        (
+            "documentation.index",
+            "documentation",
+            "resolve",
+            "documentation",
+        ),
         ("tokenizer.boundary", "boundary", "encode", "tokenizer"),
         ("correction.in_stream", "correction", "repair", "correction"),
     ];
@@ -376,7 +382,7 @@ mod tests {
     fn reconstructed_tool_catalog_is_native_and_complete() {
         let mut engine = RawNsqEngine::default();
         register_reconstructed_tool_intents(&mut engine).unwrap();
-        assert_eq!(engine.capability_count(), 12);
+        assert_eq!(engine.capability_count(), 13);
         assert_eq!(
             engine.discover("dwarf")[0].native_entry,
             "nsq-core::RawNsqEngine::explain"

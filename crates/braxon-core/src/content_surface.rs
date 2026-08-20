@@ -4,6 +4,23 @@ pub const NARRATIVE_SCHEMA: &str = "braxon.wowas.narrative.v1";
 pub const FACT_SCHEMA: &str = "braxon.system.fact.v1";
 pub const DAYDREAM_SCHEMA: &str = "braxon.daydream.workload.v1";
 
+/// Classification applied before a value can cross a runtime boundary.
+/// Narrative remains an explicitly non-runtime content surface.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum OutputClassification {
+    HardState,
+    DerivedState,
+    UserPresentation,
+    Narrative,
+}
+
+impl OutputClassification {
+    pub fn allowed_in_hard_runtime(self) -> bool {
+        matches!(self, Self::HardState | Self::DerivedState)
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct NarrativeRecord {
     pub schema: String,
@@ -96,6 +113,14 @@ pub fn daydream_frame(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn output_classification_excludes_narrative_from_hard_runtime() {
+        assert!(OutputClassification::HardState.allowed_in_hard_runtime());
+        assert!(OutputClassification::DerivedState.allowed_in_hard_runtime());
+        assert!(!OutputClassification::UserPresentation.allowed_in_hard_runtime());
+        assert!(!OutputClassification::Narrative.allowed_in_hard_runtime());
+    }
 
     #[test]
     fn narrative_is_not_a_fact() {
