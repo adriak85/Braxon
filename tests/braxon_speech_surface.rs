@@ -20,16 +20,20 @@ fn console_generates_non_canned_state_reply() {
     let output = child.wait_with_output().expect("console output");
     let stdout = String::from_utf8_lossy(&output.stdout);
 
-    assert!(stdout.contains("braxon.bus.speak_request.v3"), "{stdout}");
     assert!(
-        stdout.contains("braxon.bus.synthesized_reply.v1"),
+        stdout.contains("braxon.bus.measurement_request.v4"),
         "{stdout}"
     );
     assert!(
-        stdout.contains("\"reply_generated_from_state\": true"),
+        stdout.contains("braxon.bus.user_presentation.v2"),
+        "{stdout}"
+    );
+    assert!(
+        stdout.contains("\"generated_from_derived_state\": true"),
         "{stdout}"
     );
     assert!(stdout.contains("\"canned_reply\": false"), "{stdout}");
-    assert!(stdout.contains("continuity"), "{stdout}");
-    assert!(stdout.contains("It has been a long build"), "{stdout}");
+    assert!(stdout.contains("\"input_accepted\": true"), "{stdout}");
+    assert!(stdout.contains("Measured operator request"), "{stdout}");
+    assert!(stdout.contains("\"native_representation_retained\": true"), "{stdout}");
 }
