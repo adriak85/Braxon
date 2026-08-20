@@ -1,10 +1,21 @@
 {
-  "schema": "braxon.wowas.story_seed.v1",
+  "schema": "braxon.wowas.story_seed.v2",
   "series": "Whispers of Willow and Stone",
   "book_spine_path": "crates/wowas-final-edition-v10/canon/active/book_spine_33.tsv",
   "scene_index_path": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
   "character_timeline_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
   "world_map_path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_world_zone_map.json",
   "canon_blocklist_path": "crates/wowas-final-edition-v10/canon/active/canon_blocklist.tsv",
-  "entry_scene_id": "B01_C001"
+  "character_lattice_path": "audit/wowas_character_lattice.json",
+  "canon_rebalance_path": "config/wowas/canon_rebalance_manifest.json",
+  "ordered_stretched_spine_path": "config/wowas/ordered_stretched_spine_manifest.json",
+  "entry_scene_id": "B01_C001",
+  "rebalance_policy": {
+    "core_beats_are_authoritative": true,
+    "generated_characters_are_interwoven_not_replacements": true,
+    "generated_events_require_scene_realization": true,
+    "books_without_active_scene_packets_remain_unwritten": true,
+    "ordered_33_book_spine_is_authoritative": true,
+    "bridge_packets_must_remain_in_book_order": true
+  }
 }
