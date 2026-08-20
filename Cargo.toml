@@ -29,11 +29,13 @@ members = [
     "crates/nsq-compose",
     "crates/nsq-compress",
     "crates/nsq-core",
+    "crates/nsq-reflexor",
     "crates/nsq-citadel",
     "crates/nsq-system",
     "crates/wowas-final-edition-v10",
     "crates/nsqasm-stamp-db",
     "crates/nsq-grid",
+    "crates/nsq-hot",
     "crates/nsq-wake",
     "nsq-unified",
 ]
@@ -43,10 +45,11 @@ version = "0.1.0"
 edition = "2021"
 license = "LicenseRef-Private"
 authors = ["Braxon Project"]
-rust-version = "1.96.0"
+rust-version = "1.97.0"
 
 [workspace.dependencies]
 nsq-core = { path = "crates/nsq-core" }
+nsq-reflexor = { path = "crates/nsq-reflexor" }
 nsq-system = { path = "crates/nsq-system" }
 blake3 = "1.8.5"
 cargo_metadata = "0.19.2"
@@ -59,6 +62,7 @@ sha2 = "0.10.9"
 BRAXON_core = { package = "Braxon-core", path = "crates/braxon-core" }
 clap.workspace = true
 nsq-core.workspace = true
+nsq-reflexor.workspace = true
 nsq-system.workspace = true
 serde.workspace = true
 serde_json.workspace = true

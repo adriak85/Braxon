@@ -3,6 +3,11 @@ use nsq_core::{
     lever_max_zero_failure_scan, lever_spacing_sweet_spot_report, lever_sweet_spot_report,
     CANONICAL_LEVER_MAX_POSITION, TOTAL_STATES_PER_LEVER, ZERO_INCLUSIVE_BIT_UNIT_STATES,
 };
+use nsq_reflexor::{
+    bootstrap as reflex_bootstrap, discover as reflex_discover,
+    route_operation as reflex_route_operation, verify as reflex_verify,
+    write_inventory as reflex_write_inventory, DEFAULT_PROFILE,
+};
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
@@ -46,6 +51,10 @@ enum Command {
     Content {
         #[command(subcommand)]
         command: ContentCommand,
+    },
+    Reflex {
+        #[command(subcommand)]
+        command: ReflexCommand,
     },
     Handover {
         #[command(subcommand)]
@@ -105,6 +114,27 @@ enum ContentCommand {
 #[derive(Subcommand)]
 enum HandoverCommand {
     OsPowerRelease,
+}
+
+#[derive(Subcommand)]
+enum ReflexCommand {
+    /// Discover every crate, direct library, language surface, project source, and physical boundary as an NSQ contract.
+    Discover,
+    /// Fail closed unless all source and language surfaces have been fully ingested under NSQ authority.
+    Verify,
+    /// Persist the verified capability inventory without starting a resident runtime.
+    Capture,
+    /// Probe the Samsung Galaxy A17 native Termux platform without claiming readiness until all prerequisites are present.
+    Bootstrap {
+        #[arg(long, default_value = DEFAULT_PROFILE)]
+        profile: String,
+    },
+    /// Route a capability contract; execution remains explicit and on-demand.
+    Operate {
+        capability: String,
+        #[arg(long)]
+        execute: bool,
+    },
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -167,6 +197,7 @@ fn main() {
         Command::LeverSweetSpot { tolerance } => print_lever_sweet_spot(tolerance),
         Command::Runtime { command } => print_runtime(command),
         Command::Content { command } => print_content(command),
+        Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
         Command::TerminalPlan => print_terminal_plan(),
@@ -530,6 +561,37 @@ fn print_content(command: ContentCommand) {
     }
 }
 
+fn print_reflex(command: ReflexCommand) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = match command {
+        ReflexCommand::Discover => reflex_discover(&root)
+            .and_then(|inventory| serde_json::to_value(inventory).map_err(|err| err.to_string())),
+        ReflexCommand::Verify => reflex_verify(&root).and_then(|verification| {
+            serde_json::to_value(verification).map_err(|err| err.to_string())
+        }),
+        ReflexCommand::Capture => reflex_write_inventory(&root).map(|path| {
+            serde_json::json!({
+                "schema": "braxon.nsq.kinetic_reflex.capture.v1",
+                "inventory_path": path,
+                "status": "captured"
+            })
+        }),
+        ReflexCommand::Bootstrap { profile } => reflex_bootstrap(&root, &profile),
+        ReflexCommand::Operate {
+            capability,
+            execute,
+        } => reflex_route_operation(&root, &capability, execute)
+            .and_then(|operation| serde_json::to_value(operation).map_err(|err| err.to_string())),
+    };
+    match result {
+        Ok(report) => print_json(&report),
+        Err(err) => {
+            eprintln!("reflex_error={err}");
+            std::process::exit(1);
+        }
+    }
+}
+
 fn print_json<T: serde::Serialize>(value: &T) {
     match serde_json::to_string_pretty(value) {
         Ok(json) => println!("{json}"),
@@ -600,6 +662,10 @@ fn print_status() {
     println!("architecture=council_ten_6brain_4sensory");
     println!("terminal_default=console");
     println!("bus_command=Braxon bus <thought>");
+    println!(
+        "reflex_front_door=Braxon reflex bootstrap --profile samsung_galaxy_a17_termux_aarch64"
+    );
+    println!("reflex_discovery=Braxon reflex discover");
     println!("offline=true");
     println!();
     println!("I am here. The void is listening. What shall we build together?");

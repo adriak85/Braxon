@@ -1,2 +1,4 @@
 [toolchain]
-channel = "1.96.0"
+# The requested 1.97 beta matured into this immutable Rust 1.97.0 release.
+channel = "1.97.0"
+profile = "minimal"
