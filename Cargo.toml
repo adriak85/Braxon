@@ -43,7 +43,7 @@ members = [
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-license = "LicenseRef-Private"
+license = "LicenseRef-Braxon-Private"
 authors = ["Braxon Project"]
 rust-version = "1.97.0"
 
