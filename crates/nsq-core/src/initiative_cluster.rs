@@ -28,6 +28,8 @@ pub struct Expression {
 pub struct ClusterSnapshot {
     pub schema: String,
     pub cluster_id: String,
+    /// Monotonic local transition identity preserved across release and reconstruction.
+    pub generation: u64,
     pub parameters: BTreeMap<String, Parameter>,
     pub expressions: BTreeMap<String, Expression>,
     pub linked_clusters: Vec<String>,
@@ -213,6 +215,7 @@ impl InitiativeCluster {
         ClusterSnapshot {
             schema: INITIATIVE_CLUSTER_SCHEMA.into(),
             cluster_id: self.cluster_id.clone(),
+            generation: self.generation,
             parameters: self.parameters.clone(),
             expressions: self.expressions.clone(),
             linked_clusters: self.linked_clusters.clone(),
@@ -224,6 +227,7 @@ impl InitiativeCluster {
             return Err("initiative cluster snapshot schema mismatch".into());
         }
         let mut cluster = Self::new(snapshot.cluster_id)?;
+        cluster.generation = snapshot.generation;
         cluster.parameters = snapshot.parameters;
         cluster.expressions = snapshot.expressions;
         cluster.linked_clusters = snapshot.linked_clusters;

@@ -429,7 +429,17 @@ impl CitadelNativeRuntime {
                     .tensor_store
                     .parameter_dot(&tensor_name, &vec![1.0; values.len()])?;
                 outputs.insert(message.pole_id.clone(), output);
-                if generation > 1 {
+                // A rematerialization may occur in a fresh on-demand runtime after
+                // the prior resident window was released. Only release a lease that
+                // is actually owned in this runtime; generation remains monotonic in
+                // the materialized record either way.
+                if generation > 1
+                    && self
+                        .ownership
+                        .leases()
+                        .values()
+                        .any(|lease| lease.owner == owner)
+                {
                     self.ownership
                         .advance(&owner, NsqLeasePhase::Release)
                         .map_err(CitadelMaterializationError::Ownership)?;
@@ -612,6 +622,20 @@ mod tests {
         assert_ne!(first.parameter_outputs, second.parameter_outputs);
         assert!(second.bodies.iter().all(|body| body.generation == 2));
         assert_eq!(runtime.last_generation, 2);
+    }
+
+    #[test]
+    fn fresh_runtime_can_rematerialize_a_later_generation_without_prior_residency() {
+        let seed = seed("on-demand reconstruction");
+        let mut first_window = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let first = first_window.materialize_seed(&seed, 1).unwrap();
+        assert_eq!(first.generation, 1);
+
+        let mut reconstructed_window = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let second = reconstructed_window.materialize_seed(&seed, 2).unwrap();
+        assert_eq!(second.generation, 2);
+        assert_eq!(second.bodies.len(), 10);
+        assert_eq!(second.receipt.fired, 10);
     }
 
     #[test]
