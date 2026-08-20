@@ -1,0 +1,19 @@
+{
+  "schema": "braxon.nsq.intelligent_operation_gate.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "gates": [
+    {"id":"reflexor_inventory","passed":true,"evidence":"reflex_verify.json"},
+    {"id":"operator_intelligent_action","passed":true,"evidence":"operator_bus.json"},
+    {"id":"operator_native_release","passed":true,"evidence":"operator_bus.json"},
+    {"id":"parameter_citadel_operation","passed":true,"evidence":"parameter_citadel.json"},
+    {"id":"native_equivalence_benchmark","passed":true,"evidence":"native_equivalence.json"},
+    {"id":"native_recovery_benchmark","passed":true,"evidence":"native_recovery.json"},
+    {"id":"guile_language_operation","passed":true,"evidence":"guile_language.json"},
+    {"id":"zig_language_operation","passed":true,"evidence":"zig_language.json"},
+    {"id":"measured_status_operation","passed":true,"evidence":"status.json"},
+    {"id":"recovery_assessment_operation","passed":true,"evidence":"rescue.json"},
+    {"id":"tensor_missing_artifact_guidance","passed":true,"evidence":"tensor_infer.stderr"},
+    {"id":"active_runtime_no_obsolete_narrative_or_report_marker","passed":true,"evidence":"source_scan"}
+  ],
+  "all_passed": true
+}

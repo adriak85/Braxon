@@ -34,21 +34,21 @@ fn run_runtime_command(args: &[&str]) -> (bool, String, String) {
 }
 
 #[test]
-fn root_runtime_python3_records_ingress_without_runtime_claim() {
+fn root_runtime_python3_routes_language_input_to_an_nsq_intelligent_action() {
     let (ok, stdout, stderr) =
         run_runtime_command(&["runtime", "python3", "score(task='alpha', retries=3)"]);
     assert!(
         ok,
         "runtime python3 command returned nonzero\nstdout:\n{stdout}\nstderr:\n{stderr}"
     );
-    assert!(stdout.contains("\"surface\": \"python3_ingress_boundary\""));
-    assert!(stdout.contains("\"authority\": \"NSQ_COURT\""));
-    assert!(stdout.contains("\"native_runtime_constructed\": false"));
-    assert!(stdout.contains("\"court_roles_duplicated_into_runtime\": false"));
+    assert!(stdout.contains("\"action\": \"python3_ingress_to_nsq_intelligent_operation\""));
+    assert!(stdout.contains("\"language_capability\": \"language:python3\""));
+    assert!(stdout.contains("\"execution_capability\": \"feature:operator.intelligence\""));
+    assert!(stdout.contains("\"lease_released\": true"));
     assert!(stdout.contains("\"executed_as_second_runtime\": false"));
-    assert!(stdout.contains("\"status\": \"ingress_recorded_without_runtime_claim\""));
-    assert!(stdout.contains("\"canonical_semantics\": \"base8_switch_topology\""));
-    assert!(!stdout.contains("\"court_route\""));
+    assert!(stdout.contains("executed the NSQ action"));
+    assert!(!stdout.contains("ingress_recorded_without_runtime_claim"));
+    assert!(!stdout.contains("python3_ingress_boundary"));
 }
 
 #[test]

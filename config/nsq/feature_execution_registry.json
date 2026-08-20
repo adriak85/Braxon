@@ -1,0 +1,89 @@
+{
+  "schema": "braxon.nsq.feature_execution_registry.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "features": [
+    {
+      "id": "feature:operator.intelligence",
+      "nsq_dialect": "intent",
+      "source": "crates/braxon-core/src/intelligent_operation.rs",
+      "required_artifacts": [
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json"
+      ],
+      "state_contract": "tokenized_operator_intent_to_native_instruction_transaction",
+      "action_contract": "interpret_and_execute_operator_intent",
+      "answer_contract": "derived_intelligent_answer",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:parameter.citadel",
+      "nsq_dialect": "intent",
+      "source": "crates/braxon-core/src/parameter_citadel.rs",
+      "required_artifacts": [
+        "crates/braxon-core/src/parameter_citadel.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ],
+      "state_contract": "recursive_parameter_citadel_generation_transition",
+      "action_contract": "execute_designated_local_parameter_integration",
+      "answer_contract": "parameter_citadel_operation_result",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:benchmark.native_equivalence",
+      "nsq_dialect": "symbolic",
+      "source": "crates/braxon-core/src/native_equivalence_harness.rs",
+      "required_artifacts": [
+        "crates/braxon-core/src/native_model_substrate.rs",
+        "crates/braxon-core/src/native_equivalence_harness.rs"
+      ],
+      "state_contract": "deterministic_native_inference_and_training_equivalence",
+      "action_contract": "run_native_equivalence_benchmark",
+      "answer_contract": "benchmark_result",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:benchmark.native_recovery",
+      "nsq_dialect": "symbolic",
+      "source": "crates/braxon-core/src/native_fault_recovery.rs",
+      "required_artifacts": [
+        "crates/braxon-core/src/native_model_substrate.rs",
+        "crates/braxon-core/src/native_fault_recovery.rs"
+      ],
+      "state_contract": "snapshot_recovery_and_fault_rejection",
+      "action_contract": "run_native_recovery_benchmark",
+      "answer_contract": "recovery_result",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:model.tensor_inference",
+      "nsq_dialect": "symbolic",
+      "source": "crates/braxon-core/src/model_execution.rs",
+      "required_artifacts": [
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json"
+      ],
+      "state_contract": "tokenized_prompt_to_bounded_authoritative_tensor_execution",
+      "action_contract": "execute_bounded_native_parameter_operation",
+      "answer_contract": "derived_tensor_execution_answer",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:tensor.materialization",
+      "nsq_dialect": "symbolic",
+      "source": "crates/nsq-core/src/native_tensor.rs",
+      "required_artifacts": [
+        "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json"
+      ],
+      "state_contract": "authoritative_tensor_index_to_bounded_materialization",
+      "action_contract": "materialize_authoritative_tensor_window",
+      "answer_contract": "tensor_materialization_result_or_missing_artifact_action",
+      "on_demand": true,
+      "resident_runtime": false
+    }
+  ]
+}

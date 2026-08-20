@@ -419,7 +419,7 @@ fn presentation_from_measurement(
         .map(|state| state.disagreement_present)
         .unwrap_or(false);
     format!(
-        "Measured operator request: {input}. Selected derived intent: {}. Interpretation: {}. Disagreement preserved: {disagreement}. Model-weight execution claimed: false.",
+        "Derived semantic route for `{input}` selected `{}` with interpretation `{}`. Individual disagreement retained: {disagreement}. Native action must be completed by the intelligent operation route.",
         selected.intent, selected.interpretation
     )
 }
@@ -452,7 +452,7 @@ mod tests {
         assert!(report
             .reply_layer
             .reply
-            .contains("Measured operator request"));
+            .contains("Derived semantic route"));
         assert!(!report.model_weight_execution_claimed);
         assert!(!report.native_runtime_completion_claimed);
     }

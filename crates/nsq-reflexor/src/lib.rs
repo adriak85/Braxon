@@ -199,6 +199,38 @@ struct LanguageRegistry {
 }
 
 #[derive(Debug, Clone, Deserialize, Default)]
+struct FeatureExecutionRegistry {
+    #[serde(default)]
+    schema: String,
+    #[serde(default)]
+    authority: String,
+    #[serde(default)]
+    features: Vec<FeatureExecutionSurface>,
+}
+
+#[derive(Debug, Clone, Deserialize, Default)]
+struct FeatureExecutionSurface {
+    #[serde(default)]
+    id: String,
+    #[serde(default)]
+    nsq_dialect: String,
+    #[serde(default)]
+    source: String,
+    #[serde(default)]
+    required_artifacts: Vec<String>,
+    #[serde(default)]
+    state_contract: String,
+    #[serde(default)]
+    action_contract: String,
+    #[serde(default)]
+    answer_contract: String,
+    #[serde(default)]
+    on_demand: bool,
+    #[serde(default)]
+    resident_runtime: bool,
+}
+
+#[derive(Debug, Clone, Deserialize, Default)]
 struct LanguageSurface {
     #[serde(default)]
     id: String,
@@ -364,6 +396,7 @@ pub fn discover(root: impl AsRef<Path>) -> Result<ReflexInventory, String> {
         &native_language_registry,
         &native_language_path,
     ));
+    capabilities.extend(feature_execution_capabilities(&root)?);
     capabilities.extend(native_boundary_capabilities());
     let project_sources = source_tree_capabilities(&root)?;
     let project_source_files = project_sources.len();
@@ -1102,6 +1135,89 @@ fn source_dialect(extension: &str, relative: &str) -> String {
         }
         _ => dialect_name(Dialect::Intent),
     }
+}
+
+fn feature_execution_capabilities(root: &Path) -> Result<Vec<ReflexCapability>, String> {
+    let registry_path = root.join("config/nsq/feature_execution_registry.json");
+    let text = fs::read_to_string(&registry_path)
+        .map_err(|err| format!("unable to read {}: {err}", registry_path.display()))?;
+    let registry: FeatureExecutionRegistry = serde_json::from_str(&text)
+        .map_err(|err| format!("invalid {}: {err}", registry_path.display()))?;
+    if registry.schema != "braxon.nsq.feature_execution_registry.v1" {
+        return Err("unsupported feature-execution registry schema".into());
+    }
+    if registry.authority != "NSQ kinetic semantic reflexor" {
+        return Err(
+            "feature-execution registry must name NSQ kinetic semantic reflexor authority".into(),
+        );
+    }
+    if registry.features.is_empty() {
+        return Err("feature-execution registry must contain at least one feature".into());
+    }
+    let mut identifiers = BTreeSet::new();
+    registry
+        .features
+        .into_iter()
+        .map(|feature| {
+            if !identifiers.insert(feature.id.clone()) {
+                return Err(format!("duplicate feature-execution capability: {}", feature.id));
+            }
+            if !feature.id.starts_with("feature:")
+                || feature.nsq_dialect.trim().is_empty()
+                || feature.source.trim().is_empty()
+                || feature.state_contract.trim().is_empty()
+                || feature.action_contract.trim().is_empty()
+                || feature.answer_contract.trim().is_empty()
+                || !feature.on_demand
+                || feature.resident_runtime
+            {
+                return Err(format!("invalid feature-execution declaration: {}", feature.id));
+            }
+            let source_present = root.join(&feature.source).is_file();
+            if !source_present {
+                return Err(format!("feature source is missing: {}", feature.source));
+            }
+            let missing_artifacts = feature
+                .required_artifacts
+                .iter()
+                .filter(|artifact| !root.join(artifact).exists())
+                .cloned()
+                .collect::<Vec<_>>();
+            let artifact_ready = missing_artifacts.is_empty();
+            let mut notes = vec![
+                format!("state_contract={}", feature.state_contract),
+                format!("action_contract={}", feature.action_contract),
+                format!("answer_contract={}", feature.answer_contract),
+                "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.".into(),
+            ];
+            if artifact_ready {
+                notes.push("required_artifacts=present".into());
+            } else {
+                notes.push(format!("required_artifacts_missing={}", missing_artifacts.join(",")));
+            }
+            Ok(ReflexCapability {
+                id: feature.id,
+                kind: CapabilityKind::SemanticIntent,
+                state: if artifact_ready {
+                    CapabilityState::OperableOnDemand
+                } else {
+                    CapabilityState::DeclaredContract
+                },
+                nsq_dialect: feature.nsq_dialect,
+                owner: "NSQ kinetic semantic reflexor".into(),
+                source: feature.source,
+                semantic_authority: "nsq".into(),
+                complete_nsq_ingestion: true,
+                foreign_surface_role: "project_artifact_ingress_and_nsq_action_egress_only".into(),
+                ingress: "validated_input_to_nsq_feature_operation".into(),
+                on_demand: true,
+                resident_runtime: false,
+                executable: artifact_ready,
+                target_names: feature.required_artifacts,
+                notes,
+            })
+        })
+        .collect()
 }
 
 fn native_boundary_capabilities() -> Vec<ReflexCapability> {

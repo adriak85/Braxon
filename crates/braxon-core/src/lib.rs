@@ -12,8 +12,10 @@ pub mod ghost_memory;
 pub mod greeting;
 pub mod initiative_cluster_runtime;
 pub mod integrated_objective_benchmark;
+pub mod intelligent_operation;
 pub mod kinetic_reflexor;
 pub mod language_artifact_context;
+pub mod model_execution;
 pub mod native_bus;
 pub mod native_equivalence_harness;
 pub mod native_fault_recovery;
@@ -73,6 +75,10 @@ pub use integrated_objective_benchmark::{
     run_integrated_objective_benchmark, IntegratedTrajectoryMetrics,
     INTEGRATED_OBJECTIVE_BENCHMARK_SCHEMA,
 };
+pub use intelligent_operation::{
+    execute_operator_intelligence, IntelligentAction, IntelligentOperation,
+    INTELLIGENT_OPERATION_SCHEMA, OPERATOR_INTELLIGENCE_CAPABILITY,
+};
 pub use kinetic_reflexor::{
     BusValue, HardwareWriteAck, KineticReflexor, ReflexorPhase, ReflexorReport, ValueClass,
     ValueDelta, Watermark, KINETIC_REFLEXOR_SCHEMA, WATERMARK_FAMILY,
@@ -80,6 +86,10 @@ pub use kinetic_reflexor::{
 pub use language_artifact_context::{
     verify_language_artifact_context, LanguageArtifactContextReport, LanguageArtifactTraversal,
     LANGUAGE_ARTIFACT_CONTEXT_SCHEMA,
+};
+pub use model_execution::{
+    execute_bounded_tensor_inference, TensorInferenceOperation, DONOR_MODEL_INDEX_RELATIVE_PATH,
+    TENSOR_INFERENCE_CAPABILITY, TENSOR_INFERENCE_OPERATION_SCHEMA,
 };
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
 pub use native_equivalence_harness::{
@@ -104,8 +114,9 @@ pub use one_shot_objective_benchmark::{
     OneShotScalingReport, OneShotScalingRow, TrajectoryMetrics, ONE_SHOT_BENCHMARK_SCHEMA,
 };
 pub use parameter_citadel::{
-    execute_parameter_citadel_operation, ParameterCitadelInvariants, ParameterCitadelOperation,
-    PARAMETER_CITADEL_OPERATION_SCHEMA, PURKINJE_PARAMETER_OPERATION_ROLE,
+    execute_canonical_parameter_citadel_cycle, execute_parameter_citadel_operation,
+    ParameterCitadelInvariants, ParameterCitadelOperation, PARAMETER_CITADEL_OPERATION_SCHEMA,
+    PURKINJE_PARAMETER_OPERATION_ROLE,
 };
 pub use performance_surface_benchmark::{
     run_performance_surface, PerformanceSurfaceReport, SurfaceCell, PERFORMANCE_SURFACE_SCHEMA,

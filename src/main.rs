@@ -11,10 +11,11 @@ use nsq_reflexor::{
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     address_integrity_audit, braxon_context_manifest_status,
-    braxon_wake_linked_change_report_from_env, closure_audit, full_wake, model_execution_truth,
-    tokenizer_verification, verify_language_artifact_context, BraxonBus, CouncilSurface,
-    CouncilTen, NsqIntent, NsqNativeBus, TargetField, NSQ_NATIVE_INTENT_SCHEMA,
-    STAMP_WAKE_COUNCIL_TEN,
+    braxon_wake_linked_change_report_from_env, closure_audit, execute_bounded_tensor_inference,
+    execute_canonical_parameter_citadel_cycle, execute_operator_intelligence, full_wake,
+    model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
+    tokenizer_verification, verify_language_artifact_context, BraxonBus, CouncilTen, TargetField,
+    OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
 };
 
 #[derive(Parser)]
@@ -49,6 +50,12 @@ enum Command {
     Runtime {
         #[command(subcommand)]
         command: RuntimeCommand,
+    },
+    /// Interpret a declared language spelling through its NSQ contract and execute the resulting intelligent action.
+    Language {
+        language: String,
+        #[arg(required = true, trailing_var_arg = true)]
+        input: Vec<String>,
     },
     Content {
         #[command(subcommand)]
@@ -104,8 +111,25 @@ enum AppsCommand {
 #[derive(Subcommand)]
 enum RuntimeCommand {
     Registry,
-    Python3 { call: String },
-    Infer { model: String, prompt: String },
+    Python3 {
+        call: String,
+    },
+    /// Execute the designated local parameter–Citadel integration cycle on demand.
+    ParameterCitadel {
+        #[arg(long)]
+        signal: i64,
+        #[arg(long)]
+        context: i64,
+    },
+    /// Run the deterministic native inference/training equivalence mechanism.
+    NativeEquivalence,
+    /// Run native snapshot/replay and bounded-fault recovery validation.
+    NativeRecovery,
+    /// Attempt real bounded parameter execution from the authoritative donor index.
+    Infer {
+        model: String,
+        prompt: String,
+    },
 }
 
 #[derive(Subcommand)]
@@ -218,14 +242,15 @@ fn main() {
         Command::MaxStableScan { tolerance } => print_max_stable_scan(tolerance),
         Command::LeverSweetSpot { tolerance } => print_lever_sweet_spot(tolerance),
         Command::Runtime { command } => print_runtime(command),
+        Command::Language { language, input } => {
+            print_language_operation(language, input.join(" "))
+        }
         Command::Content { command } => print_content(command),
         Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
         Command::TerminalPlan => print_terminal_plan(),
-        Command::Rescue => println!(
-            "[WoWaS] Rescue lane reserved; read canon/config directly from oldest to newest before applying."
-        ),
+        Command::Rescue => print_rescue(),
         Command::Status => print_status(),
         Command::ContextStatus => print_context_status(),
         Command::ContextWake => print_context_wake(),
@@ -310,8 +335,28 @@ fn repl_help() {
 }
 
 fn repl_speak(user_message: &str) {
-    let report = BraxonBus::speak(user_message);
-    print_json(&report);
+    match execute_reflexor_intelligent_turn(user_message) {
+        Ok((_, operation)) => println!("{}", operation.answer),
+        Err(error) => println!("Braxon cannot complete this operation yet: {error}"),
+    }
+}
+
+fn execute_reflexor_intelligent_turn(
+    input: &str,
+) -> Result<
+    (
+        nsq_reflexor::ReflexOperation,
+        BRAXON_core::IntelligentOperation,
+    ),
+    String,
+> {
+    let root = std::env::current_dir().map_err(|error| error.to_string())?;
+    let route = reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+    if !route.routed || route.capability.id != OPERATOR_INTELLIGENCE_CAPABILITY {
+        return Err("Kinetic Semantic Reflexor did not select operator intelligence".into());
+    }
+    let operation = execute_operator_intelligence(input)?;
+    Ok((route, operation))
 }
 
 fn repl_wake() {
@@ -536,19 +581,181 @@ fn find_root_app(name: &str) -> Option<&'static RootAppSurface> {
     })
 }
 
+fn print_language_operation(language: String, input: String) {
+    match execute_language_intelligent_turn(&language, &input) {
+        Ok((language_route, operation_route, operation)) => print_json(&serde_json::json!({
+            "answer": format!("I interpreted the `{language}` ingress through its NSQ language contract and {}", operation.answer.trim_start_matches("I ")),
+            "action": "declared_language_to_nsq_intelligent_operation",
+            "language_capability": language_route.capability.id,
+            "execution_capability": operation_route.capability.id,
+            "selected_intent": operation.selected_intent,
+            "lease_released": operation.lease_released,
+        })),
+        Err(error) => {
+            eprintln!("language_operation_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn execute_language_intelligent_turn(
+    language: &str,
+    input: &str,
+) -> Result<
+    (
+        nsq_reflexor::ReflexOperation,
+        nsq_reflexor::ReflexOperation,
+        BRAXON_core::IntelligentOperation,
+    ),
+    String,
+> {
+    let language = language.trim().to_ascii_lowercase();
+    if language.is_empty() {
+        return Err("language ingress requires a declared language identifier".into());
+    }
+    let root = std::env::current_dir().map_err(|error| error.to_string())?;
+    let language_id = format!("language:{language}");
+    let language_route = reflex_route_operation(&root, &language_id, false)?;
+    if !language_route.routed || language_route.capability.id != language_id {
+        return Err(format!(
+            "Kinetic Semantic Reflexor did not select declared language '{language}'"
+        ));
+    }
+    let (operation_route, operation) =
+        execute_reflexor_intelligent_turn(&format!("{language} boundary operation: {input}"))?;
+    Ok((language_route, operation_route, operation))
+}
+
 fn print_runtime(command: RuntimeCommand) {
     match command {
         RuntimeCommand::Registry => print_json(&nsq_court_registry()),
-        RuntimeCommand::Python3 { call } => match NsqCourtPython3Ingress.execute_slice(&call) {
-            Ok(report) => print_json(&report),
-            Err(err) => {
-                eprintln!("python3_runtime_error={err}");
-                std::process::exit(1);
+        RuntimeCommand::Python3 { call } => {
+            match execute_language_intelligent_turn("python3", &call) {
+                Ok((language_route, operation_route, operation)) => {
+                    print_json(&serde_json::json!({
+                        "answer": format!("I interpreted the Python 3 boundary input as NSQ semantic intent and {}", operation.answer.trim_start_matches("I ")),
+                        "action": "python3_ingress_to_nsq_intelligent_operation",
+                        "language_capability": language_route.capability.id,
+                        "execution_capability": operation_route.capability.id,
+                        "selected_intent": operation.selected_intent,
+                        "lease_released": operation.lease_released,
+                        "executed_as_second_runtime": false,
+                    }))
+                }
+                Err(error) => {
+                    eprintln!("python3_runtime_error={error}");
+                    std::process::exit(1);
+                }
             }
-        },
+        }
+        RuntimeCommand::ParameterCitadel { signal, context } => {
+            let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+            let result = (|| {
+                let route = reflex_route_operation(&root, "feature:parameter.citadel", false)?;
+                let operation = execute_canonical_parameter_citadel_cycle(signal, context)?;
+                if !operation.invariants.all_pass() {
+                    return Err("parameter–Citadel invariants were not all satisfied".into());
+                }
+                Ok::<_, String>((route, operation))
+            })();
+            match result {
+                Ok((route, operation)) => print_json(&serde_json::json!({
+                    "answer": format!("I executed the designated parameter–Citadel integration for signal={signal} and context={context}. The recursive generation {} was materialized, integrated, persisted, reconstructed, and released.", operation.generation),
+                    "action": "designated_local_parameter_integration",
+                    "capability": route.capability.id,
+                    "generation": operation.generation,
+                    "changed_parameters": operation.changed_parameters,
+                    "invariants": operation.invariants,
+                })),
+                Err(error) => {
+                    eprintln!("parameter_citadel_error={error}");
+                    std::process::exit(1);
+                }
+            }
+        }
+        RuntimeCommand::NativeEquivalence => {
+            let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+            let result = (|| {
+                let route =
+                    reflex_route_operation(&root, "feature:benchmark.native_equivalence", false)?;
+                let report = run_native_fixture_equivalence()?;
+                if !report.inference_replay_equivalent || !report.training_path_equivalent {
+                    return Err(
+                        "native equivalence benchmark did not establish deterministic parity"
+                            .into(),
+                    );
+                }
+                Ok::<_, String>((route, report))
+            })();
+            match result {
+                Ok((route, report)) => print_json(&serde_json::json!({
+                    "answer": "I executed the native deterministic inference and training equivalence benchmark; the independently replayed paths produced the same verified results.",
+                    "action": "run_native_equivalence_benchmark",
+                    "capability": route.capability.id,
+                    "benchmark": report,
+                })),
+                Err(error) => {
+                    eprintln!("native_equivalence_error={error}");
+                    std::process::exit(1);
+                }
+            }
+        }
+        RuntimeCommand::NativeRecovery => {
+            let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+            let result = (|| {
+                let route =
+                    reflex_route_operation(&root, "feature:benchmark.native_recovery", false)?;
+                let report = run_native_fault_recovery()?;
+                if !report.replay_equivalent
+                    || report.fault_results.iter().any(|fault| !fault.rejected)
+                {
+                    return Err(
+                        "native recovery benchmark did not preserve replay or fault rejection"
+                            .into(),
+                    );
+                }
+                Ok::<_, String>((route, report))
+            })();
+            match result {
+                Ok((route, report)) => print_json(&serde_json::json!({
+                    "answer": "I executed native snapshot/replay recovery and bounded-fault rejection; the recovered execution replayed equivalently and every injected invalid state was rejected.",
+                    "action": "run_native_recovery_benchmark",
+                    "capability": route.capability.id,
+                    "benchmark": report,
+                })),
+                Err(error) => {
+                    eprintln!("native_recovery_error={error}");
+                    std::process::exit(1);
+                }
+            }
+        }
         RuntimeCommand::Infer { model, prompt } => {
-            match NsqCourtOfflineModelBoundary.execute_request(&model, &prompt) {
-                Ok(report) => print_json(&report),
+            let root = match std::env::current_dir() {
+                Ok(root) => root,
+                Err(error) => {
+                    eprintln!("runtime_infer_error={error}");
+                    std::process::exit(1);
+                }
+            };
+            let result = (|| {
+                let route = reflex_route_operation(&root, TENSOR_INFERENCE_CAPABILITY, false)?;
+                if !route.routed || route.capability.id != TENSOR_INFERENCE_CAPABILITY {
+                    return Err("Kinetic Semantic Reflexor did not select tensor inference".into());
+                }
+                let operation = execute_bounded_tensor_inference(&root, &model, &prompt)?;
+                Ok::<_, String>((route, operation))
+            })();
+            match result {
+                Ok((route, operation)) => print_json(&serde_json::json!({
+                    "answer": operation.answer,
+                    "action": "bounded_native_parameter_execution",
+                    "capability": route.capability.id,
+                    "model": operation.model,
+                    "selected_tensor": operation.selected_tensor,
+                    "execution": operation.execution,
+                    "whole_model_execution": operation.whole_model_execution,
+                    "resident_runtime_constructed": operation.resident_runtime_constructed,
+                })),
                 Err(err) => {
                     eprintln!("runtime_infer_error={err}");
                     std::process::exit(1);
@@ -669,37 +876,29 @@ fn print_handover(command: HandoverCommand) {
 
 fn print_bus(thought: Vec<String>) {
     let thought = thought.join(" ");
-    let mut nsq_bus = match NsqNativeBus::new((0..10).map(|index| CouncilSurface {
-        surface_id: format!("surface-{index}"),
-        role: if index < 6 {
-            "brain".to_string()
-        } else {
-            "sensory".to_string()
-        },
-        address_prefix: format!("council/{index}/"),
-        active: index == 0,
-    })) {
-        Ok(bus) => bus,
-        Err(err) => {
-            eprintln!("nsq_bus_init_error={err}");
+    match execute_reflexor_intelligent_turn(&thought) {
+        Ok((reflex_route, operation)) => print_json(&serde_json::json!({
+            "answer": operation.answer,
+            "action": operation.action,
+            "reflex_capability": reflex_route.capability.id,
+            "audit": {
+                "native_transaction_generation": operation.native_transaction_generation,
+                "native_instruction_count": operation.native_instruction_count,
+                "native_fired_count": operation.native_fired_count,
+                "lease_released": operation.lease_released,
+                "selected_intent": operation.selected_intent,
+                "input_accepted": operation.audit_bus.processing.input_accepted,
+                "conflict_preserved": operation.collective_self_state.conflict_preserved,
+                "model_weight_execution_claimed": operation.audit_bus.model_weight_execution_claimed,
+                "native_runtime_completion_claimed": operation.audit_bus.native_runtime_completion_claimed,
+                "collective_self_state": operation.collective_self_state,
+            }
+        })),
+        Err(error) => {
+            eprintln!("operator_intelligence_error={error}");
             std::process::exit(1);
         }
-    };
-    let intent = NsqIntent {
-        schema: NSQ_NATIVE_INTENT_SCHEMA.to_string(),
-        intent_id: format!("operator-{}", Sha256::digest(thought.as_bytes())[0]),
-        source_surface: "operator_bus".to_string(),
-        capability: "user.intent".to_string(),
-        gradient: [0.0; 8],
-        target_addresses: vec!["council/0/operator".to_string()],
-        provenance: "operator".to_string(),
-        narrative: false,
-    };
-    let nsq_decision = nsq_bus.decide(&intent);
-    print_json(&serde_json::json!({
-        "nsq_decision": nsq_decision,
-        "braxon_bus": BraxonBus::speak(thought),
-    }));
+    }
 }
 
 fn print_terminal_plan() {
@@ -707,21 +906,74 @@ fn print_terminal_plan() {
 }
 
 fn print_status() {
-    println!("--- BRAXON/NSQ SOVEREIGN FRONT ENTRANCE ---");
-    println!("nsq_identity=lowest_base_language");
-    println!("lever_states_zero_inclusive={TOTAL_STATES_PER_LEVER}");
-    println!("bit_unit_states_zero_inclusive={ZERO_INCLUSIVE_BIT_UNIT_STATES}");
-    println!("council_ten_stamp={STAMP_WAKE_COUNCIL_TEN}");
-    println!("architecture=council_ten_6brain_4sensory");
-    println!("terminal_default=console");
-    println!("bus_command=Braxon bus <thought>");
-    println!(
-        "reflex_front_door=Braxon reflex bootstrap --profile samsung_galaxy_a17_termux_aarch64"
-    );
-    println!("reflex_discovery=Braxon reflex discover");
-    println!("offline=true");
-    println!();
-    println!("I am here. The void is listening. What shall we build together?");
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    match (
+        reflex_discover(&root),
+        reflex_verify(&root),
+        full_wake(&root),
+    ) {
+        (Ok(inventory), Ok(verification), Ok(wake)) => print_json(&serde_json::json!({
+            "answer": if verification.valid && wake.required_total == wake.activated_total {
+                "Braxon has verified the current on-demand NSQ capability inventory and full activation contract. Use the console or `Braxon bus` to execute an intelligent operation."
+            } else {
+                "Braxon measured an incomplete activation state. Use `Braxon closure verify` for the exact unresolved connection before requesting an operation."
+            },
+            "action": "measure_reflexor_and_full_wake_status",
+            "reflex_valid": verification.valid,
+            "capability_total": inventory.capabilities.len(),
+            "full_wake_required_total": wake.required_total,
+            "full_wake_activated_total": wake.activated_total,
+            "full_wake_unresolved": wake.unresolved,
+            "full_wake_orphaned": wake.orphaned,
+            "full_wake_invalid_bindings": wake.invalid_bindings,
+            "resident_runtime_constructed": inventory.resident_runtime_constructed,
+            "terminal_default": "console",
+        })),
+        (_, Err(error), _) => {
+            eprintln!("status_reflex_verification_error={error}");
+            std::process::exit(1);
+        }
+        (_, _, Err(error)) => {
+            eprintln!("status_wake_error={error}");
+            std::process::exit(1);
+        }
+        (Err(error), _, _) => {
+            eprintln!("status_discovery_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn print_rescue() {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = (|| {
+        let route = reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+        let wake = full_wake(&root)?;
+        let closure = closure_audit(&root)?;
+        if wake.required_total != wake.activated_total
+            || wake.unresolved != 0
+            || wake.orphaned != 0
+            || wake.invalid_bindings != 0
+        {
+            return Err("recovery assessment found an incomplete Wake activation contract; run `Braxon closure wake` to inspect the unresolved classes".into());
+        }
+        Ok::<_, String>((route, wake, closure))
+    })();
+    match result {
+        Ok((route, wake, closure)) => print_json(&serde_json::json!({
+            "answer": "I executed the recovery assessment: full Wake activation was checked and the closure audit was run against the current repository state. The returned gate table identifies any remaining concrete connection that requires repair.",
+            "action": "execute_wake_and_closure_recovery_assessment",
+            "capability": route.capability.id,
+            "wake_required_total": wake.required_total,
+            "wake_activated_total": wake.activated_total,
+            "closure_all_passed": closure.all_gates_passed,
+            "closure_gate_total": closure.gates.len(),
+        })),
+        Err(error) => {
+            eprintln!("rescue_operation_error={error}");
+            std::process::exit(1);
+        }
+    }
 }
 
 fn print_seating_verify(tolerance: f32) {
@@ -868,43 +1120,6 @@ fn nsq_court_registry() -> serde_json::Value {
         "court_roles_owned_by_runtime": false,
         "status": "court_registry_bound"
     })
-}
-
-#[derive(Debug, Clone, Copy, Default)]
-struct NsqCourtPython3Ingress;
-
-impl NsqCourtPython3Ingress {
-    fn execute_slice(&self, call: &str) -> Result<serde_json::Value, String> {
-        Ok(serde_json::json!({
-            "schema": "braxon.nsq_court.ingress_call.v1",
-            "canonical_semantics": "base8_switch_topology",
-            "authority": "NSQ_COURT",
-            "surface": "python3_ingress_boundary",
-            "input": call,
-            "native_runtime_constructed": false,
-        "executed_as_second_runtime": false,
-        "court_roles_duplicated_into_runtime": false,
-            "status": "ingress_recorded_without_runtime_claim"
-        }))
-    }
-}
-
-#[derive(Debug, Clone, Copy, Default)]
-struct NsqCourtOfflineModelBoundary;
-
-impl NsqCourtOfflineModelBoundary {
-    fn execute_request(&self, model: &str, prompt: &str) -> Result<serde_json::Value, String> {
-        Ok(serde_json::json!({
-            "schema": "braxon.nsq_court.offline_model_request.v1",
-            "authority": "NSQ_COURT",
-            "model": model,
-            "prompt": prompt,
-            "hot_live_claim": false,
-            "native_runtime_constructed": false,
-        "executed_as_second_runtime": false,
-            "status": "request_recorded_without_runtime_claim"
-        }))
-    }
 }
 
 // ── HANDOVER (preserved verbatim) ────────────────────────────────────────────

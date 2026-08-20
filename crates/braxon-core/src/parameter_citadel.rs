@@ -7,7 +7,7 @@
 //! advances one generation, and releases a state that can be reconstructed.
 
 use nsq_citadel::{CitadelMaterialization, CitadelNativeRuntime, CoachingMode, IntentSeed};
-use nsq_core::{ClusterSnapshot, InitiativeCluster};
+use nsq_core::{ClusterSnapshot, Expression, InitiativeCluster};
 use serde::{Deserialize, Serialize};
 
 use crate::{execute_through_reflexor, InitiativeClusterExecutionReceipt};
@@ -158,6 +158,34 @@ pub fn execute_parameter_citadel_operation(
     })
 }
 
+/// Build and execute the canonical two-parameter local integration cycle used by
+/// the native operator capability. Callers supply actual local pressure values;
+/// no resident runtime or synthetic model process is created.
+pub fn execute_canonical_parameter_citadel_cycle(
+    signal: i64,
+    context: i64,
+) -> Result<ParameterCitadelOperation, String> {
+    let mut cluster = InitiativeCluster::new("operator-parameter-citadel")?;
+    cluster.add_parameter("signal", 0)?;
+    cluster.add_parameter("context", 0)?;
+    cluster.add_expression(Expression {
+        id: "integrate".into(),
+        initiative_id: "operator-parameter-citadel".into(),
+        terms: vec![("signal".into(), 2), ("context".into(), 1)],
+        bias: 1,
+        domain: "integer".into(),
+        constraints: vec!["canonical-nsq".into()],
+        semantic_links: vec!["operator-parameter-citadel".into()],
+        nsq_capability: "operator-parameter-citadel.integrate".into(),
+        revision: 0,
+    })?;
+    execute_parameter_citadel_operation(
+        &mut cluster,
+        [("signal".into(), signal), ("context".into(), context)],
+        CoachingMode::Balanced,
+    )
+}
+
 fn canonical_operation_intent(
     identity: &str,
     generation: u64,
@@ -198,6 +226,17 @@ mod tests {
             })
             .unwrap();
         cluster
+    }
+
+    #[test]
+    fn canonical_operator_cycle_executes_the_recursive_law_from_caller_pressure() {
+        let operation = execute_canonical_parameter_citadel_cycle(8, 5).unwrap();
+        assert_eq!(
+            operation.identity,
+            "parameter-citadel::operator-parameter-citadel"
+        );
+        assert_eq!(operation.generation, 1);
+        assert!(operation.invariants.all_pass());
     }
 
     #[test]
