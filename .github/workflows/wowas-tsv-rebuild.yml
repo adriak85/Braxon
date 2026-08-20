@@ -14,6 +14,20 @@ jobs:
           fetch-depth: 0
       - name: Exhaustively segment TSV corpus
         run: bash reconstruction/wowas-world/tools/rebuild_tsv_corpus.sh . reconstruction/wowas-world/build
+      - name: Run fixed-point narrative reconciliation
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=reconstruction/wowas-world/build/convergence
+          while true; do
+            bash reconstruction/wowas-world/tools/converge_story_canon.sh . "$out"
+            if grep -qx 'CONVERGED' "$out/reports/STATUS.txt"; then
+              break
+            fi
+            # A pass with no applied change must converge on the next pass.
+            # If a configured reflexor/generator changes the corpus, the loop
+            # naturally continues until its evidence reaches a fixed point.
+          done
       - name: Preserve reconstruction reports
         uses: actions/upload-artifact@v4
         with:
