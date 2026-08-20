@@ -1269,9 +1269,12 @@ fn build_all_in_check_gate(root: &std::path::Path) -> serde_json::Value {
 
 fn build_ten_surface_bus_gate(root: &std::path::Path) -> serde_json::Value {
     let proof_path = "state/nsq/proofs/citadel699_current_rebuild.json";
-    let materialization_path =
-        "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json";
-    let rebuild_path = "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.rebuild.nsq";
+    let proof = read_json_file(root, proof_path);
+    let materialization_path = json_value_str(&proof, "materialization").unwrap_or(
+        "state/nsq/citadel699/rebuilds/20260509_011227/council_ten.materialization.json",
+    );
+    let rebuild_path = json_value_str(&proof, "rebuild_surface")
+        .unwrap_or("state/nsq/citadel699/rebuilds/20260509_011227/council_ten.rebuild.nsq");
     let target_models_path = "state/nsq/citadel699/current/target_models.json";
     let request_capsule_path = "state/nsq/citadel699/current/request_capsule.json";
     let stack_config_path = "config/nsq/braxon_council_ten_stack.json";
@@ -1279,7 +1282,6 @@ fn build_ten_surface_bus_gate(root: &std::path::Path) -> serde_json::Value {
     let current_rebuild_path = "state/nsq/citadel699/current/council_ten.rebuild.nsq";
     let current_materialization_path = "state/nsq/citadel699/current/materialization.json";
     let current_bus_path = "state/braxon/bus/citadel699/current.braxon";
-    let proof = read_json_file(root, proof_path);
     let materialization = read_json_file(root, materialization_path);
     let target_models = read_json_file(root, target_models_path);
     let request_capsule = read_json_file(root, request_capsule_path);

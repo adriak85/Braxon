@@ -52,25 +52,23 @@ fn root_runtime_python3_records_ingress_without_runtime_claim() {
 }
 
 #[test]
-fn root_handover_reports_blocked_release_without_disconnect() {
+fn root_handover_materializes_and_reports_completed_release_without_disconnect() {
     let (ok, stdout, stderr) = run_runtime_command(&["handover", "os-power-release"]);
     assert!(
         ok,
         "handover command returned nonzero\nstdout:\n{stdout}\nstderr:\n{stderr}"
     );
-    assert!(stdout.contains("\"full_release_complete\": false"));
-    assert!(stdout.contains(
-        "\"response_to_os\": \"continue_without_power_disconnect_until_full_release_validation\""
-    ));
+    assert!(stdout.contains("\"full_release_complete\": true"));
+    assert!(stdout.contains("\"response_to_os\": \"release_without_power_disconnect\""));
     assert!(stdout.contains("\"power_disconnect_requested\": false"));
     assert!(stdout.contains("\"all_in_check_validated\": true"));
-    assert!(stdout.contains("\"ten_surface_bus_validated\": false"));
+    assert!(stdout.contains("\"ten_surface_bus_validated\": true"));
     assert!(stdout.contains("\"voice_present\": true"));
     assert!(stdout.contains("\"video_present\": true"));
     assert!(stdout.contains("\"watermark_trigger_set_completely_validated\": true"));
     assert!(stdout.contains("\"semantic_address_gate_completely_validated\": true"));
     assert!(stdout.contains("\"seven_suit_cycles_validated\": true"));
-    assert!(stdout.contains("\"release_requirements_not_yet_satisfied\""));
+    assert!(stdout.contains("\"release_requirements_not_yet_satisfied\": []"));
     assert!(stdout.contains("\"watermark_trigger_set_not_yet_satisfied\": []"));
 
     let lower = stdout.to_ascii_lowercase();

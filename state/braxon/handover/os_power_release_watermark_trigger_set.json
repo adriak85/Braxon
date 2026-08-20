@@ -2,23 +2,23 @@
   "all_in_check_validated": true,
   "authority": "NSQ_COURT",
   "completely_validated": true,
-  "full_release_complete": false,
+  "full_release_complete": true,
   "record_count": 23,
   "records": [
     {
-      "bytes": 1552,
+      "bytes": 1679,
       "link_required": true,
       "path": "Cargo.toml",
       "present": true,
-      "sha256": "7b2c82d70b631da1c750c25c730bab5bf22ea4d90d8f1f7fd4a989df06ba7faf",
+      "sha256": "997117b83347012ceb6f692a643b5b63e0e0fbcaef78f92d3ed385360731ea92",
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 52098,
+      "bytes": 54827,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "b310e0087decaded6ccd9d1d21c2604b968cfd19fca6301ecc6042056a88e8b0",
+      "sha256": "fc30051102968f9998e74b4b849d1e17f121993030a71a248f9c61fac0ace107",
       "trigger_role": "root_binary_handover_code"
     },
     {
@@ -138,7 +138,7 @@
       "link_required": true,
       "path": "state/nsq/citadel699/current/materialization.json",
       "present": true,
-      "sha256": "913954b14c6870dda57f4f41ba910f5512f248b8fa610e3c87c5af2fdbf5c027",
+      "sha256": "9079185e3dae23563fec9445f3c2172f9b4855017d6b8eae01d23e75b68fb8c2",
       "trigger_role": "citadel699_current_materialization_link"
     },
     {
@@ -174,25 +174,25 @@
       "trigger_role": "citadel699_environment_bus"
     },
     {
-      "bytes": 3307,
+      "bytes": 3283,
       "link_required": true,
       "path": "tests/braxon_runtime_surface.rs",
       "present": true,
-      "sha256": "13be38bef237618c909a62fdab6d1259da094ab07e4930c52ad2e00194b3ce16",
+      "sha256": "e4fe5a77a6fd84ca3eaad2cc4cb2366d0f35e9009b4ca8dde484b4a1f70496d9",
       "trigger_role": "handover_proof_test_surface"
     },
     {
-      "bytes": 2039,
+      "bytes": 1948,
       "path": "state/braxon/handover/os_power_release_response.json",
       "present": true,
-      "sha256": "8cfa0be4983be76058849ae07d4f8c41fb466756a9e49fd0bd90375e7418b584",
+      "sha256": "732b77ec8a6335c5d72ab45f6b94e3bbeb25121e0c4144684eec4d4277eeaa79",
       "trigger_role": "generated_handover_response"
     }
   ],
   "schema": "braxon.nsq_court.os_power_release_watermark_trigger_set.v1",
   "semantic_address_gate_completely_validated": true,
   "seven_suit_cycles_validated": true,
-  "ten_surface_bus_validated": false,
+  "ten_surface_bus_validated": true,
   "video_present": true,
   "voice_present": true,
   "watermark_trigger_set_completely_validated": true
