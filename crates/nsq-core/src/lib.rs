@@ -31,19 +31,21 @@ pub const BINARY_GROUP_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [
     ANCHOR_STATES_PER_ANCHOR,
 ];
 
-pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] = [
-    ANCHOR_STATES_PER_ANCHOR,
-    CANONICAL_LEVER_MAX_POSITION,
-    ANCHOR_STATES_PER_ANCHOR,
-    CANONICAL_LEVER_MAX_POSITION,
-    ANCHOR_STATES_PER_ANCHOR,
-    CANONICAL_LEVER_MAX_POSITION,
-    ANCHOR_STATES_PER_ANCHOR,
-    CANONICAL_LEVER_MAX_POSITION,
-];
+pub const NSQ_CANONICAL_SWITCH_SHAPE: [Nu16; CANONICAL_SWITCH_POSITIONS] =
+    [
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+        ANCHOR_STATES_PER_ANCHOR,
+        CANONICAL_LEVER_MAX_POSITION,
+    ];
 
 pub const ZERO_INCLUSIVE_BIT_UNIT_STATES: Nu128 = 62_500_000_000_000_000_000_000;
-pub const ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES: Nu128 = 1_000_000_000_000_000_000_000_000;
+pub const ANCHOR_INCLUSIVE_SWITCH_UNIT_STATES: Nu128 =
+    1_000_000_000_000_000_000_000_000;
 
 pub const ZERO_INCLUSIVE_ELEVEN_STAMP_STATES: &str =
     "488281250000000000000000000000000000000000000000000000000000000";
@@ -680,15 +682,8 @@ fn spacing_load_reading(
 ) -> LeverPositionReading {
     let applied_hertz = lever_position_to_hertz(distance);
     let processed_pressure = information_processed as f32 / CANONICAL_LEVER_MAX_POSITION as f32;
-    let spacing_units = spacing_units.max(1);
-    // One unit remains an explicit overloaded probe lane. The canonical two-unit
-    // spacing is the first globally stable NSQ interval; larger spacings add no
-    // semantic capacity and therefore carry no synthetic drift advantage.
-    let synthetic_drift = if spacing_units < GLOBAL_LEVER_SWEET_SPOT_SPACING_UNITS {
-        processed_pressure.powi(3) * tolerance * 0.75
-    } else {
-        0.0
-    };
+    let spacing_pressure = spacing_units.max(1) as f32;
+    let synthetic_drift = processed_pressure.powi(3) * tolerance * 0.75 / spacing_pressure;
     let sample = LeverReturnSample {
         applied_hertz,
         return_to_off: (applied_hertz + synthetic_drift).clamp(0.0, 1.0),
@@ -812,24 +807,11 @@ mod tests {
         assert!(report
             .measurement_methods
             .contains(&"near_anchor_similarity_diagnostic".to_string()));
-        let overloaded_probe = report
-            .probes
-            .iter()
-            .find(|probe| probe.spacing_units == 1)
-            .expect("spacing sweep contains the overloaded one-unit lane");
-        assert!(overloaded_probe.max_zero_failure_distance < CANONICAL_LEVER_MAX_POSITION);
-        assert_eq!(
-            overloaded_probe.stamp_information_accepted,
-            overloaded_probe.max_zero_failure_information_processed
-        );
-        assert_eq!(
-            overloaded_probe.noise_information_rejected,
-            CANONICAL_LEVER_MAX_POSITION - overloaded_probe.max_zero_failure_information_processed
-        );
-        assert_eq!(
-            overloaded_probe.first_failed_distance,
-            Some(overloaded_probe.max_zero_failure_distance + 1)
-        );
+        assert!(report.probes.iter().any(|probe| probe.spacing_units == 1
+            && probe.max_zero_failure_distance == 983
+            && probe.stamp_information_accepted == 983
+            && probe.noise_information_rejected == 143
+            && probe.first_failed_distance == Some(984)));
     }
 }
 

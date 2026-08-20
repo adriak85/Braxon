@@ -24,10 +24,8 @@ impl SeatingVerification {
 
     pub fn seat(&mut self) -> Result<(), String> {
         self.state = SeatingState::Seated;
-        self.levers.push(NSQLever::new(
-            Charge::Positive,
-            CANONICAL_LEVER_MAX_POSITION,
-        )?);
+        self.levers
+            .push(NSQLever::new(Charge::Positive, CANONICAL_LEVER_MAX_POSITION)?);
         Ok(())
     }
 

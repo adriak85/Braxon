@@ -3,11 +3,6 @@ use nsq_core::{
     lever_max_zero_failure_scan, lever_spacing_sweet_spot_report, lever_sweet_spot_report,
     CANONICAL_LEVER_MAX_POSITION, TOTAL_STATES_PER_LEVER, ZERO_INCLUSIVE_BIT_UNIT_STATES,
 };
-use nsq_reflexor::{
-    bootstrap as reflex_bootstrap, discover as reflex_discover,
-    route_operation as reflex_route_operation, verify as reflex_verify,
-    write_inventory as reflex_write_inventory, DEFAULT_PROFILE,
-};
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     braxon_context_manifest_status, braxon_wake_linked_change_report_from_env, BraxonBus,
@@ -47,10 +42,6 @@ enum Command {
         #[command(subcommand)]
         command: RuntimeCommand,
     },
-    Reflex {
-        #[command(subcommand)]
-        command: ReflexCommand,
-    },
     Handover {
         #[command(subcommand)]
         command: HandoverCommand,
@@ -84,27 +75,6 @@ enum RuntimeCommand {
 #[derive(Subcommand)]
 enum HandoverCommand {
     OsPowerRelease,
-}
-
-#[derive(Subcommand)]
-enum ReflexCommand {
-    /// Discover every workspace crate, declared runtime dialect, support library, and physical boundary.
-    Discover,
-    /// Verify complete crate coverage, dialect mapping, and lightweight runtime isolation.
-    Verify,
-    /// Write the verified NSQ Reflex inventory to state/reflex/capability_inventory.json.
-    Capture,
-    /// Probe the native Termux host and prepare the Samsung Galaxy A17 front door without starting a resident runtime.
-    Bootstrap {
-        #[arg(long, default_value = DEFAULT_PROFILE)]
-        profile: String,
-    },
-    /// Route one capability contract; use --execute only for an explicitly executable workspace crate.
-    Operate {
-        capability: String,
-        #[arg(long)]
-        execute: bool,
-    },
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -166,7 +136,6 @@ fn main() {
         Command::MaxStableScan { tolerance } => print_max_stable_scan(tolerance),
         Command::LeverSweetSpot { tolerance } => print_lever_sweet_spot(tolerance),
         Command::Runtime { command } => print_runtime(command),
-        Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
         Command::TerminalPlan => print_terminal_plan(),
@@ -452,37 +421,6 @@ fn find_root_app(name: &str) -> Option<&'static RootAppSurface> {
     })
 }
 
-fn print_reflex(command: ReflexCommand) {
-    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
-    let result = match command {
-        ReflexCommand::Discover => reflex_discover(&root)
-            .and_then(|inventory| serde_json::to_value(inventory).map_err(|err| err.to_string())),
-        ReflexCommand::Verify => reflex_verify(&root).and_then(|verification| {
-            serde_json::to_value(verification).map_err(|err| err.to_string())
-        }),
-        ReflexCommand::Capture => reflex_write_inventory(&root).map(|path| {
-            serde_json::json!({
-                "schema": "braxon.nsq.kinetic_reflex.capture.v1",
-                "inventory_path": path,
-                "status": "captured"
-            })
-        }),
-        ReflexCommand::Bootstrap { profile } => reflex_bootstrap(&root, &profile),
-        ReflexCommand::Operate {
-            capability,
-            execute,
-        } => reflex_route_operation(&root, &capability, execute)
-            .and_then(|operation| serde_json::to_value(operation).map_err(|err| err.to_string())),
-    };
-    match result {
-        Ok(report) => print_json(&report),
-        Err(err) => {
-            eprintln!("reflex_error={err}");
-            std::process::exit(1);
-        }
-    }
-}
-
 fn print_runtime(command: RuntimeCommand) {
     match command {
         RuntimeCommand::Registry => print_json(&nsq_court_registry()),
@@ -544,10 +482,6 @@ fn print_status() {
     println!("architecture=council_ten_6brain_4sensory");
     println!("terminal_default=console");
     println!("bus_command=Braxon bus <thought>");
-    println!(
-        "reflex_front_door=Braxon reflex bootstrap --profile samsung_galaxy_a17_termux_aarch64"
-    );
-    println!("reflex_discovery=Braxon reflex discover");
     println!("offline=true");
     println!();
     println!("I am here. The void is listening. What shall we build together?");
@@ -740,7 +674,6 @@ impl NsqCourtOfflineModelBoundary {
 
 fn build_os_power_release_handover() -> Result<serde_json::Value, String> {
     let root = std::env::current_dir().map_err(|err| err.to_string())?;
-    materialize_citadel_current_state(&root)?;
     let watermark_input_records = handover_watermark_input_records(&root);
     let watermark_unsatisfied = watermark_input_records
         .iter()
@@ -1025,115 +958,11 @@ fn build_all_in_check_gate(root: &std::path::Path) -> serde_json::Value {
     })
 }
 
-fn materialize_citadel_current_state(root: &std::path::Path) -> Result<(), String> {
-    let proof_path = "state/nsq/proofs/citadel699_current_rebuild.json";
-    let proof = read_json_file(root, proof_path)
-        .ok_or_else(|| format!("missing or invalid {proof_path}"))?;
-    let materialization_path = proof
-        .get("materialization")
-        .and_then(serde_json::Value::as_str)
-        .ok_or_else(|| "Citadel rebuild proof has no materialization path".to_string())?;
-    let rebuild_path = proof
-        .get("rebuild_surface")
-        .and_then(serde_json::Value::as_str)
-        .ok_or_else(|| "Citadel rebuild proof has no rebuild surface path".to_string())?;
-    let materialization_raw = std::fs::read(root.join(materialization_path))
-        .map_err(|err| format!("unable to read {materialization_path}: {err}"))?;
-    if sha256_hex(&materialization_raw)
-        != proof
-            .get("materialization_sha256")
-            .and_then(serde_json::Value::as_str)
-            .unwrap_or_default()
-    {
-        return Err(
-            "Citadel materialization hash does not match the committed rebuild proof".to_string(),
-        );
-    }
-    let rebuild_raw = std::fs::read(root.join(rebuild_path))
-        .map_err(|err| format!("unable to read {rebuild_path}: {err}"))?;
-    if sha256_hex(&rebuild_raw)
-        != proof
-            .get("rebuild_sha256")
-            .and_then(serde_json::Value::as_str)
-            .unwrap_or_default()
-    {
-        return Err(
-            "Citadel rebuild surface hash does not match the committed rebuild proof".to_string(),
-        );
-    }
-    let materialization: serde_json::Value = serde_json::from_slice(&materialization_raw)
-        .map_err(|err| format!("invalid {materialization_path}: {err}"))?;
-    let models = materialization
-        .get("models")
-        .and_then(serde_json::Value::as_array)
-        .cloned()
-        .ok_or_else(|| "Citadel materialization has no model list".to_string())?;
-    if models.len() != 10 {
-        return Err(format!(
-            "Citadel materialization must contain ten models, found {}",
-            models.len()
-        ));
-    }
-    let current_dir = root.join("state/nsq/citadel699/current");
-    std::fs::create_dir_all(&current_dir).map_err(|err| err.to_string())?;
-    let target_models = serde_json::json!({
-        "schema": "Braxon.nsq.citadel699.current_target_models.v1",
-        "authority": "NSQ_COURT",
-        "source_proof": proof_path,
-        "required_model_count": 10,
-        "brain_model_count": 6,
-        "sensory_body_count": 4,
-        "brain_models": models[..6].to_vec(),
-        "sensory_bodies": {
-            "image_cortex": models[6].clone(),
-            "video_cortex": models[7].clone(),
-            "voice_body": models[8].clone(),
-            "world_body_3d": models[9].clone()
-        },
-        "raw_fetch_allowed": false,
-        "raw_payload_transfer_allowed": false,
-        "pointer_setup_allowed": false
-    });
-    let request_capsule = serde_json::json!({
-        "schema": "Braxon.nsq.citadel699.current_request_capsule.v1",
-        "authority": "NSQ_COURT",
-        "transfer_method": "citadel699_nsq_request_return_rebuild",
-        "transfer_form": "nsq_only",
-        "required_model_count": 10,
-        "brain_model_count": 6,
-        "sensory_body_count": 4,
-        "source_proof": proof_path,
-        "materialization": materialization_path,
-        "rebuild_surface": rebuild_path,
-        "raw_fetch_allowed": false,
-        "raw_payload_transfer_allowed": false,
-        "pointer_setup_allowed": false
-    });
-    write_json_value(&current_dir.join("target_models.json"), &target_models)?;
-    write_json_value(&current_dir.join("request_capsule.json"), &request_capsule)?;
-    std::fs::write(
-        current_dir.join("materialization.json"),
-        &materialization_raw,
-    )
-    .map_err(|err| err.to_string())?;
-    std::fs::write(current_dir.join("council_ten.rebuild.nsq"), &rebuild_raw)
-        .map_err(|err| err.to_string())?;
-    Ok(())
-}
-
-fn write_json_value(path: &std::path::Path, value: &serde_json::Value) -> Result<(), String> {
-    let raw = serde_json::to_string_pretty(value).map_err(|err| err.to_string())?;
-    std::fs::write(path, format!("{raw}\n")).map_err(|err| err.to_string())
-}
-
 fn build_ten_surface_bus_gate(root: &std::path::Path) -> serde_json::Value {
     let proof_path = "state/nsq/proofs/citadel699_current_rebuild.json";
-    let proof = read_json_file(root, proof_path);
-    let materialization_path = json_value_str(&proof, "materialization").unwrap_or(
-        "state/nsq/citadel699/rebuilds/20260509_011227/council_ten.materialization.json",
-    );
-    let rebuild_path = json_value_str(&proof, "rebuild_surface")
-        .unwrap_or("state/nsq/citadel699/rebuilds/20260509_011227/council_ten.rebuild.nsq");
+    let materialization_path =
+        "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.materialization.json";
+    let rebuild_path = "state/nsq/citadel699/rebuilds/20260428_065519/council_ten.rebuild.nsq";
     let target_models_path = "state/nsq/citadel699/current/target_models.json";
     let request_capsule_path = "state/nsq/citadel699/current/request_capsule.json";
     let stack_config_path = "config/nsq/braxon_council_ten_stack.json";
@@ -1141,7 +970,7 @@ fn build_ten_surface_bus_gate(root: &std::path::Path) -> serde_json::Value {
     let current_rebuild_path = "state/nsq/citadel699/current/council_ten.rebuild.nsq";
     let current_materialization_path = "state/nsq/citadel699/current/materialization.json";
     let current_bus_path = "state/braxon/bus/citadel699/current.braxon";
-    let current_state_materialized = materialize_citadel_current_state(root).is_ok();
+    let proof = read_json_file(root, proof_path);
     let materialization = read_json_file(root, materialization_path);
     let target_models = read_json_file(root, target_models_path);
     let request_capsule = read_json_file(root, request_capsule_path);
@@ -1173,8 +1002,7 @@ fn build_ten_surface_bus_gate(root: &std::path::Path) -> serde_json::Value {
         && json_array_contains_str(&stack_config, "default_stack", "IndexTTS2");
     let hashes_ok = file_sha_matches(root, materialization_path, &proof, "materialization_sha256")
         && file_sha_matches(root, rebuild_path, &proof, "rebuild_sha256");
-    let current_links_mounted = current_state_materialized
-        && root.join(current_rebuild_path).exists()
+    let current_links_mounted = root.join(current_rebuild_path).exists()
         && root.join(current_materialization_path).exists()
         && root.join(current_bus_path).exists();
     let stack_surface_mounted = root.join(stack_surface_path).exists();
