@@ -7,7 +7,7 @@ use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 
-pub const WOWAS_STORY_SEED_SCHEMA: &str = "braxon.wowas.story_seed.v1";
+pub const WOWAS_STORY_SEED_SCHEMA: &str = "braxon.wowas.story_seed.v2";
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct WowasStorySeedManifest {

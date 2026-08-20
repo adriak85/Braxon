@@ -9,6 +9,7 @@
   "character_lattice_path": "audit/wowas_character_lattice.json",
   "canon_rebalance_path": "config/wowas/canon_rebalance_manifest.json",
   "ordered_stretched_spine_path": "config/wowas/ordered_stretched_spine_manifest.json",
+  "bridge_candidate_filter_path": "config/wowas/bridge_candidate_filter_manifest.json",
   "entry_scene_id": "B01_C001",
   "rebalance_policy": {
     "core_beats_are_authoritative": true,

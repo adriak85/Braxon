@@ -27,6 +27,7 @@ pub mod seed_citadel;
 pub mod semantic_link;
 pub mod target_field;
 pub mod wowas;
+pub mod wowas_realization;
 pub mod wowas_rescue;
 pub mod wowas_seeded;
 pub mod wowas_story_seed;
@@ -106,6 +107,9 @@ pub use seed_citadel::{
     build_seed_plan, materialize_window, CitadelState, SeedMaterializationPlan, TokenSection,
     UniversalToken, UniversalTokenizerSeed, CITADEL_MATERIALIZATION_VERSION,
     UNIVERSAL_TOKENIZER_VERSION,
+};
+pub use wowas_realization::{
+    WowasRealization, WowasRealizedPacket, WowasWorldStateDelta, WOWAS_REALIZATION_SCHEMA,
 };
 pub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};
 pub use wowas_story_seed::{WowasStorySeed, WowasStorySeedManifest, WOWAS_STORY_SEED_SCHEMA};

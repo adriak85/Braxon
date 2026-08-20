@@ -3,7 +3,7 @@ pub const WOWAS_PACK_ROOT: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/canon");
 /// Active canon control for the reconstruction branch.
 pub const WOWAS_ACTIVE_CANON_CONTROL: &str = concat!(
     env!("CARGO_MANIFEST_DIR"),
-    "/canon/active/README.md"
+    "/canon/wowas_canon_v1.md"
 );
 
 /// Cohesive canon body retained as a directly readable supporting surface.
@@ -131,7 +131,7 @@ pub fn wowas_required_control_files() -> &'static [&'static str] {
 
 pub fn wowas_generation_source_order() -> &'static [&'static str] {
     &[
-        "canon/active/README.md",
+        "canon/active/CANON_AUTHORITY.md",
         "canon/active/book_spine_33.tsv",
         "canon/active/canon_laws.tsv",
         "canon/active/canon_blocklist.tsv",

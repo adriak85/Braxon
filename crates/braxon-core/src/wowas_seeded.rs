@@ -6,6 +6,7 @@
 //! not a substitute for the native cognitive runtime.
 
 use crate::seed_citadel::{build_seed_plan, materialize_window, UniversalTokenizerSeed};
+use crate::wowas_realization::WowasRealization;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -66,6 +67,48 @@ impl WhispersWorld {
         }
     }
 
+    pub fn from_realization(realization: &WowasRealization) -> Result<Self, String> {
+        realization.validate()?;
+        let tokenizer = UniversalTokenizerSeed::canonical();
+        let plan = build_seed_plan(&realization.realization_hash, 1 << 44, 1 << 28);
+        let _citadel = materialize_window(&plan, 0, plan.active_window_bits);
+        let mut entities = Vec::new();
+        for packet in realization.packets.iter().take(64) {
+            if !packet.source_character_name.trim().is_empty() {
+                entities.push(WorldEntity {
+                    id: stable(&packet.source_character_id),
+                    name: packet.source_character_name.clone(),
+                    archetype: packet.source_role.clone(),
+                    location: packet.source_region.clone(),
+                });
+            }
+        }
+        if entities.is_empty() {
+            entities.push(WorldEntity {
+                id: stable("wowas::runtime"),
+                name: "WOWAS Runtime".into(),
+                archetype: "ordered_scene_substrate".into(),
+                location: "B01_C001".into(),
+            });
+        }
+        entities.sort_by_key(|entity| entity.id);
+        entities.dedup_by_key(|entity| entity.id);
+        Ok(Self {
+            seed: WorldSeed {
+                seed_id: realization.realization_hash.clone(),
+                world_name: realization.series.clone(),
+                universe_name: "The Willowstone Continuum".into(),
+                epoch: 1,
+            },
+            tokenizer,
+            frame: WorldFrame {
+                tick: 0,
+                entities,
+                narration: format!("WOWAS ordered realization ready: {} packets across {} books; prose gates remain explicit.", realization.packet_count, realization.book_count),
+            },
+        })
+    }
+
     pub fn play(&mut self, utterance: &str) -> WorldFrame {
         let token = self.tokenizer.synchronize(utterance);
         self.frame.tick += 1;
@@ -104,6 +147,16 @@ mod tests {
         });
         assert_eq!(world.frame.entities.len(), 2);
         assert_eq!(world.frame.tick, 0);
+    }
+
+    #[test]
+    fn realization_handoff_builds_deterministic_world_entities() {
+        let raw = include_str!("../../../config/wowas/ordered_stretched_spine_manifest.json");
+        let realization = WowasRealization::from_ordered_manifest(raw).unwrap();
+        let world = WhispersWorld::from_realization(&realization).unwrap();
+        assert_eq!(world.seed.seed_id, realization.realization_hash);
+        assert!(!world.frame.entities.is_empty());
+        assert!(world.frame.narration.contains("535 packets"));
     }
 
     #[test]
