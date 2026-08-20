@@ -1,0 +1,68 @@
+name: WOWAS recursive finalization
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [reconstruction]
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: reconstruction
+
+      - name: Recursive canonical reconstruction
+        shell: bash
+        env:
+          GIT_AUTHOR_NAME: wowas-finalizer
+          GIT_AUTHOR_EMAIL: wowas-finalizer@users.noreply.github.com
+          GIT_COMMITTER_NAME: wowas-finalizer
+          GIT_COMMITTER_EMAIL: wowas-finalizer@users.noreply.github.com
+        run: |
+          set -euo pipefail
+          git config user.name "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
+
+          out=reconstruction/wowas-world/build/finalization
+          mkdir -p "$out"
+
+          # Deliberately convergence-driven. There is no success exit merely
+          # because a pass completed: the loop may leave only when the final
+          # canonical validator proves the intended 33-book image is coherent.
+          while true; do
+            git fetch origin reconstruction --quiet
+            git reset --hard origin/reconstruction --quiet
+
+            bash reconstruction/wowas-world/tools/apply_story_reconciliation.sh . || true
+            bash reconstruction/wowas-world/tools/converge_story_canon.sh . "$out"
+
+            # The final predicate is intentionally strict. A report saying
+            # "review required" is not completion.
+            if bash reconstruction/wowas-world/tools/validate_final_wowas.sh . "$out"; then
+              git add crates/wowas-final-edition-v10 reconstruction/wowas-world
+              if ! git diff --cached --quiet; then
+                git commit -m 'reconstruct(wowas): converge canonical story to final image'
+                git push origin HEAD:reconstruction
+              fi
+              echo FINALIZED > "$out/FINALIZED"
+              break
+            fi
+
+            # If the current pass changed anything, publish it so the next
+            # iteration works from the new canonical state. If it did not,
+            # the loop deliberately remains active: unresolved seams are not
+            # promoted to completion.
+            git add crates/wowas-final-edition-v10 reconstruction/wowas-world || true
+            if ! git diff --cached --quiet; then
+              git commit -m 'reconstruct(wowas): apply recursive canon pass'
+              git push origin HEAD:reconstruction
+            fi
+            sleep 5
+          done
