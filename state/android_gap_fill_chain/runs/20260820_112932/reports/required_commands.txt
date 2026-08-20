@@ -1,0 +1,11 @@
+clang            /data/data/com.termux/files/usr/bin/clang
+clang++          /data/data/com.termux/files/usr/bin/clang++
+ld.lld           /data/data/com.termux/files/usr/bin/ld.lld
+llvm-ar          /data/data/com.termux/files/usr/bin/llvm-ar
+llvm-nm          /data/data/com.termux/files/usr/bin/llvm-nm
+llvm-objdump     /data/data/com.termux/files/usr/bin/llvm-objdump
+llvm-strip       /data/data/com.termux/files/usr/bin/llvm-strip
+readelf          /data/data/com.termux/files/usr/bin/readelf
+rustc            /data/data/com.termux/files/usr/bin/rustc
+cargo            /data/data/com.termux/files/usr/bin/cargo
+python3          /data/data/com.termux/files/usr/bin/python3

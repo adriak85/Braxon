@@ -1,0 +1,8 @@
+schema=braxon.android_gap_fill.runtime_gap_stage_report.v1
+date=2026-08-20T11:29:51-05:00
+run_dir=/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/runs/20260820_112932
+stage_dir=/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current
+custom_rust_preserved=true
+no_libc_direct_start=pass
+release_probes=pass
+hash_manifest=/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/SHA256SUMS

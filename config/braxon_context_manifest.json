@@ -47,11 +47,11 @@
       "route": ["policer", "lexer", "parser", "optimizer", "inspector"]
     },
     {
-      "id": "nsq_runtime_crate",
-      "kind": "crate",
-      "path": "crates/nsq-runtime",
+      "id": "nsq_native_runtime_surface",
+      "kind": "runtime_surface",
+      "path": "crates/nsq-core/src/native_runtime.rs",
       "required": true,
-      "relationship": "native NSQ runtime hosting, offline inference, and persistent session surfaces",
+      "relationship": "canonical native NSQ runtime execution, ownership, actuation, and generation surface; tensor and model substrate remain linked through nsq-core and Braxon-core",
       "route": ["policer", "router", "scheduler", "inspector"]
     },
     {

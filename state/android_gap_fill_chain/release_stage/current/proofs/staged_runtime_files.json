@@ -45,45 +45,27 @@
       "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libunwind.a"
     },
     {
-      "group": "unwind",
-      "name": "libunwind.so",
-      "src": "/data/data/com.termux/files/usr/glibc/lib/libunwind.so",
-      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libunwind.so"
-    },
-    {
       "group": "libcxx",
       "name": "libc++_shared.so",
       "src": "/data/data/com.termux/files/usr/lib/libc++_shared.so",
       "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libc++_shared.so"
     },
     {
-      "group": "system_libs",
-      "name": "libc.so",
-      "src": "/data/data/com.termux/files/usr/glibc/lib/libc.so",
-      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libc.so"
-    },
-    {
-      "group": "system_libs",
-      "name": "libm.so",
-      "src": "/data/data/com.termux/files/usr/glibc/lib/libm.so",
-      "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/lib/libm.so"
-    },
-    {
       "group": "headers",
       "name": "stdint.h",
-      "src": "/data/data/com.termux/files/usr/glibc/include/stdint.h",
+      "src": "/data/data/com.termux/files/usr/include/c++/v1/__cxx03/stdint.h",
       "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/stdint.h"
     },
     {
       "group": "headers",
       "name": "stdio.h",
-      "src": "/data/data/com.termux/files/usr/glibc/include/bits/stdio.h",
+      "src": "/data/data/com.termux/files/usr/include/bits/fortify/stdio.h",
       "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/stdio.h"
     },
     {
       "group": "headers",
       "name": "unwind.h",
-      "src": "/data/data/com.termux/files/usr/glibc/include/unwind.h",
+      "src": "/data/data/com.termux/files/usr/lib/clang/21/include/unwind.h",
       "dst": "/data/data/com.termux/files/home/Braxon/state/android_gap_fill_chain/release_stage/current/include/unwind.h"
     }
   ]
