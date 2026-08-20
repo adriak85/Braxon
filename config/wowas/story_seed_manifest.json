@@ -5,5 +5,6 @@
   "scene_index_path": "crates/wowas-final-edition-v10/canon/wowas_clean_scene_index_v2.tsv",
   "character_timeline_path": "crates/wowas-final-edition-v10/canon/wowas_character_timeline_lattice_UNIFIED_v14.tsv",
   "world_map_path": "crates/wowas-final-edition-v10/canon/canonical_story_tree/world/wowas_world_zone_map.json",
+  "canon_blocklist_path": "crates/wowas-final-edition-v10/canon/active/canon_blocklist.tsv",
   "entry_scene_id": "B01_C001"
 }
