@@ -1,0 +1,41 @@
+{
+  "payload": {
+    "capability": {
+      "complete_nsq_ingestion": true,
+      "executable": true,
+      "foreign_surface_role": "project_artifact_ingress_and_nsq_action_egress_only",
+      "id": "feature:language.parameter_parse",
+      "ingress": "validated_input_to_nsq_feature_operation",
+      "kind": "semantic_intent",
+      "notes": [
+        "canonicality=canonical_active",
+        "state_contract=declared_language_to_tokenized_bounded_parameter_semantic_parse",
+        "action_contract=intercept_language_request_then_resolve_only_declared_local_materialization_tools",
+        "answer_contract=parameter_parse_receipt_or_exact_target_materialization_guidance",
+        "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.",
+        "required_artifacts=present"
+      ],
+      "nsq_dialect": "intent",
+      "on_demand": true,
+      "owner": "NSQ kinetic semantic reflexor",
+      "resident_runtime": false,
+      "semantic_authority": "nsq",
+      "source": "crates/braxon-core/src/language_operation.rs",
+      "state": "operable_on_demand",
+      "target_names": [
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/nsq/complete_semantic_extraction_contract.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "crates/braxon-core/src/parameter_citadel.rs"
+      ]
+    },
+    "command": null,
+    "execution_mode": "bounded_declared_feature_registry",
+    "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_language_parameter_parse.json",
+    "routed": true,
+    "schema": "braxon.nsq.kinetic_reflex.operation.v1",
+    "status": "routed_after_declared_feature_and_artifact_validation"
+  },
+  "sha256": "4f845f415513ce652d090eab88203779d307077ba3252c3e417916c46e0f6adf"
+}

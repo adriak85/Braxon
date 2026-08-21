@@ -28,11 +28,11 @@
       ]
     },
     "command": null,
-    "execution_mode": "contract_route_only",
+    "execution_mode": "bounded_declared_feature_registry",
     "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_parameter_citadel.json",
     "routed": true,
     "schema": "braxon.nsq.kinetic_reflex.operation.v1",
-    "status": "routed_without_process"
+    "status": "routed_after_declared_feature_and_artifact_validation"
   },
-  "sha256": "875a1f62f36ce3520f9d460b2c6cf48719911fe9d0920411089b6c55d3cf318d"
+  "sha256": "2dbeb8a1599ff728ea79c4988521784927118731a06b84f220b525fe9639ef5a"
 }

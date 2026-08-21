@@ -29,11 +29,11 @@
       ]
     },
     "command": null,
-    "execution_mode": "contract_route_only",
+    "execution_mode": "bounded_declared_feature_registry",
     "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_model_tensor_inference.json",
     "routed": true,
     "schema": "braxon.nsq.kinetic_reflex.operation.v1",
-    "status": "routed_without_process"
+    "status": "routed_after_declared_feature_and_artifact_validation"
   },
-  "sha256": "7bcae82598690c4f004b3bfd4c7396d6d6c9ca71e9a641cc5fb13d90d0e72aff"
+  "sha256": "55ed2ed9b232faf54d019c955c724729056c1f2a0e2e48171535429bfc42e7bf"
 }

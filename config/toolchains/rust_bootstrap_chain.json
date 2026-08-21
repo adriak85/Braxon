@@ -42,11 +42,14 @@
         "repository_path": "state/full_android_language_toolchain/src/rust",
         "upstream_project": "rust-lang/rust",
         "git_commit": "f964de49bcb561e5c6c725bb37201e11d852daf0",
-        "source_status": "unmaterialized_orphaned_gitlink"
+        "archive_path": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz",
+        "archive_provenance": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.provenance.json",
+        "archive_sha256": "ea2b7f5abde429b1699ca4fa4f6c44d5533db4b0bccae020baf813da02f0e42e",
+        "source_status": "clone_contained_authoritative_archive_unextracted"
       },
       "bootstrap_dependency": "bootstrap_termux_1_97_1",
       "expected_output": "stage1 rustc/cargo for aarch64-linux-android",
-      "materialization_status": "blocked_pending_verified_source_materialization_and_target_capacity_preflight",
+      "materialization_status": "blocked_pending_archive_extraction_on_capacity-approved_target_filesystem_and_target_capacity_preflight",
       "validation_required": ["source checksum and license record", "stage1 build receipt", "aarch64-android compile/link/run probe"]
     },
     {
@@ -73,9 +76,12 @@
       "channel_date": "2026-08-20",
       "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
       "target": "aarch64-linux-android",
-      "evidence": "audit/external_rust_nightly_observation_2026-08-20.txt",
-      "materialization_status": "upstream_descriptor_only_not_embedded_not_activated",
-      "source_relationship": "this edge descriptor is not inferred to be the pinned f964de49 source tree; a separately pinned matching source archive, checksum, license record, and stage-equivalence result are required",
+      "evidence": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.provenance.json",
+      "archive_path": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+      "archive_sha256": "50e6078f413d40a1991b8f7ee0b19c9ec28f93bfbc5f5e7cb22575a610e56cb0",
+      "license": "Apache-2.0 OR MIT",
+      "materialization_status": "clone_contained_authoritative_source_archive_unextracted_not_activated",
+      "source_relationship": "this edge candidate has a separately pinned matching public source archive with a SHA-256 and Apache-2.0/MIT license record; it remains distinct from f964de49 and requires independent Android stage-equivalence validation before activation",
       "selection_policy": "never selected by default before independent target validation"
     }
   ],
@@ -91,10 +97,10 @@
     "full_contained_rust_source_reconstruction_ready": false,
     "default_edge_nightly_activated": false,
     "release_blockers": [
-      "materialize verified Rust source for f964de49 with checksum and license evidence",
+      "extract the clone-contained f964de49 source archive on an inode-capacity-approved target filesystem",
       "run target capacity preflight on the actual executable build filesystem",
       "build and validate stage1 then stage2 on AArch64 Android",
-      "acquire matching source and verify equivalence before activating 1.100.0-nightly"
+      "extract the clone-contained 1.100.0-nightly source archive and verify target equivalence before activating it"
     ]
   }
 }

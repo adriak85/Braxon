@@ -3,29 +3,38 @@
     "capability": {
       "complete_nsq_ingestion": true,
       "executable": false,
-      "foreign_surface_role": "surface_ingress_and_egress_projection_only",
+      "foreign_surface_role": "boundary_codec_only",
       "id": "language:python3",
-      "ingress": "call_shape",
+      "ingress": "python3_source_to_nsq_alphabetic_semantic_contract",
       "kind": "native_language",
       "notes": [
-        "Every registry surface is dynamically ingested into an NSQ language contract at discovery time; this is not a copied static list.",
-        "External language spelling is an ingress or egress projection and cannot supersede the NSQ semantic representation."
+        "Python 3 is a first-class NSQ alphabetic contract; Python spelling is accepted only as an ingress or egress boundary projection.",
+        "The interpreter is consulted only for an explicitly requested boundary action and cannot become a resident Braxon runtime.",
+        "Target-side execution requires the declared Tower native CPython boundary tool to be present and verified during device bootstrap.",
+        "requested_toolchain=Tower/Braxon native CPython 3 contract",
+        "resolved_toolchain=python3 interpreter and standard-library boundary codec",
+        "toolchain_owner=Tower/Braxon native toolchain contract",
+        "surface_aliases=python,python3,py,python3.12",
+        "native_egress=nsq_semantic_contract_to_python3_artifact_or_explicit_boundary_invocation",
+        "The language is fully ingested and redefined as an NSQ semantic contract. External spelling and tool binaries are boundary codecs only."
       ],
-      "nsq_dialect": "intent",
+      "nsq_dialect": "alphabetic",
       "on_demand": true,
-      "owner": "NSQ native language substrate",
+      "owner": "NSQ kinetic semantic reflexor",
       "resident_runtime": false,
       "semantic_authority": "nsq",
-      "source": "/home/ubuntu/Braxon/config/nsq/nsq_runtime_language_registry.json",
+      "source": "/home/ubuntu/Braxon/config/nsq/nsq_native_language_contracts.json",
       "state": "ingested_and_redefined",
-      "target_names": []
+      "target_names": [
+        "python3"
+      ]
     },
     "command": null,
-    "execution_mode": "contract_route_only",
+    "execution_mode": "bounded_declared_native_language_contract",
     "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/language_python3.json",
     "routed": true,
     "schema": "braxon.nsq.kinetic_reflex.operation.v1",
-    "status": "routed_without_process"
+    "status": "routed_after_declared_native_language_contract_validation"
   },
-  "sha256": "182429e22c874ff488da335fa9d6fb32a3a267c1e0278f05a15300cc588c735d"
+  "sha256": "2939aa4a9a4e9a7e6ecda4c48fd12a2843739a5a517247cc5ff99a985155c866"
 }

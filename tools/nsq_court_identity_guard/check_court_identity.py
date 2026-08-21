@@ -181,7 +181,7 @@ if FINDINGS:
     for f in FINDINGS[:200]:
         print(f"{f['path']}:{f['line']}:{f['kind']}: {f['text']}")
     if len(FINDINGS) > 200:
-        print(f"... truncated {len(FINDINGS)-200} additional findings")
+        print(f"... {len(FINDINGS)-200} additional findings omitted from console display; the guard still fails on the complete finding set")
     sys.exit(1)
 
 print("NSQ court identity guard: ok")

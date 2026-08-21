@@ -112,7 +112,7 @@ pub struct SensoryGenerationBody {
     pub constraint: String,
     pub nsq_route: Vec<String>,
     pub graphics_footprint_units: u16,
-    pub todo: Vec<String>,
+    pub required_route_contracts: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -148,7 +148,7 @@ pub struct IndexTts2EmotionalFrequencyMap {
     pub zero_inclusive_lever_states: nsq_core::Nu16,
     pub carrier_rule: String,
     pub channels: Vec<EmotionalFrequencyChannel>,
-    pub next_runtime_todo: String,
+    pub next_runtime_operation: String,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -288,7 +288,7 @@ impl CouncilOfSix {
                     "inspector".to_string(),
                 ],
                 graphics_footprint_units: 12,
-                todo: vec![
+                required_route_contracts: vec![
                     "define_visual_intent_lever_anchors".to_string(),
                     "bind_image_output_inspection_to_chain_wake_registry".to_string(),
                 ],
@@ -310,7 +310,7 @@ impl CouncilOfSix {
                     "inspector".to_string(),
                 ],
                 graphics_footprint_units: 14,
-                todo: vec![
+                required_route_contracts: vec![
                     "add_motion_physics_check_gates".to_string(),
                     "verify_citadel_intent_physical_plausibility".to_string(),
                 ],
@@ -333,7 +333,7 @@ impl CouncilOfSix {
                     "inspector".to_string(),
                 ],
                 graphics_footprint_units: 8,
-                todo: vec![
+                required_route_contracts: vec![
                     "focus_next_on_nsq_to_indextts2_emotional_frequency_mapping".to_string(),
                     "map_valence_arousal_breath_tremor_timbre_cadence_and_emphasis".to_string(),
                 ],
@@ -355,7 +355,7 @@ impl CouncilOfSix {
                     "inspector".to_string(),
                 ],
                 graphics_footprint_units: 16,
-                todo: vec![
+                required_route_contracts: vec![
                     "define_two_d_to_mesh_semantic_bridge".to_string(),
                     "add_spatial_consistency_checks".to_string(),
                 ],
@@ -463,8 +463,8 @@ impl CouncilOfSix {
                 "each acoustic channel is resolved through NSQ anchor plus lever state; host audio parameters are boundary projection only"
                     .to_string(),
             channels,
-            next_runtime_todo:
-                "implement_nsq_voice_route_adapter_for_indextts2_boundary_controls".to_string(),
+            next_runtime_operation:
+                "nsq_voice_route_adapter_boundary_controls_are_required_before_external_voice_synthesis_is_eligible".to_string(),
         }
     }
 
@@ -486,8 +486,9 @@ impl CouncilOfSix {
             .collect();
         CouncilDecision {
             topic: topic.to_string(),
-            consensus: "NSQ substrate expansion remains switch-faithful and Braxon-aligned."
-                .to_string(),
+            consensus: format!(
+                "Structural Council assessment for `{topic}`: six unique NSQ regions are aligned under the declared pressure law; this is not an independent learned-model deliberation claim."
+            ),
             confidence: 0.98,
             member_votes,
             thought_pressure: self.unified_thought_pressure(),

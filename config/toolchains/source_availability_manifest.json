@@ -43,19 +43,62 @@
       "upstream_commit_verified": true,
       "upstream_commit_date": "2026-05-07T19:45:59Z",
       "source_path": "state/full_android_language_toolchain/src/rust",
-      "source_status": "pinned_source_edge_locally_observed_not_clone_contained",
+      "source_status": "pinned_source_archive_clone_contained_unextracted; locally_observed_worktree_remains_separate",
       "materialization_evidence": {
         "observed_head": "f964de49bcb561e5c6c725bb37201e11d852daf0",
         "observed_bytes": 1235628538,
+        "clone_contained_archive": {
+          "path": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz",
+          "provenance": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.provenance.json",
+          "bytes": 38258116,
+          "sha256": "ea2b7f5abde429b1699ca4fa4f6c44d5533db4b0bccae020baf813da02f0e42e",
+          "license_evidence": ["LICENSE-APACHE", "LICENSE-MIT"],
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        },
         "required_source_indicators": ["x.py", "compiler/rustc/Cargo.toml"],
         "nested_submodules_materialized": ["library/backtrace", "src/doc/book", "src/doc/edition-guide", "src/doc/embedded-book", "src/doc/nomicon", "src/doc/reference", "src/doc/rust-by-example", "src/gcc", "src/tools/cargo", "src/tools/enzyme", "src/tools/rustc-perf"],
         "nested_llvm_gitlink": "eaab4d9841b9a8a12783d927b2df2291c1c79269",
-        "nested_llvm_worktree_state": "deferred_after_inode_exhaustion; pinned Git object store retained"
+        "nested_llvm_archive": {
+          "chunk_directory": "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks",
+          "chunk_pattern": "llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part*.part",
+          "chunk_count": 6,
+          "maximum_chunk_bytes": 50331648,
+          "provenance": "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.provenance.json",
+          "reassembly_required": "concatenate lexically ordered chunks and verify sha256 before extraction",
+          "bytes": 258299213,
+          "sha256": "0d4b6831708211df28ca4b317c06f6e0078f9df5ad673ba902c73f0318a4fa1c",
+          "license_evidence": ["LICENSE.TXT"],
+          "license_class": "Apache-2.0 with LLVM Exception",
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        },
+        "nested_llvm_worktree_state": "clone_contained_archive_available_unextracted_after_inode_capacity_limit"
       },
-      "evidence": "This working tree observed the pinned outer Rust source at the recorded Gitlink revision with required compiler-source indicators present; nested LLVM source Git objects were retained but its worktree was deferred by inode exhaustion. A clean clone sees only the declared source edge until an approved archive payload is provided.",
+      "evidence": "The pinned outer Rust source was observed locally at the recorded Gitlink revision with required compiler-source indicators present, and its exact public upstream source archive is now clone-contained with SHA-256 and Apache-2.0/MIT license evidence. Its exact nested LLVM revision is also clone-contained as a separately hash-verified Apache-2.0-with-LLVM-Exception archive; both source archives remain unextracted because the current filesystem lacks safe inode headroom.",
       "license": "Apache-2.0 OR MIT",
       "semantic_scope": ["rustc", "cargo", "rustfmt", "clippy", "Rust standard library", "Rust bootstrap chain"],
-      "reconstruction_status": "local source observation is revision-verified but not clone-contained; the configured Rust compiler stage uses the verified source-built LLVM through llvm-config after approved source-edge materialization, while the nested LLVM worktree remains a full-source/archive completion boundary"
+      "reconstruction_status": "the exact pinned outer Rust source and its exact nested LLVM revision are clone-contained archives requiring no network acquisition. Materialize both on a filesystem with sufficient inode capacity, then run the configured source-built LLVM-backed stage1/stage2 AArch64 Android build, compile/link/run probe, and equivalence proof before activation."
+    },
+    {
+      "id": "rust_edge_nightly_1_100_0",
+      "upstream_project": "rust-lang/rust",
+      "source_url": "https://github.com/rust-lang/rust.git",
+      "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
+      "upstream_commit_verified": true,
+      "upstream_commit_date": "2026-08-19T09:01:49Z",
+      "source_status": "current_edge_source_archive_clone_contained_unextracted_not_activated",
+      "materialization_evidence": {
+        "clone_contained_archive": {
+          "path": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+          "provenance": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.provenance.json",
+          "bytes": 39821416,
+          "sha256": "50e6078f413d40a1991b8f7ee0b19c9ec28f93bfbc5f5e7cb22575a610e56cb0",
+          "license_evidence": ["LICENSE-APACHE", "LICENSE-MIT"],
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        }
+      },
+      "license": "Apache-2.0 OR MIT",
+      "semantic_scope": ["current Rust edge nightly source", "rustc", "cargo", "Rust standard library", "edge equivalence candidate"],
+      "reconstruction_status": "the exact current edge source archive is clone-contained and requires no network acquisition; it must be extracted on an inode-capacity-approved target filesystem, then independently built and compared against the known-good target stages before any default activation claim."
     },
     {
       "id": "cpython",
@@ -65,16 +108,25 @@
       "upstream_commit_verified": true,
       "upstream_commit_date": "2026-05-07T23:02:04Z",
       "source_path": "state/full_android_language_toolchain/src/cpython",
-      "source_status": "pinned_source_edge_locally_observed_not_clone_contained",
+      "source_status": "pinned_source_archive_clone_contained_unextracted; locally_observed_worktree_remains_separate",
       "materialization_evidence": {
         "observed_head": "49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
         "observed_bytes": 134380352,
+        "clone_contained_archive": {
+          "path": "state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz",
+          "provenance": "state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.provenance.json",
+          "bytes": 43839630,
+          "sha256": "7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181",
+          "license_evidence": ["LICENSE"],
+          "license_class": "Python-2.0",
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        },
         "required_source_indicators": ["configure.ac", "Python/ceval.c"]
       },
-      "evidence": "This working tree observed pinned CPython source at the recorded Gitlink revision with configure and evaluator source present; a clean clone sees only the declared source edge until an approved archive payload is provided",
+      "evidence": "The pinned CPython source was observed locally at the recorded Gitlink revision with configure and evaluator source present, and its exact public upstream source archive is now clone-contained with SHA-256 and Python-2.0 license evidence.",
       "license": "Python-2.0",
       "semantic_scope": ["CPython", "Python C API", "Python standard library", "native extension build interfaces"],
-      "reconstruction_status": "local source observation is revision-verified but not clone-contained; current local install payload still does not replace an AArch64 source-build and target-probe receipt"
+      "reconstruction_status": "the exact pinned CPython source archive is clone-contained and requires no network acquisition; materialize it on a filesystem with sufficient inode capacity, then run an AArch64 Android source build, extension build, ELF/ABI probe, and execution receipt before activation. Existing local install payload remains insufficient evidence by itself."
     },
     {
       "id": "cpython_install_payload",
@@ -93,14 +145,14 @@
   ],
   "explicit_release_blockers": [
     {
-      "id": "rust_nested_llvm_worktree_inode_blocker",
-      "severity": "clone_contained_full_source_blocker",
-      "required_action": "restore sufficient inode capacity and materialize the pinned eaab4d9841b9a8a12783d927b2df2291c1c79269 nested LLVM worktree before claiming the complete Rust source graph is clone-contained; the configured compiler stage instead requires the verified shared source-built llvm-config path"
+      "id": "rust_nested_llvm_archive_extraction_blocker",
+      "severity": "target_source_materialization_blocker",
+      "required_action": "the exact pinned eaab4d9841b9a8a12783d927b2df2291c1c79269 nested LLVM source is clone-contained as Git-safe chunks with SHA-256 and Apache-2.0-with-LLVM-Exception evidence. Restore sufficient inode capacity on the target build filesystem, reassemble and verify the archive alongside the pinned Rust archive, then perform the Rust-compatible LLVM and AArch64 Android validation stages before claiming the complete Rust source graph is materialized."
     },
     {
-      "id": "clone_contained_source_payload_blocker",
-      "severity": "clone_ready_payload_blocker",
-      "required_action": "package legally redistributable pinned source and target-built artifacts in an approved clone-deliverable payload or release mechanism with SHA-256 and notices; Gitlinks alone require network acquisition and do not meet full clone-contained availability"
+      "id": "clone_contained_target_build_payload_blocker",
+      "severity": "clone_ready_target_artifact_blocker",
+      "required_action": "the pinned Rust and CPython public source archives are clone-contained with SHA-256 and license evidence; on the target device, extract them on a capacity-approved filesystem, perform source builds and ABI/execution probes, then package only legally redistributable target-built artifacts with SHA-256 and notices. No completion claim is permitted before those target receipts exist."
     },
     {
       "id": "aarch64_target_build_and_probe_blocker",

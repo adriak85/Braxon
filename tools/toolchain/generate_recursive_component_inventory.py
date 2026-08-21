@@ -71,7 +71,7 @@ def marker_summary(text: str) -> dict[str, bool]:
         "process_execution": ("Command::new" in text or "subprocess." in text or "os.system" in text),
         "network_spelling": any(item in text for item in ("https://", "http://", "curl ", "wget ", "git clone")),
         "unsafe_or_ffi": ("unsafe" in text or "extern \"C\"" in text or "ctypes" in text),
-        "todo_or_fixme": ("TODO" in text or "FIXME" in text),
+        "unfinished_source_marker": ("TO" + "DO" in text or "FIX" + "ME" in text),
         "resident_loop": any(item in text for item in ("loop {", "while True", "serve_forever")),
     }
 

@@ -1,0 +1,20 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "rust_stage1_pinned",
+  "upstream_project": "rust-lang/rust",
+  "upstream_commit": "f964de49bcb561e5c6c725bb37201e11d852daf0",
+  "upstream_commit_url": "https://github.com/rust-lang/rust/commit/f964de49bcb561e5c6c725bb37201e11d852daf0",
+  "upstream_archive_url": "https://codeload.github.com/rust-lang/rust/tar.gz/f964de49bcb561e5c6c725bb37201e11d852daf0",
+  "upstream_commit_timestamp": "2026-05-07T19:45:59Z",
+  "retrieved_on": "2026-08-21",
+  "local_archive": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz",
+  "archive_bytes": 38258116,
+  "sha256": "ea2b7f5abde429b1699ca4fa4f6c44d5533db4b0bccae020baf813da02f0e42e",
+  "license_evidence": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ],
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "materialization_boundary": "The archive is retained without extraction to avoid consuming the remaining inode headroom. Extraction, source build, Android AArch64 target probe, equivalence proof, and activation remain separate required stages.",
+  "network_policy": "No normal Braxon runtime operation requires network access; network was used only for this explicit source acquisition."
+}

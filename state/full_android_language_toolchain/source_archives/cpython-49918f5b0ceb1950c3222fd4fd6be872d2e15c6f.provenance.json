@@ -1,0 +1,20 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "cpython_pinned",
+  "upstream_project": "python/cpython",
+  "upstream_commit": "49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
+  "upstream_commit_url": "https://github.com/python/cpython/commit/49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
+  "upstream_archive_url": "https://codeload.github.com/python/cpython/tar.gz/49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
+  "upstream_commit_timestamp": "2026-05-07T23:02:04Z",
+  "retrieved_on": "2026-08-21",
+  "local_archive": "state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz",
+  "archive_bytes": 43839630,
+  "sha256": "7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181",
+  "license_evidence": [
+    "LICENSE"
+  ],
+  "license_class": "Python-2.0",
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "materialization_boundary": "The archive is retained without extraction to avoid consuming the remaining inode headroom. Extraction, Android AArch64 source build, extension build, ELF/ABI probe, and activation remain separate required stages.",
+  "network_policy": "No normal Braxon runtime operation requires network access; network was used only for this explicit source acquisition."
+}

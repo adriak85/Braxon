@@ -5,21 +5,23 @@ use nsq_core::{
 };
 use nsq_reflexor::{
     bootstrap as reflex_bootstrap, discover as reflex_discover,
+    route_declared_feature_operation as reflex_route_declared_feature_operation,
+    route_declared_language_operation as reflex_route_declared_language_operation,
     route_operation as reflex_route_operation, verify as reflex_verify,
     write_inventory as reflex_write_inventory, DEFAULT_PROFILE,
 };
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
-    address_integrity_audit, assess_donor_model_readiness, braxon_context_manifest_status,
-    braxon_wake_linked_change_report_from_env, closure_audit, evaluate_repository_operation,
-    execute_bounded_tensor_inference, execute_canonical_parameter_citadel_cycle,
-    execute_operator_intelligence, execute_watermarked_file_operation, full_wake,
-    model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
-    tokenizer_verification, verify_bionic_compatibility, verify_complete_semantic_extraction,
-    verify_contained_toolchain, verify_language_artifact_context, BraxonBus, CouncilTen,
-    DonorModelReadinessReport, TargetField, DONOR_MODEL_READINESS_CAPABILITY,
-    OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
-    WATERMARKED_FILE_OPERATION_CAPABILITY,
+    address_integrity_audit, assess_donor_model_readiness, available_role_modes,
+    bootstrap_live_bus, braxon_context_manifest_status, braxon_wake_linked_change_report_from_env,
+    closure_audit, evaluate_repository_operation, execute_bounded_tensor_inference,
+    execute_canonical_parameter_citadel_cycle, execute_language_operation,
+    execute_operator_intelligence, execute_role_operation, execute_watermarked_file_operation,
+    full_wake, model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
+    tokenizer_verification, verify_bionic_compatibility, verify_contained_toolchain,
+    verify_language_artifact_context, BraxonBus, CouncilTen, DonorModelReadinessReport,
+    TargetField, DONOR_MODEL_READINESS_CAPABILITY, OPERATOR_INTELLIGENCE_CAPABILITY,
+    ROLE_OPERATION_CAPABILITY, TENSOR_INFERENCE_CAPABILITY, WATERMARKED_FILE_OPERATION_CAPABILITY,
 };
 
 #[derive(Parser)]
@@ -91,8 +93,18 @@ enum Command {
         #[arg(required = true, trailing_var_arg = true)]
         thought: Vec<String>,
     },
+    /// Run a court-bound, on-demand assistant, designer, agent, worker, or personal NSQ operation.
+    Role {
+        #[command(subcommand)]
+        command: RoleCommand,
+    },
     TerminalPlan,
     Rescue,
+    /// Establish one bounded virtual-addressed Piston/Ghost circulation window for the front door.
+    Boot {
+        #[arg(default_value = "front-door boot readiness")]
+        intent: String,
+    },
     Status,
     ContextStatus,
     ContextWake,
@@ -196,6 +208,19 @@ enum HandoverCommand {
 }
 
 #[derive(Subcommand)]
+enum RoleCommand {
+    /// List every configured court-bound operation mode after contract and office validation.
+    List,
+    /// Execute a single bounded role operation through the live bus and NSQ operator transaction.
+    Execute {
+        /// One declared mode: assistant, designer, agent, worker, or personal.
+        mode: String,
+        #[arg(required = true, trailing_var_arg = true)]
+        request: Vec<String>,
+    },
+}
+
+#[derive(Subcommand)]
 enum ReflexCommand {
     /// Discover every crate, direct library, language surface, project source, and physical boundary as an NSQ contract.
     Discover,
@@ -288,8 +313,10 @@ fn main() {
         Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
+        Command::Role { command } => print_role(command),
         Command::TerminalPlan => print_terminal_plan(),
         Command::Rescue => print_rescue(),
+        Command::Boot { intent } => print_boot(intent),
         Command::Status => print_status(),
         Command::ContextStatus => print_context_status(),
         Command::ContextWake => print_context_wake(),
@@ -391,9 +418,9 @@ fn execute_reflexor_intelligent_turn(
     String,
 > {
     let root = std::env::current_dir().map_err(|error| error.to_string())?;
-    let route = reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+    let route = reflex_route_declared_feature_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY)?;
     if !route.routed || route.capability.id != OPERATOR_INTELLIGENCE_CAPABILITY {
-        return Err("Kinetic Semantic Reflexor did not select operator intelligence".into());
+        return Err("Kinetic Semantic Reflexor did not select a locally ready operator-intelligence feature".into());
     }
     let operation = execute_operator_intelligence(input)?;
     Ok((route, operation))
@@ -531,14 +558,72 @@ fn repl_apps() {
 
 // ── SUBCOMMANDS ───────────────────────────────────────────────────────────────
 
+fn print_role(command: RoleCommand) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = match command {
+        RoleCommand::List => available_role_modes(&root).and_then(|modes| {
+            Ok(serde_json::json!({
+                "schema": "braxon.nsq.role_operation_modes.v1",
+                "capability": ROLE_OPERATION_CAPABILITY,
+                "modes": modes,
+                "execution_mode": "on_demand_non_resident",
+            }))
+        }),
+        RoleCommand::Execute { mode, request } => {
+            let route = reflex_route_declared_feature_operation(&root, ROLE_OPERATION_CAPABILITY);
+            route.and_then(|route| {
+                if !route.routed || route.capability.id != ROLE_OPERATION_CAPABILITY {
+                    return Err("Kinetic Semantic Reflexor did not select the canonical role-operation feature".to_string());
+                }
+                execute_role_operation(&root, &mode, request.join(" ")).and_then(|operation| {
+                    serde_json::to_value(serde_json::json!({
+                        "route": route,
+                        "operation": operation,
+                    }))
+                    .map_err(|error| error.to_string())
+                })
+            })
+        }
+    };
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => {
+            eprintln!("role_operation_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
 fn print_wake() {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
-    let council_ten = CouncilTen::new().wake();
-    match full_wake(&root) {
-        Ok(full_activation) => print_json(&serde_json::json!({
+    let result = (|| {
+        let live_bus = bootstrap_live_bus(
+            &root,
+            "wake front door verify and prime parameters tokenizers and Council Ten seed",
+        )?;
+        let council_ten = CouncilTen::new().wake();
+        if !council_ten.all_passed || !council_ten.coherence_verified {
+            return Err("Council Ten topology wake failed before full activation".to_string());
+        }
+        let full_activation = full_wake(&root)?;
+        if !full_activation.all_passed {
+            return Err(format!(
+                "full activation verification failed: unresolved={} orphaned={} invalid_bindings={}",
+                full_activation.unresolved,
+                full_activation.orphaned,
+                full_activation.invalid_bindings
+            ));
+        }
+        Ok::<_, String>(serde_json::json!({
+            "answer": "Wake executed a bounded live bootstrap, verified every virtual tokenizer/parameter/seed window, released every piston lease, then verified the Council Ten topology and full activation graph.",
+            "action": "execute_live_bus_bootstrap_then_verify_council_ten_and_activation_graph",
+            "live_bus": live_bus,
             "council_ten": council_ten,
             "full_activation": full_activation,
-        })),
+        }))
+    })();
+    match result {
+        Ok(report) => print_json(&report),
         Err(err) => {
             eprintln!("wake_activation_error={err}");
             std::process::exit(1);
@@ -623,22 +708,28 @@ fn find_root_app(name: &str) -> Option<&'static RootAppSurface> {
 
 fn print_language_operation(language: String, input: String) {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
-    let result = reflex_route_operation(&root, "feature:language.parameter_parse", false).and_then(
-        |intercept_route| {
-            let normalized = language.trim().to_ascii_lowercase();
-            let language_route =
-                reflex_route_operation(&root, &format!("language:{normalized}"), false)?;
-            verify_complete_semantic_extraction(&root, &normalized, &input).and_then(|operation| {
-                serde_json::to_value(serde_json::json!({
-                    "schema": "braxon.language.nsq_intercept.v1",
-                    "intercept_route": intercept_route,
-                    "language_route": language_route,
-                    "operation": operation,
-                }))
-                .map_err(|error| error.to_string())
-            })
-        },
-    );
+    let normalized = language.trim().to_ascii_lowercase();
+    let result = (|| {
+        let intercept_route =
+            reflex_route_declared_feature_operation(&root, "feature:language.parameter_parse")?;
+        let language_route = reflex_route_declared_language_operation(&root, &normalized)?;
+        let operation = execute_language_operation(&root, &normalized, &input)?;
+        if !operation.semantic_parse_ready
+            || operation.nsq_capability != language_route.capability.id
+        {
+            return Err(format!(
+                "language operation did not complete the declared NSQ semantic parse for {normalized}"
+            ));
+        }
+        serde_json::to_value(serde_json::json!({
+            "schema": "braxon.language.nsq_intercept.v1",
+            "intercept_route": intercept_route,
+            "language_route": language_route,
+            "operation": operation,
+            "full_closure_verification_front_door": "Braxon closure language",
+        }))
+        .map_err(|error| error.to_string())
+    })();
     match result {
         Ok(report) => print_json(&report),
         Err(error) => {
@@ -673,27 +764,28 @@ fn print_repository_operation(repository: String) {
 
 fn print_watermarked_file_operation(intent: String, source: String, execute: bool) {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
-    let result = reflex_route_operation(&root, WATERMARKED_FILE_OPERATION_CAPABILITY, false)
-        .and_then(|intercept_route| {
-            if !intercept_route.routed
-                || intercept_route.capability.id != WATERMARKED_FILE_OPERATION_CAPABILITY
-            {
-                return Err(
+    let result =
+        reflex_route_declared_feature_operation(&root, WATERMARKED_FILE_OPERATION_CAPABILITY)
+            .and_then(|intercept_route| {
+                if !intercept_route.routed
+                    || intercept_route.capability.id != WATERMARKED_FILE_OPERATION_CAPABILITY
+                {
+                    return Err(
                     "Kinetic Semantic Reflexor did not select the functional watermark capability"
                         .into(),
                 );
-            }
-            execute_watermarked_file_operation(&root, &intent, &source, execute).and_then(
-                |operation| {
-                    serde_json::to_value(serde_json::json!({
-                        "schema": "braxon.watermarked_file.nsq_intercept.v1",
-                        "intercept_route": intercept_route,
-                        "operation": operation,
-                    }))
-                    .map_err(|error| error.to_string())
-                },
-            )
-        });
+                }
+                execute_watermarked_file_operation(&root, &intent, &source, execute).and_then(
+                    |operation| {
+                        serde_json::to_value(serde_json::json!({
+                            "schema": "braxon.watermarked_file.nsq_intercept.v1",
+                            "intercept_route": intercept_route,
+                            "operation": operation,
+                        }))
+                        .map_err(|error| error.to_string())
+                    },
+                )
+            });
     match result {
         Ok(report) => print_json(&report),
         Err(error) => {
@@ -720,7 +812,7 @@ fn execute_language_intelligent_turn(
     }
     let root = std::env::current_dir().map_err(|error| error.to_string())?;
     let language_id = format!("language:{language}");
-    let language_route = reflex_route_operation(&root, &language_id, false)?;
+    let language_route = reflex_route_declared_language_operation(&root, &language)?;
     if !language_route.routed || language_route.capability.id != language_id {
         return Err(format!(
             "Kinetic Semantic Reflexor did not select declared language '{language}'"
@@ -737,10 +829,14 @@ fn print_runtime(command: RuntimeCommand) {
         RuntimeCommand::Donors => {
             let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
             let result = (|| {
-                let donor_route =
-                    reflex_route_operation(&root, DONOR_MODEL_READINESS_CAPABILITY, false)?;
-                let intelligent_route =
-                    reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+                let donor_route = reflex_route_declared_feature_operation(
+                    &root,
+                    DONOR_MODEL_READINESS_CAPABILITY,
+                )?;
+                let intelligent_route = reflex_route_declared_feature_operation(
+                    &root,
+                    OPERATOR_INTELLIGENCE_CAPABILITY,
+                )?;
                 let readiness = assess_donor_model_readiness(&root)?;
                 if donor_route.capability.id != DONOR_MODEL_READINESS_CAPABILITY
                     || intelligent_route.capability.id != OPERATOR_INTELLIGENCE_CAPABILITY
@@ -781,7 +877,8 @@ fn print_runtime(command: RuntimeCommand) {
         RuntimeCommand::ParameterCitadel { signal, context } => {
             let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
             let result = (|| {
-                let route = reflex_route_operation(&root, "feature:parameter.citadel", false)?;
+                let route =
+                    reflex_route_declared_feature_operation(&root, "feature:parameter.citadel")?;
                 let operation = execute_canonical_parameter_citadel_cycle(signal, context)?;
                 if !operation.invariants.all_pass() {
                     return Err("parameter–Citadel invariants were not all satisfied".into());
@@ -806,8 +903,10 @@ fn print_runtime(command: RuntimeCommand) {
         RuntimeCommand::NativeEquivalence => {
             let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
             let result = (|| {
-                let route =
-                    reflex_route_operation(&root, "feature:benchmark.native_equivalence", false)?;
+                let route = reflex_route_declared_feature_operation(
+                    &root,
+                    "feature:benchmark.native_equivalence",
+                )?;
                 let report = run_native_fixture_equivalence()?;
                 if !report.inference_replay_equivalent || !report.training_path_equivalent {
                     return Err(
@@ -833,8 +932,10 @@ fn print_runtime(command: RuntimeCommand) {
         RuntimeCommand::NativeRecovery => {
             let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
             let result = (|| {
-                let route =
-                    reflex_route_operation(&root, "feature:benchmark.native_recovery", false)?;
+                let route = reflex_route_declared_feature_operation(
+                    &root,
+                    "feature:benchmark.native_recovery",
+                )?;
                 let report = run_native_fault_recovery()?;
                 if !report.replay_equivalent
                     || report.fault_results.iter().any(|fault| !fault.rejected)
@@ -868,7 +969,8 @@ fn print_runtime(command: RuntimeCommand) {
                 }
             };
             let result = (|| {
-                let route = reflex_route_operation(&root, TENSOR_INFERENCE_CAPABILITY, false)?;
+                let route =
+                    reflex_route_declared_feature_operation(&root, TENSOR_INFERENCE_CAPABILITY)?;
                 if !route.routed || route.capability.id != TENSOR_INFERENCE_CAPABILITY {
                     return Err("Kinetic Semantic Reflexor did not select tensor inference".into());
                 }
@@ -990,8 +1092,8 @@ fn print_toolchain(command: ToolchainCommand) {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
     let result = match command {
         ToolchainCommand::Verify => {
-            reflex_route_operation(&root, "feature:toolchain.contained_verify", false).and_then(
-                |route| {
+            reflex_route_declared_feature_operation(&root, "feature:toolchain.contained_verify")
+                .and_then(|route| {
                     verify_contained_toolchain(&root).and_then(|report| {
                         serde_json::to_value(serde_json::json!({
                             "schema": "braxon.toolchain.front_door.v1",
@@ -1000,12 +1102,11 @@ fn print_toolchain(command: ToolchainCommand) {
                         }))
                         .map_err(|error| error.to_string())
                     })
-                },
-            )
+                })
         }
         ToolchainCommand::Bionic => {
-            reflex_route_operation(&root, "feature:toolchain.bionic_compatibility", false).and_then(
-                |route| {
+            reflex_route_declared_feature_operation(&root, "feature:toolchain.bionic_compatibility")
+                .and_then(|route| {
                     verify_bionic_compatibility(&root).and_then(|report| {
                         serde_json::to_value(serde_json::json!({
                             "schema": "braxon.toolchain.bionic_front_door.v1",
@@ -1014,8 +1115,7 @@ fn print_toolchain(command: ToolchainCommand) {
                         }))
                         .map_err(|error| error.to_string())
                     })
-                },
-            )
+                })
         }
     };
     match result {
@@ -1088,6 +1188,18 @@ fn print_bus(thought: Vec<String>) {
             "answer": operation.answer,
             "action": operation.action,
             "reflex_capability": reflex_route.capability.id,
+            "live_bus": {
+                "capability": operation.live_bus_bootstrap.capability,
+                "virtual_window_total": operation.live_bus_bootstrap.virtual_window_total,
+                "virtual_wire_bytes": operation.live_bus_bootstrap.virtual_wire_bytes,
+                "circulation_cycle_total": operation.live_bus_bootstrap.circulation_cycle_total,
+                "all_windows_resolved": operation.live_bus_bootstrap.all_windows_resolved,
+                "all_windows_released": operation.live_bus_bootstrap.all_windows_released,
+                "active_cpu_bytes_after_release": operation.live_bus_bootstrap.active_cpu_bytes_after_release,
+                "model_weight_execution_claimed": operation.live_bus_bootstrap.model_weight_execution_claimed,
+                "resident_runtime_constructed": operation.live_bus_bootstrap.resident_runtime_constructed,
+                "windows": operation.live_bus_bootstrap.windows,
+            },
             "audit": {
                 "native_transaction_generation": operation.native_transaction_generation,
                 "native_instruction_count": operation.native_instruction_count,
@@ -1114,38 +1226,57 @@ fn print_terminal_plan() {
 
 fn print_status() {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
-    match (
-        reflex_discover(&root),
-        reflex_verify(&root),
-        full_wake(&root),
-    ) {
-        (Ok(inventory), Ok(verification), Ok(wake)) => print_json(&serde_json::json!({
-            "answer": if verification.valid && wake.required_total == wake.activated_total {
-                "Braxon has verified the current on-demand NSQ capability inventory and full activation contract. Use the console or `Braxon bus` to execute an intelligent operation."
-            } else {
-                "Braxon measured an incomplete activation state. Use `Braxon closure verify` for the exact unresolved connection before requesting an operation."
+    let result = (|| {
+        let (route, operation) = execute_reflexor_intelligent_turn(
+            "evaluate the current live Braxon status through tokenizer parameter Citadel and Council Ten verification",
+        )?;
+        let wake = full_wake(&root)?;
+        let healthy = route.routed
+            && route.capability.executable
+            && wake.all_passed
+            && operation.native_fired_count > 0
+            && operation.lease_released
+            && operation.live_bus_bootstrap.all_windows_resolved
+            && operation.live_bus_bootstrap.all_windows_released
+            && operation.live_bus_bootstrap.active_cpu_bytes_after_release == 0;
+        Ok::<_, String>(serde_json::json!({
+            "answer": operation.answer,
+            "action": "execute_bounded_live_intelligent_status_evaluation",
+            "status": if healthy { "live_bootstrap_and_activation_verified" } else { "live_status_requires_repair" },
+            "reflex_capability": route.capability.id,
+            "reflex_route_execution_mode": route.execution_mode,
+            "reflex_route_status": route.status,
+            "full_workspace_verification": "available through Braxon reflex verify; deliberately not run on each interactive status request",
+            "live_bus": operation.live_bus_bootstrap,
+            "full_wake": wake,
+            "native_operator_transaction": {
+                "generation": operation.native_transaction_generation,
+                "fired_count": operation.native_fired_count,
+                "lease_released": operation.lease_released,
             },
-            "action": "measure_reflexor_and_full_wake_status",
-            "reflex_valid": verification.valid,
-            "capability_total": inventory.capabilities.len(),
-            "full_wake_required_total": wake.required_total,
-            "full_wake_activated_total": wake.activated_total,
-            "full_wake_unresolved": wake.unresolved,
-            "full_wake_orphaned": wake.orphaned,
-            "full_wake_invalid_bindings": wake.invalid_bindings,
-            "resident_runtime_constructed": inventory.resident_runtime_constructed,
-            "terminal_default": "console",
+            "resident_runtime_constructed": false,
+            "next": if healthy { "Braxon bus <intent>" } else { "Braxon wake" },
+        }))
+    })();
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => {
+            eprintln!("status_live_evaluation_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn print_boot(intent: String) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    match bootstrap_live_bus(&root, &intent) {
+        Ok(report) => print_json(&serde_json::json!({
+            "answer": "The front door established and circulated every required virtual tokenizer, Parameter-Citadel, Council seed, and ten-body descriptor window; every CPU aperture lease was released back to the virtual wire.",
+            "action": "bootstrap_virtual_addressed_piston_ghost_live_bus",
+            "live_bus": report,
         })),
-        (_, Err(error), _) => {
-            eprintln!("status_reflex_verification_error={error}");
-            std::process::exit(1);
-        }
-        (_, _, Err(error)) => {
-            eprintln!("status_wake_error={error}");
-            std::process::exit(1);
-        }
-        (Err(error), _, _) => {
-            eprintln!("status_discovery_error={error}");
+        Err(error) => {
+            eprintln!("boot_live_bus_error={error}");
             std::process::exit(1);
         }
     }
@@ -1154,7 +1285,8 @@ fn print_status() {
 fn print_rescue() {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
     let result = (|| {
-        let route = reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+        let route =
+            reflex_route_declared_feature_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY)?;
         let wake = full_wake(&root)?;
         let closure = closure_audit(&root)?;
         if wake.required_total != wake.activated_total

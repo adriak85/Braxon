@@ -1,0 +1,57 @@
+{
+  "schema": "braxon.toolchain.public_source_archive_verification.v1",
+  "valid": true,
+  "root": "/home/ubuntu/Braxon",
+  "source_check_total": 4,
+  "checks": [
+    {
+      "source_id": "rust",
+      "representation": "single_archive",
+      "paths": [
+        "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz"
+      ],
+      "bytes": 38258116,
+      "sha256": "ea2b7f5abde429b1699ca4fa4f6c44d5533db4b0bccae020baf813da02f0e42e",
+      "provenance": "state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.provenance.json",
+      "valid": true
+    },
+    {
+      "source_id": "rust_nested_llvm",
+      "representation": "git_safe_chunk_set",
+      "paths": [
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part000.part",
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part001.part",
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part002.part",
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part003.part",
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part004.part",
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part005.part"
+      ],
+      "bytes": 258299213,
+      "sha256": "0d4b6831708211df28ca4b317c06f6e0078f9df5ad673ba902c73f0318a4fa1c",
+      "provenance": "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.provenance.json",
+      "valid": true
+    },
+    {
+      "source_id": "rust_edge_nightly_1_100_0",
+      "representation": "single_archive",
+      "paths": [
+        "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz"
+      ],
+      "bytes": 39821416,
+      "sha256": "50e6078f413d40a1991b8f7ee0b19c9ec28f93bfbc5f5e7cb22575a610e56cb0",
+      "provenance": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.provenance.json",
+      "valid": true
+    },
+    {
+      "source_id": "cpython",
+      "representation": "single_archive",
+      "paths": [
+        "state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz"
+      ],
+      "bytes": 43839630,
+      "sha256": "7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181",
+      "provenance": "state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.provenance.json",
+      "valid": true
+    }
+  ]
+}

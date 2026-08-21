@@ -28,11 +28,11 @@
       ]
     },
     "command": null,
-    "execution_mode": "contract_route_only",
+    "execution_mode": "bounded_declared_feature_registry",
     "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_operator_intelligence.json",
     "routed": true,
     "schema": "braxon.nsq.kinetic_reflex.operation.v1",
-    "status": "routed_without_process"
+    "status": "routed_after_declared_feature_and_artifact_validation"
   },
-  "sha256": "6ff25f4b2ff38667ec7bc1812d573c683e4770980ef4348484f6f6561d80b91c"
+  "sha256": "48fffec4663453b72f7eb7b2d08c14b218072739b7b1f2e8ba65d3acd5f2967b"
 }

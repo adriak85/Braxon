@@ -6,15 +6,15 @@
   "valid": true,
   "status": "canonicality_verified",
   "scope": {
-    "tracked_file_total": 182921,
+    "tracked_file_total": 182971,
     "excluded_prefixes": [
       "state/full_android_language_toolchain/src/",
       "vendor/",
       "target/",
       "assets/"
     ],
-    "feature_total": 12,
-    "canonical_feature_total": 11,
+    "feature_total": 14,
+    "canonical_feature_total": 13,
     "deprecated_historical_feature_total": 1,
     "explicitly_classified_legacy_surface_total": 15
   },
@@ -98,6 +98,10 @@
         {
           "path": "tools/braxon_model_downloader/verify_whole_models.py",
           "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/toolchain/audit_canonicality.mjs",
+          "classification": "canonical_audit_vocabulary_detector"
         }
       ]
     },
@@ -160,6 +164,10 @@
         {
           "path": "tools/braxon_model_downloader/verify_whole_models.py",
           "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/toolchain/audit_canonicality.mjs",
+          "classification": "canonical_audit_vocabulary_detector"
         }
       ]
     }
@@ -173,6 +181,19 @@
       "required_artifacts": [
         "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
         "config/nsq/tokenizer_band_registry.json"
+      ]
+    },
+    {
+      "id": "feature:role.operation",
+      "source": "crates/braxon-core/src/role_operation.rs",
+      "classification": "canonical_active",
+      "purpose": "resolve_declared_assistant_designer_agent_worker_or_personal_mode_then_execute_one_real_on_demand_nsq_transaction",
+      "required_artifacts": [
+        "config/nsq/role_operation_contract.json",
+        "config/braxon_court.json",
+        "crates/braxon-core/src/role_operation.rs",
+        "crates/braxon-core/src/intelligent_operation.rs",
+        "crates/braxon-core/src/live_bus.rs"
       ]
     },
     {
@@ -203,6 +224,20 @@
       "required_artifacts": [
         "crates/braxon-core/src/native_model_substrate.rs",
         "crates/braxon-core/src/native_fault_recovery.rs"
+      ]
+    },
+    {
+      "id": "feature:live_bus.bootstrap",
+      "source": "crates/braxon-core/src/live_bus.rs",
+      "classification": "canonical_active",
+      "purpose": "bootstrap_virtual_addressed_bounded_piston_ghost_circulation_for_every_front_door_operation",
+      "required_artifacts": [
+        "config/nsq/live_bus_bootstrap_contract.json",
+        "crates/braxon-core/src/ghost_memory.rs",
+        "crates/braxon-core/src/parameter_citadel.rs",
+        "crates/braxon-core/src/donor_model_readiness.rs",
+        "config/nsq/braxon_council_ten_stack.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json"
       ]
     },
     {
@@ -360,6 +395,10 @@
     {
       "path": "tools/braxon_model_downloader/verify_whole_models.py",
       "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "tools/toolchain/audit_canonicality.mjs",
+      "classification": "canonical_audit_vocabulary_detector"
     }
   ]
 }

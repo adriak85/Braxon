@@ -1,6 +1,7 @@
 use crate::{
-    BraxonBus, BraxonBusReport, CouncilSurface, IntentOutcome, NsqIntent, NsqNativeBus,
-    OutputClassification, PistonPhase, UnifiedSelfState, NSQ_NATIVE_INTENT_SCHEMA,
+    bootstrap_live_bus, BraxonBus, BraxonBusReport, CouncilSurface, IntentOutcome,
+    LiveBusBootstrapReport, NsqIntent, NsqNativeBus, OutputClassification, PistonPhase,
+    UnifiedSelfState, NSQ_NATIVE_INTENT_SCHEMA,
 };
 use nsq_core::{
     Charge, Dialect, NSQLever, NSQSlot, NativeNsqMachine, NativeNsqRuntime, NsqAddress,
@@ -35,6 +36,7 @@ pub struct IntelligentOperation {
     pub native_instruction_count: u64,
     pub native_fired_count: u64,
     pub lease_released: bool,
+    pub live_bus_bootstrap: LiveBusBootstrapReport,
     pub audit_bus: BraxonBusReport,
 }
 
@@ -50,6 +52,9 @@ pub fn execute_operator_intelligence(
     if !audit_bus.processing.input_accepted {
         return Err(exact_bus_blocker(&audit_bus));
     }
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let live_bus_bootstrap = bootstrap_live_bus(&root, input)
+        .map_err(|error| format!("operator intelligence live-bus bootstrap failed: {error}"))?;
     let selected = audit_bus
         .pressure_candidates
         .iter()
@@ -122,7 +127,7 @@ pub fn execute_operator_intelligence(
         action: IntelligentAction {
             capability: OPERATOR_INTELLIGENCE_CAPABILITY.into(),
             selected_intent: selected.intent.clone(),
-            state_transition: "tokenized_input→semantic_priority→address_lease→native_set_fire→collective_state→release".into(),
+            state_transition: "live_bus_virtual_address_bootstrap→tokenized_input→semantic_priority→address_lease→native_set_fire→collective_state→release".into(),
             completed: true,
             classification: OutputClassification::DerivedState,
         },
@@ -135,6 +140,7 @@ pub fn execute_operator_intelligence(
         native_fired_count: u64::try_from(applied.fired)
             .map_err(|_| "native fired count exceeds u64")?,
         lease_released: true,
+        live_bus_bootstrap,
         audit_bus,
     })
 }

@@ -1,0 +1,24 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "rust_nested_llvm_pinned",
+  "upstream_project": "llvm/llvm-project",
+  "upstream_commit": "eaab4d9841b9a8a12783d927b2df2291c1c79269",
+  "upstream_commit_url": "https://github.com/llvm/llvm-project/commit/eaab4d9841b9a8a12783d927b2df2291c1c79269",
+  "upstream_archive_url": "https://codeload.github.com/llvm/llvm-project/tar.gz/eaab4d9841b9a8a12783d927b2df2291c1c79269",
+  "upstream_commit_timestamp": "2026-03-28T16:42:49Z",
+  "retrieved_on": "2026-08-21",
+  "local_chunk_directory": "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks",
+  "chunk_pattern": "llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz.part*.part",
+  "chunk_count": 6,
+  "maximum_chunk_bytes": 50331648,
+  "archive_bytes": 258299213,
+  "sha256": "0d4b6831708211df28ca4b317c06f6e0078f9df5ad673ba902c73f0318a4fa1c",
+  "license_evidence": [
+    "LICENSE.TXT"
+  ],
+  "license_class": "Apache-2.0 with LLVM Exception",
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "reassembly": "Concatenate the lexically ordered chunk files into a temporary llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.tar.gz, verify its SHA-256 against this record, then extract only on an inode-capacity-approved target filesystem.",
+  "materialization_boundary": "The Git-safe source chunks are retained without extraction to avoid consuming the remaining inode headroom. Reassembly, SHA-256 verification, extraction, Rust-compatible LLVM build, Android AArch64 target probe, and stage-equivalence proof remain separate required stages.",
+  "network_policy": "No normal Braxon runtime operation requires network access; network was used only for this explicit source acquisition."
+}

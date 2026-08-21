@@ -1,0 +1,41 @@
+{
+  "payload": {
+    "capability": {
+      "complete_nsq_ingestion": true,
+      "executable": true,
+      "foreign_surface_role": "project_artifact_ingress_and_nsq_action_egress_only",
+      "id": "feature:role.operation",
+      "ingress": "validated_input_to_nsq_feature_operation",
+      "kind": "semantic_intent",
+      "notes": [
+        "canonicality=canonical_active",
+        "state_contract=court_bound_role_mode_to_virtual_live_bus_to_tokenized_operator_intent_to_native_set_fire_commit_release_to_completed_operation_state",
+        "action_contract=resolve_declared_assistant_designer_agent_worker_or_personal_mode_then_execute_one_real_on_demand_nsq_transaction",
+        "answer_contract=derived_role_operation_evidence_or_exact_fail_closed_contract_or_target_prerequisite_error",
+        "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.",
+        "required_artifacts=present"
+      ],
+      "nsq_dialect": "intent",
+      "on_demand": true,
+      "owner": "NSQ kinetic semantic reflexor",
+      "resident_runtime": false,
+      "semantic_authority": "nsq",
+      "source": "crates/braxon-core/src/role_operation.rs",
+      "state": "operable_on_demand",
+      "target_names": [
+        "config/nsq/role_operation_contract.json",
+        "config/braxon_court.json",
+        "crates/braxon-core/src/role_operation.rs",
+        "crates/braxon-core/src/intelligent_operation.rs",
+        "crates/braxon-core/src/live_bus.rs"
+      ]
+    },
+    "command": null,
+    "execution_mode": "bounded_declared_feature_registry",
+    "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_role_operation.json",
+    "routed": true,
+    "schema": "braxon.nsq.kinetic_reflex.operation.v1",
+    "status": "routed_after_declared_feature_and_artifact_validation"
+  },
+  "sha256": "1d5a56e1d17330d99586db5850043815659daa55c5fb0964eafb52725ce9d932"
+}

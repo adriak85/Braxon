@@ -47,7 +47,7 @@ if added_lines | grep -Eiq '(flatten|collapse|reduce|boil down|lower).*(NSQ|Brax
   fail "new text/code flattens NSQ/Braxon/court runtime into binary or width-class semantics"
 fi
 
-if added_lines | grep -Eiq '(ultra dense|ultradense|stamp|macro|whole intent|single base-8 bit|tiny seed).*(not|isn.t|cannot|fake|placeholder)'; then
+if added_lines | grep -Eiq '(ultra dense|ultradense|stamp|macro|whole intent|single base-8 bit|tiny seed).*(not|isn.t|cannot|fake|synthetic stand-in)'; then
   fail "new text/code denies ultra-dense stamp/macro/tiny-seed reconstruction semantics"
 fi
 

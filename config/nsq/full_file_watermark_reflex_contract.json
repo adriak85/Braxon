@@ -1,0 +1,38 @@
+{
+  "schema": "braxon.nsq.full_file_watermark_reflex_contract.v1",
+  "canonicality": "canonical_active",
+  "authority": "NSQ kinetic semantic reflexor",
+  "capability": "feature:watermark.file_operation",
+  "implementation": "tools/toolchain/audit_full_file_watermark_reflex_links.mjs",
+  "scope": "every tracked regular executable source or operational code file; every line is consumed into a per-file line Merkle root with no depth, extension-family, or representative-sample limit",
+  "functional_watermark": {
+    "source_capability": "feature:watermark.file_operation",
+    "source_contract": "config/nsq/watermarked_file_operation_contract.json",
+    "line_merkle_algorithm": "sha256 ordered line-number plus UTF-8 line bytes",
+    "inter_system_reference_detection": "deterministic static reference extraction used only for cascade-link inventory; it does not claim runtime execution"
+  },
+  "classification_binding": {
+    "canonical_active": "must bind to a direct active Reflexor feature or to the functional watermark capability plus dynamic workspace discovery",
+    "workspace_source_surface": "must bind to functional watermark plus dynamic workspace Reflexor discovery",
+    "operational_tool_surface": "must bind to functional watermark plus repository front-door or validation route",
+    "nsq_application_or_target_surface": "must bind to functional watermark plus NSQ target contract",
+    "attributed_upstream_source": "must retain upstream provenance and source-availability authority; it is not represented as privately reauthored executable code",
+    "vendored_dependency_source": "must retain vendoring and license provenance; it is not claimed as native Braxon source",
+    "deprecated_historical_only": "must be non-routable and identify its canonical successor"
+  },
+  "fail_closed_conditions": [
+    "tracked_executable_file_not_read_in_full",
+    "missing_line_merkle_root",
+    "missing_watermark_binding",
+    "missing_semantic_reflexor_binding",
+    "unclassified_executable_file",
+    "blank_retained_executable_file",
+    "deprecated_executable_file_still_routable"
+  ],
+  "truth_boundary": {
+    "line_merkle_is_a_functional_change-detection_and_cascade-link_identity_not_a_substitute_for_compiler_or_android_execution": true,
+    "external_or_upstream_source_provenance_remains_intact": true,
+    "resident_runtime_constructed": false,
+    "hidden_download_allowed": false
+  }
+}

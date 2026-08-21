@@ -1,0 +1,2557 @@
+{
+  "schema": "braxon.nsq.blank_surface_registry.v1",
+  "scope": "every blank tracked text surface reported by the full recursive tree audit",
+  "tree_audit_merkle_sha256": "282f2fadba06d5ceeabe23cc5b5362857a0d80bcd51b7667a74828cb1e05aded",
+  "entry_total": 283,
+  "valid": true,
+  "entries": [
+    {
+      "path": "state/android_gap_fill_chain/runs/20260507_192509/reports/workspace_nextest_release.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/braxon/music_app/current/synth.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/20260507_200744/reports/llvm_project_archive_unpack.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/20260507_200744/reports/rust_status.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/20260507_204800/reports/rust_status.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/archive_native_extension.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/compile_overlay_probe.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/compile_pthread_getname_np_o.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/compile_sem_clockwait_o.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/compile_symlink_probe.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/ranlib_native_extension.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/cpython_native_contract_resolve_20260507_212057/reports/shared_native_extension.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/rebuild_libc_extensions_whitelist_20260507_231241/duplicate_symbols.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/rebuild_libc_extensions_whitelist_20260507_231341/duplicate_symbols.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/runs/remote_debug_contracts_v1_20260507_233422/duplicate_symbols.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/signal_state_log.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_android_gap_fill_chain_runs_20260507_192509_reports_workspace_nextest_release.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_braxon_music_app_current_synth.stderr.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_20260507_200744_reports_llvm_project_archive_unpack.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_20260507_200744_reports_rust_status.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_20260507_204800_reports_rust_status.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_archive_native_extension.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_compile_overlay_probe.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_compile_pthread_getname_np_o.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_compile_sem_clockwait_o.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_compile_symlink_probe.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_ranlib_native_extension.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_cpython_native_contract_resolve_20260507_212057_reports_shared_native_extension.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_rebuild_libc_extensions_whitelist_20260507_231241_duplicate_symbols.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_rebuild_libc_extensions_whitelist_20260507_231341_duplicate_symbols.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_runs_remote_debug_contracts_v1_20260507_233422_duplicate_symbols.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang-tools-extra_clangd_test_Inputs_background-index_sub_dir_compile_flags.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang-tools-extra_include-cleaner_README.md",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Driver_Inputs_resource_dir_share_asan_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Driver_Inputs_resource_dir_share_cfi_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Driver_Inputs_resource_dir_share_hwasan_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Driver_Inputs_resource_dir_share_ubsan_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Driver_Inputs_resource_dir_share_vtables_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_clang_test_Frontend_Inputs_resource_dir_with_sanitizer_ignorelist_share_ubsan_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_flang_test_Driver_Inputs_resource_dir_share_asan_ignorelist.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libc_src_stdckdint_CMakeLists.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libc_test_src___support_File_testdata_CMakeLists.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libc_test_src_stdio_testdata_CMakeLists.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libc_test_src_sys_select_testdata_CMakeLists.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libcxx_test_selftest_file_dependencies_a.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_libcxx_test_selftest_file_dependencies_dir_b.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_lldb_test_API_commands_process_launch-with-shellexpand_file1.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_lldb_test_API_commands_process_launch-with-shellexpand_file2.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_lldb_test_API_commands_process_launch-with-shellexpand_file3.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_config-map-discovery_invalid-test.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_config-map-discovery_tests_test1.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_config-map-discovery_tests_test2.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_filter-failed_unresolved.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_ignore-fail_unresolved.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_full_android_language_toolchain_src_llvm-project_llvm_utils_lit_tests_Inputs_shtest-keyword-parse-errors_empty.txt",
+      "source_classification": "historical_archive",
+      "blank_executable_by_extension": false,
+      "classification": "historical_empty_capture_nonroutable",
+      "canonical_successor": "canonicality_audit",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/test/Inputs/background-index/sub_dir/compile_flags.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/include-cleaner/README.md",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/a.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/a.hpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/c.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/c.cc",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/c.cxx",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/clang-c/c.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/clang/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/cross-file-a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/cross-file-b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/gmock/foo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/gtest/foo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/i.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/i.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/j.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/llvm-c/d.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/llvm/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/moc_foo.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/Inputs/Headers/s.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/llvmlibc/Inputs/resource/include/stdatomic.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/llvmlibc/Inputs/resource/include/stddef.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/llvmlibc/Inputs/system/stdio.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/llvmlibc/Inputs/system/stdlib.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/llvmlibc/Inputs/system/string.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/assert.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/complex.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/ctype.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/errno.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/fenv.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/float.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/inttypes.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/iso646.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/limits.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/locale.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/math.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/setjmp.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/signal.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdalign.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdarg.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdbool.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stddef.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdint.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdio.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/stdlib.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/string.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/tgmath.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/time.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/uchar.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/wchar.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/modernize/Inputs/deprecated-headers/wctype.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/portability/Inputs/restrict-system-includes/system/float.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/portability/Inputs/restrict-system-includes/system/s.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/portability/Inputs/restrict-system-includes/system/stddef.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/portability/Inputs/restrict-system-includes/system/stdint.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/portability/Inputs/restrict-system-includes/system/t.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/infrastructure/Inputs/Headers/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/infrastructure/Inputs/Headers/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/infrastructure/Inputs/Headers/s.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/infrastructure/Inputs/normalized-path/code.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/bindings/python/tests/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/bindings/python/tests/cindex/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/header-search-pruning/a/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/header-search-pruning/b/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/header-search-pruning/begin/begin.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/header-search-pruning/end/end.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-context-hash/a/dep.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-context-hash/b/dep.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-pch-common-submodule/mod_common.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-pch-common-submodule/mod_common_sub.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-pch-common-via-submodule/mod_common.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/modules-pch-common-via-submodule/mod_tu.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/removed-args/mod_header.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/removed-args/mod_tu.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/ClangScanDeps/Inputs/resource_directory/mod.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/aix_ppc_tree/dummy0.s",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/aix_ppc_tree/dummy1.s",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/aix_ppc_tree/dummy2.s",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/basic_msp430_tree/msp430-elf/include/stdio.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/empty.cfg",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/empty.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/hipstdpar/hipstdpar_lib.hpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/pchfile.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/resource_dir/share/asan_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/resource_dir/share/cfi_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/resource_dir/share/hwasan_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/resource_dir/share/ubsan_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/resource_dir/share/vtables_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/rocm-invalid/include/hip/hip_runtime.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/rocm/include/hip/hip_runtime.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/solaris_sparc_tree/usr/gcc/4.8/include/c++/4.8.2/sparc-sun-solaris2.11/bits/gthr.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/solaris_x86_tree/usr/gcc/4.9/include/c++/4.9.4/i386-pc-solaris2.11/bits/gthr.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/wildcard1.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Driver/Inputs/wildcard2.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Frontend/Inputs/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Frontend/Inputs/resource_dir_with_sanitizer_ignorelist/share/ubsan_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Index/Inputs/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Index/Inputs/preamble-reparse-1.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Index/include_test_2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Both/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Inferred.framework/Headers/Inferred.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Module_Map/private.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Module_Map_F.framework/Headers/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Module_Map_F.framework/PrivateHeaders/private.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Module_ModuleMap_F.framework/Headers/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/ModuleMapLocations/Module_ModuleMap_F.framework/PrivateHeaders/private.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/PR27041/Rtypes.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/PR27186/stddef.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/PR28438/b2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/PR28794/Subdir/Empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/System/usr/include/malloc.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/builtin-headers/float.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/builtin-headers/limits.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/cxx20/decls.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/declare-use/s.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/explicit-build-prefer-self/x.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/explicit-build/d.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/macro-hiding/a2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/macro-hiding/b1.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/macro-reexport/a2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/macro-reexport/b1.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/merge-function-defs/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/modulemaps-nomodules/header.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/multiple-include/x.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/no-linkage/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/pch-shared-module/mod.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/pr19692/TFoo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/require-modular-includes/FromNonModularSubframework.framework/Frameworks/Subframework.framework/Headers/Subframework.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/shadow/A1/A1.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/shadow/A2/A2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/submodule-in-private-mmap/A.framework/Headers/SomeSub.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/submodule-in-private-mmap/A.framework/PrivateHeaders/APrivate.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/submodules-merge-defs/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/suggest-include/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/template-default-args/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/A.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/B.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/C.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/D.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/E.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Modules/Inputs/umbrella_header_order/umbrella/F.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/PCH/Inputs/chain-trivial1.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/PCH/Inputs/chain-trivial2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/PCH/Inputs/modulemaps-nomodules/header.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/PCH/pchpch1.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/PCH/pchpch2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Parser/completely-empty-header-file.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/nonportable-hmaps/headers/foo/Bar.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/nonportable-hmaps/headers/foo/Baz.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/nonportable-hmaps/headers/foo/Foo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/search-path-usage/FwA/FrameworkA.framework/Headers/FrameworkA.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/search-path-usage/FwB/FrameworkB.framework/Headers/FrameworkB.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/search-path-usage/a_next/a.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/search-path-usage/b/b.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Preprocessor/Inputs/search-path-usage/d/d.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/SemaObjCXX/Inputs/nullability-pragmas-3.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Tooling/Inputs/pch-fail.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Tooling/Inputs/pch.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/Tooling/Inputs/pch.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/VFS/Inputs/Foo.framework/Headers/Foo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/VFS/Inputs/Foo.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/clang/tools/scan-build-py/tests/functional/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/cross-project-tests/debuginfo-tests/dexter/feature_tests/commands/perfect/dex_declare_file/dex_and_source/test.cfg",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/cross-project-tests/debuginfo-tests/dexter/feature_tests/commands/perfect/dex_declare_file/windows_noncanonical_path/test.cfg",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/flang/test/Driver/Inputs/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/flang/test/Driver/Inputs/resource_dir/share/asan_ignorelist.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/flang/test/Driver/Inputs/rocm/include/hip/hip_runtime.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/flang/test/Preprocessing/empty.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/flang/unittests/Optimizer/Builder/Runtime/Allocatable.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/__support/OSUtil/linux/i386/vdso.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/stdckdint/CMakeLists.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/startup/linux/crti.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/startup/linux/crtn.cpp",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/test/src/__support/File/testdata/CMakeLists.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/test/src/stdio/testdata/CMakeLists.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libc/test/src/sys/select/testdata/CMakeLists.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libcxx/test/selftest/file_dependencies/a.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libcxx/test/selftest/file_dependencies/dir/b.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/libcxx/utils/libcxx/test/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/packages/Python/lldbsuite/support/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/packages/Python/lldbsuite/test/test_runner/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/packages/Python/lldbsuite/test_event/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/API/commands/process/launch-with-shellexpand/file1.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/API/commands/process/launch-with-shellexpand/file2.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/API/commands/process/launch-with-shellexpand/file3.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/API/functionalities/load_lazy/t2_1.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/API/test_runner/test/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/Shell/RPC/Generator/Inputs/SBDummy.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/lldb/test/Shell/helper/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/test/DebugInfo/Inputs/dwarfdump-test3-decl2.h",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/test/DebugInfo/Inputs/llvm-symbolizer-test.c",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/test/tools/llvm-ctxprof-util/Inputs/empty.yaml",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/test/tools/llvm-remarkutil/size-diff/Inputs/empty-file.yaml",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/UpdateTestChecks/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/lit/builtin_commands/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/config-map-discovery/invalid-test.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/config-map-discovery/tests/test1.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/config-map-discovery/tests/test2.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/filter-failed/unresolved.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/ignore-fail/unresolved.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/lit/tests/Inputs/shtest-keyword-parse-errors/empty.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/llvm-testing-tools/src/llvm_testing_tools/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/llvm/utils/mlgo-utils/mlgo/corpus/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/mlir/benchmark/python/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/mlir/python/mlir/dialects/linalg/opdsl/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/mlir/python/mlir/dialects/linalg/opdsl/ops/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/mlir/test/python/ir/custom_dialect/__init__.py",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": true,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/full_android_language_toolchain/src/llvm-project/mlir/utils/mbr/requirements.txt",
+      "source_classification": "attributed_upstream_source",
+      "blank_executable_by_extension": false,
+      "classification": "upstream_empty_semantic_marker_nonexecutable",
+      "canonical_successor": "source_availability_manifest",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/bare_tasker/current/compile_host_elf.stdout.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/crash_probe.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-crash-probe.compile.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-crash-probe.compile.stdout.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-tick-1.compile.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-tick-1.compile.stdout.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-tick-2.compile.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/nsq-perpetual-runtime-tick-2.compile.stdout.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/tick_1.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/perpetual_runtime/current/tick_2_after_restart.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/semantic_benchmark/current/compile_asm.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/semantic_benchmark/current/compile_asm.stdout.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/semantic_benchmark/current/nsqasm_acceptance.stderr.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/stamps/cpan_success_round_pins.jsonl",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/stamps/model_full_download_stamps_20260428_183248.jsonl",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/nsq/stamps/model_full_download_verified_20260428_183644.jsonl",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    },
+    {
+      "path": "state/reports/braxon_terminal_bx_archive_snippets_20260508_165908.txt",
+      "source_classification": "derived_state_or_provenance_surface",
+      "blank_executable_by_extension": false,
+      "classification": "derived_empty_capture_nonroutable",
+      "canonical_successor": "state_capture_provenance",
+      "active_reflexor_routable": false,
+      "content_claim": "empty file has no executable implementation and is retained only when its recorded provenance or upstream source identity requires it"
+    }
+  ],
+  "invalid": []
+}

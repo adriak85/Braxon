@@ -367,7 +367,7 @@ impl<'a> Cursor<'a> {
             .checked_add(length)
             .ok_or("GGUF offset overflow")?;
         if end > self.bytes.len() {
-            return Err("GGUF is truncated".into());
+            return Err("GGUF input ends before a declared field is fully available".into());
         }
         let result = &self.bytes[self.offset..end];
         self.offset = end;

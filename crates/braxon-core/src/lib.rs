@@ -20,6 +20,7 @@ pub mod intelligent_operation;
 pub mod kinetic_reflexor;
 pub mod language_artifact_context;
 pub mod language_operation;
+pub mod live_bus;
 pub mod model_execution;
 pub mod native_bus;
 pub mod native_equivalence_harness;
@@ -35,6 +36,7 @@ pub mod performance_surface_benchmark;
 pub mod piston_memory;
 pub mod repository_operation;
 pub mod riemann_semantic_reflexor;
+pub mod role_operation;
 pub mod seed_citadel;
 pub mod semantic_link;
 pub mod target_field;
@@ -109,6 +111,10 @@ pub use language_artifact_context::{
 pub use language_operation::{
     execute_language_operation, LanguageOperationReport, LexicalParseSummary, LocalToolResolution,
     ParameterGuidedParseReceipt, LANGUAGE_OPERATION_SCHEMA,
+};
+pub use live_bus::{
+    bootstrap_live_bus, LiveBusBootstrapReport, LiveBusWindow, LIVE_BUS_BOOTSTRAP_SCHEMA,
+    LIVE_BUS_CAPABILITY,
 };
 pub use model_execution::{
     execute_bounded_tensor_inference, TensorInferenceOperation,
@@ -268,6 +274,10 @@ pub use offline_models::load_or_initialize_model_registry as load_or_initialize_
 pub use offline_models::save_model_registry as save_offline_model_registry;
 pub use offline_models::ModelAssetRecord as OfflineModelAssetRecord;
 pub use offline_models::ModelRegistry as OfflineModelRegistryState;
+pub use role_operation::{
+    available_role_modes, execute_role_operation, CourtOfficeBinding, RoleOperation,
+    ROLE_OPERATION_CAPABILITY, ROLE_OPERATION_CONTRACT_RELATIVE_PATH, ROLE_OPERATION_SCHEMA,
+};
 
 pub fn nu128_install_oversight_status(root: &Path) -> Nu128InstallOversightStatus {
     let config_path = root.join("config/nsq/nu128_install_oversight.json");

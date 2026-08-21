@@ -38,6 +38,55 @@
       "classification": "canonical_active"
     },
     {
+      "id": "route:live_bus.virtual_piston_ghost_bootstrap",
+      "purpose": "Front-door tokenizer, Parameter-Citadel, Council Ten seed, and ten body-descriptor virtual address resolution through bounded Ghost/Piston circulation",
+      "feature": "feature:live_bus.bootstrap",
+      "sources": [
+        "crates/braxon-core/src/live_bus.rs",
+        "crates/braxon-core/src/ghost_memory.rs",
+        "config/nsq/live_bus_bootstrap_contract.json"
+      ],
+      "front_doors": [
+        "Braxon boot [intent]",
+        "Braxon status",
+        "Braxon wake",
+        "Braxon bus <intent>"
+      ],
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:role.court_bound_operation",
+      "purpose": "Court-bound on-demand assistant, designer, agent, worker, and personal operations through virtual live-bus bootstrap, tokenized NSQ transaction, commit, and lease release",
+      "feature": "feature:role.operation",
+      "sources": [
+        "config/nsq/role_operation_contract.json",
+        "config/braxon_court.json",
+        "crates/braxon-core/src/role_operation.rs",
+        "crates/braxon-core/src/intelligent_operation.rs",
+        "crates/braxon-core/src/live_bus.rs"
+      ],
+      "front_doors": [
+        "Braxon role list",
+        "Braxon role execute <assistant|designer|agent|worker|personal> <request>"
+      ],
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:watermark.full_file_reflex_inventory",
+      "purpose": "Full-byte and ordered line-Merkle functional watermark plus semantic Reflexor linkage inventory for every retained executable file",
+      "feature": "feature:watermark.file_operation",
+      "sources": [
+        "tools/toolchain/audit_all_tracked_files.mjs",
+        "tools/toolchain/audit_full_file_watermark_reflex_links.mjs",
+        "config/nsq/full_file_watermark_reflex_contract.json"
+      ],
+      "front_doors": [
+        "node tools/toolchain/audit_all_tracked_files.mjs",
+        "node tools/toolchain/audit_full_file_watermark_reflex_links.mjs"
+      ],
+      "classification": "canonical_active"
+    },
+    {
       "id": "route:watermark.functional_file_operation",
       "purpose": "Watermarked source admission through Reflexor to a target-safe compiler operation",
       "feature": "feature:watermark.file_operation",
@@ -153,6 +202,21 @@
       "purpose": "Active donor shard completeness as a prerequisite for Braxon runtime donors",
       "classification": "removed",
       "replacement": "route:donor.citadel_seed"
+    },
+    {
+      "purpose": "Root-level Guile aliases bound to an external Termux installation",
+      "classification": "removed",
+      "replacement": "feature:language.parameter_parse"
+    },
+    {
+      "purpose": "External Dax foreign-tool absorption latest shortcut",
+      "classification": "removed",
+      "replacement": "route:watermark.full_file_reflex_inventory"
+    },
+    {
+      "purpose": "Absent current Braxon state symlink",
+      "classification": "removed",
+      "replacement": "route:live_bus.virtual_piston_ghost_bootstrap"
     }
   ]
 }

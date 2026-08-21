@@ -47,6 +47,25 @@
       ]
     },
     {
+      "id": "python3",
+      "surface_aliases": ["python", "python3", "py", "python3.12"],
+      "nsq_dialect": "alphabetic",
+      "requested_toolchain": "Tower/Braxon native CPython 3 contract",
+      "resolved_toolchain": "python3 interpreter and standard-library boundary codec",
+      "toolchain_owner": "Tower/Braxon native toolchain contract",
+      "tools": ["python3"],
+      "native_ingress": "python3_source_to_nsq_alphabetic_semantic_contract",
+      "native_egress": "nsq_semantic_contract_to_python3_artifact_or_explicit_boundary_invocation",
+      "output_contract": "Python source, package, test artifact, or explicit interpreter invocation generated and invoked only on demand",
+      "resident_runtime": false,
+      "upstream_runtime_dependency": false,
+      "notes": [
+        "Python 3 is a first-class NSQ alphabetic contract; Python spelling is accepted only as an ingress or egress boundary projection.",
+        "The interpreter is consulted only for an explicitly requested boundary action and cannot become a resident Braxon runtime.",
+        "Target-side execution requires the declared Tower native CPython boundary tool to be present and verified during device bootstrap."
+      ]
+    },
+    {
       "id": "assembly_native",
       "surface_aliases": ["asm", "assembly", "aarch64_asm", "arm64_asm", "llvm_ir", "gnu_as", "gas"],
       "nsq_dialect": "stamp",

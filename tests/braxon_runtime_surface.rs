@@ -75,3 +75,47 @@ fn root_handover_materializes_and_reports_completed_release_without_disconnect()
     assert!(!lower.contains("mock"));
     assert!(!lower.contains("power_disconnect_requested\": true"));
 }
+
+#[test]
+fn root_language_python3_executes_the_bounded_declared_parse_without_native_promotion_claim() {
+    let (ok, stdout, stderr) = run_runtime_command(&[
+        "language",
+        "python3",
+        "print(\"bounded NSQ language parse\")",
+    ]);
+    assert!(
+        ok,
+        "language python3 command returned nonzero\nstdout:\n{stdout}\nstderr:\n{stderr}"
+    );
+    assert!(stdout.contains("\"intercept_route\""));
+    assert!(stdout.contains("\"language_route\""));
+    assert!(stdout.contains("\"id\": \"language:python3\""));
+    assert!(stdout.contains("\"semantic_parse_ready\": true"));
+    assert!(stdout.contains("\"no_resident_runtime\": true"));
+    assert!(
+        stdout.contains("\"full_closure_verification_front_door\": \"Braxon closure language\"")
+    );
+    assert!(stdout.contains("\"target_execution_environment_matches\": false"));
+    assert!(stdout.contains("\"native_materialization_ready\": false"));
+}
+
+#[test]
+fn root_role_assistant_resolves_court_authority_and_executes_a_released_nsq_transaction() {
+    let (ok, stdout, stderr) = run_runtime_command(&[
+        "role",
+        "execute",
+        "assistant",
+        "verify court-bound assistant role execution",
+    ]);
+    assert!(
+        ok,
+        "role assistant command returned nonzero\nstdout:\n{stdout}\nstderr:\n{stderr}"
+    );
+    assert!(stdout.contains("\"capability\": \"feature:role.operation\""));
+    assert!(stdout.contains("\"mode\": \"assistant\""));
+    assert!(stdout.contains("\"id\": \"oracle\""));
+    assert!(stdout.contains("\"completed\": true"));
+    assert!(stdout.contains("\"lease_released\": true"));
+    assert!(stdout.contains("\"native_fired_count\": 1"));
+    assert!(stdout.contains("\"resident_runtime\": false"));
+}

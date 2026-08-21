@@ -1,0 +1,2800 @@
+{
+  "schema": "braxon.nsq.role_operation.v1",
+  "capability": "feature:role.operation",
+  "owner": "Michael David Norris",
+  "mode": "agent",
+  "mode_label": "Agent",
+  "request": "verify agent role binds court authority to an NSQ live operation",
+  "purpose": "Route an on-demand task through declared ingress, verification, and execution lanes while preserving the physical boundary truth.",
+  "lead_office": {
+    "id": "director",
+    "title": "Director",
+    "durability_class": "court_seat",
+    "authority_domain": [
+      "execution direction",
+      "lane control"
+    ]
+  },
+  "supporting_offices": [
+    {
+      "id": "archon_gates",
+      "title": "Archon Gates",
+      "durability_class": "court_seat",
+      "authority_domain": [
+        "ingress",
+        "egress",
+        "provision",
+        "parallel intake"
+      ]
+    },
+    {
+      "id": "detective",
+      "title": "Detective",
+      "durability_class": "court_seat",
+      "authority_domain": [
+        "truth tracing",
+        "fact recovery",
+        "cause review"
+      ]
+    },
+    {
+      "id": "guard",
+      "title": "Guard",
+      "durability_class": "court_seat",
+      "authority_domain": [
+        "boundary enforcement",
+        "seizure",
+        "containment"
+      ]
+    }
+  ],
+  "authorized_features": [
+    "feature:operator.intelligence",
+    "feature:repository.operation",
+    "feature:toolchain.contained_verify",
+    "feature:live_bus.bootstrap"
+  ],
+  "execution_policy": "A role operation must first resolve its declared mode and court offices, then bootstrap the bounded virtual-addressed Piston/Ghost live bus, execute one tokenized operator-intelligence NSQ transaction, commit its operation state, and release every lease. No role starts a resident runtime, bypasses a declared feature contract, or claims an unavailable model weight or target boundary.",
+  "state_policy": "Operation state is written only after the real NSQ transaction completes. A state record is evidence of a completed operation, never a substitute for one.",
+  "live_bus_bootstrap": {
+    "schema": "braxon.nsq.live_bus_bootstrap.v1",
+    "capability": "feature:live_bus.bootstrap",
+    "intent": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+    "tokenizer": {
+      "schema": "braxon.nsq.tokenizer_bridge.v1",
+      "band_id": "braxon_native",
+      "model_id": "Braxon",
+      "tokenizer_path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "provenance": "committed_braxon_native_tokenizer",
+      "native_representation_retained": true,
+      "deterministic_mapping": true,
+      "forward_translation": true,
+      "reverse_translation": true,
+      "shared_semantic_addressing": true,
+      "collective_state_contribution_ready": true,
+      "no_resident_runtime": true,
+      "projections": [
+        {
+          "lexical": "A",
+          "native_id": 35,
+          "universal_id": 12638153115695167520,
+          "nsq_address": "nsq.address.token/af63bd4c8601b820"
+        },
+        {
+          "lexical": "g",
+          "native_id": 73,
+          "universal_id": 12638153115695167558,
+          "nsq_address": "nsq.address.token/af63bd4c8601b846"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "l",
+          "native_id": 78,
+          "universal_id": 12638153115695167563,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": "g",
+          "native_id": 73,
+          "universal_id": 12638153115695167558,
+          "nsq_address": "nsq.address.token/af63bd4c8601b846"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "v",
+          "native_id": 88,
+          "universal_id": 12638153115695167573,
+          "nsq_address": "nsq.address.token/af63bd4c8601b855"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "d",
+          "native_id": 70,
+          "universal_id": 12638153115695167555,
+          "nsq_address": "nsq.address.token/af63bd4c8601b843"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "c",
+          "native_id": 69,
+          "universal_id": 12638153115695167554,
+          "nsq_address": "nsq.address.token/af63bd4c8601b842"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": ":",
+          "native_id": 28,
+          "universal_id": 12638153115695167513,
+          "nsq_address": "nsq.address.token/af63bd4c8601b819"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "v",
+          "native_id": 88,
+          "universal_id": 12638153115695167573,
+          "nsq_address": "nsq.address.token/af63bd4c8601b855"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "f",
+          "native_id": 72,
+          "universal_id": 12638153115695167557,
+          "nsq_address": "nsq.address.token/af63bd4c8601b845"
+        },
+        {
+          "lexical": "y",
+          "native_id": 91,
+          "universal_id": 12638153115695167576,
+          "nsq_address": "nsq.address.token/af63bd4c8601b858"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": "g",
+          "native_id": 73,
+          "universal_id": 12638153115695167558,
+          "nsq_address": "nsq.address.token/af63bd4c8601b846"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "l",
+          "native_id": 78,
+          "universal_id": 12638153115695167563,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "b",
+          "native_id": 68,
+          "universal_id": 12638153115695167553,
+          "nsq_address": "nsq.address.token/af63bd4c8601b841"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        },
+        {
+          "lexical": "d",
+          "native_id": 70,
+          "universal_id": 12638153115695167555,
+          "nsq_address": "nsq.address.token/af63bd4c8601b843"
+        },
+        {
+          "lexical": "s",
+          "native_id": 85,
+          "universal_id": 12638153115695167570,
+          "nsq_address": "nsq.address.token/af63bd4c8601b852"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "c",
+          "native_id": 69,
+          "universal_id": 12638153115695167554,
+          "nsq_address": "nsq.address.token/af63bd4c8601b842"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "u",
+          "native_id": 87,
+          "universal_id": 12638153115695167572,
+          "nsq_address": "nsq.address.token/af63bd4c8601b854"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": "u",
+          "native_id": 87,
+          "universal_id": 12638153115695167572,
+          "nsq_address": "nsq.address.token/af63bd4c8601b854"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": "h",
+          "native_id": 74,
+          "universal_id": 12638153115695167559,
+          "nsq_address": "nsq.address.token/af63bd4c8601b847"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": "y",
+          "native_id": 91,
+          "universal_id": 12638153115695167576,
+          "nsq_address": "nsq.address.token/af63bd4c8601b858"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "N",
+          "native_id": 48,
+          "universal_id": 12638153115695167533,
+          "nsq_address": "nsq.address.token/af63bd4c8601b82d"
+        },
+        {
+          "lexical": "S",
+          "native_id": 53,
+          "universal_id": 12638153115695167538,
+          "nsq_address": "nsq.address.token/af63bd4c8601b832"
+        },
+        {
+          "lexical": "Q",
+          "native_id": 51,
+          "universal_id": 12638153115695167536,
+          "nsq_address": "nsq.address.token/af63bd4c8601b830"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "l",
+          "native_id": 78,
+          "universal_id": 12638153115695167563,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "v",
+          "native_id": 88,
+          "universal_id": 12638153115695167573,
+          "nsq_address": "nsq.address.token/af63bd4c8601b855"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": " ",
+          "native_id": 2,
+          "universal_id": 12638153115695167487,
+          "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "p",
+          "native_id": 82,
+          "universal_id": 12638153115695167567,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84f"
+        },
+        {
+          "lexical": "e",
+          "native_id": 71,
+          "universal_id": 12638153115695167556,
+          "nsq_address": "nsq.address.token/af63bd4c8601b844"
+        },
+        {
+          "lexical": "r",
+          "native_id": 84,
+          "universal_id": 12638153115695167569,
+          "nsq_address": "nsq.address.token/af63bd4c8601b851"
+        },
+        {
+          "lexical": "a",
+          "native_id": 67,
+          "universal_id": 12638153115695167552,
+          "nsq_address": "nsq.address.token/af63bd4c8601b840"
+        },
+        {
+          "lexical": "t",
+          "native_id": 86,
+          "universal_id": 12638153115695167571,
+          "nsq_address": "nsq.address.token/af63bd4c8601b853"
+        },
+        {
+          "lexical": "i",
+          "native_id": 75,
+          "universal_id": 12638153115695167560,
+          "nsq_address": "nsq.address.token/af63bd4c8601b848"
+        },
+        {
+          "lexical": "o",
+          "native_id": 81,
+          "universal_id": 12638153115695167566,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+        },
+        {
+          "lexical": "n",
+          "native_id": 80,
+          "universal_id": 12638153115695167565,
+          "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+        }
+      ],
+      "unresolved_tokens": [],
+      "collision_count": 0
+    },
+    "parameter_generation": 1,
+    "parameter_invariants_passed": true,
+    "council_seed_readiness": {
+      "schema": "braxon.nsq.donor_model_readiness.v2",
+      "capability": "feature:model.donor_readiness",
+      "target_environment": "aarch64-linux-android",
+      "configured_model_total": 10,
+      "required_model_total": 10,
+      "configured_model_total_matches_contract": true,
+      "brain_model_total": 6,
+      "sensory_model_total": 4,
+      "authoritative_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+      "authoritative_seed_contract_present": true,
+      "seed_id": "citadel699-council-ten-seed-6fcd924cc7c2abef",
+      "seed_hash": "6fcd924cc7c2abefdc6777c9b68a637c4c1620aec444a99a782ff519a5147170",
+      "council_wake_all_passed": true,
+      "citadel_seed_materialized": true,
+      "materialized_body_total": 10,
+      "nsq_set_instruction_total": 10,
+      "nsq_fire_instruction_total": 10,
+      "nsq_release_instruction_total": 10,
+      "complete_ten_body_window_proven": true,
+      "donor_parameter_synchronization_live": true,
+      "model_weight_execution_claimed": false,
+      "resident_runtime_constructed": false,
+      "bands": [
+        {
+          "model_id": "deepseek-v3-671b",
+          "role": "Logic - executive pole, 1-bit VM orchestration, 8itF1ux generation",
+          "configured": true,
+          "assigned_pole": "maverick_logic",
+          "materialized_pole": "maverick",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "deepseek-v3-671b is verified through the canonical Council Ten Citadel seed: its maverick pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "qwen3-235b-a22b",
+          "role": "Creativity - dreamer pole, WoWaS narrative expansion, Pip state",
+          "configured": true,
+          "assigned_pole": "qwen_creativity",
+          "materialized_pole": "qwen",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "qwen3-235b-a22b is verified through the canonical Council Ten Citadel seed: its qwen pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "qwen2.5-72b",
+          "role": "Judge - truth selector when logic and creativity conflict",
+          "configured": true,
+          "assigned_pole": "arbiter_judge",
+          "materialized_pole": "arbiter",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "qwen2.5-72b is verified through the canonical Council Ten Citadel seed: its arbiter pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "deepseek-v3-671b-analyzer",
+          "role": "Auditor - real-time security audits, NSQ ASM proofs",
+          "configured": true,
+          "assigned_pole": "analyzer_auditor",
+          "materialized_pole": "analyzer",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "deepseek-v3-671b-analyzer is verified through the canonical Council Ten Citadel seed: its analyzer pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "llama3.3-70b",
+          "role": "Empath - emotional weight and subtext processing",
+          "configured": true,
+          "assigned_pole": "limbic_empath",
+          "materialized_pole": "limbic",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "llama3.3-70b is verified through the canonical Council Ten Citadel seed: its limbic pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "gemma3-27b",
+          "role": "Memory - long-range context and hallucination prevention",
+          "configured": true,
+          "assigned_pole": "support_memory",
+          "materialized_pole": "support",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "gemma3-27b is verified through the canonical Council Ten Citadel seed: its support pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "FLUX.1-dev",
+          "role": "FLUX.1-dev image-route body",
+          "configured": true,
+          "assigned_pole": "image_cortex",
+          "materialized_pole": "image",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "FLUX.1-dev is verified through the canonical Council Ten Citadel seed: its image pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "Wan2.1-T2V-14B",
+          "role": "Wan2.1-T2V-14B physical consequence video body",
+          "configured": true,
+          "assigned_pole": "video_cortex",
+          "materialized_pole": "video",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "Wan2.1-T2V-14B is verified through the canonical Council Ten Citadel seed: its video pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "IndexTTS2",
+          "role": "IndexTTS2 emotional acoustic body",
+          "configured": true,
+          "assigned_pole": "voice_body",
+          "materialized_pole": "voice",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "IndexTTS2 is verified through the canonical Council Ten Citadel seed: its voice pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        },
+        {
+          "model_id": "Hunyuan3D-2.1",
+          "role": "Hunyuan3D-2.1 spatial geometry body",
+          "configured": true,
+          "assigned_pole": "world_body_3d",
+          "materialized_pole": "world",
+          "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+          "seed_window_materialized": true,
+          "nsq_body_fired": true,
+          "piston_lease_released": true,
+          "parameter_payload_synchronized": true,
+          "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+          "exact_materialization_guidance": "Hunyuan3D-2.1 is verified through the canonical Council Ten Citadel seed: its world pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+        }
+      ],
+      "exact_next_operation": "Use `Braxon runtime infer <configured-model> <prompt>` to execute a fresh canonical Citadel seed window for the selected configured band. The operation remains bounded, releases its NSQ window, and does not claim whole-model weight execution."
+    },
+    "virtual_address_domain": "nsq_virtual_extension_outside_ordinary_cpu_addresses",
+    "virtual_window_total": 13,
+    "virtual_wire_bytes": 430043,
+    "circulation_cycle_total": 13,
+    "all_windows_resolved": true,
+    "all_windows_released": true,
+    "active_cpu_bytes_after_release": 0,
+    "ordinary_storage_bytes": 0,
+    "model_weight_execution_claimed": false,
+    "resident_runtime_constructed": false,
+    "windows": [
+      {
+        "logical_id": "tokenizer.native",
+        "owner": "feature:live_bus.bootstrap::tokenizer.native",
+        "kind": "tokenizer",
+        "virtual_address": "nsq-virtual://0001000000000000",
+        "page_id": "tokenizer.native.page-0",
+        "byte_len": 428886,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "parameter.citadel",
+        "owner": "feature:live_bus.bootstrap::parameter.citadel",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000000f00000",
+        "page_id": "parameter.citadel.page-0",
+        "byte_len": 200,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000001e00000",
+        "page_id": "council-ten.seed.page-0",
+        "byte_len": 148,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.maverick",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.maverick",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000002d00000",
+        "page_id": "council-ten.seed-body.maverick.page-0",
+        "byte_len": 104,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.qwen",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.qwen",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000003c00000",
+        "page_id": "council-ten.seed-body.qwen.page-0",
+        "byte_len": 97,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.arbiter",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.arbiter",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000004b00000",
+        "page_id": "council-ten.seed-body.arbiter.page-0",
+        "byte_len": 88,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.analyzer",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.analyzer",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000005a00000",
+        "page_id": "council-ten.seed-body.analyzer.page-0",
+        "byte_len": 100,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.limbic",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.limbic",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000006900000",
+        "page_id": "council-ten.seed-body.limbic.page-0",
+        "byte_len": 79,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.support",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.support",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000007800000",
+        "page_id": "council-ten.seed-body.support.page-0",
+        "byte_len": 87,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.image",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.image",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000008700000",
+        "page_id": "council-ten.seed-body.image.page-0",
+        "byte_len": 54,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.video",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.video",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://0001000009600000",
+        "page_id": "council-ten.seed-body.video.page-0",
+        "byte_len": 77,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.voice",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.voice",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://000100000a500000",
+        "page_id": "council-ten.seed-body.voice.page-0",
+        "byte_len": 57,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      },
+      {
+        "logical_id": "council-ten.seed-body.world",
+        "owner": "feature:live_bus.bootstrap::council-ten.seed-body.world",
+        "kind": "parameter",
+        "virtual_address": "nsq-virtual://000100000b400000",
+        "page_id": "council-ten.seed-body.world.page-0",
+        "byte_len": 66,
+        "wire_resident_for_operation": true,
+        "fired": true,
+        "committed": true,
+        "released": true,
+        "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+      }
+    ],
+    "exact_next_operation": "The virtual wire map is proven for this front-door operation. A later operation creates a fresh bounded Piston/Ghost circulation cycle; no learned model-weight residency is claimed."
+  },
+  "intelligent_operation": {
+    "schema": "braxon.nsq.intelligent_operation.v1",
+    "capability": "feature:operator.intelligence",
+    "input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+    "semantic_interpretation": "operator next-step priority",
+    "selected_intent": "prepare_operator_next_steps",
+    "action": {
+      "capability": "feature:operator.intelligence",
+      "selected_intent": "prepare_operator_next_steps",
+      "state_transition": "live_bus_virtual_address_bootstrap→tokenized_input→semantic_priority→address_lease→native_set_fire→collective_state→release",
+      "completed": true,
+      "classification": "derived_state"
+    },
+    "answer": "I interpreted your request as `operator next-step priority` and executed the NSQ action `prepare_operator_next_steps` through the operator capability. The transaction completed at generation 1 and the address was released. Individual perspectives were retained.",
+    "answer_classification": "user_presentation",
+    "collective_self_state": {
+      "schema": "braxon.nsq.collective_state.v1",
+      "perspectives": [
+        {
+          "organ_id": "anterior_action",
+          "identity": "braxon.organ_band.anterior_action",
+          "address": "council/anterior_action/state",
+          "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+          "local_state": "priority_nonnegative",
+          "local_interpretation": "operator next-step priority",
+          "local_output": "prepare_operator_next_steps",
+          "translation_interface": "nsq.universal.translation.v1",
+          "pressure": 640,
+          "feedback_path": "council/anterior_action/feedback",
+          "classification": "derived_state"
+        },
+        {
+          "organ_id": "insular_bus",
+          "identity": "braxon.organ_band.insular_bus",
+          "address": "council/insular_bus/state",
+          "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+          "local_state": "priority_nonnegative",
+          "local_interpretation": "operator-bus measurement priority",
+          "local_output": "verify_operator_bus_measurement",
+          "translation_interface": "nsq.universal.translation.v1",
+          "pressure": 600,
+          "feedback_path": "council/insular_bus/feedback",
+          "classification": "derived_state"
+        },
+        {
+          "organ_id": "limbic_speech",
+          "identity": "braxon.organ_band.limbic_speech",
+          "address": "council/limbic_speech/state",
+          "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+          "local_state": "priority_nonnegative",
+          "local_interpretation": "user-presentation boundary priority",
+          "local_output": "present_derived_bus_state",
+          "translation_interface": "nsq.universal.translation.v1",
+          "pressure": 580,
+          "feedback_path": "council/limbic_speech/feedback",
+          "classification": "derived_state"
+        },
+        {
+          "organ_id": "prefrontal_terminal",
+          "identity": "braxon.organ_band.prefrontal_terminal",
+          "address": "council/prefrontal_terminal/state",
+          "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+          "local_state": "priority_nonnegative",
+          "local_interpretation": "terminal launch-path operational priority",
+          "local_output": "verify_terminal_launch_path",
+          "translation_interface": "nsq.universal.translation.v1",
+          "pressure": 620,
+          "feedback_path": "council/prefrontal_terminal/feedback",
+          "classification": "derived_state"
+        }
+      ],
+      "aggregate_pressure": 2440,
+      "dominant_organ_id": "anterior_action",
+      "dominant_pressure": 640,
+      "minority_organ_ids": [
+        "insular_bus",
+        "limbic_speech",
+        "prefrontal_terminal"
+      ],
+      "disagreement_present": false,
+      "conflict_preserved": false,
+      "forced_consensus": false,
+      "numerical_pressure_is_biological_emotion": false,
+      "classification": "derived_state"
+    },
+    "native_transaction_generation": 1,
+    "native_instruction_count": 3,
+    "native_fired_count": 1,
+    "lease_released": true,
+    "live_bus_bootstrap": {
+      "schema": "braxon.nsq.live_bus_bootstrap.v1",
+      "capability": "feature:live_bus.bootstrap",
+      "intent": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+      "tokenizer": {
+        "schema": "braxon.nsq.tokenizer_bridge.v1",
+        "band_id": "braxon_native",
+        "model_id": "Braxon",
+        "tokenizer_path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "provenance": "committed_braxon_native_tokenizer",
+        "native_representation_retained": true,
+        "deterministic_mapping": true,
+        "forward_translation": true,
+        "reverse_translation": true,
+        "shared_semantic_addressing": true,
+        "collective_state_contribution_ready": true,
+        "no_resident_runtime": true,
+        "projections": [
+          {
+            "lexical": "A",
+            "native_id": 35,
+            "universal_id": 12638153115695167520,
+            "nsq_address": "nsq.address.token/af63bd4c8601b820"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "d",
+            "native_id": 70,
+            "universal_id": 12638153115695167555,
+            "nsq_address": "nsq.address.token/af63bd4c8601b843"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "c",
+            "native_id": 69,
+            "universal_id": 12638153115695167554,
+            "nsq_address": "nsq.address.token/af63bd4c8601b842"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": ":",
+            "native_id": 28,
+            "universal_id": 12638153115695167513,
+            "nsq_address": "nsq.address.token/af63bd4c8601b819"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "f",
+            "native_id": 72,
+            "universal_id": 12638153115695167557,
+            "nsq_address": "nsq.address.token/af63bd4c8601b845"
+          },
+          {
+            "lexical": "y",
+            "native_id": 91,
+            "universal_id": 12638153115695167576,
+            "nsq_address": "nsq.address.token/af63bd4c8601b858"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "b",
+            "native_id": 68,
+            "universal_id": 12638153115695167553,
+            "nsq_address": "nsq.address.token/af63bd4c8601b841"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "d",
+            "native_id": 70,
+            "universal_id": 12638153115695167555,
+            "nsq_address": "nsq.address.token/af63bd4c8601b843"
+          },
+          {
+            "lexical": "s",
+            "native_id": 85,
+            "universal_id": 12638153115695167570,
+            "nsq_address": "nsq.address.token/af63bd4c8601b852"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "c",
+            "native_id": 69,
+            "universal_id": 12638153115695167554,
+            "nsq_address": "nsq.address.token/af63bd4c8601b842"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "u",
+            "native_id": 87,
+            "universal_id": 12638153115695167572,
+            "nsq_address": "nsq.address.token/af63bd4c8601b854"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "u",
+            "native_id": 87,
+            "universal_id": 12638153115695167572,
+            "nsq_address": "nsq.address.token/af63bd4c8601b854"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "h",
+            "native_id": 74,
+            "universal_id": 12638153115695167559,
+            "nsq_address": "nsq.address.token/af63bd4c8601b847"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "y",
+            "native_id": 91,
+            "universal_id": 12638153115695167576,
+            "nsq_address": "nsq.address.token/af63bd4c8601b858"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "N",
+            "native_id": 48,
+            "universal_id": 12638153115695167533,
+            "nsq_address": "nsq.address.token/af63bd4c8601b82d"
+          },
+          {
+            "lexical": "S",
+            "native_id": 53,
+            "universal_id": 12638153115695167538,
+            "nsq_address": "nsq.address.token/af63bd4c8601b832"
+          },
+          {
+            "lexical": "Q",
+            "native_id": 51,
+            "universal_id": 12638153115695167536,
+            "nsq_address": "nsq.address.token/af63bd4c8601b830"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "p",
+            "native_id": 82,
+            "universal_id": 12638153115695167567,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84f"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          }
+        ],
+        "unresolved_tokens": [],
+        "collision_count": 0
+      },
+      "parameter_generation": 1,
+      "parameter_invariants_passed": true,
+      "council_seed_readiness": {
+        "schema": "braxon.nsq.donor_model_readiness.v2",
+        "capability": "feature:model.donor_readiness",
+        "target_environment": "aarch64-linux-android",
+        "configured_model_total": 10,
+        "required_model_total": 10,
+        "configured_model_total_matches_contract": true,
+        "brain_model_total": 6,
+        "sensory_model_total": 4,
+        "authoritative_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+        "authoritative_seed_contract_present": true,
+        "seed_id": "citadel699-council-ten-seed-6fcd924cc7c2abef",
+        "seed_hash": "6fcd924cc7c2abefdc6777c9b68a637c4c1620aec444a99a782ff519a5147170",
+        "council_wake_all_passed": true,
+        "citadel_seed_materialized": true,
+        "materialized_body_total": 10,
+        "nsq_set_instruction_total": 10,
+        "nsq_fire_instruction_total": 10,
+        "nsq_release_instruction_total": 10,
+        "complete_ten_body_window_proven": true,
+        "donor_parameter_synchronization_live": true,
+        "model_weight_execution_claimed": false,
+        "resident_runtime_constructed": false,
+        "bands": [
+          {
+            "model_id": "deepseek-v3-671b",
+            "role": "Logic - executive pole, 1-bit VM orchestration, 8itF1ux generation",
+            "configured": true,
+            "assigned_pole": "maverick_logic",
+            "materialized_pole": "maverick",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "deepseek-v3-671b is verified through the canonical Council Ten Citadel seed: its maverick pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "qwen3-235b-a22b",
+            "role": "Creativity - dreamer pole, WoWaS narrative expansion, Pip state",
+            "configured": true,
+            "assigned_pole": "qwen_creativity",
+            "materialized_pole": "qwen",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "qwen3-235b-a22b is verified through the canonical Council Ten Citadel seed: its qwen pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "qwen2.5-72b",
+            "role": "Judge - truth selector when logic and creativity conflict",
+            "configured": true,
+            "assigned_pole": "arbiter_judge",
+            "materialized_pole": "arbiter",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "qwen2.5-72b is verified through the canonical Council Ten Citadel seed: its arbiter pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "deepseek-v3-671b-analyzer",
+            "role": "Auditor - real-time security audits, NSQ ASM proofs",
+            "configured": true,
+            "assigned_pole": "analyzer_auditor",
+            "materialized_pole": "analyzer",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "deepseek-v3-671b-analyzer is verified through the canonical Council Ten Citadel seed: its analyzer pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "llama3.3-70b",
+            "role": "Empath - emotional weight and subtext processing",
+            "configured": true,
+            "assigned_pole": "limbic_empath",
+            "materialized_pole": "limbic",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "llama3.3-70b is verified through the canonical Council Ten Citadel seed: its limbic pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "gemma3-27b",
+            "role": "Memory - long-range context and hallucination prevention",
+            "configured": true,
+            "assigned_pole": "support_memory",
+            "materialized_pole": "support",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "gemma3-27b is verified through the canonical Council Ten Citadel seed: its support pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "FLUX.1-dev",
+            "role": "FLUX.1-dev image-route body",
+            "configured": true,
+            "assigned_pole": "image_cortex",
+            "materialized_pole": "image",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "FLUX.1-dev is verified through the canonical Council Ten Citadel seed: its image pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "Wan2.1-T2V-14B",
+            "role": "Wan2.1-T2V-14B physical consequence video body",
+            "configured": true,
+            "assigned_pole": "video_cortex",
+            "materialized_pole": "video",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "Wan2.1-T2V-14B is verified through the canonical Council Ten Citadel seed: its video pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "IndexTTS2",
+            "role": "IndexTTS2 emotional acoustic body",
+            "configured": true,
+            "assigned_pole": "voice_body",
+            "materialized_pole": "voice",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "IndexTTS2 is verified through the canonical Council Ten Citadel seed: its voice pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          },
+          {
+            "model_id": "Hunyuan3D-2.1",
+            "role": "Hunyuan3D-2.1 spatial geometry body",
+            "configured": true,
+            "assigned_pole": "world_body_3d",
+            "materialized_pole": "world",
+            "canonical_seed_contract_path": "config/nsq/braxon_council_ten_stack.json",
+            "seed_window_materialized": true,
+            "nsq_body_fired": true,
+            "piston_lease_released": true,
+            "parameter_payload_synchronized": true,
+            "operational_state": "canonical_citadel_seed_window_materialized_fired_and_released",
+            "exact_materialization_guidance": "Hunyuan3D-2.1 is verified through the canonical Council Ten Citadel seed: its world pole was materialized, set, fired, and released in an on-demand NSQ window. This proves the seed route only; model-weight execution remains unclaimed."
+          }
+        ],
+        "exact_next_operation": "Use `Braxon runtime infer <configured-model> <prompt>` to execute a fresh canonical Citadel seed window for the selected configured band. The operation remains bounded, releases its NSQ window, and does not claim whole-model weight execution."
+      },
+      "virtual_address_domain": "nsq_virtual_extension_outside_ordinary_cpu_addresses",
+      "virtual_window_total": 13,
+      "virtual_wire_bytes": 430043,
+      "circulation_cycle_total": 13,
+      "all_windows_resolved": true,
+      "all_windows_released": true,
+      "active_cpu_bytes_after_release": 0,
+      "ordinary_storage_bytes": 0,
+      "model_weight_execution_claimed": false,
+      "resident_runtime_constructed": false,
+      "windows": [
+        {
+          "logical_id": "tokenizer.native",
+          "owner": "feature:live_bus.bootstrap::tokenizer.native",
+          "kind": "tokenizer",
+          "virtual_address": "nsq-virtual://0001000000000000",
+          "page_id": "tokenizer.native.page-0",
+          "byte_len": 428886,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "parameter.citadel",
+          "owner": "feature:live_bus.bootstrap::parameter.citadel",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000000f00000",
+          "page_id": "parameter.citadel.page-0",
+          "byte_len": 200,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000001e00000",
+          "page_id": "council-ten.seed.page-0",
+          "byte_len": 148,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.maverick",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.maverick",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000002d00000",
+          "page_id": "council-ten.seed-body.maverick.page-0",
+          "byte_len": 104,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.qwen",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.qwen",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000003c00000",
+          "page_id": "council-ten.seed-body.qwen.page-0",
+          "byte_len": 97,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.arbiter",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.arbiter",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000004b00000",
+          "page_id": "council-ten.seed-body.arbiter.page-0",
+          "byte_len": 88,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.analyzer",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.analyzer",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000005a00000",
+          "page_id": "council-ten.seed-body.analyzer.page-0",
+          "byte_len": 100,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.limbic",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.limbic",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000006900000",
+          "page_id": "council-ten.seed-body.limbic.page-0",
+          "byte_len": 79,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.support",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.support",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000007800000",
+          "page_id": "council-ten.seed-body.support.page-0",
+          "byte_len": 87,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.image",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.image",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000008700000",
+          "page_id": "council-ten.seed-body.image.page-0",
+          "byte_len": 54,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.video",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.video",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://0001000009600000",
+          "page_id": "council-ten.seed-body.video.page-0",
+          "byte_len": 77,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.voice",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.voice",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://000100000a500000",
+          "page_id": "council-ten.seed-body.voice.page-0",
+          "byte_len": 57,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        },
+        {
+          "logical_id": "council-ten.seed-body.world",
+          "owner": "feature:live_bus.bootstrap::council-ten.seed-body.world",
+          "kind": "parameter",
+          "virtual_address": "nsq-virtual://000100000b400000",
+          "page_id": "council-ten.seed-body.world.page-0",
+          "byte_len": 66,
+          "wire_resident_for_operation": true,
+          "fired": true,
+          "committed": true,
+          "released": true,
+          "state_after_release": "on_wire_virtual_address_resolvable_for_next_piston_cycle"
+        }
+      ],
+      "exact_next_operation": "The virtual wire map is proven for this front-door operation. A later operation creates a fresh bounded Piston/Ghost circulation cycle; no learned model-weight residency is claimed."
+    },
+    "audit_bus": {
+      "schema": "braxon.bus.measurement_request.v4",
+      "identity": "BRAXON",
+      "authority": "NSQ_COURT",
+      "canonical_semantics": "base8_switch_topology",
+      "route": "nsq_operator_bus",
+      "input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+      "processing": {
+        "input_accepted": true,
+        "council_wake_verified": true,
+        "token_boundary_checked": true,
+        "universal_state_received": true,
+        "classification": "hard_state"
+      },
+      "reply_layer": {
+        "schema": "braxon.bus.user_presentation.v2",
+        "classification": "user_presentation",
+        "generated_from_derived_state": true,
+        "canned_reply": false,
+        "reply": "Derived semantic route for `Agent role agent via director: verify agent role binds court authority to an NSQ live operation` selected `prepare_operator_next_steps` with interpretation `operator next-step priority`. Individual disagreement retained: false. Native action must be completed by the intelligent operation route."
+      },
+      "intent_english_loop": {
+        "input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+        "selected_intent": "prepare_operator_next_steps",
+        "english": "Derived semantic route for `Agent role agent via director: verify agent role binds court authority to an NSQ live operation` selected `prepare_operator_next_steps` with interpretation `operator next-step priority`. Individual disagreement retained: false. Native action must be completed by the intelligent operation route.",
+        "completed": true,
+        "classification": "user_presentation"
+      },
+      "collective_self_state": {
+        "schema": "braxon.nsq.collective_state.v1",
+        "perspectives": [
+          {
+            "organ_id": "anterior_action",
+            "identity": "braxon.organ_band.anterior_action",
+            "address": "council/anterior_action/state",
+            "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+            "local_state": "priority_nonnegative",
+            "local_interpretation": "operator next-step priority",
+            "local_output": "prepare_operator_next_steps",
+            "translation_interface": "nsq.universal.translation.v1",
+            "pressure": 640,
+            "feedback_path": "council/anterior_action/feedback",
+            "classification": "derived_state"
+          },
+          {
+            "organ_id": "insular_bus",
+            "identity": "braxon.organ_band.insular_bus",
+            "address": "council/insular_bus/state",
+            "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+            "local_state": "priority_nonnegative",
+            "local_interpretation": "operator-bus measurement priority",
+            "local_output": "verify_operator_bus_measurement",
+            "translation_interface": "nsq.universal.translation.v1",
+            "pressure": 600,
+            "feedback_path": "council/insular_bus/feedback",
+            "classification": "derived_state"
+          },
+          {
+            "organ_id": "limbic_speech",
+            "identity": "braxon.organ_band.limbic_speech",
+            "address": "council/limbic_speech/state",
+            "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+            "local_state": "priority_nonnegative",
+            "local_interpretation": "user-presentation boundary priority",
+            "local_output": "present_derived_bus_state",
+            "translation_interface": "nsq.universal.translation.v1",
+            "pressure": 580,
+            "feedback_path": "council/limbic_speech/feedback",
+            "classification": "derived_state"
+          },
+          {
+            "organ_id": "prefrontal_terminal",
+            "identity": "braxon.organ_band.prefrontal_terminal",
+            "address": "council/prefrontal_terminal/state",
+            "local_input": "Agent role agent via director: verify agent role binds court authority to an NSQ live operation",
+            "local_state": "priority_nonnegative",
+            "local_interpretation": "terminal launch-path operational priority",
+            "local_output": "verify_terminal_launch_path",
+            "translation_interface": "nsq.universal.translation.v1",
+            "pressure": 620,
+            "feedback_path": "council/prefrontal_terminal/feedback",
+            "classification": "derived_state"
+          }
+        ],
+        "aggregate_pressure": 2440,
+        "dominant_organ_id": "anterior_action",
+        "dominant_pressure": 640,
+        "minority_organ_ids": [
+          "insular_bus",
+          "limbic_speech",
+          "prefrontal_terminal"
+        ],
+        "disagreement_present": false,
+        "conflict_preserved": false,
+        "forced_consensus": false,
+        "numerical_pressure_is_biological_emotion": false,
+        "classification": "derived_state"
+      },
+      "tokenizer_bridge": {
+        "schema": "braxon.nsq.tokenizer_bridge.v1",
+        "band_id": "braxon_native",
+        "model_id": "Braxon",
+        "tokenizer_path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "provenance": "committed_braxon_native_tokenizer",
+        "native_representation_retained": true,
+        "deterministic_mapping": true,
+        "forward_translation": true,
+        "reverse_translation": true,
+        "shared_semantic_addressing": true,
+        "collective_state_contribution_ready": true,
+        "no_resident_runtime": true,
+        "projections": [
+          {
+            "lexical": "A",
+            "native_id": 35,
+            "universal_id": 12638153115695167520,
+            "nsq_address": "nsq.address.token/af63bd4c8601b820"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "d",
+            "native_id": 70,
+            "universal_id": 12638153115695167555,
+            "nsq_address": "nsq.address.token/af63bd4c8601b843"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "c",
+            "native_id": 69,
+            "universal_id": 12638153115695167554,
+            "nsq_address": "nsq.address.token/af63bd4c8601b842"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": ":",
+            "native_id": 28,
+            "universal_id": 12638153115695167513,
+            "nsq_address": "nsq.address.token/af63bd4c8601b819"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "f",
+            "native_id": 72,
+            "universal_id": 12638153115695167557,
+            "nsq_address": "nsq.address.token/af63bd4c8601b845"
+          },
+          {
+            "lexical": "y",
+            "native_id": 91,
+            "universal_id": 12638153115695167576,
+            "nsq_address": "nsq.address.token/af63bd4c8601b858"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "g",
+            "native_id": 73,
+            "universal_id": 12638153115695167558,
+            "nsq_address": "nsq.address.token/af63bd4c8601b846"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "b",
+            "native_id": 68,
+            "universal_id": 12638153115695167553,
+            "nsq_address": "nsq.address.token/af63bd4c8601b841"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": "d",
+            "native_id": 70,
+            "universal_id": 12638153115695167555,
+            "nsq_address": "nsq.address.token/af63bd4c8601b843"
+          },
+          {
+            "lexical": "s",
+            "native_id": 85,
+            "universal_id": 12638153115695167570,
+            "nsq_address": "nsq.address.token/af63bd4c8601b852"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "c",
+            "native_id": 69,
+            "universal_id": 12638153115695167554,
+            "nsq_address": "nsq.address.token/af63bd4c8601b842"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "u",
+            "native_id": 87,
+            "universal_id": 12638153115695167572,
+            "nsq_address": "nsq.address.token/af63bd4c8601b854"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "u",
+            "native_id": 87,
+            "universal_id": 12638153115695167572,
+            "nsq_address": "nsq.address.token/af63bd4c8601b854"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "h",
+            "native_id": 74,
+            "universal_id": 12638153115695167559,
+            "nsq_address": "nsq.address.token/af63bd4c8601b847"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "y",
+            "native_id": 91,
+            "universal_id": 12638153115695167576,
+            "nsq_address": "nsq.address.token/af63bd4c8601b858"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "N",
+            "native_id": 48,
+            "universal_id": 12638153115695167533,
+            "nsq_address": "nsq.address.token/af63bd4c8601b82d"
+          },
+          {
+            "lexical": "S",
+            "native_id": 53,
+            "universal_id": 12638153115695167538,
+            "nsq_address": "nsq.address.token/af63bd4c8601b832"
+          },
+          {
+            "lexical": "Q",
+            "native_id": 51,
+            "universal_id": 12638153115695167536,
+            "nsq_address": "nsq.address.token/af63bd4c8601b830"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "l",
+            "native_id": 78,
+            "universal_id": 12638153115695167563,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84b"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "v",
+            "native_id": 88,
+            "universal_id": 12638153115695167573,
+            "nsq_address": "nsq.address.token/af63bd4c8601b855"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": " ",
+            "native_id": 2,
+            "universal_id": 12638153115695167487,
+            "nsq_address": "nsq.address.token/af63bd4c8601b7ff"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "p",
+            "native_id": 82,
+            "universal_id": 12638153115695167567,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84f"
+          },
+          {
+            "lexical": "e",
+            "native_id": 71,
+            "universal_id": 12638153115695167556,
+            "nsq_address": "nsq.address.token/af63bd4c8601b844"
+          },
+          {
+            "lexical": "r",
+            "native_id": 84,
+            "universal_id": 12638153115695167569,
+            "nsq_address": "nsq.address.token/af63bd4c8601b851"
+          },
+          {
+            "lexical": "a",
+            "native_id": 67,
+            "universal_id": 12638153115695167552,
+            "nsq_address": "nsq.address.token/af63bd4c8601b840"
+          },
+          {
+            "lexical": "t",
+            "native_id": 86,
+            "universal_id": 12638153115695167571,
+            "nsq_address": "nsq.address.token/af63bd4c8601b853"
+          },
+          {
+            "lexical": "i",
+            "native_id": 75,
+            "universal_id": 12638153115695167560,
+            "nsq_address": "nsq.address.token/af63bd4c8601b848"
+          },
+          {
+            "lexical": "o",
+            "native_id": 81,
+            "universal_id": 12638153115695167566,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84e"
+          },
+          {
+            "lexical": "n",
+            "native_id": 80,
+            "universal_id": 12638153115695167565,
+            "nsq_address": "nsq.address.token/af63bd4c8601b84d"
+          }
+        ],
+        "unresolved_tokens": [],
+        "collision_count": 0
+      },
+      "pressure_candidates": [
+        {
+          "pole": "prefrontal_terminal",
+          "intent": "verify_terminal_launch_path",
+          "interpretation": "terminal launch-path operational priority",
+          "priority_score": 0.62,
+          "coherence_score": 0.94,
+          "actionability_score": 0.98,
+          "selected": false,
+          "nsq_lever_position": 405000,
+          "classification": "derived_state"
+        },
+        {
+          "pole": "limbic_speech",
+          "intent": "present_derived_bus_state",
+          "interpretation": "user-presentation boundary priority",
+          "priority_score": 0.58,
+          "coherence_score": 0.92,
+          "actionability_score": 0.88,
+          "selected": false,
+          "nsq_lever_position": 395000,
+          "classification": "derived_state"
+        },
+        {
+          "pole": "insular_bus",
+          "intent": "verify_operator_bus_measurement",
+          "interpretation": "operator-bus measurement priority",
+          "priority_score": 0.6,
+          "coherence_score": 0.9,
+          "actionability_score": 0.93,
+          "selected": false,
+          "nsq_lever_position": 400000,
+          "classification": "derived_state"
+        },
+        {
+          "pole": "anterior_action",
+          "intent": "prepare_operator_next_steps",
+          "interpretation": "operator next-step priority",
+          "priority_score": 0.64,
+          "coherence_score": 0.87,
+          "actionability_score": 0.96,
+          "selected": true,
+          "nsq_lever_position": 410000,
+          "classification": "derived_state"
+        }
+      ],
+      "terminal_plan": [
+        "Braxon wake",
+        "Braxon closure verify",
+        "Braxon apps verify",
+        "Braxon runtime registry",
+        "selected_derived_intent=prepare_operator_next_steps"
+      ],
+      "terminal_plan_classification": "user_presentation",
+      "council_ten_wake_attempted": true,
+      "council_ten_wake_passed": true,
+      "stamp": "braxon.stamp.wake_council_ten.v1",
+      "address_projection": "nurabit_21x33_base8_zero",
+      "switch_shape": [
+        2,
+        500000,
+        2,
+        500000,
+        2,
+        500000,
+        2,
+        500000
+      ],
+      "lever_states_zero_inclusive": 500000,
+      "bit_unit_states_zero_inclusive": "62500000000000000000000",
+      "model_pressure_control_plane_active": true,
+      "model_weight_execution_claimed": false,
+      "native_runtime_completion_claimed": false,
+      "status": "bus_measurement_complete"
+    }
+  },
+  "completed": true,
+  "state_path": "/home/ubuntu/Braxon/state/reflex/role_operations/agent-5c0acbe2ca8325f2.json"
+}

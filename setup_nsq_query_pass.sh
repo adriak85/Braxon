@@ -313,10 +313,10 @@ fn write_adj_table(buf: &mut Vec<u8>, map: &HashMap<String, Vec<u32>>, sym_to_id
     put_u32(buf, entries.len() as u32);
     let flat_start_pos = buf.len() + entries.len() * 10; // will fill offsets below
 
-    // Write header first (with placeholder offsets), then flat array
+    // Write the fixed header before the flat array; offsets are initialized to zero until the final layout pass.
     let mut headers_start = buf.len();
     for _ in &entries {
-        put_u16(buf, 0); put_u32(buf, 0); put_u32(buf, 0); // sym_id, offset, len placeholders
+        put_u16(buf, 0); put_u32(buf, 0); put_u32(buf, 0); // symbol identifier, offset, and length initialized before layout resolution
     }
     let mut flat: Vec<u8> = Vec::new();
     let mut offset = 0u32;

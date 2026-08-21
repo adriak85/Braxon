@@ -23,8 +23,8 @@
     "audio": "not applicable unless a corpus represents audio semantics"
   },
   "compaction_metrics": {
-    "manifested_compact_artifact_count": 14,
-    "manifested_compact_bytes": 737836,
+    "manifested_compact_artifact_count": 18,
+    "manifested_compact_bytes": 920100,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -68,8 +68,8 @@
     {
       "id": "native_language_contracts",
       "path": "config/nsq/nsq_native_language_contracts.json",
-      "bytes": 3766,
-      "sha256": "d645c1aab4ca51c83428625e0f447ca5fe261fdbf1acc619558452a1215f724f",
+      "bytes": 4992,
+      "sha256": "92d3c92c32824f779bd3cd9f2337c891afa539394015b080f9cfdb8f1ac4eb09",
       "semantic_surface": ["native language contract boundaries", "ingress and egress constraints", "on-demand execution semantics"],
       "provenance": "committed Braxon NSQ contract registry",
       "reproduction": "Reflexor verification confirms required native language contract registry presence",
@@ -101,9 +101,9 @@
     {
       "id": "feature_execution_registry",
       "path": "config/nsq/feature_execution_registry.json",
-      "bytes": 9675,
-      "sha256": "92eff531e3827a05ea402bcb222e9fc968a82de2b6c6004458c0cbf342722d37",
-      "semantic_surface": ["Kinetic Reflexor feature selection", "required local artifacts", "on-demand execution contracts", "explicit canonical versus deprecated feature classification", "functional watermark file-operation authority"],
+      "bytes": 11627,
+      "sha256": "22beac46290c5c866b668cbb8e1f5a74c1b4f3eb2fa7c5069129829270d39117",
+      "semantic_surface": ["Kinetic Reflexor feature selection", "required local artifacts", "on-demand execution contracts", "court-bound assistant designer agent worker and personal operations", "explicit canonical versus deprecated feature classification", "functional watermark file-operation authority"],
       "provenance": "committed Braxon NSQ feature registry",
       "reproduction": "root CLI routes only canonical active declared capabilities through nsq-reflexor when required artifacts are present; deprecated historical features name a canonical successor and are not routable",
       "integration": "crates/nsq-reflexor/src/lib.rs; src/main.rs; tools/toolchain/audit_canonicality.mjs",
@@ -112,12 +112,23 @@
     {
       "id": "canonical_surface_registry",
       "path": "config/nsq/canonical_surface_registry.json",
-      "bytes": 6677,
-      "sha256": "ec52f5e03e0c44d798e6d3bac9c1c11d572916d6e5e3a251f694bd9d97b33ad3",
-      "semantic_surface": ["canonical Council Ten Citadel seed donor route", "deprecated and archival surface classification", "canonical successor mapping", "removed donor-index purpose declarations"],
+      "bytes": 9333,
+      "sha256": "9db0342a5d35a1b505353e680af1ee0048b4d193ce2aa3220ac57524a1d6c153",
+      "semantic_surface": ["canonical Council Ten Citadel seed donor route", "canonical court-bound assistant designer agent worker and personal role route", "deprecated and archival surface classification", "canonical successor mapping", "removed donor-index purpose declarations"],
       "provenance": "committed first-party NSQ canonicality authority",
       "reproduction": "tools/toolchain/audit_canonicality.mjs recursively checks the feature registry and tracked repository surfaces against this classification contract",
       "integration": "config/nsq/feature_execution_registry.json; crates/nsq-reflexor/src/lib.rs; tools/toolchain/audit_canonicality.mjs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "court_bound_role_operation_contract",
+      "path": "config/nsq/role_operation_contract.json",
+      "bytes": 3004,
+      "sha256": "f00e3e42cda3a316304544ec9f81d4c910dfc706258e08a60d05a154b0baebc4",
+      "semantic_surface": ["court authority bindings", "assistant designer agent worker and personal mode contracts", "on-demand virtual live-bus and NSQ transaction policy", "post-completion operation-state evidence policy"],
+      "provenance": "committed first-party Braxon court-to-NSQ operation contract",
+      "reproduction": "Braxon role list validates every declared mode and court office; Braxon role execute <mode> <request> performs a bounded live-bus and operator-intelligence NSQ transaction before persisting operation state",
+      "integration": "crates/braxon-core/src/role_operation.rs; src/main.rs; config/braxon_court.json; config/nsq/feature_execution_registry.json",
       "license_class": "first_party_configuration_subject_to_repository_license"
     },
     {
@@ -130,6 +141,39 @@
       "reproduction": "watermark front door tokenizes intent and source identity, commits a KineticReflexor source state, and invokes only an explicitly requested declared AArch64 compiler route",
       "integration": "crates/braxon-core/src/watermarked_file_operation.rs; src/main.rs; config/toolchains/source_built_build_graph.json",
       "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "live_bus_bootstrap_contract",
+      "path": "config/nsq/live_bus_bootstrap_contract.json",
+      "bytes": 2586,
+      "sha256": "2a486eef2699a343f233fabf9e0f7477024172a754d6896812dfbbdc070f8563",
+      "semantic_surface": ["front-door virtual address resolution", "bounded Ghost/Piston circulation", "tokenizer Parameter-Citadel Council Ten seed and ten body descriptors", "release-before-return truth boundary"],
+      "provenance": "committed first-party NSQ live-bus contract",
+      "reproduction": "Braxon boot runs the live bootstrap and emits every virtual window, commit, and release receipt",
+      "integration": "crates/braxon-core/src/live_bus.rs; crates/braxon-core/src/intelligent_operation.rs; src/main.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "full_file_watermark_reflex_contract",
+      "path": "config/nsq/full_file_watermark_reflex_contract.json",
+      "bytes": 2417,
+      "sha256": "fd53009477627a44d71ed2436f68757e4f984ecd968e5d3b574a2760edd99b73",
+      "semantic_surface": ["full executable line-Merkle identity", "functional watermark binding", "semantic Reflexor linkage", "cross-system cascade inventory"],
+      "provenance": "committed first-party repository-wide watermark and linkage contract",
+      "reproduction": "tools/toolchain/audit_full_file_watermark_reflex_links.mjs consumes every retained executable file and reports line Merkle coverage plus route bindings",
+      "integration": "tools/toolchain/audit_all_tracked_files.mjs; tools/toolchain/audit_full_file_watermark_reflex_links.mjs; config/nsq/canonical_surface_registry.json",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "blank_surface_registry",
+      "path": "config/nsq/blank_surface_registry.json",
+      "bytes": 167562,
+      "sha256": "3fdb4f8918775c36440213890ee60ebed93a0446dce2e84a52537b8c0eddf221",
+      "semantic_surface": ["individual non-routable blank upstream historical and derived capture classification", "blank-surface fail-closed provenance policy"],
+      "provenance": "generated deterministically from the complete tracked-tree audit and committed as canonical classification evidence",
+      "reproduction": "tools/toolchain/generate_blank_surface_registry.mjs after tools/toolchain/audit_all_tracked_files.mjs",
+      "integration": "tools/toolchain/audit_all_tracked_files.mjs; tools/toolchain/audit_full_file_watermark_reflex_links.mjs",
+      "license_class": "first_party classification data with upstream provenance retained"
     },
     {
       "id": "bionic_gnu_compatibility_contract",
@@ -145,8 +189,8 @@
     {
       "id": "rust_bootstrap_semantic_chain",
       "path": "config/toolchains/rust_bootstrap_chain.json",
-      "bytes": 5078,
-      "sha256": "b9edb54419b4fb94abaf8cddd760d21b050e5cd4891c7fbd1f0d0b41a2335ab3",
+      "bytes": 5939,
+      "sha256": "c4aa830a715c7b74a415cde363d563b5ed0fc70e2bf9cc69f01311e57d1ac730",
       "semantic_surface": ["Termux bootstrap identity", "stage1 and stage2 promotion", "workspace known-good selection", "edge candidate non-activation"],
       "provenance": "committed Braxon toolchain contract bound to observed and externally described lanes",
       "reproduction": "contained-toolchain verifier validates exact lane identities, promotion order, and retained release blockers",

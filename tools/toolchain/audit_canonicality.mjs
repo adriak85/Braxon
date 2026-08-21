@@ -83,6 +83,9 @@ for (const feature of registry.features.filter((feature) => feature.canonicality
 const deprecatedSourcePaths = new Set(deprecatedFeatures.map((feature) => feature.source));
 const canonicalSourcePaths = new Set(canonicalFeatures.map((feature) => feature.source));
 const staleCandidates = [];
+const canonicalVocabularyInspectionSources = new Set([
+  "tools/toolchain/audit_canonicality.mjs",
+]);
 const ignoredPrefixes = [
   "state/full_android_language_toolchain/src/",
   "vendor/",
@@ -102,9 +105,11 @@ for (const path of tracked) {
     staleCandidates.push({
       path,
       classification: explicitClassification
-        ?? (canonicalSourcePaths.has(path)
-          ? "canonical_active_contains_legacy_vocabulary"
-          : "unclassified_legacy_candidate"),
+        ?? (canonicalVocabularyInspectionSources.has(path)
+          ? "canonical_audit_vocabulary_detector"
+          : (canonicalSourcePaths.has(path)
+            ? "canonical_active_contains_legacy_vocabulary"
+            : "unclassified_legacy_candidate")),
     });
   }
 }

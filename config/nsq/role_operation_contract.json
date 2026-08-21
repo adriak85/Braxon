@@ -1,0 +1,49 @@
+{
+  "schema": "braxon.nsq.role_operation_contract.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "owner": "Michael David Norris",
+  "execution_policy": "A role operation must first resolve its declared mode and court offices, then bootstrap the bounded virtual-addressed Piston/Ghost live bus, execute one tokenized operator-intelligence NSQ transaction, commit its operation state, and release every lease. No role starts a resident runtime, bypasses a declared feature contract, or claims an unavailable model weight or target boundary.",
+  "state_policy": "Operation state is written only after the real NSQ transaction completes. A state record is evidence of a completed operation, never a substitute for one.",
+  "modes": [
+    {
+      "id": "assistant",
+      "label": "Assistant",
+      "lead_office": "oracle",
+      "supporting_offices": ["bard", "detective"],
+      "authorized_features": ["feature:operator.intelligence", "feature:live_bus.bootstrap"],
+      "purpose": "Interpret a user request, preserve visible uncertainty, and execute a bounded NSQ semantic action."
+    },
+    {
+      "id": "designer",
+      "label": "Designer",
+      "lead_office": "conjurer",
+      "supporting_offices": ["composer", "queen"],
+      "authorized_features": ["feature:operator.intelligence", "feature:parameter.citadel", "feature:watermark.file_operation", "feature:live_bus.bootstrap"],
+      "purpose": "Transform a stated construction goal into a bounded, verifiable NSQ design action without asserting target materialization that has not occurred."
+    },
+    {
+      "id": "agent",
+      "label": "Agent",
+      "lead_office": "director",
+      "supporting_offices": ["archon_gates", "detective", "guard"],
+      "authorized_features": ["feature:operator.intelligence", "feature:repository.operation", "feature:toolchain.contained_verify", "feature:live_bus.bootstrap"],
+      "purpose": "Route an on-demand task through declared ingress, verification, and execution lanes while preserving the physical boundary truth."
+    },
+    {
+      "id": "worker",
+      "label": "Worker",
+      "lead_office": "rook",
+      "supporting_offices": ["manager", "healer", "keeper"],
+      "authorized_features": ["feature:operator.intelligence", "feature:watermark.file_operation", "feature:toolchain.contained_verify", "feature:benchmark.native_equivalence", "feature:benchmark.native_recovery", "feature:live_bus.bootstrap"],
+      "purpose": "Perform one bounded local NSQ task with explicit verification, recovery, and released-address proof."
+    },
+    {
+      "id": "personal",
+      "label": "Personal",
+      "lead_office": "queen",
+      "supporting_offices": ["keeper", "keymaster"],
+      "authorized_features": ["feature:operator.intelligence", "feature:live_bus.bootstrap", "feature:toolchain.contained_verify"],
+      "purpose": "Execute a locally initiated owner-directed operation with validation, custody awareness, and no authority transfer beyond the configured owner."
+    }
+  ]
+}

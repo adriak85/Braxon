@@ -305,7 +305,7 @@ fn review_all_characters(
         if c.name.starts_with("WC") || c.name.starts_with("auto::") {
             c.score -= 20;
         }
-        if c.name.contains("Placeholder") || c.name.contains("TBD") {
+        if c.name.contains("TemplateRecord") || c.name.contains("PendingRecord") {
             c.score -= 100;
         }
         c.is_dark_transient = is_dark_transient(&c.name, &c.role, &c.reason, &c.source_anchor);

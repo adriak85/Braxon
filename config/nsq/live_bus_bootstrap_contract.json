@@ -1,0 +1,72 @@
+{
+  "schema": "braxon.nsq.live_bus_bootstrap_contract.v1",
+  "canonicality": "canonical_active",
+  "authority": "NSQ kinetic semantic reflexor",
+  "capability": "feature:live_bus.bootstrap",
+  "implementation": "crates/braxon-core/src/live_bus.rs",
+  "target_environment": "aarch64-linux-android",
+  "execution_model": "per-front-door bounded Piston/Ghost circulation; no background daemon and no learned-model resident runtime",
+  "virtual_address_domain": {
+    "name": "nsq_virtual_extension_outside_ordinary_cpu_addresses",
+    "base": "VIRTUAL_EXTENSION_BASE",
+    "limit": "VIRTUAL_EXTENSION_LIMIT",
+    "page_bytes": "DEFAULT_PAGE_BYTES",
+    "resolution_scheme": "nsq-virtual://<hex-address>",
+    "ordinary_cpu_storage_claimed": false
+  },
+  "required_windows": [
+    {
+      "logical_id": "tokenizer.native",
+      "kind": "tokenizer",
+      "source": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "purpose": "verified native-to-universal token address mapping"
+    },
+    {
+      "logical_id": "parameter.citadel",
+      "kind": "parameter",
+      "source": "crates/braxon-core/src/parameter_citadel.rs",
+      "purpose": "Purkinje-designated parameter integration receipt"
+    },
+    {
+      "logical_id": "council-ten.seed",
+      "kind": "parameter",
+      "source": "config/nsq/braxon_council_ten_stack.json",
+      "purpose": "authoritative Council Ten seed identity"
+    },
+    {
+      "logical_id": "council-ten.seed-body.*",
+      "kind": "parameter",
+      "source": "crates/nsq-citadel/src/materialization.rs",
+      "purpose": "one virtual descriptor for each of the ten materialized Council Ten bodies",
+      "required_count": 10
+    }
+  ],
+  "required_lifecycle": [
+    "map_wire_region",
+    "resolve_virtual_address",
+    "acquire_piston_lease",
+    "fire_into_bounded_cpu_aperture",
+    "commit",
+    "release_back_to_virtual_wire"
+  ],
+  "front_doors": [
+    "Braxon status",
+    "Braxon wake",
+    "Braxon bus <intent>"
+  ],
+  "fail_closed_conditions": [
+    "tokenizer_bridge_unresolved",
+    "parameter_citadel_invariant_failure",
+    "Council Ten seed materialization failure",
+    "missing_virtual_window",
+    "virtual_address_resolution_failure",
+    "piston_lease_acquisition_or_release_failure",
+    "active_cpu_bytes_nonzero_after_release"
+  ],
+  "truth_boundary": {
+    "model_weight_execution_claimed": false,
+    "resident_runtime_constructed": false,
+    "all_windows_must_release_before_front_door_returns": true,
+    "large_payloads_without_independent_materialization_receipts_must_not_be_claimed_present": true
+  }
+}

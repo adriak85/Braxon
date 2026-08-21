@@ -710,6 +710,78 @@ pub fn bootstrap(root: impl AsRef<Path>, profile: &str) -> Result<serde_json::Va
     }))
 }
 
+/// Routes one active feature declaration through the Reflexor registry without a
+/// repository-wide source inventory. This is the bounded interactive path used
+/// by status, wake, and bus; explicit `verify` retains full discovery coverage.
+pub fn route_declared_feature_operation(
+    root: impl AsRef<Path>,
+    capability_id: &str,
+) -> Result<ReflexOperation, String> {
+    let root = resolve_workspace_root(root)?;
+    let capability = feature_execution_capabilities(&root)?
+        .into_iter()
+        .find(|capability| capability.id == capability_id)
+        .ok_or_else(|| {
+            format!("unknown or deprecated declared reflex capability: {capability_id}")
+        })?;
+    if !capability.executable || capability.state != CapabilityState::OperableOnDemand {
+        return Err(format!(
+            "declared reflex capability is not locally ready: {capability_id}; {}",
+            capability.notes.join("; ")
+        ));
+    }
+    let receipt = root
+        .join("state/reflex/operations")
+        .join(format!("{}.json", sanitize_id(capability_id)));
+    let operation = ReflexOperation {
+        schema: "braxon.nsq.kinetic_reflex.operation.v1".to_string(),
+        capability,
+        routed: true,
+        execution_mode: "bounded_declared_feature_registry".to_string(),
+        command: None,
+        receipt_path: receipt.display().to_string(),
+        status: "routed_after_declared_feature_and_artifact_validation".to_string(),
+    };
+    write_json(&receipt, &operation)?;
+    Ok(operation)
+}
+
+/// Routes one declared native-language contract without whole-workspace discovery.
+/// This preserves the NSQ language authority checks for interactive language ingress.
+pub fn route_declared_language_operation(
+    root: impl AsRef<Path>,
+    language_id: &str,
+) -> Result<ReflexOperation, String> {
+    let root = resolve_workspace_root(root)?;
+    let registry_path = root.join("config/nsq/nsq_native_language_contracts.json");
+    let registry = read_native_language_registry(&registry_path)?;
+    let capability_id = format!("language:{language_id}");
+    let capability = native_language_capabilities(&registry, &registry_path)
+        .into_iter()
+        .find(|capability| capability.id == capability_id)
+        .ok_or_else(|| format!("unknown declared native language: {language_id}"))?;
+    if !capability.complete_nsq_ingestion || capability.resident_runtime {
+        return Err(format!(
+            "declared native language is not NSQ-ready: {language_id}; {}",
+            capability.notes.join("; ")
+        ));
+    }
+    let receipt = root
+        .join("state/reflex/operations")
+        .join(format!("{}.json", sanitize_id(&capability_id)));
+    let operation = ReflexOperation {
+        schema: "braxon.nsq.kinetic_reflex.operation.v1".to_string(),
+        capability,
+        routed: true,
+        execution_mode: "bounded_declared_native_language_contract".to_string(),
+        command: None,
+        receipt_path: receipt.display().to_string(),
+        status: "routed_after_declared_native_language_contract_validation".to_string(),
+    };
+    write_json(&receipt, &operation)?;
+    Ok(operation)
+}
+
 pub fn route_operation(
     root: impl AsRef<Path>,
     capability_id: &str,

@@ -14,11 +14,11 @@
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 77902,
+      "bytes": 84268,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "7c0de0d9f24386988b2eba01aa700f830b3a44838d09f1d824760e29c042dfe2",
+      "sha256": "3285ec46ff260013efcc33bf5a3cd8f180947e6ffd1a1c4fb64f4a797a25b897",
       "trigger_role": "root_binary_handover_code"
     },
     {
@@ -174,11 +174,11 @@
       "trigger_role": "citadel699_environment_bus"
     },
     {
-      "bytes": 3299,
+      "bytes": 5055,
       "link_required": true,
       "path": "tests/braxon_runtime_surface.rs",
       "present": true,
-      "sha256": "e9ec644a2c2c356fb14fcfda0dda596035eef2f8fd948cd350e3da5c07c5cda8",
+      "sha256": "848bd1d99b554d2473fb9657b5ea3cc14903f24b8f976af05234a1e90e83fc95",
       "trigger_role": "handover_proof_test_surface"
     },
     {
