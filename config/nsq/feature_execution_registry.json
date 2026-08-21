@@ -84,6 +84,74 @@
       "answer_contract": "tensor_materialization_result_or_missing_artifact_action",
       "on_demand": true,
       "resident_runtime": false
+    },
+    {
+      "id": "feature:repository.operation",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/repository_operation.rs",
+      "required_artifacts": [
+        "config/toolchains/extended_repository_integration_manifest.json",
+        "scripts/braxon_repository_lane.sh"
+      ],
+      "state_contract": "pinned_repository_source_edge_to_license_aware_android_materialization_boundary",
+      "action_contract": "intercept_repository_operation_then_evaluate_revision_security_and_legal_readiness",
+      "answer_contract": "repository_operation_receipt_or_exact_fail_closed_next_action",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:language.parameter_parse",
+      "nsq_dialect": "intent",
+      "source": "crates/braxon-core/src/language_operation.rs",
+      "required_artifacts": [
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/nsq/complete_semantic_extraction_contract.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "crates/braxon-core/src/parameter_citadel.rs"
+      ],
+      "state_contract": "declared_language_to_tokenized_bounded_parameter_semantic_parse",
+      "action_contract": "intercept_language_request_then_resolve_only_declared_local_materialization_tools",
+      "answer_contract": "parameter_parse_receipt_or_exact_target_materialization_guidance",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:toolchain.contained_verify",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/contained_toolchain.rs",
+      "required_artifacts": [
+        "config/toolchains/contained_semantic_toolchain_inventory.json",
+        "config/toolchains/rust_bootstrap_chain.json",
+        "config/toolchains/source_built_build_graph.json",
+        "config/toolchains/source_availability_manifest.json",
+        "config/nsq/language_functional_ingestion_matrix.json",
+        ".cargo/config.toml",
+        "vendor"
+      ],
+      "state_contract": "contained_source_language_machine_boundary_truth",
+      "action_contract": "verify_local_toolchain_materialization_and_release_blockers",
+      "answer_contract": "contained_toolchain_verification_or_exact_missing_artifact_guidance",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
+      "id": "feature:toolchain.bionic_compatibility",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/bionic_compatibility.rs",
+      "required_artifacts": [
+        "config/nsq/bionic_gnu_compatibility_matrix.json",
+        "docs/NSQ_BIONIC_GNU_COMPATIBILITY.md",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+        "scripts/toolchains/unified_android_libc_contract_overlay.sh"
+      ],
+      "state_contract": "universal_tokenized_aarch64_bionic_compatibility_contract",
+      "action_contract": "verify_staged_overlay_source_tokenization_and_target_proof_state",
+      "answer_contract": "bionic_compatibility_verification_or_exact_target_materialization_guidance",
+      "on_demand": true,
+      "resident_runtime": false
     }
   ]
 }

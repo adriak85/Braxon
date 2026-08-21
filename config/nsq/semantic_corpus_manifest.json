@@ -1,0 +1,175 @@
+{
+  "schema": "braxon.nsq.semantic_corpus_manifest.v1",
+  "authority": "BRAXON_NSQ_SEMANTIC_CORPUS",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "identity_algorithm": "sha256_raw_file_bytes",
+  "policy": {
+    "compact_semantic_artifacts_are_not_a_claim_that_upstream_compiler_or_runtime_payloads_are_embedded": true,
+    "all_entries_must_have_a_existing_local_path_before_the_manifest_is_valid": true,
+    "hash_or_size_change_requires_manifest_refresh": true,
+    "normal_runtime_requires_no_network": true,
+    "resident_massive_runtime_required_for_ordinary_semantic_lookup": false,
+    "model_weight_execution_claimed": false
+  },
+  "dialect_roles": {
+    "numeric": "counts, byte sizes, ABI values, and explicitly recorded syscall numbers",
+    "alphabetic": "canonical lexical identities and character-token sequences",
+    "intent": "requested language, toolchain, or compatibility capability",
+    "symbolic": "contracts, signatures, registry identities, and semantic relations",
+    "stamp": "SHA-256 identity, source path, version, and provenance",
+    "control": "deterministic extraction, verification, materialization, and release transitions",
+    "graphics": "not applicable unless a corpus represents graphics semantics",
+    "audio": "not applicable unless a corpus represents audio semantics"
+  },
+  "compaction_metrics": {
+    "manifested_compact_artifact_count": 12,
+    "manifested_compact_bytes": 724075,
+    "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
+    "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
+    "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
+    "build_time_impact": "not measured; full Android source rebuild remains capacity-gated",
+    "validation_coverage": "hash, path, NSQ route, tokenizer translation, offline workspace test, and closure gate evidence are required"
+  },
+  "corpora": [
+    {
+      "id": "braxon_native_character_tokenizer",
+      "path": "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+      "bytes": 428886,
+      "sha256": "f422453396e69c9cff3ac643b148654848df0dc145c62a492f130f41e9566d32",
+      "semantic_surface": ["canonical character vocabulary", "native token identity", "universal NSQ translation", "reverse mapping"],
+      "provenance": "committed Braxon native tokenizer artifact",
+      "reproduction": "TokenizerBridge validates active-band character encoding, universal addressing, and reverse translation",
+      "integration": "crates/braxon-core/src/tokenizer_bridge.rs",
+      "license_class": "first_party_artifact_subject_to_repository_license"
+    },
+    {
+      "id": "tokenizer_band_registry",
+      "path": "config/nsq/tokenizer_band_registry.json",
+      "bytes": 4297,
+      "sha256": "c71a6863977e891f0f96c2bbd062ebe6dae0f7c5322091c110d05bf80be94221",
+      "semantic_surface": ["active tokenizer bands", "representation and provenance", "universal address namespace"],
+      "provenance": "committed Braxon NSQ configuration",
+      "reproduction": "TokenizerBridge::from_root resolves the active braxon_native band",
+      "integration": "crates/braxon-core/src/tokenizer_bridge.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "runtime_language_registry",
+      "path": "config/nsq/nsq_runtime_language_registry.json",
+      "bytes": 65057,
+      "sha256": "f61893ea095680c09e633d14e72c8305eb4d1ac401d25008283ef1901fc1b9ee",
+      "semantic_surface": ["declared language and runtime surfaces", "NSQ authority", "semantic capability identities"],
+      "provenance": "committed Braxon NSQ registry",
+      "reproduction": "nsq-reflexor discovery and contained-toolchain verification compare declared surface identities",
+      "integration": "crates/nsq-reflexor/src/lib.rs; crates/braxon-core/src/contained_toolchain.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "native_language_contracts",
+      "path": "config/nsq/nsq_native_language_contracts.json",
+      "bytes": 3766,
+      "sha256": "d645c1aab4ca51c83428625e0f447ca5fe261fdbf1acc619558452a1215f724f",
+      "semantic_surface": ["native language contract boundaries", "ingress and egress constraints", "on-demand execution semantics"],
+      "provenance": "committed Braxon NSQ contract registry",
+      "reproduction": "Reflexor verification confirms required native language contract registry presence",
+      "integration": "crates/nsq-reflexor/src/lib.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "functional_language_ingestion_matrix",
+      "path": "config/nsq/language_functional_ingestion_matrix.json",
+      "bytes": 191879,
+      "sha256": "54a99d8a7322f0419943c5ca4fb08cca08e36364f89d0bde71aa56d7932443db",
+      "semantic_surface": ["132 declared language/toolchain functional routes", "semantic operation state", "local tool requirements", "target materialization policy"],
+      "provenance": "committed Braxon NSQ functional ingestion matrix",
+      "reproduction": "contained-toolchain verifier requires one-to-one equality with runtime language registry identities",
+      "integration": "crates/braxon-core/src/contained_toolchain.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "language_artifact_index",
+      "path": "config/nsq/language_artifact_index.json",
+      "bytes": 1627,
+      "sha256": "a25cfd5d92fe8aa2009b3909b586678ae82b973198c22469f8e29601b6bc1490",
+      "semantic_surface": ["symbol-to-artifact traversal", "documentation and token linkage", "released runtime lookup"],
+      "provenance": "committed Braxon NSQ language artifact index",
+      "reproduction": "language artifact context tests traverse the committed index without resident state",
+      "integration": "crates/braxon-core/src/language_artifact_context.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "feature_execution_registry",
+      "path": "config/nsq/feature_execution_registry.json",
+      "bytes": 5360,
+      "sha256": "c5fe8fb1ec3a76f6f2e36f11c5ceab40f2422e083115d498aed97fc94d6003a1",
+      "semantic_surface": ["Kinetic Reflexor feature selection", "required local artifacts", "on-demand execution contracts"],
+      "provenance": "committed Braxon NSQ feature registry",
+      "reproduction": "root CLI routes declared capabilities through nsq-reflexor only when required artifacts are present",
+      "integration": "crates/nsq-reflexor/src/lib.rs; src/main.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "bionic_gnu_compatibility_contract",
+      "path": "config/nsq/bionic_gnu_compatibility_matrix.json",
+      "bytes": 6681,
+      "sha256": "a581bc605bcab0979c3c87eefda0e98b03bf4a2cea4645dcb8c77bc8f7250e90",
+      "semantic_surface": ["13 Android Bionic compatibility interfaces", "AArch64 syscall or Bionic bridge", "universal lexical identities", "all NSQ dialect roles"],
+      "provenance": "first-party compatibility matrix for public operating-system interfaces; not a glibc replacement claim",
+      "reproduction": "BionicCompatibility verifier tokenizes every declared universal lexical identity and checks local source/documentation presence",
+      "integration": "crates/braxon-core/src/bionic_compatibility.rs",
+      "license_class": "first_party_matrix_with_upstream_interface_provenance_retained"
+    },
+    {
+      "id": "rust_bootstrap_semantic_chain",
+      "path": "config/toolchains/rust_bootstrap_chain.json",
+      "bytes": 5078,
+      "sha256": "b9edb54419b4fb94abaf8cddd760d21b050e5cd4891c7fbd1f0d0b41a2335ab3",
+      "semantic_surface": ["Termux bootstrap identity", "stage1 and stage2 promotion", "workspace known-good selection", "edge candidate non-activation"],
+      "provenance": "committed Braxon toolchain contract bound to observed and externally described lanes",
+      "reproduction": "contained-toolchain verifier validates exact lane identities, promotion order, and retained release blockers",
+      "integration": "crates/braxon-core/src/contained_toolchain.rs",
+      "license_class": "first_party_configuration_with_upstream_Rust_provenance_retained"
+    },
+    {
+      "id": "source_forge_lock",
+      "path": "state/full_android_language_toolchain/source_forge/locks/manifest.sha256",
+      "bytes": 1073,
+      "sha256": "e431806d325b6b4b1a1d1103c8c67722dcf5d8a4d38e7ca2c4f460bbfe02884c",
+      "semantic_surface": ["source-forge content lock", "deterministic source ingress identity"],
+      "provenance": "checked-in source-forge lock",
+      "reproduction": "verify against retained lock values before using source-forge semantic material",
+      "integration": "state/full_android_language_toolchain/source_forge",
+      "license_class": "lock metadata; underlying sources retain their own notices"
+    },
+    {
+      "id": "guile_nsq_logic_lock",
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/locks/manifest.sha256",
+      "bytes": 1573,
+      "sha256": "f007de39078291344c35e5b81b813e0c8b989d5a49b2724ec3c2d3ecc4006fd6",
+      "semantic_surface": ["Guile/Scheme NSQ logic corpus lock", "apropos/man-documentation lane identity"],
+      "provenance": "checked-in Guile NSQ source-forge lock",
+      "reproduction": "verify the retained lock before materializing the source-forge Guile lane",
+      "integration": "state/full_android_language_toolchain/source_forge/guile_nsq_logic",
+      "license_class": "lock metadata; underlying source notices are retained"
+    },
+    {
+      "id": "android_libc_overlay_source",
+      "path": "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+      "bytes": 8798,
+      "sha256": "a2931458bcc572facac4d94d632879d6199c7419bcc04199e19aa53b040b08d4",
+      "semantic_surface": ["Bionic compatibility implementation source", "AArch64 syscall bridges", "Android ABI boundary"],
+      "provenance": "first-party implementation source with public interface provenance retained in the Bionic matrix",
+      "reproduction": "scripts/toolchains/unified_android_libc_contract_overlay.sh stages, builds, inspects, and probes it on the target",
+      "integration": "scripts/toolchains/unified_android_libc_contract_overlay.sh; crates/braxon-core/src/bionic_compatibility.rs",
+      "license_class": "first_party_source_subject_to_repository_license; public interfaces are not privately appropriated"
+    }
+  ],
+  "verification": {
+    "hash_command": "sha256sum <each corpus path>",
+    "structural_command": "cargo run --locked --offline -- toolchain verify",
+    "tokenizer_command": "cargo test -p Braxon-core tokenizer_bridge::tests::active_native_tokenizer_encodes_translates_addresses_and_round_trips_without_residency --locked --offline",
+    "bionic_command": "cargo run --locked --offline -- toolchain bionic",
+    "closure_command": "scripts/braxon_closure_gate.sh <writable-output-directory>"
+  }
+}

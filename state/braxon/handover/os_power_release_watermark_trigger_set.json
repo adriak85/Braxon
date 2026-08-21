@@ -14,11 +14,11 @@
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 54827,
+      "bytes": 72162,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "fc30051102968f9998e74b4b849d1e17f121993030a71a248f9c61fac0ace107",
+      "sha256": "fd4e0e0074b373a39161f6d4d81389576a59a056faffb3f8b70bf74a57fb102c",
       "trigger_role": "root_binary_handover_code"
     },
     {
@@ -86,11 +86,11 @@
       "trigger_role": "semantic_recall_index_source"
     },
     {
-      "bytes": 11074,
+      "bytes": 11845,
       "link_required": true,
       "path": "crates/nsq-hot/src/lib.rs",
       "present": true,
-      "sha256": "30ee31aca09000bc636b4f52174d89447829f34a6ec99acd3f3c11eb46e3ba06",
+      "sha256": "183c28582a7a4bdf4c7d49388164ec08f3081df8cdb3a2a0f5bcb06d22a84dfb",
       "trigger_role": "parameter_address_window_code"
     },
     {
@@ -174,11 +174,11 @@
       "trigger_role": "citadel699_environment_bus"
     },
     {
-      "bytes": 3283,
+      "bytes": 3299,
       "link_required": true,
       "path": "tests/braxon_runtime_surface.rs",
       "present": true,
-      "sha256": "e4fe5a77a6fd84ca3eaad2cc4cb2366d0f35e9009b4ca8dde484b4a1f70496d9",
+      "sha256": "e9ec644a2c2c356fb14fcfda0dda596035eef2f8fd948cd350e3da5c07c5cda8",
       "trigger_role": "handover_proof_test_surface"
     },
     {

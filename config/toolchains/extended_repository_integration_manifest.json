@@ -1,0 +1,133 @@
+{
+  "schema": "braxon.toolchain.extended_repository_integration.v1",
+  "authority": "BRAXON_EXTENDED_REPOSITORY_INTEGRATION",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "policy": {
+    "normal_runtime_requires_no_network": true,
+    "source_edge_acquisition_requires_authenticated_access_for_private_repositories": true,
+    "source_edge_acquisition_is_not_redistribution": true,
+    "source_may_not_be_copied_into_public_braxon_release_without_license_authorization": true,
+    "restricted_source_may_not_be_reverse_engineered_or_translated": true,
+    "clean_room_replacement_requires_independent_authorship_and_public_behavioral_specification": true,
+    "all_repository_calls_must_pass_through_declared_nsq_capability": true,
+    "model_weight_execution_claimed": false
+  },
+  "repository_total": 9,
+  "repositories": [
+    {
+      "id": "braxon",
+      "source_url": "https://github.com/adriak85/Braxon",
+      "revision": "3733e48e71ac171c8983aef72abb95962a06cb9d",
+      "visibility": "public",
+      "license_class": "repository_primary_license_governs_checked_in_first_party_material",
+      "android_disposition": "primary_operational_repository",
+      "nsq_capability": "repository:braxon",
+      "materialization": "checked_out_primary_worktree",
+      "validation": "cargo test --workspace --locked --offline; scripts/braxon_closure_gate.sh",
+      "clean_room_replacement": "not_applicable"
+    },
+    {
+      "id": "0",
+      "source_url": "https://github.com/adriak85/0",
+      "revision": "07a64aa98e3e3f8d8a7c6f10ace7764880e26e68",
+      "visibility": "private",
+      "license_class": "source_available_but_no_license_evidence",
+      "android_disposition": "restricted_source_edge_pending_rights_confirmation",
+      "nsq_capability": "repository:0",
+      "materialization": "authenticated_shallow_checkout_only; no public embedding",
+      "validation": "parse and build only after copyright holder and redistribution rights are recorded",
+      "clean_room_replacement": "possible only from independently specified public behavior; no source translation"
+    },
+    {
+      "id": "dax_full",
+      "source_url": "https://github.com/adriak85/DAX-FULL",
+      "revision": "c6a10388a4359aebfe3be1ea73688a5014078441",
+      "visibility": "private",
+      "license_class": "source_available_but_no_license_evidence",
+      "android_disposition": "restricted_source_edge_capacity_gated",
+      "nsq_capability": "repository:dax_full",
+      "materialization": "authenticated_shallow_checkout; source and existing build outputs must be separated before Android build",
+      "validation": "license/right confirmation, source-only clean build, and AArch64 Android target probe required",
+      "clean_room_replacement": "possible only from independently specified public behavior; no source translation"
+    },
+    {
+      "id": "dax",
+      "source_url": "https://github.com/adriak85/Dax",
+      "revision": "6ef895e97454e59a3ecd1ce8ad5192f50c052176",
+      "visibility": "private",
+      "license_class": "source_available_but_restricted_private_license_owned_by_Adriak",
+      "android_disposition": "private_source_edge_only_pending_authorization_from_named_rightsholder",
+      "nsq_capability": "repository:dax",
+      "materialization": "do_not_copy_or_publicly_redistribute; inspect/build only with recorded authorization",
+      "validation": "license authorization, removal of generated build outputs, locked Cargo source graph, and Android target probe required",
+      "clean_room_replacement": "only an independent implementation of a lawfully available public interface; no copying, translating, or derived source"
+    },
+    {
+      "id": "dax_autonomous_system",
+      "source_url": "https://github.com/adriak85/Dax-Autonomous-System",
+      "revision": "9e2b0cc3d7b1f402fd22403369915fa35bab6c0e",
+      "visibility": "private",
+      "license_class": "private_proprietary_source_named_to_Michael_David_Norris",
+      "android_disposition": "private_controlled_source_edge_with_security_quarantine",
+      "nsq_capability": "repository:dax_autonomous_system",
+      "materialization": "private checkout only; credentials, generated outputs, and undeclared external services must be removed or quarantined before build",
+      "validation": "secret scan, dependency lock, source-only build plan, NSQ interception route, and Android target probe required",
+      "clean_room_replacement": "not required for owner-controlled independently authored material; third-party components retain separate licenses"
+    },
+    {
+      "id": "papi",
+      "source_url": "https://github.com/adriak85/PAPI",
+      "revision": "926d2eb7fb5fe0369225bda44c716f8b4e4f6ca2",
+      "visibility": "private",
+      "license_class": "not_redistributable_proprietary_trade_secret_named_to_PAPI_LABS",
+      "android_disposition": "hard_legal_boundary",
+      "nsq_capability": "repository:papi",
+      "materialization": "no use, copy, modification, reverse engineering, or source translation without written authorization from P.A.P.I. Labs",
+      "validation": "only provenance and boundary validation are permitted until authorization exists",
+      "clean_room_replacement": "possible only from independently created public specifications and legal review; no examination-derived implementation"
+    },
+    {
+      "id": "f1ux_service",
+      "source_url": "https://github.com/adriak85/f1ux-service",
+      "revision": "4eac6b3e5b694bcbe022242298efc9be77b91b20",
+      "visibility": "private",
+      "license_class": "source_available_but_no_license_evidence",
+      "android_disposition": "restricted_source_edge_pending_rights_confirmation",
+      "nsq_capability": "repository:f1ux_service",
+      "materialization": "authenticated source edge; no public embedding; Python service must be made local/offline before activation",
+      "validation": "rights confirmation, dependency lock, local Python probe, and NSQ intercept route required",
+      "clean_room_replacement": "possible only from independently specified public behavior"
+    },
+    {
+      "id": "fastapi_llm_bot",
+      "source_url": "https://github.com/adriak85/fastapi-llm-bot",
+      "revision": "07541c8a75183bba7333643f9cf84fe6d807fdf9",
+      "visibility": "private",
+      "license_class": "source_available_but_no_license_evidence",
+      "android_disposition": "restricted_source_edge_with_external_service_boundary",
+      "nsq_capability": "repository:fastapi_llm_bot",
+      "materialization": "authenticated source edge; no public embedding; no activation while it requires undeclared external model/API service",
+      "validation": "rights confirmation, dependency lock, local-only endpoint probe, and NSQ intercept route required",
+      "clean_room_replacement": "local HTTP adapter can be independently authored, but no source translation or external-service claim"
+    },
+    {
+      "id": "termux_packages",
+      "source_url": "https://github.com/adriak85/termux-packages",
+      "revision": "24a20bcd2d717a160d711f2e8487e7f565096507",
+      "visibility": "public",
+      "license_class": "apache_2_build_infrastructure_and_per_package_license_for_recipes_and_patches",
+      "android_disposition": "licensed_recipe_source_edge",
+      "nsq_capability": "repository:termux_packages",
+      "materialization": "materialize only individual needed recipes with their corresponding upstream notices and licenses; do not treat this repository as a blanket package payload",
+      "validation": "per-package license check, pinned recipe revision, Android build receipt, and NSQ intercept route required",
+      "clean_room_replacement": "Braxon wrappers may be original; Termux package recipes and patches retain their stated licenses"
+    }
+  ],
+  "verification": {
+    "checkout_command": "scripts/braxon_repository_lane.sh acquire <repository-id>",
+    "status_command": "scripts/braxon_repository_lane.sh status",
+    "nsq_route_command": "cargo run --locked --offline -- repository <repository-id> status",
+    "security_rule": "never execute or read credential files discovered in source edges"
+  }
+}

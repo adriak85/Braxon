@@ -1,0 +1,57 @@
+{
+  "schema": "braxon.termux.nsq_intercept_policy.v1",
+  "authority": "BRAXON_TERMUX_NSQ_INTERCEPT",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "policy": {
+    "nsq_intercept_required_for_declared_tool_invocation": true,
+    "calibrated_overlay_precedes_default_termux_path": true,
+    "direct_termux_prefix_overwrite_allowed": false,
+    "silent_pkg_upgrade_allowed": false,
+    "silent_pkg_install_allowed": false,
+    "hidden_network_download_allowed": false,
+    "unverified_tool_substitution_allowed": false,
+    "self_healing_may_restore_only_verified_local_artifacts": true,
+    "self_healing_may_not_replace_bionic_or_termux_base_components": true,
+    "absolute_termux_paths_are_authoritative_contracts": false
+  },
+  "calibration": {
+    "overlay_root": "state/termux_nsq_intercept",
+    "wrapper_bin": "state/termux_nsq_intercept/bin",
+    "manifest": "state/termux_nsq_intercept/calibration_manifest.json",
+    "hash_manifest": "state/termux_nsq_intercept/SHA256SUMS",
+    "profile_fragment": "state/termux_nsq_intercept/profile.d/braxon-nsq-intercept.sh",
+    "guard_command": "scripts/braxon_termux_calibrate.sh",
+    "required_target_abi": "aarch64-linux-android",
+    "minimum_android_api": 24,
+    "require_16k_page_probe_when_reported": true
+  },
+  "intercepted_tools": [
+    {"name":"rustc","language":"rust","real_tool_source":"calibrated discovery receipt"},
+    {"name":"cargo","language":"rust","real_tool_source":"calibrated discovery receipt"},
+    {"name":"clang","language":"c","real_tool_source":"calibrated discovery receipt"},
+    {"name":"clang++","language":"cpp","real_tool_source":"calibrated discovery receipt"},
+    {"name":"ld.lld","language":"elf","real_tool_source":"calibrated discovery receipt"},
+    {"name":"llvm-ar","language":"archive","real_tool_source":"calibrated discovery receipt"},
+    {"name":"llvm-nm","language":"elf","real_tool_source":"calibrated discovery receipt"},
+    {"name":"llvm-objdump","language":"aarch64_asm","real_tool_source":"calibrated discovery receipt"},
+    {"name":"llvm-readelf","language":"elf","real_tool_source":"calibrated discovery receipt"},
+    {"name":"llvm-strip","language":"elf","real_tool_source":"calibrated discovery receipt"},
+    {"name":"python3","language":"python","real_tool_source":"calibrated discovery receipt"},
+    {"name":"guile","language":"guile","real_tool_source":"calibrated discovery receipt"},
+    {"name":"zig","language":"zig","real_tool_source":"calibrated discovery receipt"}
+  ],
+  "pkg_guard": {
+    "wrapper_name": "pkg",
+    "allowed_read_only_subcommands": ["search", "show", "files", "list-installed"],
+    "blocked_mutating_subcommands_without_explicit_override": ["install", "reinstall", "upgrade", "uninstall", "remove", "autoremove"],
+    "override_environment_variable": "BRAXON_ALLOW_CALIBRATED_PKG_MUTATION=1",
+    "override_requires": ["current calibration hash verification", "explicit user action", "post-mutation recalibration"]
+  },
+  "recovery": {
+    "detection": ["hash mismatch", "missing wrapper", "missing real tool", "target ABI mismatch", "page-size requirement violation"],
+    "automatic_action": "restore wrapper scripts and profile fragment only from the repository calibration generator after hash validation",
+    "manual_action": "rebuild or reinstall the declared source lane only after capacity preflight and explicit operator approval",
+    "forbidden_action": "automatic package-manager mutation or replacement of the Termux base installation"
+  }
+}

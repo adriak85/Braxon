@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
+const contracts = [
+  'config/toolchains/contained_semantic_toolchain_inventory.json',
+  'config/toolchains/source_availability_manifest.json',
+  'config/toolchains/rust_bootstrap_chain.json',
+  'config/toolchains/termux_android_aarch64_capacity_profile.json',
+  'config/toolchains/termux_nsq_intercept_policy.json',
+  'config/toolchains/source_built_build_graph.json',
+  'config/toolchains/extended_repository_integration_manifest.json',
+  'config/toolchains/license_report.json',
+  'config/toolchains/gap_report.json',
+  'config/nsq/feature_execution_registry.json',
+  'config/nsq/language_functional_ingestion_matrix.json',
+  'config/nsq/complete_semantic_extraction_contract.json',
+  'config/nsq/semantic_corpus_manifest.json',
+  'config/nsq/bionic_gnu_compatibility_matrix.json',
+];
+
+function readJson(relative) {
+  const absolute = path.join(root, relative);
+  if (!fs.existsSync(absolute)) throw new Error(`missing contract: ${relative}`);
+  return JSON.parse(fs.readFileSync(absolute, 'utf8'));
+}
+
+const parsed = new Map(contracts.map((relative) => [relative, readJson(relative)]));
+const language = parsed.get('config/nsq/language_functional_ingestion_matrix.json');
+const feature = parsed.get('config/nsq/feature_execution_registry.json');
+const repository = parsed.get('config/toolchains/extended_repository_integration_manifest.json');
+const graph = parsed.get('config/toolchains/source_built_build_graph.json');
+const semantic = parsed.get('config/nsq/semantic_corpus_manifest.json');
+const extraction = parsed.get('config/nsq/complete_semantic_extraction_contract.json');
+
+if (language.language_total !== language.languages.length) throw new Error('language matrix total mismatch');
+if (repository.repository_total !== repository.repositories.length) throw new Error('repository manifest total mismatch');
+if (!feature.features.some((item) => item.id === 'feature:language.parameter_parse')) throw new Error('language intercept feature missing');
+if (!feature.features.some((item) => item.id === 'feature:repository.operation')) throw new Error('repository intercept feature missing');
+if (!feature.features.some((item) => item.id === 'feature:toolchain.bionic_compatibility')) throw new Error('Bionic feature missing');
+if (!graph.nodes.some((item) => item.id === 'complete_language_semantic_proofs')) throw new Error('semantic proof build-graph node missing');
+if (!graph.nodes.some((item) => item.id === 'termux_nsq_calibration_and_recovery')) throw new Error('Termux calibration build-graph node missing');
+if (semantic.corpora.length !== semantic.compaction_metrics.manifested_compact_artifact_count) throw new Error('semantic corpus count mismatch');
+if (extraction.required_semantic_surfaces.length < 17) throw new Error('complete semantic surface contract is incomplete');
+for (const item of repository.repositories) {
+  if (item.nsq_capability !== `repository:${item.id}`) throw new Error(`noncanonical repository capability: ${item.id}`);
+}
+console.log(JSON.stringify({
+  schema: 'braxon.toolchain.contract_validation.v1',
+  valid: true,
+  language_total: language.language_total,
+  repository_total: repository.repository_total,
+  semantic_surface_total: extraction.required_semantic_surfaces.length,
+  compact_corpus_total: semantic.corpora.length,
+}, null, 2));

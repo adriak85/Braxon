@@ -88,31 +88,58 @@ fn seed_from_path(path: &Path) -> Option<AuthoritySeed> {
         path: path.to_path_buf(),
         byte_len: bytes.len() as u64,
         blake3: hash_hex(&bytes),
-        carries_nsq_runtime: contains_any(&text, &[
-            "nsq", "court", "substrate", "runtime", "bare_metal", "braxon",
-        ]),
-        carries_boot_task: contains_any(&text, &[
-            "lawful_bare_metal_boot_task",
-            "open_and_operate_parameter_address_windows",
-            "parameter_range_total",
-            "parameter_range_is_address_space",
-            "do_not_flat_load_parameters",
-        ]),
-        carries_intent_language: contains_any(&text, &[
-            "intent", "gradient", "motive", "agency", "truth", "force",
-            "scope", "time", "relation", "form", "grid",
-        ]),
-        carries_stamp_wake: contains_any(&text, &[
-            "stamp", "wake", "hydrate", "framework", "symbol",
-        ]),
-        carries_model_roster: contains_any(&text, &[
-            "maverick", "qwen", "deepseek", "devstral", "council",
-            "sensory", "vision", "audio", "emotion", "model",
-        ]),
-        carries_reconstruction_law: contains_any(&text, &[
-            "reconstruct", "minimal", "seed", "watermark", "address window",
-            "address_window", "not flat", "non_flat",
-        ]),
+        carries_nsq_runtime: contains_any(
+            &text,
+            &[
+                "nsq",
+                "court",
+                "substrate",
+                "runtime",
+                "bare_metal",
+                "braxon",
+            ],
+        ),
+        carries_boot_task: contains_any(
+            &text,
+            &[
+                "lawful_bare_metal_boot_task",
+                "open_and_operate_parameter_address_windows",
+                "parameter_range_total",
+                "parameter_range_is_address_space",
+                "do_not_flat_load_parameters",
+            ],
+        ),
+        carries_intent_language: contains_any(
+            &text,
+            &[
+                "intent", "gradient", "motive", "agency", "truth", "force", "scope", "time",
+                "relation", "form", "grid",
+            ],
+        ),
+        carries_stamp_wake: contains_any(
+            &text,
+            &["stamp", "wake", "hydrate", "framework", "symbol"],
+        ),
+        carries_model_roster: contains_any(
+            &text,
+            &[
+                "maverick", "qwen", "deepseek", "devstral", "council", "sensory", "vision",
+                "audio", "emotion", "model",
+            ],
+        ),
+        carries_reconstruction_law: contains_any(
+            &text,
+            &[
+                "reconstruct",
+                "minimal",
+                "seed",
+                "watermark",
+                "address window",
+                "address_window",
+                "not flat",
+                "non_flat",
+            ],
+        ),
     })
 }
 
@@ -141,7 +168,11 @@ fn discover_authority_seeds(root: &Path) -> Vec<AuthoritySeed> {
         .iter()
         .filter_map(|rel| {
             let p = root.join(rel);
-            if p.exists() { seed_from_path(&p) } else { None }
+            if p.exists() {
+                seed_from_path(&p)
+            } else {
+                None
+            }
         })
         .collect()
 }
@@ -179,7 +210,10 @@ fn parse_roles_from_global_tag(root: &Path) -> Vec<String> {
     let mut roles = Vec::new();
 
     for role in known {
-        if text.to_ascii_lowercase().contains(&role.to_ascii_lowercase()) {
+        if text
+            .to_ascii_lowercase()
+            .contains(&role.to_ascii_lowercase())
+        {
             roles.push(role.to_string());
         }
     }
@@ -223,7 +257,12 @@ fn hydrate_grid(seed_chain: &str, lane_index: usize, role: &str) -> Vec<Hydrated
             HydratedGridDimension {
                 name: dim.to_string(),
                 lever_position,
-                symbol: format!("NSQ_{}_L{:02}_{}", dim.to_ascii_uppercase(), lane_index, &digest[..12]),
+                symbol: format!(
+                    "NSQ_{}_L{:02}_{}",
+                    dim.to_ascii_uppercase(),
+                    lane_index,
+                    &digest[..12]
+                ),
                 digest,
             }
         })
@@ -276,7 +315,10 @@ pub fn erect_insert_deep_hydrate_hot(root: impl AsRef<Path>) -> NsqHotState {
         let grid = hydrate_grid(&chain, lane_index, role);
         let wake_material = format!("{chain}:{lane_index}:{role}:wake");
         let wake_digest = hash_hex(wake_material.as_bytes());
-        let handle_material = format!("{chain}:{lane_index}:{role}:hot:{}:{}", window.address_start, window.address_end_exclusive);
+        let handle_material = format!(
+            "{chain}:{lane_index}:{role}:hot:{}:{}",
+            window.address_start, window.address_end_exclusive
+        );
         let handle_digest = hash_hex(handle_material.as_bytes());
 
         lanes.push(HotCourtLane {
@@ -291,11 +333,16 @@ pub fn erect_insert_deep_hydrate_hot(root: impl AsRef<Path>) -> NsqHotState {
     }
 
     let inserted_lane_count = lanes.iter().filter(|l| l.window.inserted).count();
-    let hydrated_lane_count = lanes.iter().filter(|l| l.deep_hydrated && l.grid.len() == GRID_DIMENSION_COUNT).count();
-    let wake_framework_count = lanes.iter().filter(|l| !l.wake_framework_id.is_empty()).count();
+    let hydrated_lane_count = lanes
+        .iter()
+        .filter(|l| l.deep_hydrated && l.grid.len() == GRID_DIMENSION_COUNT)
+        .count();
+    let wake_framework_count = lanes
+        .iter()
+        .filter(|l| !l.wake_framework_id.is_empty())
+        .count();
 
-    let hot_hot_hot =
-        runtime_ok
+    let hot_hot_hot = runtime_ok
         && boot_ok
         && intent_ok
         && stamp_ok
@@ -305,7 +352,9 @@ pub fn erect_insert_deep_hydrate_hot(root: impl AsRef<Path>) -> NsqHotState {
         && inserted_lane_count == HOT_LANE_COUNT
         && hydrated_lane_count == HOT_LANE_COUNT
         && wake_framework_count == HOT_LANE_COUNT
-        && lanes.iter().all(|l| l.window.non_flat_load && l.window.reconstruct_local);
+        && lanes
+            .iter()
+            .all(|l| l.window.non_flat_load && l.window.reconstruct_local);
 
     NsqHotState {
         workspace_root: root,
@@ -316,7 +365,10 @@ pub fn erect_insert_deep_hydrate_hot(root: impl AsRef<Path>) -> NsqHotState {
         parameter_address_space_total: PARAMETER_ADDRESS_SPACE_TOTAL,
         positions_per_lever: ZERO_INCLUSIVE_POSITIONS_PER_LEVER,
         levers_per_unit: LEVERS_PER_UNIT,
-        states_per_unit_decimal: decimal_pow_u128(ZERO_INCLUSIVE_POSITIONS_PER_LEVER as u128, LEVERS_PER_UNIT as u32),
+        states_per_unit_decimal: decimal_pow_u128(
+            ZERO_INCLUSIVE_POSITIONS_PER_LEVER as u128,
+            LEVERS_PER_UNIT as u32,
+        ),
         lanes,
         inserted_lane_count,
         hydrated_lane_count,
@@ -325,7 +377,10 @@ pub fn erect_insert_deep_hydrate_hot(root: impl AsRef<Path>) -> NsqHotState {
     }
 }
 
-pub fn write_hot_state(root: impl AsRef<Path>, out: impl AsRef<Path>) -> std::io::Result<NsqHotState> {
+pub fn write_hot_state(
+    root: impl AsRef<Path>,
+    out: impl AsRef<Path>,
+) -> std::io::Result<NsqHotState> {
     let state = erect_insert_deep_hydrate_hot(root);
     if let Some(parent) = out.as_ref().parent() {
         fs::create_dir_all(parent)?;

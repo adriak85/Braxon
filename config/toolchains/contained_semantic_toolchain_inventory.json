@@ -1,0 +1,152 @@
+{
+  "schema": "braxon.contained_semantic_toolchain_inventory.v1",
+  "authority": "BRAXON_CONTAINED_SEMANTIC_TOOLCHAIN",
+  "owner": "Michael David Norris",
+  "repository_commit_baseline": "3733e48e71ac171c8983aef72abb95962a06cb9d",
+  "normal_runtime_policy": {
+    "network_required": false,
+    "external_api_required": false,
+    "cloud_inference_required": false,
+    "resident_toolchain_required": false,
+    "source_edge_refresh_is_normal_runtime": false,
+    "cargo_registry_source": "vendor"
+  },
+  "rust_bootstrap_chain": "config/toolchains/rust_bootstrap_chain.json",
+  "toolchain_lanes": [
+    {
+      "id": "workspace_known_good_rust",
+      "role": "known_good_build",
+      "channel": "1.97.0",
+      "components": ["rustc", "cargo", "rustdoc", "rustfmt", "clippy"],
+      "target": "workspace host",
+      "source": "rust-toolchain.toml",
+      "license": "Apache-2.0 OR MIT",
+      "artifact_status": "environment_bootstrap_required_not_embedded",
+      "normal_runtime_required": false,
+      "semantic_translation": "rust language contract and source semantics ingested by NSQ Reflexor",
+      "release_status": "external build prerequisite; not a normal runtime dependency"
+    },
+    {
+      "id": "historical_phone_nightly_1_96",
+      "role": "historical_evidence_only",
+      "channel": "1.96.0-nightly",
+      "components": ["rustc", "cargo"],
+      "target": "aarch64-linux-android",
+      "source": "config/toolchains/current_phone_custom_rust_nightly.json and state/full_android_language_toolchain/runs/20260507_194057/reports/bootstrap_authority.txt",
+      "license": "Apache-2.0 OR MIT",
+      "artifact_status": "historically_observed_external_phone_toolchain",
+      "normal_runtime_required": false,
+      "semantic_translation": "Rust toolchain intent represented as NSQ native language and build surface",
+      "release_status": "historical evidence only; never selected as the current default solely from this record"
+    },
+    {
+      "id": "bootstrap_termux_rust_1_97_1",
+      "role": "stage0_bootstrap",
+      "channel": "1.97.1",
+      "components": ["rustc", "cargo"],
+      "target": "aarch64-linux-android",
+      "source": "config/toolchains/termux_android_aarch64_capacity_profile.json",
+      "license": "Apache-2.0 OR MIT",
+      "artifact_status": "observed_target_environment_toolchain_not_embedded",
+      "normal_runtime_required": false,
+      "semantic_translation": "Rust bootstrap intent is represented as an NSQ native language and build surface",
+      "release_status": "usable only after capacity and executable-path preflight; authoritative stage sequence is config/toolchains/rust_bootstrap_chain.json"
+    },
+    {
+      "id": "rust_stage_promotion_lane",
+      "role": "source_rebuild_stage1_stage2",
+      "components": ["stage1 rustc", "stage1 cargo", "stage2 rustc", "stage2 cargo", "AArch64 Android compile/link/run equivalence"],
+      "target": "aarch64-linux-android",
+      "source": "config/toolchains/rust_bootstrap_chain.json",
+      "license": "Apache-2.0 OR MIT",
+      "artifact_status": "blocked_pending_verified_pinned_rust_source_and_target_capacity_preflight",
+      "normal_runtime_required": false,
+      "semantic_translation": "Source-stage promotion is a bounded NSQ control operation with explicit source, target, and proof requirements",
+      "release_status": "stage1 and stage2 are not claimed built until their target receipts and equivalence evidence exist"
+    },
+    {
+      "id": "rust_edge_nightly_2026_08_20",
+      "role": "edge_nightly_candidate",
+      "channel_date": "2026-08-20",
+      "rust_version": "1.100.0-nightly (f7d782a3b 2026-08-19)",
+      "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
+      "components": ["rustc", "cargo", "rust-std", "rustfmt", "clippy", "rust-analyzer semantics"],
+      "target": "aarch64-linux-android",
+      "rust_std_url": "https://static.rust-lang.org/dist/2026-08-20/rust-std-nightly-aarch64-linux-android.tar.xz",
+      "rust_std_sha256": "7609453cd6789b70a314edf32fa70ad9e36b74146be258e725de71df455211c0",
+      "license": "Apache-2.0 OR MIT",
+      "artifact_status": "upstream_descriptor_contained_artifact_not_embedded",
+      "normal_runtime_required": false,
+      "semantic_translation": "candidate lane; activation requires local artifact materialization and equivalence evidence",
+      "release_status": "explicit source-edge acquisition exception; source is not inferred from the f964de49 gitlink and the lane is never selected by default before local target equivalence verification"
+    },
+    {
+      "id": "llvm_clang_lld_source_lane",
+      "role": "compiler_source_lane",
+      "components": ["LLVM", "Clang", "LLD", "compiler-rt", "libunwind", "libc++", "libc++abi", "llvm-ar", "llvm-nm", "llvm-objdump", "llvm-readelf", "llvm-strip"],
+      "target": "AArch64;ARM;X86 with aarch64-linux-android default",
+      "source": "scripts/toolchains/rebuild_full_android_language_toolchain.sh",
+      "license": "Apache-2.0 with LLVM Exception",
+      "artifact_status": "reproducible_source_lane_descriptor_contained_compiler_payload_not_embedded",
+      "normal_runtime_required": false,
+      "semantic_translation": "compiler, linker, object, and target contracts represented in NSQ toolchain inventory",
+      "release_status": "source-edge build dependency until pinned source snapshots and built payload are materialized locally"
+    },
+    {
+      "id": "cpython_android_source_lane",
+      "role": "runtime_source_lane",
+      "components": ["CPython", "libffi", "OpenSSL", "SQLite", "Android libc extension overlay"],
+      "target": "aarch64-linux-android24",
+      "source": "scripts/toolchains/resolve_cpython_android_native_contracts_full.sh",
+      "license": "Python-2.0 and component-specific upstream notices",
+      "artifact_status": "reproducible_source_lane_descriptor_contained_runtime_payload_not_embedded",
+      "normal_runtime_required": false,
+      "semantic_translation": "Python ingress and Android ABI extension contracts routed through NSQ",
+      "release_status": "native extension code is first-party only where provenance verification confirms independent authorship"
+    },
+    {
+      "id": "vendored_rust_dependencies",
+      "role": "contained_build_source",
+      "components": ["Cargo.lock package graph"],
+      "target": "workspace host",
+      "source": "vendor and .cargo/config.toml",
+      "license": "per-vendored-package Cargo.toml and license file",
+      "artifact_status": "contained",
+      "normal_runtime_required": false,
+      "semantic_translation": "third-party library provenance is retained; no ownership reclassification is allowed",
+      "release_status": "included subject to verified upstream notices and licenses"
+    }
+  ],
+  "machine_boundary": {
+    "semantic_layers": [
+      "source", "tokens", "grammar", "AST", "typed_semantics", "IR", "SSA", "optimization", "machine_IR", "instruction_selection", "assembly", "object", "relocation", "linking", "ABI", "binary", "loader", "runtime", "observable_machine_behavior"
+    ],
+    "architectures": ["aarch64", "arm", "x86", "x86_64", "riscv64", "wasm"],
+    "object_formats": ["ELF", "Mach-O", "PE/COFF", "WebAssembly", "archive"],
+    "active_proofs": [
+      "tools/nsq_semantic_benchmark/nsq_semantic_runtime_bench.py",
+      "tools/nsq_semantic_benchmark/nsq_task_to_aarch64_asm.py",
+      "scripts/toolchains/resolve_cpython_android_native_contracts_full.sh",
+      "crates/nsq-core/src/native_runtime.rs"
+    ],
+    "coverage_status": "compact semantic contracts and AArch64 execution proof exist; complete external compiler corpus is explicitly not claimed embedded"
+  },
+  "language_authority": {
+    "runtime_registry": "config/nsq/nsq_runtime_language_registry.json",
+    "native_contract_registry": "config/nsq/native_language_contract_registry.json",
+    "status": "all declared language surfaces are ingested as NSQ authority; compiler/runtime payload materialization is tracked independently"
+  },
+  "licensing_policy": {
+    "owner": "Michael David Norris",
+    "first_party_private_license": "LicenseRef-Braxon-Private",
+    "upstream_material_must_retain_notice": true,
+    "private_eligibility_requires": ["independent_authorship", "no copied upstream implementation", "provenance_record", "compatible redistribution status"],
+    "private_eligibility_never_inferred_from": ["semantic_translation", "renaming", "format_conversion", "abstraction_wrapping"]
+  },
+  "release_blocker_policy": {
+    "normal_runtime_hidden_downloads_allowed": false,
+    "toolchain_payload_not_embedded_must_be_explicit": true,
+    "missing_model_or_compiler_artifacts_must_report_exact_connection": true,
+    "external_source_edge_materialization_must_record_checksum_and_license": true
+  }
+}

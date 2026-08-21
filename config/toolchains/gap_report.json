@@ -1,0 +1,83 @@
+{
+  "schema": "braxon.toolchain.gap_report.v1",
+  "authority": "BRAXON_RELEASE_GAP_REPORT",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "release_complete": false,
+  "nonnegotiable_completion_rule": "A language or repository is not complete until its source/license boundary, complete semantic extraction report, local materialization receipt, AArch64 Android target probe, integrity recovery receipt, and NSQ interception route all pass.",
+  "gaps": [
+    {
+      "id": "rust_pinned_source_unmaterialized",
+      "scope": "Rust f964de49 source-stage lane",
+      "status": "blocking",
+      "exact_action": "Materialize the pinned Rust source via the explicit source-edge lane, record SHA-256 and license evidence, then run stage1 and stage2 source builds on the target."
+    },
+    {
+      "id": "cpython_pinned_source_unmaterialized",
+      "scope": "CPython 49918f5b source-stage lane",
+      "status": "blocking",
+      "exact_action": "Materialize the pinned CPython source via the explicit source-edge lane, record SHA-256 and license evidence, then run the Android source build and native extension probe."
+    },
+    {
+      "id": "edge_nightly_matching_source_unmaterialized",
+      "scope": "Rust 1.100.0-nightly f7d782a3b",
+      "status": "blocking_for_edge_activation",
+      "exact_action": "Acquire a matching pinned source archive with checksum and license record, build it only after stage2 succeeds, and prove Android equivalence before activation."
+    },
+    {
+      "id": "target_capacity_preflight_not_recorded",
+      "scope": "Moto/Termux executable build filesystem",
+      "status": "blocking_for_source_build",
+      "exact_action": "Run scripts/braxon_reconstruct.sh preflight and provide at least BRAXON_MIN_BUILD_FREE_KIB on an executable non-shared-storage path before starting any full source build."
+    },
+    {
+      "id": "source_built_llvm_target_receipt_missing",
+      "scope": "LLVM/Clang/LLD/compiler-rt/libc++/libunwind",
+      "status": "blocking_for_native_compiler_claim",
+      "exact_action": "Run the approved source build against the retained LLVM content identity and retain C/C++ compile, link, ELF, DWARF, and AArch64 Android target execution receipts."
+    },
+    {
+      "id": "bionic_overlay_target_probe_missing",
+      "scope": "13-interface first-party Bionic compatibility overlay",
+      "status": "blocking_for_overlay_availability_claim",
+      "exact_action": "Run scripts/toolchains/unified_android_libc_contract_overlay.sh on the target and retain header, library, exported-symbol, and target-run proof artifacts."
+    },
+    {
+      "id": "complete_language_semantic_proofs_missing",
+      "scope": "all 132 IDs in config/nsq/language_functional_ingestion_matrix.json",
+      "status": "blocking_for_full_language_completion",
+      "exact_action": "For every applicable language surface, generate content-addressed identity, grammar, AST, type, control/data-flow, IR, diagnostics, ABI, assembly, object, debug, linking, target, materialization, and recovery proofs under state/nsq/semantic_extraction/<language>/; the exact missing files are returned by cargo run --locked --offline -- language <language> <input>."
+    },
+    {
+      "id": "termux_nsq_calibration_not_materialized",
+      "scope": "intercept wrappers, hash manifest, package guard, and recovery overlay",
+      "status": "blocking_for_calibrated_tool_default_claim",
+      "exact_action": "After the source-built tool lanes exist, run scripts/braxon_reconstruct.sh calibrate on native Android AArch64 Termux, source the generated profile fragment, and retain a passing calibration hash verification."
+    },
+    {
+      "id": "extended_repository_authorization_and_target_builds",
+      "scope": "all records in config/toolchains/extended_repository_integration_manifest.json",
+      "status": "blocking_by_repository",
+      "exact_action": "Acquire each pinned source edge without executing it, apply the manifest’s license decision, remove/quarantine credentials, obtain necessary authorization, then create an approved source-only Android build contract and target receipt. PAPI remains legally blocked unless P.A.P.I. Labs gives written authorization."
+    },
+    {
+      "id": "clean_room_replacement_specifications_missing",
+      "scope": "restricted or unlicensed source edges requiring a lawful original replacement",
+      "status": "blocking_for_replacement_claim",
+      "exact_action": "Create independent public-behavior specifications and provenance review before writing any clean-room Android-native replacement; do not derive implementation from restricted source."
+    },
+    {
+      "id": "fresh_clone_target_closure_not_yet_run",
+      "scope": "full source-built target environment",
+      "status": "blocking_for_release",
+      "exact_action": "After all prior gaps close, run scripts/braxon_closure_gate.sh on an isolated writable target checkout and retain a fully passing truth table."
+    }
+  ],
+  "verification": {
+    "toolchain": "cargo run --locked --offline -- toolchain verify",
+    "language": "cargo run --locked --offline -- language <language> <input>",
+    "bionic": "cargo run --locked --offline -- toolchain bionic",
+    "repositories": "scripts/braxon_repository_lane.sh status",
+    "reconstruction": "scripts/braxon_reconstruct.sh status"
+  }
+}

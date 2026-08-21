@@ -449,10 +449,7 @@ mod tests {
             OutputClassification::UserPresentation
         );
         assert!(report.hard_runtime_valid());
-        assert!(report
-            .reply_layer
-            .reply
-            .contains("Derived semantic route"));
+        assert!(report.reply_layer.reply.contains("Derived semantic route"));
         assert!(!report.model_weight_execution_claimed);
         assert!(!report.native_runtime_completion_claimed);
     }

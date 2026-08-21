@@ -18,8 +18,14 @@ fn main() {
     println!("seed_count={}", state.seed_count);
     println!("seed_digest_chain={}", state.seed_digest_chain);
     println!("alphabet_reconstructed={}", state.alphabet_reconstructed);
-    println!("intent_language_reconstructed={}", state.intent_language_reconstructed);
-    println!("parameter_address_space_total={}", state.parameter_address_space_total);
+    println!(
+        "intent_language_reconstructed={}",
+        state.intent_language_reconstructed
+    );
+    println!(
+        "parameter_address_space_total={}",
+        state.parameter_address_space_total
+    );
     println!("positions_per_lever={}", state.positions_per_lever);
     println!("levers_per_unit={}", state.levers_per_unit);
     println!("states_per_unit_decimal={}", state.states_per_unit_decimal);

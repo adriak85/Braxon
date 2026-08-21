@@ -11,10 +11,12 @@ use nsq_reflexor::{
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
     address_integrity_audit, braxon_context_manifest_status,
-    braxon_wake_linked_change_report_from_env, closure_audit, execute_bounded_tensor_inference,
-    execute_canonical_parameter_citadel_cycle, execute_operator_intelligence, full_wake,
-    model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
-    tokenizer_verification, verify_language_artifact_context, BraxonBus, CouncilTen, TargetField,
+    braxon_wake_linked_change_report_from_env, closure_audit, evaluate_repository_operation,
+    execute_bounded_tensor_inference, execute_canonical_parameter_citadel_cycle,
+    execute_operator_intelligence, full_wake, model_execution_truth, run_native_fault_recovery,
+    run_native_fixture_equivalence, tokenizer_verification, verify_bionic_compatibility,
+    verify_complete_semantic_extraction, verify_contained_toolchain,
+    verify_language_artifact_context, BraxonBus, CouncilTen, TargetField,
     OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
 };
 
@@ -57,6 +59,10 @@ enum Command {
         #[arg(required = true, trailing_var_arg = true)]
         input: Vec<String>,
     },
+    /// Inspect a pinned extended-repository lane through its NSQ and legal-materialization contract.
+    Repository {
+        repository: String,
+    },
     Content {
         #[command(subcommand)]
         command: ContentCommand,
@@ -83,6 +89,19 @@ enum Command {
         #[command(subcommand)]
         command: ClosureCommand,
     },
+    /// Verify contained toolchain, source availability, language ingestion, and target materialization contracts.
+    Toolchain {
+        #[command(subcommand)]
+        command: ToolchainCommand,
+    },
+}
+
+#[derive(Subcommand)]
+enum ToolchainCommand {
+    /// Run the on-demand contained toolchain verification report.
+    Verify,
+    /// Verify the universal-tokenized Bionic compatibility overlay and target proof state.
+    Bionic,
 }
 
 #[derive(Subcommand)]
@@ -245,6 +264,7 @@ fn main() {
         Command::Language { language, input } => {
             print_language_operation(language, input.join(" "))
         }
+        Command::Repository { repository } => print_repository_operation(repository),
         Command::Content { command } => print_content(command),
         Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
@@ -256,6 +276,7 @@ fn main() {
         Command::ContextWake => print_context_wake(),
         Command::Wake => print_wake(),
         Command::Closure { command } => print_closure(command),
+        Command::Toolchain { command } => print_toolchain(command),
     }
 }
 
@@ -582,17 +603,50 @@ fn find_root_app(name: &str) -> Option<&'static RootAppSurface> {
 }
 
 fn print_language_operation(language: String, input: String) {
-    match execute_language_intelligent_turn(&language, &input) {
-        Ok((language_route, operation_route, operation)) => print_json(&serde_json::json!({
-            "answer": format!("I interpreted the `{language}` ingress through its NSQ language contract and {}", operation.answer.trim_start_matches("I ")),
-            "action": "declared_language_to_nsq_intelligent_operation",
-            "language_capability": language_route.capability.id,
-            "execution_capability": operation_route.capability.id,
-            "selected_intent": operation.selected_intent,
-            "lease_released": operation.lease_released,
-        })),
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = reflex_route_operation(&root, "feature:language.parameter_parse", false).and_then(
+        |intercept_route| {
+            let normalized = language.trim().to_ascii_lowercase();
+            let language_route =
+                reflex_route_operation(&root, &format!("language:{normalized}"), false)?;
+            verify_complete_semantic_extraction(&root, &normalized, &input).and_then(|operation| {
+                serde_json::to_value(serde_json::json!({
+                    "schema": "braxon.language.nsq_intercept.v1",
+                    "intercept_route": intercept_route,
+                    "language_route": language_route,
+                    "operation": operation,
+                }))
+                .map_err(|error| error.to_string())
+            })
+        },
+    );
+    match result {
+        Ok(report) => print_json(&report),
         Err(error) => {
             eprintln!("language_operation_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn print_repository_operation(repository: String) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = reflex_route_operation(&root, "feature:repository.operation", false).and_then(
+        |intercept_route| {
+            evaluate_repository_operation(&root, repository.trim()).and_then(|operation| {
+                serde_json::to_value(serde_json::json!({
+                    "schema": "braxon.repository.nsq_intercept.v1",
+                    "intercept_route": intercept_route,
+                    "operation": operation,
+                }))
+                .map_err(|error| error.to_string())
+            })
+        },
+    );
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => {
+            eprintln!("repository_operation_error={error}");
             std::process::exit(1);
         }
     }
@@ -818,6 +872,48 @@ fn print_content(command: ContentCommand) {
                 }
             }
         }
+    }
+}
+
+fn print_toolchain(command: ToolchainCommand) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = match command {
+        ToolchainCommand::Verify => {
+            reflex_route_operation(&root, "feature:toolchain.contained_verify", false).and_then(
+                |route| {
+                    verify_contained_toolchain(&root).and_then(|report| {
+                        serde_json::to_value(serde_json::json!({
+                            "schema": "braxon.toolchain.front_door.v1",
+                            "reflexor_route": route,
+                            "verification": report,
+                        }))
+                        .map_err(|error| error.to_string())
+                    })
+                },
+            )
+        }
+        ToolchainCommand::Bionic => {
+            reflex_route_operation(&root, "feature:toolchain.bionic_compatibility", false).and_then(
+                |route| {
+                    verify_bionic_compatibility(&root).and_then(|report| {
+                        serde_json::to_value(serde_json::json!({
+                            "schema": "braxon.toolchain.bionic_front_door.v1",
+                            "reflexor_route": route,
+                            "verification": report,
+                        }))
+                        .map_err(|error| error.to_string())
+                    })
+                },
+            )
+        }
+    };
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => print_json(&serde_json::json!({
+            "schema": "braxon.toolchain.front_door.v1",
+            "status": "verification_unavailable",
+            "exact_connection_guidance": error,
+        })),
     }
 }
 

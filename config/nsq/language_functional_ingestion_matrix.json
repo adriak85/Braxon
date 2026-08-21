@@ -1,0 +1,3883 @@
+{
+  "authority": "BRAXON_FUNCTIONAL_LANGUAGE_INGESTION",
+  "language_total": 132,
+  "languages": [
+    {
+      "family": "android_artifact",
+      "id": "aab",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language aab <input>",
+        "nsq_capability": "language:aab",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "bundle_surface",
+        "required_local_tools": [
+          "bundle_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language aab semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "aarch64_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language aarch64_asm <input>",
+        "nsq_capability": "language:aarch64_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "aarch64_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "AArch64 assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language aarch64_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems_safety",
+      "id": "ada",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ada <input>",
+        "nsq_capability": "language:ada",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_surface",
+        "required_local_tools": [
+          "GNAT"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ada semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_platform",
+      "id": "adb",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language adb <input>",
+        "nsq_capability": "language:adb",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "device_bridge",
+        "required_local_tools": [
+          "device_bridge materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language adb semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_graphics",
+      "id": "agdk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language agdk <input>",
+        "nsq_capability": "language:agdk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "game_dev_kit",
+        "required_local_tools": [
+          "game_dev_kit materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language agdk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "android",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language android <input>",
+        "nsq_capability": "language:android",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language android semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_artifact",
+      "id": "apk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language apk <input>",
+        "nsq_capability": "language:apk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_surface",
+        "required_local_tools": [
+          "package_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language apk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "manual_discovery",
+      "id": "apropos",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language apropos <input>",
+        "nsq_capability": "language:apropos",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "semantic_lookup",
+        "required_local_tools": [
+          "semantic_lookup materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language apropos semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "apt",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language apt <input>",
+        "nsq_capability": "language:apt",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "debian_package_surface",
+        "required_local_tools": [
+          "debian_package_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language apt semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "arm64_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language arm64_asm <input>",
+        "nsq_capability": "language:arm64_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "aarch64_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "AArch64 assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language arm64_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "armv7_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language armv7_asm <input>",
+        "nsq_capability": "language:armv7_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "armv7_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "ARM assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language armv7_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language asm <input>",
+        "nsq_capability": "language:asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "assembly",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language assembly <input>",
+        "nsq_capability": "language:assembly",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language assembly semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "schema",
+      "id": "avro",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language avro <input>",
+        "nsq_capability": "language:avro",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "record_schema",
+        "required_local_tools": [
+          "record_schema materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language avro semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "shell",
+      "id": "bash",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language bash <input>",
+        "nsq_capability": "language:bash",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "command_surface",
+        "required_local_tools": [
+          "POSIX shell"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language bash semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "bazel",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language bazel <input>",
+        "nsq_capability": "language:bazel",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "build_graph",
+        "required_local_tools": [
+          "build_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language bazel semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_runtime",
+      "id": "bevy",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language bevy <input>",
+        "nsq_capability": "language:bevy",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "ecs_render_surface",
+        "required_local_tools": [
+          "ecs_render_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language bevy semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "boot",
+      "id": "bios",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language bios <input>",
+        "nsq_capability": "language:bios",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "firmware_surface",
+        "required_local_tools": [
+          "firmware_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language bios semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "c",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language c <input>",
+        "nsq_capability": "language:c",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "translation_unit",
+        "required_local_tools": [
+          "clang",
+          "lld",
+          "compiler-rt",
+          "bionic headers"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language c semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "c_plus",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language c_plus <input>",
+        "nsq_capability": "language:c_plus",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "legacy_c_plus_surface",
+        "required_local_tools": [
+          "clang++",
+          "lld",
+          "libc++",
+          "libc++abi"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language c_plus semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_build",
+      "id": "cargo",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cargo <input>",
+        "nsq_capability": "language:cargo",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "crate_graph",
+        "required_local_tools": [
+          "crate_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cargo semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_build",
+      "id": "cargo_ndk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cargo_ndk <input>",
+        "nsq_capability": "language:cargo_ndk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "cross_compile_surface",
+        "required_local_tools": [
+          "cross_compile_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cargo_ndk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "cmake",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cmake <input>",
+        "nsq_capability": "language:cmake",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "build_graph",
+        "required_local_tools": [
+          "build_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cmake semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "business_legacy",
+      "id": "cobol",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cobol <input>",
+        "nsq_capability": "language:cobol",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "division_surface",
+        "required_local_tools": [
+          "division_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cobol semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "symbolic",
+      "id": "common_lisp",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language common_lisp <input>",
+        "nsq_capability": "language:common_lisp",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "s_expression",
+        "required_local_tools": [
+          "common lisp runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language common_lisp semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "conda",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language conda <input>",
+        "nsq_capability": "language:conda",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "environment_graph",
+        "required_local_tools": [
+          "environment_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language conda semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "cpp",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cpp <input>",
+        "nsq_capability": "language:cpp",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "translation_unit",
+        "required_local_tools": [
+          "clang++",
+          "lld",
+          "libc++",
+          "libc++abi"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cpp semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "crystal",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language crystal <input>",
+        "nsq_capability": "language:crystal",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "module_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language crystal semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "csharp",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language csharp <input>",
+        "nsq_capability": "language:csharp",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "assembly_surface",
+        "required_local_tools": [
+          "dotnet compiler",
+          "dotnet runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language csharp semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "style",
+      "id": "css",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language css <input>",
+        "nsq_capability": "language:css",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "rule_tree",
+        "required_local_tools": [
+          "rule_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language css semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "compute_api",
+      "id": "cuda",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language cuda <input>",
+        "nsq_capability": "language:cuda",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "compute_kernel_surface",
+        "required_local_tools": [
+          "compute_kernel_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language cuda semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "dart",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language dart <input>",
+        "nsq_capability": "language:dart",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "library_surface",
+        "required_local_tools": [
+          "Dart SDK"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language dart semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "artifact",
+      "id": "db",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language db <input>",
+        "nsq_capability": "language:db",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "database_file_surface",
+        "required_local_tools": [
+          "database_file_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language db semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_api",
+      "id": "directx",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language directx <input>",
+        "nsq_capability": "language:directx",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gpu_api",
+        "required_local_tools": [
+          "gpu_api materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language directx semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "artifact",
+      "id": "dll",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language dll <input>",
+        "nsq_capability": "language:dll",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "dynamic_library_surface",
+        "required_local_tools": [
+          "dynamic_library_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language dll semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "text_editor",
+      "id": "ed",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ed <input>",
+        "nsq_capability": "language:ed",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "line_command_surface",
+        "required_local_tools": [
+          "line_command_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ed semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "ui_runtime",
+      "id": "egui",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language egui <input>",
+        "nsq_capability": "language:egui",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "immediate_ui_surface",
+        "required_local_tools": [
+          "immediate_ui_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language egui semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "artifact",
+      "id": "elf",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language elf <input>",
+        "nsq_capability": "language:elf",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "unix_binary_surface",
+        "required_local_tools": [
+          "unix_binary_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language elf semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "actor_runtime",
+      "id": "elixir",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language elixir <input>",
+        "nsq_capability": "language:elixir",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Elixir compiler",
+          "Erlang runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language elixir semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "actor_runtime",
+      "id": "erlang",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language erlang <input>",
+        "nsq_capability": "language:erlang",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Erlang runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language erlang semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "artifact",
+      "id": "exe",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language exe <input>",
+        "nsq_capability": "language:exe",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "executable_surface",
+        "required_local_tools": [
+          "executable_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language exe semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_platform",
+      "id": "fastboot",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language fastboot <input>",
+        "nsq_capability": "language:fastboot",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "bootloader_bridge",
+        "required_local_tools": [
+          "bootloader_bridge materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language fastboot semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "shell",
+      "id": "fish",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language fish <input>",
+        "nsq_capability": "language:fish",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "command_surface",
+        "required_local_tools": [
+          "command_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language fish semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems_numeric",
+      "id": "fortran",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language fortran <input>",
+        "nsq_capability": "language:fortran",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "program_unit",
+        "required_local_tools": [
+          "flang or gfortran"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language fortran semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "freebsd",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language freebsd <input>",
+        "nsq_capability": "language:freebsd",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language freebsd semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "functional_managed",
+      "id": "fsharp",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language fsharp <input>",
+        "nsq_capability": "language:fsharp",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "dotnet compiler",
+          "dotnet runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language fsharp semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembler_dialect",
+      "id": "gas",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language gas <input>",
+        "nsq_capability": "language:gas",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gas_instruction_surface",
+        "required_local_tools": [
+          "gas_instruction_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language gas semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembler_dialect",
+      "id": "gnu_as",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language gnu_as <input>",
+        "nsq_capability": "language:gnu_as",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gas_instruction_surface",
+        "required_local_tools": [
+          "gas_instruction_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language gnu_as semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "go",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language go <input>",
+        "nsq_capability": "language:go",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_surface",
+        "required_local_tools": [
+          "go compiler",
+          "Go runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language go semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_build",
+      "id": "gradle",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language gradle <input>",
+        "nsq_capability": "language:gradle",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "task_graph",
+        "required_local_tools": [
+          "task_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language gradle semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "query_schema",
+      "id": "graphql",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language graphql <input>",
+        "nsq_capability": "language:graphql",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "operation_tree",
+        "required_local_tools": [
+          "operation_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language graphql semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "groovy",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language groovy <input>",
+        "nsq_capability": "language:groovy",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "script_class_surface",
+        "required_local_tools": [
+          "script_class_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language groovy semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "boot",
+      "id": "grub",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language grub <input>",
+        "nsq_capability": "language:grub",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "boot_config",
+        "required_local_tools": [
+          "boot_config materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language grub semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "boot",
+      "id": "grub2",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language grub2 <input>",
+        "nsq_capability": "language:grub2",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "boot_config",
+        "required_local_tools": [
+          "boot_config materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language grub2 semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "symbolic",
+      "id": "guile",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language guile <input>",
+        "nsq_capability": "language:guile",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "s_expression",
+        "required_local_tools": [
+          "guile"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language guile semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "functional",
+      "id": "haskell",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language haskell <input>",
+        "nsq_capability": "language:haskell",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "GHC"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language haskell semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "markup",
+      "id": "html",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language html <input>",
+        "nsq_capability": "language:html",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "document_tree",
+        "required_local_tools": [
+          "document_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language html semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "java",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language java <input>",
+        "nsq_capability": "language:java",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "class_surface",
+        "required_local_tools": [
+          "javac",
+          "JVM runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language java semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "javascript",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language javascript <input>",
+        "nsq_capability": "language:javascript",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "node",
+          "JavaScript runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language javascript semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "java_platform",
+      "id": "jdk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language jdk <input>",
+        "nsq_capability": "language:jdk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "toolchain",
+        "required_local_tools": [
+          "toolchain materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language jdk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_platform",
+      "id": "jni",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language jni <input>",
+        "nsq_capability": "language:jni",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "native_bridge",
+        "required_local_tools": [
+          "native_bridge materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language jni semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data",
+      "id": "json",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language json <input>",
+        "nsq_capability": "language:json",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "object_tree",
+        "required_local_tools": [
+          "object_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language json semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data_science",
+      "id": "julia",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language julia <input>",
+        "nsq_capability": "language:julia",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Julia runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language julia semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "kotlin",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language kotlin <input>",
+        "nsq_capability": "language:kotlin",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "class_surface",
+        "required_local_tools": [
+          "kotlinc",
+          "JVM runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language kotlin semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "linux",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language linux <input>",
+        "nsq_capability": "language:linux",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language linux semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "symbolic",
+      "id": "lisp",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language lisp <input>",
+        "nsq_capability": "language:lisp",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "s_expression",
+        "required_local_tools": [
+          "lisp runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language lisp semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "intermediate_representation",
+      "id": "llvm_ir",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language llvm_ir <input>",
+        "nsq_capability": "language:llvm_ir",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "ssa_instruction_surface",
+        "required_local_tools": [
+          "ssa_instruction_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language llvm_ir semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "lua",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language lua <input>",
+        "nsq_capability": "language:lua",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "function_chunk",
+        "required_local_tools": [
+          "Lua runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language lua semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "artifact",
+      "id": "mach_o",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language mach_o <input>",
+        "nsq_capability": "language:mach_o",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "apple_binary_surface",
+        "required_local_tools": [
+          "apple_binary_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language mach_o semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "macos",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language macos <input>",
+        "nsq_capability": "language:macos",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language macos semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "make",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language make <input>",
+        "nsq_capability": "language:make",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "build_graph",
+        "required_local_tools": [
+          "build_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language make semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "document",
+      "id": "markdown",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language markdown <input>",
+        "nsq_capability": "language:markdown",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "block_tree",
+        "required_local_tools": [
+          "block_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language markdown semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembler_dialect",
+      "id": "masm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language masm <input>",
+        "nsq_capability": "language:masm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "masm_instruction_surface",
+        "required_local_tools": [
+          "masm_instruction_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language masm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data_science",
+      "id": "matlab",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language matlab <input>",
+        "nsq_capability": "language:matlab",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "matrix_script_surface",
+        "required_local_tools": [
+          "matrix_script_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language matlab semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "maven",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language maven <input>",
+        "nsq_capability": "language:maven",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "project_graph",
+        "required_local_tools": [
+          "project_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language maven semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "meson",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language meson <input>",
+        "nsq_capability": "language:meson",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "build_graph",
+        "required_local_tools": [
+          "build_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language meson semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_api",
+      "id": "metal",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language metal <input>",
+        "nsq_capability": "language:metal",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gpu_api",
+        "required_local_tools": [
+          "gpu_api materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language metal semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "database",
+      "id": "mysql",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language mysql <input>",
+        "nsq_capability": "language:mysql",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "query_plan",
+        "required_local_tools": [
+          "query_plan materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language mysql semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembler_dialect",
+      "id": "nasm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language nasm <input>",
+        "nsq_capability": "language:nasm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "nasm_instruction_surface",
+        "required_local_tools": [
+          "nasm_instruction_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language nasm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_platform",
+      "id": "ndk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ndk <input>",
+        "nsq_capability": "language:ndk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "native_toolchain",
+        "required_local_tools": [
+          "native_toolchain materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ndk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "netbsd",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language netbsd <input>",
+        "nsq_capability": "language:netbsd",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language netbsd semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "nim",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language nim <input>",
+        "nsq_capability": "language:nim",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Nim compiler"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language nim semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "build",
+      "id": "ninja",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ninja <input>",
+        "nsq_capability": "language:ninja",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "build_graph",
+        "required_local_tools": [
+          "build_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ninja semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "npm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language npm <input>",
+        "nsq_capability": "language:npm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language npm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "filesystem",
+      "id": "ntfs",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ntfs <input>",
+        "nsq_capability": "language:ntfs",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "filesystem_surface",
+        "required_local_tools": [
+          "filesystem_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ntfs semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "objective_c",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language objective_c <input>",
+        "nsq_capability": "language:objective_c",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "translation_unit",
+        "required_local_tools": [
+          "clang",
+          "Objective-C runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language objective_c semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "functional",
+      "id": "ocaml",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ocaml <input>",
+        "nsq_capability": "language:ocaml",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "OCaml compiler"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ocaml semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "openbsd",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language openbsd <input>",
+        "nsq_capability": "language:openbsd",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language openbsd semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "compute_api",
+      "id": "opencl",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language opencl <input>",
+        "nsq_capability": "language:opencl",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "compute_kernel_surface",
+        "required_local_tools": [
+          "compute_kernel_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language opencl semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_api",
+      "id": "opengl",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language opengl <input>",
+        "nsq_capability": "language:opengl",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gpu_api",
+        "required_local_tools": [
+          "gpu_api materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language opengl semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems_legacy",
+      "id": "pascal",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language pascal <input>",
+        "nsq_capability": "language:pascal",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "program_unit",
+        "required_local_tools": [
+          "program_unit materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language pascal semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "perl",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language perl <input>",
+        "nsq_capability": "language:perl",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Perl runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language perl semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "php",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language php <input>",
+        "nsq_capability": "language:php",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "request_module_surface",
+        "required_local_tools": [
+          "PHP runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language php semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "pip",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language pip <input>",
+        "nsq_capability": "language:pip",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language pip semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "pkg",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language pkg <input>",
+        "nsq_capability": "language:pkg",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "termux_package_surface",
+        "required_local_tools": [
+          "termux_package_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language pkg semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "pnpm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language pnpm <input>",
+        "nsq_capability": "language:pnpm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language pnpm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "poetry",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language poetry <input>",
+        "nsq_capability": "language:poetry",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language poetry semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "database",
+      "id": "postgresql",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language postgresql <input>",
+        "nsq_capability": "language:postgresql",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "query_plan",
+        "required_local_tools": [
+          "query_plan materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language postgresql semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "shell",
+      "id": "powershell",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language powershell <input>",
+        "nsq_capability": "language:powershell",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "command_surface",
+        "required_local_tools": [
+          "PowerShell runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language powershell semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "schema",
+      "id": "protobuf",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language protobuf <input>",
+        "nsq_capability": "language:protobuf",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "message_schema",
+        "required_local_tools": [
+          "message_schema materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language protobuf semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "python",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language python <input>",
+        "nsq_capability": "language:python",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "call_shape",
+        "required_local_tools": [
+          "python3",
+          "CPython runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language python semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "python3",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language python3 <input>",
+        "nsq_capability": "language:python3",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "call_shape",
+        "required_local_tools": [
+          "python3",
+          "CPython runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language python3 semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data_science",
+      "id": "r",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language r <input>",
+        "nsq_capability": "language:r",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "script_module_surface",
+        "required_local_tools": [
+          "script_module_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language r semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "redox",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language redox <input>",
+        "nsq_capability": "language:redox",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language redox semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "riscv64_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language riscv64_asm <input>",
+        "nsq_capability": "language:riscv64_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "riscv64_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "RISC-V assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language riscv64_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "ruby",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language ruby <input>",
+        "nsq_capability": "language:ruby",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "Ruby runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language ruby semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "rust",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language rust <input>",
+        "nsq_capability": "language:rust",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "crate_surface",
+        "required_local_tools": [
+          "rustc",
+          "cargo",
+          "rust-std"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language rust semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "managed",
+      "id": "scala",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language scala <input>",
+        "nsq_capability": "language:scala",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "class_surface",
+        "required_local_tools": [
+          "class_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language scala semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "symbolic",
+      "id": "scheme",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language scheme <input>",
+        "nsq_capability": "language:scheme",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "s_expression",
+        "required_local_tools": [
+          "scheme runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language scheme semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "android_platform",
+      "id": "sdk",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language sdk <input>",
+        "nsq_capability": "language:sdk",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_api",
+        "required_local_tools": [
+          "platform_api materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language sdk semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "query",
+      "id": "sql",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language sql <input>",
+        "nsq_capability": "language:sql",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "query_plan",
+        "required_local_tools": [
+          "query_plan materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language sql semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "database",
+      "id": "sqlite",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language sqlite <input>",
+        "nsq_capability": "language:sqlite",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "query_plan",
+        "required_local_tools": [
+          "query_plan materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language sqlite semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "swift",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language swift <input>",
+        "nsq_capability": "language:swift",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "swiftc"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language swift semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "termux",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language termux <input>",
+        "nsq_capability": "language:termux",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "android_linux_shell_surface",
+        "required_local_tools": [
+          "android_linux_shell_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language termux semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "schema_rpc",
+      "id": "thrift",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language thrift <input>",
+        "nsq_capability": "language:thrift",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "service_schema",
+        "required_local_tools": [
+          "service_schema materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language thrift semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data",
+      "id": "toml",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language toml <input>",
+        "nsq_capability": "language:toml",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "table_tree",
+        "required_local_tools": [
+          "table_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language toml semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "scripting",
+      "id": "typescript",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language typescript <input>",
+        "nsq_capability": "language:typescript",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "typed_module_surface",
+        "required_local_tools": [
+          "typescript compiler",
+          "JavaScript runtime"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language typescript semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "boot",
+      "id": "uefi",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language uefi <input>",
+        "nsq_capability": "language:uefi",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "firmware_surface",
+        "required_local_tools": [
+          "firmware_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language uefi semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "uv",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language uv <input>",
+        "nsq_capability": "language:uv",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language uv semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_api",
+      "id": "vulkan",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language vulkan <input>",
+        "nsq_capability": "language:vulkan",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gpu_api",
+        "required_local_tools": [
+          "gpu_api materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language vulkan semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "portable_runtime",
+      "id": "wasi",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language wasi <input>",
+        "nsq_capability": "language:wasi",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "system_interface",
+        "required_local_tools": [
+          "system_interface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language wasi semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "portable_binary",
+      "id": "wasm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language wasm <input>",
+        "nsq_capability": "language:wasm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "module_surface",
+        "required_local_tools": [
+          "module_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language wasm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly_like",
+      "id": "wasm_text",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language wasm_text <input>",
+        "nsq_capability": "language:wasm_text",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "wasm_text_instruction_surface",
+        "required_local_tools": [
+          "wasm assembler",
+          "wasm linker"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language wasm_text semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "graphics_runtime",
+      "id": "wgpu",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language wgpu <input>",
+        "nsq_capability": "language:wgpu",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "gpu_abstraction",
+        "required_local_tools": [
+          "gpu_abstraction materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language wgpu semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "platform",
+      "id": "windows",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language windows <input>",
+        "nsq_capability": "language:windows",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "platform_surface",
+        "required_local_tools": [
+          "platform_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language windows semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "x86_64_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language x86_64_asm <input>",
+        "nsq_capability": "language:x86_64_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "x86_64_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "x86_64 assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language x86_64_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "assembly",
+      "id": "x86_asm",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language x86_asm <input>",
+        "nsq_capability": "language:x86_asm",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "x86_instruction_surface",
+        "required_local_tools": [
+          "clang",
+          "x86 assembler",
+          "lld"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language x86_asm semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "markup",
+      "id": "xml",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language xml <input>",
+        "nsq_capability": "language:xml",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "document_tree",
+        "required_local_tools": [
+          "document_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language xml semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "data",
+      "id": "yaml",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language yaml <input>",
+        "nsq_capability": "language:yaml",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "object_tree",
+        "required_local_tools": [
+          "object_tree materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language yaml semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "package_manager",
+      "id": "yarn",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language yarn <input>",
+        "nsq_capability": "language:yarn",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "package_graph",
+        "required_local_tools": [
+          "package_graph materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language yarn semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "systems",
+      "id": "zig",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language zig <input>",
+        "nsq_capability": "language:zig",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "compile_unit",
+        "required_local_tools": [
+          "zig"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language zig semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    },
+    {
+      "family": "shell",
+      "id": "zsh",
+      "provenance": {
+        "private_eligibility": "only independently authored Braxon adapters or implementations after source-level review",
+        "upstream_payload_ownership": "varies by toolchain; preserve upstream license and notice"
+      },
+      "semantic_contract": {
+        "authority": "config/nsq/nsq_runtime_language_registry.json",
+        "kinetic_reflexor_route": "Braxon language zsh <input>",
+        "nsq_capability": "language:zsh",
+        "resident_runtime": false,
+        "semantic_operation_state": "operable_on_demand"
+      },
+      "target_environment": "aarch64-linux-android",
+      "target_materialization": {
+        "compiler_or_runtime_payload_state": "must be contained locally before native execution; missing payload must be reported exactly",
+        "hidden_download_allowed": false,
+        "native_ingress": "command_surface",
+        "required_local_tools": [
+          "command_surface materialization toolchain"
+        ]
+      },
+      "verification": {
+        "native_execution": "requires a declared local compiler/runtime artifact and target-specific probe",
+        "semantic_route": "Braxon language zsh semantic-ingestion verification",
+        "success_criterion": "semantic operation executes through language capability and operator action; native materialization is never claimed without local artifact evidence"
+      }
+    }
+  ],
+  "normal_runtime_policy": {
+    "external_api_required": false,
+    "hidden_download_allowed": false,
+    "network_required": false,
+    "semantic_routes_use_compact_nsq_reflexor_contracts": true
+  },
+  "owner": "Michael David Norris",
+  "repository_commit": "3733e48e71ac171c8983aef72abb95962a06cb9d",
+  "schema": "braxon.language_functional_ingestion_matrix.v1",
+  "target_environment": "aarch64-linux-android"
+}

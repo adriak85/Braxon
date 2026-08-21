@@ -1,8 +1,11 @@
 #![allow(non_snake_case)]
 pub mod adversarial_integrated_benchmark;
+pub mod bionic_compatibility;
 pub mod bus;
 pub mod closure_audit;
 pub mod collective_state;
+pub mod complete_semantic_extraction;
+pub mod contained_toolchain;
 pub mod content_surface;
 pub mod context_manifest;
 pub mod council;
@@ -15,6 +18,7 @@ pub mod integrated_objective_benchmark;
 pub mod intelligent_operation;
 pub mod kinetic_reflexor;
 pub mod language_artifact_context;
+pub mod language_operation;
 pub mod model_execution;
 pub mod native_bus;
 pub mod native_equivalence_harness;
@@ -28,6 +32,7 @@ pub mod one_shot_objective_benchmark;
 pub mod parameter_citadel;
 pub mod performance_surface_benchmark;
 pub mod piston_memory;
+pub mod repository_operation;
 pub mod riemann_semantic_reflexor;
 pub mod seed_citadel;
 pub mod semantic_link;
@@ -55,6 +60,14 @@ pub use closure_audit::{
     WakeActivationEntryReport, CLOSURE_AUDIT_SCHEMA,
 };
 pub use collective_state::{OrganPerspective, UnifiedSelfState, COLLECTIVE_STATE_SCHEMA};
+pub use complete_semantic_extraction::{
+    verify_complete_semantic_extraction, CompleteSemanticExtractionReport, SemanticSurfaceProof,
+    COMPLETE_SEMANTIC_EXTRACTION_SCHEMA,
+};
+pub use contained_toolchain::{
+    verify_contained_toolchain, ContainedToolchainReport, ToolchainVerificationCheck,
+    CONTAINED_TOOLCHAIN_SCHEMA,
+};
 pub use content_surface::{
     daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, OutputClassification,
     DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA,
@@ -86,6 +99,10 @@ pub use kinetic_reflexor::{
 pub use language_artifact_context::{
     verify_language_artifact_context, LanguageArtifactContextReport, LanguageArtifactTraversal,
     LANGUAGE_ARTIFACT_CONTEXT_SCHEMA,
+};
+pub use language_operation::{
+    execute_language_operation, LanguageOperationReport, LexicalParseSummary, LocalToolResolution,
+    ParameterGuidedParseReceipt, LANGUAGE_OPERATION_SCHEMA,
 };
 pub use model_execution::{
     execute_bounded_tensor_inference, TensorInferenceOperation, DONOR_MODEL_INDEX_RELATIVE_PATH,
@@ -125,6 +142,9 @@ pub use piston_memory::{
     MemoryDecision, MemoryDecisionReport, MemoryLease, MemoryRegion, PistonMemory,
     PistonPhase as MemoryPistonPhase, RegionKind, Residency, PISTON_MEMORY_SCHEMA,
 };
+pub use repository_operation::{
+    evaluate_repository_operation, RepositoryOperationReport, REPOSITORY_OPERATION_SCHEMA,
+};
 pub use riemann_semantic_reflexor::{
     ReflexorSearchStep, RiemannSemanticReflexor, ZeroObservation, ZeroRegionHypothesis,
     RIEMANN_REFLEXOR_SCHEMA,
@@ -155,6 +175,10 @@ pub use wowas_realization::{
 pub use wowas_seeded::{WhispersWorld, WorldEntity, WorldFrame, WorldSeed};
 pub use wowas_story_seed::{WowasStorySeed, WowasStorySeedManifest, WOWAS_STORY_SEED_SCHEMA};
 
+pub use bionic_compatibility::{
+    verify_bionic_compatibility, BionicCompatibilityReport, BionicInterfaceReport,
+    BIONIC_COMPATIBILITY_SCHEMA,
+};
 pub use bus::{
     BraxonBus, BraxonBusReport, BusProcessingState, BusReplyLayer, IntentEnglishLoop,
     ThoughtPressureCandidate, BRAXON_BUS_ROUTE, BRAXON_BUS_SCHEMA, BRAXON_REPLY_SCHEMA,

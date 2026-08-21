@@ -1,0 +1,116 @@
+{
+  "schema": "braxon.toolchain.source_built_build_graph.v1",
+  "authority": "BRAXON_SOURCE_BUILT_GRAPH",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "build_policy": {
+    "default_jobs": 1,
+    "optimization_goal": "small, deterministic native binaries with preserved debug copies and source-hash receipts",
+    "allowed_optimization": ["release", "LTO where target-stable", "codegen-unit reduction where target-stable", "strip only after debug copy", "deterministic SHA-256 manifest"],
+    "forbidden": ["floating source clone", "implicit package-manager replacement", "network access during normal operation", "starting a source build without capacity preflight", "claiming target success from desktop execution"]
+  },
+  "nodes": [
+    {
+      "id": "clone_and_contract_check",
+      "depends_on": [],
+      "operation": "scripts/braxon_reconstruct.sh status",
+      "outputs": ["contracts_present"],
+      "proof": "status exit success"
+    },
+    {
+      "id": "target_and_capacity_preflight",
+      "depends_on": ["clone_and_contract_check"],
+      "operation": "scripts/braxon_reconstruct.sh preflight and capacity_preflight within source-build",
+      "outputs": ["aarch64_android_identity", "page_size_observation", "executable_workspace_capacity"],
+      "proof": "preflight receipt"
+    },
+    {
+      "id": "semantic_corpus_and_nsq_intercept",
+      "depends_on": ["clone_and_contract_check"],
+      "operation": "cargo run --locked --offline -- language <declared-language> <input>",
+      "outputs": ["universal tokenizer mapping", "parameter-Citadel receipt", "complete semantic extraction gap report"],
+      "proof": "language NSQ intercept receipt"
+    },
+    {
+      "id": "llvm_local_source_identity",
+      "depends_on": ["clone_and_contract_check"],
+      "operation": "verify audit/toolchain/llvm_project_tree_sha256.txt against state/full_android_language_toolchain/src/llvm-project",
+      "outputs": ["retained LLVM source identity"],
+      "proof": "tree SHA-256 stream identity d705b6d9d2a879b71cb840639259bcd7546195f9b64df30436c62864c18e6a37"
+    },
+    {
+      "id": "rust_and_cpython_pinned_source_edges",
+      "depends_on": ["target_and_capacity_preflight"],
+      "operation": "BRAXON_ALLOW_SOURCE_EDGE_NETWORK=1 scripts/braxon_reconstruct.sh source-edge",
+      "outputs": ["Rust f964de49 source", "CPython 49918f5b source"],
+      "proof": "submodule revision and source manifest verification",
+      "blocked_until": ["explicit source-edge consent", "available storage", "upstream source access"]
+    },
+    {
+      "id": "termux_stage0_bootstrap",
+      "depends_on": ["target_and_capacity_preflight"],
+      "operation": "observe calibrated Termux rustc 1.97.1 and LLVM 21.1.8",
+      "outputs": ["stage0 bootstrap authority receipt"],
+      "proof": "config/toolchains/termux_android_aarch64_capacity_profile.json"
+    },
+    {
+      "id": "cpython_source_build",
+      "depends_on": ["rust_and_cpython_pinned_source_edges", "termux_stage0_bootstrap"],
+      "operation": "approved source build script CPython stage",
+      "outputs": ["target CPython", "development headers", "native extension build interface"],
+      "proof": "target Python version and extension probe"
+    },
+    {
+      "id": "llvm_clang_lld_source_build",
+      "depends_on": ["llvm_local_source_identity", "target_and_capacity_preflight"],
+      "operation": "approved CMake/Ninja source build with AArch64 Android default target and compiler-rt/libunwind/libc++/libc++abi",
+      "outputs": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-ranlib", "llvm-nm", "llvm-objdump", "llvm-readelf", "llvm-strip"],
+      "proof": "AArch64 compile, link, ELF/DWARF inspection, and target execution receipt"
+    },
+    {
+      "id": "bionic_compatibility_overlay",
+      "depends_on": ["llvm_clang_lld_source_build"],
+      "operation": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "outputs": ["staged headers", "static overlay", "shared overlay", "exported symbol and target probe receipts"],
+      "proof": "config/nsq/bionic_gnu_compatibility_matrix.json and overlay symbol proof"
+    },
+    {
+      "id": "rust_stage1_and_stage2_source_build",
+      "depends_on": ["rust_and_cpython_pinned_source_edges", "cpython_source_build", "llvm_clang_lld_source_build", "termux_stage0_bootstrap"],
+      "operation": "Rust x.py stage1 compiler/tools then stage2 std/compiler/tools using the source-built LLVM and CPython lanes",
+      "outputs": ["stage1 rustc/cargo/rustfmt/clippy", "stage2 rustc/cargo/rustfmt/clippy", "AArch64 Android toolchain"],
+      "proof": "stage receipts, stage equivalence evidence, AArch64 compile/link/run probe",
+      "blocked_until": ["pinned Rust source present", "capacity preflight", "successful stage1"]
+    },
+    {
+      "id": "edge_nightly_candidate",
+      "depends_on": ["rust_stage1_and_stage2_source_build"],
+      "operation": "materialize matching Rust 1.100.0-nightly f7d782a3b source and compare against source-built known-good lane",
+      "outputs": ["validated edge candidate only after target equivalence"],
+      "proof": "matching source archive checksum, license record, and Android equivalence receipt",
+      "blocked_until": ["matching edge source is acquired", "target equivalence succeeds"]
+    },
+    {
+      "id": "termux_nsq_calibration_and_recovery",
+      "depends_on": ["cpython_source_build", "llvm_clang_lld_source_build", "rust_stage1_and_stage2_source_build"],
+      "operation": "scripts/braxon_termux_calibrate.sh calibrate then verify",
+      "outputs": ["NSQ intercepted wrappers", "tool hash manifest", "guarded pkg route", "repair capability"],
+      "proof": "calibration SHA-256 verification"
+    },
+    {
+      "id": "complete_language_semantic_proofs",
+      "depends_on": ["termux_nsq_calibration_and_recovery", "bionic_compatibility_overlay"],
+      "operation": "run source-built extractors and target probes to fill state/nsq/semantic_extraction/<language>/<surface>.json",
+      "outputs": ["grammar/AST/type/IR/ABI/assembly/ELF/DWARF/linking/target/recovery proofs for every applicable language"],
+      "proof": "cargo run --locked --offline -- language <language> <input> reports complete=true",
+      "blocked_until": ["all declared language sources or legal replacement specifications are available"]
+    },
+    {
+      "id": "closure_release",
+      "depends_on": ["complete_language_semantic_proofs"],
+      "operation": "scripts/braxon_closure_gate.sh <writable-output-directory>",
+      "outputs": ["clean-room closure report", "release truth table"],
+      "proof": "all gates pass and no release blockers remain"
+    }
+  ]
+}

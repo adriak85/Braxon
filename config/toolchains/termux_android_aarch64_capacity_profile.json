@@ -1,0 +1,75 @@
+{
+  "schema": "braxon.toolchain.target_capacity_profile.v1",
+  "authority": "BRAXON_TARGET_CAPACITY_PROFILE",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "environment_observation": {
+    "source": "user-provided braxon-manus-environment.txt",
+    "observed_at": "2026-08-21T01:31:40Z",
+    "kernel": "Linux 5.15.180-android13-3-32407857",
+    "android_architecture": "arm64-v8a",
+    "cpu_architecture": "aarch64",
+    "cpu_topology": {
+      "cortex_a55_cores": 6,
+      "cortex_a78_cores": 2,
+      "logical_cpus": 8
+    },
+    "memory": {
+      "total_mib": 3482,
+      "swap_mib": 4096,
+      "availability_is_dynamic": true
+    },
+    "observed_compiler_lane": {
+      "rustc": "1.97.1 (8bab26f4f 2026-07-14)",
+      "rustc_commit": "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+      "rust_host": "aarch64-linux-android",
+      "llvm": "21.1.8",
+      "clang_target": "aarch64-unknown-linux-android24",
+      "cmake": "4.4.2",
+      "ninja": "1.13.2",
+      "python": "3.14.6",
+      "perl": "5.42.2"
+    }
+  },
+  "materialization_policy": {
+    "normal_runtime_requires_full_toolchain_residency": false,
+    "full_toolchain_rebuild_requires_preflight_capacity_check": true,
+    "do_not_start_full_rebuild_when_executable_work_filesystem_has_zero_free_space": true,
+    "do_not_assume_shared_storage_is_executable": true,
+    "require_target_abi": "aarch64-linux-android",
+    "require_android_api_floor": 24,
+    "require_16k_page_size_probe_when_target_device_reports_16k_pages": true,
+    "recommended_parallel_build_jobs": 1,
+    "build_jobs_must_be_overridable": true,
+    "absolute_termux_paths_are_authoritative_contracts": false
+  },
+  "reconstruction_chain": [
+    {
+      "lane": "bootstrap",
+      "identity": "Termux rustc 1.97.1 source-tarball build with LLVM 21.1.8",
+      "status": "observed_target_environment_toolchain"
+    },
+    {
+      "lane": "workspace_known_good",
+      "identity": "Rust 1.97.x locked workspace lane",
+      "status": "must be reconciled to exact local bootstrap before target rebuild"
+    },
+    {
+      "lane": "edge_candidate",
+      "identity": "Rust 1.100.0-nightly f7d782a3b",
+      "status": "upstream descriptor recorded; local materialization and equivalence validation required before activation"
+    }
+  ],
+  "current_capacity_blockers": [
+    {
+      "id": "observed_executable_root_full",
+      "condition": "user-provided snapshot reported the root filesystem at 100% utilization",
+      "required_action": "run the repository capacity preflight on the actual intended executable build path; do not launch a source rebuild until it passes"
+    },
+    {
+      "id": "shared_storage_execution_unknown",
+      "condition": "user-provided snapshot showed available shared storage but did not prove executable mount semantics for toolchain binaries",
+      "required_action": "verify mount flags and execute a controlled local probe before using shared storage as a build or install location"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[submodule "toolchain-rust-source"]
+	path = state/full_android_language_toolchain/src/rust
+	url = https://github.com/rust-lang/rust.git
+	branch = master
+[submodule "toolchain-cpython-source"]
+	path = state/full_android_language_toolchain/src/cpython
+	url = https://github.com/python/cpython.git
+	branch = main

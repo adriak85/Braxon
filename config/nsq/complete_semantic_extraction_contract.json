@@ -1,0 +1,46 @@
+{
+  "schema": "braxon.nsq.complete_semantic_extraction_contract.v1",
+  "authority": "BRAXON_COMPLETE_NSQ_EXTRACTION",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "source_of_language_population": "config/nsq/language_functional_ingestion_matrix.json",
+  "policy": {
+    "semantic_extraction_is_not_vendoring": true,
+    "semantic_extraction_is_not_an_interface_rename": true,
+    "compact_representation_must_retain_source_provenance_and_target_boundary": true,
+    "unmaterialized_upstream_source_may_not_be_reported_as_complete_extraction": true,
+    "model_weight_execution_claimed": false,
+    "no_resident_runtime_required_for_lookup": true,
+    "all_language_calls_require_nsq_interception": true
+  },
+  "required_semantic_surfaces": [
+    {"id":"identity","dialect":"stamp","meaning":"source, revision, license, and content identity"},
+    {"id":"lexical","dialect":"alphabetic","meaning":"character and token stream with universal addressing"},
+    {"id":"grammar","dialect":"symbolic","meaning":"language grammar and parser productions"},
+    {"id":"ast","dialect":"symbolic","meaning":"syntax tree identities and spans"},
+    {"id":"types","dialect":"symbolic","meaning":"types, constraints, and resolution"},
+    {"id":"control_flow","dialect":"intent","meaning":"control transfer, branches, and termination"},
+    {"id":"data_flow","dialect":"intent","meaning":"definitions, uses, effects, and dependencies"},
+    {"id":"ir","dialect":"symbolic","meaning":"intermediate representation and transformations"},
+    {"id":"diagnostics","dialect":"control","meaning":"errors, warnings, source spans, and recovery"},
+    {"id":"abi","dialect":"numeric","meaning":"calling convention, layout, alignment, and linkage"},
+    {"id":"assembly","dialect":"symbolic","meaning":"instruction selection, register, and relocation semantics"},
+    {"id":"object_format","dialect":"symbolic","meaning":"ELF/archive/object sections, symbols, and relocations"},
+    {"id":"debug","dialect":"stamp","meaning":"DWARF/debug artifact identity and source association"},
+    {"id":"linking","dialect":"control","meaning":"linker inputs, resolution, outputs, and runtime loader boundary"},
+    {"id":"target_constraints","dialect":"numeric","meaning":"AArch64 Android API, page-size, and Bionic constraints"},
+    {"id":"materialization","dialect":"control","meaning":"local source build, compiler/interpreter invocation, target probe, and release"},
+    {"id":"recovery","dialect":"control","meaning":"hash verification, source restoration, and exact remediation"}
+  ],
+  "extractor_bindings": {
+    "lexical": "crates/braxon-core/src/language_operation.rs",
+    "parameter_guided_parse": "crates/braxon-core/src/parameter_citadel.rs",
+    "language_route": "config/nsq/language_functional_ingestion_matrix.json",
+    "machine_proofs": "config/toolchains/contained_semantic_toolchain_inventory.json",
+    "bionic_abi": "config/nsq/bionic_gnu_compatibility_matrix.json",
+    "target_capacity": "config/toolchains/termux_android_aarch64_capacity_profile.json",
+    "source_provenance": "config/toolchains/source_availability_manifest.json",
+    "integrity_recovery": "config/toolchains/termux_nsq_intercept_policy.json"
+  },
+  "completion_rule": "A language is complete only when every applicable required semantic surface has a content-addressed source or executable target proof, its NSQ operation reports semantic and native readiness, and the target Android probe succeeds. Non-applicable graphics/audio semantics must be recorded as non-applicable rather than fabricated."
+}

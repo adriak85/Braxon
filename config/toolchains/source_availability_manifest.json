@@ -1,0 +1,93 @@
+{
+  "schema": "braxon.toolchain.source_availability.v1",
+  "authority": "BRAXON_SOURCE_AVAILABILITY",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "policy": {
+    "full_source_availability_may_not_be_claimed_when_source_tree_is_unmaterialized": true,
+    "normal_runtime_network_required": false,
+    "source_edge_acquisition_requires_explicit_provenance": true,
+    "implicit_gitlink_without_gitmodules_is_invalid_reconstruction_metadata": true,
+    "source_edge_materialization_requires_sha256_license_and_archive_policy": true,
+    "source_edge_materialization_must_not_replace_a_declared_commit_without_manifest_update": true
+  },
+  "related_contracts": {
+    "gitmodules": ".gitmodules",
+    "rust_bootstrap_chain": "config/toolchains/rust_bootstrap_chain.json",
+    "semantic_corpus_manifest": "config/nsq/semantic_corpus_manifest.json",
+    "reconstruction_script": "scripts/braxon_reconstruct.sh"
+  },
+  "sources": [
+    {
+      "id": "llvm_project",
+      "upstream_project": "llvm/llvm-project",
+      "source_path": "state/full_android_language_toolchain/src/llvm-project",
+      "source_status": "materialized_local_source_tree",
+      "content_identity": {
+        "algorithm": "sha256_of_sorted_per_file_sha256_stream",
+        "sha256": "d705b6d9d2a879b71cb840639259bcd7546195f9b64df30436c62864c18e6a37",
+        "file_count": 158696,
+        "bytes": 1876481625,
+        "evidence_path": "audit/toolchain/llvm_project_tree_sha256.txt"
+      },
+      "evidence": "llvm/CMakeLists.txt present; source tree inspected locally; deterministic content identity captured without Git metadata",
+      "semantic_scope": ["LLVM", "Clang", "LLD", "LLDB", "MLIR", "Polly", "BOLT", "Flang", "OpenMP", "compiler-rt", "libc++", "libunwind"],
+      "license": "Apache-2.0 with LLVM Exception",
+      "reconstruction_status": "local source is present; deterministic tree identity is captured and must be reverified by the reconstruction gate before source build"
+    },
+    {
+      "id": "rust",
+      "upstream_project": "rust-lang/rust",
+      "source_url": "https://github.com/rust-lang/rust.git",
+      "gitlink_commit": "f964de49bcb561e5c6c725bb37201e11d852daf0",
+      "upstream_commit_verified": true,
+      "upstream_commit_date": "2026-05-07T19:45:59Z",
+      "source_path": "state/full_android_language_toolchain/src/rust",
+      "source_status": "unmaterialized_orphaned_gitlink",
+      "evidence": "Git index mode 160000; local directory is empty; .gitmodules declares the matching path and upstream URL; upstream commit identity was previously verified",
+      "license": "Apache-2.0 OR MIT",
+      "semantic_scope": ["rustc", "cargo", "rustfmt", "clippy", "Rust standard library", "Rust bootstrap chain"],
+      "reconstruction_status": "source-edge acquisition is required before Rust source rebuild; this is an explicit release blocker for fully contained source reconstruction"
+    },
+    {
+      "id": "cpython",
+      "upstream_project": "python/cpython",
+      "source_url": "https://github.com/python/cpython.git",
+      "gitlink_commit": "49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
+      "upstream_commit_verified": true,
+      "upstream_commit_date": "2026-05-07T23:02:04Z",
+      "source_path": "state/full_android_language_toolchain/src/cpython",
+      "source_status": "unmaterialized_orphaned_gitlink",
+      "evidence": "Git index mode 160000; local directory is empty; .gitmodules declares the matching path and upstream URL; upstream commit identity was previously verified",
+      "license": "Python-2.0",
+      "semantic_scope": ["CPython", "Python C API", "Python standard library", "native extension build interfaces"],
+      "reconstruction_status": "source-edge acquisition is required before CPython source rebuild; current local install payload does not replace source provenance"
+    },
+    {
+      "id": "cpython_install_payload",
+      "source_path": "state/full_android_language_toolchain/install/python",
+      "source_status": "local_built_payload_present",
+      "license": "Python-2.0 plus component notices",
+      "reconstruction_status": "not sufficient by itself to claim source availability; associated CPython source remains unmaterialized"
+    },
+    {
+      "id": "cargo_dependency_graph",
+      "source_path": "vendor",
+      "source_status": "contained_vendored_source",
+      "license": "per-package Cargo.toml and included notices",
+      "reconstruction_status": "Cargo metadata and locked offline workspace build are required verification evidence"
+    }
+  ],
+  "explicit_release_blockers": [
+    {
+      "id": "orphaned_rust_gitlink",
+      "severity": "source_reconstruction_blocker",
+      "required_action": "materialize the verified f964de49 Rust source into an authoritative contained source archive with SHA-256 and license evidence, or preserve a deterministic source-edge acquisition lane that records all three"
+    },
+    {
+      "id": "orphaned_cpython_gitlink",
+      "severity": "source_reconstruction_blocker",
+      "required_action": "materialize the verified 49918f5b CPython source into an authoritative contained source archive with SHA-256 and license evidence, or preserve a deterministic source-edge acquisition lane that records all three"
+    }
+  ]
+}

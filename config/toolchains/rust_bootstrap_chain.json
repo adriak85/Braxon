@@ -1,0 +1,100 @@
+{
+  "schema": "braxon.toolchain.rust_bootstrap_chain.v1",
+  "authority": "BRAXON_RUST_BOOTSTRAP_CHAIN",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "normal_runtime_policy": {
+    "resident_rust_toolchain_required": false,
+    "network_required": false,
+    "external_bootstrap_toolchain_is_normal_runtime_dependency": false,
+    "default_workspace_channel": "1.97.0"
+  },
+  "truth_rules": {
+    "bootstrap_observation_is_not_a_repository_embedded_payload": true,
+    "historical_bootstrap_observation_is_not_the_active_default": true,
+    "unmaterialized_source_must_not_be_presented_as_buildable": true,
+    "edge_descriptor_is_not_an_activated_toolchain": true,
+    "stage_promotion_requires_target_compile_link_run_and_equivalence_evidence": true,
+    "absolute_termux_paths_are_not_authoritative_reconstruction_contracts": true
+  },
+  "lanes": [
+    {
+      "id": "historical_phone_nightly_1_96",
+      "role": "historical_evidence_only",
+      "identity": "Rust 1.96.0-nightly with LLVM 21.1.8",
+      "evidence": "config/toolchains/current_phone_custom_rust_nightly.json; state/full_android_language_toolchain/runs/20260507_194057/reports/bootstrap_authority.txt",
+      "materialization_status": "historically_observed_external_phone_toolchain",
+      "selection_policy": "never selected as the current default solely from historical metadata"
+    },
+    {
+      "id": "bootstrap_termux_1_97_1",
+      "role": "stage0_bootstrap",
+      "identity": "rustc 1.97.1 (8bab26f4f 2026-07-14), LLVM 21.1.8",
+      "target": "aarch64-linux-android",
+      "evidence": "config/toolchains/termux_android_aarch64_capacity_profile.json",
+      "materialization_status": "observed_target_environment_toolchain_not_embedded",
+      "selection_policy": "may bootstrap a target rebuild only after capacity and executable-path preflight passes"
+    },
+    {
+      "id": "stage1_pinned_rust_source",
+      "role": "source_rebuild_stage1",
+      "input_source": {
+        "repository_path": "state/full_android_language_toolchain/src/rust",
+        "upstream_project": "rust-lang/rust",
+        "git_commit": "f964de49bcb561e5c6c725bb37201e11d852daf0",
+        "source_status": "unmaterialized_orphaned_gitlink"
+      },
+      "bootstrap_dependency": "bootstrap_termux_1_97_1",
+      "expected_output": "stage1 rustc/cargo for aarch64-linux-android",
+      "materialization_status": "blocked_pending_verified_source_materialization_and_target_capacity_preflight",
+      "validation_required": ["source checksum and license record", "stage1 build receipt", "aarch64-android compile/link/run probe"]
+    },
+    {
+      "id": "stage2_pinned_rust_source",
+      "role": "source_rebuild_stage2",
+      "input_source": "same pinned source and validated stage1 artifact",
+      "bootstrap_dependency": "stage1_pinned_rust_source",
+      "expected_output": "stage2 rustc/cargo for aarch64-linux-android",
+      "materialization_status": "blocked_pending_stage1_success",
+      "validation_required": ["stage2 build receipt", "stage1-stage2 equivalence criteria", "aarch64-android compile/link/run probe"]
+    },
+    {
+      "id": "workspace_known_good_1_97_0",
+      "role": "workspace_default",
+      "identity": "Rust 1.97.0 minimal profile",
+      "evidence": "rust-toolchain.toml; Cargo.lock; vendor; offline workspace tests",
+      "materialization_status": "workspace_build_prerequisite_not_embedded",
+      "selection_policy": "default lane for the locked Braxon workspace; distinct from an Android source-stage promotion"
+    },
+    {
+      "id": "edge_candidate_1_100_0_nightly",
+      "role": "edge_candidate",
+      "identity": "Rust 1.100.0-nightly (f7d782a3b 2026-08-19)",
+      "channel_date": "2026-08-20",
+      "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
+      "target": "aarch64-linux-android",
+      "evidence": "audit/external_rust_nightly_observation_2026-08-20.txt",
+      "materialization_status": "upstream_descriptor_only_not_embedded_not_activated",
+      "source_relationship": "this edge descriptor is not inferred to be the pinned f964de49 source tree; a separately pinned matching source archive, checksum, license record, and stage-equivalence result are required",
+      "selection_policy": "never selected by default before independent target validation"
+    }
+  ],
+  "promotion_order": [
+    "bootstrap_termux_1_97_1",
+    "stage1_pinned_rust_source",
+    "stage2_pinned_rust_source",
+    "workspace_known_good_1_97_0",
+    "edge_candidate_1_100_0_nightly"
+  ],
+  "current_release_state": {
+    "workspace_offline_build_validated": true,
+    "full_contained_rust_source_reconstruction_ready": false,
+    "default_edge_nightly_activated": false,
+    "release_blockers": [
+      "materialize verified Rust source for f964de49 with checksum and license evidence",
+      "run target capacity preflight on the actual executable build filesystem",
+      "build and validate stage1 then stage2 on AArch64 Android",
+      "acquire matching source and verify equivalence before activating 1.100.0-nightly"
+    ]
+  }
+}

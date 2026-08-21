@@ -1,0 +1,60 @@
+{
+  "schema": "braxon.nsq.bionic_gnu_compatibility.v1",
+  "authority": "BRAXON_BIONIC_GNU_COMPATIBILITY",
+  "owner": "Michael David Norris",
+  "target": {
+    "architecture": "aarch64",
+    "platform": "android",
+    "abi": "aarch64-linux-android",
+    "android_api_floor": 24,
+    "libc": "Bionic",
+    "glibc_replacement_claimed": false
+  },
+  "policy": {
+    "interface_compatibility_is_not_upstream_code_ownership": true,
+    "bionic_remains_the_platform_libc": true,
+    "overlay_is_opt_in_and_staged": true,
+    "direct_system_or_termux_prefix_overwrite_allowed": false,
+    "unknown_or_unimplemented_interfaces_must_fail_closed": true,
+    "universal_tokenization_uses_existing_braxon_native_tokenizer": true,
+    "all_dialect_mapping_requires_semantic_role_not_decorative_label": true
+  },
+  "overlay": {
+    "source": "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+    "header_generator": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+    "build_model": "first-party staged object plus static/shared overlay library",
+    "expected_static_library": "state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.a",
+    "expected_shared_library": "state/full_android_language_toolchain/install/braxon_android_builtin_stage/lib/libbraxon_android_libc_extensions.so",
+    "current_materialization_status": "source_present; generated library and probe receipt must be verified per target clone"
+  },
+  "interfaces": [
+    {"symbol":"sem_clockwait","header":"semaphore.h","signature_class":"timed_semaphore_wait","aarch64_syscall_or_bridge":"Bionic sem_timedwait bridge with AArch64 memory barrier","universal_lexical":"bionic.gnu.sem_clockwait","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"pthread_getname_np","header":"pthread.h","signature_class":"thread_name_query","aarch64_syscall_or_bridge":"Bionic pthread/prctl bridge","universal_lexical":"bionic.gnu.pthread_getname_np","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"close_range","header":"unistd.h","signature_class":"file_descriptor_range_close","aarch64_syscall_or_bridge":"AArch64 syscall 436 with bounded conservative fallback","universal_lexical":"bionic.gnu.close_range","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"statx","header":"sys/stat.h","signature_class":"extended_file_status","aarch64_syscall_or_bridge":"AArch64 syscall 291","universal_lexical":"bionic.gnu.statx","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"copy_file_range","header":"unistd.h","signature_class":"kernel_file_copy","aarch64_syscall_or_bridge":"AArch64 syscall 285","universal_lexical":"bionic.gnu.copy_file_range","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"getrandom","header":"sys/random.h","signature_class":"kernel_random_bytes","aarch64_syscall_or_bridge":"AArch64 syscall 278","universal_lexical":"bionic.gnu.getrandom","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"memfd_create","header":"sys/mman.h","signature_class":"anonymous_file_descriptor","aarch64_syscall_or_bridge":"AArch64 syscall 279","universal_lexical":"bionic.gnu.memfd_create","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"eventfd","header":"sys/eventfd.h","signature_class":"event_counter_create","aarch64_syscall_or_bridge":"AArch64 syscall 19","universal_lexical":"bionic.gnu.eventfd","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"eventfd_read","header":"sys/eventfd.h","signature_class":"event_counter_read","aarch64_syscall_or_bridge":"Bionic read bridge","universal_lexical":"bionic.gnu.eventfd_read","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"eventfd_write","header":"sys/eventfd.h","signature_class":"event_counter_write","aarch64_syscall_or_bridge":"Bionic write bridge","universal_lexical":"bionic.gnu.eventfd_write","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"pipe2","header":"unistd.h","signature_class":"atomic_pipe_create","aarch64_syscall_or_bridge":"AArch64 syscall 59","universal_lexical":"bionic.gnu.pipe2","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"dup3","header":"unistd.h","signature_class":"atomic_descriptor_duplicate","aarch64_syscall_or_bridge":"AArch64 syscall 24","universal_lexical":"bionic.gnu.dup3","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"},
+    {"symbol":"accept4","header":"sys/socket.h","signature_class":"flagged_socket_accept","aarch64_syscall_or_bridge":"AArch64 syscall 242","universal_lexical":"bionic.gnu.accept4","provenance":"first-party overlay implementation of a public interface","proof_state":"target_compile_link_run_required"}
+  ],
+  "dialect_projection": {
+    "alphabetic": "universal_lexical is the canonical character-token sequence",
+    "numeric": "AArch64 syscall numbers or numeric ABI values are retained only where the interface has a documented syscall bridge",
+    "intent": "request a bounded Bionic compatibility capability with declared preconditions and target ABI",
+    "symbolic": "header, symbol, signature class, and ABI bridge identify the callable contract",
+    "stamp": "source path, source hash, build flags, exported-symbol proof, and target probe receipt identify provenance",
+    "control": "staged overlay materialization, compile, link, run, and release are explicit operations",
+    "graphics": "not applicable: no graphics semantics are fabricated for libc interfaces",
+    "audio": "not applicable: no audio semantics are fabricated for libc interfaces"
+  },
+  "required_documents": [
+    "docs/NSQ_BIONIC_GNU_COMPATIBILITY.md",
+    "config/nsq/bionic_gnu_compatibility_matrix.json",
+    "crates/braxon-core/src/bionic_compatibility.rs"
+  ]
+}

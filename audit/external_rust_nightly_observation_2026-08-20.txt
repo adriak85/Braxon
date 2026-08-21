@@ -1,0 +1,15 @@
+External source observation for the contained-toolchain inventory
+
+Source URL: https://static.rust-lang.org/dist/channel-rust-nightly.toml
+Retrieved: 2026-08-20 (no-cache retrieval)
+
+Official channel manifest fields observed:
+- date = "2026-08-20"
+- [pkg.rust] version = "1.100.0-nightly (f7d782a3b 2026-08-19)"
+- [pkg.rust] git_commit_hash = "f7d782a3be46d6bb4b9792fe69a61db389ba1769"
+- [pkg.rust-std.target.aarch64-linux-android] available = true
+- rust-std Android tar.xz URL = "https://static.rust-lang.org/dist/2026-08-20/rust-std-nightly-aarch64-linux-android.tar.xz"
+- rust-std Android tar.xz SHA-256 = "7609453cd6789b70a314edf32fa70ad9e36b74146be258e725de71df455211c0"
+
+Interpretation boundary:
+This records an upstream edge-nightly descriptor only. The Rust payload is not embedded merely by recording this evidence. It must be locally materialized, checksummed, licensed, and verified before native execution may claim it as available.

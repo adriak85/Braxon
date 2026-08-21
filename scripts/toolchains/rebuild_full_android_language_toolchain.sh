@@ -1,10 +1,17 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -euo pipefail
 
+[ "${BRAXON_SOURCE_BUILD_APPROVED:-0}" = "1" ] || {
+  echo "FAIL: source build requires BRAXON_SOURCE_BUILD_APPROVED=1 after capacity, license, and source-provenance review" >&2
+  exit 1
+}
+
 ROOT="${1:-$HOME/Braxon}"
 cd "$ROOT"
 
 STAMP="$(date +%Y%m%d_%H%M%S)"
+JOBS="${JOBS:-1}"
+case "$JOBS" in ''|*[!0-9]*|0) echo "FAIL: JOBS must be a positive integer" >&2; exit 1 ;; esac
 CHAIN="$ROOT/state/full_android_language_toolchain"
 RUN="$CHAIN/runs/$STAMP"
 SRC="$CHAIN/src"
@@ -124,36 +131,38 @@ cat > config/toolchains/full_android_language_toolchain.json <<JSON
 JSON
 cat config/toolchains/full_android_language_toolchain.json | tee "$REPORT/manifest.json"
 
-clone_or_update() {
+verify_pinned_git_source() {
   name="$1"
-  url="$2"
-  dest="$3"
-  ref="${4:-}"
-
+  dest="$2"
+  expected="$3"
   echo
-  echo "== source: $name =="
-  echo "url=$url"
+  echo "== pinned source: $name =="
   echo "dest=$dest"
-  echo "ref=${ref:-default}"
+  echo "expected=$expected"
+  [ -d "$dest/.git" ] || { echo "FAIL: materialized git source is missing: $dest" >&2; exit 1; }
+  actual="$(git -C "$dest" rev-parse HEAD)"
+  [ "$actual" = "$expected" ] || { echo "FAIL: $name source revision mismatch: expected $expected got $actual" >&2; exit 1; }
+  printf '%s\n' "$actual" | tee "$REPORT/${name}_head.txt"
+}
 
-  if [ -d "$dest/.git" ]; then
-    git -C "$dest" fetch --tags --prune
+verify_locally_retained_llvm_source() {
+  dest="$1"
+  echo
+  echo "== locally retained LLVM source =="
+  [ -f "$dest/llvm/CMakeLists.txt" ] || { echo "FAIL: retained LLVM source tree is missing: $dest" >&2; exit 1; }
+  if [ -f "$ROOT/audit/toolchain/llvm_project_tree_sha256.txt" ]; then
+    cat "$ROOT/audit/toolchain/llvm_project_tree_sha256.txt" | tee "$REPORT/llvm_project_tree_sha256.txt"
   else
-    git clone "$url" "$dest"
+    echo "FAIL: LLVM source tree content identity is absent; run the source identity capture before source build" >&2
+    exit 1
   fi
-
-  if [ -n "$ref" ]; then
-    git -C "$dest" checkout "$ref"
-  fi
-
-  git -C "$dest" rev-parse HEAD | tee "$REPORT/${name}_head.txt"
 }
 
 echo
-echo "== source acquisition =="
-clone_or_update cpython https://github.com/python/cpython.git "$SRC/cpython" "${CPYTHON_REF:-}"
-clone_or_update llvm_project https://github.com/llvm/llvm-project.git "$SRC/llvm-project" "${LLVM_REF:-}"
-clone_or_update rust https://github.com/rust-lang/rust.git "$SRC/rust" "${RUST_REF:-}"
+echo "== pinned source verification (no floating network clone) =="
+verify_pinned_git_source cpython "$SRC/cpython" "${CPYTHON_REF:-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f}"
+verify_locally_retained_llvm_source "$SRC/llvm-project"
+verify_pinned_git_source rust "$SRC/rust" "${RUST_REF:-f964de49bcb561e5c6c725bb37201e11d852daf0}"
 
 echo
 echo "== build CPython from source =="
@@ -173,7 +182,7 @@ mkdir -p "$PY_INSTALL"
     LDFLAGS="-fuse-ld=lld" \
     | tee "$REPORT/cpython_configure.txt"
 
-  make -j"${JOBS:-7}" | tee "$REPORT/cpython_build.txt"
+  make -j"$JOBS" | tee "$REPORT/cpython_build.txt"
   make install | tee "$REPORT/cpython_install.txt"
 )
 
@@ -202,7 +211,7 @@ cmake -S "$SRC/llvm-project/llvm" -B "$LLVM_BUILD" -G Ninja \
   -DLLVM_LINK_LLVM_DYLIB=OFF \
   | tee "$REPORT/llvm_configure.txt"
 
-ninja -C "$LLVM_BUILD" -j"${JOBS:-7}" | tee "$REPORT/llvm_build.txt"
+ninja -C "$LLVM_BUILD" -j"$JOBS" | tee "$REPORT/llvm_build.txt"
 ninja -C "$LLVM_BUILD" install | tee "$REPORT/llvm_install.txt"
 
 {
