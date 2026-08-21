@@ -1,0 +1,73 @@
+{
+  "schema": "braxon.native.final_toolchain_closure.v1",
+  "generated_at": "2026-08-21T11:25:46.670Z",
+  "target_environment": {
+    "declared_architecture": "aarch64",
+    "declared_platform": "android",
+    "declared_abi": "aarch64-linux-android",
+    "declared_android_api_floor": 24,
+    "controller_architecture": "x64",
+    "controller_platform": "linux",
+    "actual_target_probe_performed": false,
+    "target_build_claimed": false
+  },
+  "inventory_outputs": {
+    "toolchain_inventory": {
+      "path": "state/full_android_language_toolchain/inventories/toolchain_inventory.json",
+      "bytes": 57845,
+      "sha256": "f150ffaac6e454d94f5b0966d52fb9d0390baca79e02833414ffda346e995a05"
+    },
+    "missing_symbols": {
+      "path": "state/full_android_language_toolchain/inventories/missing_symbols.json",
+      "bytes": 60278,
+      "sha256": "94d51c9af8f5824b1e16a05784f55647916343ccac016580416b3cd09b6e43dc"
+    },
+    "contract_closure": {
+      "path": "state/full_android_language_toolchain/inventories/contract_closure.json",
+      "bytes": 1030,
+      "sha256": "7a7c229bf3dd438be2909a2913fe967514d1a9d601efe773fd3b77c8e86af8ad"
+    },
+    "abi_closure": {
+      "path": "state/full_android_language_toolchain/inventories/abi_closure.json",
+      "bytes": 622,
+      "sha256": "5c58d9ded2fd0b4c1ff0eeb2135728908f9d18b3186aab429c68986b7a67e355"
+    },
+    "semantic_reflex_inventory": {
+      "path": "state/full_android_language_toolchain/inventories/semantic_reflex_inventory.json",
+      "bytes": 7499,
+      "sha256": "34e3af31a8ce027850bbe8dd75daf2abd2d75b31be43528f92d814591441a748"
+    },
+    "upstream_provenance": {
+      "path": "state/full_android_language_toolchain/inventories/upstream_provenance.json",
+      "bytes": 3272,
+      "sha256": "d94b51ebc652c0c8d892ce6afe193ec981e66572617ad1439ee27493cbec34eb"
+    },
+    "license_classification": {
+      "path": "state/full_android_language_toolchain/inventories/license_classification.json",
+      "bytes": 6006,
+      "sha256": "344dac658d975f5603bab1de98b4381e8d83e3ac71152e3542da268c6fede429"
+    },
+    "target_prerequisites": {
+      "path": "state/full_android_language_toolchain/inventories/target_prerequisites.json",
+      "bytes": 2035,
+      "sha256": "79252b2087e12119779baedf8db91404d1c43021856158c672b44ec6f60b261f"
+    },
+    "human_report": {
+      "path": "state/full_android_language_toolchain/inventories/NATIVE_CONTRACT_CLOSURE.md",
+      "bytes": 3734,
+      "sha256": "e865c1206af5ec24ad9a333ce262f83aaf6e5fec0eb1f218aaa4112cb35ebffe"
+    }
+  },
+  "native_contract_family_status": "SOURCE_DERIVED_INVENTORY_COMPLETE_TARGET_PROOF_PENDING",
+  "rust_edge_nightly_status": "REPOSITORY_CONTAINED_NATIVE_PROMOTION_PATH_IMPLEMENTED_TARGET_BUILD_PENDING",
+  "cpython_status": "REPOSITORY_CONTAINED_SOURCE_AND_DOWNSTREAM_PROBE_ROUTE_PRESENT_TARGET_BUILD_PENDING",
+  "llvm_status": "RETAINED_SOURCE_AND_SOURCE_BUILD_ROUTE_PRESENT_TARGET_BUILD_PENDING",
+  "semantic_reflex_status": "CANONICAL_NSQ_ROUTE_PRESENT_NATIVE_TARGET_CLOSURE_PENDING",
+  "completion_claim_permitted": false,
+  "unresolved_status_classes": [
+    "BLOCKED_TARGET",
+    "EXTERNAL_PREREQUISITE",
+    "PROPRIETARY_NOT_REDISTRIBUTABLE",
+    "UNRESOLVED"
+  ]
+}

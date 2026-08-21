@@ -59,10 +59,10 @@
       "target": "aarch64-linux-android",
       "source": "config/toolchains/rust_bootstrap_chain.json",
       "license": "Apache-2.0 OR MIT",
-      "artifact_status": "blocked_pending_verified_pinned_rust_source_and_target_capacity_preflight",
+      "artifact_status": "repository_contained_pinned_source_archives_available; target_stage_build_and_capacity_preflight_required",
       "normal_runtime_required": false,
       "semantic_translation": "Source-stage promotion is a bounded NSQ control operation with explicit source, target, and proof requirements",
-      "release_status": "stage1 and stage2 are not claimed built until their target receipts and equivalence evidence exist"
+      "release_status": "the preserved 1.97.1 bootstrap may start native stage work; stage1 and stage2 are not claimed built until their target receipts and equivalence evidence exist"
     },
     {
       "id": "rust_edge_nightly_2026_08_20",
@@ -72,13 +72,13 @@
       "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
       "components": ["rustc", "cargo", "rust-std", "rustfmt", "clippy", "rust-analyzer semantics"],
       "target": "aarch64-linux-android",
-      "rust_std_url": "https://static.rust-lang.org/dist/2026-08-20/rust-std-nightly-aarch64-linux-android.tar.xz",
-      "rust_std_sha256": "7609453cd6789b70a314edf32fa70ad9e36b74146be258e725de71df455211c0",
+      "rust_std_source": "library/std within the repository-contained pinned Rust source archive; no rust-std binary download is used",
+      "rust_std_binary_download_allowed": false,
       "license": "Apache-2.0 OR MIT",
-      "artifact_status": "upstream_descriptor_contained_artifact_not_embedded",
+      "artifact_status": "repository_contained_matching_source_archive_unextracted_not_activated",
       "normal_runtime_required": false,
-      "semantic_translation": "candidate lane; activation requires local artifact materialization and equivalence evidence",
-      "release_status": "explicit source-edge acquisition exception; source is not inferred from the f964de49 gitlink and the lane is never selected by default before local target equivalence verification"
+      "semantic_translation": "candidate lane; activation requires the bounded native source-build control route and target equivalence evidence",
+      "release_status": "the matching source archive is repository-contained and distinct from the f964de49 source; it is never selected by default before native AArch64 stage1/stage2, ELF/ABI, execution, and equivalence verification"
     },
     {
       "id": "llvm_clang_lld_source_lane",

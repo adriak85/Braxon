@@ -1,0 +1,1518 @@
+{
+  "schema": "braxon.native.toolchain_inventory.v1",
+  "generated_at": "2026-08-21T11:25:46.666Z",
+  "target_environment": {
+    "declared_architecture": "aarch64",
+    "declared_platform": "android",
+    "declared_abi": "aarch64-linux-android",
+    "declared_android_api_floor": 24,
+    "controller_architecture": "x64",
+    "controller_platform": "linux",
+    "actual_target_probe_performed": false,
+    "target_build_claimed": false
+  },
+  "source_roots": [
+    {
+      "id": "llvm_project",
+      "path": "state/full_android_language_toolchain/src/llvm-project",
+      "indicators": [
+        "llvm/CMakeLists.txt",
+        "clang/CMakeLists.txt",
+        "lld/CMakeLists.txt",
+        "compiler-rt/CMakeLists.txt",
+        "libcxx/CMakeLists.txt",
+        "libcxxabi/CMakeLists.txt",
+        "libunwind/CMakeLists.txt"
+      ],
+      "present": true,
+      "required_indicators_present": [
+        {
+          "indicator": "llvm/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "clang/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "lld/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "compiler-rt/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "libcxx/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "libcxxabi/CMakeLists.txt",
+          "present": true
+        },
+        {
+          "indicator": "libunwind/CMakeLists.txt",
+          "present": true
+        }
+      ]
+    },
+    {
+      "id": "rust_stage1_source",
+      "path": "state/full_android_language_toolchain/src/rust",
+      "indicators": [
+        "x.py",
+        "compiler/rustc/Cargo.toml",
+        "library/std/Cargo.toml"
+      ],
+      "present": true,
+      "required_indicators_present": [
+        {
+          "indicator": "x.py",
+          "present": true
+        },
+        {
+          "indicator": "compiler/rustc/Cargo.toml",
+          "present": true
+        },
+        {
+          "indicator": "library/std/Cargo.toml",
+          "present": true
+        }
+      ]
+    },
+    {
+      "id": "rust_edge_nightly_source_archive",
+      "path": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+      "indicators": [],
+      "present": true,
+      "required_indicators_present": []
+    },
+    {
+      "id": "cpython",
+      "path": "state/full_android_language_toolchain/src/cpython",
+      "indicators": [
+        "configure.ac",
+        "Python/ceval.c",
+        "Modules/Setup.stdlib.in"
+      ],
+      "present": true,
+      "required_indicators_present": [
+        {
+          "indicator": "configure.ac",
+          "present": true
+        },
+        {
+          "indicator": "Python/ceval.c",
+          "present": true
+        },
+        {
+          "indicator": "Modules/Setup.stdlib.in",
+          "present": true
+        }
+      ]
+    }
+  ],
+  "llvm_components": [
+    "llvm",
+    "clang",
+    "clang-tools-extra",
+    "lld",
+    "lldb",
+    "compiler-rt",
+    "libcxx",
+    "libcxxabi",
+    "libunwind",
+    "polly",
+    "bolt",
+    "AArch64 backend",
+    "ELF/linker infrastructure",
+    "DWARF/debugging infrastructure"
+  ],
+  "rust_components": [
+    "rustc",
+    "cargo",
+    "rustdoc",
+    "rustfmt",
+    "clippy",
+    "compiler-builtins",
+    "core",
+    "alloc",
+    "std",
+    "proc-macro",
+    "target specification",
+    "Android platform support"
+  ],
+  "build_graph_nodes": [
+    {
+      "id": "clone_and_contract_check",
+      "depends_on": [],
+      "proof": "status exit success"
+    },
+    {
+      "id": "target_and_capacity_preflight",
+      "depends_on": [
+        "clone_and_contract_check"
+      ],
+      "proof": "preflight receipt"
+    },
+    {
+      "id": "semantic_corpus_and_nsq_intercept",
+      "depends_on": [
+        "clone_and_contract_check"
+      ],
+      "proof": "language NSQ intercept receipt"
+    },
+    {
+      "id": "functional_watermark_file_operation",
+      "depends_on": [
+        "semantic_corpus_and_nsq_intercept",
+        "target_and_capacity_preflight"
+      ],
+      "proof": "feature:watermark.file_operation report; a native artifact is promoted only after explicit AArch64 compiler success and artifact re-watermark"
+    },
+    {
+      "id": "llvm_local_source_identity",
+      "depends_on": [
+        "clone_and_contract_check"
+      ],
+      "proof": "tree SHA-256 stream identity d705b6d9d2a879b71cb840639259bcd7546195f9b64df30436c62864c18e6a37"
+    },
+    {
+      "id": "rust_and_cpython_pinned_source_edges",
+      "depends_on": [
+        "target_and_capacity_preflight"
+      ],
+      "proof": "submodule revision and source manifest verification"
+    },
+    {
+      "id": "termux_stage0_bootstrap",
+      "depends_on": [
+        "target_and_capacity_preflight"
+      ],
+      "proof": "config/toolchains/termux_android_aarch64_capacity_profile.json"
+    },
+    {
+      "id": "cpython_source_build",
+      "depends_on": [
+        "rust_and_cpython_pinned_source_edges",
+        "termux_stage0_bootstrap",
+        "functional_watermark_file_operation"
+      ],
+      "proof": "target Python version and extension probe"
+    },
+    {
+      "id": "llvm_clang_lld_source_build",
+      "depends_on": [
+        "llvm_local_source_identity",
+        "target_and_capacity_preflight",
+        "functional_watermark_file_operation"
+      ],
+      "proof": "AArch64 compile, link, ELF/DWARF inspection, and target execution receipt"
+    },
+    {
+      "id": "bionic_compatibility_overlay",
+      "depends_on": [
+        "llvm_clang_lld_source_build"
+      ],
+      "proof": "config/nsq/bionic_gnu_compatibility_matrix.json and overlay symbol proof"
+    },
+    {
+      "id": "rust_stage1_and_stage2_source_build",
+      "depends_on": [
+        "rust_and_cpython_pinned_source_edges",
+        "cpython_source_build",
+        "llvm_clang_lld_source_build",
+        "termux_stage0_bootstrap"
+      ],
+      "proof": "stage receipts, stage equivalence evidence, AArch64 compile/link/run probe"
+    },
+    {
+      "id": "edge_nightly_1_100_0_promotion",
+      "depends_on": [
+        "termux_stage0_bootstrap",
+        "cpython_source_build",
+        "llvm_clang_lld_source_build",
+        "bionic_compatibility_overlay"
+      ],
+      "proof": "archive checksum and provenance; preserved bootstrap identity; stage1/stage2 release commit host; AArch64 ELF machine; Android Bionic libc dependency; Bionic/GNU overlay proof; two target execution probes; byte-identical stage output"
+    },
+    {
+      "id": "termux_nsq_calibration_and_recovery",
+      "depends_on": [
+        "cpython_source_build",
+        "llvm_clang_lld_source_build",
+        "rust_stage1_and_stage2_source_build"
+      ],
+      "proof": "calibration SHA-256 verification"
+    },
+    {
+      "id": "complete_language_semantic_proofs",
+      "depends_on": [
+        "termux_nsq_calibration_and_recovery",
+        "bionic_compatibility_overlay"
+      ],
+      "proof": "cargo run --locked --offline -- language <language> <input> reports complete=true"
+    },
+    {
+      "id": "closure_release",
+      "depends_on": [
+        "complete_language_semantic_proofs"
+      ],
+      "proof": "all gates pass and no release blockers remain"
+    }
+  ],
+  "source_built_llvm_binding_required": true,
+  "repository_contained_source_only": true,
+  "source_build_surface_reference_scans": [
+    {
+      "root": "state/full_android_language_toolchain/src/llvm-project",
+      "traversed_regular_files": 158696,
+      "source_or_build_files_scanned": 84728,
+      "bytes_scanned": 822757798,
+      "non_source_or_build_files_skipped": 73967,
+      "oversized_source_or_build_files_skipped": 1,
+      "present": true,
+      "counts": {
+        "sem_clockwait": 1,
+        "pthread_getname_np": 25,
+        "close_range": 0,
+        "statx": 51,
+        "copy_file_range": 17,
+        "getrandom": 65,
+        "memfd_create": 30,
+        "eventfd": 36,
+        "eventfd_read": 1,
+        "eventfd_write": 1,
+        "pipe2": 81,
+        "dup3": 83,
+        "accept4": 79
+      },
+      "samples": {
+        "sem_clockwait": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/semaphore/linux/semaphore.h",
+            "byte_offset": 1092
+          }
+        ],
+        "pthread_getname_np": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/msan/pthread_getname_np.cpp",
+            "byte_offset": 473
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/msan/pthread_getname_np.cpp",
+            "byte_offset": 1060
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/tsan/Darwin/dyld-insert-libraries.c",
+            "byte_offset": 1528
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/tsan/Darwin/dyld-insert-libraries.c",
+            "byte_offset": 2191
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/config/linux/aarch64/entrypoints.txt",
+            "byte_offset": 29547
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/config/linux/riscv/entrypoints.txt",
+            "byte_offset": 32864
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/config/linux/x86_64/entrypoints.txt",
+            "byte_offset": 34352
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/pthread.yaml",
+            "byte_offset": 6391
+          }
+        ],
+        "close_range": [],
+        "statx": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/config/linux/x86_64/exclude.txt",
+            "byte_offset": 219
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 36799
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 36817
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 36828
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/__support/OSUtil/linux/syscall_wrappers/CMakeLists.txt",
+            "byte_offset": 5083
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/__support/OSUtil/linux/syscall_wrappers/CMakeLists.txt",
+            "byte_offset": 5100
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/__support/OSUtil/linux/syscall_wrappers/statx.h",
+            "byte_offset": 425
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/src/__support/OSUtil/linux/syscall_wrappers/statx.h",
+            "byte_offset": 956
+          }
+        ],
+        "copy_file_range": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Linux/copy_file_range.c",
+            "byte_offset": 335
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Linux/copy_file_range.c",
+            "byte_offset": 433
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Linux/copy_file_range.c",
+            "byte_offset": 692
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Linux/copy_file_range.c",
+            "byte_offset": 800
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Linux/copy_file_range.c",
+            "byte_offset": 894
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 3821
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 3849
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/include/sys/syscall.h.def",
+            "byte_offset": 3870
+          }
+        ],
+        "getrandom": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 33971
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 34051
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 34199
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 34279
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 230994
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/include/sanitizer/netbsd_syscall_hooks.h",
+            "byte_offset": 231134
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/sanitizer_common/TestCases/Posix/getrandom.c",
+            "byte_offset": 508
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/libc/config/linux/aarch64/entrypoints.txt",
+            "byte_offset": 8553
+          }
+        ],
+        "memfd_create": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecMemfdCreateCheck.cpp",
+            "byte_offset": 706
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecMemfdCreateCheck.h",
+            "byte_offset": 609
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 389
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 455
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 542
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 643
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 717
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/test/clang-tidy/checkers/android/cloexec-memfd-create.cpp",
+            "byte_offset": 805
+          }
+        ],
+        "eventfd": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-include-fixer/find-all-symbols/STLPostfixHeaderMap.cpp",
+            "byte_offset": 24249
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-include-fixer/find-all-symbols/STLPostfixHeaderMap.cpp",
+            "byte_offset": 24268
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-include-fixer/find-all-symbols/STLPostfixHeaderMap.cpp",
+            "byte_offset": 27097
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-include-fixer/find-all-symbols/STLPostfixHeaderMap.cpp",
+            "byte_offset": 27116
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/index/CanonicalIncludes.cpp",
+            "byte_offset": 23261
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/index/CanonicalIncludes.cpp",
+            "byte_offset": 23279
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/index/CanonicalIncludes.cpp",
+            "byte_offset": 25905
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/index/CanonicalIncludes.cpp",
+            "byte_offset": 25923
+          }
+        ],
+        "eventfd_read": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/compiler-rt/test/msan/eventfd.cpp",
+            "byte_offset": 296
+          }
+        ],
+        "eventfd_write": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/lldb/source/Host/common/MemoryMonitor.cpp",
+            "byte_offset": 2217
+          }
+        ],
+        "pipe2": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/AndroidTidyModule.cpp",
+            "byte_offset": 2343
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipe2Check.cpp",
+            "byte_offset": 666
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipe2Check.h",
+            "byte_offset": 597
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipe2Check.h",
+            "byte_offset": 753
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipeCheck.cpp",
+            "byte_offset": 876
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipeCheck.cpp",
+            "byte_offset": 983
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecPipeCheck.h",
+            "byte_offset": 624
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clangd/TidyFastChecks.inc",
+            "byte_offset": 1670
+          }
+        ],
+        "dup3": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 989
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 1085
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 2026
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 2065
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 2558
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 2597
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 4812
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang/test/CodeGen/attr-target-clones-aarch64.c",
+            "byte_offset": 5010
+          }
+        ],
+        "accept4": [
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/AndroidTidyModule.cpp",
+            "byte_offset": 1297
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAccept4Check.cpp",
+            "byte_offset": 866
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAccept4Check.h",
+            "byte_offset": 601
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAccept4Check.h",
+            "byte_offset": 762
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAcceptCheck.cpp",
+            "byte_offset": 1226
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAcceptCheck.cpp",
+            "byte_offset": 1432
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAcceptCheck.cpp",
+            "byte_offset": 1462
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/llvm-project/clang-tools-extra/clang-tidy/android/CloexecAcceptCheck.h",
+            "byte_offset": 615
+          }
+        ]
+      }
+    },
+    {
+      "root": "state/full_android_language_toolchain/src/rust",
+      "traversed_regular_files": 239685,
+      "source_or_build_files_scanned": 169538,
+      "bytes_scanned": 660457315,
+      "non_source_or_build_files_skipped": 70147,
+      "oversized_source_or_build_files_skipped": 0,
+      "present": true,
+      "counts": {
+        "sem_clockwait": 0,
+        "pthread_getname_np": 38,
+        "close_range": 81,
+        "statx": 261,
+        "copy_file_range": 124,
+        "getrandom": 271,
+        "memfd_create": 88,
+        "eventfd": 354,
+        "eventfd_read": 13,
+        "eventfd_write": 13,
+        "pipe2": 145,
+        "dup3": 140,
+        "accept4": 181
+      },
+      "samples": {
+        "sem_clockwait": [],
+        "pthread_getname_np": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/thread/tests.rs",
+            "byte_offset": 932
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/thread/tests.rs",
+            "byte_offset": 1646
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/fuchsia/mod.rs",
+            "byte_offset": 129730
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/apple/mod.rs",
+            "byte_offset": 212785
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/mod.rs",
+            "byte_offset": 54805
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs",
+            "byte_offset": 90125
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/haiku/mod.rs",
+            "byte_offset": 68611
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/mod.rs",
+            "byte_offset": 195877
+          }
+        ],
+        "close_range": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 188729
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/hurd/mod.rs",
+            "byte_offset": 140633
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/arm/mod.rs",
+            "byte_offset": 29957
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/csky/mod.rs",
+            "byte_offset": 25514
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/m68k/mod.rs",
+            "byte_offset": 30648
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/mips/mod.rs",
+            "byte_offset": 21892
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/powerpc.rs",
+            "byte_offset": 29183
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/gnu/b32/riscv32/mod.rs",
+            "byte_offset": 27430
+          }
+        ],
+        "statx": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/fs.rs",
+            "byte_offset": 54239
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/fs.rs",
+            "byte_offset": 74989
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 3291
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 3450
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 3879
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 3966
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 4194
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/fs/unix.rs",
+            "byte_offset": 4227
+          }
+        ],
+        "copy_file_range": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/fs.rs",
+            "byte_offset": 98064
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/io/copy.rs",
+            "byte_offset": 1558
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 1115
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 1951
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 5194
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 5286
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 5478
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/io/kernel_copy/linux.rs",
+            "byte_offset": 8631
+          }
+        ],
+        "getrandom": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc/Cargo.toml",
+            "byte_offset": 866
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc_codegen_cranelift/patches/rand-lock.toml",
+            "byte_offset": 6702
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc_codegen_cranelift/patches/rand-lock.toml",
+            "byte_offset": 12786
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc_codegen_cranelift/patches/regex-lock.toml",
+            "byte_offset": 2343
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc_codegen_cranelift/patches/regex-lock.toml",
+            "byte_offset": 5726
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/compiler/rustc_codegen_gcc/build_system/src/test.rs",
+            "byte_offset": 26337
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/compiler-builtins/Cargo.toml",
+            "byte_offset": 1258
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/compiler-builtins/libm-test/Cargo.toml",
+            "byte_offset": 989
+          }
+        ],
+        "memfd_create": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/configure",
+            "byte_offset": 478499
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/configure",
+            "byte_offset": 478549
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/configure",
+            "byte_offset": 478575
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/configure",
+            "byte_offset": 478611
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/configure.ac",
+            "byte_offset": 2388
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/fficonfig.h.in",
+            "byte_offset": 2466
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libffi/src/closures.c",
+            "byte_offset": 16434
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 185782
+          }
+        ],
+        "eventfd": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/fuchsia/mod.rs",
+            "byte_offset": 145713
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 1255
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 130325
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 185922
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 185985
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 186023
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 186057
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 186091
+          }
+        ],
+        "eventfd_read": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 185985
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/android/mod.rs",
+            "byte_offset": 131377
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/mod.rs",
+            "byte_offset": 182623
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254239
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254338
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254447
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 255041
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/tools/miri/src/shims/unix/linux_like/eventfd.rs",
+            "byte_offset": 2609
+          }
+        ],
+        "eventfd_write": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/bsd/freebsdlike/freebsd/mod.rs",
+            "byte_offset": 186057
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/android/mod.rs",
+            "byte_offset": 131449
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libgrust/libformat_parser/vendor/libc/src/unix/linux_like/linux/mod.rs",
+            "byte_offset": 182695
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254649
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254748
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 254925
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc",
+            "byte_offset": 255086
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/tools/miri/src/shims/unix/linux_like/eventfd.rs",
+            "byte_offset": 4090
+          }
+        ],
+        "pipe2": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/pipe/unix.rs",
+            "byte_offset": 300
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/pipe/unix.rs",
+            "byte_offset": 856
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/analyzer/sm-fd.cc",
+            "byte_offset": 73899
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/analyzer/sm-fd.cc",
+            "byte_offset": 77878
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/pipe2-1.c",
+            "byte_offset": 108
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/pipe2-1.c",
+            "byte_offset": 212
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/pipe2-1.c",
+            "byte_offset": 257
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/pipe2-1.c",
+            "byte_offset": 810
+          }
+        ],
+        "dup3": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/os/solid/io.rs",
+            "byte_offset": 1635
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/os/unix/io/mod.rs",
+            "byte_offset": 2369
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/analyzer/sm-fd.cc",
+            "byte_offset": 1719
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/analyzer/sm-fd.cc",
+            "byte_offset": 36771
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/fd-dup-1.c",
+            "byte_offset": 115
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/fd-dup-1.c",
+            "byte_offset": 2486
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/fd-dup-1.c",
+            "byte_offset": 2534
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/gcc/testsuite/gcc.dg/analyzer/fd-dup-1.c",
+            "byte_offset": 2808
+          }
+        ],
+        "accept4": [
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/net/connection/socket/mod.rs",
+            "byte_offset": 18437
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/net/connection/socket/unix.rs",
+            "byte_offset": 8980
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/library/std/src/sys/net/connection/socket/unix.rs",
+            "byte_offset": 9585
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/c++tools/config.h.in",
+            "byte_offset": 177
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/c++tools/configure",
+            "byte_offset": 107606
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/c++tools/configure",
+            "byte_offset": 107643
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/c++tools/configure",
+            "byte_offset": 107705
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/rust/src/gcc/c++tools/configure",
+            "byte_offset": 107743
+          }
+        ]
+      }
+    },
+    {
+      "root": "state/full_android_language_toolchain/src/cpython",
+      "traversed_regular_files": 5549,
+      "source_or_build_files_scanned": 3826,
+      "bytes_scanned": 86181977,
+      "non_source_or_build_files_skipped": 1723,
+      "oversized_source_or_build_files_skipped": 0,
+      "present": true,
+      "counts": {
+        "sem_clockwait": 7,
+        "pthread_getname_np": 9,
+        "close_range": 17,
+        "statx": 168,
+        "copy_file_range": 51,
+        "getrandom": 118,
+        "memfd_create": 34,
+        "eventfd": 84,
+        "eventfd_read": 21,
+        "eventfd_write": 18,
+        "pipe2": 34,
+        "dup3": 13,
+        "accept4": 14
+      },
+      "samples": {
+        "sem_clockwait": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 574532
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 574559
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 574596
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 177574
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/pyconfig.h.in",
+            "byte_offset": 31399
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Python/parking_lot.c",
+            "byte_offset": 5109
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Python/thread_pthread.h",
+            "byte_offset": 3586
+          }
+        ],
+        "pthread_getname_np": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 570836
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 570868
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 570910
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 177289
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_threadmodule.c",
+            "byte_offset": 73954
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_threadmodule.c",
+            "byte_offset": 74633
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/pyconfig.h.in",
+            "byte_offset": 28177
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Python/traceback.c",
+            "byte_offset": 31261
+          }
+        ],
+        "close_range": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553013
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553038
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553073
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 176212
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_posixsubprocess.c",
+            "byte_offset": 10214
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_posixsubprocess.c",
+            "byte_offset": 13087
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_posixsubprocess.c",
+            "byte_offset": 16217
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/_posixsubprocess.c",
+            "byte_offset": 17075
+          }
+        ],
+        "statx": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585670
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585689
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585736
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585879
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585898
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 585927
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 695192
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 695321
+          }
+        ],
+        "copy_file_range": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553355
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553384
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 553423
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 176236
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/pathlib/_os.py",
+            "byte_offset": 1754
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/pathlib/_os.py",
+            "byte_offset": 1782
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/pathlib/_os.py",
+            "byte_offset": 1928
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/pathlib/_os.py",
+            "byte_offset": 2234
+          }
+        ],
+        "getrandom": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 825416
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 825518
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 825577
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 825625
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 826119
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 826232
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 826283
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 826488
+          }
+        ],
+        "memfd_create": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597328
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597370
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597416
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597691
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597782
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 597833
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598015
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598060
+          }
+        ],
+        "eventfd": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 336848
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 336877
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 336939
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598262
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598299
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598340
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598517
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 598562
+          }
+        ],
+        "eventfd_read": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151356
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151465
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151838
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151905
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152052
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152242
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152393
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152994
+          }
+        ],
+        "eventfd_write": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151369
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151394
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 151427
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152204
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 152825
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 153068
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/clinic/posixmodule.c.h",
+            "byte_offset": 324190
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/clinic/posixmodule.c.h",
+            "byte_offset": 324213
+          }
+        ],
+        "pipe2": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 567239
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 567258
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 567287
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 176996
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_os.py",
+            "byte_offset": 72191
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_posix.py",
+            "byte_offset": 41570
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_posix.py",
+            "byte_offset": 41594
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Lib/test/test_os/test_posix.py",
+            "byte_offset": 41663
+          }
+        ],
+        "dup3": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 554019
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 554037
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 554065
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 176271
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/posixmodule.c",
+            "byte_offset": 324875
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/posixmodule.c",
+            "byte_offset": 324944
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/posixmodule.c",
+            "byte_offset": 325959
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/posixmodule.c",
+            "byte_offset": 326023
+          }
+        ],
+        "accept4": [
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 551665
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 551686
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure",
+            "byte_offset": 551717
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/configure.ac",
+            "byte_offset": 176133
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/socketmodule.c",
+            "byte_offset": 18545
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/socketmodule.c",
+            "byte_offset": 18614
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/socketmodule.c",
+            "byte_offset": 95695
+          },
+          {
+            "path": "state/full_android_language_toolchain/src/cpython/Modules/socketmodule.c",
+            "byte_offset": 95740
+          }
+        ]
+      }
+    }
+  ]
+}

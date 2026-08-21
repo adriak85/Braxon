@@ -1,0 +1,83 @@
+{
+  "schema": "braxon.nsq.native_contract_closure_inventory.v1",
+  "authority": "BRAXON_NATIVE_CONTRACT_CLOSURE",
+  "owner": "Michael David Norris",
+  "capability": "feature:toolchain.bionic_compatibility",
+  "canonical_identity": "route:toolchain.native_contract_closure_inventory",
+  "target": {
+    "architecture": "aarch64",
+    "platform": "android",
+    "abi": "aarch64-linux-android",
+    "android_api_floor": 24
+  },
+  "execution_model": {
+    "on_demand": true,
+    "resident_runtime": false,
+    "hidden_download_allowed": false,
+    "system_or_termux_prefix_write_allowed": false,
+    "source_authority": "repository-contained source archives, retained source trees, canonical contracts, and staged native overlay sources"
+  },
+  "source_inputs": [
+    "config/nsq/bionic_gnu_compatibility_matrix.json",
+    "config/nsq/language_functional_ingestion_matrix.json",
+    "config/toolchains/source_availability_manifest.json",
+    "config/toolchains/license_report.json",
+    "config/toolchains/termux_android_aarch64_capacity_profile.json",
+    "config/toolchains/rust_bootstrap_chain.json",
+    "config/toolchains/source_built_build_graph.json",
+    "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+    "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+    "scripts/toolchains/rebuild_full_android_language_toolchain.sh",
+    "scripts/toolchains/promote_rust_edge_nightly_aarch64.sh"
+  ],
+  "inventory_outputs": [
+    "state/full_android_language_toolchain/inventories/toolchain_inventory.json",
+    "state/full_android_language_toolchain/inventories/missing_symbols.json",
+    "state/full_android_language_toolchain/inventories/contract_closure.json",
+    "state/full_android_language_toolchain/inventories/abi_closure.json",
+    "state/full_android_language_toolchain/inventories/semantic_reflex_inventory.json",
+    "state/full_android_language_toolchain/inventories/upstream_provenance.json",
+    "state/full_android_language_toolchain/inventories/license_classification.json",
+    "state/full_android_language_toolchain/inventories/target_prerequisites.json",
+    "state/full_android_language_toolchain/inventories/final_toolchain_closure.json"
+  ],
+  "classification_set": [
+    "CLOSED_NATIVE",
+    "CLOSED_HEADER",
+    "CLOSED_EXISTING_ANDROID",
+    "CLOSED_VIA_SYSCALL",
+    "CLOSED_VIA_FALLBACK",
+    "CLOSED_UPSTREAM",
+    "BLOCKED_TARGET",
+    "EXTERNAL_PREREQUISITE",
+    "PROPRIETARY_NOT_REDISTRIBUTABLE",
+    "HISTORICAL",
+    "UNRESOLVED"
+  ],
+  "required_proof_chain": [
+    "source-derived inventory",
+    "classification",
+    "staged compatibility header where required",
+    "native implementation only where required",
+    "AArch64 Android compilation",
+    "static archive and shared overlay library",
+    "symbol inspection",
+    "consumer compile and link",
+    "target execution where executable",
+    "downstream consumer probe",
+    "machine-readable proof",
+    "NSQ semantic registration",
+    "canonicality and contract validation"
+  ],
+  "dialect_projection": {
+    "alphabetic": "canonical interface identity, header, source, target, contract, and provenance lexemes",
+    "numeric": "ABI widths, Android API floor, syscall numbers, file sizes, and deterministic counts",
+    "intent": "request inventory, classify a native gap, or execute a declared compatibility proof route",
+    "symbolic": "interface signatures, headers, types, structs, linker identities, and source/proof hashes",
+    "stamp": "source archive, source hash, build flags, exported-symbol proof, and target receipt",
+    "control": "inventory generation, materialization, compile, link, run, downstream validation, and fail-closed promotion",
+    "graphics": "not applicable unless the source-derived inventory identifies a graphics-native dependency",
+    "audio": "not applicable unless the source-derived inventory identifies an audio-native dependency"
+  },
+  "failure_closed_behavior": "No inventory entry, overlay surface, downstream consumer, Rust nightly, LLVM component, CPython component, or declared language runtime may be represented as target-complete without its corresponding actual AArch64 Android build/probe evidence. Unknown requirements remain classified, never silently ignored."
+}

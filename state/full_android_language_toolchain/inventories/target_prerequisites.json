@@ -1,0 +1,41 @@
+{
+  "schema": "braxon.native.target_prerequisites.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "target_environment": {
+    "declared_architecture": "aarch64",
+    "declared_platform": "android",
+    "declared_abi": "aarch64-linux-android",
+    "declared_android_api_floor": 24,
+    "controller_architecture": "x64",
+    "controller_platform": "linux",
+    "actual_target_probe_performed": false,
+    "target_build_claimed": false
+  },
+  "capacity_blockers": [
+    {
+      "id": "observed_executable_root_full",
+      "condition": "user-provided snapshot reported the root filesystem at 100% utilization",
+      "required_action": "run the repository capacity preflight on the actual intended executable build path; do not launch a source rebuild until it passes"
+    },
+    {
+      "id": "shared_storage_execution_unknown",
+      "condition": "user-provided snapshot showed available shared storage but did not prove executable mount semantics for toolchain binaries",
+      "required_action": "verify mount flags and execute a controlled local probe before using shared storage as a build or install location"
+    }
+  ],
+  "rust_release_blockers": [
+    "run target capacity preflight on the actual executable build filesystem",
+    "complete the repository-contained CPython and source-built LLVM prerequisites with the Bionic/GNU overlay target proof",
+    "build and validate edge-nightly stage1 then stage2 from the preserved 1.97.1 bootstrap on AArch64 Android",
+    "retain version, target, ELF/ABI, execution, and stage-equivalence receipts before activating 1.100.0-nightly"
+  ],
+  "required_sequence": [
+    "scripts/braxon_reconstruct.sh preflight",
+    "scripts/braxon_reconstruct.sh source-edge",
+    "BRAXON_SOURCE_BUILD_APPROVED=1 JOBS=1 scripts/braxon_reconstruct.sh source-build",
+    "BRAXON_SOURCE_BUILD_APPROVED=1 JOBS=1 scripts/braxon_reconstruct.sh edge-nightly-build",
+    "scripts/braxon_reconstruct.sh calibrate",
+    "scripts/braxon_reconstruct.sh verify"
+  ],
+  "completion_claim_permitted": false
+}

@@ -1131,10 +1131,18 @@ fn collect_project_source_files(
 ) -> Result<(), String> {
     for entry in fs::read_dir(directory).map_err(|err| err.to_string())? {
         let entry = entry.map_err(|err| err.to_string())?;
+        let file_type = entry.file_type().map_err(|err| err.to_string())?;
+        // A linked directory can escape the workspace and can also re-enter a
+        // generated/state tree through a different lexical path. The full-tree
+        // audit classifies links separately; source ingestion only traverses
+        // project-owned physical directories and files.
+        if file_type.is_symlink() {
+            continue;
+        }
         let path = entry.path();
         let file_name = entry.file_name();
         let file_name = file_name.to_string_lossy();
-        if path.is_dir() {
+        if file_type.is_dir() {
             if matches!(
                 file_name.as_ref(),
                 ".git" | "target" | "state" | ".idea" | ".vscode"
@@ -1142,7 +1150,7 @@ fn collect_project_source_files(
                 continue;
             }
             collect_project_source_files(root, &path, files)?;
-        } else if path.is_file() && is_project_source_file(root, &path) {
+        } else if file_type.is_file() && is_project_source_file(root, &path) {
             files.push(path);
         }
     }
@@ -1630,6 +1638,35 @@ mod tests {
             .filter(|capability| capability.kind == CapabilityKind::ProjectSource)
             .all(|capability| capability.complete_nsq_ingestion
                 && capability.semantic_authority == "nsq"));
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn source_ingestion_does_not_follow_linked_directory_boundaries() {
+        use std::os::unix::fs::symlink;
+
+        let root = std::env::temp_dir().join(format!(
+            "braxon_nsq_reflexor_source_boundary_{}_{}",
+            std::process::id(),
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .expect("system clock")
+                .as_nanos()
+        ));
+        let physical = root.join("physical");
+        fs::create_dir_all(&physical).expect("physical source directory");
+        fs::write(physical.join("active.rs"), "pub fn active() {}\n").expect("physical source");
+        symlink(&physical, root.join("linked_boundary")).expect("linked boundary");
+
+        let sources = source_tree_capabilities(&root).expect("source ingestion");
+        let source_ids = sources
+            .iter()
+            .map(|capability| capability.id.as_str())
+            .collect::<BTreeSet<_>>();
+        assert!(source_ids.contains("source:physical/active.rs"));
+        assert!(!source_ids.iter().any(|id| id.contains("linked_boundary")));
+
+        fs::remove_dir_all(&root).expect("temporary boundary cleanup");
     }
 
     #[test]

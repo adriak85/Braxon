@@ -92,6 +92,8 @@ struct SourceAvailabilityRecord {
     source_status: String,
     #[serde(default)]
     upstream_commit_verified: bool,
+    #[serde(default)]
+    materialization_evidence: serde_json::Value,
 }
 
 #[derive(Debug, Deserialize)]
@@ -190,6 +192,62 @@ fn source_is_materialized(root: &Path, record: &SourceAvailabilityRecord) -> boo
         && fs::read_dir(path)
             .map(|mut entries| entries.next().is_some())
             .unwrap_or(false)
+}
+
+fn clone_contained_archive_evidence_is_present(
+    root: &Path,
+    record: &SourceAvailabilityRecord,
+) -> bool {
+    let archive = record
+        .materialization_evidence
+        .get("clone_contained_archive")
+        .and_then(|value| value.as_object());
+    let Some(archive) = archive else {
+        return false;
+    };
+    let archive_path = archive.get("path").and_then(|value| value.as_str());
+    let provenance_path = archive.get("provenance").and_then(|value| value.as_str());
+    let sha256 = archive.get("sha256").and_then(|value| value.as_str());
+    let license_evidence = archive
+        .get("license_evidence")
+        .and_then(|value| value.as_array());
+    archive_path
+        .map(|value| root.join(value).is_file())
+        .unwrap_or(false)
+        && provenance_path
+            .map(|value| root.join(value).is_file())
+            .unwrap_or(false)
+        && sha256
+            .map(|value| value.len() == 64 && value.bytes().all(|byte| byte.is_ascii_hexdigit()))
+            .unwrap_or(false)
+        && license_evidence
+            .map(|value| !value.is_empty())
+            .unwrap_or(false)
+}
+
+fn source_record_is_truthful(root: &Path, record: &SourceAvailabilityRecord) -> bool {
+    match record.source_status.as_str() {
+        "materialized_local_source_tree" | "materialized_source_tree" => {
+            source_is_materialized(root, record)
+        }
+        "pinned_source_edge_locally_observed_not_clone_contained" => {
+            !record.source_url.is_empty() && record.upstream_commit_verified
+        }
+        "unmaterialized_orphaned_gitlink" => {
+            !source_is_materialized(root, record)
+                && !record.source_url.is_empty()
+                && record.upstream_commit_verified
+        }
+        "local_built_payload_present" | "contained_vendored_source" => {
+            root.join(&record.source_path).exists()
+        }
+        status if status.contains("source_archive_clone_contained") => {
+            !record.source_url.is_empty()
+                && record.upstream_commit_verified
+                && clone_contained_archive_evidence_is_present(root, record)
+        }
+        _ => false,
+    }
 }
 
 pub fn verify_contained_toolchain(
@@ -301,23 +359,7 @@ pub fn verify_contained_toolchain(
         && sources
             .sources
             .iter()
-            .all(|record| match record.source_status.as_str() {
-                "materialized_local_source_tree" | "materialized_source_tree" => {
-                    source_is_materialized(&root, record)
-                }
-                "pinned_source_edge_locally_observed_not_clone_contained" => {
-                    !record.source_url.is_empty() && record.upstream_commit_verified
-                }
-                "unmaterialized_orphaned_gitlink" => {
-                    !source_is_materialized(&root, record)
-                        && !record.source_url.is_empty()
-                        && record.upstream_commit_verified
-                }
-                "local_built_payload_present" | "contained_vendored_source" => {
-                    root.join(&record.source_path).exists()
-                }
-                _ => false,
-            });
+            .all(|record| source_record_is_truthful(&root, record));
     let source_metadata_declared = sources
         .sources
         .iter()
@@ -336,7 +378,16 @@ pub fn verify_contained_toolchain(
                             && modules.contains(&record.source_url)
                     })
                     .unwrap_or(false)
-        });
+        })
+        && sources
+            .sources
+            .iter()
+            .filter(|record| {
+                record
+                    .source_status
+                    .contains("source_archive_clone_contained")
+            })
+            .all(|record| clone_contained_archive_evidence_is_present(&root, record));
     let full_source_reconstruction_ready = sources.sources.iter().all(|record| {
         matches!(
             record.source_status.as_str(),
@@ -384,8 +435,6 @@ pub fn verify_contained_toolchain(
         && rust_chain.promotion_order
             == vec![
                 "bootstrap_termux_1_97_1",
-                "stage1_pinned_rust_source",
-                "stage2_pinned_rust_source",
                 "workspace_known_good_1_97_0",
                 "edge_candidate_1_100_0_nightly",
             ]
@@ -419,6 +468,7 @@ pub fn verify_contained_toolchain(
                     "llvm_clang_lld_source_build",
                     "bionic_compatibility_overlay",
                     "rust_stage1_and_stage2_source_build",
+                    "edge_nightly_1_100_0_promotion",
                     "termux_nsq_calibration_and_recovery",
                     "complete_language_semantic_proofs",
                     "functional_watermark_file_operation",
@@ -535,7 +585,7 @@ mod tests {
         assert!(report
             .release_blockers
             .iter()
-            .any(|blocker| blocker.contains("rust_nested_llvm_worktree_inode_blocker")));
+            .any(|blocker| blocker.contains("rust_nested_llvm_archive_extraction_blocker")));
         assert!(!report.full_source_reconstruction_ready);
         assert!(!report.release_ready);
     }

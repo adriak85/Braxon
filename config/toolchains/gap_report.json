@@ -24,10 +24,10 @@
       "exact_action": "Package every legally redistributable pinned source tree and every target-built AArch64 artifact with SHA-256 identities and notices in an approved clone-deliverable payload or release mechanism. Gitlinks or host artifacts alone are insufficient."
     },
     {
-      "id": "edge_nightly_matching_source_unmaterialized",
-      "scope": "Rust 1.100.0-nightly f7d782a3b",
+      "id": "edge_nightly_native_promotion_unverified",
+      "scope": "Rust 1.100.0-nightly f7d782a3b built directly from preserved Rust 1.97.1 bootstrap",
       "status": "blocking_for_edge_activation",
-      "exact_action": "Acquire a matching pinned source archive with checksum and license record, build it only after stage2 succeeds, and prove Android equivalence before activation."
+      "exact_action": "The matching source archive, checksum, license record, source-built LLVM binding, Bionic/GNU overlay gate, and native promotion command are repository-contained. On the actual Android AArch64 executable build path, run scripts/braxon_reconstruct.sh edge-nightly-build only after preflight and the repository-contained base source-build; retain stage1/stage2 version, target, ELF/ABI, target execution, and equivalence receipts before activation."
     },
     {
       "id": "aarch64_android_target_build_boundary",

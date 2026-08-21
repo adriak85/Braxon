@@ -1,0 +1,122 @@
+{
+  "schema": "braxon.native.semantic_reflex_inventory.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "dialect_projection": {
+    "alphabetic": "universal_lexical is the canonical character-token sequence",
+    "numeric": "AArch64 syscall numbers or numeric ABI values are retained only where the interface has a documented syscall bridge",
+    "intent": "request a bounded Bionic compatibility capability with declared preconditions and target ABI",
+    "symbolic": "header, symbol, signature class, and ABI bridge identify the callable contract",
+    "stamp": "source path, source hash, build flags, exported-symbol proof, and target probe receipt identify provenance",
+    "control": "staged overlay materialization, compile, link, run, and release are explicit operations",
+    "graphics": "not applicable: no graphics semantics are fabricated for libc interfaces",
+    "audio": "not applicable: no audio semantics are fabricated for libc interfaces"
+  },
+  "native_capabilities": [
+    {
+      "canonical_identity": "bionic.gnu.sem_clockwait",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request sem_clockwait Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.pthread_getname_np",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request pthread_getname_np Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.close_range",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request close_range Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.statx",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request statx Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.copy_file_range",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request copy_file_range Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.getrandom",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request getrandom Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.memfd_create",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request memfd_create Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.eventfd",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request eventfd Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.eventfd_read",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request eventfd_read Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.eventfd_write",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request eventfd_write Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.pipe2",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request pipe2 Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.dup3",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request dup3 Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    },
+    {
+      "canonical_identity": "bionic.gnu.accept4",
+      "source_authority": "first-party overlay implementation of a public interface",
+      "semantic_intent": "request accept4 Android Bionic compatibility contract",
+      "execution_route": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "verification_route": "target compile/link/run plus downstream consumer probe",
+      "failure_closed_behavior": "BLOCKED_TARGET until actual target proof exists"
+    }
+  ],
+  "language_capability_total": 132,
+  "resident_runtime_constructed": false
+}

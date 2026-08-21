@@ -131,18 +131,30 @@ cat > config/toolchains/full_android_language_toolchain.json <<JSON
 JSON
 cat config/toolchains/full_android_language_toolchain.json | tee "$REPORT/manifest.json"
 
-verify_pinned_git_source() {
+verify_repository_contained_source() {
   name="$1"
   dest="$2"
-  expected="$3"
+  expected_commit="$3"
+  archive="$4"
+  expected_sha="$5"
+  shift 5
   echo
-  echo "== pinned source: $name =="
+  echo "== repository-contained pinned source: $name =="
   echo "dest=$dest"
-  echo "expected=$expected"
-  [ -d "$dest/.git" ] || { echo "FAIL: materialized git source is missing: $dest" >&2; exit 1; }
-  actual="$(git -C "$dest" rev-parse HEAD)"
-  [ "$actual" = "$expected" ] || { echo "FAIL: $name source revision mismatch: expected $expected got $actual" >&2; exit 1; }
-  printf '%s\n' "$actual" | tee "$REPORT/${name}_head.txt"
+  echo "expected_commit=$expected_commit"
+  echo "archive=$archive"
+  [ -d "$dest" ] || { echo "FAIL: materialized source directory is missing: $dest" >&2; exit 1; }
+  [ -f "$archive" ] || { echo "FAIL: repository-contained source archive is missing: $archive" >&2; exit 1; }
+  actual_sha="$(sha256sum "$archive" | awk '{print $1}')"
+  [ "$actual_sha" = "$expected_sha" ] || { echo "FAIL: $name source archive SHA-256 mismatch" >&2; exit 1; }
+  for indicator in "$@"; do
+    [ -f "$dest/$indicator" ] || { echo "FAIL: $name source indicator is missing: $dest/$indicator" >&2; exit 1; }
+  done
+  {
+    echo "commit=$expected_commit"
+    echo "archive_sha256=$actual_sha"
+    echo "source_mode=repository_contained_archive_materialization"
+  } | tee "$REPORT/${name}_source_identity.txt"
 }
 
 verify_locally_retained_llvm_source() {
@@ -159,34 +171,20 @@ verify_locally_retained_llvm_source() {
 }
 
 echo
-echo "== pinned source verification (no floating network clone) =="
-verify_pinned_git_source cpython "$SRC/cpython" "${CPYTHON_REF:-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f}"
+echo "== repository-contained pinned source verification (no floating network clone) =="
+verify_repository_contained_source \
+  cpython "$SRC/cpython" "${CPYTHON_REF:-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f}" \
+  "$CHAIN/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz" \
+  "7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181" \
+  configure.ac Python/ceval.c
 verify_locally_retained_llvm_source "$SRC/llvm-project"
-verify_pinned_git_source rust "$SRC/rust" "${RUST_REF:-f964de49bcb561e5c6c725bb37201e11d852daf0}"
+verify_repository_contained_source \
+  rust "$SRC/rust" "${RUST_REF:-f964de49bcb561e5c6c725bb37201e11d852daf0}" \
+  "$CHAIN/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz" \
+  "ea2b7f5abde429b1699ca4fa4f6c44d5533db4b0bccae020baf813da02f0e42e" \
+  x.py compiler/rustc/Cargo.toml
 
-echo
-echo "== build CPython from source =="
-PY_INSTALL="$INSTALL/python"
-mkdir -p "$PY_INSTALL"
 
-(
-  cd "$SRC/cpython"
-  make distclean >/dev/null 2>&1 || true
-
-  ./configure \
-    --prefix="$PY_INSTALL" \
-    --enable-optimizations \
-    --with-lto \
-    CC="$(command -v clang)" \
-    CXX="$(command -v clang++)" \
-    LDFLAGS="-fuse-ld=lld" \
-    | tee "$REPORT/cpython_configure.txt"
-
-  make -j"$JOBS" | tee "$REPORT/cpython_build.txt"
-  make install | tee "$REPORT/cpython_install.txt"
-)
-
-"$PY_INSTALL/bin/python3" --version | tee "$REPORT/cpython_verify.txt"
 
 echo
 echo "== build LLVM/Clang/LLD/runtimes from source =="
@@ -225,6 +223,41 @@ ninja -C "$LLVM_BUILD" install | tee "$REPORT/llvm_install.txt"
   echo
   "$LLVM_INSTALL/bin/llvm-strip" --version
 } | tee "$REPORT/llvm_verify.txt"
+
+echo
+echo "== build and prove staged Bionic/GNU compatibility overlay using source-built LLVM =="
+BRAXON_SOURCE_BUILD_APPROVED=1 BRAXON_SOURCE_LLVM="$LLVM_INSTALL" "$ROOT/scripts/toolchains/unified_android_libc_contract_overlay.sh" "$ROOT"
+OVERLAY="$INSTALL/braxon_android_overlay"
+OVERLAY_INCLUDE="$OVERLAY/include"
+OVERLAY_LIB="$OVERLAY/lib"
+OVERLAY_PROOF="$CHAIN/native/android_libc_extensions/UNIFIED_ANDROID_LIBC_CONTRACTS.json"
+[ -f "$OVERLAY_PROOF" ] || { echo "FAIL: Bionic/GNU overlay proof is absent" >&2; exit 1; }
+grep -q '"probe_passed": true' "$OVERLAY_PROOF" || { echo "FAIL: Bionic/GNU overlay target probe did not pass" >&2; exit 1; }
+[ -f "$OVERLAY_LIB/libbraxon_android_libc_extensions.so" ] || { echo "FAIL: Bionic/GNU overlay shared library is absent" >&2; exit 1; }
+cp "$OVERLAY_PROOF" "$REPORT/bionic_gnu_overlay_proof.json"
+
+echo
+echo "== build CPython from source against staged Bionic/GNU overlay =="
+PY_INSTALL="$INSTALL/python"
+mkdir -p "$PY_INSTALL"
+(
+  cd "$SRC/cpython"
+  make distclean >/dev/null 2>&1 || true
+  CPPFLAGS="-isystem $OVERLAY_INCLUDE ${CPPFLAGS:-}" \
+  LDFLAGS="-L$OVERLAY_LIB -Wl,-rpath,$OVERLAY_LIB -lbraxon_android_libc_extensions -fuse-ld=lld ${LDFLAGS:-}" \
+  CC="$LLVM_INSTALL/bin/clang" \
+  CXX="$LLVM_INSTALL/bin/clang++" \
+  ./configure \
+    --prefix="$PY_INSTALL" \
+    --enable-optimizations \
+    --with-lto \
+    | tee "$REPORT/cpython_configure.txt"
+  make -j"$JOBS" | tee "$REPORT/cpython_build.txt"
+  make install | tee "$REPORT/cpython_install.txt"
+)
+"$PY_INSTALL/bin/python3" --version | tee "$REPORT/cpython_verify.txt"
+LD_LIBRARY_PATH="$OVERLAY_LIB:${LD_LIBRARY_PATH:-}" "$PY_INSTALL/bin/python3" -c 'import os, sys; print("BRAXON_CPYTHON_OVERLAY_CONSUMER_OK"); print(sys.version)' | tee "$REPORT/cpython_overlay_consumer_probe.txt"
+grep -q 'BRAXON_CPYTHON_OVERLAY_CONSUMER_OK' "$REPORT/cpython_overlay_consumer_probe.txt"
 
 echo
 echo "== build Rust from source using preserved custom Rust bootstrap =="
@@ -402,9 +435,9 @@ echo "== final report =="
   echo "tmp_used=false"
   echo "full_source_rebuild_attempted=true"
   echo "optimization_bake_completed=true"
-  echo "cpython_head=$(cat "$REPORT/cpython_head.txt" 2>/dev/null || true)"
-  echo "llvm_head=$(cat "$REPORT/llvm_project_head.txt" 2>/dev/null || true)"
-  echo "rust_head=$(cat "$REPORT/rust_head.txt" 2>/dev/null || true)"
+  echo "cpython_source_identity=$(tr '\n' ';' < "$REPORT/cpython_source_identity.txt" 2>/dev/null || true)"
+  echo "llvm_identity=$(cat "$REPORT/llvm_project_tree_sha256.txt" 2>/dev/null || true)"
+  echo "rust_source_identity=$(tr '\n' ';' < "$REPORT/rust_source_identity.txt" 2>/dev/null || true)"
 } | tee "$RUN/full_rebuild_report.txt"
 
 echo

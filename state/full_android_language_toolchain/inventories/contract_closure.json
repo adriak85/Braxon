@@ -1,0 +1,37 @@
+{
+  "schema": "braxon.native.contract_closure.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "target_environment": {
+    "declared_architecture": "aarch64",
+    "declared_platform": "android",
+    "declared_abi": "aarch64-linux-android",
+    "declared_android_api_floor": 24,
+    "controller_architecture": "x64",
+    "controller_platform": "linux",
+    "actual_target_probe_performed": false,
+    "target_build_claimed": false
+  },
+  "closure_requirement": [
+    "source closure",
+    "ABI closure",
+    "link closure",
+    "runtime probe",
+    "downstream consumer closure",
+    "semantic registration",
+    "provenance",
+    "contract validation"
+  ],
+  "overlay_policy": {
+    "system_write_attempted": false,
+    "termux_prefix_overwrite_allowed": false,
+    "staged_overlay_only": true
+  },
+  "interface_summary": {
+    "declared_total": 13,
+    "target_proven_total": 0,
+    "blocked_target_total": 13,
+    "silently_ignored_total": 0
+  },
+  "native_status": "BLOCKED_TARGET",
+  "completion_claim_permitted": false
+}

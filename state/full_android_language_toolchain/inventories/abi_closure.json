@@ -1,0 +1,28 @@
+{
+  "schema": "braxon.native.abi_closure.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "required_artifact_checks": [
+    "AArch64 ELF machine",
+    "ELF class 64-bit",
+    "DT_NEEDED Android libc",
+    "exported symbol visibility",
+    "static archive symbols",
+    "consumer compile",
+    "consumer link",
+    "target execution",
+    "downstream consumer execution"
+  ],
+  "required_tools": [
+    "llvm-nm",
+    "llvm-readelf",
+    "llvm-readobj",
+    "llvm-objdump",
+    "clang",
+    "clang++",
+    "ld.lld",
+    "llvm-ar",
+    "llvm-ranlib"
+  ],
+  "target_probe_performed": false,
+  "status": "BLOCKED_TARGET"
+}

@@ -98,6 +98,26 @@
         "Braxon watermark verify <source>"
       ],
       "classification": "canonical_active"
+    },
+    {
+      "id": "route:toolchain.native_contract_closure_inventory",
+      "purpose": "Source-derived Android/Bionic native contract inventory and fail-closed closure classification through the existing staged overlay, NSQ Bionic compatibility feature, target proof chain, and Reflexor audit",
+      "feature": "feature:toolchain.bionic_compatibility",
+      "sources": [
+        "config/nsq/native_contract_closure_inventory_contract.json",
+        "config/nsq/bionic_gnu_compatibility_matrix.json",
+        "tools/toolchain/generate_native_contract_closure_inventory.mjs",
+        "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+        "scripts/toolchains/rebuild_full_android_language_toolchain.sh",
+        "scripts/toolchains/promote_rust_edge_nightly_aarch64.sh"
+      ],
+      "front_doors": [
+        "node tools/toolchain/generate_native_contract_closure_inventory.mjs",
+        "scripts/braxon_reconstruct.sh source-build",
+        "scripts/braxon_reconstruct.sh edge-nightly-build",
+        "Braxon toolchain bionic"
+      ],
+      "classification": "canonical_active"
     }
   ],
   "deprecated_historical_surfaces": [

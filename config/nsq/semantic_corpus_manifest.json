@@ -23,8 +23,8 @@
     "audio": "not applicable unless a corpus represents audio semantics"
   },
   "compaction_metrics": {
-    "manifested_compact_artifact_count": 18,
-    "manifested_compact_bytes": 920100,
+    "manifested_compact_artifact_count": 19,
+    "manifested_compact_bytes": 925973,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -112,9 +112,9 @@
     {
       "id": "canonical_surface_registry",
       "path": "config/nsq/canonical_surface_registry.json",
-      "bytes": 9333,
-      "sha256": "9db0342a5d35a1b505353e680af1ee0048b4d193ce2aa3220ac57524a1d6c153",
-      "semantic_surface": ["canonical Council Ten Citadel seed donor route", "canonical court-bound assistant designer agent worker and personal role route", "deprecated and archival surface classification", "canonical successor mapping", "removed donor-index purpose declarations"],
+      "bytes": 10438,
+      "sha256": "6a1f9b91a1f780485ae082eec1dd59e7ada38698b33dbffccbb4ce24fe2bd339",
+      "semantic_surface": ["canonical Council Ten Citadel seed donor route", "canonical court-bound assistant designer agent worker and personal role route", "canonical Android/Bionic native contract closure inventory route", "deprecated and archival surface classification", "canonical successor mapping", "removed donor-index purpose declarations"],
       "provenance": "committed first-party NSQ canonicality authority",
       "reproduction": "tools/toolchain/audit_canonicality.mjs recursively checks the feature registry and tracked repository surfaces against this classification contract",
       "integration": "config/nsq/feature_execution_registry.json; crates/nsq-reflexor/src/lib.rs; tools/toolchain/audit_canonicality.mjs",
@@ -168,7 +168,7 @@
       "id": "blank_surface_registry",
       "path": "config/nsq/blank_surface_registry.json",
       "bytes": 167562,
-      "sha256": "3fdb4f8918775c36440213890ee60ebed93a0446dce2e84a52537b8c0eddf221",
+      "sha256": "08ae1267afd23c564b180079ff4af507701f0c8a16b07defdedac58869dce891",
       "semantic_surface": ["individual non-routable blank upstream historical and derived capture classification", "blank-surface fail-closed provenance policy"],
       "provenance": "generated deterministically from the complete tracked-tree audit and committed as canonical classification evidence",
       "reproduction": "tools/toolchain/generate_blank_surface_registry.mjs after tools/toolchain/audit_all_tracked_files.mjs",
@@ -189,8 +189,8 @@
     {
       "id": "rust_bootstrap_semantic_chain",
       "path": "config/toolchains/rust_bootstrap_chain.json",
-      "bytes": 5939,
-      "sha256": "c4aa830a715c7b74a415cde363d563b5ed0fc70e2bf9cc69f01311e57d1ac730",
+      "bytes": 6418,
+      "sha256": "bb285fba0a079135d9c5b98e582ff8b3f737cc3bae680acd146a55011627143d",
       "semantic_surface": ["Termux bootstrap identity", "stage1 and stage2 promotion", "workspace known-good selection", "edge candidate non-activation"],
       "provenance": "committed Braxon toolchain contract bound to observed and externally described lanes",
       "reproduction": "contained-toolchain verifier validates exact lane identities, promotion order, and retained release blockers",
@@ -229,6 +229,17 @@
       "reproduction": "scripts/toolchains/unified_android_libc_contract_overlay.sh stages, builds, inspects, and probes it on the target",
       "integration": "scripts/toolchains/unified_android_libc_contract_overlay.sh; crates/braxon-core/src/bionic_compatibility.rs",
       "license_class": "first_party_source_subject_to_repository_license; public interfaces are not privately appropriated"
+    },
+    {
+      "id": "native_contract_closure_inventory",
+      "path": "config/nsq/native_contract_closure_inventory_contract.json",
+      "bytes": 4289,
+      "sha256": "42165fe2555c100855b10357689cf39fa08113767ac8b3e64505352ca1f7dc30",
+      "semantic_surface": ["source-derived native contract inventory", "Android/Bionic closure classifications", "target-proof and Reflexor boundary"],
+      "provenance": "first-party Braxon contract over source-derived inventory and retained public-interface provenance",
+      "reproduction": "node tools/toolchain/generate_native_contract_closure_inventory.mjs <repository-root>",
+      "integration": "route:toolchain.native_contract_closure_inventory; feature:toolchain.bionic_compatibility",
+      "license_class": "first_party_configuration; upstream source and interface licenses remain retained separately"
     }
   ],
   "verification": {

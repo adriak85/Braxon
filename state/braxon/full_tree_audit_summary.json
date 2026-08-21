@@ -1,35 +1,28 @@
 {
   "schema": "braxon.nsq.full_tracked_tree_audit_summary.v1",
-  "audit_merkle_sha256": "ecff050ca29b7119dbb883306c575d4925b992704c5276cccf65955faff8f727",
+  "audit_merkle_sha256": "d03ce2b7738b423e5abf8300a54d21464bb979d76fc2a38c12fe0ee6ec0163d2",
   "complete_file_scope": "every recursively tracked repository path; every tracked regular file streamed in full for SHA-256 identity; no depth or extension filter",
-  "status": "unresolved_environment_links_detected",
+  "status": "all_tracked_files_classified_with_integrity_markers_reported",
   "totals": {
-    "tracked_path_total": 182936,
-    "regular_file_total": 182888,
-    "total_regular_bytes": 2909979745,
-    "unclassified_total": 1,
+    "tracked_path_total": 182985,
+    "regular_file_total": 182943,
+    "total_regular_bytes": 3444341126,
+    "unclassified_total": 0,
     "blank_required_content_total": 283,
-    "marker_bearing_file_total": 7443,
-    "unresolved_environment_link_total": 23
+    "marker_bearing_file_total": 7441,
+    "unresolved_environment_link_total": 0
   },
-  "unclassified": [
-    "models/braxon/manifest.json"
-  ],
+  "unclassified": [],
   "blank_required_content": {
     "by_classification": {
-      "attributed_upstream_source": 210,
+      "attributed_upstream_source": 211,
       "derived_state_or_provenance_surface": 32,
-      "historical_archive": 40,
-      "root_operational_or_control_surface": 1
+      "historical_archive": 40
     },
     "by_top_path": {
-      "<root>": 1,
-      "state": 282
+      "state": 283
     },
     "samples_by_top_path": {
-      "<root>": [
-        "signal_state_log.txt"
-      ],
       "state": [
         "state/android_gap_fill_chain/runs/20260507_192509/reports/workspace_nextest_release.txt",
         "state/braxon/music_app/current/synth.stderr.txt",
@@ -48,54 +41,54 @@
   },
   "integrity_markers": {
     "marker_frequency": {
-      "[...]": 169,
-      "fixme": 3729,
-      "mock": 218,
-      "mocked": 19,
-      "mocking": 35,
-      "not implemented": 250,
-      "not-implemented": 4,
-      "notimplemented": 25,
-      "placeholder": 394,
-      "to do": 1314,
-      "to-do": 11,
-      "todo": 2564,
-      "truncated": 276
+      "[...]": 172,
+      "fixme": 3733,
+      "mock": 223,
+      "mocked": 22,
+      "mocking": 38,
+      "not implemented": 253,
+      "not-implemented": 7,
+      "notimplemented": 28,
+      "placeholder": 396,
+      "to do": 1317,
+      "to-do": 14,
+      "todo": 2565,
+      "truncated": 279
     },
     "by_classification": {
       "attributed_upstream_source": 6314,
       "benchmark_evidence_surface": 8,
+      "canonical_active": 2,
       "configuration_contract_surface": 3,
       "deprecated_historical_only": 1,
-      "derived_state_or_provenance_surface": 322,
+      "derived_state_or_provenance_surface": 325,
       "developer_governance_surface": 9,
       "documentation_or_contract_surface": 9,
       "executable_verification_surface": 7,
       "historical_archive": 501,
       "historical_audit_or_reconstruction_surface": 13,
-      "operational_tool_surface": 3,
       "packaged_or_captured_support_surface": 1,
       "repository_control_surface": 1,
-      "root_operational_or_control_surface": 3,
+      "root_operational_or_control_surface": 2,
       "semantic_artifact_or_source_payload_surface": 4,
       "vendored_dependency_source": 220,
-      "workspace_source_surface": 24
+      "workspace_source_surface": 21
     },
     "by_top_path": {
       ".codex": 9,
-      "<root>": 4,
+      "<root>": 3,
       "assets": 4,
       "audit": 9,
       "benchmarks": 8,
       "config": 3,
-      "crates": 24,
+      "crates": 21,
       "docs": 4,
       "reconstruction": 4,
       "reviewed_dropin_20260417": 1,
       "specs": 6,
-      "state": 7142,
+      "state": 7145,
       "tests": 2,
-      "tools": 3,
+      "tools": 2,
       "vendor": 220
     },
     "samples_by_top_path": {
@@ -113,8 +106,7 @@
       "<root>": [
         "CODEX_AGENT_IMPLICIT_INSTRUCTIONS.md",
         "README.md",
-        "RECONSTRUCTION_PROTOCOL.md",
-        "setup_nsq_query_pass.sh"
+        "RECONSTRUCTION_PROTOCOL.md"
       ],
       "assets": [
         "assets/braxon_core/source_ingest/braxon_transport/merges.txt",
@@ -149,8 +141,6 @@
         "config/nsq/braxon_sensory_generation_roster.json"
       ],
       "crates": [
-        "crates/braxon-core/src/council.rs",
-        "crates/nsq-core/src/artifact_intent.rs",
         "crates/wowas-final-edition-v10/canon/CURRENT_APPLY_ORDER_v10.md",
         "crates/wowas-final-edition-v10/canon/canonical_story_tree/all_25_books_latest_full_cycle.txt",
         "crates/wowas-final-edition-v10/canon/canonical_story_tree/books/Book_01_Choices_Make_World/book_content_reformatted.md",
@@ -160,7 +150,9 @@
         "crates/wowas-final-edition-v10/canon/diagnostics/book_build_selection_audit_20260419_104947.txt",
         "crates/wowas-final-edition-v10/canon/diagnostics/book_build_selection_audit_20260419_105726.txt",
         "crates/wowas-final-edition-v10/canon/diagnostics/scene_authority_audit_20260419_104619.txt",
-        "crates/wowas-final-edition-v10/canon/patches/v10/wowas_anti_placeholder_expansion_patch_v10.md"
+        "crates/wowas-final-edition-v10/canon/patches/v10/wowas_anti_placeholder_expansion_patch_v10.md",
+        "crates/wowas-final-edition-v10/canon/patches/v10/wowas_book_dialogue_seed_registry_v10.md",
+        "crates/wowas-final-edition-v10/canon/patches/v10/wowas_books_24_25_priority_override_patch_v10.md"
       ],
       "docs": [
         "docs/BRAXON_NSQ_AUDIT_TODO.md",
@@ -186,6 +178,9 @@
         "specs/repo/ROOT_WORKSPACE_TARGET_MAP.md"
       ],
       "state": [
+        "state/braxon/full_file_watermark_reflex_inventory.json",
+        "state/braxon/full_tree_audit.json",
+        "state/braxon/full_tree_audit_summary.json",
         "state/full_android_language_toolchain/install/python/include/python3.16/ceval.h",
         "state/full_android_language_toolchain/install/python/include/python3.16/cpython/pyfpe.h",
         "state/full_android_language_toolchain/install/python/include/python3.16/internal/mimalloc/mimalloc/internal.h",
@@ -194,19 +189,15 @@
         "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_interp_structs.h",
         "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_object.h",
         "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_optimizer.h",
-        "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_pythread.h",
-        "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_qsbr.h",
-        "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_runtime_structs.h",
-        "state/full_android_language_toolchain/install/python/include/python3.16/object.h"
+        "state/full_android_language_toolchain/install/python/include/python3.16/internal/pycore_pythread.h"
       ],
       "tests": [
         "tests/braxon_conversation_surface.rs",
         "tests/braxon_runtime_surface.rs"
       ],
       "tools": [
-        "tools/codex_quality_gate/check_codex_quality.sh",
-        "tools/nsq_court_identity_guard/check_court_identity.py",
-        "tools/toolchain/generate_recursive_component_inventory.py"
+        "tools/toolchain/audit_all_tracked_files.mjs",
+        "tools/toolchain/audit_full_file_watermark_reflex_links.mjs"
       ],
       "vendor": [
         "vendor/anstream/Cargo.toml",
@@ -224,98 +215,5 @@
       ]
     }
   },
-  "unresolved_environment_links": [
-    {
-      "path": "Brax",
-      "link_target": "/data/data/com.termux/files/usr/bin/guile"
-    },
-    {
-      "path": "Braxx",
-      "link_target": "/data/data/com.termux/files/usr/bin/guile"
-    },
-    {
-      "path": "brax",
-      "link_target": "/data/data/com.termux/files/usr/bin/guile"
-    },
-    {
-      "path": "braxx",
-      "link_target": "/data/data/com.termux/files/usr/bin/guile"
-    },
-    {
-      "path": "packaged/backbone-links/full_android_language_toolchain",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain"
-    },
-    {
-      "path": "packaged/backbone-links/source_forge",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge"
-    },
-    {
-      "path": "packaged/backbone-links/state_backbone",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state"
-    },
-    {
-      "path": "state/braxon/current.braxon",
-      "link_target": "bus/citadel699/current.dax"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_active_links/include/pthread.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/pthread.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_active_links/include/semaphore.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/semaphore.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/braxon_android_contracts_force.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/braxon_android_contracts_force.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/include",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/pthread.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/pthread.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/semaphore.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/semaphore.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/sys/stat.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/sys/stat.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/sys/uio.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/sys/uio.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/install/braxon_android_overlay/include/unistd.h",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/install/braxon_android_builtin_stage/include/unistd.h"
-    },
-    {
-      "path": "state/full_android_language_toolchain/locks/braxon_python_3.16_native/braxon_python_3.16_native_latest.tar.sha256",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/locks/braxon_python_3.16_native/braxon_python_3.16_native_20260508_082547.tar.sha256"
-    },
-    {
-      "path": "state/full_android_language_toolchain/locks/braxon_python_3.16_native/manifest_latest.sha256",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/locks/braxon_python_3.16_native/manifest_20260508_082547.sha256"
-    },
-    {
-      "path": "state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_latest.txt",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/locks/LOCKED_FINDUTILS_ANDROID_CONTRACT_FIRST_20260508_150059.txt"
-    },
-    {
-      "path": "state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_latest.tsv",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/findutils_android_contract_matrix_20260508_150059.tsv"
-    },
-    {
-      "path": "state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_latest.txt",
-      "link_target": "/data/data/com.termux/files/home/Braxon/state/full_android_language_toolchain/source_forge/alien_lanes/findutils/reports/no_to_contract_matrix_20260508_145405.txt"
-    },
-    {
-      "path": "state/nsq/stamps/foreign_tool_absorption/latest",
-      "link_target": "/data/data/com.termux/files/home/Dax/state/nsq/stamps/foreign_tool_absorption/20260428_141459"
-    }
-  ]
+  "unresolved_environment_links": []
 }

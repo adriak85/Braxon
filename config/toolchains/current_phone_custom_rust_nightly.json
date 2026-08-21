@@ -1,21 +1,51 @@
 {
-  "schema": "braxon.toolchain.custom_rust_nightly_binding.v1",
-  "authority": "NSQ_COURT",
-  "purpose": "bind the current phone custom Rust nightly as the Rust lane for Braxon full-quality builds",
-  "rust_lane": "current_phone_custom_rust_nightly",
-  "rustc_path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/rustc",
-  "cargo_path": "/data/data/com.termux/files/usr/opt/rust-nightly/bin/cargo",
-  "expected_host": "aarch64-linux-android",
-  "expected_release_contains": "1.96.0-nightly",
-  "expected_llvm_version_contains": "21.1.8",
-  "source_tarball_build_required": true,
+  "schema": "braxon.toolchain.rust_bootstrap_and_edge_promotion_binding.v1",
+  "authority": "BRAXON_RUST_BOOTSTRAP_AND_EDGE_PROMOTION",
+  "owner": "Michael David Norris",
+  "target_environment": "aarch64-linux-android",
+  "purpose": "Preserve the observed source-built Termux Rust 1.97.1 compiler as bootstrap authority while gating repository-pinned Rust 1.100.0-nightly promotion on native source-build evidence.",
+  "bootstrap_authority": {
+    "rust_lane": "bootstrap_termux_rust_1_97_1",
+    "rustc_path": "${PREFIX}/bin/rustc",
+    "cargo_path": "${PREFIX}/bin/cargo",
+    "expected_host": "aarch64-linux-android",
+    "expected_release": "1.97.1",
+    "expected_commit": "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+    "expected_llvm_version_contains": "21.1.8",
+    "source_tarball_build_required": true,
+    "preserved": true,
+    "may_not_be_overwritten": true,
+    "role": "stage0 bootstrap only; never removed or replaced before independently verified edge promotion"
+  },
+  "edge_promotion_candidate": {
+    "release": "1.100.0-nightly",
+    "git_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
+    "source_archive": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+    "source_provenance": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.provenance.json",
+    "native_promotion_command": "scripts/braxon_reconstruct.sh edge-nightly-build",
+    "activation_link": "state/full_android_language_toolchain/install/rust-edge-active",
+    "rustup_allowed": false,
+    "external_compiler_dependency_allowed": false,
+    "default_activation_allowed": false,
+    "required_evidence": [
+      "preserved 1.97.1 bootstrap version and host",
+      "repository source SHA-256 and provenance",
+      "source-built LLVM and Bionic/GNU overlay proof",
+      "stage1 release/commit/host verification",
+      "stage2 release/commit/host verification",
+      "AArch64 ELF machine verification",
+      "Android Bionic libc dynamic dependency verification",
+      "stage1 and stage2 target execution probes",
+      "byte-identical stage-equivalence probe output"
+    ]
+  },
   "termux_pkg_rust_replacement_allowed": false,
   "held_rust_package_mutation_allowed": false,
   "quality_reduction_allowed_without_boundary_report": false,
   "feature_reduction_allowed_without_boundary_report": false,
   "repo_policy": {
-    "rust_toolchain_payload_inside_braxon": false,
+    "rust_toolchain_payload_inside_braxon": "source archives and promotion scripts are repository-contained; target-built artifacts are not claimed until native receipts exist",
     "braxon_consumes_rust_by_manifest": true,
-    "custom_rust_nightly_is_external_toolchain_state": true
+    "historical_external_1_96_nightly": "historical evidence only; not selected as bootstrap or target authority"
   }
 }

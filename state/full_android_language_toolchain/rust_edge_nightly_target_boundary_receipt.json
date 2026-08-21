@@ -1,0 +1,43 @@
+{
+  "schema": "braxon.rust.edge_nightly.target_boundary_receipt.v1",
+  "recorded_on": "2026-08-21",
+  "edge_release": "1.100.0-nightly",
+  "edge_commit": "f7d782a3be46d6bb4b9792fe69a61db389ba1769",
+  "bootstrap_required": {
+    "release": "1.97.1",
+    "target": "aarch64-linux-android",
+    "preserved": true,
+    "overwritten": false
+  },
+  "controller_observation": {
+    "environment": "sandboxed non-target controller",
+    "command": "BRAXON_SOURCE_BUILD_APPROVED=1 scripts/braxon_reconstruct.sh edge-nightly-build",
+    "result": "fail_closed",
+    "failure": "requires native Android AArch64 Termux; use BRAXON_ALLOW_NON_TARGET_RECONSTRUCTION=1 only to validate script control flow"
+  },
+  "promotion_status": "not_built_not_verified_not_activated",
+  "completion_claim_permitted": false,
+  "repository_preparation": {
+    "matching_source_archive": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+    "native_promotion_command": "scripts/braxon_reconstruct.sh edge-nightly-build",
+    "rustup_used": false,
+    "downloaded_compiler_used": false
+  },
+  "native_target_sequence": [
+    "scripts/braxon_reconstruct.sh preflight",
+    "scripts/braxon_reconstruct.sh source-edge",
+    "BRAXON_SOURCE_BUILD_APPROVED=1 JOBS=1 scripts/braxon_reconstruct.sh source-build",
+    "BRAXON_SOURCE_BUILD_APPROVED=1 JOBS=1 scripts/braxon_reconstruct.sh edge-nightly-build",
+    "scripts/braxon_reconstruct.sh calibrate",
+    "scripts/braxon_reconstruct.sh verify"
+  ],
+  "required_promotion_evidence": [
+    "preserved 1.97.1 bootstrap version and host",
+    "1.100.0-nightly stage1 release commit host",
+    "1.100.0-nightly stage2 release commit host",
+    "AArch64 ELF machine and Android Bionic libc dependency",
+    "target execution of stage1 and stage2 probes",
+    "byte-identical stage-equivalence probe output",
+    "source-built LLVM and Bionic/GNU overlay target proof"
+  ]
+}

@@ -24,17 +24,17 @@
       "id": "rust_toolchain",
       "source": "state/full_android_language_toolchain/src/rust",
       "license": "Apache-2.0 OR MIT",
-      "classification": "REQUIRES_EXTERNAL_INSTALLATION",
-      "integration": "pinned source-edge f964de49; stage1/stage2 build blocked until materialized",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "pinned f964de49 source archive is repository-contained with SHA-256 and dual-license provenance; stage1/stage2 target builds remain unclaimed until native receipts exist",
       "notice_requirement": "retain Rust dual-license notices",
       "private_eligibility": "Braxon bootstrap metadata, source-stage orchestration, and NSQ contracts only"
     },
     {
       "id": "rust_edge_nightly",
-      "source": "audit/external_rust_nightly_observation_2026-08-20.txt",
+      "source": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
       "license": "Apache-2.0 OR MIT",
-      "classification": "REQUIRES_EXTERNAL_INSTALLATION",
-      "integration": "unmaterialized 1.100.0-nightly candidate; no default activation",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "matching 1.100.0-nightly f7d782a3b source archive and provenance are repository-contained; native AArch64 promotion from preserved Rust 1.97.1 is required before activation",
       "notice_requirement": "retain Rust dual-license notices and matching source provenance",
       "private_eligibility": "Braxon candidate-lane policy and equivalence receipts only"
     },

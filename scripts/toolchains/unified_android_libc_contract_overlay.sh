@@ -22,6 +22,23 @@ NATIVE_SRC="$NATIVE/src"
 NATIVE_PROOFS="$NATIVE/proofs"
 
 CPY="$CHAIN/src/cpython"
+LLVM_ROOT="${BRAXON_SOURCE_LLVM:-}"
+if [ -n "$LLVM_ROOT" ]; then
+  CLANG="$LLVM_ROOT/bin/clang"
+  LLVM_AR="$LLVM_ROOT/bin/llvm-ar"
+  LLVM_RANLIB="$LLVM_ROOT/bin/llvm-ranlib"
+  LLVM_NM="$LLVM_ROOT/bin/llvm-nm"
+  LLVM_READELF="$LLVM_ROOT/bin/llvm-readelf"
+else
+  CLANG="$(command -v clang)"
+  LLVM_AR="$(command -v llvm-ar)"
+  LLVM_RANLIB="$(command -v llvm-ranlib)"
+  LLVM_NM="$(command -v llvm-nm)"
+  LLVM_READELF="$(command -v readelf)"
+fi
+for required_tool in "$CLANG" "$LLVM_AR" "$LLVM_RANLIB" "$LLVM_NM" "$LLVM_READELF"; do
+  [ -x "$required_tool" ] || { echo "FAIL: required LLVM tool is absent: $required_tool" >&2; exit 1; }
+done
 
 mkdir -p "$RUN" "$REPORT" \
   "$OVERLAY_INCLUDE" "$OVERLAY_LIB" \
@@ -619,7 +636,7 @@ int accept4(int sockfd, struct sockaddr *addr, socklen_t *addrlen, int flags) {
 C
 
 echo "== build unified native object/library =="
-clang -target aarch64-linux-android24 \
+"$CLANG" -target aarch64-linux-android24 \
   -O3 \
   -fPIC \
   -fvisibility=hidden \
@@ -628,12 +645,12 @@ clang -target aarch64-linux-android24 \
   -c "$NATIVE_SRC/braxon_android_libc_contracts.c" \
   -o "$STAGE_LIB/braxon_android_libc_contracts.o"
 
-llvm-ar rcs "$STAGE_LIB/libbraxon_android_libc_extensions.a" \
+"$LLVM_AR" rcs "$STAGE_LIB/libbraxon_android_libc_extensions.a" \
   "$STAGE_LIB/braxon_android_libc_contracts.o"
 
-llvm-ranlib "$STAGE_LIB/libbraxon_android_libc_extensions.a"
+"$LLVM_RANLIB" "$STAGE_LIB/libbraxon_android_libc_extensions.a"
 
-clang -target aarch64-linux-android24 \
+"$CLANG" -target aarch64-linux-android24 \
   -O3 \
   -fPIC \
   -fvisibility=hidden \
@@ -752,7 +769,7 @@ int main(void) {
 }
 C
 
-clang -target aarch64-linux-android24 \
+"$CLANG" -target aarch64-linux-android24 \
   -O3 \
   -isystem "$OVERLAY_INCLUDE" \
   -L"$OVERLAY_LIB" \
@@ -784,10 +801,10 @@ echo "== symbol proof =="
   echo "overlay=$OVERLAY"
   echo
   echo "== archive symbols =="
-  llvm-nm "$OVERLAY_LIB/libbraxon_android_libc_extensions.a" | grep -E 'sem_clockwait|pthread_getname_np|close_range|statx|copy_file_range|getrandom|memfd_create|eventfd|eventfd_read|eventfd_write|pipe2|dup3|accept4'
+  "$LLVM_NM" "$OVERLAY_LIB/libbraxon_android_libc_extensions.a" | grep -E 'sem_clockwait|pthread_getname_np|close_range|statx|copy_file_range|getrandom|memfd_create|eventfd|eventfd_read|eventfd_write|pipe2|dup3|accept4'
   echo
   echo "== shared exports =="
-  readelf -Ws "$OVERLAY_LIB/libbraxon_android_libc_extensions.so" | grep -E 'sem_clockwait|pthread_getname_np|close_range|statx|copy_file_range|getrandom|memfd_create|eventfd|eventfd_read|eventfd_write|pipe2|dup3|accept4'
+  "$LLVM_READELF" -Ws "$OVERLAY_LIB/libbraxon_android_libc_extensions.so" | grep -E 'sem_clockwait|pthread_getname_np|close_range|statx|copy_file_range|getrandom|memfd_create|eventfd|eventfd_read|eventfd_write|pipe2|dup3|accept4'
   echo
   echo "== probe =="
   cat "$REPORT/unified_contract_probe_output.txt"

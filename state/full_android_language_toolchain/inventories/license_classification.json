@@ -1,0 +1,97 @@
+{
+  "schema": "braxon.native.license_classification.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "classifications": [
+    {
+      "id": "llvm_clang_lld_and_runtimes",
+      "source": "state/full_android_language_toolchain/src/llvm-project",
+      "license": "Apache-2.0 with LLVM Exception",
+      "classification": "REDISTRIBUTABLE_WITH_LICENSE_NOTICE",
+      "integration": "locally retained source-built AArch64 Android compiler lane",
+      "notice_requirement": "retain LLVM license and exception notices",
+      "private_eligibility": "Braxon wrappers, NSQ extraction contracts, and independently authored build integration only"
+    },
+    {
+      "id": "rust_toolchain",
+      "source": "state/full_android_language_toolchain/src/rust",
+      "license": "Apache-2.0 OR MIT",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "pinned f964de49 source archive is repository-contained with SHA-256 and dual-license provenance; stage1/stage2 target builds remain unclaimed until native receipts exist",
+      "notice_requirement": "retain Rust dual-license notices",
+      "private_eligibility": "Braxon bootstrap metadata, source-stage orchestration, and NSQ contracts only"
+    },
+    {
+      "id": "rust_edge_nightly",
+      "source": "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+      "license": "Apache-2.0 OR MIT",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "matching 1.100.0-nightly f7d782a3b source archive and provenance are repository-contained; native AArch64 promotion from preserved Rust 1.97.1 is required before activation",
+      "notice_requirement": "retain Rust dual-license notices and matching source provenance",
+      "private_eligibility": "Braxon candidate-lane policy and equivalence receipts only"
+    },
+    {
+      "id": "cpython",
+      "source": "state/full_android_language_toolchain/src/cpython",
+      "license": "Python-2.0",
+      "classification": "REQUIRES_EXTERNAL_INSTALLATION",
+      "integration": "pinned source-edge 49918f5b; existing install payload is not source provenance",
+      "notice_requirement": "retain Python license and component notices",
+      "private_eligibility": "Braxon Android build configuration and NSQ contracts only"
+    },
+    {
+      "id": "bionic_compatibility_overlay",
+      "source": "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+      "license": "LicenseRef-Braxon-Private for independently authored implementation; public Android/Linux interface provenance retained",
+      "classification": "REPLACED_BY_ORIGINAL_IMPLEMENTATION",
+      "integration": "first-party staged AArch64 Bionic compatibility overlay; not a glibc replacement",
+      "notice_requirement": "do not claim ownership of Bionic, glibc, Linux ABI definitions, or public interface names",
+      "private_eligibility": "source-level independent implementation only"
+    },
+    {
+      "id": "termux_packages_recipe_lane",
+      "source": "https://github.com/adriak85/termux-packages",
+      "license": "Apache-2.0 for build infrastructure; per-package license for package recipes and patches",
+      "classification": "REDISTRIBUTABLE_WITH_LICENSE_NOTICE",
+      "integration": "pinned licensed recipe source edge; individual recipe materialization only",
+      "notice_requirement": "preserve each package's stated license and notices",
+      "private_eligibility": "independently authored Braxon intercept wrappers only"
+    },
+    {
+      "id": "dax_autonomous_system",
+      "source": "https://github.com/adriak85/Dax-Autonomous-System",
+      "license": "private proprietary source named to Michael David Norris",
+      "classification": "SOURCE_AVAILABLE_BUT_RESTRICTED",
+      "integration": "private controlled source edge; security quarantine before any source-only Android build",
+      "notice_requirement": "retain proprietary notices and isolate third-party components by their own licenses",
+      "private_eligibility": "requires source-by-source provenance review; no blanket reclassification"
+    },
+    {
+      "id": "dax",
+      "source": "https://github.com/adriak85/Dax",
+      "license": "private license owned by Adriak",
+      "classification": "SOURCE_AVAILABLE_BUT_RESTRICTED",
+      "integration": "private source edge pending named-rightsholder authorization",
+      "notice_requirement": "no copy, public redistribution, translation, or execution without authorization",
+      "private_eligibility": "only independently authored non-derived replacements"
+    },
+    {
+      "id": "papi",
+      "source": "https://github.com/adriak85/PAPI",
+      "license": "proprietary trade secret named to P.A.P.I. Labs",
+      "classification": "NOT_REDISTRIBUTABLE",
+      "integration": "legal fail-closed boundary; provenance validation only",
+      "notice_requirement": "no use, copy, modification, reverse engineering, or translation without written authorization",
+      "private_eligibility": "only a lawful independent implementation from public specifications, never source-derived"
+    },
+    {
+      "id": "unlicensed_private_source_edges",
+      "source": "adriak85/0, DAX-FULL, f1ux-service, fastapi-llm-bot",
+      "license": "no license evidence observed at pinned source revision",
+      "classification": "SOURCE_AVAILABLE_BUT_RESTRICTED",
+      "integration": "authenticated source edges only; no public embedding or build promotion until rights and dependency boundaries are recorded",
+      "notice_requirement": "treat as all-rights-reserved until an applicable grant is recorded",
+      "private_eligibility": "only independently authored non-derived replacements"
+    }
+  ],
+  "rule": "Source provenance and license terms remain authoritative. Interface compatibility does not transfer upstream ownership or make derived code privately licensable."
+}

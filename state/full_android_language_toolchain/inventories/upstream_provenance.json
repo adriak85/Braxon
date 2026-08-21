@@ -1,0 +1,55 @@
+{
+  "schema": "braxon.native.upstream_provenance.v1",
+  "generated_at": "2026-08-21T11:25:46.668Z",
+  "sources": [
+    {
+      "id": "llvm_project",
+      "upstream_project": "llvm/llvm-project",
+      "source_url": null,
+      "source_status": "materialized_local_source_tree",
+      "license": "Apache-2.0 with LLVM Exception",
+      "reconstruction_status": "local source is present; deterministic tree identity is captured and must be reverified by the reconstruction gate before source build"
+    },
+    {
+      "id": "rust",
+      "upstream_project": "rust-lang/rust",
+      "source_url": "https://github.com/rust-lang/rust.git",
+      "source_status": "pinned_source_archive_clone_contained_unextracted; locally_observed_worktree_remains_separate",
+      "license": "Apache-2.0 OR MIT",
+      "reconstruction_status": "the exact pinned outer Rust source and its exact nested LLVM revision are clone-contained archives requiring no network acquisition. Materialize both on a filesystem with sufficient inode capacity, then run the configured source-built LLVM-backed stage1/stage2 AArch64 Android build, compile/link/run probe, and equivalence proof before activation."
+    },
+    {
+      "id": "rust_edge_nightly_1_100_0",
+      "upstream_project": "rust-lang/rust",
+      "source_url": "https://github.com/rust-lang/rust.git",
+      "source_status": "current_edge_source_archive_clone_contained_unextracted_not_activated",
+      "license": "Apache-2.0 OR MIT",
+      "reconstruction_status": "the exact current edge source archive is clone-contained and requires no network acquisition; it must be extracted on an inode-capacity-approved target filesystem, then independently built and compared against the known-good target stages before any default activation claim."
+    },
+    {
+      "id": "cpython",
+      "upstream_project": "python/cpython",
+      "source_url": "https://github.com/python/cpython.git",
+      "source_status": "pinned_source_archive_clone_contained_unextracted; locally_observed_worktree_remains_separate",
+      "license": "Python-2.0",
+      "reconstruction_status": "the exact pinned CPython source archive is clone-contained and requires no network acquisition; materialize it on a filesystem with sufficient inode capacity, then run an AArch64 Android source build, extension build, ELF/ABI probe, and execution receipt before activation. Existing local install payload remains insufficient evidence by itself."
+    },
+    {
+      "id": "cpython_install_payload",
+      "upstream_project": null,
+      "source_url": null,
+      "source_status": "local_built_payload_present",
+      "license": "Python-2.0 plus component notices",
+      "reconstruction_status": "not sufficient by itself to claim clone-contained source availability; associated CPython source remains a declared source edge until an approved archive payload is present"
+    },
+    {
+      "id": "cargo_dependency_graph",
+      "upstream_project": null,
+      "source_url": null,
+      "source_status": "contained_vendored_source",
+      "license": "per-package Cargo.toml and included notices",
+      "reconstruction_status": "Cargo metadata and locked offline workspace build are required verification evidence"
+    }
+  ],
+  "normal_runtime_network_required": false
+}
