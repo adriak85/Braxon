@@ -101,7 +101,7 @@ materialize_archive_source() {
 
 source_edge() {
   cd "$ROOT"
-  node tools/toolchain/verify_public_source_archives.mjs "$ROOT"
+  "$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
   materialize_archive_source \
     "$ROOT/state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz" \
     "rust-f964de49bcb561e5c6c725bb37201e11d852daf0" \
