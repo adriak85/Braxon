@@ -168,7 +168,7 @@
       "id": "blank_surface_registry",
       "path": "config/nsq/blank_surface_registry.json",
       "bytes": 167562,
-      "sha256": "f1ea8eaa60521fc13834011ad5c5c7efab8444366ee816bf0660c88387274578",
+      "sha256": "0102760aeff9948baf323cc763914c84a43b944544ad38f5486c1a898567f4c7",
       "semantic_surface": ["individual non-routable blank upstream historical and derived capture classification", "blank-surface fail-closed provenance policy"],
       "provenance": "generated deterministically from the complete tracked-tree audit and committed as canonical classification evidence",
       "reproduction": "tools/toolchain/generate_blank_surface_registry.mjs after tools/toolchain/audit_all_tracked_files.mjs",

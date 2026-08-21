@@ -113,6 +113,7 @@ function classify(path) {
   if (path.startsWith("config/")) return { classification: "configuration_contract_surface", authority: "NSQ_reflexor_or_toolchain_validation" };
   if (path.startsWith("state/")) return { classification: "derived_state_or_provenance_surface", authority: "state_contract_or_capture_provenance" };
   if (path.startsWith("scripts/") || path.startsWith("tools/") || path.startsWith("bin/")) return { classification: "operational_tool_surface", authority: "repository_front_door_or_validation" };
+  if (path.startsWith("LICENSES/")) return { classification: "repository_control_surface", authority: "workspace_build_or_license" };
   if (path.startsWith("crates/") || path.startsWith("src/") || path.startsWith("nsq-unified/")) return { classification: "workspace_source_surface", authority: "workspace_reflexor_discovery_and_tests" };
   if (["Cargo.toml", "Cargo.lock", "LICENSE", "README.md", ".gitignore", "rust-toolchain.toml"].includes(path) || path.startsWith(".cargo/")) return { classification: "repository_control_surface", authority: "workspace_build_or_license" };
   if (!path.includes("/")) return { classification: "root_operational_or_control_surface", authority: "repository_front_door_or_bootstrap_contract" };

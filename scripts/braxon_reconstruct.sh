@@ -56,13 +56,29 @@ capacity_preflight() {
   [ "$available" -ge "$MIN_BUILD_FREE_KIB" ] || fail "insufficient executable-workspace capacity; do not start source build until available KiB meets BRAXON_MIN_BUILD_FREE_KIB"
 }
 
+verified_existing_rust_source() {
+  destination="$1"
+  expected_commit="f964de49bcb561e5c6c725bb37201e11d852daf0"
+  [ -d "$destination" ] || return 1
+  [ -f "$destination/x.py" ] || return 1
+  [ -f "$destination/compiler/rustc/Cargo.toml" ] || return 1
+  [ "$(git -C "$destination" rev-parse HEAD 2>/dev/null || true)" = "$expected_commit" ] || return 1
+  git -C "$destination" diff --quiet --ignore-submodules -- 2>/dev/null || return 1
+  git -C "$destination" diff --cached --quiet --ignore-submodules -- 2>/dev/null || return 1
+  return 0
+}
+
 materialize_archive_source() {
   archive="$1"
   expected_root="$2"
   destination="$3"
   [ -f "$archive" ] || fail "repository-contained source archive is absent: $archive"
   if [ -d "$destination" ] && [ "$(find "$destination" -mindepth 1 -maxdepth 1 -print -quit)" ]; then
-    [ "${BRAXON_REPLACE_SOURCE_EDGE:-0}" = "1" ] || fail "destination already contains source: $destination; set BRAXON_REPLACE_SOURCE_EDGE=1 only after preserving or removing it intentionally"
+    if [ "$destination" = "$ROOT/state/full_android_language_toolchain/src/rust" ] && verified_existing_rust_source "$destination"; then
+      notice "accepted_verified_existing_rust_source=$destination"
+      return 0
+    fi
+    [ "${BRAXON_REPLACE_SOURCE_EDGE:-0}" = "1" ] || fail "destination already contains unverified or dirty source: $destination; set BRAXON_REPLACE_SOURCE_EDGE=1 only after preserving or removing it intentionally"
     rm -rf "$destination"
   fi
   staging="$ROOT/state/full_android_language_toolchain/materialization/.${expected_root}.$$"
@@ -88,7 +104,7 @@ source_edge() {
     "$ROOT/state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz" \
     "cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f" \
     "$ROOT/state/full_android_language_toolchain/src/cpython"
-  notice "pinned_rust_and_cpython_source_edges_materialized_from_repository_archives=true"
+  notice "pinned_rust_and_cpython_source_edges_verified_or_materialized_from_repository_archives=true"
   notice "network_used=false"
 }
 
