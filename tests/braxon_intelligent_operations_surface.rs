@@ -78,18 +78,15 @@ fn parameter_citadel_and_proven_native_benchmarks_are_public_reflexor_operations
 }
 
 #[test]
-fn tensor_inference_attempts_real_authoritative_execution_and_never_reverts_to_a_report_only_claim()
-{
-    let (ok, stdout, stderr) = run(&["runtime", "infer", "Braxon", "is truth"]);
-    assert!(
-        !ok,
-        "unexpected success stdout:\n{stdout}\nstderr:\n{stderr}"
-    );
-    assert!(
-        stderr.contains("authoritative donor index is absent"),
-        "{stderr}"
-    );
-    assert!(stderr.contains("restore the donor index and its referenced safetensors shards"));
-    assert!(!stderr.contains("request_recorded_without_runtime_claim"));
+fn tensor_inference_executes_a_configured_council_ten_seed_window_without_a_whole_model_claim() {
+    let (ok, stdout, stderr) = run(&["runtime", "infer", "deepseek-v3-671b", "is truth"]);
+    assert!(ok, "stdout:\n{stdout}\nstderr:\n{stderr}");
+    assert!(stdout.contains("\"capability\": \"feature:model.tensor_inference\""));
+    assert!(stdout.contains("\"model\": \"deepseek-v3-671b\""));
+    assert!(stdout.contains("bounded canonical Citadel seed operation"));
+    assert!(stdout.contains("\"whole_model_execution\": false"));
+    assert!(stdout.contains("\"resident_runtime_constructed\": false"));
+    assert!(!stdout.contains("safetensors"));
+    assert!(!stdout.contains("request_recorded_without_runtime_claim"));
     assert!(!stdout.contains("hot_live_claim"));
 }

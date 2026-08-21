@@ -1,8 +1,10 @@
 {
-  "schema": "braxon.nsq.watermark_execution_contract.v1",
+  "schema": "braxon.nsq.watermark_execution_contract.v2",
+  "canonicality": "deprecated_historical_only",
+  "deprecated_replaced_by": "config/nsq/watermarked_file_operation_contract.json",
   "authority": "NSQ_COURT",
-  "active_family_watermark": "BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1",
-  "watermark_behavior": {
+  "historical_family_watermark": "BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1",
+  "historical_behavior": {
     "watermarks_are_operational": true,
     "watermarks_are_not_cosmetic": true,
     "watermarks_participate_in_execution_validation": true,
@@ -10,22 +12,22 @@
     "watermarks_participate_in_semantic_routing": true,
     "watermarks_participate_in_runtime_validation": true
   },
-  "required_continuity": {
-    "base8_semantic_topology": true,
-    "lever_scale_continuity": true,
-    "semantic_family_continuity": true,
-    "dimensional_gradient_continuity": true,
-    "reconstruction_continuity": true
+  "canonical_successor": {
+    "contract": "config/nsq/watermarked_file_operation_contract.json",
+    "implementation": "crates/braxon-core/src/watermarked_file_operation.rs",
+    "reflexor_feature": "feature:watermark.file_operation",
+    "front_door": "Braxon watermark verify <repository-relative-source>",
+    "verification": "scripts/codex/verify_watermark_behavior.sh"
   },
-  "fail_closed_conditions": {
+  "historical_fail_closed_conditions": {
     "missing_watermark": true,
     "watermark_mismatch": true,
     "donor_lane_contamination": true,
-    "placeholder_runtime_claim": true,
     "unauthorized_family_mutation": true
   },
   "legacy_reference": {
     "1126": "historical_only",
     "2254": "historical_only"
-  }
+  },
+  "rule": "This marker contract is retained for provenance only and is not an active verification authority. The functional watermark file operation is the sole canonical path."
 }

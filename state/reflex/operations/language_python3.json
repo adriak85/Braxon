@@ -1,0 +1,31 @@
+{
+  "payload": {
+    "capability": {
+      "complete_nsq_ingestion": true,
+      "executable": false,
+      "foreign_surface_role": "surface_ingress_and_egress_projection_only",
+      "id": "language:python3",
+      "ingress": "call_shape",
+      "kind": "native_language",
+      "notes": [
+        "Every registry surface is dynamically ingested into an NSQ language contract at discovery time; this is not a copied static list.",
+        "External language spelling is an ingress or egress projection and cannot supersede the NSQ semantic representation."
+      ],
+      "nsq_dialect": "intent",
+      "on_demand": true,
+      "owner": "NSQ native language substrate",
+      "resident_runtime": false,
+      "semantic_authority": "nsq",
+      "source": "/home/ubuntu/Braxon/config/nsq/nsq_runtime_language_registry.json",
+      "state": "ingested_and_redefined",
+      "target_names": []
+    },
+    "command": null,
+    "execution_mode": "contract_route_only",
+    "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/language_python3.json",
+    "routed": true,
+    "schema": "braxon.nsq.kinetic_reflex.operation.v1",
+    "status": "routed_without_process"
+  },
+  "sha256": "182429e22c874ff488da335fa9d6fb32a3a267c1e0278f05a15300cc588c735d"
+}

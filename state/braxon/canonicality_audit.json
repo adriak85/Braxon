@@ -1,0 +1,365 @@
+{
+  "schema": "braxon.nsq.canonicality_audit.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "workspace_root": "/home/ubuntu/Braxon",
+  "generated_from": "tracked_repository_and_feature_execution_registry",
+  "valid": true,
+  "status": "canonicality_verified",
+  "scope": {
+    "tracked_file_total": 182921,
+    "excluded_prefixes": [
+      "state/full_android_language_toolchain/src/",
+      "vendor/",
+      "target/",
+      "assets/"
+    ],
+    "feature_total": 12,
+    "canonical_feature_total": 11,
+    "deprecated_historical_feature_total": 1,
+    "explicitly_classified_legacy_surface_total": 15
+  },
+  "checks": [
+    {
+      "name": "all_registered_features_are_classified",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "feature_identifiers_are_unique",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "canonical_feature_purposes_are_unique",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "active_features_do_not_require_conventional_donor_index",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "no_active_source_contains_conventional_donor_vocabulary",
+      "passed": true,
+      "evidence": [
+        {
+          "path": "config/nsq/braxon_model_downloader.json",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "config/nsq/braxon_model_downloader_app.json",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/audit_braxon_qwen_ingress.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/braxon_intelligent_operation_gate.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/install_braxon_weights.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/seed_braxon_nsq_envelope.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "specs/repo/BRAXON_RUNTIME_REALITY_REPORT.md",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader_app.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/specs_repo_BRAXON_RUNTIME_REALITY_REPORT.md",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_braxon_braxon_model_launch_readiness.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "tools/braxon_model_downloader/braxon_model_downloader.py",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/braxon_model_downloader/braxon_model_downloader_app.py",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/braxon_model_downloader/verify_whole_models.py",
+          "classification": "deprecated_historical_only"
+        }
+      ]
+    },
+    {
+      "name": "all_legacy_vocabulary_surfaces_are_explicitly_classified",
+      "passed": true,
+      "evidence": [
+        {
+          "path": "config/nsq/braxon_model_downloader.json",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "config/nsq/braxon_model_downloader_app.json",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/audit_braxon_qwen_ingress.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/braxon_intelligent_operation_gate.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/install_braxon_weights.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "scripts/seed_braxon_nsq_envelope.sh",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "specs/repo/BRAXON_RUNTIME_REALITY_REPORT.md",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader_app.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/specs_repo_BRAXON_RUNTIME_REALITY_REPORT.md",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_braxon_braxon_model_launch_readiness.json",
+          "classification": "historical_archive"
+        },
+        {
+          "path": "tools/braxon_model_downloader/braxon_model_downloader.py",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/braxon_model_downloader/braxon_model_downloader_app.py",
+          "classification": "deprecated_historical_only"
+        },
+        {
+          "path": "tools/braxon_model_downloader/verify_whole_models.py",
+          "classification": "deprecated_historical_only"
+        }
+      ]
+    }
+  ],
+  "canonical_features": [
+    {
+      "id": "feature:operator.intelligence",
+      "source": "crates/braxon-core/src/intelligent_operation.rs",
+      "classification": "canonical_active",
+      "purpose": "interpret_and_execute_operator_intent",
+      "required_artifacts": [
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json"
+      ]
+    },
+    {
+      "id": "feature:parameter.citadel",
+      "source": "crates/braxon-core/src/parameter_citadel.rs",
+      "classification": "canonical_active",
+      "purpose": "execute_designated_local_parameter_integration",
+      "required_artifacts": [
+        "crates/braxon-core/src/parameter_citadel.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ]
+    },
+    {
+      "id": "feature:benchmark.native_equivalence",
+      "source": "crates/braxon-core/src/native_equivalence_harness.rs",
+      "classification": "canonical_active",
+      "purpose": "run_native_equivalence_benchmark",
+      "required_artifacts": [
+        "crates/braxon-core/src/native_model_substrate.rs",
+        "crates/braxon-core/src/native_equivalence_harness.rs"
+      ]
+    },
+    {
+      "id": "feature:benchmark.native_recovery",
+      "source": "crates/braxon-core/src/native_fault_recovery.rs",
+      "classification": "canonical_active",
+      "purpose": "run_native_recovery_benchmark",
+      "required_artifacts": [
+        "crates/braxon-core/src/native_model_substrate.rs",
+        "crates/braxon-core/src/native_fault_recovery.rs"
+      ]
+    },
+    {
+      "id": "feature:model.donor_readiness",
+      "source": "crates/braxon-core/src/donor_model_readiness.rs",
+      "classification": "canonical_active",
+      "purpose": "validate_authoritative_council_ten_stack_then_materialize_fire_and_release_each_seed_body",
+      "required_artifacts": [
+        "config/nsq/braxon_council_ten_stack.json",
+        "crates/braxon-core/src/council_ten.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ]
+    },
+    {
+      "id": "feature:model.tensor_inference",
+      "source": "crates/braxon-core/src/model_execution.rs",
+      "classification": "canonical_active",
+      "purpose": "execute_selected_band_seed_materialization_fire_and_release",
+      "required_artifacts": [
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/braxon_council_ten_stack.json",
+        "crates/nsq-citadel/src/materialization.rs"
+      ]
+    },
+    {
+      "id": "feature:repository.operation",
+      "source": "crates/braxon-core/src/repository_operation.rs",
+      "classification": "canonical_active",
+      "purpose": "intercept_repository_operation_then_evaluate_revision_security_and_legal_readiness",
+      "required_artifacts": [
+        "config/toolchains/extended_repository_integration_manifest.json",
+        "scripts/braxon_repository_lane.sh"
+      ]
+    },
+    {
+      "id": "feature:language.parameter_parse",
+      "source": "crates/braxon-core/src/language_operation.rs",
+      "classification": "canonical_active",
+      "purpose": "intercept_language_request_then_resolve_only_declared_local_materialization_tools",
+      "required_artifacts": [
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/nsq/complete_semantic_extraction_contract.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "crates/braxon-core/src/parameter_citadel.rs"
+      ]
+    },
+    {
+      "id": "feature:toolchain.contained_verify",
+      "source": "crates/braxon-core/src/contained_toolchain.rs",
+      "classification": "canonical_active",
+      "purpose": "verify_local_toolchain_materialization_and_release_blockers",
+      "required_artifacts": [
+        "config/toolchains/contained_semantic_toolchain_inventory.json",
+        "config/toolchains/rust_bootstrap_chain.json",
+        "config/toolchains/source_built_build_graph.json",
+        "config/toolchains/source_availability_manifest.json",
+        "config/nsq/language_functional_ingestion_matrix.json",
+        ".cargo/config.toml",
+        "vendor"
+      ]
+    },
+    {
+      "id": "feature:watermark.file_operation",
+      "source": "crates/braxon-core/src/watermarked_file_operation.rs",
+      "classification": "canonical_active",
+      "purpose": "admit_declared_repository_file_then_commit_watermark_and_execute_only_an_explicit_target_safe_compiler_route",
+      "required_artifacts": [
+        "config/nsq/watermarked_file_operation_contract.json",
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/toolchains/source_built_build_graph.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "crates/braxon-core/src/kinetic_reflexor.rs",
+        "crates/braxon-core/src/parameter_citadel.rs"
+      ]
+    },
+    {
+      "id": "feature:toolchain.bionic_compatibility",
+      "source": "crates/braxon-core/src/bionic_compatibility.rs",
+      "classification": "canonical_active",
+      "purpose": "verify_staged_overlay_source_tokenization_and_target_proof_state",
+      "required_artifacts": [
+        "config/nsq/bionic_gnu_compatibility_matrix.json",
+        "docs/NSQ_BIONIC_GNU_COMPATIBILITY.md",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
+        "scripts/toolchains/unified_android_libc_contract_overlay.sh"
+      ]
+    }
+  ],
+  "deprecated_historical_features": [
+    {
+      "id": "feature:tensor.materialization",
+      "source": "crates/nsq-core/src/native_tensor.rs",
+      "classification": "deprecated_historical_only",
+      "successor": "feature:model.tensor_inference",
+      "purpose": "historical_external_tensor_format_materialization"
+    }
+  ],
+  "stale_candidates": [
+    {
+      "path": "config/nsq/braxon_model_downloader.json",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "config/nsq/braxon_model_downloader_app.json",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "scripts/audit_braxon_qwen_ingress.sh",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "scripts/braxon_intelligent_operation_gate.sh",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "scripts/install_braxon_weights.sh",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "scripts/seed_braxon_nsq_envelope.sh",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "specs/repo/BRAXON_RUNTIME_REALITY_REPORT.md",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader.json",
+      "classification": "historical_archive"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/config_nsq_braxon_model_downloader_app.json",
+      "classification": "historical_archive"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/specs_repo_BRAXON_RUNTIME_REALITY_REPORT.md",
+      "classification": "historical_archive"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/state_braxon_braxon_model_launch_readiness.json",
+      "classification": "historical_archive"
+    },
+    {
+      "path": "tools/braxon_model_downloader/braxon_model_downloader.py",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "tools/braxon_model_downloader/braxon_model_downloader_app.py",
+      "classification": "deprecated_historical_only"
+    },
+    {
+      "path": "tools/braxon_model_downloader/verify_whole_models.py",
+      "classification": "deprecated_historical_only"
+    }
+  ]
+}

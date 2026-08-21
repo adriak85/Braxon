@@ -10,14 +10,15 @@ use nsq_reflexor::{
 };
 use sha2::{Digest, Sha256};
 use BRAXON_core::{
-    address_integrity_audit, braxon_context_manifest_status,
+    address_integrity_audit, assess_donor_model_readiness, braxon_context_manifest_status,
     braxon_wake_linked_change_report_from_env, closure_audit, evaluate_repository_operation,
     execute_bounded_tensor_inference, execute_canonical_parameter_citadel_cycle,
     execute_operator_intelligence, execute_watermarked_file_operation, full_wake,
     model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
     tokenizer_verification, verify_bionic_compatibility, verify_complete_semantic_extraction,
     verify_contained_toolchain, verify_language_artifact_context, BraxonBus, CouncilTen,
-    TargetField, OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
+    DonorModelReadinessReport, TargetField, DONOR_MODEL_READINESS_CAPABILITY,
+    OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
     WATERMARKED_FILE_OPERATION_CAPABILITY,
 };
 
@@ -141,6 +142,8 @@ enum AppsCommand {
 #[derive(Subcommand)]
 enum RuntimeCommand {
     Registry,
+    /// Evaluate every configured donor band against local index, shard, synchronization, and target-proof state.
+    Donors,
     Python3 {
         call: String,
     },
@@ -155,7 +158,7 @@ enum RuntimeCommand {
     NativeEquivalence,
     /// Run native snapshot/replay and bounded-fault recovery validation.
     NativeRecovery,
-    /// Attempt real bounded parameter execution from the authoritative donor index.
+    /// Execute a bounded selected-band operation through the canonical Council Ten Citadel seed window.
     Infer {
         model: String,
         prompt: String,
@@ -731,6 +734,31 @@ fn execute_language_intelligent_turn(
 fn print_runtime(command: RuntimeCommand) {
     match command {
         RuntimeCommand::Registry => print_json(&nsq_court_registry()),
+        RuntimeCommand::Donors => {
+            let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+            let result = (|| {
+                let donor_route =
+                    reflex_route_operation(&root, DONOR_MODEL_READINESS_CAPABILITY, false)?;
+                let intelligent_route =
+                    reflex_route_operation(&root, OPERATOR_INTELLIGENCE_CAPABILITY, false)?;
+                let readiness = assess_donor_model_readiness(&root)?;
+                if donor_route.capability.id != DONOR_MODEL_READINESS_CAPABILITY
+                    || intelligent_route.capability.id != OPERATOR_INTELLIGENCE_CAPABILITY
+                {
+                    return Err("Kinetic Semantic Reflexor did not select the declared donor and intelligent-operation capabilities".into());
+                }
+                Ok::<_, String>((donor_route, intelligent_route, readiness))
+            })();
+            match result {
+                Ok((donor_route, intelligent_route, readiness)) => {
+                    print_donor_readiness_front_door(donor_route, intelligent_route, readiness)
+                }
+                Err(error) => {
+                    eprintln!("runtime_donors_error={error}");
+                    std::process::exit(1);
+                }
+            }
+        }
         RuntimeCommand::Python3 { call } => {
             match execute_language_intelligent_turn("python3", &call) {
                 Ok((language_route, operation_route, operation)) => {
@@ -865,6 +893,41 @@ fn print_runtime(command: RuntimeCommand) {
             }
         }
     }
+}
+
+fn print_donor_readiness_front_door(
+    donor_route: nsq_reflexor::ReflexOperation,
+    intelligent_route: nsq_reflexor::ReflexOperation,
+    readiness: DonorModelReadinessReport,
+) {
+    let all_configured_donor_bands_live = readiness.configured_model_total_matches_contract
+        && readiness.complete_ten_body_window_proven
+        && readiness.donor_parameter_synchronization_live;
+    let answer = if all_configured_donor_bands_live {
+        "Every configured donor band has completed the canonical Council Ten Citadel seed materialization, NSQ firing, and bounded-window release proof. This establishes the seed route only; whole-model learned-weight execution remains explicitly unclaimed."
+    } else {
+        "The Braxon intelligent front door is operational through NSQ intent, Kinetic Reflexor routing, native instruction execution, and lease release. Donor readiness fails closed until the canonical Council Ten Citadel seed can materialize, fire, and release every configured body."
+    };
+    print_json(&serde_json::json!({
+        "schema": "braxon.runtime.donor_front_door.v1",
+        "answer": answer,
+        "action": "evaluate_configured_donor_bands_and_intelligent_front_door",
+        "donor_readiness_capability": donor_route.capability.id,
+        "intelligent_operation_capability": intelligent_route.capability.id,
+        "intelligent_front_door_operable": true,
+        "all_configured_donor_bands_live": all_configured_donor_bands_live,
+        "donor_parameter_synchronization_live": readiness.donor_parameter_synchronization_live,
+        "model_weight_execution_claimed": readiness.model_weight_execution_claimed,
+        "resident_runtime_constructed": readiness.resident_runtime_constructed,
+        "operational_procedures": [
+            "Braxon bus <intent>",
+            "Braxon runtime parameter-citadel --signal <n> --context <n>",
+            "Braxon runtime native-equivalence",
+            "Braxon runtime native-recovery",
+            "Braxon runtime infer <configured-model> <prompt> after donor readiness proves a complete Council Ten Citadel seed window"
+        ],
+        "readiness": readiness,
+    }));
 }
 
 fn print_content(command: ContentCommand) {

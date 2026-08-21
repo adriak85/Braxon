@@ -14,11 +14,11 @@
       "trigger_role": "root_package_manifest"
     },
     {
-      "bytes": 72162,
+      "bytes": 77902,
       "link_required": true,
       "path": "src/main.rs",
       "present": true,
-      "sha256": "fd4e0e0074b373a39161f6d4d81389576a59a056faffb3f8b70bf74a57fb102c",
+      "sha256": "7c0de0d9f24386988b2eba01aa700f830b3a44838d09f1d824760e29c042dfe2",
       "trigger_role": "root_binary_handover_code"
     },
     {

@@ -15,6 +15,7 @@ const contracts = [
   'config/toolchains/license_report.json',
   'config/toolchains/gap_report.json',
   'config/nsq/feature_execution_registry.json',
+  'config/nsq/canonical_surface_registry.json',
   'config/nsq/language_functional_ingestion_matrix.json',
   'config/nsq/complete_semantic_extraction_contract.json',
   'config/nsq/semantic_corpus_manifest.json',
@@ -31,6 +32,7 @@ function readJson(relative) {
 const parsed = new Map(contracts.map((relative) => [relative, readJson(relative)]));
 const language = parsed.get('config/nsq/language_functional_ingestion_matrix.json');
 const feature = parsed.get('config/nsq/feature_execution_registry.json');
+const canonicalSurface = parsed.get('config/nsq/canonical_surface_registry.json');
 const repository = parsed.get('config/toolchains/extended_repository_integration_manifest.json');
 const graph = parsed.get('config/toolchains/source_built_build_graph.json');
 const semantic = parsed.get('config/nsq/semantic_corpus_manifest.json');
@@ -43,6 +45,13 @@ if (!feature.features.some((item) => item.id === 'feature:language.parameter_par
 if (!feature.features.some((item) => item.id === 'feature:repository.operation')) throw new Error('repository intercept feature missing');
 if (!feature.features.some((item) => item.id === 'feature:toolchain.bionic_compatibility')) throw new Error('Bionic feature missing');
 if (!feature.features.some((item) => item.id === 'feature:watermark.file_operation')) throw new Error('functional watermark feature missing');
+if (!feature.features.every((item) => item.canonicality === 'canonical_active' || item.canonicality === 'deprecated_historical_only')) throw new Error('feature canonicality classification is incomplete');
+for (const item of feature.features.filter((item) => item.canonicality === 'deprecated_historical_only')) {
+  const successor = feature.features.find((candidate) => candidate.id === item.deprecated_replaced_by);
+  if (!successor || successor.canonicality !== 'canonical_active') throw new Error(`deprecated feature lacks canonical successor: ${item.id}`);
+}
+if (!canonicalSurface.canonical_routes.some((route) => route.id === 'route:donor.citadel_seed' && route.classification === 'canonical_active')) throw new Error('canonical Council Ten Citadel donor route missing');
+if (!canonicalSurface.removed_surface_purposes.some((surface) => surface.purpose === 'Active conventional safetensors index as the Braxon donor readiness authority' && surface.classification === 'removed')) throw new Error('removed conventional donor-index purpose declaration missing');
 if (watermark.capability !== 'feature:watermark.file_operation' || !watermark.watermark_is_functional) throw new Error('functional watermark capability contract is invalid');
 if (watermark.resident_runtime || watermark.native_execution_policy.allows_hidden_download || !watermark.native_execution_policy.requires_aarch64_android_target) throw new Error('functional watermark target boundary is invalid');
 if (!graph.nodes.some((item) => item.id === 'complete_language_semantic_proofs')) throw new Error('semantic proof build-graph node missing');
@@ -69,4 +78,6 @@ console.log(JSON.stringify({
   semantic_surface_total: extraction.required_semantic_surfaces.length,
   compact_corpus_total: semantic.corpora.length,
   functional_watermark_routes: watermark.compiler_routes.length,
+  canonical_surface_route_total: canonicalSurface.canonical_routes.length,
+  deprecated_historical_surface_total: canonicalSurface.deprecated_historical_surfaces.length,
 }, null, 2));

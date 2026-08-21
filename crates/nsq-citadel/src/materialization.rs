@@ -485,6 +485,39 @@ impl CitadelNativeRuntime {
             receipt,
         })
     }
+
+    /// Releases every address and ownership lease associated with a completed
+    /// on-demand Citadel window. The materialization receipt remains available
+    /// as evidence, while the NSQ bus is returned to a non-resident state.
+    pub fn release_materialization(
+        &mut self,
+        materialization: &CitadelMaterialization,
+    ) -> Result<NsqActuationReceipt, CitadelMaterializationError> {
+        if materialization.bodies.is_empty() {
+            return Err(CitadelMaterializationError::Reconciliation(
+                "cannot release an empty Citadel materialization".into(),
+            ));
+        }
+        let mut addresses = BTreeSet::new();
+        for body in &materialization.bodies {
+            if !addresses.insert(body.address.clone()) {
+                return Err(CitadelMaterializationError::Reconciliation(format!(
+                    "duplicate Citadel body address for pole {}",
+                    body.pole_id
+                )));
+            }
+            self.ownership
+                .advance(&body.owner, NsqLeasePhase::Release)
+                .map_err(CitadelMaterializationError::Ownership)?;
+        }
+        let instructions = addresses
+            .into_iter()
+            .map(|address| NsqInstruction::Release { address })
+            .collect::<Vec<_>>();
+        self.runtime
+            .execute(&instructions)
+            .map_err(CitadelMaterializationError::Runtime)
+    }
 }
 
 pub fn delta_for_tensor(
@@ -591,6 +624,7 @@ fn hash_bytes(bytes: &[u8]) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use nsq_core::NsqActuator;
 
     fn seed(intent: &str) -> IntentSeed {
         IntentSeed::new("citadel-seed-v1", intent)
@@ -607,6 +641,19 @@ mod tests {
         assert_eq!(result.receipt.executed, 20);
         assert_eq!(result.receipt.fired, 10);
         assert_eq!(runtime.tensor_store.len(), 10);
+    }
+
+    #[test]
+    fn released_seed_window_closes_all_nsq_addresses_and_piston_leases() {
+        let mut runtime = CitadelNativeRuntime::new(CoachingMode::Balanced);
+        let materialization = runtime
+            .materialize_seed(&seed("bounded piston release"), 1)
+            .unwrap();
+        let release = runtime.release_materialization(&materialization).unwrap();
+        assert_eq!(release.executed, 10);
+        assert_eq!(release.released, 10);
+        assert!(runtime.runtime.actuator().snapshot().is_empty());
+        assert!(runtime.ownership.leases().is_empty());
     }
 
     #[test]

@@ -1,0 +1,38 @@
+{
+  "payload": {
+    "capability": {
+      "complete_nsq_ingestion": true,
+      "executable": true,
+      "foreign_surface_role": "project_artifact_ingress_and_nsq_action_egress_only",
+      "id": "feature:benchmark.native_equivalence",
+      "ingress": "validated_input_to_nsq_feature_operation",
+      "kind": "semantic_intent",
+      "notes": [
+        "canonicality=canonical_active",
+        "state_contract=deterministic_native_inference_and_training_equivalence",
+        "action_contract=run_native_equivalence_benchmark",
+        "answer_contract=benchmark_result",
+        "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.",
+        "required_artifacts=present"
+      ],
+      "nsq_dialect": "symbolic",
+      "on_demand": true,
+      "owner": "NSQ kinetic semantic reflexor",
+      "resident_runtime": false,
+      "semantic_authority": "nsq",
+      "source": "crates/braxon-core/src/native_equivalence_harness.rs",
+      "state": "operable_on_demand",
+      "target_names": [
+        "crates/braxon-core/src/native_model_substrate.rs",
+        "crates/braxon-core/src/native_equivalence_harness.rs"
+      ]
+    },
+    "command": null,
+    "execution_mode": "contract_route_only",
+    "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_benchmark_native_equivalence.json",
+    "routed": true,
+    "schema": "braxon.nsq.kinetic_reflex.operation.v1",
+    "status": "routed_without_process"
+  },
+  "sha256": "8dc054fb9c69a89827f871af865f2cd8f8151a89d54b2111d1e6778576bea118"
+}

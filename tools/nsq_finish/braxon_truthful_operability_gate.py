@@ -1,269 +1,219 @@
 #!/usr/bin/env python3
+"""Generate derived launch-readiness state from the canonical Citadel seed route.
+
+This gate does not inspect safetensors, GGUF, shards, download manifests, or
+static donor payload claims. It invokes the tracked `Braxon runtime donors`
+front door, which routes through the Kinetic Semantic Reflexor and proves the
+Council Ten topology plus a bounded Citadel seed materialization/fire/release
+cycle. It never promotes that seed-route proof into a learned-weight execution
+or resident-runtime claim.
+"""
+
+from __future__ import annotations
+
 import json
-import hashlib
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(".").resolve()
+ROOT = Path(__file__).resolve().parents[2]
+DONOR_COMMAND = [
+    "cargo",
+    "run",
+    "--locked",
+    "--offline",
+    "--",
+    "runtime",
+    "donors",
+]
 
-def read_json(path):
-    p = ROOT / path
-    if not p.exists():
-        return None
+
+def run_canonical_donor_front_door() -> dict:
+    completed = subprocess.run(
+        DONOR_COMMAND,
+        cwd=ROOT,
+        check=False,
+        text=True,
+        capture_output=True,
+    )
+    if completed.returncode != 0:
+        raise RuntimeError(
+            "canonical donor front door failed: "
+            + (completed.stderr.strip() or completed.stdout.strip() or f"exit={completed.returncode}")
+        )
     try:
-        return json.loads(p.read_text())
-    except Exception as e:
-        return {"__parse_error__": str(e)}
+        return json.loads(completed.stdout)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(f"canonical donor front door did not emit JSON: {error}") from error
 
-def sha256_file(path):
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
-def exists_nonempty(path):
-    p = ROOT / path
-    return p.exists() and p.is_file() and p.stat().st_size > 0
+def write_json(relative_path: str, document: dict) -> None:
+    path = ROOT / relative_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(document, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
-def file_record(path):
-    p = ROOT / path
-    return {
-        "path": path,
-        "present": p.exists(),
-        "bytes": p.stat().st_size if p.exists() and p.is_file() else 0,
-        "sha256": sha256_file(p) if p.exists() and p.is_file() and p.stat().st_size > 0 and p.stat().st_size < 128 * 1024 * 1024 else None,
+
+def main() -> None:
+    now = datetime.now(timezone.utc).isoformat()
+    donor_front_door = run_canonical_donor_front_door()
+    readiness = donor_front_door.get("readiness")
+    if not isinstance(readiness, dict):
+        raise RuntimeError("canonical donor front door omitted its readiness receipt")
+
+    seed_window_proven = bool(
+        readiness.get("configured_model_total_matches_contract")
+        and readiness.get("council_wake_all_passed")
+        and readiness.get("citadel_seed_materialized")
+        and readiness.get("complete_ten_body_window_proven")
+        and readiness.get("donor_parameter_synchronization_live")
+        and readiness.get("materialized_body_total") == 10
+        and readiness.get("nsq_fire_instruction_total") == 10
+        and readiness.get("nsq_release_instruction_total") == 10
+    )
+    model_weight_execution_claimed = bool(readiness.get("model_weight_execution_claimed"))
+    resident_runtime_constructed = bool(readiness.get("resident_runtime_constructed"))
+    if model_weight_execution_claimed or resident_runtime_constructed:
+        raise RuntimeError(
+            "canonical donor receipt violated the non-resident seed-route boundary"
+        )
+
+    launch = {
+        "schema": "Braxon.model_launch_readiness.v2",
+        "canonicality": "canonical_active",
+        "generated_at": now,
+        "authority": "NSQ kinetic semantic reflexor",
+        "canonical_donor_path": "Council Ten Citadel seed -> NSQ set/fire -> bounded lease release",
+        "authoritative_seed_contract_path": readiness.get("authoritative_seed_contract_path"),
+        "seed_id": readiness.get("seed_id"),
+        "seed_hash": readiness.get("seed_hash"),
+        "configured_model_total": readiness.get("configured_model_total"),
+        "seed_window_ready": seed_window_proven,
+        "can_attempt_seed_window_operation": seed_window_proven,
+        "runtime_route_proven": seed_window_proven,
+        "loaded_binding_proven": False,
+        "model_weight_execution_claimed": False,
+        "runtime_hot_live_proven": False,
+        "resident_runtime_constructed": False,
+        "status": (
+            "canonical_seed_window_proven_model_weight_execution_unclaimed"
+            if seed_window_proven
+            else "canonical_seed_window_proof_failed_closed"
+        ),
+        "missing_for_model_weight_execution": [
+            "independent_learned_weight_execution_receipt"
+        ],
+        "evidence": {
+            "donor_front_door_action": donor_front_door.get("action"),
+            "donor_readiness_capability": donor_front_door.get("donor_readiness_capability"),
+            "intelligent_operation_capability": donor_front_door.get("intelligent_operation_capability"),
+            "council_wake_all_passed": readiness.get("council_wake_all_passed"),
+            "materialized_body_total": readiness.get("materialized_body_total"),
+            "nsq_set_instruction_total": readiness.get("nsq_set_instruction_total"),
+            "nsq_fire_instruction_total": readiness.get("nsq_fire_instruction_total"),
+            "nsq_release_instruction_total": readiness.get("nsq_release_instruction_total"),
+            "complete_ten_body_window_proven": readiness.get("complete_ten_body_window_proven"),
+            "bands": readiness.get("bands"),
+        },
+        "rule": (
+            "Only an executed Council Ten Citadel seed materialization, NSQ fire, and lease release "
+            "can establish seed-window readiness. That proof must not be relabeled as learned model-weight "
+            "execution, whole-model activation, or a resident runtime."
+        ),
     }
 
-now = datetime.now(timezone.utc).isoformat()
+    bus = {
+        "schema": "Braxon.llm_bus_parameter_pressure_gate.v2",
+        "canonicality": "canonical_active",
+        "generated_at": now,
+        "authority": "NSQ kinetic semantic reflexor",
+        "llm_bus_seed_window_ready": seed_window_proven,
+        "model_weight_execution_claimed": False,
+        "resident_runtime_constructed": False,
+        "status": (
+            "citadel_seed_bus_window_materialized_fired_and_released"
+            if seed_window_proven
+            else "citadel_seed_bus_window_failed_closed"
+        ),
+        "component_status": {
+            "council_wake_all_passed": readiness.get("council_wake_all_passed"),
+            "materialized_body_total": readiness.get("materialized_body_total"),
+            "nsq_fire_instruction_total": readiness.get("nsq_fire_instruction_total"),
+            "nsq_release_instruction_total": readiness.get("nsq_release_instruction_total"),
+            "complete_ten_body_window_proven": readiness.get("complete_ten_body_window_proven"),
+        },
+        "missing_for_model_weight_execution": [
+            "independent_learned_weight_execution_receipt"
+        ],
+    }
 
-transport = ROOT / "assets/braxon_core/source_ingest/braxon_transport"
-weight_index = transport / "model.safetensors.index.json"
-index = read_json("assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json")
+    nsq = {
+        "schema": "nsq.core_release_gate.v2",
+        "canonicality": "canonical_active",
+        "generated_at": now,
+        "authority": "NSQ kinetic semantic reflexor",
+        "citadel_seed_route_proven": seed_window_proven,
+        "model_weight_execution_claimed": False,
+        "resident_runtime_constructed": False,
+        "status": (
+            "core_seed_route_proven_release_scope_unclaimed"
+            if seed_window_proven
+            else "core_seed_route_failed_closed"
+        ),
+        "evidence": {
+            "donor_readiness_schema": readiness.get("schema"),
+            "complete_ten_body_window_proven": readiness.get("complete_ten_body_window_proven"),
+            "seed_hash": readiness.get("seed_hash"),
+        },
+        "release_scope": "This receipt proves only the canonical on-demand Citadel seed route; it is not a whole-system release certification.",
+    }
 
-expected_shards = []
-if isinstance(index, dict):
-    wm = index.get("weight_map") or {}
-    expected_shards = sorted(set(wm.values()))
+    write_json("state/braxon/braxon_model_launch_readiness.json", launch)
+    write_json("state/braxon/braxon_llm_bus_parameter_pressure_gate.json", bus)
+    write_json("state/nsq/nsq_core_release_gate.json", nsq)
 
-if not expected_shards:
-    expected_shards = [f"model-{i:05d}-of-00014.safetensors" for i in range(1, 15)]
+    docs = ROOT / "docs/Braxon"
+    specs = ROOT / "specs/Braxon"
+    docs.mkdir(parents=True, exist_ok=True)
+    specs.mkdir(parents=True, exist_ok=True)
+    (docs / "BRAXON_TRUTHFUL_OPERABILITY_GATE.md").write_text(
+        "# Braxon Canonical Citadel Seed Operability Gate\n\n"
+        f"Generated: `{now}`\n\n"
+        f"- `seed_window_ready`: `{str(seed_window_proven).lower()}`\n"
+        "- `model_weight_execution_claimed`: `false`\n"
+        "- `resident_runtime_constructed`: `false`\n\n"
+        "The gate invokes the active donor front door. It accepts only a ten-body Council Ten "
+        "Citadel seed materialization that sets, fires, and releases every NSQ body. Conventional "
+        "safetensors indexes, shard counts, and raw donor downloads are not evidence for this canonical route.\n",
+        encoding="utf-8",
+    )
+    (specs / "BRAXON_TRUTHFUL_OPERABILITY_GATE_CONTRACT.md").write_text(
+        "# Braxon Canonical Citadel Seed Operability Gate Contract\n\n"
+        "The canonical donor path is `Council Ten stack -> Citadel seed -> NSQ set/fire -> bounded lease release`. "
+        "The gate must invoke the tracked donor front door and fail closed when any topology, materialization, "
+        "actuation, or release proof is absent. The result must never claim learned model-weight execution, "
+        "whole-model activation, or a resident runtime.\n",
+        encoding="utf-8",
+    )
 
-shard_records = []
-for name in expected_shards:
-    p = transport / name
-    shard_records.append({
-        "path": str(p.relative_to(ROOT)),
-        "present": p.exists(),
-        "bytes": p.stat().st_size if p.exists() else 0,
-    })
+    print(
+        json.dumps(
+            {
+                "ok": seed_window_proven,
+                "canonicality": "canonical_active",
+                "seed_window_ready": seed_window_proven,
+                "model_weight_execution_claimed": False,
+                "resident_runtime_constructed": False,
+                "status": launch["status"],
+                "next": [
+                    "Braxon runtime donors",
+                    "Braxon runtime infer <configured-model> <prompt>",
+                ],
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
 
-required_assets = [
-    "assets/braxon_core/source_ingest/braxon_transport/config.json",
-    "assets/braxon_core/source_ingest/braxon_transport/generation_config.json",
-    "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json",
-    "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json",
-    "assets/braxon_core/source_ingest/braxon_transport/merges.txt",
-    "assets/braxon_core/source_ingest/braxon_transport/vocab.json",
-    "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json",
-    "assets/braxon_core/model_config/config.json",
-    "assets/braxon_core/model_config/generation_config.json",
-    "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
-    "assets/braxon_core/tokenizer/braxon_supermodel_tokenizer.json",
-    "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb",
-    "assets/braxon_core/weights/nsq/Braxon-27B_extended.nsqb.meta",
-    "state/braxon/offline_model_registry.json",
-    "state/braxon/braxon_binding.json",
-    "models/braxon/manifest.json",
-]
 
-asset_records = [file_record(x) for x in required_assets]
-required_assets_present = all(r["present"] and r["bytes"] > 0 for r in asset_records)
-all_shards_present = bool(shard_records) and all(r["present"] and r["bytes"] > 0 for r in shard_records)
-
-registry = read_json("state/braxon/offline_model_registry.json")
-binding = read_json("state/braxon/braxon_binding.json")
-manifest = read_json("models/braxon/manifest.json")
-runtime_targets = read_json("config/nsq/nsq_model_install_targets.json")
-
-def json_contains_text(obj, needle):
-    return needle.lower() in json.dumps(obj, sort_keys=True, ensure_ascii=False).lower() if obj is not None else False
-
-stamp_bound = json_contains_text(registry, "stamp_bound_manifest_registered_core")
-binding_file_present = binding is not None and "__parse_error__" not in binding
-manifest_file_present = manifest is not None and "__parse_error__" not in manifest
-runtime_route_available = json_contains_text(runtime_targets, "runtime_route_available")
-
-assets_ready = required_assets_present and all_shards_present and stamp_bound and binding_file_present and manifest_file_present
-
-# Can attempt launch means the asset/binding prerequisites are present.
-# It does NOT mean hot-live inference is proven.
-can_attempt_launch = assets_ready
-
-# Do not mark these true until a live command proves them.
-runtime_route_proven = False
-loaded_binding_proven = False
-runtime_hot_live_proven = False
-final_active_digest_present = False
-
-missing = []
-if not required_assets_present: missing.append("required_asset_files")
-if not all_shards_present: missing.append("safetensors_shards")
-if not stamp_bound: missing.append("stamp_bound_registry_status")
-if not binding_file_present: missing.append("BRAXON_binding_json")
-if not manifest_file_present: missing.append("models_BRAXON_manifest_json")
-if not runtime_route_available: missing.append("runtime_route_available_config")
-missing += [
-    "runtime_route_proof",
-    "loaded_model_binding_proof",
-    "runtime_hot_live_proof",
-    "final_active_digest",
-]
-
-launch = {
-    "schema": "Braxon.model_launch_readiness.v1",
-    "generated_at": now,
-    "assets_ready": assets_ready,
-    "can_attempt_launch": can_attempt_launch,
-    "runtime_route_available": runtime_route_available,
-    "runtime_route_proven": runtime_route_proven,
-    "loaded_binding_proven": loaded_binding_proven,
-    "runtime_hot_live_proven": runtime_hot_live_proven,
-    "final_active_digest_present": final_active_digest_present,
-    "status": "can_attempt_launch_runtime_proof_pending" if can_attempt_launch else "not_ready_assets_missing",
-    "missing_for_full_launch": missing,
-    "evidence": {
-        "required_assets": asset_records,
-        "safetensors_shards": shard_records,
-        "expected_shard_count": len(expected_shards),
-        "present_shard_count": sum(1 for r in shard_records if r["present"] and r["bytes"] > 0),
-        "offline_registry_status_contains_stamp_bound_manifest_registered_core": stamp_bound,
-        "binding_file_present": binding_file_present,
-        "manifest_file_present": manifest_file_present,
-        "runtime_route_available_config": runtime_route_available,
-    },
-    "rule": "This gate may mark assets_ready and can_attempt_launch from local files, but must not mark runtime_route_proven, loaded_binding_proven, runtime_hot_live_proven, or final_active_digest_present without live proof.",
-}
-
-bus = {
-    "schema": "Braxon.llm_bus_parameter_pressure_gate.v1",
-    "generated_at": now,
-    "llm_bus_launch_ready": False,
-    "status": "bus_assets_present_runtime_proof_pending" if can_attempt_launch else "not_bus_launch_ready",
-    "component_status": {
-        "assets_ready": assets_ready,
-        "can_attempt_launch": can_attempt_launch,
-        "runtime_route_available": runtime_route_available,
-        "runtime_route_proven": runtime_route_proven,
-        "loaded_binding_proven": loaded_binding_proven,
-        "runtime_hot_live_proven": runtime_hot_live_proven,
-        "final_active_digest_present": final_active_digest_present,
-        "stamp_bound_registry_status": stamp_bound,
-    },
-    "missing_for_launch": [
-        "runtime_route_proven",
-        "loaded_binding_proven",
-        "runtime_hot_live_proven",
-        "final_active_digest_present",
-    ],
-    "errors": [] if can_attempt_launch else ["asset prerequisites are not fully ready"],
-    "warnings": [
-        "runtime route proof is not present",
-        "loaded model binding proof is not present",
-        "runtime hot-live proof is not present",
-        "final active digest / launch-route execution proof is not found",
-    ],
-}
-
-nsq = {
-    "schema": "nsq.core_release_gate.v1",
-    "generated_at": now,
-    "nsq_core_complete_ready": False,
-    "complete_ready": False,
-    "status": "core_assets_present_release_proof_pending",
-    "evidence": {
-        "local_finish_manifest_present": exists_nonempty("state/nsq/nsq_local_finish_manifest.json"),
-        "runtime_languages_models_manifest_present": exists_nonempty("state/nsq/nsq_runtime_languages_models_manifest.json"),
-        "asm_stamp_manifest_present": exists_nonempty("state/nsq/nsq_asm_stamp_full_language_manifest.json"),
-        "stamp_registry_present": exists_nonempty("state/nsq/stamps/stamp_registry.jsonl"),
-        "model_reconstruction_manifest_present": exists_nonempty("state/nsq/model_reconstruction_manifest.json"),
-    },
-    "missing_for_release": [
-        "formal nsq core release proof",
-        "runtime execution proof",
-        "whole release gate proof",
-    ],
-}
-
-Path("state/braxon").mkdir(parents=True, exist_ok=True)
-Path("state/nsq").mkdir(parents=True, exist_ok=True)
-Path("docs/Braxon").mkdir(parents=True, exist_ok=True)
-Path("specs/Braxon").mkdir(parents=True, exist_ok=True)
-
-Path("state/braxon/braxon_model_launch_readiness.json").write_text(json.dumps(launch, indent=2, sort_keys=True) + "\n")
-Path("state/braxon/braxon_llm_bus_parameter_pressure_gate.json").write_text(json.dumps(bus, indent=2, sort_keys=True) + "\n")
-Path("state/nsq/nsq_core_release_gate.json").write_text(json.dumps(nsq, indent=2, sort_keys=True) + "\n")
-
-Path("docs/Braxon/BRAXON_TRUTHFUL_OPERABILITY_GATE.md").write_text(f"""# Braxon Truthful Operability Gate
-
-Generated: `{now}`
-
-## Result
-
-- `assets_ready`: `{str(assets_ready).lower()}`
-- `can_attempt_launch`: `{str(can_attempt_launch).lower()}`
-- `runtime_route_available`: `{str(runtime_route_available).lower()}`
-- `runtime_route_proven`: `false`
-- `loaded_binding_proven`: `false`
-- `runtime_hot_live_proven`: `false`
-- `final_active_digest_present`: `false`
-
-## Rule
-
-This gate proves only what the phone actually has.
-
-It may mark local assets ready when the full safetensors shard set, tokenizer/config files, NSQ weight artifact, registry, binding file, and manifest are present.
-
-It must not mark runtime hot-live, loaded binding, runtime route proof, or final digest as true until those are proven by a live route execution.
-""")
-
-Path("specs/Braxon/BRAXON_TRUTHFUL_OPERABILITY_GATE_CONTRACT.md").write_text("""# Braxon Truthful Operability Gate Contract
-
-The launch gate is evidence based.
-
-Allowed from static local files:
-
-- asset presence
-- shard completeness
-- tokenizer/config presence
-- NSQ weight artifact presence
-- registry/binding/manifest presence
-- can-attempt-launch when asset prerequisites pass
-
-Not allowed from static local files:
-
-- runtime hot-live proof
-- loaded model binding proof
-- final active digest
-- completed launch-route execution proof
-""")
-
-print(json.dumps({
-    "ok": True,
-    "assets_ready": assets_ready,
-    "can_attempt_launch": can_attempt_launch,
-    "runtime_route_available": runtime_route_available,
-    "runtime_route_proven": runtime_route_proven,
-    "loaded_binding_proven": loaded_binding_proven,
-    "runtime_hot_live_proven": runtime_hot_live_proven,
-    "final_active_digest_present": final_active_digest_present,
-    "present_shard_count": sum(1 for r in shard_records if r["present"] and r["bytes"] > 0),
-    "expected_shard_count": len(expected_shards),
-    "status": launch["status"],
-    "next": [
-        "generate runtime route proof",
-        "generate loaded model binding proof",
-        "run hot-live proof",
-        "write final active digest",
-    ],
-}, indent=2, sort_keys=True))
+if __name__ == "__main__":
+    main()

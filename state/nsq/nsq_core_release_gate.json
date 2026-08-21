@@ -1,26 +1,16 @@
 {
-  "complete_ready": false,
+  "authority": "NSQ kinetic semantic reflexor",
+  "canonicality": "canonical_active",
+  "citadel_seed_route_proven": true,
   "evidence": {
-    "asm_stamp_manifest_present": true,
-    "local_finish_manifest_present": true,
-    "model_reconstruction_manifest_present": true,
-    "runtime_languages_models_manifest_present": true,
-    "stamp_registry_present": true
+    "complete_ten_body_window_proven": true,
+    "donor_readiness_schema": "braxon.nsq.donor_model_readiness.v2",
+    "seed_hash": "6fcd924cc7c2abefdc6777c9b68a637c4c1620aec444a99a782ff519a5147170"
   },
-  "final_active_digest_present": false,
-  "generated_at": "2026-04-24T14:47:11.318241+00:00",
-  "last_runtime_proof_at": "2026-04-24T14:58:07.972226+00:00",
-  "loaded_binding_proven": false,
-  "missing_for_release": [
-    "formal nsq core release proof",
-    "runtime execution proof",
-    "whole release gate proof"
-  ],
-  "nsq_core_complete_ready": false,
-  "runtime_execution_proven": false,
-  "runtime_hot_live_proven": false,
-  "runtime_proof_path": "state/braxon/runtime_proofs/20260424_095719/runtime_launch_route_execution_proof.json",
-  "runtime_route_proven": true,
-  "schema": "nsq.core_release_gate.v1",
-  "status": "core_assets_present_release_proof_failed_or_partial"
+  "generated_at": "2026-08-21T07:44:32.343083+00:00",
+  "model_weight_execution_claimed": false,
+  "release_scope": "This receipt proves only the canonical on-demand Citadel seed route; it is not a whole-system release certification.",
+  "resident_runtime_constructed": false,
+  "schema": "nsq.core_release_gate.v2",
+  "status": "core_seed_route_proven_release_scope_unclaimed"
 }

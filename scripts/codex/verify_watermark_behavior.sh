@@ -2,28 +2,32 @@
 set -euo pipefail
 
 ROOT="${1:-$HOME/Braxon}"
+SOURCE="${2:-crates/braxon-core/src/watermarked_file_operation.rs}"
 
 cd "$ROOT"
 
-echo
-echo "== VERIFYING WATERMARK EXECUTION CONTINUITY =="
-echo
+printf '\n== VERIFYING FUNCTIONAL WATERMARK OPERATION ==\n\n'
+test -f "config/nsq/watermarked_file_operation_contract.json"
+test -f "crates/braxon-core/src/watermarked_file_operation.rs"
+test -f "$SOURCE"
 
-JSON_FILE="state/nsq/watermarks/braxon_watermark_execution_contract.json"
-RS_FILE="crates/nsq-core/src/watermark_execution_contract.rs"
+receipt="$(mktemp)"
+trap 'rm -f "$receipt"' EXIT
+cargo run --locked --offline -- watermark verify "$SOURCE" >"$receipt"
 
-test -f "$JSON_FILE"
-test -f "$RS_FILE"
+# These conditions are emitted only after the functional operation tokenizes
+# the request, commits the source watermark through the Kinetic Reflexor, and
+# completes the Parameter-Citadel invariants. No native compiler execution is
+# requested on this host; target materialization remains explicitly bounded.
+grep -q '"capability": "feature:watermark.file_operation"' "$receipt"
+grep -q '"routed": true' "$receipt"
+grep -q '"source_watermark_committed": true' "$receipt"
+grep -q '"parameter_invariants_passed": true' "$receipt"
+grep -q '"model_weight_execution_claimed": false' "$receipt"
+grep -q '"no_resident_runtime": true' "$receipt"
+grep -q '"hidden_download_allowed": false' "$receipt"
+grep -q 'intent→kinetic_reflexor_route→functional_source_watermark→native_compiler_boundary→artifact_watermark→recovery_baseline' "$receipt"
 
-grep -q 'BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1' "$JSON_FILE"
-
-grep -q '"watermarks_are_operational": true' "$JSON_FILE"
-grep -q '"watermarks_participate_in_execution_validation": true' "$JSON_FILE"
-
-grep -q 'watermark_required_for_runtime_execution' "$RS_FILE"
-grep -q 'watermark_fail_closed_on_mismatch' "$RS_FILE"
-grep -q 'watermark_is_operational' "$RS_FILE"
-
-echo
-echo "WATERMARK EXECUTION CONTINUITY VERIFIED"
-echo
+printf '\nFUNCTIONAL WATERMARK OPERATION VERIFIED\n'
+printf 'source=%s\n' "$SOURCE"
+printf 'receipt=%s\n' "$receipt"

@@ -1,0 +1,38 @@
+{
+  "payload": {
+    "capability": {
+      "complete_nsq_ingestion": true,
+      "executable": true,
+      "foreign_surface_role": "project_artifact_ingress_and_nsq_action_egress_only",
+      "id": "feature:operator.intelligence",
+      "ingress": "validated_input_to_nsq_feature_operation",
+      "kind": "semantic_intent",
+      "notes": [
+        "canonicality=canonical_active",
+        "state_contract=tokenized_operator_intent_to_native_instruction_transaction",
+        "action_contract=interpret_and_execute_operator_intent",
+        "answer_contract=derived_intelligent_answer",
+        "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.",
+        "required_artifacts=present"
+      ],
+      "nsq_dialect": "intent",
+      "on_demand": true,
+      "owner": "NSQ kinetic semantic reflexor",
+      "resident_runtime": false,
+      "semantic_authority": "nsq",
+      "source": "crates/braxon-core/src/intelligent_operation.rs",
+      "state": "operable_on_demand",
+      "target_names": [
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json"
+      ]
+    },
+    "command": null,
+    "execution_mode": "contract_route_only",
+    "receipt_path": "/home/ubuntu/Braxon/state/reflex/operations/feature_operator_intelligence.json",
+    "routed": true,
+    "schema": "braxon.nsq.kinetic_reflex.operation.v1",
+    "status": "routed_without_process"
+  },
+  "sha256": "6ff25f4b2ff38667ec7bc1812d573c683e4770980ef4348484f6f6561d80b91c"
+}

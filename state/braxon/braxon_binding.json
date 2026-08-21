@@ -1,9 +1,9 @@
 {
   "model_name": "BRAXON",
   "core_identity": "BRAXON_core_primary_model",
-  "binding_state": "hot_live_verified",
+  "binding_state": "tokenizer_bridge_verified_model_payload_unmaterialized",
   "tokenizer": {
-    "binding_state": "runtime_selected_donor_rooted_unified_overlay",
+    "binding_state": "nsq_unified_tokenizer_bridge_verified",
     "source_inventory": [
       "assets/braxon_core/source_ingest/braxon_transport/tokenizer.json",
       "assets/braxon_core/source_ingest/braxon_transport/tokenizer_config.json",
@@ -28,7 +28,7 @@
     "vocab_size": 151936,
     "temperature": 0.7,
     "top_p": 0.8,
-    "lineage_source": "/data/data/com.termux/files/home/Braxon/assets/braxon_core/lineage/parameter_lineage_registry.json"
+    "lineage_source": "assets/braxon_core/lineage/parameter_lineage_registry.json"
   },
   "runtime_packaging": {
     "source_ingest_directory": "assets/braxon_core/source_ingest/braxon_transport",
@@ -61,7 +61,14 @@
     "runtime_authority_lane": "none_bound",
     "runtime_authority_state": "unbound",
     "runtime_authority_bound": false,
-    "rewrite_status": "manifest_bundle_only"
+    "rewrite_status": "manifest_bundle_only",
+    "operational_front_doors": {
+      "intelligent_bus": "operable_on_demand_without_model_weights",
+      "parameter_citadel": "operable_on_demand",
+      "donor_tensor_inference": "canonical_citadel_seed_window_operable_without_model_weight_execution_claim",
+      "whole_core_model_session": "unavailable_independent_learned_weight_execution_unproven",
+      "synchronization": "Council Ten Citadel seed materialization_fire_release_verified; learned model-weight execution remains unclaimed"
+    }
   },
   "primary_job_order": [
     "nsq_documentation_additive_layer",

@@ -10,6 +10,7 @@ pub mod content_surface;
 pub mod context_manifest;
 pub mod council;
 pub mod council_ten;
+pub mod donor_model_readiness;
 pub mod dynamic_parameter_runtime;
 pub mod ghost_memory;
 pub mod greeting;
@@ -73,6 +74,10 @@ pub use content_surface::{
     daydream_frame, DaydreamFrame, FactRecord, NarrativeRecord, OutputClassification,
     DAYDREAM_SCHEMA, FACT_SCHEMA, NARRATIVE_SCHEMA,
 };
+pub use donor_model_readiness::{
+    assess_donor_model_readiness, DonorBandReadiness, DonorModelReadinessReport,
+    DONOR_MODEL_READINESS_CAPABILITY, DONOR_MODEL_READINESS_SCHEMA,
+};
 pub use dynamic_parameter_runtime::{
     execute_dynamic_parameter_pipeline, run_training_microbenchmark, DynamicPipelineReceipt,
     TrainingBenchmarkReport, TrainingBenchmarkResult, DYNAMIC_PARAMETER_RUNTIME_SCHEMA,
@@ -106,8 +111,9 @@ pub use language_operation::{
     ParameterGuidedParseReceipt, LANGUAGE_OPERATION_SCHEMA,
 };
 pub use model_execution::{
-    execute_bounded_tensor_inference, TensorInferenceOperation, DONOR_MODEL_INDEX_RELATIVE_PATH,
-    TENSOR_INFERENCE_CAPABILITY, TENSOR_INFERENCE_OPERATION_SCHEMA,
+    execute_bounded_tensor_inference, TensorInferenceOperation,
+    DONOR_CITADEL_SEED_CONTRACT_RELATIVE_PATH, TENSOR_INFERENCE_CAPABILITY,
+    TENSOR_INFERENCE_OPERATION_SCHEMA,
 };
 pub use native_bus::{NativeNsqBus, NATIVE_BRAXON_BUS_SCHEMA};
 pub use native_equivalence_harness::{

@@ -14,7 +14,8 @@
       "action_contract": "interpret_and_execute_operator_intent",
       "answer_contract": "derived_intelligent_answer",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:parameter.citadel",
@@ -28,7 +29,8 @@
       "action_contract": "execute_designated_local_parameter_integration",
       "answer_contract": "parameter_citadel_operation_result",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:benchmark.native_equivalence",
@@ -42,7 +44,8 @@
       "action_contract": "run_native_equivalence_benchmark",
       "answer_contract": "benchmark_result",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:benchmark.native_recovery",
@@ -56,7 +59,24 @@
       "action_contract": "run_native_recovery_benchmark",
       "answer_contract": "recovery_result",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
+    },
+    {
+      "id": "feature:model.donor_readiness",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/donor_model_readiness.rs",
+      "required_artifacts": [
+        "config/nsq/braxon_council_ten_stack.json",
+        "crates/braxon-core/src/council_ten.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ],
+      "state_contract": "canonical_council_ten_seed_to_ten_body_nsq_materialization_fire_and_release",
+      "action_contract": "validate_authoritative_council_ten_stack_then_materialize_fire_and_release_each_seed_body",
+      "answer_contract": "seed_route_readiness_report_without_model_weight_or_resident_runtime_claim",
+      "on_demand": true,
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:model.tensor_inference",
@@ -64,26 +84,30 @@
       "source": "crates/braxon-core/src/model_execution.rs",
       "required_artifacts": [
         "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
-        "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json"
+        "config/nsq/braxon_council_ten_stack.json",
+        "crates/nsq-citadel/src/materialization.rs"
       ],
-      "state_contract": "tokenized_prompt_to_bounded_authoritative_tensor_execution",
-      "action_contract": "execute_bounded_native_parameter_operation",
-      "answer_contract": "derived_tensor_execution_answer",
+      "state_contract": "tokenized_prompt_to_selected_council_ten_citadel_seed_window",
+      "action_contract": "execute_selected_band_seed_materialization_fire_and_release",
+      "answer_contract": "bounded_seed_window_execution_answer_without_model_weight_claim",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:tensor.materialization",
       "nsq_dialect": "symbolic",
       "source": "crates/nsq-core/src/native_tensor.rs",
       "required_artifacts": [
-        "assets/braxon_core/source_ingest/braxon_transport/model.safetensors.index.json"
+        "crates/nsq-core/src/native_tensor.rs"
       ],
-      "state_contract": "authoritative_tensor_index_to_bounded_materialization",
-      "action_contract": "materialize_authoritative_tensor_window",
-      "answer_contract": "tensor_materialization_result_or_missing_artifact_action",
+      "state_contract": "deprecated_conventional_tensor_index_compatibility_only",
+      "action_contract": "historical_external_tensor_format_materialization",
+      "answer_contract": "deprecated_path_not_routable",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "deprecated_historical_only",
+      "deprecated_replaced_by": "feature:model.tensor_inference"
     },
     {
       "id": "feature:repository.operation",
@@ -97,7 +121,8 @@
       "action_contract": "intercept_repository_operation_then_evaluate_revision_security_and_legal_readiness",
       "answer_contract": "repository_operation_receipt_or_exact_fail_closed_next_action",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:language.parameter_parse",
@@ -114,7 +139,8 @@
       "action_contract": "intercept_language_request_then_resolve_only_declared_local_materialization_tools",
       "answer_contract": "parameter_parse_receipt_or_exact_target_materialization_guidance",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:toolchain.contained_verify",
@@ -133,7 +159,8 @@
       "action_contract": "verify_local_toolchain_materialization_and_release_blockers",
       "answer_contract": "contained_toolchain_verification_or_exact_missing_artifact_guidance",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:watermark.file_operation",
@@ -152,7 +179,8 @@
       "action_contract": "admit_declared_repository_file_then_commit_watermark_and_execute_only_an_explicit_target_safe_compiler_route",
       "answer_contract": "watermarked_file_transition_or_exact_fail_closed_materialization_guidance",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     },
     {
       "id": "feature:toolchain.bionic_compatibility",
@@ -170,7 +198,13 @@
       "action_contract": "verify_staged_overlay_source_tokenization_and_target_proof_state",
       "answer_contract": "bionic_compatibility_verification_or_exact_target_materialization_guidance",
       "on_demand": true,
-      "resident_runtime": false
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
     }
-  ]
+  ],
+  "canonicality_policy": {
+    "canonical_active": "Eligible for Kinetic Semantic Reflexor discovery and route selection.",
+    "deprecated_historical_only": "Retained only for provenance; excluded from Kinetic Semantic Reflexor route selection and must identify its canonical successor.",
+    "removed": "Not represented as a feature; absence is verified by the canonicality audit."
+  }
 }

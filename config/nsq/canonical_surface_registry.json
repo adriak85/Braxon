@@ -1,0 +1,158 @@
+{
+  "schema": "braxon.nsq.canonical_surface_registry.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "classification_policy": {
+    "canonical_active": "The only executable current implementation for its declared purpose. It must be routed through the Kinetic Semantic Reflexor and have local verification.",
+    "deprecated_historical_only": "Retained only as provenance or external-format compatibility. It is excluded from active Reflexor routing and names its canonical successor.",
+    "historical_archive": "An immutable captured input corpus or report snapshot. It is not an executable source of truth and must not be routed or regenerated as active state.",
+    "removed": "No tracked implementation remains; absence is validated by the canonicality audit."
+  },
+  "canonical_routes": [
+    {
+      "id": "route:donor.citadel_seed",
+      "purpose": "Council Ten donor readiness through ten-body Citadel seed materialization, NSQ set/fire, and bounded lease release",
+      "feature": "feature:model.donor_readiness",
+      "sources": [
+        "config/nsq/braxon_council_ten_stack.json",
+        "crates/braxon-core/src/donor_model_readiness.rs",
+        "crates/braxon-core/src/council_ten.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ],
+      "front_doors": [
+        "Braxon runtime donors",
+        "tools/nsq_finish/braxon_truthful_operability_gate.py"
+      ],
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:donor.selected_seed_window_inference",
+      "purpose": "Selected configured Council Ten band prompt operation through a fresh Citadel seed window",
+      "feature": "feature:model.tensor_inference",
+      "sources": [
+        "crates/braxon-core/src/model_execution.rs",
+        "crates/nsq-citadel/src/materialization.rs"
+      ],
+      "front_doors": [
+        "Braxon runtime infer <configured-model> <prompt>"
+      ],
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:watermark.functional_file_operation",
+      "purpose": "Watermarked source admission through Reflexor to a target-safe compiler operation",
+      "feature": "feature:watermark.file_operation",
+      "sources": [
+        "crates/braxon-core/src/watermarked_file_operation.rs",
+        "config/nsq/watermarked_file_operation_contract.json"
+      ],
+      "front_doors": [
+        "Braxon watermark verify <source>"
+      ],
+      "classification": "canonical_active"
+    }
+  ],
+  "deprecated_historical_surfaces": [
+    {
+      "path": "crates/nsq-core/src/native_tensor.rs",
+      "purpose": "Conventional safetensors external-format tensor materialization",
+      "classification": "deprecated_historical_only",
+      "successor": "feature:model.tensor_inference"
+    },
+    {
+      "path": "config/nsq/braxon_model_downloader.json",
+      "purpose": "Conventional raw donor downloader configuration",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "config/nsq/braxon_model_downloader_app.json",
+      "purpose": "Conventional raw donor downloader application configuration",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "scripts/audit_braxon_qwen_ingress.sh",
+      "purpose": "Conventional Qwen shard ingress audit",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "scripts/braxon_intelligent_operation_gate.sh",
+      "purpose": "Conventional tensor-index intelligent-operation gate",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.selected_seed_window_inference"
+    },
+    {
+      "path": "scripts/install_braxon_weights.sh",
+      "purpose": "Conventional donor weight installer",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "scripts/seed_braxon_nsq_envelope.sh",
+      "purpose": "Conventional raw weight envelope staging",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "specs/repo/BRAXON_RUNTIME_REALITY_REPORT.md",
+      "purpose": "Pre-Citadel donor transport status report",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "tests/braxon_intelligent_operations_surface.rs",
+      "purpose": "Legacy conventional donor-index operation expectation",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.selected_seed_window_inference"
+    },
+    {
+      "path": "tools/braxon_model_downloader/braxon_model_downloader.py",
+      "purpose": "Conventional external model download tool",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "tools/braxon_model_downloader/braxon_model_downloader_app.py",
+      "purpose": "Conventional external model download application",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "tools/braxon_model_downloader/verify_whole_models.py",
+      "purpose": "Conventional external model payload verifier",
+      "classification": "deprecated_historical_only",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "state/full_android_language_toolchain/source_forge/guile_nsq_logic/instruction_corpus/raw/",
+      "purpose": "Captured pre-Citadel raw instruction corpus",
+      "classification": "historical_archive",
+      "successor": "route:donor.citadel_seed"
+    },
+    {
+      "path": "state/nsq/watermarks/braxon_watermark_execution_contract.json",
+      "purpose": "Static historical watermark marker contract",
+      "classification": "deprecated_historical_only",
+      "successor": "route:watermark.functional_file_operation"
+    },
+    {
+      "path": "crates/nsq-core/src/watermark_execution_contract.rs",
+      "purpose": "Static historical watermark boolean helper",
+      "classification": "deprecated_historical_only",
+      "successor": "route:watermark.functional_file_operation"
+    }
+  ],
+  "removed_surface_purposes": [
+    {
+      "purpose": "Active conventional safetensors index as the Braxon donor readiness authority",
+      "classification": "removed",
+      "replacement": "route:donor.citadel_seed"
+    },
+    {
+      "purpose": "Active donor shard completeness as a prerequisite for Braxon runtime donors",
+      "classification": "removed",
+      "replacement": "route:donor.citadel_seed"
+    }
+  ]
+}

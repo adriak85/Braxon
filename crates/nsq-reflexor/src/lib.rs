@@ -228,6 +228,10 @@ struct FeatureExecutionSurface {
     on_demand: bool,
     #[serde(default)]
     resident_runtime: bool,
+    #[serde(default)]
+    canonicality: String,
+    #[serde(default)]
+    deprecated_replaced_by: String,
 }
 
 #[derive(Debug, Clone, Deserialize, Default)]
@@ -1154,70 +1158,105 @@ fn feature_execution_capabilities(root: &Path) -> Result<Vec<ReflexCapability>, 
     if registry.features.is_empty() {
         return Err("feature-execution registry must contain at least one feature".into());
     }
-    let mut identifiers = BTreeSet::new();
-    registry
+    let known_ids = registry
         .features
-        .into_iter()
-        .map(|feature| {
-            if !identifiers.insert(feature.id.clone()) {
-                return Err(format!("duplicate feature-execution capability: {}", feature.id));
-            }
-            if !feature.id.starts_with("feature:")
-                || feature.nsq_dialect.trim().is_empty()
-                || feature.source.trim().is_empty()
-                || feature.state_contract.trim().is_empty()
-                || feature.action_contract.trim().is_empty()
-                || feature.answer_contract.trim().is_empty()
-                || !feature.on_demand
-                || feature.resident_runtime
+        .iter()
+        .map(|feature| feature.id.clone())
+        .collect::<BTreeSet<_>>();
+    if known_ids.len() != registry.features.len() {
+        return Err("duplicate feature-execution capability".into());
+    }
+    let mut active = Vec::new();
+    for feature in registry.features {
+        if !feature.id.starts_with("feature:")
+            || feature.nsq_dialect.trim().is_empty()
+            || feature.source.trim().is_empty()
+            || feature.state_contract.trim().is_empty()
+            || feature.action_contract.trim().is_empty()
+            || feature.answer_contract.trim().is_empty()
+            || !feature.on_demand
+            || feature.resident_runtime
+        {
+            return Err(format!(
+                "invalid feature-execution declaration: {}",
+                feature.id
+            ));
+        }
+        if feature.canonicality != "canonical_active"
+            && feature.canonicality != "deprecated_historical_only"
+        {
+            return Err(format!(
+                "feature {} must declare canonical_active or deprecated_historical_only canonicality",
+                feature.id
+            ));
+        }
+        let source_present = root.join(&feature.source).is_file();
+        if !source_present {
+            return Err(format!("feature source is missing: {}", feature.source));
+        }
+        if feature.canonicality == "deprecated_historical_only" {
+            if feature.deprecated_replaced_by.trim().is_empty()
+                || !known_ids.contains(&feature.deprecated_replaced_by)
+                || feature.deprecated_replaced_by == feature.id
             {
-                return Err(format!("invalid feature-execution declaration: {}", feature.id));
+                return Err(format!(
+                    "deprecated feature {} must name a distinct registered canonical successor",
+                    feature.id
+                ));
             }
-            let source_present = root.join(&feature.source).is_file();
-            if !source_present {
-                return Err(format!("feature source is missing: {}", feature.source));
-            }
-            let missing_artifacts = feature
-                .required_artifacts
-                .iter()
-                .filter(|artifact| !root.join(artifact).exists())
-                .cloned()
-                .collect::<Vec<_>>();
-            let artifact_ready = missing_artifacts.is_empty();
-            let mut notes = vec![
-                format!("state_contract={}", feature.state_contract),
-                format!("action_contract={}", feature.action_contract),
-                format!("answer_contract={}", feature.answer_contract),
-                "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.".into(),
-            ];
-            if artifact_ready {
-                notes.push("required_artifacts=present".into());
+            continue;
+        }
+        if !feature.deprecated_replaced_by.trim().is_empty() {
+            return Err(format!(
+                "canonical active feature {} cannot declare a deprecated successor",
+                feature.id
+            ));
+        }
+        let missing_artifacts = feature
+            .required_artifacts
+            .iter()
+            .filter(|artifact| !root.join(artifact).exists())
+            .cloned()
+            .collect::<Vec<_>>();
+        let artifact_ready = missing_artifacts.is_empty();
+        let mut notes = vec![
+            "canonicality=canonical_active".into(),
+            format!("state_contract={}", feature.state_contract),
+            format!("action_contract={}", feature.action_contract),
+            format!("answer_contract={}", feature.answer_contract),
+            "Feature is selected under NSQ authority and executes only through an explicit on-demand root dispatch.".into(),
+        ];
+        if artifact_ready {
+            notes.push("required_artifacts=present".into());
+        } else {
+            notes.push(format!(
+                "required_artifacts_missing={}",
+                missing_artifacts.join(",")
+            ));
+        }
+        active.push(ReflexCapability {
+            id: feature.id,
+            kind: CapabilityKind::SemanticIntent,
+            state: if artifact_ready {
+                CapabilityState::OperableOnDemand
             } else {
-                notes.push(format!("required_artifacts_missing={}", missing_artifacts.join(",")));
-            }
-            Ok(ReflexCapability {
-                id: feature.id,
-                kind: CapabilityKind::SemanticIntent,
-                state: if artifact_ready {
-                    CapabilityState::OperableOnDemand
-                } else {
-                    CapabilityState::DeclaredContract
-                },
-                nsq_dialect: feature.nsq_dialect,
-                owner: "NSQ kinetic semantic reflexor".into(),
-                source: feature.source,
-                semantic_authority: "nsq".into(),
-                complete_nsq_ingestion: true,
-                foreign_surface_role: "project_artifact_ingress_and_nsq_action_egress_only".into(),
-                ingress: "validated_input_to_nsq_feature_operation".into(),
-                on_demand: true,
-                resident_runtime: false,
-                executable: artifact_ready,
-                target_names: feature.required_artifacts,
-                notes,
-            })
-        })
-        .collect()
+                CapabilityState::DeclaredContract
+            },
+            nsq_dialect: feature.nsq_dialect,
+            owner: "NSQ kinetic semantic reflexor".into(),
+            source: feature.source,
+            semantic_authority: "nsq".into(),
+            complete_nsq_ingestion: true,
+            foreign_surface_role: "project_artifact_ingress_and_nsq_action_egress_only".into(),
+            ingress: "validated_input_to_nsq_feature_operation".into(),
+            on_demand: true,
+            resident_runtime: false,
+            executable: artifact_ready,
+            target_names: feature.required_artifacts,
+            notes,
+        });
+    }
+    Ok(active)
 }
 
 fn native_boundary_capabilities() -> Vec<ReflexCapability> {
