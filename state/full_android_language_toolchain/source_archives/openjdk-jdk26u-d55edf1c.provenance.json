@@ -1,0 +1,20 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "openjdk_jdk26u_26_0_2_1",
+  "upstream_project": "openjdk/jdk26u",
+  "source_url": "https://codeload.github.com/openjdk/jdk26u/tar.gz/refs/tags/jdk-26.0.2.1-ga",
+  "release_tag": "jdk-26.0.2.1-ga",
+  "git_commit": "d55edf1cba61219d17565da51cd13a4d425f7c59",
+  "tag_object": "efde4eace672545c1d36dc153ba4d3f751726155",
+  "representation": "git_safe_chunk_set",
+  "chunk_directory": "state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.tar.gz.chunks",
+  "chunk_count": 3,
+  "maximum_chunk_bytes": 50331648,
+  "retrieved_at_utc": "2026-08-21T18:27:22Z",
+  "bytes": 121705463,
+  "sha256": "91dd5ddd93e156f00a12c28d9b74b5ee1704e9f12d323d412d158b12e91d56d0",
+  "license_evidence": ["jdk26u-jdk-26.0.2.1-ga/LICENSE"],
+  "license_class": "GPL-2.0-only WITH Classpath-exception-2.0",
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "execution_claimed": false
+}

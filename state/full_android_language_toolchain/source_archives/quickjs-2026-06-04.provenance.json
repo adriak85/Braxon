@@ -1,0 +1,14 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "quickjs_2026_06_04",
+  "upstream_project": "bellard/quickjs",
+  "source_url": "https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz",
+  "release": "2026-06-04",
+  "retrieved_at_utc": "2026-08-21T18:25:09Z",
+  "bytes": 621500,
+  "sha256": "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a",
+  "license_evidence": ["quickjs-2026-06-04/LICENSE"],
+  "license_class": "MIT",
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "execution_claimed": false
+}

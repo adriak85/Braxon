@@ -23,8 +23,8 @@
     "audio": "not applicable unless a corpus represents audio semantics"
   },
   "compaction_metrics": {
-    "manifested_compact_artifact_count": 19,
-    "manifested_compact_bytes": 925973,
+    "manifested_compact_artifact_count": 20,
+    "manifested_compact_bytes": 932344,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -112,8 +112,8 @@
     {
       "id": "canonical_surface_registry",
       "path": "config/nsq/canonical_surface_registry.json",
-      "bytes": 10438,
-      "sha256": "6a1f9b91a1f780485ae082eec1dd59e7ada38698b33dbffccbb4ce24fe2bd339",
+      "bytes": 11385,
+      "sha256": "9596329f6ad78a877247ea5c2c7a030c22c9d77d619bee496c9d23214d504ffd",
       "semantic_surface": ["canonical Council Ten Citadel seed donor route", "canonical court-bound assistant designer agent worker and personal role route", "canonical Android/Bionic native contract closure inventory route", "deprecated and archival surface classification", "canonical successor mapping", "removed donor-index purpose declarations"],
       "provenance": "committed first-party NSQ canonicality authority",
       "reproduction": "tools/toolchain/audit_canonicality.mjs recursively checks the feature registry and tracked repository surfaces against this classification contract",
@@ -168,7 +168,7 @@
       "id": "blank_surface_registry",
       "path": "config/nsq/blank_surface_registry.json",
       "bytes": 167562,
-      "sha256": "0c727e26cec28a39896f0979f09bfff8b63c974468dd1858870153f5e1801a79",
+      "sha256": "e24eab369f2962998f6394b317b3ecf6cb4c680d4a819316d7acc23011c4da7b",
       "semantic_surface": ["individual non-routable blank upstream historical and derived capture classification", "blank-surface fail-closed provenance policy"],
       "provenance": "generated deterministically from the complete tracked-tree audit and committed as canonical classification evidence",
       "reproduction": "tools/toolchain/generate_blank_surface_registry.mjs after tools/toolchain/audit_all_tracked_files.mjs",
@@ -240,6 +240,17 @@
       "reproduction": "node tools/toolchain/generate_native_contract_closure_inventory.mjs <repository-root>",
       "integration": "route:toolchain.native_contract_closure_inventory; feature:toolchain.bionic_compatibility",
       "license_class": "first_party_configuration; upstream source and interface licenses remain retained separately"
+    },
+    {
+      "id": "js_java_jni_llvm_candidate_contract",
+      "path": "config/nsq/js_java_jni_llvm_candidate_contract.json",
+      "bytes": 5424,
+      "sha256": "82f5531013f2eb2b2ad8beae4296128111c1eb7d0988ea5c9126a405224c921c",
+      "semantic_surface": ["JavaScript QuickJS and Node candidate lanes", "OpenJDK Java and JNI bridge candidate lane", "repository-built LLVM target proof boundary", "nightly and preview candidate policy"],
+      "provenance": "first-party Braxon NSQ contract bound to retained upstream source and license provenance",
+      "reproduction": "verify source archive provenance with scripts/toolchains/verify_public_source_archives.sh, then require target materialization and NSQ route probes",
+      "integration": "route:toolchain.js_java_jni_llvm_candidates; feature:toolchain.bionic_compatibility",
+      "license_class": "first_party_configuration; QuickJS, Node.js, OpenJDK, and all upstream notices remain separately authoritative"
     }
   ],
   "verification": {

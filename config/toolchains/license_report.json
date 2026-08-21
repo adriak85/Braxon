@@ -61,6 +61,33 @@
       "private_eligibility": "Braxon Android build configuration and NSQ contracts only"
     },
     {
+      "id": "quickjs_2026_06_04",
+      "source": "state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.tar.xz",
+      "license": "MIT",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "repository-contained JavaScript runtime candidate; source-built LLVM/AArch64 Android materialization, NSQ route binding, and native proof remain required",
+      "notice_requirement": "retain the QuickJS MIT license and source provenance",
+      "private_eligibility": "Braxon NSQ adapters, independent build integration, and original JNI bridge code only; never the QuickJS upstream runtime"
+    },
+    {
+      "id": "nodejs_v26_7_0",
+      "source": "state/full_android_language_toolchain/source_archives/node-v26.7.0.tar.gz.chunks",
+      "license": "MIT; retain bundled third-party notices including V8, libuv, npm, and dependency licenses",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "officially checksummed Node.js source candidate; normal Braxon dispatch remains unavailable until repository-built LLVM/AArch64 materialization and target proof succeed",
+      "notice_requirement": "retain Node.js LICENSE, bundled dependency notices, official SHA-256 record, and source provenance",
+      "private_eligibility": "Braxon NSQ adapters, independent build integration, and original JNI bridge code only; never Node.js, V8, libuv, npm, or public interface ownership"
+    },
+    {
+      "id": "openjdk_jdk26u_26_0_2_1",
+      "source": "state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.tar.gz.chunks",
+      "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+      "classification": "REPOSITORY_CONTAINED_PUBLIC_SOURCE_ARCHIVE_TARGET_BUILD_REQUIRED",
+      "integration": "exact OpenJDK 26.0.2.1 source candidate; no Android AArch64 JDK/JNI activation claim exists before a complete native build and runtime proof",
+      "notice_requirement": "retain OpenJDK GPLv2 with Classpath Exception notices, source tag/commit provenance, and any third-party notices",
+      "private_eligibility": "Braxon NSQ adapters, independent build integration, and original JNI bridge code only; never OpenJDK, Java, JVM, JNI, or public interface ownership"
+    },
+    {
       "id": "bionic_compatibility_overlay",
       "source": "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
       "license": "LicenseRef-Braxon-Private for independently authored implementation under LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md; public Android/Linux interface provenance retained",

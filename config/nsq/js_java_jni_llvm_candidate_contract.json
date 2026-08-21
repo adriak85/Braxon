@@ -1,0 +1,90 @@
+{
+  "schema": "braxon.nsq.js_java_jni_llvm_candidate_contract.v1",
+  "authority": "NSQ kinetic semantic reflexor",
+  "capability": "feature:toolchain.bionic_compatibility",
+  "owner": "Michael David Norris",
+  "canonical_project_name": "Braxon",
+  "execution_model": {
+    "resident_runtime": false,
+    "normal_runtime_network_required": false,
+    "ambient_termux_runtime_fallback_allowed": false,
+    "repository_built_tool_dispatch_required_before_calibration": true,
+    "target_environment": "aarch64-linux-android",
+    "target_compiler_authority": "repository-built LLVM/Clang/LLD only after its own verification"
+  },
+  "semantic_routes": [
+    {
+      "language": "javascript",
+      "nsq_capability": "language:javascript",
+      "kinetic_reflexor_route": "Braxon language javascript <input>",
+      "source_ingress": "module_surface_to_nsq_alphabetic_and_symbolic_contract",
+      "native_egress": "qjs_or_node_compatible_artifact_only_after_target_materialization"
+    },
+    {
+      "language": "java",
+      "nsq_capability": "language:java",
+      "kinetic_reflexor_route": "Braxon language java <input>",
+      "source_ingress": "class_surface_to_nsq_symbolic_contract",
+      "native_egress": "javac_and_jvm_artifact_only_after_target_materialization"
+    },
+    {
+      "language": "jni",
+      "nsq_capability": "language:jni",
+      "kinetic_reflexor_route": "Braxon language jni <input>",
+      "source_ingress": "declared_java_native_boundary_to_nsq_stamp_contract",
+      "native_egress": "Braxon-built_shared_object_and_declared_java_bridge_only_after_target_materialization"
+    }
+  ],
+  "lanes": [
+    {
+      "id": "quickjs_2026_06_04",
+      "channel": "current_release",
+      "source_manifest_id": "quickjs_2026_06_04",
+      "tool_name_after_verified_build": "qjs",
+      "source_status": "repository_contained_unexecuted",
+      "activation_status": "TARGET_BUILD_PENDING",
+      "optimization_contract": ["Release optimization with repository-built Clang", "LTO only after supported upstream makefile configuration and target probe", "AArch64 ELF and execution proof", "NSQ JavaScript semantic route probe"],
+      "truth_boundary": "QuickJS is an upstream MIT JavaScript engine. Compiling it with LLVM does not make JavaScript execution pure LLVM or transfer upstream ownership."
+    },
+    {
+      "id": "nodejs_v26_7_0",
+      "channel": "current_release",
+      "source_manifest_id": "nodejs_v26_7_0",
+      "tool_name_after_verified_build": "node",
+      "source_status": "repository_contained_unexecuted",
+      "activation_status": "TARGET_BUILD_PENDING",
+      "optimization_contract": ["Close Node/V8/libuv/npm source dependency graph", "Use repository-built LLVM only after target compiler proof", "AArch64 ELF, ABI, and execution proof", "NSQ JavaScript semantic route probe"],
+      "truth_boundary": "Native Termux Node is bootstrap-only and cannot be selected by the normal Braxon dispatch manifest."
+    },
+    {
+      "id": "openjdk_jdk26u_26_0_2_1",
+      "channel": "current_release",
+      "source_manifest_id": "openjdk_jdk26u_26_0_2_1",
+      "tool_names_after_verified_build": ["java", "javac", "jar", "jni headers"],
+      "source_status": "repository_contained_unexecuted",
+      "activation_status": "TARGET_BUILD_PENDING",
+      "optimization_contract": ["Close bootstrap JDK and native dependency graph", "Use repository-built LLVM/Clang only after target compiler proof", "AArch64 ELF, Java runtime, compiler, and JNI header proof", "NSQ Java and JDK semantic route probes"],
+      "truth_boundary": "A Linux AArch64 JDK binary is not an Android/Termux runtime and is not used by this lane."
+    },
+    {
+      "id": "jni_bridge",
+      "channel": "first_party_bridge",
+      "source_status": "no_bridge_is_claimed_until_an_independent_Braxon_implementation_exists",
+      "activation_status": "TARGET_BUILD_PENDING",
+      "requirements": ["declared Java method and generated JNI header", "Braxon-built AArch64 shared object", "JNI_OnLoad or explicit symbol inspection", "Java System.loadLibrary link proof", "Java-to-native and native-to-Java target execution probes", "NSQ stamp-contract route receipt"],
+      "truth_boundary": "JNI is a narrow Java/native bridge only. It is not a runtime replacement and it may not silently load an ambient Termux shared object."
+    }
+  ],
+  "version_channel_policy": {
+    "automatic_latest_selection_allowed": false,
+    "default_channel_before_target_proof": "none",
+    "edge_or_preview_policy": "A newer upstream version is a candidate only after exact source, checksum, license, dependency closure, source-build, optimization, semantic route, ABI, and target execution evidence are captured. A channel label alone is never activation evidence.",
+    "three_preview_policy": "Maintain up to three explicitly pinned preview candidates per lane only where authoritative upstream source and licensing permit acquisition. Do not fabricate preview versions for projects that do not publish them."
+  },
+  "failure_closed_behavior": [
+    "No source candidate may be selected by the repository-built dispatch manifest before target proof.",
+    "No ambient Termux Node, Java, or JNI library fallback is permitted.",
+    "Missing bootstrap JDK, dependency, compiler, ELF, ABI, symbol, link, or execution evidence keeps the affected lane TARGET_BUILD_PENDING.",
+    "Upstream licenses and notices remain authoritative."
+  ]
+}

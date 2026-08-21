@@ -1,0 +1,19 @@
+{
+  "schema": "braxon.source_archive.provenance.v1",
+  "source_id": "nodejs_v26_7_0",
+  "upstream_project": "nodejs/node",
+  "source_url": "https://nodejs.org/dist/v26.7.0/node-v26.7.0.tar.gz",
+  "release": "v26.7.0",
+  "official_sha256_manifest": "state/full_android_language_toolchain/source_archives/node-v26.7.0-SHASUMS256.txt",
+  "representation": "git_safe_chunk_set",
+  "chunk_directory": "state/full_android_language_toolchain/source_archives/node-v26.7.0.tar.gz.chunks",
+  "chunk_count": 3,
+  "maximum_chunk_bytes": 50331648,
+  "retrieved_at_utc": "2026-08-21T18:25:55Z",
+  "bytes": 123758557,
+  "sha256": "e7feefd8d65781c9bbca1a128f8c80b357275156e6e15a3ed32cb7992035bdb2",
+  "license_evidence": ["node-v26.7.0/LICENSE"],
+  "license_class": "MIT",
+  "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted",
+  "execution_claimed": false
+}

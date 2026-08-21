@@ -1,12 +1,12 @@
 {
   "schema": "braxon.nsq.full_tracked_tree_audit_summary.v1",
-  "audit_merkle_sha256": "adb5cadfac37ffdebd3ba4661699ecf8634f6464ecce5ea44dd4b3218df1b48f",
+  "audit_merkle_sha256": "384a3d42dc7b96ba515fa18d0529fdc7397b58402a389b9882cc72b432358d1b",
   "complete_file_scope": "every recursively tracked repository path; every tracked regular file streamed in full for SHA-256 identity; no depth or extension filter",
   "status": "all_tracked_files_classified_with_integrity_markers_reported",
   "totals": {
-    "tracked_path_total": 182989,
-    "regular_file_total": 182947,
-    "total_regular_bytes": 3444360643,
+    "tracked_path_total": 182990,
+    "regular_file_total": 182948,
+    "total_regular_bytes": 3444381914,
     "unclassified_total": 0,
     "blank_required_content_total": 283,
     "marker_bearing_file_total": 7441,

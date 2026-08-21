@@ -100,6 +100,25 @@
       "classification": "canonical_active"
     },
     {
+      "id": "route:toolchain.js_java_jni_llvm_candidates",
+      "purpose": "Repository-contained QuickJS, Node.js, OpenJDK, and JNI bridge candidate source verification, NSQ semantic routing, and fail-closed AArch64 Android target preparation without ambient Termux runtime fallback",
+      "feature": "feature:toolchain.bionic_compatibility",
+      "sources": [
+        "config/nsq/js_java_jni_llvm_candidate_contract.json",
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/nsq/nsq_runtime_language_registry.json",
+        "config/toolchains/source_availability_manifest.json",
+        "scripts/toolchains/verify_public_source_archives.sh"
+      ],
+      "front_doors": [
+        "Braxon language javascript <input>",
+        "Braxon language java <input>",
+        "Braxon language jni <input>",
+        "scripts/braxon_reconstruct.sh source-edge"
+      ],
+      "classification": "canonical_active"
+    },
+    {
       "id": "route:toolchain.native_contract_closure_inventory",
       "purpose": "Source-derived Android/Bionic native contract inventory and fail-closed closure classification through the existing staged overlay, NSQ Bionic compatibility feature, target proof chain, and Reflexor audit",
       "feature": "feature:toolchain.bionic_compatibility",

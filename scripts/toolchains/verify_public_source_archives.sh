@@ -111,6 +111,28 @@ verify_single_archive \
   43839630 \
   7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181 \
   state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.provenance.json
+verify_single_archive \
+  quickjs_2026_06_04 \
+  state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.tar.xz \
+  621500 \
+  b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a \
+  state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.provenance.json
+verify_chunk_set \
+  nodejs_v26_7_0 \
+  state/full_android_language_toolchain/source_archives/node-v26.7.0.tar.gz.chunks \
+  3 \
+  50331648 \
+  123758557 \
+  e7feefd8d65781c9bbca1a128f8c80b357275156e6e15a3ed32cb7992035bdb2 \
+  state/full_android_language_toolchain/source_archives/node-v26.7.0.provenance.json
+verify_chunk_set \
+  openjdk_jdk26u_26_0_2_1 \
+  state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.tar.gz.chunks \
+  3 \
+  50331648 \
+  121705463 \
+  91dd5ddd93e156f00a12c28d9b74b5ee1704e9f12d323d412d158b12e91d56d0 \
+  state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.provenance.json
 
-printf '%s\n' 'source_check_total=4'
+printf '%s\n' 'source_check_total=7'
 printf '%s\n' 'valid=true'

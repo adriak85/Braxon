@@ -136,6 +136,74 @@
       "reconstruction_status": "not sufficient by itself to claim clone-contained source availability; associated CPython source remains a declared source edge until an approved archive payload is present"
     },
     {
+      "id": "quickjs_2026_06_04",
+      "upstream_project": "bellard/quickjs",
+      "source_url": "https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz",
+      "release": "2026-06-04",
+      "source_status": "current_release_source_archive_clone_contained_unexecuted_not_activated",
+      "materialization_evidence": {
+        "clone_contained_archive": {
+          "path": "state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.tar.xz",
+          "provenance": "state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.provenance.json",
+          "bytes": 621500,
+          "sha256": "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a",
+          "license_evidence": ["quickjs-2026-06-04/LICENSE"],
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        }
+      },
+      "license": "MIT",
+      "semantic_scope": ["JavaScript ES2025 compact runtime candidate", "JavaScript source ingress", "NSQ JavaScript boundary adapter candidate"],
+      "reconstruction_status": "QuickJS source is repository-contained but not materialized, compiled, or activated. Build only with the repository-built LLVM/Clang AArch64 Android lane; then require ELF, ABI, semantic-route, and execution proof before a qjs tool contract may be calibrated. Compilation with LLVM does not change QuickJS upstream ownership or make JavaScript execution pure LLVM."
+    },
+    {
+      "id": "nodejs_v26_7_0",
+      "upstream_project": "nodejs/node",
+      "source_url": "https://nodejs.org/dist/v26.7.0/node-v26.7.0.tar.gz",
+      "release": "v26.7.0",
+      "source_status": "current_release_source_archive_clone_contained_chunked_unexecuted_not_activated",
+      "materialization_evidence": {
+        "clone_contained_chunk_set": {
+          "chunk_directory": "state/full_android_language_toolchain/source_archives/node-v26.7.0.tar.gz.chunks",
+          "chunk_pattern": "node-v26.7.0.tar.gz.part*.part",
+          "chunk_count": 3,
+          "maximum_chunk_bytes": 50331648,
+          "official_sha256_manifest": "state/full_android_language_toolchain/source_archives/node-v26.7.0-SHASUMS256.txt",
+          "provenance": "state/full_android_language_toolchain/source_archives/node-v26.7.0.provenance.json",
+          "bytes": 123758557,
+          "sha256": "e7feefd8d65781c9bbca1a128f8c80b357275156e6e15a3ed32cb7992035bdb2",
+          "license_evidence": ["node-v26.7.0/LICENSE"],
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        }
+      },
+      "license": "MIT",
+      "semantic_scope": ["Node-compatible JavaScript runtime candidate", "V8 14.6.202.34 source bundle", "libuv and npm source bundle", "NSQ JavaScript boundary adapter candidate"],
+      "reconstruction_status": "Node.js v26.7.0 source is repository-contained in Git-safe chunks and verified against the upstream SHASUMS256 record, but is not materialized, compiled, or activated. Native Termux Node remains a bootstrap-only external utility and may not become the Braxon normal-runtime authority. A future target route must reassemble the verified source, use the repository-built LLVM toolchain, close Node/V8/libuv dependency and Android compatibility contracts, and pass AArch64 ELF, ABI, semantic-route, and execution proof before calibration."
+    },
+    {
+      "id": "openjdk_jdk26u_26_0_2_1",
+      "upstream_project": "openjdk/jdk26u",
+      "source_url": "https://codeload.github.com/openjdk/jdk26u/tar.gz/refs/tags/jdk-26.0.2.1-ga",
+      "release_tag": "jdk-26.0.2.1-ga",
+      "git_commit": "d55edf1cba61219d17565da51cd13a4d425f7c59",
+      "source_status": "current_release_source_archive_clone_contained_chunked_unexecuted_not_activated",
+      "materialization_evidence": {
+        "clone_contained_chunk_set": {
+          "chunk_directory": "state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.tar.gz.chunks",
+          "chunk_pattern": "openjdk-jdk26u-d55edf1c.tar.gz.part*.part",
+          "chunk_count": 3,
+          "maximum_chunk_bytes": 50331648,
+          "provenance": "state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.provenance.json",
+          "bytes": 121705463,
+          "sha256": "91dd5ddd93e156f00a12c28d9b74b5ee1704e9f12d323d412d158b12e91d56d0",
+          "license_evidence": ["jdk26u-jdk-26.0.2.1-ga/LICENSE"],
+          "acquisition_state": "public_authoritative_source_archive_acquired_unexecuted"
+        }
+      },
+      "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+      "semantic_scope": ["Java compiler/runtime source candidate", "JNI header and bridge boundary candidate", "NSQ Java/JDK/JNI semantic contracts"],
+      "reconstruction_status": "OpenJDK 26.0.2.1 source is repository-contained in Git-safe chunks and not materialized, compiled, or activated. The official historical Android project documentation does not prove a current native Termux AArch64 build. A future route must close bootstrap-JDK, configure, native dependency, repository-built LLVM/Clang, Android ABI, ELF, Java execution, and JNI symbol/link/run contracts before calibration. The listed Linux AArch64 OpenJDK binary is not an Android artifact and is intentionally not used."
+    },
+    {
       "id": "cargo_dependency_graph",
       "source_path": "vendor",
       "source_status": "contained_vendored_source",

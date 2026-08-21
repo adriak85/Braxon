@@ -25,6 +25,7 @@ const contracts = [
   'config/nsq/watermarked_file_operation_contract.json',
   'config/nsq/live_bus_bootstrap_contract.json',
   'config/nsq/native_contract_closure_inventory_contract.json',
+  'config/nsq/js_java_jni_llvm_candidate_contract.json',
   'config/nsq/full_file_watermark_reflex_contract.json',
   'config/nsq/blank_surface_registry.json',
 ];
@@ -49,6 +50,8 @@ const extraction = parsed.get('config/nsq/complete_semantic_extraction_contract.
 const watermark = parsed.get('config/nsq/watermarked_file_operation_contract.json');
 const liveBus = parsed.get('config/nsq/live_bus_bootstrap_contract.json');
 const nativeClosure = parsed.get('config/nsq/native_contract_closure_inventory_contract.json');
+const runtimeCandidates = parsed.get('config/nsq/js_java_jni_llvm_candidate_contract.json');
+const sourceAvailability = parsed.get('config/toolchains/source_availability_manifest.json');
 const fullFileWatermark = parsed.get('config/nsq/full_file_watermark_reflex_contract.json');
 const blankRegistry = parsed.get('config/nsq/blank_surface_registry.json');
 const fullTreeAudit = readJson('state/braxon/full_tree_audit.json');
@@ -89,6 +92,24 @@ if (!canonicalSurface.removed_surface_purposes.some((surface) => surface.purpose
 if (!canonicalSurface.canonical_routes.some((route) => route.id === 'route:live_bus.virtual_piston_ghost_bootstrap' && route.classification === 'canonical_active')) throw new Error('canonical live Piston/Ghost route missing');
 if (!canonicalSurface.canonical_routes.some((route) => route.id === 'route:watermark.full_file_reflex_inventory' && route.classification === 'canonical_active')) throw new Error('full-file watermark Reflexor route missing');
 if (!canonicalSurface.canonical_routes.some((route) => route.id === 'route:toolchain.native_contract_closure_inventory' && route.feature === 'feature:toolchain.bionic_compatibility' && route.classification === 'canonical_active')) throw new Error('native contract closure canonical route missing');
+if (!canonicalSurface.canonical_routes.some((route) => route.id === 'route:toolchain.js_java_jni_llvm_candidates' && route.feature === 'feature:toolchain.bionic_compatibility' && route.classification === 'canonical_active')) throw new Error('JavaScript/Java/JNI candidate canonical route missing');
+if (runtimeCandidates.capability !== 'feature:toolchain.bionic_compatibility' || runtimeCandidates.execution_model.resident_runtime || runtimeCandidates.execution_model.ambient_termux_runtime_fallback_allowed || !runtimeCandidates.execution_model.repository_built_tool_dispatch_required_before_calibration) throw new Error('JavaScript/Java/JNI candidate execution boundary is invalid');
+for (const laneId of ['quickjs_2026_06_04', 'nodejs_v26_7_0', 'openjdk_jdk26u_26_0_2_1', 'jni_bridge']) {
+  const lane = runtimeCandidates.lanes.find((item) => item.id === laneId);
+  if (!lane || lane.activation_status !== 'TARGET_BUILD_PENDING') throw new Error(`runtime candidate lane is missing or prematurely activated: ${laneId}`);
+}
+if (runtimeCandidates.version_channel_policy.automatic_latest_selection_allowed || runtimeCandidates.version_channel_policy.default_channel_before_target_proof !== 'none') throw new Error('runtime candidate version-channel activation boundary is invalid');
+for (const sourceId of ['quickjs_2026_06_04', 'nodejs_v26_7_0', 'openjdk_jdk26u_26_0_2_1']) {
+  const source = sourceAvailability.sources.find((item) => item.id === sourceId);
+  if (!source || !source.source_status.includes('source_archive_clone_contained') || !source.source_status.includes('unexecuted_not_activated')) throw new Error(`runtime candidate source truth is invalid: ${sourceId}`);
+}
+const nativeSourceVerifierPath = path.join(root, 'scripts/toolchains/verify_public_source_archives.sh');
+if (!fs.existsSync(nativeSourceVerifierPath)) throw new Error('native POSIX source archive verifier is missing');
+const nativeSourceVerifier = fs.readFileSync(nativeSourceVerifierPath, 'utf8');
+for (const sourceId of ['quickjs_2026_06_04', 'nodejs_v26_7_0', 'openjdk_jdk26u_26_0_2_1', 'source_check_total=7']) {
+  if (!nativeSourceVerifier.includes(sourceId)) throw new Error(`native source archive verifier lacks candidate evidence: ${sourceId}`);
+}
+if (/^#!.*\b(node|python)\b/m.test(nativeSourceVerifier) || /^\s*(node|python)(?:\s|$)/m.test(nativeSourceVerifier) || /(?:;|&&|\|\|)\s*(node|python)(?:\s|$)/.test(nativeSourceVerifier)) throw new Error('native source archive verifier has an undeclared non-POSIX runtime dependency');
 if (nativeClosure.capability !== 'feature:toolchain.bionic_compatibility' || nativeClosure.execution_model.resident_runtime || nativeClosure.execution_model.hidden_download_allowed || nativeClosure.execution_model.system_or_termux_prefix_write_allowed) throw new Error('native contract closure execution boundary is invalid');
 for (const classification of ['CLOSED_NATIVE', 'CLOSED_HEADER', 'CLOSED_EXISTING_ANDROID', 'CLOSED_VIA_SYSCALL', 'CLOSED_VIA_FALLBACK', 'CLOSED_UPSTREAM', 'BLOCKED_TARGET', 'EXTERNAL_PREREQUISITE', 'PROPRIETARY_NOT_REDISTRIBUTABLE', 'HISTORICAL', 'UNRESOLVED']) {
   if (!nativeClosure.classification_set.includes(classification)) throw new Error(`native contract closure classification is missing: ${classification}`);
