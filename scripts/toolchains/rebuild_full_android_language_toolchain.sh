@@ -157,27 +157,35 @@ verify_repository_contained_source() {
   } | tee "$REPORT/${name}_source_identity.txt"
 }
 
-verify_locally_retained_llvm_source() {
+verify_repository_contained_llvm_source() {
   dest="$1"
+  receipt="$CHAIN/source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt"
+  expected_sha="0d4b6831708211df28ca4b317c06f6e0078f9df5ad673ba902c73f0318a4fa1c"
   echo
-  echo "== locally retained LLVM source =="
-  [ -f "$dest/llvm/CMakeLists.txt" ] || { echo "FAIL: retained LLVM source tree is missing: $dest" >&2; exit 1; }
-  if [ -f "$ROOT/audit/toolchain/llvm_project_tree_sha256.txt" ]; then
-    cat "$ROOT/audit/toolchain/llvm_project_tree_sha256.txt" | tee "$REPORT/llvm_project_tree_sha256.txt"
-  else
-    echo "FAIL: LLVM source tree content identity is absent; run the source identity capture before source build" >&2
-    exit 1
-  fi
+  echo "== repository-contained complete LLVM source =="
+  for required in \
+    llvm/CMakeLists.txt \
+    llvm/lib/Demangle/CMakeLists.txt \
+    llvm/lib/Support/CMakeLists.txt \
+    llvm/lib/TableGen/CMakeLists.txt \
+    clang/CMakeLists.txt \
+    lld/CMakeLists.txt; do
+    [ -f "$dest/$required" ] || { echo "FAIL: complete LLVM source indicator is missing: $dest/$required; rerun source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1" >&2; exit 1; }
+  done
+  [ -f "$receipt" ] || { echo "FAIL: LLVM contained-source receipt is absent; rerun source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1" >&2; exit 1; }
+  grep -Fxq "archive_sha256=$expected_sha" "$receipt" || { echo "FAIL: LLVM contained-source receipt SHA-256 is not the pinned archive" >&2; exit 1; }
+  cat "$receipt" | tee "$REPORT/llvm_source_identity.txt"
 }
 
 echo
 echo "== repository-contained pinned source verification (no floating network clone) =="
+"$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
 verify_repository_contained_source \
   cpython "$SRC/cpython" "${CPYTHON_REF:-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f}" \
   "$CHAIN/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz" \
   "7757cb0e24d9a9598239174580eb018a8197dfcb213bb576d67ffbc499dd2181" \
   configure.ac Python/ceval.c
-verify_locally_retained_llvm_source "$SRC/llvm-project"
+verify_repository_contained_llvm_source "$SRC/llvm-project"
 verify_repository_contained_source \
   rust "$SRC/rust" "${RUST_REF:-f964de49bcb561e5c6c725bb37201e11d852daf0}" \
   "$CHAIN/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz" \

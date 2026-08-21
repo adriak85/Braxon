@@ -149,6 +149,17 @@ if (promotionScript.includes('$(command -v rustc') || promotionScript.includes('
 const baseSourceBuildScript = fs.readFileSync(path.join(root, 'scripts/toolchains/rebuild_full_android_language_toolchain.sh'), 'utf8');
 if (baseSourceBuildScript.includes('$(command -v rustc') || baseSourceBuildScript.includes('$(command -v cargo')) throw new Error('base source-build script silently discovers ambient Rust bootstrap tools');
 if (!baseSourceBuildScript.includes('write_braxon_repository_tool_dispatch.sh')) throw new Error('base source-build script does not publish repository-built normal tool dispatch');
+for (const required of ['verify_repository_contained_llvm_source', 'llvm/lib/Demangle/CMakeLists.txt', 'llvm/lib/Support/CMakeLists.txt', 'llvm/lib/TableGen/CMakeLists.txt', 'source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt', 'verify_public_source_archives.sh']) {
+  if (!baseSourceBuildScript.includes(required)) throw new Error(`base source-build script lacks complete LLVM source invariant: ${required}`);
+}
+const reconstructScript = fs.readFileSync(path.join(root, 'scripts/braxon_reconstruct.sh'), 'utf8');
+for (const required of ['materialize_chunked_llvm_source', 'llvm_source_complete', 'BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1', 'accepted_verified_complete_llvm_source', 'materialized_verified_complete_llvm_source', 'verify_public_source_archives.sh']) {
+  if (!reconstructScript.includes(required)) throw new Error(`reconstruction dispatcher lacks complete LLVM source-edge invariant: ${required}`);
+}
+const sourceEdgeStart = reconstructScript.indexOf('source_edge() {');
+const sourceEdgeEnd = reconstructScript.indexOf('\noffline_verify()', sourceEdgeStart);
+const sourceEdgeBody = reconstructScript.slice(sourceEdgeStart, sourceEdgeEnd);
+if (sourceEdgeBody.includes('verify_public_source_archives.mjs') || /(^|[^[:alnum:]_])node([^[:alnum:]_]|$)/.test(sourceEdgeBody)) throw new Error('phone source-edge still has a Node runtime dependency');
 if (semantic.corpora.length !== semantic.compaction_metrics.manifested_compact_artifact_count) throw new Error('semantic corpus count mismatch');
 if (semantic.corpora.reduce((total, corpus) => total + corpus.bytes, 0) !== semantic.compaction_metrics.manifested_compact_bytes) throw new Error('semantic corpus byte aggregate mismatch');
 for (const corpus of semantic.corpora) {

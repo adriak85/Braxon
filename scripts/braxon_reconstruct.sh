@@ -28,6 +28,7 @@ require_contracts() {
     scripts/toolchains/promote_rust_edge_nightly_aarch64.sh \
     scripts/toolchains/resolve_braxon_repository_tool.sh \
     scripts/toolchains/write_braxon_repository_tool_dispatch.sh \
+    scripts/toolchains/verify_public_source_archives.sh \
     tools/toolchain/validate_toolchain_contracts.mjs \
     tools/toolchain/verify_public_source_archives.mjs; do
     [ -e "$ROOT/$path" ] || fail "required reconstruction contract is missing: $path"
@@ -70,6 +71,59 @@ verified_existing_source() {
   return 0
 }
 
+llvm_source_complete() {
+  llvm_check_destination="$1"
+  for llvm_required in \
+    llvm/CMakeLists.txt \
+    llvm/lib/Demangle/CMakeLists.txt \
+    llvm/lib/Support/CMakeLists.txt \
+    llvm/lib/TableGen/CMakeLists.txt \
+    clang/CMakeLists.txt \
+    lld/CMakeLists.txt; do
+    [ -f "$llvm_check_destination/$llvm_required" ] || return 1
+  done
+  return 0
+}
+
+materialize_chunked_llvm_source() {
+  llvm_chunks="$1"
+  llvm_expected_root="$2"
+  llvm_destination="$3"
+  llvm_receipt="$ROOT/state/full_android_language_toolchain/source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt"
+  llvm_expected_sha="0d4b6831708211df28ca4b317c06f6e0078f9df5ad673ba902c73f0318a4fa1c"
+  [ -d "$llvm_chunks" ] || fail "repository-contained LLVM chunk directory is absent: $llvm_chunks"
+  if [ -d "$llvm_destination" ] && [ "$(find "$llvm_destination" -mindepth 1 -maxdepth 1 -print -quit)" ]; then
+    if llvm_source_complete "$llvm_destination" && [ -f "$llvm_receipt" ] && grep -Fxq "archive_sha256=$llvm_expected_sha" "$llvm_receipt"; then
+      notice "accepted_verified_complete_llvm_source=$llvm_destination"
+      return 0
+    fi
+    [ "${BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE:-0}" = "1" ] || fail "LLVM source is incomplete or lacks a contained-archive receipt: $llvm_destination; preserve any local work, then rerun source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1"
+    rm -rf "$llvm_destination"
+  fi
+  llvm_staging="$ROOT/state/full_android_language_toolchain/materialization/.${llvm_expected_root}.$$"
+  llvm_archive="$llvm_staging/${llvm_expected_root}.tar.gz"
+  rm -rf "$llvm_staging"
+  mkdir -p "$llvm_staging"
+  cat "$llvm_chunks"/*.part > "$llvm_archive"
+  llvm_actual_sha="$(sha256sum "$llvm_archive" | awk '{print $1}')"
+  [ "$llvm_actual_sha" = "$llvm_expected_sha" ] || fail "reassembled LLVM source archive SHA-256 mismatch"
+  tar -xzf "$llvm_archive" -C "$llvm_staging"
+  llvm_extracted="$llvm_staging/$llvm_expected_root"
+  [ -d "$llvm_extracted" ] || fail "LLVM archive did not contain expected root $llvm_expected_root"
+  llvm_source_complete "$llvm_extracted" || fail "LLVM archive extraction is incomplete: required LLVM lib directories are absent"
+  mkdir -p "$(dirname "$llvm_destination")" "$(dirname "$llvm_receipt")"
+  mv "$llvm_extracted" "$llvm_destination"
+  {
+    echo "schema=braxon.llvm.contained_source_receipt.v1"
+    echo "expected_root=$llvm_expected_root"
+    echo "archive_sha256=$llvm_actual_sha"
+    echo "required_paths=llvm/CMakeLists.txt,llvm/lib/Demangle/CMakeLists.txt,llvm/lib/Support/CMakeLists.txt,llvm/lib/TableGen/CMakeLists.txt,clang/CMakeLists.txt,lld/CMakeLists.txt"
+    echo "materialized_from=repository_contained_chunk_set"
+  } > "$llvm_receipt"
+  rm -rf "$llvm_staging"
+  notice "materialized_verified_complete_llvm_source=$llvm_destination"
+}
+
 materialize_archive_source() {
   archive="$1"
   expected_root="$2"
@@ -102,6 +156,10 @@ materialize_archive_source() {
 source_edge() {
   cd "$ROOT"
   "$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
+  materialize_chunked_llvm_source \
+    "$ROOT/state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks" \
+    "llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269" \
+    "$ROOT/state/full_android_language_toolchain/src/llvm-project"
   materialize_archive_source \
     "$ROOT/state/full_android_language_toolchain/source_archives/rust-f964de49bcb561e5c6c725bb37201e11d852daf0.tar.gz" \
     "rust-f964de49bcb561e5c6c725bb37201e11d852daf0" \
@@ -110,13 +168,13 @@ source_edge() {
     "$ROOT/state/full_android_language_toolchain/source_archives/cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f.tar.gz" \
     "cpython-49918f5b0ceb1950c3222fd4fd6be872d2e15c6f" \
     "$ROOT/state/full_android_language_toolchain/src/cpython"
-  notice "pinned_rust_and_cpython_source_edges_verified_or_materialized_from_repository_archives=true"
+  notice "pinned_llvm_rust_and_cpython_source_edges_verified_or_materialized_from_repository_archives=true"
   notice "network_used=false"
 }
 
 offline_verify() {
   cd "$ROOT"
-  node tools/toolchain/verify_public_source_archives.mjs "$ROOT"
+  "$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
   node tools/toolchain/validate_toolchain_contracts.mjs "$ROOT"
   "$ROOT/scripts/toolchains/resolve_braxon_repository_tool.sh" exec cargo test --workspace --locked --offline
   "$ROOT/scripts/toolchains/resolve_braxon_repository_tool.sh" exec cargo run --locked --offline -- toolchain verify
@@ -132,9 +190,11 @@ calibrate() {
 source_build() {
   target_preflight
   capacity_preflight
-  for path in state/full_android_language_toolchain/src/llvm-project state/full_android_language_toolchain/src/rust state/full_android_language_toolchain/src/cpython; do
+  for path in state/full_android_language_toolchain/src/rust state/full_android_language_toolchain/src/cpython; do
     [ -d "$ROOT/$path" ] && [ "$(find "$ROOT/$path" -mindepth 1 -maxdepth 1 -print -quit)" ] || fail "source-build prerequisite is absent: $path; run source-edge to materialize repository-contained sources"
   done
+  llvm_source_complete "$ROOT/state/full_android_language_toolchain/src/llvm-project" || fail "LLVM source is incomplete; run source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1 to materialize the verified contained LLVM archive"
+  [ -f "$ROOT/state/full_android_language_toolchain/source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt" ] || fail "LLVM contained-source receipt is absent; run source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1"
   BRAXON_SOURCE_BUILD_APPROVED=1 JOBS="${JOBS:-1}" "$ROOT/scripts/toolchains/rebuild_full_android_language_toolchain.sh" "$ROOT"
 }
 
@@ -142,7 +202,7 @@ edge_nightly_build() {
   target_preflight
   capacity_preflight
   cd "$ROOT"
-  node tools/toolchain/verify_public_source_archives.mjs "$ROOT"
+  "$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
   for path in \
     state/full_android_language_toolchain/install/python/bin/python3 \
     state/full_android_language_toolchain/install/llvm/bin/llvm-config \
