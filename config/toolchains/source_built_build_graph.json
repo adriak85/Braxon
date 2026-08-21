@@ -32,6 +32,13 @@
       "proof": "language NSQ intercept receipt"
     },
     {
+      "id": "functional_watermark_file_operation",
+      "depends_on": ["semantic_corpus_and_nsq_intercept", "target_and_capacity_preflight"],
+      "operation": "cargo run --locked --offline -- watermark verify <declared-repository-relative-source>",
+      "outputs": ["intent route", "functional source watermark", "parameter-Citadel invariants", "native-boundary admission or exact blocker"],
+      "proof": "feature:watermark.file_operation report; a native artifact is promoted only after explicit AArch64 compiler success and artifact re-watermark"
+    },
+    {
       "id": "llvm_local_source_identity",
       "depends_on": ["clone_and_contract_check"],
       "operation": "verify audit/toolchain/llvm_project_tree_sha256.txt against state/full_android_language_toolchain/src/llvm-project",
@@ -55,14 +62,14 @@
     },
     {
       "id": "cpython_source_build",
-      "depends_on": ["rust_and_cpython_pinned_source_edges", "termux_stage0_bootstrap"],
+      "depends_on": ["rust_and_cpython_pinned_source_edges", "termux_stage0_bootstrap", "functional_watermark_file_operation"],
       "operation": "approved source build script CPython stage",
       "outputs": ["target CPython", "development headers", "native extension build interface"],
       "proof": "target Python version and extension probe"
     },
     {
       "id": "llvm_clang_lld_source_build",
-      "depends_on": ["llvm_local_source_identity", "target_and_capacity_preflight"],
+      "depends_on": ["llvm_local_source_identity", "target_and_capacity_preflight", "functional_watermark_file_operation"],
       "operation": "approved CMake/Ninja source build with AArch64 Android default target and compiler-rt/libunwind/libc++/libc++abi",
       "outputs": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-ranlib", "llvm-nm", "llvm-objdump", "llvm-readelf", "llvm-strip"],
       "proof": "AArch64 compile, link, ELF/DWARF inspection, and target execution receipt"
@@ -78,9 +85,10 @@
       "id": "rust_stage1_and_stage2_source_build",
       "depends_on": ["rust_and_cpython_pinned_source_edges", "cpython_source_build", "llvm_clang_lld_source_build", "termux_stage0_bootstrap"],
       "operation": "Rust x.py stage1 compiler/tools then stage2 std/compiler/tools using the source-built LLVM and CPython lanes",
+      "llvm_binding": "config.toml [llvm].llvm-config resolves to the verified source-built LLVM installation; Rust's nested LLVM Gitlink remains source evidence and is not a duplicate compiler-stage build dependency",
       "outputs": ["stage1 rustc/cargo/rustfmt/clippy", "stage2 rustc/cargo/rustfmt/clippy", "AArch64 Android toolchain"],
       "proof": "stage receipts, stage equivalence evidence, AArch64 compile/link/run probe",
-      "blocked_until": ["pinned Rust source present", "capacity preflight", "successful stage1"]
+      "blocked_until": ["pinned Rust outer source present", "verified source-built llvm-config", "capacity preflight", "successful stage1"]
     },
     {
       "id": "edge_nightly_candidate",

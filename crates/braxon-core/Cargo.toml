@@ -13,6 +13,7 @@ description = "Braxon orchestration, workspace mapping, and verification library
 cargo_metadata.workspace = true
 serde_json = { workspace = true }
 serde.workspace = true
+sha2.workspace = true
 nsq-core = { path = "../nsq-core" }
 nsq-citadel = { path = "../nsq-citadel" }
 [lib]

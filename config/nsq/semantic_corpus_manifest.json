@@ -23,8 +23,8 @@
     "audio": "not applicable unless a corpus represents audio semantics"
   },
   "compaction_metrics": {
-    "manifested_compact_artifact_count": 12,
-    "manifested_compact_bytes": 724075,
+    "manifested_compact_artifact_count": 13,
+    "manifested_compact_bytes": 729452,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -101,12 +101,23 @@
     {
       "id": "feature_execution_registry",
       "path": "config/nsq/feature_execution_registry.json",
-      "bytes": 5360,
-      "sha256": "c5fe8fb1ec3a76f6f2e36f11c5ceab40f2422e083115d498aed97fc94d6003a1",
-      "semantic_surface": ["Kinetic Reflexor feature selection", "required local artifacts", "on-demand execution contracts"],
+      "bytes": 7968,
+      "sha256": "97ee6accf934746f8d3c199839e7ac66d473be9708b7646758f55e2ca91c5e1f",
+      "semantic_surface": ["Kinetic Reflexor feature selection", "required local artifacts", "on-demand execution contracts", "functional watermark file-operation authority"],
       "provenance": "committed Braxon NSQ feature registry",
       "reproduction": "root CLI routes declared capabilities through nsq-reflexor only when required artifacts are present",
       "integration": "crates/nsq-reflexor/src/lib.rs; src/main.rs",
+      "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "functional_watermark_file_operation_contract",
+      "path": "config/nsq/watermarked_file_operation_contract.json",
+      "bytes": 2769,
+      "sha256": "e19393e9d27917bb063cccf510ce53c82c0f3f80e74ff43f3eb3763b824017d8",
+      "semantic_surface": ["intent-routed file admission", "functional source watermark", "compiler boundary eligibility", "artifact re-watermark", "AArch64 promotion boundary", "recovery baseline"],
+      "provenance": "committed first-party NSQ Kinetic Semantic Reflexor contract",
+      "reproduction": "watermark front door tokenizes intent and source identity, commits a KineticReflexor source state, and invokes only an explicitly requested declared AArch64 compiler route",
+      "integration": "crates/braxon-core/src/watermarked_file_operation.rs; src/main.rs; config/toolchains/source_built_build_graph.json",
       "license_class": "first_party_configuration_subject_to_repository_license"
     },
     {
@@ -170,6 +181,7 @@
     "structural_command": "cargo run --locked --offline -- toolchain verify",
     "tokenizer_command": "cargo test -p Braxon-core tokenizer_bridge::tests::active_native_tokenizer_encodes_translates_addresses_and_round_trips_without_residency --locked --offline",
     "bionic_command": "cargo run --locked --offline -- toolchain bionic",
+    "watermark_command": "cargo run --locked --offline -- watermark verify crates/braxon-core/src/kinetic_reflexor.rs",
     "closure_command": "scripts/braxon_closure_gate.sh <writable-output-directory>"
   }
 }

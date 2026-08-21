@@ -238,6 +238,10 @@ change-id = 0
 [llvm]
 download-ci-llvm = false
 ninja = true
+# Use the repository's verified source-built LLVM/Clang/LLD installation. This
+# preserves the physical compiler boundary without duplicating Rust's nested LLVM
+# worktree on inode-constrained Android filesystems.
+llvm-config = "$LLVM_INSTALL/bin/llvm-config"
 targets = "AArch64;ARM;X86"
 
 [build]

@@ -13,11 +13,12 @@ use BRAXON_core::{
     address_integrity_audit, braxon_context_manifest_status,
     braxon_wake_linked_change_report_from_env, closure_audit, evaluate_repository_operation,
     execute_bounded_tensor_inference, execute_canonical_parameter_citadel_cycle,
-    execute_operator_intelligence, full_wake, model_execution_truth, run_native_fault_recovery,
-    run_native_fixture_equivalence, tokenizer_verification, verify_bionic_compatibility,
-    verify_complete_semantic_extraction, verify_contained_toolchain,
-    verify_language_artifact_context, BraxonBus, CouncilTen, TargetField,
-    OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
+    execute_operator_intelligence, execute_watermarked_file_operation, full_wake,
+    model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
+    tokenizer_verification, verify_bionic_compatibility, verify_complete_semantic_extraction,
+    verify_contained_toolchain, verify_language_artifact_context, BraxonBus, CouncilTen,
+    TargetField, OPERATOR_INTELLIGENCE_CAPABILITY, TENSOR_INFERENCE_CAPABILITY,
+    WATERMARKED_FILE_OPERATION_CAPABILITY,
 };
 
 #[derive(Parser)]
@@ -62,6 +63,16 @@ enum Command {
     /// Inspect a pinned extended-repository lane through its NSQ and legal-materialization contract.
     Repository {
         repository: String,
+    },
+    /// Execute an intent-routed functional watermark transition for a declared repository source file.
+    Watermark {
+        /// Declared transition intent: verify, materialize, or recover.
+        intent: String,
+        /// Normalized repository-relative source path.
+        source: String,
+        /// Permit a real compiler invocation only when the declared AArch64 Android target boundary is present.
+        #[arg(long)]
+        execute: bool,
     },
     Content {
         #[command(subcommand)]
@@ -265,6 +276,11 @@ fn main() {
             print_language_operation(language, input.join(" "))
         }
         Command::Repository { repository } => print_repository_operation(repository),
+        Command::Watermark {
+            intent,
+            source,
+            execute,
+        } => print_watermarked_file_operation(intent, source, execute),
         Command::Content { command } => print_content(command),
         Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
@@ -647,6 +663,38 @@ fn print_repository_operation(repository: String) {
         Ok(report) => print_json(&report),
         Err(error) => {
             eprintln!("repository_operation_error={error}");
+            std::process::exit(1);
+        }
+    }
+}
+
+fn print_watermarked_file_operation(intent: String, source: String, execute: bool) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = reflex_route_operation(&root, WATERMARKED_FILE_OPERATION_CAPABILITY, false)
+        .and_then(|intercept_route| {
+            if !intercept_route.routed
+                || intercept_route.capability.id != WATERMARKED_FILE_OPERATION_CAPABILITY
+            {
+                return Err(
+                    "Kinetic Semantic Reflexor did not select the functional watermark capability"
+                        .into(),
+                );
+            }
+            execute_watermarked_file_operation(&root, &intent, &source, execute).and_then(
+                |operation| {
+                    serde_json::to_value(serde_json::json!({
+                        "schema": "braxon.watermarked_file.nsq_intercept.v1",
+                        "intercept_route": intercept_route,
+                        "operation": operation,
+                    }))
+                    .map_err(|error| error.to_string())
+                },
+            )
+        });
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => {
+            eprintln!("watermarked_file_operation_error={error}");
             std::process::exit(1);
         }
     }

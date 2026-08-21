@@ -1,0 +1,73 @@
+{
+  "schema": "braxon.nsq.watermarked_file_operation_contract.v1",
+  "authority": "NSQ_KINETIC_SEMANTIC_REFLEXOR",
+  "capability": "feature:watermark.file_operation",
+  "target_environment": "aarch64-linux-android",
+  "watermark_family": "BRAXON_NSQ_BASE8_LEVER_SCALE_GE220000_PROVEN225370_V1",
+  "execution_model": "intent_to_reflexor_to_functional_watermark_to_native_boundary_to_artifact_watermark",
+  "watermark_is_functional": true,
+  "resident_runtime": false,
+  "allowed_intents": [
+    "verify",
+    "materialize",
+    "recover"
+  ],
+  "source_roots": [
+    "src",
+    "crates",
+    "scripts",
+    "tools",
+    "state/full_android_language_toolchain/src"
+  ],
+  "artifact_root": "state/full_android_language_toolchain/build/watermarked",
+  "native_execution_policy": {
+    "requires_explicit_execute": true,
+    "requires_aarch64_android_target": true,
+    "requires_resolved_local_compiler": true,
+    "allows_hidden_download": false,
+    "requires_source_hash_before_execution": true,
+    "requires_artifact_hash_after_execution": true,
+    "requires_artifact_rewatermark": true,
+    "failure_mode": "fail_closed_with_exact_materialization_guidance"
+  },
+  "compiler_routes": [
+    {
+      "language_id": "c",
+      "extensions": ["c"],
+      "nsq_capability": "language:c",
+      "kinetic_reflexor_route": "feature:language.parameter_parse",
+      "compiler": "clang",
+      "base_args": ["--target=aarch64-linux-android24", "-fPIC", "-c"]
+    },
+    {
+      "language_id": "cpp",
+      "extensions": ["cc", "cp", "cpp", "cxx", "c++"],
+      "nsq_capability": "language:cpp",
+      "kinetic_reflexor_route": "feature:language.parameter_parse",
+      "compiler": "clang++",
+      "base_args": ["--target=aarch64-linux-android24", "-fPIC", "-c"]
+    },
+    {
+      "language_id": "assembly",
+      "extensions": ["s", "S", "asm"],
+      "nsq_capability": "language:assembly",
+      "kinetic_reflexor_route": "feature:language.parameter_parse",
+      "compiler": "clang",
+      "base_args": ["--target=aarch64-linux-android24", "-c"]
+    },
+    {
+      "language_id": "rust",
+      "extensions": ["rs"],
+      "nsq_capability": "language:rust",
+      "kinetic_reflexor_route": "feature:language.parameter_parse",
+      "compiler": "rustc",
+      "base_args": ["--target", "aarch64-linux-android"]
+    }
+  ],
+  "nonclaims": [
+    "A watermark never substitutes for source, compiler, linker, ABI, ELF, or Android execution proof.",
+    "Host x86 output is not an AArch64 Android artifact.",
+    "A route with execute=false validates and advances the source watermark but does not claim a binary was produced.",
+    "An unrecognized file extension may be watermarked and verified but cannot be promoted as compiler materialization without a declared route."
+  ]
+}

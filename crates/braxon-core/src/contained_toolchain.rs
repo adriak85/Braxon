@@ -302,7 +302,12 @@ pub fn verify_contained_toolchain(
             .sources
             .iter()
             .all(|record| match record.source_status.as_str() {
-                "materialized_local_source_tree" => source_is_materialized(&root, record),
+                "materialized_local_source_tree" | "materialized_source_tree" => {
+                    source_is_materialized(&root, record)
+                }
+                "pinned_source_edge_locally_observed_not_clone_contained" => {
+                    !record.source_url.is_empty() && record.upstream_commit_verified
+                }
                 "unmaterialized_orphaned_gitlink" => {
                     !source_is_materialized(&root, record)
                         && !record.source_url.is_empty()
@@ -316,7 +321,13 @@ pub fn verify_contained_toolchain(
     let source_metadata_declared = sources
         .sources
         .iter()
-        .filter(|record| record.source_status == "unmaterialized_orphaned_gitlink")
+        .filter(|record| {
+            matches!(
+                record.source_status.as_str(),
+                "unmaterialized_orphaned_gitlink"
+                    | "pinned_source_edge_locally_observed_not_clone_contained"
+            )
+        })
         .all(|record| {
             !record.source_url.is_empty()
                 && fs::read_to_string(root.join(".gitmodules"))
@@ -327,8 +338,10 @@ pub fn verify_contained_toolchain(
                     .unwrap_or(false)
         });
     let full_source_reconstruction_ready = sources.sources.iter().all(|record| {
-        record.source_status != "unmaterialized_orphaned_gitlink"
-            || source_is_materialized(&root, record)
+        matches!(
+            record.source_status.as_str(),
+            "materialized_local_source_tree" | "materialized_source_tree"
+        ) && source_is_materialized(&root, record)
     });
 
     let rust_chain_ids = rust_chain
@@ -408,6 +421,7 @@ pub fn verify_contained_toolchain(
                     "rust_stage1_and_stage2_source_build",
                     "termux_nsq_calibration_and_recovery",
                     "complete_language_semantic_proofs",
+                    "functional_watermark_file_operation",
                     "closure_release",
                 ]
                 .iter()
@@ -521,7 +535,7 @@ mod tests {
         assert!(report
             .release_blockers
             .iter()
-            .any(|blocker| blocker.contains("orphaned_rust_gitlink")));
+            .any(|blocker| blocker.contains("rust_nested_llvm_worktree_inode_blocker")));
         assert!(!report.full_source_reconstruction_ready);
         assert!(!report.release_ready);
     }

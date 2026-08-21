@@ -4,19 +4,24 @@
   "owner": "Michael David Norris",
   "target_environment": "aarch64-linux-android",
   "release_complete": false,
-  "nonnegotiable_completion_rule": "A language or repository is not complete until its source/license boundary, complete semantic extraction report, local materialization receipt, AArch64 Android target probe, integrity recovery receipt, and NSQ interception route all pass.",
+  "nonnegotiable_completion_rule": "A language or repository is not complete until its source/license boundary, complete semantic extraction report, local materialization receipt, AArch64 Android target probe, functional watermark transition, integrity recovery receipt, and NSQ interception route all pass.",
+  "completed_since_prior_report": [
+    "Pinned Rust outer source f964de49 and CPython outer source 49918f5b are materialized and revision-verified locally.",
+    "The functional watermark file-operation contract is implemented, content-addressed, registered as feature:watermark.file_operation, and exercised through the root Reflexor front door without a resident runtime.",
+    "The Rust source-build configuration uses the verified source-built LLVM installation through llvm-config rather than requiring a duplicate nested LLVM compiler worktree."
+  ],
   "gaps": [
     {
-      "id": "rust_pinned_source_unmaterialized",
-      "scope": "Rust f964de49 source-stage lane",
-      "status": "blocking",
-      "exact_action": "Materialize the pinned Rust source via the explicit source-edge lane, record SHA-256 and license evidence, then run stage1 and stage2 source builds on the target."
+      "id": "rust_nested_llvm_clone_containment_incomplete",
+      "scope": "Rust f964de49 nested LLVM Gitlink eaab4d9841b9a8a12783d927b2df2291c1c79269",
+      "status": "blocking_for_clone_contained_full_source_claim",
+      "exact_action": "Restore sufficient inode capacity on the Android target and materialize the retained pinned nested LLVM Git object store into its worktree before claiming the entire Rust source graph is clone-contained. The configured Rust compiler stage uses the verified shared source-built llvm-config path and does not duplicate this compiler stage."
     },
     {
-      "id": "cpython_pinned_source_unmaterialized",
-      "scope": "CPython 49918f5b source-stage lane",
-      "status": "blocking",
-      "exact_action": "Materialize the pinned CPython source via the explicit source-edge lane, record SHA-256 and license evidence, then run the Android source build and native extension probe."
+      "id": "clone_ready_source_and_binary_payload_missing",
+      "scope": "fresh Git clone payload",
+      "status": "blocking_for_clone_ready_full_language_claim",
+      "exact_action": "Package every legally redistributable pinned source tree and every target-built AArch64 artifact with SHA-256 identities and notices in an approved clone-deliverable payload or release mechanism. Gitlinks or host artifacts alone are insufficient."
     },
     {
       "id": "edge_nightly_matching_source_unmaterialized",
@@ -25,10 +30,16 @@
       "exact_action": "Acquire a matching pinned source archive with checksum and license record, build it only after stage2 succeeds, and prove Android equivalence before activation."
     },
     {
+      "id": "aarch64_android_target_build_boundary",
+      "scope": "current x86_64 sandbox versus required native Android AArch64 Termux",
+      "status": "blocking_for_target_build_and_promotion",
+      "exact_action": "Run scripts/braxon_reconstruct.sh preflight and the approved source-build sequence from native Android AArch64 Termux. The non-target controller correctly reports x86_64, android_detected=0, and page_size=4096; these host results are validation-only and cannot promote binaries."
+    },
+    {
       "id": "target_capacity_preflight_not_recorded",
       "scope": "Moto/Termux executable build filesystem",
       "status": "blocking_for_source_build",
-      "exact_action": "Run scripts/braxon_reconstruct.sh preflight and provide at least BRAXON_MIN_BUILD_FREE_KIB on an executable non-shared-storage path before starting any full source build."
+      "exact_action": "Run scripts/braxon_reconstruct.sh preflight and provide at least BRAXON_MIN_BUILD_FREE_KIB plus adequate inode capacity on an executable non-shared-storage path before starting any full source build."
     },
     {
       "id": "source_built_llvm_target_receipt_missing",
@@ -46,7 +57,7 @@
       "id": "complete_language_semantic_proofs_missing",
       "scope": "all 132 IDs in config/nsq/language_functional_ingestion_matrix.json",
       "status": "blocking_for_full_language_completion",
-      "exact_action": "For every applicable language surface, generate content-addressed identity, grammar, AST, type, control/data-flow, IR, diagnostics, ABI, assembly, object, debug, linking, target, materialization, and recovery proofs under state/nsq/semantic_extraction/<language>/; the exact missing files are returned by cargo run --locked --offline -- language <language> <input>."
+      "exact_action": "For every applicable language surface, generate content-addressed identity, grammar, AST, type, control/data-flow, IR, diagnostics, ABI, assembly, object, debug, linking, target, materialization, functional-watermark, and recovery proofs under state/nsq/semantic_extraction/<language>/; the exact missing files are returned by cargo run --locked --offline -- language <language> <input>."
     },
     {
       "id": "termux_nsq_calibration_not_materialized",
@@ -76,6 +87,7 @@
   "verification": {
     "toolchain": "cargo run --locked --offline -- toolchain verify",
     "language": "cargo run --locked --offline -- language <language> <input>",
+    "watermark": "cargo run --locked --offline -- watermark verify crates/braxon-core/src/kinetic_reflexor.rs",
     "bionic": "cargo run --locked --offline -- toolchain bionic",
     "repositories": "scripts/braxon_repository_lane.sh status",
     "reconstruction": "scripts/braxon_reconstruct.sh status"

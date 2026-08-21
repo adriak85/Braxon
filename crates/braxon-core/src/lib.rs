@@ -38,6 +38,7 @@ pub mod seed_citadel;
 pub mod semantic_link;
 pub mod target_field;
 pub mod tokenizer_bridge;
+pub mod watermarked_file_operation;
 pub mod wowas;
 pub mod wowas_generation;
 pub mod wowas_realization;
@@ -156,6 +157,10 @@ pub use semantic_link::{
 pub use target_field::{TargetField, TargetFieldActuation, TARGET_FIELD_PATH, TARGET_FIELD_SCHEMA};
 pub use tokenizer_bridge::{
     NativeTokenProjection, TokenizerBridge, TokenizerBridgeReceipt, TOKENIZER_BRIDGE_SCHEMA,
+};
+pub use watermarked_file_operation::{
+    execute_watermarked_file_operation, WatermarkedFileOperationReport, WatermarkedNativeBoundary,
+    WATERMARKED_FILE_OPERATION_CAPABILITY, WATERMARKED_FILE_OPERATION_SCHEMA,
 };
 
 pub use seed_citadel::{

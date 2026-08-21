@@ -136,6 +136,25 @@
       "resident_runtime": false
     },
     {
+      "id": "feature:watermark.file_operation",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/watermarked_file_operation.rs",
+      "required_artifacts": [
+        "config/nsq/watermarked_file_operation_contract.json",
+        "config/nsq/language_functional_ingestion_matrix.json",
+        "config/toolchains/source_built_build_graph.json",
+        "assets/braxon_core/tokenizer/braxon_unified_tokenizer.json",
+        "config/nsq/tokenizer_band_registry.json",
+        "crates/braxon-core/src/kinetic_reflexor.rs",
+        "crates/braxon-core/src/parameter_citadel.rs"
+      ],
+      "state_contract": "intent_to_functional_source_watermark_to_native_boundary_to_artifact_watermark",
+      "action_contract": "admit_declared_repository_file_then_commit_watermark_and_execute_only_an_explicit_target_safe_compiler_route",
+      "answer_contract": "watermarked_file_transition_or_exact_fail_closed_materialization_guidance",
+      "on_demand": true,
+      "resident_runtime": false
+    },
+    {
       "id": "feature:toolchain.bionic_compatibility",
       "nsq_dialect": "control",
       "source": "crates/braxon-core/src/bionic_compatibility.rs",

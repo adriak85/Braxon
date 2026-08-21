@@ -43,11 +43,19 @@
       "upstream_commit_verified": true,
       "upstream_commit_date": "2026-05-07T19:45:59Z",
       "source_path": "state/full_android_language_toolchain/src/rust",
-      "source_status": "unmaterialized_orphaned_gitlink",
-      "evidence": "Git index mode 160000; local directory is empty; .gitmodules declares the matching path and upstream URL; upstream commit identity was previously verified",
+      "source_status": "pinned_source_edge_locally_observed_not_clone_contained",
+      "materialization_evidence": {
+        "observed_head": "f964de49bcb561e5c6c725bb37201e11d852daf0",
+        "observed_bytes": 1235628538,
+        "required_source_indicators": ["x.py", "compiler/rustc/Cargo.toml"],
+        "nested_submodules_materialized": ["library/backtrace", "src/doc/book", "src/doc/edition-guide", "src/doc/embedded-book", "src/doc/nomicon", "src/doc/reference", "src/doc/rust-by-example", "src/gcc", "src/tools/cargo", "src/tools/enzyme", "src/tools/rustc-perf"],
+        "nested_llvm_gitlink": "eaab4d9841b9a8a12783d927b2df2291c1c79269",
+        "nested_llvm_worktree_state": "deferred_after_inode_exhaustion; pinned Git object store retained"
+      },
+      "evidence": "This working tree observed the pinned outer Rust source at the recorded Gitlink revision with required compiler-source indicators present; nested LLVM source Git objects were retained but its worktree was deferred by inode exhaustion. A clean clone sees only the declared source edge until an approved archive payload is provided.",
       "license": "Apache-2.0 OR MIT",
       "semantic_scope": ["rustc", "cargo", "rustfmt", "clippy", "Rust standard library", "Rust bootstrap chain"],
-      "reconstruction_status": "source-edge acquisition is required before Rust source rebuild; this is an explicit release blocker for fully contained source reconstruction"
+      "reconstruction_status": "local source observation is revision-verified but not clone-contained; the configured Rust compiler stage uses the verified source-built LLVM through llvm-config after approved source-edge materialization, while the nested LLVM worktree remains a full-source/archive completion boundary"
     },
     {
       "id": "cpython",
@@ -57,18 +65,23 @@
       "upstream_commit_verified": true,
       "upstream_commit_date": "2026-05-07T23:02:04Z",
       "source_path": "state/full_android_language_toolchain/src/cpython",
-      "source_status": "unmaterialized_orphaned_gitlink",
-      "evidence": "Git index mode 160000; local directory is empty; .gitmodules declares the matching path and upstream URL; upstream commit identity was previously verified",
+      "source_status": "pinned_source_edge_locally_observed_not_clone_contained",
+      "materialization_evidence": {
+        "observed_head": "49918f5b0ceb1950c3222fd4fd6be872d2e15c6f",
+        "observed_bytes": 134380352,
+        "required_source_indicators": ["configure.ac", "Python/ceval.c"]
+      },
+      "evidence": "This working tree observed pinned CPython source at the recorded Gitlink revision with configure and evaluator source present; a clean clone sees only the declared source edge until an approved archive payload is provided",
       "license": "Python-2.0",
       "semantic_scope": ["CPython", "Python C API", "Python standard library", "native extension build interfaces"],
-      "reconstruction_status": "source-edge acquisition is required before CPython source rebuild; current local install payload does not replace source provenance"
+      "reconstruction_status": "local source observation is revision-verified but not clone-contained; current local install payload still does not replace an AArch64 source-build and target-probe receipt"
     },
     {
       "id": "cpython_install_payload",
       "source_path": "state/full_android_language_toolchain/install/python",
       "source_status": "local_built_payload_present",
       "license": "Python-2.0 plus component notices",
-      "reconstruction_status": "not sufficient by itself to claim source availability; associated CPython source remains unmaterialized"
+      "reconstruction_status": "not sufficient by itself to claim clone-contained source availability; associated CPython source remains a declared source edge until an approved archive payload is present"
     },
     {
       "id": "cargo_dependency_graph",
@@ -80,14 +93,19 @@
   ],
   "explicit_release_blockers": [
     {
-      "id": "orphaned_rust_gitlink",
-      "severity": "source_reconstruction_blocker",
-      "required_action": "materialize the verified f964de49 Rust source into an authoritative contained source archive with SHA-256 and license evidence, or preserve a deterministic source-edge acquisition lane that records all three"
+      "id": "rust_nested_llvm_worktree_inode_blocker",
+      "severity": "clone_contained_full_source_blocker",
+      "required_action": "restore sufficient inode capacity and materialize the pinned eaab4d9841b9a8a12783d927b2df2291c1c79269 nested LLVM worktree before claiming the complete Rust source graph is clone-contained; the configured compiler stage instead requires the verified shared source-built llvm-config path"
     },
     {
-      "id": "orphaned_cpython_gitlink",
-      "severity": "source_reconstruction_blocker",
-      "required_action": "materialize the verified 49918f5b CPython source into an authoritative contained source archive with SHA-256 and license evidence, or preserve a deterministic source-edge acquisition lane that records all three"
+      "id": "clone_contained_source_payload_blocker",
+      "severity": "clone_ready_payload_blocker",
+      "required_action": "package legally redistributable pinned source and target-built artifacts in an approved clone-deliverable payload or release mechanism with SHA-256 and notices; Gitlinks alone require network acquisition and do not meet full clone-contained availability"
+    },
+    {
+      "id": "aarch64_target_build_and_probe_blocker",
+      "severity": "target_materialization_blocker",
+      "required_action": "run the source-built CPython, LLVM, Bionic, and Rust stages on native AArch64 Android after capacity preflight, then retain compiler, ELF, ABI, and execution receipts"
     }
   ]
 }
