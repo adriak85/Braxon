@@ -1,7 +1,7 @@
 {
   "schema": "braxon.nsq.blank_surface_registry.v1",
   "scope": "every blank tracked text surface reported by the full recursive tree audit",
-  "tree_audit_merkle_sha256": "7ba0193c07e6863a8676c2934c3c7194b05733724990c8b67347d055ef3c05fb",
+  "tree_audit_merkle_sha256": "d03ce2b7738b423e5abf8300a54d21464bb979d76fc2a38c12fe0ee6ec0163d2",
   "entry_total": 283,
   "valid": true,
   "entries": [

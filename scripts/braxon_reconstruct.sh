@@ -26,6 +26,8 @@ require_contracts() {
     scripts/braxon_termux_calibrate.sh \
     scripts/toolchains/rebuild_full_android_language_toolchain.sh \
     scripts/toolchains/promote_rust_edge_nightly_aarch64.sh \
+    scripts/toolchains/resolve_braxon_repository_tool.sh \
+    scripts/toolchains/write_braxon_repository_tool_dispatch.sh \
     tools/toolchain/validate_toolchain_contracts.mjs \
     tools/toolchain/verify_public_source_archives.mjs; do
     [ -e "$ROOT/$path" ] || fail "required reconstruction contract is missing: $path"
@@ -94,9 +96,9 @@ offline_verify() {
   cd "$ROOT"
   node tools/toolchain/verify_public_source_archives.mjs "$ROOT"
   node tools/toolchain/validate_toolchain_contracts.mjs "$ROOT"
-  cargo test --workspace --locked --offline
-  cargo run --locked --offline -- toolchain verify
-  cargo run --locked --offline -- toolchain bionic
+  "$ROOT/scripts/toolchains/resolve_braxon_repository_tool.sh" exec cargo test --workspace --locked --offline
+  "$ROOT/scripts/toolchains/resolve_braxon_repository_tool.sh" exec cargo run --locked --offline -- toolchain verify
+  "$ROOT/scripts/toolchains/resolve_braxon_repository_tool.sh" exec cargo run --locked --offline -- toolchain bionic
 }
 
 calibrate() {
@@ -128,6 +130,7 @@ edge_nightly_build() {
   done
   BRAXON_SOURCE_BUILD_APPROVED=1 BRAXON_SOURCE_LLVM="$ROOT/state/full_android_language_toolchain/install/llvm" "$ROOT/scripts/toolchains/unified_android_libc_contract_overlay.sh" "$ROOT"
   BRAXON_SOURCE_BUILD_APPROVED=1 JOBS="${JOBS:-1}" "$ROOT/scripts/toolchains/promote_rust_edge_nightly_aarch64.sh" "$ROOT"
+  "$ROOT/scripts/toolchains/write_braxon_repository_tool_dispatch.sh" "$ROOT"
 }
 
 case "$MODE" in

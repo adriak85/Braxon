@@ -99,11 +99,18 @@
       "blocked_until": ["capacity preflight succeeds on the actual executable Android path", "source-built CPython and LLVM exist", "Bionic/GNU overlay target proof succeeds", "all edge stage evidence succeeds"]
     },
     {
+      "id": "repository_built_tool_dispatch",
+      "depends_on": ["cpython_source_build", "llvm_clang_lld_source_build", "rust_stage1_and_stage2_source_build", "edge_nightly_1_100_0_promotion"],
+      "operation": "scripts/toolchains/write_braxon_repository_tool_dispatch.sh verifies local artifact paths and SHA-256 values under the repository install tree",
+      "outputs": ["repository-built rust/LLVM/CPython tool authority", "no ambient Termux normal-operation fallback", "hashed dispatch manifest"],
+      "proof": "state/full_android_language_toolchain/install/braxon_repository_tool_dispatch.json entries are verified_repository_built with repository-contained executable paths"
+    },
+    {
       "id": "termux_nsq_calibration_and_recovery",
-      "depends_on": ["cpython_source_build", "llvm_clang_lld_source_build", "rust_stage1_and_stage2_source_build"],
+      "depends_on": ["repository_built_tool_dispatch"],
       "operation": "scripts/braxon_termux_calibrate.sh calibrate then verify",
       "outputs": ["NSQ intercepted wrappers", "tool hash manifest", "guarded pkg route", "repair capability"],
-      "proof": "calibration SHA-256 verification"
+      "proof": "calibration SHA-256 verification and repository-tool manifest verification"
     },
     {
       "id": "complete_language_semantic_proofs",

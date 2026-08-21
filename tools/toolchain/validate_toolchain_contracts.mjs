@@ -5,6 +5,7 @@ import path from 'node:path';
 
 const root = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
 const contracts = [
+  'config/braxon_identity.json',
   'config/toolchains/contained_semantic_toolchain_inventory.json',
   'config/toolchains/source_availability_manifest.json',
   'config/toolchains/rust_bootstrap_chain.json',
@@ -35,6 +36,7 @@ function readJson(relative) {
 }
 
 const parsed = new Map(contracts.map((relative) => [relative, readJson(relative)]));
+const identity = parsed.get('config/braxon_identity.json');
 const language = parsed.get('config/nsq/language_functional_ingestion_matrix.json');
 const feature = parsed.get('config/nsq/feature_execution_registry.json');
 const canonicalSurface = parsed.get('config/nsq/canonical_surface_registry.json');
@@ -51,6 +53,24 @@ const fullFileWatermark = parsed.get('config/nsq/full_file_watermark_reflex_cont
 const blankRegistry = parsed.get('config/nsq/blank_surface_registry.json');
 const fullTreeAudit = readJson('state/braxon/full_tree_audit.json');
 const fullFileWatermarkInventory = readJson('state/braxon/full_file_watermark_reflex_inventory.json');
+const interceptPolicy = parsed.get('config/toolchains/termux_nsq_intercept_policy.json');
+
+if (identity.canonical_project_name !== 'Braxon' || identity.canonical_project_name_case_sensitive !== 'Braxon') throw new Error('canonical Braxon project identity is invalid');
+if (identity.legal_owner !== 'Michael David Norris' || identity.canonical_license !== 'LicenseRef-Braxon-Private') throw new Error('first-party owner or license identity is invalid');
+for (const required of ['LICENSE', 'NOTICE', identity.first_party_component_scope, 'scripts/toolchains/resolve_braxon_repository_tool.sh', 'scripts/toolchains/write_braxon_repository_tool_dispatch.sh']) {
+  if (!fs.existsSync(path.join(root, required))) throw new Error(`required first-party identity or dispatch surface is missing: ${required}`);
+}
+const licenseText = fs.readFileSync(path.join(root, 'LICENSE'), 'utf8');
+const noticeText = fs.readFileSync(path.join(root, 'NOTICE'), 'utf8');
+const componentScopeText = fs.readFileSync(path.join(root, identity.first_party_component_scope), 'utf8');
+for (const required of ['Michael David Norris', 'LicenseRef-Braxon-Private']) {
+  if (!licenseText.includes(required) || !noticeText.includes(required) || !componentScopeText.includes(required)) throw new Error(`first-party license notice lacks required identity: ${required}`);
+}
+if (interceptPolicy.schema !== 'braxon.termux.nsq_intercept_policy.v2' || !interceptPolicy.policy.repository_built_tool_required_for_declared_execution || interceptPolicy.policy.ambient_termux_tool_execution_allowed_after_calibration || interceptPolicy.policy.ambient_termux_tool_role !== 'bootstrap_only_for_rebuilding_repository_owned_toolchains_before_a_verified_local_artifact_exists') throw new Error('repository-built tool dispatch policy is invalid');
+if (interceptPolicy.calibration.repository_tool_resolver !== 'scripts/toolchains/resolve_braxon_repository_tool.sh' || interceptPolicy.calibration.repository_tool_dispatch_manifest !== 'state/full_android_language_toolchain/install/braxon_repository_tool_dispatch.json') throw new Error('repository-tool resolver binding is invalid');
+if (interceptPolicy.intercepted_tools.some((tool) => tool.real_tool_source !== 'verified_repository_tool_dispatch_manifest')) throw new Error('ambient tool discovery remains in the declared intercept policy');
+const resolverScript = fs.readFileSync(path.join(root, 'scripts/toolchains/resolve_braxon_repository_tool.sh'), 'utf8');
+if (!resolverScript.includes('ambient Termux fallback is prohibited') || !resolverScript.includes('verified_repository_built')) throw new Error('repository-tool resolver does not fail closed');
 
 if (language.language_total !== language.languages.length) throw new Error('language matrix total mismatch');
 if (repository.repository_total !== repository.repositories.length) throw new Error('repository manifest total mismatch');
@@ -85,7 +105,10 @@ if (!blankRegistry.valid || blankRegistry.entries.some((entry) => entry.classifi
 if (!fullTreeAudit.valid || fullTreeAudit.unclassified.length !== 0 || fullTreeAudit.unregistered_blank_required_content.length !== 0 || fullTreeAudit.unresolved_environment_links.length !== 0) throw new Error('full tracked-tree audit is invalid');
 if (!fullFileWatermarkInventory.valid || fullFileWatermarkInventory.unbound.length !== 0 || fullFileWatermarkInventory.unregistered_blank_executable_files.length !== 0 || fullFileWatermarkInventory.tree_audit_merkle_sha256 !== fullTreeAudit.merkle_sha256) throw new Error('full-file watermark Reflexor inventory is invalid or stale');
 if (!graph.nodes.some((item) => item.id === 'complete_language_semantic_proofs')) throw new Error('semantic proof build-graph node missing');
-if (!graph.nodes.some((item) => item.id === 'termux_nsq_calibration_and_recovery')) throw new Error('Termux calibration build-graph node missing');
+const repositoryToolDispatch = graph.nodes.find((item) => item.id === 'repository_built_tool_dispatch');
+if (!repositoryToolDispatch || !repositoryToolDispatch.depends_on.includes('edge_nightly_1_100_0_promotion')) throw new Error('repository-built tool dispatch build-graph node is invalid');
+const calibrationNode = graph.nodes.find((item) => item.id === 'termux_nsq_calibration_and_recovery');
+if (!calibrationNode || !calibrationNode.depends_on.includes('repository_built_tool_dispatch')) throw new Error('Termux calibration is not bound to repository-built tool dispatch');
 if (!graph.nodes.some((item) => item.id === 'functional_watermark_file_operation')) throw new Error('functional watermark build-graph node missing');
 const edgePromotion = rustBootstrap.lanes.find((item) => item.id === 'edge_candidate_1_100_0_nightly');
 if (!edgePromotion || edgePromotion.git_commit !== 'f7d782a3be46d6bb4b9792fe69a61db389ba1769' || edgePromotion.bootstrap_dependency !== 'bootstrap_termux_1_97_1') throw new Error('edge nightly bootstrap authority is invalid');
@@ -101,6 +124,10 @@ for (const required of ['EDGE_COMMIT="f7d782a3be46d6bb4b9792fe69a61db389ba1769"'
   if (!promotionScript.includes(required)) throw new Error(`native edge promotion script lacks required invariant: ${required}`);
 }
 if (/\brustup\b(?!_used)/.test(promotionScript) || /\bcurl\b|\bwget\b|git clone|git fetch/.test(promotionScript)) throw new Error('native edge promotion script permits forbidden external compiler acquisition');
+if (promotionScript.includes('$(command -v rustc') || promotionScript.includes('$(command -v cargo')) throw new Error('native edge promotion script silently discovers ambient Rust bootstrap tools');
+const baseSourceBuildScript = fs.readFileSync(path.join(root, 'scripts/toolchains/rebuild_full_android_language_toolchain.sh'), 'utf8');
+if (baseSourceBuildScript.includes('$(command -v rustc') || baseSourceBuildScript.includes('$(command -v cargo')) throw new Error('base source-build script silently discovers ambient Rust bootstrap tools');
+if (!baseSourceBuildScript.includes('write_braxon_repository_tool_dispatch.sh')) throw new Error('base source-build script does not publish repository-built normal tool dispatch');
 if (semantic.corpora.length !== semantic.compaction_metrics.manifested_compact_artifact_count) throw new Error('semantic corpus count mismatch');
 if (semantic.corpora.reduce((total, corpus) => total + corpus.bytes, 0) !== semantic.compaction_metrics.manifested_compact_bytes) throw new Error('semantic corpus byte aggregate mismatch');
 for (const corpus of semantic.corpora) {
@@ -128,4 +155,7 @@ console.log(JSON.stringify({
   tracked_path_total: fullTreeAudit.tracked_path_total,
   executable_line_total: fullFileWatermarkInventory.line_total,
   virtual_live_window_total: liveBus.required_windows.length,
+  canonical_project_name: identity.canonical_project_name,
+  legal_owner: identity.legal_owner,
+  repository_built_tool_dispatch_required: interceptPolicy.policy.repository_built_tool_required_for_declared_execution,
 }, null, 2));

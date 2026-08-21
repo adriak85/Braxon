@@ -6,7 +6,7 @@ Sole Owner: Michael David Norris is the sole individual human owner and controll
 
 1. Scope
 
-This license governs the project-owned source code, configuration, documentation, design material, scripts, generated project records, model metadata, story material, NSQ runtime material, and other original material in this repository that are not clearly identified as third-party material and are not accompanied by a different applicable license or notice.
+This license governs the project-owned source code, configuration, documentation, design material, scripts, generated project records, model metadata, story material, NSQ runtime material, substantially rebuilt original components, and other original material in this repository that are not clearly identified as third-party material and are not accompanied by a different applicable license or notice. `LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md` identifies the active first-party component families covered by this license and the boundaries that preserve upstream terms.
 
 2. No Public License Grant
 

@@ -1,0 +1,16 @@
+{
+  "schema": "braxon.project_identity.v1",
+  "canonical_project_name": "Braxon",
+  "canonical_project_name_case_sensitive": "Braxon",
+  "legal_owner": "Michael David Norris",
+  "owner_role": "sole_individual_human_owner_of_project_owned_intellectual_property",
+  "canonical_license": "LicenseRef-Braxon-Private",
+  "canonical_license_path": "LICENSE",
+  "first_party_component_scope": "LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md",
+  "incorrect_active_project_spellings": [
+    "Braxton",
+    "BRAXTON"
+  ],
+  "historical_or_external_name_exception": "An incorrect historic spelling may appear only inside retained historical archives, their immutable checksum/provenance records, or quoted external source material. It must not name a current command, canonical branch, active configuration, active script, user-facing interface, or ownership notice.",
+  "third_party_name_preservation": "Upstream project names, copyright holders, and license identifiers remain unchanged where they are part of external provenance."
+}

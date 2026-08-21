@@ -261,6 +261,15 @@ grep -q 'BRAXON_CPYTHON_OVERLAY_CONSUMER_OK' "$REPORT/cpython_overlay_consumer_p
 
 echo
 echo "== build Rust from source using preserved custom Rust bootstrap =="
+# The preserved bootstrap paths may be supplied only for this source-build stage.
+# They are not a normal Braxon tool-dispatch authority after a verified local tool
+# manifest has been emitted.
+BOOTSTRAP_CARGO="${BRAXON_BOOTSTRAP_CARGO:-${PREFIX:+$PREFIX/bin/cargo}}"
+BOOTSTRAP_RUSTC="${BRAXON_BOOTSTRAP_RUSTC:-${PREFIX:+$PREFIX/bin/rustc}}"
+[ -n "$BOOTSTRAP_CARGO" ] || { echo "FAIL: set BRAXON_BOOTSTRAP_CARGO to the preserved source-built Rust 1.97.1 bootstrap cargo" >&2; exit 1; }
+[ -n "$BOOTSTRAP_RUSTC" ] || { echo "FAIL: set BRAXON_BOOTSTRAP_RUSTC to the preserved source-built Rust 1.97.1 bootstrap compiler" >&2; exit 1; }
+[ -x "$BOOTSTRAP_CARGO" ] || { echo "FAIL: declared bootstrap cargo is absent: $BOOTSTRAP_CARGO" >&2; exit 1; }
+[ -x "$BOOTSTRAP_RUSTC" ] || { echo "FAIL: declared bootstrap rustc is absent: $BOOTSTRAP_RUSTC" >&2; exit 1; }
 RUST_INSTALL="$INSTALL/rust"
 mkdir -p "$RUST_INSTALL"
 
@@ -281,8 +290,8 @@ targets = "AArch64;ARM;X86"
 build = "aarch64-linux-android"
 host = ["aarch64-linux-android"]
 target = ["aarch64-linux-android"]
-cargo = "$(command -v cargo)"
-rustc = "$(command -v rustc)"
+	cargo = "$BOOTSTRAP_CARGO"
+	rustc = "$BOOTSTRAP_RUSTC"
 python = "$PY_INSTALL/bin/python3"
 extended = true
 tools = ["cargo", "rustfmt", "clippy"]
@@ -420,7 +429,14 @@ echo "== hash full rebuilt stack =="
 
 cp "$RUN/FULL_REBUILD_SHA256SUMS.txt" "$BAKED/SHA256SUMS"
 
+# Publish a normal-operation dispatch authority from only the verified local
+# install tree. The resolver rejects all entries until their exact artifacts
+# and SHA-256 values exist under this repository.
+"$ROOT/scripts/toolchains/write_braxon_repository_tool_dispatch.sh" "$ROOT"
+cp "$INSTALL/braxon_repository_tool_dispatch.json" "$BAKED/proofs/braxon_repository_tool_dispatch.json"
+
 echo
+
 echo "== final report =="
 {
   echo "schema=braxon.full_android_language_toolchain.report.v1"

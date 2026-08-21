@@ -8,9 +8,22 @@
     "upstream_notices_must_be_retained": true,
     "restricted_source_must_not_be_copied_translated_or_reverse_engineered": true,
     "clean_room_replacement_requires_lawful_behavioral_specification": true,
-    "unknown_license_is_not_permission_to_redistribute": true
+    "unknown_license_is_not_permission_to_redistribute": true,
+    "canonical_project_identity": "Braxon",
+    "first_party_component_scope": "LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md",
+    "first_party_license": "LicenseRef-Braxon-Private",
+    "substantially_rebuilt_first_party_components_require_scope_binding": true
   },
   "components": [
+    {
+      "id": "braxon_repository_tool_dispatch_and_native_contracts",
+      "source": "scripts/toolchains/resolve_braxon_repository_tool.sh; scripts/toolchains/write_braxon_repository_tool_dispatch.sh; scripts/braxon_termux_calibrate.sh; config/toolchains/termux_nsq_intercept_policy.json",
+      "license": "LicenseRef-Braxon-Private",
+      "classification": "FIRST_PARTY_SUBSTANTIALLY_REBUILT_COMPONENT",
+      "integration": "original Braxon repository-built tool dispatch, NSQ interception, source-build selection, and fail-closed normal-operation routing",
+      "notice_requirement": "retain LICENSE, NOTICE, and LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md; retain separate notices for all upstream toolchain sources",
+      "private_eligibility": "independently authored Braxon implementation and policy only; no claim over Termux, LLVM, Rust, CPython, Bionic, Guile, Zig, or public interface names"
+    },
     {
       "id": "llvm_clang_lld_and_runtimes",
       "source": "state/full_android_language_toolchain/src/llvm-project",
@@ -50,7 +63,7 @@
     {
       "id": "bionic_compatibility_overlay",
       "source": "state/full_android_language_toolchain/native/android_libc_extensions/src/braxon_android_libc_contracts.c",
-      "license": "LicenseRef-Braxon-Private for independently authored implementation; public Android/Linux interface provenance retained",
+      "license": "LicenseRef-Braxon-Private for independently authored implementation under LICENSES/BRAXON_FIRST_PARTY_COMPONENT_SCOPE.md; public Android/Linux interface provenance retained",
       "classification": "REPLACED_BY_ORIGINAL_IMPLEMENTATION",
       "integration": "first-party staged AArch64 Bionic compatibility overlay; not a glibc replacement",
       "notice_requirement": "do not claim ownership of Bionic, glibc, Linux ABI definitions, or public interface names",

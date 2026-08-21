@@ -1,11 +1,14 @@
 {
-  "schema": "braxon.termux.nsq_intercept_policy.v1",
+  "schema": "braxon.termux.nsq_intercept_policy.v2",
   "authority": "BRAXON_TERMUX_NSQ_INTERCEPT",
   "owner": "Michael David Norris",
   "target_environment": "aarch64-linux-android",
   "policy": {
     "nsq_intercept_required_for_declared_tool_invocation": true,
     "calibrated_overlay_precedes_default_termux_path": true,
+    "repository_built_tool_required_for_declared_execution": true,
+    "ambient_termux_tool_execution_allowed_after_calibration": false,
+    "ambient_termux_tool_role": "bootstrap_only_for_rebuilding_repository_owned_toolchains_before_a_verified_local_artifact_exists",
     "direct_termux_prefix_overwrite_allowed": false,
     "silent_pkg_upgrade_allowed": false,
     "silent_pkg_install_allowed": false,
@@ -18,6 +21,8 @@
   "calibration": {
     "overlay_root": "state/termux_nsq_intercept",
     "wrapper_bin": "state/termux_nsq_intercept/bin",
+    "repository_tool_resolver": "scripts/toolchains/resolve_braxon_repository_tool.sh",
+    "repository_tool_dispatch_manifest": "state/full_android_language_toolchain/install/braxon_repository_tool_dispatch.json",
     "manifest": "state/termux_nsq_intercept/calibration_manifest.json",
     "hash_manifest": "state/termux_nsq_intercept/SHA256SUMS",
     "profile_fragment": "state/termux_nsq_intercept/profile.d/braxon-nsq-intercept.sh",
@@ -27,19 +32,23 @@
     "require_16k_page_probe_when_reported": true
   },
   "intercepted_tools": [
-    {"name":"rustc","language":"rust","real_tool_source":"calibrated discovery receipt"},
-    {"name":"cargo","language":"rust","real_tool_source":"calibrated discovery receipt"},
-    {"name":"clang","language":"c","real_tool_source":"calibrated discovery receipt"},
-    {"name":"clang++","language":"cpp","real_tool_source":"calibrated discovery receipt"},
-    {"name":"ld.lld","language":"elf","real_tool_source":"calibrated discovery receipt"},
-    {"name":"llvm-ar","language":"archive","real_tool_source":"calibrated discovery receipt"},
-    {"name":"llvm-nm","language":"elf","real_tool_source":"calibrated discovery receipt"},
-    {"name":"llvm-objdump","language":"aarch64_asm","real_tool_source":"calibrated discovery receipt"},
-    {"name":"llvm-readelf","language":"elf","real_tool_source":"calibrated discovery receipt"},
-    {"name":"llvm-strip","language":"elf","real_tool_source":"calibrated discovery receipt"},
-    {"name":"python3","language":"python","real_tool_source":"calibrated discovery receipt"},
-    {"name":"guile","language":"guile","real_tool_source":"calibrated discovery receipt"},
-    {"name":"zig","language":"zig","real_tool_source":"calibrated discovery receipt"}
+    {"name":"rustc","language":"rust","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"cargo","language":"rust","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"rustdoc","language":"rust","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"rustfmt","language":"rust","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"clippy-driver","language":"rust","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"clang","language":"c","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"clang++","language":"cpp","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"ld.lld","language":"elf","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-ar","language":"archive","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-ranlib","language":"archive","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-nm","language":"elf","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-objdump","language":"aarch64_asm","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-readelf","language":"elf","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"llvm-strip","language":"elf","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"python3","language":"python","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"guile","language":"guile","real_tool_source":"verified_repository_tool_dispatch_manifest"},
+    {"name":"zig","language":"zig","real_tool_source":"verified_repository_tool_dispatch_manifest"}
   ],
   "pkg_guard": {
     "wrapper_name": "pkg",
@@ -50,7 +59,7 @@
   },
   "recovery": {
     "detection": ["hash mismatch", "missing wrapper", "missing real tool", "target ABI mismatch", "page-size requirement violation"],
-    "automatic_action": "restore wrapper scripts and profile fragment only from the repository calibration generator after hash validation",
+    "automatic_action": "restore wrapper scripts and profile fragment only from the repository calibration generator after repository-tool manifest and hash validation",
     "manual_action": "rebuild or reinstall the declared source lane only after capacity preflight and explicit operator approval",
     "forbidden_action": "automatic package-manager mutation or replacement of the Termux base installation"
   }
