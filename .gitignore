@@ -74,3 +74,6 @@ crates/wowas-final-edition-v10/reconstruction/SERIEL_CROSSWALK.tsv
 # Generated KSR semantic-build storage state and bounded physical-executor evidence.
 state/full_android_language_toolchain/ksr_semantic_chain/
 state/full_android_language_toolchain/ksr_execution_logs/
+
+# Generated target-proven dense artifacts require explicit review and a configured large-artifact transport before publication.
+state/full_android_language_toolchain/artifact_packages/

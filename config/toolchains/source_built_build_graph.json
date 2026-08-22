@@ -114,8 +114,16 @@
       "proof": "state/full_android_language_toolchain/install/braxon_repository_tool_dispatch.json entries are verified_repository_built with repository-contained executable paths"
     },
     {
+      "id": "galaxy_a17_dense_artifact_distribution",
+      "depends_on": ["repository_built_tool_dispatch", "ksr_semantic_build_dialect"],
+      "operation": "Braxon toolchain build-dialect galaxy-a17-artifact-package prepare then explicit execute only on the verified Samsung Galaxy A17 target",
+      "outputs": ["deterministic xz runtime archive", "separate debug-evidence archive", "Galaxy A17 target receipt", "exact SHA-256 artifact manifest", "clone admission boundary"],
+      "proof": "KSR materialization watermark; observed arm64-v8a/AArch64 target; baked C/C++/Rust target probes; ELF/DWARF evidence; repository-built dispatch manifest; exact archive hashes",
+      "blocked_until": ["completed baked output exists", "actual target observation matches package contract", "all capture proofs pass", "large-artifact transport is configured before any oversized archive publication"]
+    },
+    {
       "id": "termux_nsq_calibration_and_recovery",
-      "depends_on": ["repository_built_tool_dispatch"],
+      "depends_on": ["repository_built_tool_dispatch", "galaxy_a17_dense_artifact_distribution"],
       "operation": "scripts/braxon_termux_calibrate.sh calibrate then verify",
       "outputs": ["NSQ intercepted wrappers", "tool hash manifest", "guarded pkg route", "repair capability"],
       "proof": "calibration SHA-256 verification and repository-tool manifest verification"

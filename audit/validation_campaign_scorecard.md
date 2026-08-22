@@ -60,7 +60,7 @@ The current repository evidence establishes a coherent native execution mechanis
 | 34 | Reproducibility benchmark | MEASURED | audit/run_clean_room_validation.sh; audit/clean_room_validation_result.json | Fresh reconstruction clone under Rust 1.96.0 passed 72 Braxon-core library tests; full-system package and all-workspace acceptance remain outside this gate. |
 | 35 | Memory-pressure benchmark | MEASURED | crates/braxon-core/src/piston_memory.rs; crates/braxon-core/src/ghost_memory.rs | Bounded pressure and fail-closed aperture tests; not device telemetry. |
 | 36 | Thermal/resource benchmark | BLOCKED | — | Requires physical Android device telemetry. |
-| 37 | Android 16 acceptance | BLOCKED | — | No physical non-rooted Moto G acceptance run. |
+| 37 | Android 16 acceptance | BLOCKED | — | No physical non-rooted Samsung Galaxy A17 acceptance run. |
 | 38 | Guile semantic-equivalence benchmark | BLOCKED | — | Catalog/intent reconstruction is not representative semantic equivalence. |
 | 39 | Zig semantic-equivalence benchmark | BLOCKED | — | Catalog/intent reconstruction is not representative semantic equivalence. |
 | 40 | Companion-tool equivalence benchmark | BLOCKED | audit/expanded/FINAL_EXPANDED_AUDIT.md | Tool intent catalog is not a complete reference-equivalence suite. |

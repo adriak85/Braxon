@@ -23,8 +23,8 @@
     "audio": "not applicable unless a corpus represents audio semantics"
   },
   "compaction_metrics": {
-    "manifested_compact_artifact_count": 23,
-    "manifested_compact_bytes": 960006,
+    "manifested_compact_artifact_count": 24,
+    "manifested_compact_bytes": 964975,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -197,8 +197,8 @@
     {
       "id": "semantic_build_dialect_contract",
       "path": "config/nsq/semantic_build_dialect_contract.json",
-      "bytes": 16087,
-      "sha256": "19d96af1f3c998129fcebe9842dba23e189b4ef07a4e2fa6341e9f1630cb29c5",
+      "bytes": 18586,
+      "sha256": "cc1abca0809ec400f535d1ce2b7505dfbdae69b4f58fb3a63ef5472456ece7c7",
       "semantic_surface": [
         "semantic build intent",
         "KSR virtual shared-cell ports",
@@ -248,7 +248,7 @@
       "id": "blank_surface_registry",
       "path": "config/nsq/blank_surface_registry.json",
       "bytes": 167562,
-      "sha256": "99f9cc684faac075fb1e2460122b1e99f4b65b3a8b11242200d07d77f3824d06",
+      "sha256": "788a34c9d28d6e6e803d3300c70ef70627654440f719a0ef9b3bbdab0c1c257e",
       "semantic_surface": [
         "individual non-routable blank upstream historical and derived capture classification",
         "blank-surface fail-closed provenance policy"
@@ -378,6 +378,22 @@
       "reproduction": "node tools/toolchain/refresh_semantic_corpus_manifest.mjs <repository-root>",
       "integration": "route:live_bus.refresh_benchmark; crates/braxon-core/examples/region_fire_probe.rs",
       "license_class": "first_party_configuration_subject_to_repository_license"
+    },
+    {
+      "id": "galaxy_a17_dense_artifact_package_contract",
+      "path": "config/toolchains/galaxy_a17_dense_artifact_package_contract.json",
+      "bytes": 2470,
+      "sha256": "048ab35cd169824d574850cee427dc04aa0a0fe875fc8c4deedbeceffa433d30",
+      "semantic_surface": [
+        "Samsung Galaxy A17 target identity",
+        "KSR-authorized dense toolchain artifact packaging",
+        "exact archive hash clone admission",
+        "source rebuild fallback and large-artifact publication boundary"
+      ],
+      "provenance": "first-party Braxon target-distribution contract bound to user-confirmed device identity and required target reobservation",
+      "reproduction": "node tools/toolchain/refresh_semantic_corpus_manifest.mjs <repository-root>",
+      "integration": "feature:toolchain.semantic_build_dialect; scope:galaxy-a17-artifact-package",
+      "license_class": "first_party_configuration; upstream compiler and runtime license boundaries remain separately authoritative"
     },
     {
       "id": "js_java_jni_llvm_candidate_contract",

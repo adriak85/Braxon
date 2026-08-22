@@ -34,7 +34,7 @@
   },
   "executor_policy": {
     "dispatcher": "scripts/braxon_reconstruct.sh",
-    "allowlisted_modes": ["source-edge", "source-build", "edge-nightly-build"],
+    "allowlisted_modes": ["source-edge", "source-build", "edge-nightly-build", "artifact-package"],
     "requires_explicit_execute": true,
     "requires_aarch64_android_target": true,
     "preserved_environment": ["HOME", "PATH", "PREFIX", "SHELL", "TMPDIR", "TERM", "LANG", "LC_ALL"],
@@ -68,6 +68,12 @@
     {
       "upstream_scope": "llvm-aarch64-source-build",
       "downstream_scope": "rust-edge-nightly",
+      "condition": "executed_with_declared_outputs_watermarked",
+      "effect": "queue_prepare"
+    },
+    {
+      "upstream_scope": "llvm-aarch64-source-build",
+      "downstream_scope": "galaxy-a17-artifact-package",
       "condition": "executed_with_declared_outputs_watermarked",
       "effect": "queue_prepare"
     },
@@ -202,6 +208,36 @@
         "state/full_android_language_toolchain/install/llvm/bin/perf2bolt"
       ],
       "optimization_profile": "release_lto_where_target_stable_codegen_unit_reduction_where_target_stable_debug_copy_before_strip"
+    },
+    {
+      "id": "galaxy-a17-artifact-package",
+      "kind": "target_proven_dense_distribution",
+      "languages": ["llvm_ir", "c", "cpp", "rust", "python", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "execute", "undo"],
+      "executor_mode": "artifact-package",
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": [
+        "config/toolchains/galaxy_a17_dense_artifact_package_contract.json",
+        "config/toolchains/termux_android_aarch64_capacity_profile.json",
+        "scripts/toolchains/capture_galaxy_a17_dense_artifact_package.sh",
+        "state/full_android_language_toolchain/baked/current/bin/clang",
+        "state/full_android_language_toolchain/baked/current/bin/llvm-dwarfdump",
+        "state/full_android_language_toolchain/baked/current/bin/llvm-mc",
+        "state/full_android_language_toolchain/baked/current/bin/llvm-bolt",
+        "state/full_android_language_toolchain/baked/current/proofs/llvm_verify.txt",
+        "state/full_android_language_toolchain/baked/current/proofs/baked_probe_output.txt",
+        "state/full_android_language_toolchain/baked/current/proofs/braxon_repository_tool_dispatch.json",
+        "state/full_android_language_toolchain/baked/current/SHA256SUMS"
+      ],
+      "proof_requirements": ["KSR_materialization_watermark", "Galaxy_A17_target_reobservation", "AArch64_ELF", "Bionic_dependency_inspection", "target_execution_probe", "deterministic_xz_archive_hash", "license_boundary_review", "clone_reobservation"],
+      "output_paths": [
+        "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64/braxon-galaxy-a17-aarch64-runtime.tar.xz",
+        "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64/braxon-galaxy-a17-aarch64-debug-evidence.tar.xz",
+        "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64/target_receipt.json",
+        "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64/artifact_manifest.json",
+        "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64/SHA256SUMS"
+      ],
+      "optimization_profile": "deterministic_xz_maximum_density_stripped_runtime_separate_debug_evidence_exact_hash_clone_admission"
     },
     {
       "id": "rust-edge-nightly",

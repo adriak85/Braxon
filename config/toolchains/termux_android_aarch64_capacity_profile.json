@@ -4,6 +4,13 @@
   "owner": "Michael David Norris",
   "target_environment": "aarch64-linux-android",
   "environment_observation": {
+    "device_provenance": {
+      "device_family": "Samsung Galaxy A17",
+      "identity_status": "user_confirmed",
+      "reported_marketed_memory_gib": 4,
+      "reported_internal_storage_gib": 128,
+      "cpu_topology_status": "observed_from_user_provided_environment_and_must_be_reprobed_for_artifact_admission"
+    },
     "source": "user-provided braxon-manus-environment.txt",
     "observed_at": "2026-08-21T01:31:40Z",
     "kernel": "Linux 5.15.180-android13-3-32407857",

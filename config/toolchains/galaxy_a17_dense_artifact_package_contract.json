@@ -1,0 +1,50 @@
+{
+  "schema": "braxon.toolchain.galaxy_a17_dense_artifact_package_contract.v1",
+  "authority": "NSQ_KINETIC_SEMANTIC_REFLEXOR",
+  "owner": "Michael David Norris",
+  "capability": "feature:toolchain.galaxy_a17_artifact_package",
+  "target": {
+    "device_family": "Samsung Galaxy A17",
+    "identity_status": "user_confirmed_then_target_observed",
+    "required_abi": "aarch64-linux-android",
+    "required_android_architecture": "arm64-v8a",
+    "reported_marketed_memory_gib": 4,
+    "reported_internal_storage_gib": 128,
+    "cpu_topology": "must_be_captured_from_the_actual_target_at_package_time"
+  },
+  "source": {
+    "baked_root": "state/full_android_language_toolchain/baked/current",
+    "install_root": "state/full_android_language_toolchain/install",
+    "required_proofs": [
+      "proofs/bootstrap_authority.txt",
+      "proofs/llvm_verify.txt",
+      "proofs/baked_probe_output.txt",
+      "proofs/braxon_repository_tool_dispatch.json",
+      "SHA256SUMS"
+    ]
+  },
+  "package": {
+    "output_root": "state/full_android_language_toolchain/artifact_packages/galaxy_a17_aarch64",
+    "runtime_archive": "braxon-galaxy-a17-aarch64-runtime.tar.xz",
+    "debug_archive": "braxon-galaxy-a17-aarch64-debug-evidence.tar.xz",
+    "compression": "xz_deterministic_maximum_density",
+    "runtime_contents": ["baked/current/bin/stripped_elf_tools", "baked/current/proofs", "baked/current/SHA256SUMS", "target_receipt.json", "artifact_manifest.json"],
+    "debug_contents": ["baked/current/bin/*.debug", "ELF_and_DWARF_verification_evidence"],
+    "runtime_activation_automatic": false,
+    "artifact_admission_requires": ["KSR_materialization_watermark", "ELF_machine_aarch64", "Bionic_dependency_inspection", "target_execution_probe", "SHA256_manifest", "license_boundary_review"]
+  },
+  "clone_admission": {
+    "requires_exact_package_manifest_hash": true,
+    "requires_target_reobservation": true,
+    "rejects_abi_or_android_architecture_mismatch": true,
+    "rejects_absent_or_unverified_package": true,
+    "fallback": "KSR_authorized_source_rebuild",
+    "normal_operation_uses_repository_built_dispatch_only_after_package_verification": true
+  },
+  "publication_boundary": {
+    "raw_build_directories_publishable": false,
+    "target_build_pending_artifacts_publishable": false,
+    "large_artifact_transport": "must_be_configured_before_any_archive_exceeding_hosted_git_size_limits_is_committed",
+    "current_package_state": "TARGET_BUILD_PENDING"
+  }
+}

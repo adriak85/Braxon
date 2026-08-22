@@ -28,6 +28,7 @@ require_contracts() {
     config/toolchains/source_availability_manifest.json \
     config/toolchains/rust_bootstrap_chain.json \
     config/toolchains/termux_android_aarch64_capacity_profile.json \
+    config/toolchains/galaxy_a17_dense_artifact_package_contract.json \
     config/toolchains/termux_nsq_intercept_policy.json \
     config/toolchains/source_built_build_graph.json \
     config/toolchains/extended_repository_integration_manifest.json \
@@ -38,6 +39,7 @@ require_contracts() {
     config/nsq/semantic_build_dialect_contract.json \
     scripts/braxon_termux_calibrate.sh \
     scripts/toolchains/rebuild_full_android_language_toolchain.sh \
+    scripts/toolchains/capture_galaxy_a17_dense_artifact_package.sh \
     scripts/toolchains/promote_rust_edge_nightly_aarch64.sh \
     scripts/toolchains/resolve_braxon_repository_tool.sh \
     scripts/toolchains/write_braxon_repository_tool_dispatch.sh \
@@ -215,6 +217,12 @@ source_build() {
   BRAXON_SOURCE_BUILD_APPROVED=1 JOBS="${JOBS:-1}" "$ROOT/scripts/toolchains/rebuild_full_android_language_toolchain.sh" "$ROOT"
 }
 
+galaxy_a17_artifact_package() {
+  require_ksr_build_authorization galaxy-a17-artifact-package
+  target_preflight
+  "$ROOT/scripts/toolchains/capture_galaxy_a17_dense_artifact_package.sh" "$ROOT"
+}
+
 edge_nightly_build() {
   require_ksr_build_authorization rust-edge-nightly
   target_preflight
@@ -266,5 +274,9 @@ case "$MODE" in
     require_contracts
     edge_nightly_build
     ;;
-  *) fail "usage: $0 [status|preflight|source-edge|verify|calibrate|source-build|edge-nightly-build]" ;;
+  artifact-package)
+    require_contracts
+    galaxy_a17_artifact_package
+    ;;
+  *) fail "usage: $0 [status|preflight|source-edge|verify|calibrate|source-build|edge-nightly-build|artifact-package]" ;;
 esac

@@ -40,7 +40,7 @@
     {"id":34,"name":"Reproducibility benchmark","status":"MEASURED","evidence":["audit/run_clean_room_validation.sh","audit/clean_room_validation_result.json"],"scope":"Fresh reconstruction clone under Rust 1.96.0 passed 72 Braxon-core library tests; full-system package and all-workspace acceptance remain outside this gate."},
     {"id":35,"name":"Memory-pressure benchmark","status":"MEASURED","evidence":["crates/braxon-core/src/piston_memory.rs","crates/braxon-core/src/ghost_memory.rs"],"scope":"Bounded pressure and fail-closed aperture tests; not device telemetry."},
     {"id":36,"name":"Thermal/resource benchmark","status":"BLOCKED","evidence":[],"scope":"Requires physical Android device telemetry."},
-    {"id":37,"name":"Android 16 acceptance","status":"BLOCKED","evidence":[],"scope":"No physical non-rooted Moto G acceptance run."},
+    {"id":37,"name":"Android 16 acceptance","status":"BLOCKED","evidence":[],"scope":"No physical non-rooted Samsung Galaxy A17 acceptance run."},
     {"id":38,"name":"Guile semantic-equivalence benchmark","status":"BLOCKED","evidence":[],"scope":"Catalog/intent reconstruction is not representative semantic equivalence."},
     {"id":39,"name":"Zig semantic-equivalence benchmark","status":"BLOCKED","evidence":[],"scope":"Catalog/intent reconstruction is not representative semantic equivalence."},
     {"id":40,"name":"Companion-tool equivalence benchmark","status":"BLOCKED","evidence":["audit/expanded/FINAL_EXPANDED_AUDIT.md"],"scope":"Tool intent catalog is not a complete reference-equivalence suite."},

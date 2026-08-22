@@ -6,7 +6,7 @@
   "valid": true,
   "status": "canonicality_verified",
   "scope": {
-    "tracked_file_total": 183008,
+    "tracked_file_total": 183010,
     "excluded_prefixes": [
       "state/full_android_language_toolchain/src/",
       "vendor/",
