@@ -14,6 +14,7 @@ pub mod donor_model_readiness;
 pub mod dynamic_parameter_runtime;
 pub mod ghost_memory;
 pub mod greeting;
+pub mod gguf_semantic_flow;
 pub mod initiative_cluster_runtime;
 pub mod integrated_objective_benchmark;
 pub mod intelligent_operation;
@@ -38,6 +39,7 @@ pub mod repository_operation;
 pub mod riemann_semantic_reflexor;
 pub mod role_operation;
 pub mod seed_citadel;
+pub mod semantic_build_dialect;
 pub mod semantic_link;
 pub mod target_field;
 pub mod tokenizer_bridge;
@@ -83,6 +85,10 @@ pub use donor_model_readiness::{
 pub use dynamic_parameter_runtime::{
     execute_dynamic_parameter_pipeline, run_training_microbenchmark, DynamicPipelineReceipt,
     TrainingBenchmarkReport, TrainingBenchmarkResult, DYNAMIC_PARAMETER_RUNTIME_SCHEMA,
+};
+pub use gguf_semantic_flow::{
+    extract_gguf_semantic_flow, GgufSemanticCell, GgufSemanticFlowReport,
+    GGUF_SEMANTIC_FLOW_CAPABILITY, GGUF_SEMANTIC_FLOW_SCHEMA,
 };
 pub use ghost_memory::{
     FireDecision, FireReport, FiringLease, GhostMemoryBus, PageState, WireKind, WirePage,
@@ -161,6 +167,11 @@ pub use repository_operation::{
 pub use riemann_semantic_reflexor::{
     ReflexorSearchStep, RiemannSemanticReflexor, ZeroObservation, ZeroRegionHypothesis,
     RIEMANN_REFLEXOR_SCHEMA,
+};
+pub use semantic_build_dialect::{
+    execute_semantic_build_dialect, AutomaticToolState, BuildExecutorBoundary, BuildPathState,
+    QueuedChainReaction, SemanticBuildAction, SemanticBuildDialectReport, SemanticBuildStatus,
+    SharedBuildCell, SEMANTIC_BUILD_DIALECT_CAPABILITY, SEMANTIC_BUILD_DIALECT_SCHEMA,
 };
 pub use semantic_link::{
     SemanticLinkReceipt, SemanticLinkRequest, SemanticLinkResolution, SemanticLinkSurface,

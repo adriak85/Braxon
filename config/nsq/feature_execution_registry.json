@@ -220,6 +220,59 @@
       "canonicality": "canonical_active"
     },
     {
+      "id": "feature:gguf.semantic_flow",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/gguf_semantic_flow.rs",
+      "required_artifacts": [
+        "config/nsq/gguf_semantic_flow_contract.json",
+        "crates/braxon-core/src/gguf_semantic_flow.rs",
+        "crates/braxon-core/src/kinetic_reflexor.rs"
+      ],
+      "state_contract": "fixed_GGUF_header_to_KSR_validated_stable_virtual_addresses_to_persistent_semantic_cell_state_with_duty_cycle_binding",
+      "action_contract": "read_only_the_fixed_GGUF_header_then_commit_only_declared_environment_bound_parameter_cells_without_tensor_payload_load_or_external_runtime_delegation",
+      "answer_contract": "stable_addressed_GGUF_semantic_cells_or_exact_container_or_environment_binding_failure",
+      "on_demand": true,
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
+    },
+    {
+      "id": "feature:live_bus.refresh_benchmark",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/examples/region_fire_probe.rs",
+      "required_artifacts": [
+        "config/nsq/live_bus_refresh_benchmark_contract.json",
+        "crates/braxon-core/examples/region_fire_probe.rs",
+        "crates/braxon-core/src/ghost_memory.rs",
+        "crates/braxon-core/src/piston_memory.rs"
+      ],
+      "state_contract": "same_target_same_address_comparative_piston_refresh_and_non_piston_reconstruction_measurement",
+      "action_contract": "run_only_the_declared_first_party_probe_after_the_repository_built_rust_tool_is_proven",
+      "answer_contract": "measured_comparison_or_exact_target_toolchain_boundary_without_model_runtime_claim",
+      "on_demand": true,
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
+    },
+    {
+      "id": "feature:toolchain.semantic_build_dialect",
+      "nsq_dialect": "control",
+      "source": "crates/braxon-core/src/semantic_build_dialect.rs",
+      "required_artifacts": [
+        "config/nsq/semantic_build_dialect_contract.json",
+        "crates/braxon-core/src/semantic_build_dialect.rs",
+        "crates/braxon-core/src/kinetic_reflexor.rs",
+        "crates/braxon-core/src/nsq_native.rs",
+        "crates/braxon-core/src/parameter_citadel.rs",
+        "scripts/braxon_reconstruct.sh",
+        "scripts/toolchains/verify_public_source_archives.sh"
+      ],
+      "state_contract": "semantic_build_intent_to_parameter_citadel_to_virtual_shared_cells_to_kinetic_reflexor_functional_watermark_to_strict_physical_executor_to_artifact_proof_to_persistent_verified_tool_state_and_declared_downstream_preparation_queue_with_atomic_prior_verified_storage_state_undo",
+      "action_contract": "admit_one_declared_scope_then_prepare_or_explicitly_execute_only_the_allowlisted_android_source_build_mode_or_atomically_undo_to_a_prior_verified_storage_materialization_without_physical_execution_or_artifact_mutation",
+      "answer_contract": "persistent_semantic_build_transition_with_reflexive_verified_tool_state_and_declared_downstream_preparation_or_atomic_nonphysical_nonartifact_mutating_undo_or_exact_target_materialization_or_physical_executor_failure_evidence",
+      "on_demand": true,
+      "resident_runtime": false,
+      "canonicality": "canonical_active"
+    },
+    {
       "id": "feature:toolchain.bionic_compatibility",
       "nsq_dialect": "control",
       "source": "crates/braxon-core/src/bionic_compatibility.rs",

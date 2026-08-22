@@ -8,6 +8,7 @@ use BRAXON_core::{
 
 const REGION_BYTES: u64 = 15 * 1024 * 1024;
 const RAM_BUDGET_BYTES: u64 = REGION_BYTES;
+const REFRESH_CYCLES: usize = 32;
 
 fn fixed_region(id: &str, kind: RegionKind, index: u64) -> MemoryRegion {
     MemoryRegion {
@@ -195,6 +196,81 @@ fn ghost_probe(id: &str, kind: RegionKind, index: u64) -> Value {
     })
 }
 
+fn persistent_piston_refresh_probe(id: &str, kind: RegionKind, index: u64) -> Value {
+    let Some(wire) = wire_kind(kind) else {
+        return json!({
+            "status": "BLOCKED",
+            "path": "persistent_piston_refresh",
+            "reason": "region kind has no GhostMemoryBus wire representation",
+        });
+    };
+    let started = Instant::now();
+    let address = VIRTUAL_EXTENSION_BASE + 0x80_0000 + index * (REGION_BYTES * 2);
+    let page_id = format!("{id}.page-0");
+    let mut bus = GhostMemoryBus::new(FIRING_WINDOW_BYTES);
+    if let Err(reason) = bus.map_wire_region(id, wire, address, REGION_BYTES, "benchmark-refresh") {
+        return json!({"status": "BLOCKED", "path": "persistent_piston_refresh", "reason": reason});
+    }
+    let mut refreshes = 0usize;
+    for cycle in 0..REFRESH_CYCLES {
+        let fire = bus.fire(&format!("refresh-{cycle}"), &page_id);
+        let Some(lease) = fire.lease.clone() else { break; };
+        if fire.decision != FireDecision::Accepted
+            || bus.advance(&lease.lease_id, BRAXON_core::ghost_memory::PistonPhase::Commit).is_err()
+            || bus.advance(&lease.lease_id, BRAXON_core::ghost_memory::PistonPhase::Release).is_err()
+        {
+            break;
+        }
+        refreshes += 1;
+    }
+    json!({
+        "status": if refreshes == REFRESH_CYCLES { "PROVEN" } else { "BLOCKED" },
+        "path": "persistent_piston_refresh",
+        "region_id": id,
+        "stable_virtual_address": format!("0x{address:016x}"),
+        "stable_page_id": page_id,
+        "refresh_cycles_requested": REFRESH_CYCLES,
+        "refresh_cycles_completed": refreshes,
+        "bus_reconstructed_between_cycles": false,
+        "container_reloaded_between_cycles": false,
+        "active_cpu_bytes_after_refresh": bus.active_cpu_bytes(),
+        "wire_bytes": bus.wire_bytes(),
+        "elapsed_ms": started.elapsed().as_secs_f64() * 1000.0,
+    })
+}
+
+fn non_piston_bus_reconstruction_baseline(id: &str, kind: RegionKind, index: u64) -> Value {
+    let Some(wire) = wire_kind(kind) else {
+        return json!({
+            "status": "BLOCKED",
+            "path": "non_piston_bus_reconstruction",
+            "reason": "region kind has no GhostMemoryBus wire representation",
+        });
+    };
+    let started = Instant::now();
+    let address = VIRTUAL_EXTENSION_BASE + 0x80_0000 + index * (REGION_BYTES * 2);
+    let mut reconstructions = 0usize;
+    for _ in 0..REFRESH_CYCLES {
+        let mut bus = GhostMemoryBus::new(FIRING_WINDOW_BYTES);
+        if bus.map_wire_region(id, wire, address, REGION_BYTES, "benchmark-refresh-baseline").is_err() {
+            break;
+        }
+        reconstructions += 1;
+    }
+    json!({
+        "status": if reconstructions == REFRESH_CYCLES { "MEASURED_BASELINE" } else { "BLOCKED" },
+        "path": "non_piston_bus_reconstruction",
+        "region_id": id,
+        "requested_virtual_address": format!("0x{address:016x}"),
+        "refresh_cycles_requested": REFRESH_CYCLES,
+        "bus_reconstructions": reconstructions,
+        "bus_reconstructed_between_cycles": true,
+        "piston_firing": false,
+        "container_reloaded_between_cycles": false,
+        "elapsed_ms": started.elapsed().as_secs_f64() * 1000.0,
+    })
+}
+
 fn main() {
     let regions = [
         ("seed.parameters", RegionKind::Parameter),
@@ -203,6 +279,7 @@ fn main() {
         ("activation.layer0", RegionKind::Activation),
         ("tokenizer.v1", RegionKind::Tokenizer),
         ("facts.world0", RegionKind::Fact),
+        ("image.semantic-descriptor", RegionKind::Parameter),
     ];
     let results: Vec<Value> = regions
         .iter()
@@ -211,6 +288,8 @@ fn main() {
             [
                 piston_probe(id, *kind, index as u64),
                 ghost_probe(id, *kind, index as u64),
+                persistent_piston_refresh_probe(id, *kind, index as u64),
+                non_piston_bus_reconstruction_baseline(id, *kind, index as u64),
             ]
         })
         .collect();
@@ -226,6 +305,8 @@ fn main() {
             "status": if blocked == 0 { "PROVEN" } else { "PROVEN_WITH_EXPLICIT_BLOCKERS" },
             "region_bytes": REGION_BYTES,
             "firing_window_bytes": FIRING_WINDOW_BYTES,
+            "refresh_cycles": REFRESH_CYCLES,
+            "comparison": "persistent stable-address piston refresh versus non-piston bus reconstruction; report contains measured timings only and does not claim model execution",
             "proven_paths": proven,
             "blocked_paths": blocked,
             "results": results,

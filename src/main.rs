@@ -16,12 +16,15 @@ use BRAXON_core::{
     bootstrap_live_bus, braxon_context_manifest_status, braxon_wake_linked_change_report_from_env,
     closure_audit, evaluate_repository_operation, execute_bounded_tensor_inference,
     execute_canonical_parameter_citadel_cycle, execute_language_operation,
-    execute_operator_intelligence, execute_role_operation, execute_watermarked_file_operation,
-    full_wake, model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
+    execute_operator_intelligence, execute_role_operation, execute_semantic_build_dialect,
+    extract_gguf_semantic_flow,
+    execute_watermarked_file_operation, full_wake, model_execution_truth, run_native_fault_recovery, run_native_fixture_equivalence,
     tokenizer_verification, verify_bionic_compatibility, verify_contained_toolchain,
     verify_language_artifact_context, BraxonBus, CouncilTen, DonorModelReadinessReport,
-    TargetField, DONOR_MODEL_READINESS_CAPABILITY, OPERATOR_INTELLIGENCE_CAPABILITY,
-    ROLE_OPERATION_CAPABILITY, TENSOR_INFERENCE_CAPABILITY, WATERMARKED_FILE_OPERATION_CAPABILITY,
+    SemanticBuildAction, TargetField, DONOR_MODEL_READINESS_CAPABILITY,
+    GGUF_SEMANTIC_FLOW_CAPABILITY,
+    OPERATOR_INTELLIGENCE_CAPABILITY, ROLE_OPERATION_CAPABILITY, SEMANTIC_BUILD_DIALECT_CAPABILITY,
+    TENSOR_INFERENCE_CAPABILITY, WATERMARKED_FILE_OPERATION_CAPABILITY,
 };
 
 #[derive(Parser)]
@@ -81,6 +84,11 @@ enum Command {
         #[command(subcommand)]
         command: ContentCommand,
     },
+    /// Extract a declared GGUF fixed header into KSR-validated stable semantic addresses without loading tensor payloads.
+    Gguf {
+        #[command(subcommand)]
+        command: GgufCommand,
+    },
     Reflex {
         #[command(subcommand)]
         command: ReflexCommand,
@@ -121,11 +129,30 @@ enum Command {
 }
 
 #[derive(Subcommand)]
+enum GgufCommand {
+    /// Admit one repository-relative GGUF container through the KSR semantic-flow boundary.
+    Extract {
+        /// Repository-relative GGUF container path. Each declared stable-address environment binding must match before cells are committed.
+        container: String,
+    },
+}
+
+#[derive(Subcommand)]
 enum ToolchainCommand {
     /// Run the on-demand contained toolchain verification report.
     Verify,
     /// Verify the universal-tokenized Bionic compatibility overlay and target proof state.
     Bionic,
+    /// Admit one declared compilation scope through NSQ, KSR shared cells, functional watermarks, and the strict Android executor boundary.
+    BuildDialect {
+        /// Declared semantic scope, for example llvm-source-edge or llvm-aarch64-source-build.
+        scope: String,
+        /// Declared action: inspect, prepare, execute, or undo. Undo atomically restores prior verified KSR storage state without compiler execution or artifact deletion; execution remains explicit and target-bound.
+        action: String,
+        /// Authorize replacement only of a detected incomplete LLVM source materialization during llvm-source-edge execution.
+        #[arg(long)]
+        replace_incomplete_llvm: bool,
+    },
 }
 
 #[derive(Subcommand)]
@@ -310,6 +337,7 @@ fn main() {
             execute,
         } => print_watermarked_file_operation(intent, source, execute),
         Command::Content { command } => print_content(command),
+        Command::Gguf { command } => print_gguf(command),
         Command::Reflex { command } => print_reflex(command),
         Command::Handover { command } => print_handover(command),
         Command::Bus { thought } => print_bus(thought),
@@ -1088,6 +1116,37 @@ fn print_content(command: ContentCommand) {
     }
 }
 
+fn print_gguf(command: GgufCommand) {
+    let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
+    let result = match command {
+        GgufCommand::Extract { container } => {
+            reflex_route_declared_feature_operation(&root, GGUF_SEMANTIC_FLOW_CAPABILITY)
+                .and_then(|route| {
+                    if !route.routed || route.capability.id != GGUF_SEMANTIC_FLOW_CAPABILITY {
+                        return Err("Kinetic Semantic Reflexor did not select the canonical GGUF semantic-flow capability".into());
+                    }
+                    extract_gguf_semantic_flow(&root, container).and_then(|operation| {
+                        serde_json::to_value(serde_json::json!({
+                            "schema": "braxon.gguf.semantic_flow_front_door.v1",
+                            "reflexor_route": route,
+                            "operation": operation,
+                            "tensor_payload_runtime_authority": false
+                        }))
+                        .map_err(|error| error.to_string())
+                    })
+                })
+        }
+    };
+    match result {
+        Ok(report) => print_json(&report),
+        Err(error) => print_json(&serde_json::json!({
+            "schema": "braxon.gguf.semantic.flow_failure.v1",
+            "status": "fail_closed",
+            "error": error
+        })),
+    }
+}
+
 fn print_toolchain(command: ToolchainCommand) {
     let root = std::env::current_dir().unwrap_or_else(|_| ".".into());
     let result = match command {
@@ -1117,6 +1176,11 @@ fn print_toolchain(command: ToolchainCommand) {
                     })
                 })
         }
+        ToolchainCommand::BuildDialect {
+            scope,
+            action,
+            replace_incomplete_llvm,
+        } => print_semantic_build_dialect(&root, scope, action, replace_incomplete_llvm),
     };
     match result {
         Ok(report) => print_json(&report),
@@ -1126,6 +1190,40 @@ fn print_toolchain(command: ToolchainCommand) {
             "exact_connection_guidance": error,
         })),
     }
+}
+
+fn print_semantic_build_dialect(
+    root: &std::path::Path,
+    scope: String,
+    action: String,
+    replace_incomplete_llvm: bool,
+) -> Result<serde_json::Value, String> {
+    let action = SemanticBuildAction::parse(&action)?;
+    let route = reflex_route_declared_feature_operation(root, SEMANTIC_BUILD_DIALECT_CAPABILITY)?;
+    if !route.routed || route.capability.id != SEMANTIC_BUILD_DIALECT_CAPABILITY {
+        return Err("Kinetic Semantic Reflexor did not select the semantic build dialect capability".into());
+    }
+    let operation = execute_semantic_build_dialect(
+        root,
+        scope.trim(),
+        action,
+        replace_incomplete_llvm,
+    )?;
+    if !operation.scope_is_bounded
+        || !operation.state_watermark_committed
+        || !operation.parameter_invariants_passed
+        || !operation.no_resident_runtime
+        || operation.hidden_download_allowed
+    {
+        return Err("semantic build operation violated KSR bounded-execution invariants".into());
+    }
+    serde_json::to_value(serde_json::json!({
+        "schema": "braxon.toolchain.semantic_build_dialect_front_door.v1",
+        "reflexor_route": route,
+        "operation": operation,
+        "physical_executor_is_not_architecture_authority": true,
+    }))
+    .map_err(|error| error.to_string())
 }
 
 fn print_reflex(command: ReflexCommand) {

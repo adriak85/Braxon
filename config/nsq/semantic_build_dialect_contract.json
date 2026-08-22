@@ -1,0 +1,293 @@
+{
+  "schema": "braxon.nsq.semantic_build_dialect_contract.v1",
+  "authority": "NSQ_KINETIC_SEMANTIC_REFLEXOR",
+  "capability": "feature:toolchain.semantic_build_dialect",
+  "target_environment": "aarch64-linux-android",
+  "nsq_dialect": "control",
+  "semantic_subdialect": "kinetic_build",
+  "execution_model": "semantic_intent_to_tokenizer_to_parameter_citadel_to_virtual_shared_cells_to_kinetic_reflexor_to_functional_watermark_to_allowlisted_physical_executor_to_artifact_proof",
+  "watermark_is_functional": true,
+  "resident_runtime": false,
+  "hidden_download_allowed": false,
+  "reflexor_job_bound": false,
+  "storage_chain_policy": {
+    "storage_root": "state/full_android_language_toolchain/ksr_semantic_chain",
+    "persist_declared_transition_state": true,
+    "chain_reaction_mode": "watermark_governed_declared_dependency_propagation",
+    "auto_execute_physical_compiler": false,
+    "cycle_policy": "reject_contract_cycles_and_reject_stale_or_conflicting_predecessor_watermarks",
+    "propagation_requires": ["committed_ksr_state_watermark", "declared_scope_dependency", "declared_output_or_preparation_state"],
+    "downstream_effect": "persist_queued_semantic_preparation_only_until_a_separate_explicit_execute_action",
+    "automatic_tool_state_population": "persist_verified_repository_built_tool_state_from_declared_output_hashes_only",
+    "automatic_runtime_activation": false,
+    "undo_available_for_every_declared_scope": true,
+    "undo_mode": "atomically_restore_prior_verified_storage_materialization_and_record_new_reversal_watermark",
+    "undo_may_execute_physical_compiler": false,
+    "undo_may_delete_or_rewrite_artifacts": false
+  },
+  "shared_cell_policy": {
+    "address_namespace": "council/0/build",
+    "piston_lifecycle": ["acquire", "hold", "commit", "release"],
+    "same_address_concurrent_write": "queued",
+    "source_mutation": "forbidden_except_declared_repository_source_materialization",
+    "artifact_mutation": "allowed_only_through_declared_executor"
+  },
+  "executor_policy": {
+    "dispatcher": "scripts/braxon_reconstruct.sh",
+    "allowlisted_modes": ["source-edge", "source-build", "edge-nightly-build"],
+    "requires_explicit_execute": true,
+    "requires_aarch64_android_target": true,
+    "preserved_environment": ["HOME", "PATH", "PREFIX", "SHELL", "TMPDIR", "TERM", "LANG", "LC_ALL"],
+    "physical_default_jobs": 1,
+    "controlled_environment": {"JOBS": "1"},
+    "allows_arbitrary_arguments": false,
+    "allows_hidden_download": false,
+    "failure_mode": "fail_closed_with_exact_target_or_materialization_guidance"
+  },
+  "automatic_tool_population": [
+    {
+      "scope": "llvm-aarch64-source-build",
+      "output_root": "state/full_android_language_toolchain/install/llvm/bin",
+      "tool_names": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-readelf", "llvm-dwarfdump", "llvm-jitlink", "llvm-mc", "llvm-bolt", "perf2bolt"],
+      "state": "verified_repository_built_pending_target_proof_completion"
+    },
+    {
+      "scope": "rust-edge-nightly",
+      "output_root": "state/full_android_language_toolchain/install/rust-edge/bin",
+      "tool_names": ["rustc", "cargo"],
+      "state": "verified_repository_built_pending_target_proof_completion"
+    }
+  ],
+  "chain_reactions": [
+    {
+      "upstream_scope": "llvm-source-edge",
+      "downstream_scope": "llvm-aarch64-source-build",
+      "condition": "prepared_or_executed",
+      "effect": "queue_prepare"
+    },
+    {
+      "upstream_scope": "llvm-aarch64-source-build",
+      "downstream_scope": "rust-edge-nightly",
+      "condition": "executed_with_declared_outputs_watermarked",
+      "effect": "queue_prepare"
+    },
+    {
+      "upstream_scope": "llvm-aarch64-source-build",
+      "downstream_scope": "optimization-proof",
+      "condition": "executed_with_declared_outputs_watermarked",
+      "effect": "queue_prepare"
+    },
+    {
+      "upstream_scope": "rust-edge-nightly",
+      "downstream_scope": "optimization-proof",
+      "condition": "executed_with_declared_outputs_watermarked",
+      "effect": "queue_prepare"
+    }
+  ],
+  "llvm_native_features": [
+    {
+      "id": "aarch64_aot_clang_lld",
+      "disposition": "selected_by_llvm-aarch64-source-build",
+      "components": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-readelf"],
+      "proof": ["AArch64_compile", "link", "ELF_DWARF_inspection", "target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "compiler_rt_and_cxx_runtimes",
+      "disposition": "selected_by_llvm-aarch64-source-build",
+      "components": ["compiler-rt", "libunwind", "libcxx", "libcxxabi"],
+      "proof": ["AArch64_link", "Android_Bionic_dependency", "target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "dwarf_elf_debug_proof",
+      "disposition": "selected_by_llvm-aarch64-source-build",
+      "components": ["DWARF", "llvm-dwarfdump", "llvm-readelf", "unstripped_debug_copy"],
+      "proof": ["AArch64_ELF", "DWARF_section_validation", "debug_copy_hash", "post_strip_release_hash", "artifact_watermark"]
+    },
+    {
+      "id": "mc_hammer_aarch64_conformance",
+      "disposition": "TARGET_CONFORMANCE_PROOF_PENDING",
+      "components": ["LLVM_MC", "llvm-mc", "TableGen", "AArch64_assembler", "AArch64_disassembler", "exhaustive_encoding_conformance_suite"],
+      "proof": ["contained_test_harness", "AArch64_encode_decode_coverage", "assembler_round_trip", "target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "orc_jit",
+      "disposition": "built_by_llvm-aarch64-source-build_target_proof_pending",
+      "components": ["LLVM_ORC_JIT", "llvm-jitlink"],
+      "proof": ["Android_executable_memory_policy", "AArch64_jitlink_probe", "W_X_memory_safety", "target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "bolt_post_link_optimization",
+      "disposition": "built_by_llvm-aarch64-source-build_target_profile_and_platform_proof_pending",
+      "components": ["BOLT", "llvm-bolt", "perf2bolt", "AArch64_ELF", "DWARF"],
+      "proof": ["contained_BOLT_source_or_project_proof", "unstripped_symbol_table", "emitted_relocations", "representative_profile", "DWARF_preservation", "post_BOLT_target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "thin_lto",
+      "disposition": "TARGET_STABILITY_PROOF_PENDING",
+      "components": ["ThinLTO", "ld.lld"],
+      "proof": ["bounded_memory_profile", "deterministic_link_output", "ELF_DWARF_inspection", "target_execution", "artifact_watermark"]
+    },
+    {
+      "id": "profile_guided_optimization",
+      "disposition": "TARGET_WORKLOAD_PROOF_PENDING",
+      "components": ["instrumentation_profile", "llvm-profdata", "profile_use"],
+      "proof": ["representative_workload", "profile_integrity", "benchmark_delta", "target_execution", "artifact_watermark"]
+    }
+  ],
+  "semantic_boundary": {
+    "llvm_authority": "compiler_toolchain_and_aarch64_code_generation",
+    "javascript_and_java_runtime_semantics": "remain_upstream_implementation_semantics_until_their_pinned_source_build_and_target_proof_complete",
+    "jni": "narrow_java_native_abi_bridge_only",
+    "activation_rule": "no_scope_or_channel_activates_without_declared_target_execution_proof"
+  },
+  "scopes": [
+    {
+      "id": "llvm-source-edge",
+      "kind": "source_materialization",
+      "languages": ["llvm_ir", "c", "cpp", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "execute", "undo"],
+      "executor_mode": "source-edge",
+      "target_state": "SOURCE_EDGE_REQUIRED",
+      "required_paths": [
+        "state/full_android_language_toolchain/source_archives/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.chunks",
+        "scripts/toolchains/verify_public_source_archives.sh",
+        "scripts/braxon_reconstruct.sh"
+      ],
+      "proof_requirements": ["contained_archive_sha256", "required_llvm_source_paths", "source_materialization_receipt"],
+      "output_paths": [
+        "state/full_android_language_toolchain/src/llvm-project/llvm/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/Demangle/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/Support/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/TableGen/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/bolt/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/tools/llvm-jitlink/CMakeLists.txt",
+        "state/full_android_language_toolchain/source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt"
+      ],
+      "optimization_profile": "not_applicable_before_source_materialization"
+    },
+    {
+      "id": "llvm-aarch64-source-build",
+      "kind": "compiler_materialization",
+      "languages": ["llvm_ir", "c", "cpp", "aarch64_asm", "python", "rust"],
+      "allowed_actions": ["inspect", "prepare", "execute", "undo"],
+      "executor_mode": "source-build",
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": [
+        "state/full_android_language_toolchain/src/llvm-project/llvm/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/Demangle/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/Support/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/lib/TableGen/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/clang/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/lld/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/bolt/CMakeLists.txt",
+        "state/full_android_language_toolchain/src/llvm-project/llvm/tools/llvm-jitlink/CMakeLists.txt",
+        "state/full_android_language_toolchain/source_receipts/llvm-project-eaab4d9841b9a8a12783d927b2df2291c1c79269.txt",
+        "state/full_android_language_toolchain/src/rust/x.py",
+        "state/full_android_language_toolchain/src/rust/compiler/rustc/Cargo.toml",
+        "state/full_android_language_toolchain/src/cpython/configure.ac",
+        "state/full_android_language_toolchain/src/cpython/Python/ceval.c",
+        "scripts/toolchains/rebuild_full_android_language_toolchain.sh"
+      ],
+      "proof_requirements": ["AArch64_compile", "link", "ELF_DWARF_inspection", "DWARF_section_validation", "debug_copy_hash", "post_strip_release_hash", "target_execution", "artifact_watermark"],
+      "output_paths": [
+        "state/full_android_language_toolchain/install/llvm/bin/clang",
+        "state/full_android_language_toolchain/install/llvm/bin/clang++",
+        "state/full_android_language_toolchain/install/llvm/bin/ld.lld",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-ar",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-readelf",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-dwarfdump",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-jitlink",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-mc",
+        "state/full_android_language_toolchain/install/llvm/bin/llvm-bolt",
+        "state/full_android_language_toolchain/install/llvm/bin/perf2bolt"
+      ],
+      "optimization_profile": "release_lto_where_target_stable_codegen_unit_reduction_where_target_stable_debug_copy_before_strip"
+    },
+    {
+      "id": "rust-edge-nightly",
+      "kind": "edge_compiler_promotion",
+      "languages": ["rust", "llvm_ir", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "execute", "undo"],
+      "executor_mode": "edge-nightly-build",
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": [
+        "state/full_android_language_toolchain/source_archives/rust-f7d782a3be46d6bb4b9792fe69a61db389ba1769.tar.gz",
+        "scripts/toolchains/promote_rust_edge_nightly_aarch64.sh",
+        "scripts/braxon_reconstruct.sh"
+      ],
+      "proof_requirements": ["preserved_Rust_1.97.1_bootstrap", "stage_equivalence", "AArch64_ELF", "Bionic_dependency", "two_target_execution_probes", "artifact_watermark"],
+      "output_paths": [
+        "state/full_android_language_toolchain/install/rust-edge/bin/rustc",
+        "state/full_android_language_toolchain/install/rust-edge/bin/cargo",
+        "state/full_android_language_toolchain/install/braxon_repository_tool_dispatch.json"
+      ],
+      "optimization_profile": "release_lto_where_target_stable_codegen_unit_reduction_where_target_stable_debug_copy_before_strip"
+    },
+    {
+      "id": "quickjs",
+      "kind": "runtime_candidate",
+      "languages": ["javascript", "c", "llvm_ir", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": ["state/full_android_language_toolchain/source_archives/quickjs-2026-06-04.tar.xz"],
+      "proof_requirements": ["pinned_source", "license_boundary", "AArch64_execution", "semantic_extraction", "artifact_watermark"],
+      "optimization_profile": "not_activated"
+    },
+    {
+      "id": "nodejs",
+      "kind": "runtime_candidate",
+      "languages": ["javascript", "c", "cpp", "llvm_ir", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": ["state/full_android_language_toolchain/source_archives/node-v26.7.0.tar.gz.chunks"],
+      "proof_requirements": ["pinned_source", "license_boundary", "AArch64_execution", "semantic_extraction", "artifact_watermark"],
+      "optimization_profile": "not_activated"
+    },
+    {
+      "id": "openjdk",
+      "kind": "runtime_candidate",
+      "languages": ["java", "jni", "c", "cpp", "llvm_ir", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": ["state/full_android_language_toolchain/source_archives/openjdk-jdk26u-d55edf1c.tar.gz.chunks"],
+      "proof_requirements": ["pinned_source", "GPLv2_classpath_exception_boundary", "AArch64_execution", "semantic_extraction", "artifact_watermark"],
+      "optimization_profile": "not_activated"
+    },
+    {
+      "id": "jni-bridge",
+      "kind": "abi_bridge_candidate",
+      "languages": ["jni", "java", "c", "cpp", "aarch64_asm"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": ["config/nsq/js_java_jni_llvm_candidate_contract.json"],
+      "proof_requirements": ["Java_declaration_or_header", "first_party_native_shared_object", "JNI_symbol_or_JNI_OnLoad", "System_loadLibrary_link", "both_target_execution_directions", "NSQ_stamp"],
+      "optimization_profile": "not_activated"
+    },
+    {
+      "id": "aarch64-assembly",
+      "kind": "native_semantic_surface",
+      "languages": ["aarch64_asm", "llvm_ir", "c", "cpp", "rust"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "SEMANTIC_SURFACE_READY_TARGET_PROOF_PENDING",
+      "required_paths": ["config/nsq/language_functional_ingestion_matrix.json"],
+      "proof_requirements": ["assembly_semantic_parse", "LLVM_lowering_contract", "AArch64_ELF", "target_execution", "artifact_watermark"],
+      "optimization_profile": "selected_per_declared_target_build_scope"
+    },
+    {
+      "id": "optimization-proof",
+      "kind": "proof_surface",
+      "languages": ["llvm_ir", "aarch64_asm", "rust", "c", "cpp"],
+      "allowed_actions": ["inspect", "prepare", "undo"],
+      "executor_mode": null,
+      "target_state": "TARGET_BUILD_PENDING",
+      "required_paths": ["config/toolchains/source_built_build_graph.json"],
+      "proof_requirements": ["deterministic_hash_manifest", "debug_copy_before_strip", "target_ELF_DWARF", "target_execution", "artifact_watermark"],
+      "optimization_profile": "release_lto_where_target_stable_codegen_unit_reduction_where_target_stable_debug_copy_before_strip"
+    }
+  ]
+}

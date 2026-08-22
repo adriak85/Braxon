@@ -82,7 +82,7 @@
       "license": "Apache-2.0 OR MIT",
       "materialization_status": "repository_contained_source_archive_unextracted_not_activated",
       "bootstrap_dependency": "bootstrap_termux_1_97_1",
-      "native_promotion_command": "scripts/braxon_reconstruct.sh edge-nightly-build",
+      "native_promotion_command": "Braxon toolchain build-dialect rust-edge-nightly execute",
       "source_relationship": "this edge candidate has a separately pinned matching public source archive with a SHA-256 and Apache-2.0/MIT license record; it is built directly from the preserved 1.97.1 bootstrap using the verified source-built LLVM and Bionic/GNU compatibility overlay, without rustup or a downloaded compiler",
       "required_evidence": ["1.97.1 bootstrap preserved", "stage1 release/commit/host", "stage2 release/commit/host", "AArch64 ELF machine", "Android Bionic libc dependency", "Bionic/GNU overlay probe", "stage1 and stage2 target execution", "stage-equivalent output"],
       "selection_policy": "never selected by default before all required native target evidence is present"

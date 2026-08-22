@@ -8,6 +8,18 @@ MIN_BUILD_FREE_KIB="${BRAXON_MIN_BUILD_FREE_KIB:-33554432}"
 fail() { printf '%s\n' "braxon-reconstruct: $*" >&2; exit 1; }
 notice() { printf '%s\n' "braxon-reconstruct: $*"; }
 
+require_ksr_build_authorization() {
+  expected_scope="$1"
+  [ "${BRAXON_KSR_SEMANTIC_BUILD_CAPABILITY:-}" = "feature:toolchain.semantic_build_dialect" ] || fail "physical build execution is KSR-owned; invoke Braxon toolchain build-dialect $expected_scope execute"
+  [ "${BRAXON_KSR_SEMANTIC_BUILD_SCOPE:-}" = "$expected_scope" ] || fail "KSR build scope mismatch; expected $expected_scope"
+  [ "${BRAXON_KSR_SEMANTIC_BUILD_ACTION:-}" = "execute" ] || fail "physical build execution requires an explicit KSR execute transition"
+  watermark="${BRAXON_KSR_SEMANTIC_BUILD_WATERMARK:-}"
+  case "$watermark" in
+    ????????*) ;;
+    *) fail "physical build execution requires a nonempty functional KSR watermark" ;;
+  esac
+}
+
 require_contracts() {
   for path in \
     Cargo.lock \
@@ -23,6 +35,7 @@ require_contracts() {
     config/toolchains/gap_report.json \
     config/nsq/complete_semantic_extraction_contract.json \
     config/nsq/semantic_corpus_manifest.json \
+    config/nsq/semantic_build_dialect_contract.json \
     scripts/braxon_termux_calibrate.sh \
     scripts/toolchains/rebuild_full_android_language_toolchain.sh \
     scripts/toolchains/promote_rust_edge_nightly_aarch64.sh \
@@ -79,7 +92,9 @@ llvm_source_complete() {
     llvm/lib/Support/CMakeLists.txt \
     llvm/lib/TableGen/CMakeLists.txt \
     clang/CMakeLists.txt \
-    lld/CMakeLists.txt; do
+    lld/CMakeLists.txt \
+    bolt/CMakeLists.txt \
+    llvm/tools/llvm-jitlink/CMakeLists.txt; do
     [ -f "$llvm_check_destination/$llvm_required" ] || return 1
   done
   return 0
@@ -154,6 +169,7 @@ materialize_archive_source() {
 }
 
 source_edge() {
+  require_ksr_build_authorization llvm-source-edge
   cd "$ROOT"
   "$ROOT/scripts/toolchains/verify_public_source_archives.sh" "$ROOT"
   materialize_chunked_llvm_source \
@@ -188,6 +204,7 @@ calibrate() {
 }
 
 source_build() {
+  require_ksr_build_authorization llvm-aarch64-source-build
   target_preflight
   capacity_preflight
   for path in state/full_android_language_toolchain/src/rust state/full_android_language_toolchain/src/cpython; do
@@ -199,6 +216,7 @@ source_build() {
 }
 
 edge_nightly_build() {
+  require_ksr_build_authorization rust-edge-nightly
   target_preflight
   capacity_preflight
   cd "$ROOT"

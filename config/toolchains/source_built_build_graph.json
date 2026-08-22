@@ -39,6 +39,14 @@
       "proof": "feature:watermark.file_operation report; a native artifact is promoted only after explicit AArch64 compiler success and artifact re-watermark"
     },
     {
+      "id": "ksr_semantic_build_dialect",
+      "depends_on": ["semantic_corpus_and_nsq_intercept", "functional_watermark_file_operation", "target_and_capacity_preflight"],
+      "operation": "Braxon toolchain build-dialect <declared-scope> prepare then explicit execute on the native target",
+      "outputs": ["tokenized semantic build intent", "Parameter-Citadel invariants", "virtual shared-cell acquire/hold/commit/release", "functional KSR state watermark", "immutable materialization snapshot with prior-state undo", "allowlisted physical executor selection", "post-execution artifact watermark"],
+      "proof": "feature:toolchain.semantic_build_dialect report; undo restores only prior verified storage state without compiler execution or artifact mutation; non-target hosts return an exact target boundary and physical dispatcher rejects direct build invocation",
+      "blocked_until": ["declared scope inputs are present", "native Android AArch64 execution for execute action", "all declared outputs and target proofs after physical compilation"]
+    },
+    {
       "id": "llvm_local_source_identity",
       "depends_on": ["clone_and_contract_check"],
       "operation": "verify audit/toolchain/llvm_project_tree_sha256.txt against state/full_android_language_toolchain/src/llvm-project",
@@ -47,8 +55,8 @@
     },
     {
       "id": "rust_and_cpython_pinned_source_edges",
-      "depends_on": ["target_and_capacity_preflight"],
-      "operation": "BRAXON_ALLOW_SOURCE_EDGE_NETWORK=1 scripts/braxon_reconstruct.sh source-edge",
+      "depends_on": ["target_and_capacity_preflight", "ksr_semantic_build_dialect"],
+      "operation": "Braxon toolchain build-dialect llvm-source-edge execute",
       "outputs": ["Rust f964de49 source", "CPython 49918f5b source"],
       "proof": "submodule revision and source manifest verification",
       "blocked_until": ["explicit source-edge consent", "available storage", "upstream source access"]
@@ -62,22 +70,22 @@
     },
     {
       "id": "cpython_source_build",
-      "depends_on": ["rust_and_cpython_pinned_source_edges", "termux_stage0_bootstrap", "functional_watermark_file_operation"],
+      "depends_on": ["rust_and_cpython_pinned_source_edges", "termux_stage0_bootstrap", "functional_watermark_file_operation", "ksr_semantic_build_dialect"],
       "operation": "approved source build script CPython stage",
       "outputs": ["target CPython", "development headers", "native extension build interface"],
       "proof": "target Python version and extension probe"
     },
     {
       "id": "llvm_clang_lld_source_build",
-      "depends_on": ["llvm_local_source_identity", "target_and_capacity_preflight", "functional_watermark_file_operation"],
-      "operation": "approved CMake/Ninja source build with AArch64 Android default target and compiler-rt/libunwind/libc++/libc++abi",
-      "outputs": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-ranlib", "llvm-nm", "llvm-objdump", "llvm-readelf", "llvm-strip"],
-      "proof": "AArch64 compile, link, ELF/DWARF inspection, and target execution receipt"
+      "depends_on": ["llvm_local_source_identity", "target_and_capacity_preflight", "functional_watermark_file_operation", "ksr_semantic_build_dialect"],
+      "operation": "Braxon toolchain build-dialect llvm-aarch64-source-build execute selects the approved CMake/Ninja AArch64 Android source build with compiler-rt/libunwind/libc++/libc++abi",
+      "outputs": ["clang", "clang++", "ld.lld", "llvm-ar", "llvm-ranlib", "llvm-nm", "llvm-objdump", "llvm-readelf", "llvm-strip", "llvm-dwarfdump", "llvm-jitlink", "llvm-mc", "llvm-bolt", "perf2bolt"],
+      "proof": "AArch64 compile, link, ELF/DWARF inspection with retained debug copies, ORC-tool presence, BOLT-tool presence, and target execution receipt"
     },
     {
       "id": "bionic_compatibility_overlay",
-      "depends_on": ["llvm_clang_lld_source_build"],
-      "operation": "scripts/toolchains/unified_android_libc_contract_overlay.sh",
+      "depends_on": ["llvm_clang_lld_source_build", "ksr_semantic_build_dialect"],
+      "operation": "the KSR-authorized rust-edge-nightly transaction invokes the declared Bionic compatibility overlay as a bounded physical substage",
       "outputs": ["staged headers", "static overlay", "shared overlay", "exported symbol and target probe receipts"],
       "proof": "config/nsq/bionic_gnu_compatibility_matrix.json and overlay symbol proof"
     },
@@ -92,8 +100,8 @@
     },
     {
       "id": "edge_nightly_1_100_0_promotion",
-      "depends_on": ["termux_stage0_bootstrap", "cpython_source_build", "llvm_clang_lld_source_build", "bionic_compatibility_overlay"],
-      "operation": "scripts/braxon_reconstruct.sh edge-nightly-build uses the repository-contained Rust f7d782a3b archive, preserved Rust 1.97.1 bootstrap, source-built LLVM, and target-proved Bionic/GNU overlay",
+      "depends_on": ["termux_stage0_bootstrap", "cpython_source_build", "llvm_clang_lld_source_build", "bionic_compatibility_overlay", "ksr_semantic_build_dialect"],
+      "operation": "Braxon toolchain build-dialect rust-edge-nightly execute uses the repository-contained Rust f7d782a3b archive, preserved Rust 1.97.1 bootstrap, source-built LLVM, and target-proved Bionic/GNU overlay",
       "outputs": ["stage1 edge rustc/cargo/rustfmt/clippy", "stage2 edge rustc/cargo/rustfmt/clippy", "verified rust-edge-active selection only after proof"],
       "proof": "archive checksum and provenance; preserved bootstrap identity; stage1/stage2 release commit host; AArch64 ELF machine; Android Bionic libc dependency; Bionic/GNU overlay proof; two target execution probes; byte-identical stage output",
       "blocked_until": ["capacity preflight succeeds on the actual executable Android path", "source-built CPython and LLVM exist", "Bionic/GNU overlay target proof succeeds", "all edge stage evidence succeeds"]

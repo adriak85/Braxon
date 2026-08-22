@@ -1,0 +1,29 @@
+{
+  "schema": "braxon.nsq.live_bus_refresh_benchmark_contract.v1",
+  "authority": "NSQ_KINETIC_SEMANTIC_REFLEXOR",
+  "capability": "feature:live_bus.refresh_benchmark",
+  "owner": "Michael David Norris",
+  "source": "crates/braxon-core/examples/region_fire_probe.rs",
+  "front_door": "cargo run --locked --offline -p Braxon-core --example region_fire_probe",
+  "comparative_modes": [
+    {
+      "id": "stable_address_piston_refresh",
+      "piston_firing": true,
+      "stable_virtual_addresses": true,
+      "bus_reconstructed_between_cycles": false,
+      "container_reloaded_between_cycles": false
+    },
+    {
+      "id": "non_piston_bus_reconstruction",
+      "piston_firing": false,
+      "stable_virtual_addresses": true,
+      "bus_reconstructed_between_cycles": true,
+      "container_reloaded_between_cycles": false
+    }
+  ],
+  "semantic_descriptors": ["seed.parameters", "tokenizer.v1", "facts.world0", "image.semantic-descriptor"],
+  "metrics": ["elapsed_ms", "refresh_cycles_completed", "bus_reconstructions", "active_cpu_bytes_after_refresh", "wire_bytes", "virtual_address_continuity"],
+  "measurement_policy": "report_only_observed_values_from_the_same_target_and_same_refresh_cycle_count_no_synthetic_speedup_claim",
+  "truth_boundary": "The probe measures first-party virtual-wire and piston bookkeeping. It does not measure or claim external model-weight execution, image-model execution, or GGUF payload execution.",
+  "target_state": "TARGET_MEASUREMENT_PENDING"
+}

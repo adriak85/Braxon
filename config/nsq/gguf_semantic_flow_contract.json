@@ -1,0 +1,48 @@
+{
+  "schema": "braxon.nsq.gguf_semantic_flow_contract.v1",
+  "authority": "NSQ_KINETIC_SEMANTIC_REFLEXOR",
+  "capability": "feature:gguf.semantic_flow",
+  "owner": "Michael David Norris",
+  "nsq_dialect": "control",
+  "semantic_subdialect": "gguf_semantic_flow",
+  "execution_model": "declared_container_semantic_extraction_to_tokenizer_to_kinetic_reflexor_watermark_to_persistent_stable_address_live_bus_parameter_cells",
+  "external_gguf_runtime_authority": false,
+  "tensor_payload_loaded": false,
+  "parameter_cells_persistently_live": true,
+  "container_reloaded_during_piston_refresh": false,
+  "piston_refresh_policy": {
+    "address_namespace": "council/0/gguf",
+    "addresses_are_stable_across_refresh": true,
+    "lifecycle": ["acquire", "hold", "commit", "piston_refresh", "release_only_on_explicit_replacement_or_undo"],
+    "refresh_consumers": ["toolchain.semantic_build_dialect", "intelligence_engine"],
+    "same_address_concurrent_write": "queued_and_watermark_ordered",
+    "wear_avoidance": "reuse_existing_parameter_cell_addresses_and_refresh_only_changed_semantic_cells",
+    "duty_cycle": "address_stable_round_robin_piston_refresh_with_changed_cell_priority",
+    "environment_binding": {
+      "required": true,
+      "authority": "KSR_validated_allowlist_only",
+      "binding_prefix": "BRAXON_KSR_ADDR_",
+      "expected_binding": "declared_virtual_address",
+      "reject_unlisted_environment_variables": true,
+      "reject_binding_owner_or_watermark_mismatch": true
+    }
+  },
+  "network_allowed": false,
+  "allowed_container_magic": "GGUF",
+  "supported_versions": [1, 2, 3],
+  "maximum_header_bytes": 24,
+  "storage_root": "state/full_android_language_toolchain/ksr_semantic_chain/gguf",
+  "consumers": ["toolchain.semantic_build_dialect", "intelligence_engine"],
+  "semantic_cells": ["container_identity", "format_version", "tensor_count", "metadata_count", "source_provenance", "compatibility_boundary"],
+  "stable_address_bindings": [
+    {"cell": "container_identity", "virtual_address": "council/0/gguf/container_identity", "environment_variable": "BRAXON_KSR_ADDR_GGUF_CONTAINER_IDENTITY", "duty_cycle_slot": 0},
+    {"cell": "format_version", "virtual_address": "council/0/gguf/format_version", "environment_variable": "BRAXON_KSR_ADDR_GGUF_FORMAT_VERSION", "duty_cycle_slot": 1},
+    {"cell": "tensor_count", "virtual_address": "council/0/gguf/tensor_count", "environment_variable": "BRAXON_KSR_ADDR_GGUF_TENSOR_COUNT", "duty_cycle_slot": 2},
+    {"cell": "metadata_count", "virtual_address": "council/0/gguf/metadata_count", "environment_variable": "BRAXON_KSR_ADDR_GGUF_METADATA_COUNT", "duty_cycle_slot": 3},
+    {"cell": "source_provenance", "virtual_address": "council/0/gguf/source_provenance", "environment_variable": "BRAXON_KSR_ADDR_GGUF_SOURCE_PROVENANCE", "duty_cycle_slot": 4},
+    {"cell": "compatibility_boundary", "virtual_address": "council/0/gguf/compatibility_boundary", "environment_variable": "BRAXON_KSR_ADDR_GGUF_COMPATIBILITY_BOUNDARY", "duty_cycle_slot": 5}
+  ],
+  "undo_policy": "active_stable_address_parameter_cell_pointer_may_revert_to_prior_verified_watermark_without_container_rewrite_payload_load_or_address_churn",
+  "truth_boundary": "GGUF is a source container ingress format only. This operation never loads tensor payloads, delegates reasoning to GGUF/ggml/llama.cpp, or claims model execution.",
+  "failure_closed": ["non-repository-relative-path", "missing_file", "non-GGUF-magic", "unsupported-version", "header-read-failure", "path-escape", "payload-load-request", "unstable-address-refresh", "container-reload-during-piston-refresh", "unlisted-environment-binding", "environment-address-mismatch", "environment-owner-or-watermark-mismatch"]
+}

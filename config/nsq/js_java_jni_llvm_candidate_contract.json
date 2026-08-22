@@ -1,7 +1,7 @@
 {
   "schema": "braxon.nsq.js_java_jni_llvm_candidate_contract.v1",
   "authority": "NSQ kinetic semantic reflexor",
-  "capability": "feature:toolchain.bionic_compatibility",
+  "capability": "feature:toolchain.semantic_build_dialect",
   "owner": "Michael David Norris",
   "canonical_project_name": "Braxon",
   "execution_model": {
@@ -10,27 +10,28 @@
     "ambient_termux_runtime_fallback_allowed": false,
     "repository_built_tool_dispatch_required_before_calibration": true,
     "target_environment": "aarch64-linux-android",
-    "target_compiler_authority": "repository-built LLVM/Clang/LLD only after its own verification"
+    "target_compiler_authority": "repository-built LLVM/Clang/LLD only after its own verification",
+    "semantic_build_authority": "feature:toolchain.semantic_build_dialect persists declared source, tool, artifact, and downstream preparation state through KSR storage-chain propagation without runtime residency"
   },
   "semantic_routes": [
     {
       "language": "javascript",
       "nsq_capability": "language:javascript",
-      "kinetic_reflexor_route": "Braxon language javascript <input>",
+      "kinetic_reflexor_route": "Braxon toolchain build-dialect quickjs prepare or Braxon toolchain build-dialect nodejs prepare; language ingress remains Braxon language javascript <input>",
       "source_ingress": "module_surface_to_nsq_alphabetic_and_symbolic_contract",
       "native_egress": "qjs_or_node_compatible_artifact_only_after_target_materialization"
     },
     {
       "language": "java",
       "nsq_capability": "language:java",
-      "kinetic_reflexor_route": "Braxon language java <input>",
+      "kinetic_reflexor_route": "Braxon toolchain build-dialect openjdk prepare; language ingress remains Braxon language java <input>",
       "source_ingress": "class_surface_to_nsq_symbolic_contract",
       "native_egress": "javac_and_jvm_artifact_only_after_target_materialization"
     },
     {
       "language": "jni",
       "nsq_capability": "language:jni",
-      "kinetic_reflexor_route": "Braxon language jni <input>",
+      "kinetic_reflexor_route": "Braxon toolchain build-dialect jni-bridge prepare; language ingress remains Braxon language jni <input>",
       "source_ingress": "declared_java_native_boundary_to_nsq_stamp_contract",
       "native_egress": "Braxon-built_shared_object_and_declared_java_bridge_only_after_target_materialization"
     }

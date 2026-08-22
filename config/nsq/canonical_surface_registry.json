@@ -100,9 +100,51 @@
       "classification": "canonical_active"
     },
     {
+      "id": "route:gguf.semantic_flow",
+      "purpose": "Header-only GGUF semantic extraction into KSR-validated stable virtual parameter addresses with duty-cycle bindings for build and intelligence consumers, without tensor payload loading or external GGUF runtime authority",
+      "feature": "feature:gguf.semantic_flow",
+      "sources": [
+        "config/nsq/gguf_semantic_flow_contract.json",
+        "crates/braxon-core/src/gguf_semantic_flow.rs",
+        "crates/braxon-core/src/kinetic_reflexor.rs"
+      ],
+      "front_door": "Braxon gguf extract <repository-relative-container>",
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:live_bus.refresh_benchmark",
+      "purpose": "Measured same-target comparison of stable-address piston refresh and non-piston bus reconstruction for semantic and image descriptors without external model-runtime claims",
+      "feature": "feature:live_bus.refresh_benchmark",
+      "sources": [
+        "config/nsq/live_bus_refresh_benchmark_contract.json",
+        "crates/braxon-core/examples/region_fire_probe.rs",
+        "crates/braxon-core/src/ghost_memory.rs"
+      ],
+      "front_door": "cargo run --locked --offline -p Braxon-core --example region_fire_probe",
+      "classification": "canonical_active"
+    },
+    {
+      "id": "route:toolchain.semantic_build_dialect",
+      "purpose": "Non-resident NSQ semantic build intent admitted through KSR virtual shared cells and functional watermarks; committed artifact state reflexively populates verified contained tool storage and queues declared downstream semantic preparation, while undo atomically restores prior verified storage state without compiler execution or compiled-artifact mutation before any separately explicit native Android physical executor",
+      "feature": "feature:toolchain.semantic_build_dialect",
+      "sources": [
+        "crates/braxon-core/src/semantic_build_dialect.rs",
+        "config/nsq/semantic_build_dialect_contract.json",
+        "crates/braxon-core/src/kinetic_reflexor.rs",
+        "crates/braxon-core/src/nsq_native.rs",
+        "scripts/braxon_reconstruct.sh"
+      ],
+      "front_doors": [
+        "Braxon toolchain build-dialect <scope> inspect",
+        "Braxon toolchain build-dialect <scope> prepare",
+        "Braxon toolchain build-dialect <scope> execute"
+      ],
+      "classification": "canonical_active"
+    },
+    {
       "id": "route:toolchain.js_java_jni_llvm_candidates",
       "purpose": "Repository-contained QuickJS, Node.js, OpenJDK, and JNI bridge candidate source verification, NSQ semantic routing, and fail-closed AArch64 Android target preparation without ambient Termux runtime fallback",
-      "feature": "feature:toolchain.bionic_compatibility",
+      "feature": "feature:toolchain.semantic_build_dialect",
       "sources": [
         "config/nsq/js_java_jni_llvm_candidate_contract.json",
         "config/nsq/language_functional_ingestion_matrix.json",
@@ -114,7 +156,10 @@
         "Braxon language javascript <input>",
         "Braxon language java <input>",
         "Braxon language jni <input>",
-        "scripts/braxon_reconstruct.sh source-edge"
+        "Braxon toolchain build-dialect quickjs prepare",
+        "Braxon toolchain build-dialect nodejs prepare",
+        "Braxon toolchain build-dialect openjdk prepare",
+        "Braxon toolchain build-dialect jni-bridge prepare"
       ],
       "classification": "canonical_active"
     },
@@ -132,8 +177,8 @@
       ],
       "front_doors": [
         "node tools/toolchain/generate_native_contract_closure_inventory.mjs",
-        "scripts/braxon_reconstruct.sh source-build",
-        "scripts/braxon_reconstruct.sh edge-nightly-build",
+        "Braxon toolchain build-dialect llvm-aarch64-source-build prepare",
+        "Braxon toolchain build-dialect rust-edge-nightly prepare",
         "Braxon toolchain bionic"
       ],
       "classification": "canonical_active"

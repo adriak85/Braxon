@@ -169,7 +169,9 @@ verify_repository_contained_llvm_source() {
     llvm/lib/Support/CMakeLists.txt \
     llvm/lib/TableGen/CMakeLists.txt \
     clang/CMakeLists.txt \
-    lld/CMakeLists.txt; do
+    lld/CMakeLists.txt \
+    bolt/CMakeLists.txt \
+    llvm/tools/llvm-jitlink/CMakeLists.txt; do
     [ -f "$dest/$required" ] || { echo "FAIL: complete LLVM source indicator is missing: $dest/$required; rerun source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1" >&2; exit 1; }
   done
   [ -f "$receipt" ] || { echo "FAIL: LLVM contained-source receipt is absent; rerun source-edge with BRAXON_REPLACE_INCOMPLETE_LLVM_SOURCE=1" >&2; exit 1; }
@@ -202,8 +204,10 @@ mkdir -p "$LLVM_BUILD" "$LLVM_INSTALL"
 
 cmake -S "$SRC/llvm-project/llvm" -B "$LLVM_BUILD" -G Ninja \
   -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG -gline-tables-only" \
+  -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG -gline-tables-only" \
   -DCMAKE_INSTALL_PREFIX="$LLVM_INSTALL" \
-  -DLLVM_ENABLE_PROJECTS="clang;lld;clang-tools-extra" \
+  -DLLVM_ENABLE_PROJECTS="clang;lld;clang-tools-extra;bolt" \
   -DLLVM_ENABLE_RUNTIMES="compiler-rt;libunwind;libcxx;libcxxabi" \
   -DLLVM_TARGETS_TO_BUILD="AArch64;ARM;X86" \
   -DLLVM_DEFAULT_TARGET_TRIPLE="aarch64-linux-android" \
@@ -230,6 +234,18 @@ ninja -C "$LLVM_BUILD" install | tee "$REPORT/llvm_install.txt"
   "$LLVM_INSTALL/bin/llvm-ar" --version
   echo
   "$LLVM_INSTALL/bin/llvm-strip" --version
+  echo
+  "$LLVM_INSTALL/bin/llvm-dwarfdump" --version
+  echo
+  "$LLVM_INSTALL/bin/llvm-dwarfdump" --verify "$LLVM_INSTALL/bin/clang"
+  echo
+  "$LLVM_INSTALL/bin/llvm-jitlink" --version
+  echo
+  "$LLVM_INSTALL/bin/llvm-mc" --version
+  echo
+  "$LLVM_INSTALL/bin/llvm-bolt" --version
+  echo
+  "$LLVM_INSTALL/bin/perf2bolt" --help
 } | tee "$REPORT/llvm_verify.txt"
 
 echo
@@ -362,6 +378,11 @@ copy_tool "$LLVM_INSTALL/bin/llvm-nm" llvm-nm
 copy_tool "$LLVM_INSTALL/bin/llvm-objdump" llvm-objdump
 copy_tool "$LLVM_INSTALL/bin/llvm-strip" llvm-strip
 copy_tool "$LLVM_INSTALL/bin/llvm-readelf" llvm-readelf
+copy_tool "$LLVM_INSTALL/bin/llvm-dwarfdump" llvm-dwarfdump
+copy_tool "$LLVM_INSTALL/bin/llvm-jitlink" llvm-jitlink
+copy_tool "$LLVM_INSTALL/bin/llvm-mc" llvm-mc
+copy_tool "$LLVM_INSTALL/bin/llvm-bolt" llvm-bolt
+copy_tool "$LLVM_INSTALL/bin/perf2bolt" perf2bolt
 copy_tool "$RUST_INSTALL/bin/rustc" rustc
 copy_tool "$RUST_INSTALL/bin/cargo" cargo
 copy_tool "$RUST_INSTALL/bin/rustfmt" rustfmt
@@ -372,6 +393,8 @@ echo "== debug-copy then strip baked ELF binaries =="
 find "$BAKED/bin" -type f ! -name '*.debug' | while read -r f; do
   if file "$f" | grep -q 'ELF'; then
     cp "$f" "$f.debug"
+    "$LLVM_INSTALL/bin/llvm-readelf" -h "$f.debug" >> "$REPORT/baked_elf_dwarf_validation.txt"
+    "$LLVM_INSTALL/bin/llvm-dwarfdump" --verify "$f.debug" >> "$REPORT/baked_elf_dwarf_validation.txt"
     "$LLVM_INSTALL/bin/llvm-strip" "$f" || true
   fi
 done

@@ -6,15 +6,15 @@
   "valid": true,
   "status": "canonicality_verified",
   "scope": {
-    "tracked_file_total": 183002,
+    "tracked_file_total": 183008,
     "excluded_prefixes": [
       "state/full_android_language_toolchain/src/",
       "vendor/",
       "target/",
       "assets/"
     ],
-    "feature_total": 14,
-    "canonical_feature_total": 13,
+    "feature_total": 17,
+    "canonical_feature_total": 16,
     "deprecated_historical_feature_total": 1,
     "explicitly_classified_legacy_surface_total": 15
   },
@@ -313,6 +313,44 @@
         "config/nsq/tokenizer_band_registry.json",
         "crates/braxon-core/src/kinetic_reflexor.rs",
         "crates/braxon-core/src/parameter_citadel.rs"
+      ]
+    },
+    {
+      "id": "feature:gguf.semantic_flow",
+      "source": "crates/braxon-core/src/gguf_semantic_flow.rs",
+      "classification": "canonical_active",
+      "purpose": "read_only_the_fixed_GGUF_header_then_commit_only_declared_environment_bound_parameter_cells_without_tensor_payload_load_or_external_runtime_delegation",
+      "required_artifacts": [
+        "config/nsq/gguf_semantic_flow_contract.json",
+        "crates/braxon-core/src/gguf_semantic_flow.rs",
+        "crates/braxon-core/src/kinetic_reflexor.rs"
+      ]
+    },
+    {
+      "id": "feature:live_bus.refresh_benchmark",
+      "source": "crates/braxon-core/examples/region_fire_probe.rs",
+      "classification": "canonical_active",
+      "purpose": "run_only_the_declared_first_party_probe_after_the_repository_built_rust_tool_is_proven",
+      "required_artifacts": [
+        "config/nsq/live_bus_refresh_benchmark_contract.json",
+        "crates/braxon-core/examples/region_fire_probe.rs",
+        "crates/braxon-core/src/ghost_memory.rs",
+        "crates/braxon-core/src/piston_memory.rs"
+      ]
+    },
+    {
+      "id": "feature:toolchain.semantic_build_dialect",
+      "source": "crates/braxon-core/src/semantic_build_dialect.rs",
+      "classification": "canonical_active",
+      "purpose": "admit_one_declared_scope_then_prepare_or_explicitly_execute_only_the_allowlisted_android_source_build_mode_or_atomically_undo_to_a_prior_verified_storage_materialization_without_physical_execution_or_artifact_mutation",
+      "required_artifacts": [
+        "config/nsq/semantic_build_dialect_contract.json",
+        "crates/braxon-core/src/semantic_build_dialect.rs",
+        "crates/braxon-core/src/kinetic_reflexor.rs",
+        "crates/braxon-core/src/nsq_native.rs",
+        "crates/braxon-core/src/parameter_citadel.rs",
+        "scripts/braxon_reconstruct.sh",
+        "scripts/toolchains/verify_public_source_archives.sh"
       ]
     },
     {
