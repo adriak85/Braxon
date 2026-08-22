@@ -11,20 +11,36 @@
       "reported_internal_storage_gib": 128,
       "cpu_topology_status": "observed_from_user_provided_environment_and_must_be_reprobed_for_artifact_admission"
     },
-    "source": "user-provided braxon-manus-environment.txt",
-    "observed_at": "2026-08-21T01:31:40Z",
+    "source": "user-provided Galaxy A17 Termux observations in pasted_content.txt",
+    "observed_at": "2026-08-22T00:00:00Z",
     "kernel": "Linux 5.15.180-android13-3-32407857",
     "android_architecture": "arm64-v8a",
     "cpu_architecture": "aarch64",
     "cpu_topology": {
       "cortex_a55_cores": 6,
+      "cortex_a55_cpu_part": "0xd05",
+      "cortex_a55_max_khz": 2002000,
       "cortex_a78_cores": 2,
-      "logical_cpus": 8
+      "cortex_a78_cpu_part": "0xd41",
+      "cortex_a78_max_khz": 2400000,
+      "logical_cpus": 8,
+      "observed_features": ["aes", "sha1", "sha2", "atomics", "asimddp", "cpuid"],
+      "scheduling_policy": "mixed_big_little_target; compiler build remains one physical job until a measured thermal and memory benchmark proves a safe change"
     },
     "memory": {
-      "total_mib": 3482,
-      "swap_mib": 4096,
+      "total_mib": 3450,
+      "free_mib": 120,
+      "available_mib": 679,
+      "swap_mib": 4095,
+      "swap_used_mib": 1832,
       "availability_is_dynamic": true
+    },
+    "workspace": {
+      "path_class": "Termux_HOME",
+      "filesystem_total_gib": 104,
+      "filesystem_used_gib": 41,
+      "filesystem_available_gib": 62,
+      "page_size_state": "UNOBSERVED_getconf_not_installed_and_must_be_probed_before_artifact_admission"
     },
     "observed_compiler_lane": {
       "rustc": "1.97.1 (8bab26f4f 2026-07-14)",
@@ -69,9 +85,14 @@
   ],
   "current_capacity_blockers": [
     {
-      "id": "observed_executable_root_full",
-      "condition": "user-provided snapshot reported the root filesystem at 100% utilization",
-      "required_action": "run the repository capacity preflight on the actual intended executable build path; do not launch a source rebuild until it passes"
+      "id": "dynamic_memory_and_swap_pressure",
+      "condition": "latest user-provided observation reported only 679 MiB available memory and 1832 MiB swap in use while the LLVM build is active",
+      "required_action": "retain JOBS=1; do not launch a concurrent build, profiler, package capture, or high-memory optimization pass until the active build finishes and a fresh preflight passes"
+    },
+    {
+      "id": "page_size_unobserved",
+      "condition": "getconf was unavailable during the submitted target observation",
+      "required_action": "install or otherwise provide a page-size probe result before artifact admission; do not infer 4 KiB or 16 KiB page size"
     },
     {
       "id": "shared_storage_execution_unknown",

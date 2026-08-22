@@ -24,7 +24,7 @@
   },
   "compaction_metrics": {
     "manifested_compact_artifact_count": 24,
-    "manifested_compact_bytes": 964975,
+    "manifested_compact_bytes": 965986,
     "upstream_runtime_bytes_avoided": "not measured; no numeric avoidance claim is made",
     "extraction_time": "not measured in this manifest; reproduce via the declared extraction or capture source",
     "lookup_time": "not measured in this manifest; tokenizer and registry lookup are verified by executable tests",
@@ -248,7 +248,7 @@
       "id": "blank_surface_registry",
       "path": "config/nsq/blank_surface_registry.json",
       "bytes": 167562,
-      "sha256": "788a34c9d28d6e6e803d3300c70ef70627654440f719a0ef9b3bbdab0c1c257e",
+      "sha256": "275521d2cf377a07267a2df9005e908647f1e10ebb3abedea3270a1ae3e98e25",
       "semantic_surface": [
         "individual non-routable blank upstream historical and derived capture classification",
         "blank-surface fail-closed provenance policy"
@@ -382,8 +382,8 @@
     {
       "id": "galaxy_a17_dense_artifact_package_contract",
       "path": "config/toolchains/galaxy_a17_dense_artifact_package_contract.json",
-      "bytes": 2470,
-      "sha256": "048ab35cd169824d574850cee427dc04aa0a0fe875fc8c4deedbeceffa433d30",
+      "bytes": 3481,
+      "sha256": "0905be8cc0b69a49c338ad08c7f797ffed0d90aeee060be12fa9e9aa4d7e864f",
       "semantic_surface": [
         "Samsung Galaxy A17 target identity",
         "KSR-authorized dense toolchain artifact packaging",

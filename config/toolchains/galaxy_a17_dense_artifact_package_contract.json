@@ -10,7 +10,13 @@
     "required_android_architecture": "arm64-v8a",
     "reported_marketed_memory_gib": 4,
     "reported_internal_storage_gib": 128,
-    "cpu_topology": "must_be_captured_from_the_actual_target_at_package_time"
+    "cpu_topology": "must_be_captured_from_the_actual_target_at_package_time",
+    "observed_microarchitecture": {
+      "little_cluster": {"core": "Cortex-A55", "count": 6, "cpu_part": "0xd05", "max_khz": 2002000},
+      "big_cluster": {"core": "Cortex-A78", "count": 2, "cpu_part": "0xd41", "max_khz": 2400000},
+      "observed_instruction_features": ["aes", "sha1", "sha2", "atomics", "asimddp", "cpuid"],
+      "evidence_status": "user_provided_target_observation_reprobe_required_at_package_admission"
+    }
   },
   "source": {
     "baked_root": "state/full_android_language_toolchain/baked/current",
@@ -31,7 +37,15 @@
     "runtime_contents": ["baked/current/bin/stripped_elf_tools", "baked/current/proofs", "baked/current/SHA256SUMS", "target_receipt.json", "artifact_manifest.json"],
     "debug_contents": ["baked/current/bin/*.debug", "ELF_and_DWARF_verification_evidence"],
     "runtime_activation_automatic": false,
-    "artifact_admission_requires": ["KSR_materialization_watermark", "ELF_machine_aarch64", "Bionic_dependency_inspection", "target_execution_probe", "SHA256_manifest", "license_boundary_review"]
+    "artifact_admission_requires": ["KSR_materialization_watermark", "ELF_machine_aarch64", "Bionic_dependency_inspection", "target_execution_probe", "SHA256_manifest", "license_boundary_review"],
+    "mixed_core_density_policy": {
+      "runtime_code_generation": "must_remain_executable_on_both_observed_A55_and_A78_clusters",
+      "a78_only_codegen_before_per_cluster_probe": false,
+      "current_release_tuning": "generic_AArch64_baseline_with_separate_debug_evidence",
+      "physical_build_parallelism": "JOBS=1_until_measured_thermal_memory_and_throughput_evidence_allows_change",
+      "compression": "deterministic_xz_maximum_density_runtime_and_debug_evidence_separated",
+      "post_build_optimization": "ORC_BOLT_ThinLTO_PGO_remain_target_proof_gated"
+    }
   },
   "clone_admission": {
     "requires_exact_package_manifest_hash": true,
